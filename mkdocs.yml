@@ -1,0 +1,50 @@
+site_name: Cobblemon Routes
+site_description: >-
+  A Cobblemon add-on — physical routes generated during worldgen that connect the world's structures,
+  automated Hardcore-Nuzlocke rules, and quality-of-life utilities.
+# NOTE: update site_url + repo_url/name after you rename the GitHub repo to "cobblemon-routes".
+site_url: https://manucruzleiva.github.io/cobblemon-routes-wiki/
+repo_url: https://github.com/manucruzleiva/cobblemon-routes-wiki
+repo_name: manucruzleiva/cobblemon-routes-wiki
+docs_dir: docs
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: green
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: green
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Features: features.md
+  - World creation & config: configuration.md
+  - Changelog: changelog.md
