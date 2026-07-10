@@ -525,10 +525,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#in-game-config-screen" class="md-nav__link">
+  <a href="#global-defaults" class="md-nav__link">
     <span class="md-ellipsis">
       
-        In-game config screen
+        Global defaults
       
     </span>
   </a>
@@ -701,10 +701,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#in-game-config-screen" class="md-nav__link">
+  <a href="#global-defaults" class="md-nav__link">
     <span class="md-ellipsis">
       
-        In-game config screen
+        Global defaults
       
     </span>
   </a>
@@ -848,7 +848,7 @@ and forced <strong>Hard</strong> difficulty are all part of Nuzlocke, no separat
 </tr>
 <tr>
 <td>Shiny starter</td>
-<td>No</td>
+<td>Yes</td>
 <td>No / Yes (normal odds) / Always (guaranteed)</td>
 </tr>
 </tbody>
@@ -871,40 +871,83 @@ and forced <strong>Hard</strong> difficulty are all part of Nuzlocke, no separat
 <td>master switch</td>
 </tr>
 <tr>
+<td>Road surface</td>
+<td>Random (per route)</td>
+<td>each route picks its own material, or fix one for every road</td>
+</tr>
+<tr>
+<td>Road lamp posts</td>
+<td>Random</td>
+<td>Random / On / Off — Random decides per route</td>
+</tr>
+<tr>
+<td>Tunnel lighting</td>
+<td>Random</td>
+<td>Random keeps some tunnels as dark caves</td>
+</tr>
+<tr>
+<td>Underwater lighting</td>
+<td>Random</td>
+<td>sea lanterns along aquatic crossings</td>
+</tr>
+<tr>
 <td>Routes per city</td>
 <td>2</td>
 <td>1–5 roads out of each city</td>
 </tr>
 <tr>
-<td>Connect all structures</td>
+<td>Ring roads</td>
 <td>on</td>
+<td>keep closing loops between nearby towns — loops enclose named areas</td>
+</tr>
+<tr>
+<td>Gyms next to cities</td>
+<td>on</td>
+<td>each discovered city gets a gym beside it (needs a gym pack)</td>
+</tr>
+<tr>
+<td>Cities include</td>
+<td>Villages + BCA Villages</td>
+<td>16-entry checklist: fossils, ruins, outposts, pyramids…</td>
+</tr>
+<tr>
+<td>Connect all structures</td>
+<td>off</td>
 <td>also connect non-city surface structures</td>
 </tr>
 <tr>
 <td>Route trainers</td>
 <td>on</td>
-<td>trainers along finished roads (<code>max_route_trainers</code>, default 6)</td>
+<td>trainers along finished roads</td>
+</tr>
+<tr>
+<td>Trainer density</td>
+<td>Medium</td>
+<td>Low / Medium / High / Brutal — count scales with route length</td>
 </tr>
 <tr>
 <td>Water crossings</td>
 <td>Aquatic channel (always)</td>
-<td>open channel + paved, lit seabed underneath</td>
+<td>open channel + paved seabed underneath</td>
 </tr>
 </tbody>
 </table>
-<p>Route-trainer options (sight range, challenge delay, spacing, max per route, skirmishes) live under
-their own <strong>Route Trainers</strong> heading.</p>
+<p>Route-trainer options (sight range, challenge delay, density, skirmishes) live under their own
+<strong>Route Trainers</strong> heading. The map <strong>tint intensity</strong> (City / Route / Area, 0–100 %) is not a
+world-creation choice — adjust it live from the sliders on
+<a href="../map-integration/">Xaero's world map</a> or in the config file.</p>
 <div class="admonition info">
 <p class="admonition-title">Saved per world</p>
 <p>Choices made in these tabs are stored <strong>per world</strong> and only applied to a brand-new world —
 loading an existing world never gets its rules clobbered. Picking <strong>Hardcore</strong> at world
 creation auto-enables the full Nuzlocke rule set.</p>
 </div>
-<h2 id="in-game-config-screen">In-game config screen<a class="headerlink" href="#in-game-config-screen" title="Permanent link">&para;</a></h2>
-<p>Open the global config any time with the <strong>K</strong> key or <code>/cobblemon_routes config</code> (Cloth Config).
-It writes <code>config/cobblemon_routes.json</code> — 5 categories, English &amp; Spanish labels — and provides
-the defaults used when a world wasn't configured through the tabs.</p>
+<h2 id="global-defaults">Global defaults<a class="headerlink" href="#global-defaults" title="Permanent link">&para;</a></h2>
+<p>The global defaults live in <code>config/cobblemon_routes.json</code> (English &amp; Spanish labels) and are used
+when a world wasn't configured through the tabs. The map-paint intensity also has live sliders on
+<a href="../map-integration/">Xaero's world map</a>.</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<p>The roots are <code>/routes</code> and <code>/nuzlocke</code> (the old <code>/cobblemonroutes …</code> still works everywhere).</p>
 <table>
 <thead>
 <tr>
@@ -920,24 +963,79 @@ the defaults used when a world wasn't configured through the tabs.</p>
 <td>Open the config screen (client).</td>
 </tr>
 <tr>
-<td><code>/cobblemonroutes nuzlocke status</code></td>
+<td><code>/routes status</code></td>
 <td>—</td>
-<td>Your Nuzlocke zones and party deaths.</td>
+<td>Network summary: towns, nodes, completed routes, queued edges.</td>
 </tr>
 <tr>
-<td><code>/cobblemonroutes nuzlocke reset/revive [player]</code></td>
+<td><code>/routes list [cities\|routes]</code></td>
+<td>—</td>
+<td>Every known town / completed route with coordinates.</td>
+</tr>
+<tr>
+<td><code>/routes nearest</code></td>
+<td>—</td>
+<td>Closest town and route to you, with distance and heading.</td>
+</tr>
+<tr>
+<td><code>/routes zone</code></td>
+<td>—</td>
+<td>Which zone paints the chunk you are standing in.</td>
+</tr>
+<tr>
+<td><code>/routes scan/connect/structures/addcity/reset</code></td>
+<td>OP 2</td>
+<td>Route generator diagnostics (routes generate on their own).</td>
+</tr>
+<tr>
+<td><code>/routes tp &lt;town&gt;</code></td>
+<td>OP 2</td>
+<td>Teleport to a named town.</td>
+</tr>
+<tr>
+<td><code>/routes rename &lt;name&gt;</code></td>
+<td>OP 2</td>
+<td>Rename the nearest town.</td>
+</tr>
+<tr>
+<td><code>/routes weave [loops]</code></td>
+<td>OP 2</td>
+<td>Force ring roads now — loops enclose new areas.</td>
+</tr>
+<tr>
+<td><code>/routes repaint</code></td>
+<td>OP 2</td>
+<td>Re-broadcast the map paint to everyone online.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke status [player]</code></td>
+<td>— ([player] OP 2)</td>
+<td>Nuzlocke zones and party deaths.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke log</code> (key <strong>I</strong>)</td>
+<td>—</td>
+<td>Visited-zones screen: coords, encounter, outcome, dead/alive.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke map</code></td>
+<td>—</td>
+<td>Dump your capture zones onto the map as waypoints.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke soullock summary</code></td>
+<td>—</td>
+<td>Linked-teams screen: every partner's full party.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke reset/revive [player]</code></td>
 <td>OP 2</td>
 <td>Admin / testing.</td>
 </tr>
 <tr>
-<td><code>/cobblemonroutes soullock</code></td>
+<td><code>/nuzlocke soullock …</code></td>
 <td>—</td>
 <td>Request a soul-link with nearby players.</td>
-</tr>
-<tr>
-<td><code>/cobblemonroutes routes status/scan/connect/reset</code></td>
-<td>OP 2</td>
-<td>Route diagnostics (routes generate on their own).</td>
 </tr>
 </tbody>
 </table>

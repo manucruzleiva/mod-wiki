@@ -698,16 +698,20 @@ points become real places that roads connect to.</p>
 <h2 id="xaeros-minimap">Xaero's Minimap<a class="headerlink" href="#xaeros-minimap" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Auto waypoints</strong> — every named waystone you discover places a ground-level waypoint with a
-  toast. Unnamed waystones are ignored (no spam).</li>
-<li><strong>Route trails</strong> — each route draws a <strong>dotted golden trail</strong> between its cities (a marker every
-  ~200 blocks carrying the route's name), synced when you join.</li>
-<li><strong>Chunk paint</strong> 🎨 — the <code>xaero_chunk_paint</code> option (default on) tints every chunk on the map by
-  <strong>category</strong>, with a subtle low-opacity wash: <strong>magenta</strong> over cities/villages/structures, <strong>orange</strong>
-  over routes, <strong>teal</strong> over the areas in between. A glance tells you what kind of land you're standing on.</li>
+  toast, and each <strong>named town</strong> drops its pin. Unnamed places are ignored (no spam). Routes are
+  followed by their painted trail instead of markers.</li>
+<li><strong>Chunk paint</strong> 🎨 — the <code>xaero_chunk_paint</code> option (default on) tints chunks on the map by
+  <strong>category</strong>, with a subtle low-opacity wash: <strong>magenta</strong> over cities/villages, <strong>orange</strong> over
+  routes, and <strong>teal</strong> over an area once it is <strong>fully enclosed</strong> by your cities and routes — open
+  wilderness stays unpainted until the network grows around it. Enclosed areas earn a name
+  (<strong>A1, A2, …</strong> with a nature flavour, e.g. "A3-Frostpine") shown by their entry pop-up.</li>
 </ul>
 <h2 id="xaeros-world-map">Xaero's World Map<a class="headerlink" href="#xaeros-world-map" title="Permanent link">&para;</a></h2>
 <p>The chunk paint also renders on the <strong>full-screen World Map (key M)</strong> — visible independently of
-the minimap's Cave Mode and of your Y level, on the surface and in caves alike.</p>
+the minimap's Cave Mode and of your Y level, on the surface and in caves alike. The world map also
+carries this mod's <strong>control column</strong> (top-left): a <strong>Chunk paint</strong> toggle for both maps, a
+<strong>Repaint map</strong> button, and <strong>three live intensity sliders</strong> (City / Route / Area) that re-tint the
+map in real time — 0 hides that category.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Get the map mods from <a href="https://modrinth.com/mod/xaeros-minimap">the Xaero's Minimap page</a> and

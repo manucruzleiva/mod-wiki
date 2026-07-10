@@ -667,7 +667,7 @@ on you win together, and you lose together.</p>
 <pre class="mermaid"><code>sequenceDiagram
     participant A as 🧑 Player A
     participant B as 🧑 Player B
-    A-&gt;&gt;B: /cobblemonroutes soullock — link request
+    A-&gt;&gt;B: /nuzlocke soullock — link request
     Note over B: request expires after the&lt;br/&gt;configured timeout
     B-&gt;&gt;A: ✅ accepts — souls linked!
     Note over A,B: battles must be fought together —&lt;br/&gt;no lone combat
@@ -675,7 +675,7 @@ on you win together, and you lose together.</p>
     A--xB: 💀 the linked partner's Pokémon dies too</code></pre>
 <h2 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Consented links</strong> — a soul-link starts with a request (<code>/cobblemonroutes soullock</code>) that the
+<li><strong>Consented links</strong> — a soul-link starts with a request (<code>/nuzlocke soullock</code>) that the
   other player must accept before it expires. Nobody gets linked against their will.</li>
 <li><strong>Shared death</strong> — when a linked player's Pokémon dies, the partners' linked Pokémon die with it.
   Every loss is a team loss. 🕯️</li>
