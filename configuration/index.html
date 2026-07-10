@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://manucruzleiva.github.io/cobblemon-routes-wiki/configuration/">
       
       
-        <link rel="prev" href="../map-integration/">
+        <link rel="prev" href="../items/">
       
       
         <link rel="next" href="../reporting/">
@@ -396,6 +396,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Items & Recipes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -466,6 +493,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="NUZLOCKE tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#starter-subsection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starter subsection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -626,6 +670,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="NUZLOCKE tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#starter-subsection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starter subsection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -686,9 +747,8 @@ screen for defaults.</p>
     T[🆕 NUZLOCKE + ROUTES tabs&lt;br/&gt;at world creation] --&gt;|saved per world| W[🌍 Your world's rules&lt;br/&gt;never clobbered later]
     K[⚙️ Global config — key K&lt;br/&gt;config/cobblemon_routes.json] --&gt;|defaults when a world&lt;br/&gt;wasn't configured| W</code></pre>
 <h2 id="nuzlocke-tab">NUZLOCKE tab<a class="headerlink" href="#nuzlocke-tab" title="Permanent link">&para;</a></h2>
-<p>The four gamemode toggles inline (Nuzlocke, first-encounter lock, permadeath, spectator-on-loss)
-plus an <strong>"All Nuzlocke options…"</strong> button opening the full screen with every option — each with
-its own hover tooltip:</p>
+<p>Turn <strong>Nuzlocke</strong> on and the full ruleset comes with it — <strong>permadeath</strong>, <strong>spectator on Game Over</strong>
+and forced <strong>Hard</strong> difficulty are all part of Nuzlocke, no separate toggles. The tab holds the rest:</p>
 <table>
 <thead>
 <tr>
@@ -699,9 +759,14 @@ its own hover tooltip:</p>
 </thead>
 <tbody>
 <tr>
-<td>Nuzlocke / encounter lock / permadeath / spectator</td>
+<td>Nuzlocke</td>
 <td>on</td>
-<td>the core rule set</td>
+<td>master switch — off = a normal Cobblemon world</td>
+</tr>
+<tr>
+<td>First-encounter lock</td>
+<td>on</td>
+<td>only the first wild per zone is catchable</td>
 </tr>
 <tr>
 <td>Mandatory nicknames</td>
@@ -714,9 +779,9 @@ its own hover tooltip:</p>
 <td>ALL / MACHINES_ONLY / ITEMS_ONLY / NONE</td>
 </tr>
 <tr>
-<td>Starter selection</td>
-<td>DEFAULT_PLUS_RANDOM</td>
-<td>DEFAULT / DEFAULT_PLUS_RANDOM / THREE_RANDOM</td>
+<td>Above level cap → PC</td>
+<td>on</td>
+<td>over-cap catches boxed to the PC (follows RCT's cap)</td>
 </tr>
 <tr>
 <td>Starter level</td>
@@ -735,28 +800,56 @@ its own hover tooltip:</p>
 </tr>
 <tr>
 <td>EXP boost</td>
-<td>1×</td>
-<td>1–16×</td>
-</tr>
-<tr>
-<td>Capture zones</td>
-<td>By route/city</td>
-<td>Biome / Route / Route+Biome</td>
-</tr>
-<tr>
-<td>Share same-structure zones</td>
-<td>off</td>
-<td>one zone per structure type vs. per instance</td>
-</tr>
-<tr>
-<td>Hunger</td>
-<td>on</td>
-<td>off keeps players fed</td>
+<td>x1</td>
+<td>x1 / x5 / x10 / x15 / x20 / x30 / x40 / x50 — applies to the whole-team share too</td>
 </tr>
 <tr>
 <td>PC only at the PC block</td>
 <td>on</td>
 <td>blocks remote PC access in Nuzlocke worlds</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>level cap itself is owned by Radical Cobblemon Trainers</strong> — the mod no longer defines its own.</p>
+<h3 id="starter-subsection">Starter subsection<a class="headerlink" href="#starter-subsection" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starter selection</td>
+<td>Mix</td>
+<td>Normal / Random / Mix (Mix = one canonical starter per type, distinct gens)</td>
+</tr>
+<tr>
+<td>No Legendaries</td>
+<td>on</td>
+<td>exclude Legendary / Mythical from the random / mix roll</td>
+</tr>
+<tr>
+<td>No Paradox</td>
+<td>on</td>
+<td>exclude Paradox Pokémon</td>
+</tr>
+<tr>
+<td>No Ultra Beasts</td>
+<td>on</td>
+<td>exclude Ultra Beasts</td>
+</tr>
+<tr>
+<td>No typical starters</td>
+<td>off</td>
+<td>exclude the pack's usual starters from the RANDOM roll (Mix ignores it)</td>
+</tr>
+<tr>
+<td>Shiny starter</td>
+<td>No</td>
+<td>No / Yes (normal odds) / Always (guaranteed)</td>
 </tr>
 </tbody>
 </table>
@@ -779,8 +872,8 @@ its own hover tooltip:</p>
 </tr>
 <tr>
 <td>Routes per city</td>
-<td>3</td>
-<td>1–6 roads out of each city</td>
+<td>2</td>
+<td>1–5 roads out of each city</td>
 </tr>
 <tr>
 <td>Connect all structures</td>
@@ -794,16 +887,13 @@ its own hover tooltip:</p>
 </tr>
 <tr>
 <td>Water crossings</td>
-<td>Aquatic channel</td>
-<td>Aquatic channel vs. Causeway bridge</td>
-</tr>
-<tr>
-<td>Flatten cities</td>
-<td>off</td>
-<td>opt-in: level a platform around towns (<code>flatten_city_radius</code>, default 28)</td>
+<td>Aquatic channel (always)</td>
+<td>open channel + paved, lit seabed underneath</td>
 </tr>
 </tbody>
 </table>
+<p>Route-trainer options (sight range, challenge delay, spacing, max per route, skirmishes) live under
+their own <strong>Route Trainers</strong> heading.</p>
 <div class="admonition info">
 <p class="admonition-title">Saved per world</p>
 <p>Choices made in these tabs are stored <strong>per world</strong> and only applied to a brand-new world —

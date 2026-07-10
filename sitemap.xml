@@ -2,38 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://manucruzleiva.github.io/cobblemon-routes-wiki/</loc>
-         <lastmod>2026-07-03</lastmod>
+         <lastmod>2026-07-10</lastmod>
     </url>
     <url>
          <loc>https://manucruzleiva.github.io/cobblemon-routes-wiki/configuration/</loc>
-         <lastmod>2026-07-03</lastmod>
+         <lastmod>2026-07-10</lastmod>
     </url>
     <url>
          <loc>https://manucruzleiva.github.io/cobblemon-routes-wiki/credits/</loc>
-         <lastmod>2026-07-03</lastmod>
+         <lastmod>2026-07-10</lastmod>
     </url>
     <url>
          <loc>https://manucruzleiva.github.io/cobblemon-routes-wiki/installation/</loc>
-         <lastmod>2026-07-03</lastmod>
+         <lastmod>2026-07-10</lastmod>
+    </url>
+    <url>
+         <loc>https://manucruzleiva.github.io/cobblemon-routes-wiki/items/</loc>
+         <lastmod>2026-07-10</lastmod>
     </url>
     <url>
          <loc>https://manucruzleiva.github.io/cobblemon-routes-wiki/map-integration/</loc>
-         <lastmod>2026-07-03</lastmod>
+         <lastmod>2026-07-10</lastmod>
     </url>
     <url>
          <loc>https://manucruzleiva.github.io/cobblemon-routes-wiki/nuzlocke/</loc>
-         <lastmod>2026-07-03</lastmod>
+         <lastmod>2026-07-10</lastmod>
     </url>
     <url>
          <loc>https://manucruzleiva.github.io/cobblemon-routes-wiki/reporting/</loc>
-         <lastmod>2026-07-03</lastmod>
+         <lastmod>2026-07-10</lastmod>
     </url>
     <url>
          <loc>https://manucruzleiva.github.io/cobblemon-routes-wiki/routes/</loc>
-         <lastmod>2026-07-03</lastmod>
+         <lastmod>2026-07-10</lastmod>
     </url>
     <url>
          <loc>https://manucruzleiva.github.io/cobblemon-routes-wiki/soullock/</loc>
-         <lastmod>2026-07-03</lastmod>
+         <lastmod>2026-07-10</lastmod>
     </url>
 </urlset>

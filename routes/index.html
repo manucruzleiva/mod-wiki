@@ -457,6 +457,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Items & Recipes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../configuration/" class="md-nav__link">
         
   
@@ -619,7 +646,7 @@ and every road is signposted and named.</p>
 <pre class="mermaid"><code>flowchart TD
     S[🔍 Locate cities from the seed&lt;br/&gt;villages · modpack towns · gyms · towers] --&gt; P[🧠 Terrain-aware pathfinding&lt;br/&gt;prefers flat, inland ground]
     P --&gt;|steep mountain in the way| T[⛏️ Bore a mineshaft tunnel&lt;br/&gt;~⅓ are dark caves — bring a torch!]
-    P --&gt;|water in the way| W[🌊 Aquatic channel&lt;br/&gt;or solid causeway]
+    P --&gt;|water in the way| W[🌊 Aquatic channel&lt;br/&gt;open water + paved lit seabed]
     P --&gt; B[🛤️ Build the road&lt;br/&gt;natural palette + lamp posts]
     T --&gt; B
     W --&gt; B
@@ -634,14 +661,13 @@ and every road is signposted and named.</p>
 <li><strong>Mineshaft tunnels</strong> — when a climb is too steep (or there's no surface path at all), the route
   bores a clean, walkable, oak-framed tunnel instead of an impassable cliff. About a third of
   tunnels are atmospheric <strong>dark caves</strong> — bring torches!</li>
-<li><strong>Flattened city surroundings</strong> <em>(opt-in, off by default)</em> — turn on <code>flatten_cities</code> and towns sit on
-  a levelled platform (buildings and water are never touched), so cities feel like proper settlements.</li>
 <li><strong>Descriptive route names</strong> — every road gets a code plus an auto-generated name from the terrain
   it crosses (<em>Route 5: Coastal Road</em>, <em>Route 8: Marsh Crossing</em>), always the same for your seed.</li>
 <li><strong>Clean tree clearing</strong> — a road crossing a tree removes the whole trunk and canopy; no floating
   leaves, no item spam.</li>
-<li><strong>Water crossings</strong> — navigable lit channels with natural rock markers, or solid causeway bridges
-  (your choice). Frozen lakes are crossed <em>under</em> the ice, never paved over it.</li>
+<li><strong>Water crossings</strong> — navigable lit channels with natural rock markers: the water stays open to swim
+  through while the seabed is paved and lit, so a submerged route runs beneath the surface one. Frozen
+  lakes are crossed <em>under</em> the ice, never paved over it.</li>
 <li><strong>Signs everywhere</strong> — directional signs at each end and at junctions, with plaza-paved crossings
   that stand out from the road.</li>
 <li><strong>Route trainers</strong> — trainers appear along finished roads, ready to battle (they respect
