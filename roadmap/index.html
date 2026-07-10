@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://manucruzleiva.github.io/cobblemon-routes-wiki/routes/">
+        <link rel="canonical" href="https://manucruzleiva.github.io/cobblemon-routes-wiki/roadmap/">
       
       
-        <link rel="prev" href="../installation/">
+        <link rel="prev" href="../reporting/">
       
       
-        <link rel="next" href="../nuzlocke/">
+        <link rel="next" href="../credits/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Dynamic Routes - Cobblemon Routes Wiki</title>
+        <title>Roadmap - Cobblemon Routes Wiki</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dynamic-routes" class="md-skip">
+        <a href="#roadmap" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dynamic Routes
+              Roadmap
             
           </span>
         </div>
@@ -288,37 +288,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Dynamic Routes
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../routes/" class="md-nav__link">
         
   
   
@@ -334,37 +307,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-you-get" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What you get
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -535,10 +477,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../roadmap/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -554,6 +523,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-the-challenge-map-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 — the challenge &amp; map update
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-more-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 — more maps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -639,10 +650,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-you-get" class="md-nav__link">
+  <a href="#11-the-challenge-map-update" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What you get
+        1.1 — the challenge &amp; map update
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-more-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 — more maps
       
     </span>
   </a>
@@ -666,45 +688,43 @@
 
 
 
-<h1 id="dynamic-routes">🗺️ Dynamic Routes<a class="headerlink" href="#dynamic-routes" title="Permanent link">&para;</a></h1>
-<p>Cobblemon Routes grows a <strong>road network through your world during worldgen</strong> — no commands, no
-walking the area first. Cities are found from the world seed, connected with terrain-aware paths,
-and every road is signposted and named.</p>
-<pre class="mermaid"><code>flowchart TD
-    S[🔍 Locate cities from the seed&lt;br/&gt;villages · modpack towns · gyms · towers] --&gt; P[🧠 Terrain-aware pathfinding&lt;br/&gt;prefers flat, inland ground]
-    P --&gt;|steep mountain in the way| T[⛏️ Bore a mineshaft tunnel&lt;br/&gt;~⅓ are dark caves — bring a torch!]
-    P --&gt;|water in the way| W[🌊 Aquatic channel&lt;br/&gt;open water + paved lit seabed]
-    P --&gt; B[🛤️ Build the road&lt;br/&gt;natural palette + lamp posts]
-    T --&gt; B
-    W --&gt; B
-    B --&gt; G[🪧 Signs at ends &amp; junctions&lt;br/&gt;name · destination · distance]
-    G --&gt; N[✨ Route 3: Steep Forest Pass]</code></pre>
-<h2 id="what-you-get">What you get<a class="headerlink" href="#what-you-get" title="Permanent link">&para;</a></h2>
+<h1 id="roadmap">🧭 Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">&para;</a></h1>
+<p>Where Cobblemon Routes is heading after 1.0. Everything below is tracked publicly on
+<a href="https://github.com/manucruzleiva/cobblemon-routes/issues">the issue tracker</a> — vote and comment
+on what you want first, or <a href="../reporting/">suggest new ideas</a>.</p>
+<pre class="mermaid"><code>timeline
+    title The road ahead
+    1.0 : Out of the testing phase
+        : Geography-complete capture zones
+        : Ring roads &amp; named areas
+        : Gyms beside every town
+    1.1 : GLC (mono-type) challenge mode
+        : Map suite — instant paint overlay, custom colors, waypoints for every category
+        : Load &amp; discover map on demand
+        : Spawn pregeneration
+    1.2 : JourneyMap support</code></pre>
+<h2 id="11-the-challenge-map-update">1.1 — the challenge &amp; map update<a class="headerlink" href="#11-the-challenge-map-update" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Automatic road network</strong> between cities — vanilla villages, modpack villages, Gimmighoul
-  towers, gyms, and any structure you list. Built incrementally and resumed after a restart.</li>
-<li><strong>Flat &amp; inland paths</strong> — the pathfinder strongly penalises slopes and keeps a buffer away from
-  shorelines, while still crossing water when there's no alternative.</li>
-<li><strong>Mineshaft tunnels</strong> — when a climb is too steep (or there's no surface path at all), the route
-  bores a clean, walkable, oak-framed tunnel instead of an impassable cliff. About a third of
-  tunnels are atmospheric <strong>dark caves</strong> — bring torches!</li>
-<li><strong>Descriptive route names</strong> — every road gets a code plus an auto-generated name from the terrain
-  it crosses (<em>Route 5: Coastal Road</em>, <em>Route 8: Marsh Crossing</em>), always the same for your seed.</li>
-<li><strong>Clean tree clearing</strong> — a road crossing a tree removes the whole trunk and canopy; no floating
-  leaves, no item spam.</li>
-<li><strong>Water crossings</strong> — navigable lit channels with natural rock markers: the water stays open to swim
-  through while the seabed is paved and lit, so a submerged route runs beneath the surface one. Frozen
-  lakes are crossed <em>under</em> the ice, never paved over it.</li>
-<li><strong>Signs everywhere</strong> — directional signs at each end and at junctions, with plaza-paved crossings
-  that stand out from the road.</li>
-<li><strong>Route trainers</strong> — trainers appear along finished roads, ready to battle (they respect
-  cooldowns and won't pester you twice).</li>
-<li><strong>Spawn in a city</strong> — new worlds start next to the nearest city, never in the water.</li>
+<li><strong>GLC challenge mode</strong> — a type-selection start (your chosen type drives random starters) and the
+  clause that you may only battle while your whole team matches that type.</li>
+<li><strong>Chunk paint as a true overlay</strong> — the map toggle shows/hides the paint instantly, no reload.</li>
+<li><strong>Pick your own colors</strong> — per-category (city / route / area) color choice on the map menu,
+  matched by the waypoint markers so paint and pins always combine.</li>
+<li><strong>Waypoints for everything</strong> — automatic markers for cities, routes AND named areas.</li>
+<li><strong>Load &amp; discover map</strong> — a button that loads a chosen number of chunks around you so the map
+  fills in on demand (with a resource-cost warning before it starts).</li>
+<li><strong>Spawn pregeneration</strong> — start new worlds with a circle of chunks already generated, so your
+  adventure begins with towns and routes on the map.</li>
+</ul>
+<h2 id="12-more-maps">1.2 — more maps<a class="headerlink" href="#12-more-maps" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>JourneyMap support</strong> — the chunk paint and waypoints, mirrored on JourneyMap for players who
+  prefer it over Xaero's.</li>
 </ul>
 <div class="admonition tip">
-<p class="admonition-title">Tune it per world</p>
-<p>Roads per city, trainer density, water-crossing style and more are all set from the <strong>ROUTES</strong>
-tab at world creation — see <a href="../configuration/">World Creation &amp; Config</a>.</p>
+<p class="admonition-title">Something missing?</p>
+<p>The roadmap grows from player feedback — the fastest way to shape it is
+<a href="../reporting/">reporting ideas</a> on the Discord or the tracker.</p>
 </div>
 
 
