@@ -59,7 +59,20 @@
 
     
     
-  
+  <style>
+    .cr-ad-slot { font-size: .64rem; line-height: 1.5; }
+    .cr-ad-placeholder { display: block; border: 1px dashed var(--md-default-fg-color--lighter);
+      border-radius: .2rem; padding: .6rem .7rem; color: var(--md-default-fg-color--light);
+      text-decoration: none; background: var(--md-code-bg-color); }
+    .cr-ad-placeholder:hover { border-color: var(--md-accent-fg-color);
+      color: var(--md-accent-fg-color); }
+    .cr-ad-label { display: block; font-size: .55rem; letter-spacing: .05em;
+      text-transform: uppercase; opacity: .6; margin-bottom: .25rem; }
+    #cr-ad-side { margin: 1.2rem .8rem 0 .8rem; }
+    .cr-ad-footbar { max-width: 61rem; margin: 0 auto; padding: .4rem .8rem 1rem; }
+    .cr-ad-footbar .cr-ad-placeholder { text-align: center; }
+  </style>
+
   </head>
   
   
@@ -825,7 +838,14 @@ map in real time — 0 hides that category.</p>
 </button>
         
       </main>
-      
+      <div class="cr-ad-slot cr-ad-footbar">
+    <a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">
+      <span class="cr-ad-label">Supports the project</span>
+      💛 Enjoying Cobblemon Routes? A small sponsorship keeps the routes being built — no ads
+      needed when the community carries it.
+    </a>
+  </div>
+  
         <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -848,6 +868,7 @@ map in real time — 0 hides that category.</p>
   </div>
 </footer>
       
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -860,8 +881,28 @@ map in real time — 0 hides that category.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.sections", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+  
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-    
+    <script>
+    (function () {
+      function mount() {
+        var rail = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
+        if (!rail || document.getElementById('cr-ad-side')) { return; }
+        var slot = document.createElement('div');
+        slot.id = 'cr-ad-side';
+        slot.className = 'cr-ad-slot';
+        slot.innerHTML = '<a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">'
+          + '<span class="cr-ad-label">Supports the project</span>'
+          + '💛 This space supports Cobblemon Routes directly — sponsor shiero.</a>';
+        rail.appendChild(slot);
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', mount);
+      } else { mount(); }
+      if (typeof document$ !== 'undefined') { document$.subscribe(mount); }
+    })();
+  </script>
+
   </body>
 </html>
