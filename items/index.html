@@ -781,23 +781,30 @@ activate a waystone first.</p>
   gap: 4px; }
 .cr-slot { width: 44px; height: 44px; background: #8b8b8b; border: 2px solid;
   border-color: #373737 #ffffff #ffffff #373737; display: flex; align-items: center;
-  justify-content: center; font-size: 26px; line-height: 1; }
+  justify-content: center; }
+.cr-slot img, .cr-result img, .cr-inline { image-rendering: pixelated; }
+.cr-slot img { width: 32px; height: 32px; }
 .cr-arrow { font-size: 30px; color: #555555; font-weight: bold; }
 .cr-result { width: 58px; height: 58px; background: #8b8b8b; border: 2px solid;
   border-color: #373737 #ffffff #ffffff #373737; outline: 3px solid #a0a0a0; display: flex;
-  align-items: center; justify-content: center; font-size: 32px; position: relative; }
+  align-items: center; justify-content: center; position: relative; }
+.cr-result img { width: 40px; height: 40px; }
 .cr-count { position: absolute; right: 2px; bottom: 0; font-size: 14px; font-weight: bold;
   color: #ffffff; text-shadow: 1px 1px 0 #3f3f3f; }
+.cr-inline { width: 20px; height: 20px; vertical-align: text-bottom; }
 </style>
 
 <div class="cr-craft" title="Shapeless: 2× String + 1× Ender Pearl → 2× Escape Rope">
   <div class="cr-grid">
-    <div class="cr-slot">🧵</div><div class="cr-slot">🧵</div><div class="cr-slot"></div>
-    <div class="cr-slot">🔮</div><div class="cr-slot"></div><div class="cr-slot"></div>
+    <div class="cr-slot"><img src="../assets/items/string.png" alt="String"></div>
+    <div class="cr-slot"><img src="../assets/items/string.png" alt="String"></div>
+    <div class="cr-slot"></div>
+    <div class="cr-slot"><img src="../assets/items/ender_pearl.png" alt="Ender Pearl"></div>
+    <div class="cr-slot"></div><div class="cr-slot"></div>
     <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
   </div>
   <div class="cr-arrow">➜</div>
-  <div class="cr-result">🧗<span class="cr-count">2</span></div>
+  <div class="cr-result"><img src="../assets/items/escape_rope.png" alt="Escape Rope"><span class="cr-count">2</span></div>
 </div>
 
 <table>
@@ -809,15 +816,15 @@ activate a waystone first.</p>
 </thead>
 <tbody>
 <tr>
-<td>🧵 String</td>
+<td><img class="cr-inline" src="../assets/items/string.png" alt=""> String</td>
 <td style="text-align: center;">2</td>
 </tr>
 <tr>
-<td>🔮 Ender Pearl</td>
+<td><img class="cr-inline" src="../assets/items/ender_pearl.png" alt=""> Ender Pearl</td>
 <td style="text-align: center;">1</td>
 </tr>
 <tr>
-<td><strong>→ 🧗 Escape Rope</strong></td>
+<td><strong>→ <img class="cr-inline" src="../assets/items/escape_rope.png" alt=""> Escape Rope</strong></td>
 <td style="text-align: center;"><strong>2</strong></td>
 </tr>
 </tbody>
