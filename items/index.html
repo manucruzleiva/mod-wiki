@@ -609,6 +609,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="https://github.com/sponsors/manucruzleiva" class="md-nav__link">
         
   
@@ -719,11 +746,33 @@ activate a waystone first.</p>
 </div>
 <h3 id="crafting">🪢 Crafting<a class="headerlink" href="#crafting" title="Permanent link">&para;</a></h3>
 <p>A <strong>shapeless</strong> recipe — drop the ingredients anywhere in the crafting grid:</p>
-<pre class="mermaid"><code>flowchart LR
-    S1[🧵 String] --&gt; R{{🪢 Shapeless craft}}
-    S2[🧵 String] --&gt; R
-    EP[🔮 Ender Pearl] --&gt; R
-    R --&gt; OUT[🧗 Escape Rope ×2]</code></pre>
+<style>
+.cr-craft { display: inline-flex; align-items: center; gap: 14px; background: #c6c6c6;
+  border: 3px solid; border-color: #ffffff #555555 #555555 #ffffff; border-radius: 4px;
+  padding: 14px; margin: 8px 0; }
+.cr-grid { display: grid; grid-template-columns: repeat(3, 44px); grid-template-rows: repeat(3, 44px);
+  gap: 4px; }
+.cr-slot { width: 44px; height: 44px; background: #8b8b8b; border: 2px solid;
+  border-color: #373737 #ffffff #ffffff #373737; display: flex; align-items: center;
+  justify-content: center; font-size: 26px; line-height: 1; }
+.cr-arrow { font-size: 30px; color: #555555; font-weight: bold; }
+.cr-result { width: 58px; height: 58px; background: #8b8b8b; border: 2px solid;
+  border-color: #373737 #ffffff #ffffff #373737; outline: 3px solid #a0a0a0; display: flex;
+  align-items: center; justify-content: center; font-size: 32px; position: relative; }
+.cr-count { position: absolute; right: 2px; bottom: 0; font-size: 14px; font-weight: bold;
+  color: #ffffff; text-shadow: 1px 1px 0 #3f3f3f; }
+</style>
+
+<div class="cr-craft" title="Shapeless: 2× String + 1× Ender Pearl → 2× Escape Rope">
+  <div class="cr-grid">
+    <div class="cr-slot">🧵</div><div class="cr-slot">🧵</div><div class="cr-slot"></div>
+    <div class="cr-slot">🔮</div><div class="cr-slot"></div><div class="cr-slot"></div>
+    <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
+  </div>
+  <div class="cr-arrow">➜</div>
+  <div class="cr-result">🧗<span class="cr-count">2</span></div>
+</div>
+
 <table>
 <thead>
 <tr>
