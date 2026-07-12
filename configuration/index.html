@@ -16,7 +16,7 @@
         <link rel="prev" href="../items/">
       
       
-        <link rel="next" href="../commands/">
+        <link rel="next" href="../reporting/">
       
       
         
@@ -59,20 +59,7 @@
 
     
     
-  <style>
-    .cr-ad-slot { font-size: .64rem; line-height: 1.5; }
-    .cr-ad-placeholder { display: block; border: 1px dashed var(--md-default-fg-color--lighter);
-      border-radius: .2rem; padding: .6rem .7rem; color: var(--md-default-fg-color--light);
-      text-decoration: none; background: var(--md-code-bg-color); }
-    .cr-ad-placeholder:hover { border-color: var(--md-accent-fg-color);
-      color: var(--md-accent-fg-color); }
-    .cr-ad-label { display: block; font-size: .55rem; letter-spacing: .05em;
-      text-transform: uppercase; opacity: .6; margin-bottom: .25rem; }
-    #cr-ad-side { margin: 1.2rem .8rem 0 .8rem; }
-    .cr-ad-footbar { max-width: 61rem; margin: 0 auto; padding: .4rem .8rem 1rem; }
-    .cr-ad-footbar .cr-ad-placeholder { text-align: center; }
-  </style>
-
+  
   </head>
   
   
@@ -574,33 +561,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../commands/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Commands
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../reporting/" class="md-nav__link">
         
   
@@ -1041,9 +1001,98 @@ creation auto-enables the full Nuzlocke rule set.</p>
 when a world wasn't configured through the tabs. The map-paint intensity also has live sliders on
 <a href="../map-integration/">Xaero's world map</a>.</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
-<p>The roots are <code>/routes</code> and <code>/nuzlocke</code> (the old <code>/cobblemonroutes …</code> still works everywhere).
-The full manual — every command, argument, permission and behaviour — lives on
-<a href="../commands/">the Commands page</a>.</p>
+<p>The roots are <code>/routes</code> and <code>/nuzlocke</code> (the old <code>/cobblemonroutes …</code> still works everywhere).</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Permission</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/cobblemon_routes config</code></td>
+<td>—</td>
+<td>Open the config screen (client).</td>
+</tr>
+<tr>
+<td><code>/routes status</code></td>
+<td>—</td>
+<td>Network summary: towns, nodes, completed routes, queued edges.</td>
+</tr>
+<tr>
+<td><code>/routes list [cities\|routes]</code></td>
+<td>—</td>
+<td>Every known town / completed route with coordinates.</td>
+</tr>
+<tr>
+<td><code>/routes nearest</code></td>
+<td>—</td>
+<td>Closest town and route to you, with distance and heading.</td>
+</tr>
+<tr>
+<td><code>/routes zone</code></td>
+<td>—</td>
+<td>Which zone paints the chunk you are standing in.</td>
+</tr>
+<tr>
+<td><code>/routes scan/connect/structures/addcity/reset</code></td>
+<td>OP 2</td>
+<td>Route generator diagnostics (routes generate on their own).</td>
+</tr>
+<tr>
+<td><code>/routes tp &lt;town&gt;</code></td>
+<td>OP 2</td>
+<td>Teleport to a named town.</td>
+</tr>
+<tr>
+<td><code>/routes rename &lt;name&gt;</code></td>
+<td>OP 2</td>
+<td>Rename the nearest town.</td>
+</tr>
+<tr>
+<td><code>/routes weave [loops]</code></td>
+<td>OP 2</td>
+<td>Force ring roads now — loops enclose new areas.</td>
+</tr>
+<tr>
+<td><code>/routes repaint</code></td>
+<td>OP 2</td>
+<td>Re-broadcast the map paint to everyone online.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke status [player]</code></td>
+<td>— ([player] OP 2)</td>
+<td>Nuzlocke zones and party deaths.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke log</code> (key <strong>I</strong>)</td>
+<td>—</td>
+<td>Visited-zones screen: coords, encounter, outcome, dead/alive.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke map</code></td>
+<td>—</td>
+<td>Dump your capture zones onto the map as waypoints.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke soullock summary</code></td>
+<td>—</td>
+<td>Linked-teams screen: every partner's full party.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke reset/revive [player]</code></td>
+<td>OP 2</td>
+<td>Admin / testing.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke soullock …</code></td>
+<td>—</td>
+<td>Request a soul-link with nearby players.</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1071,14 +1120,7 @@ The full manual — every command, argument, permission and behaviour — lives 
 </button>
         
       </main>
-      <div class="cr-ad-slot cr-ad-footbar">
-    <a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">
-      <span class="cr-ad-label">Supports the project</span>
-      💛 Enjoying Cobblemon Routes? A small sponsorship keeps the routes being built — no ads
-      needed when the community carries it.
-    </a>
-  </div>
-  
+      
         <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
@@ -1101,7 +1143,6 @@ The full manual — every command, argument, permission and behaviour — lives 
   </div>
 </footer>
       
-
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -1114,28 +1155,8 @@ The full manual — every command, argument, permission and behaviour — lives 
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.sections", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-  
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-    <script>
-    (function () {
-      function mount() {
-        var rail = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
-        if (!rail || document.getElementById('cr-ad-side')) { return; }
-        var slot = document.createElement('div');
-        slot.id = 'cr-ad-side';
-        slot.className = 'cr-ad-slot';
-        slot.innerHTML = '<a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">'
-          + '<span class="cr-ad-label">Supports the project</span>'
-          + '💛 This space supports Cobblemon Routes directly — sponsor shiero.</a>';
-        rail.appendChild(slot);
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', mount);
-      } else { mount(); }
-      if (typeof document$ !== 'undefined') { document$.subscribe(mount); }
-    })();
-  </script>
-
+    
   </body>
 </html>
