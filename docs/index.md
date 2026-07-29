@@ -1,45 +1,54 @@
-# Cobblemon Routes
+# Modding Wiki
 
-**Cobblemon Routes** is a **Cobblemon add-on** for **Minecraft 1.21.1 (Cobblemon 1.7.3)** that turns
-any Cobblemon world into a linear, classic-style Pokémon RPG. Two things happen automatically:
+Todos los mods de Cobblemon de **shiero**, documentados en un solo lugar.
 
-1. **Real roads grow through your world as it generates** — physical, walkable routes that connect your
-   towns and structures, signposted and named like the games (`Route 3: Plains Forest`).
-2. **A full Hardcore-Nuzlocke ruleset runs on top** — first-encounter capture lock, permadeath,
-   mandatory nicknames, a shiny clause, co-op Soul Link, and more.
+Cada mod mantiene su documentación en su propio repositorio y la publica acá, en su subdirectorio.
+Esta página es sólo la portada.
 
-It works with any Cobblemon setup and plays nicely with big packs like **COBBLEVERSE** (it connects
-their gyms when they're present).
+## Los mods
 
-!!! tip "You set everything up when you create the world"
-    All of Cobblemon Routes' rules are chosen on the **NUZLOCKE** and **ROUTES** tabs of the
-    create-world screen, and saved with that world. There is no separate options menu to fiddle with
-    later — you pick your adventure once, then play. See [World creation & settings](configuration.md).
+<div class="grid cards" markdown>
 
-## Highlights
+-   ### [Cobblemon Routes](/mod-wiki/routes/)
 
-- 🗺️ **Dynamic routes** between your towns and structures, built during world generation — no commands,
-  no need to walk the area first. Roads seek flat ground, stay off the coast, tunnel through mountains,
-  clear trees out of the path, and put a signpost at every junction.
-- 🏘️ **Tidy towns** — the ground around each town is gently levelled into a flat platform *without*
-  bulldozing the buildings or clear-cutting the surrounding forest.
-- 🎮 **Hardcore Nuzlocke** — per-zone first-encounter lock, permadeath with heal-blocking,
-  spectator-on-loss, a Defeated-Catch window, and a classic **shiny clause** (a wild shiny is always
-  catchable).
-- 🤝 **Soul Link co-op** — link parties with friends so your fates are shared: when one linked Pokémon
-  dies, so do its soulmates.
-- 🧩 **One place to configure** — dedicated **NUZLOCKE** and **ROUTES** tabs on the vanilla create-world
-  screen let you set every rule up-front, saved per world.
-- 🧭 **Optional integrations** — Waystones (named route nodes) and Xaero's Minimap/World Map (auto
-  waypoints + coloured route/town tinting).
+    Rutas físicas generadas durante el worldgen que conectan las estructuras del mundo, con nombres
+    y carteles como en los juegos (`Route 3: Plains Forest`). Convierte cualquier mundo de Cobblemon
+    en un RPG lineal clásico.
 
-## Quick links
+    **MC 1.21.1 · Cobblemon 1.7.3 · Fabric + NeoForge**
 
-- [Installation](installation.md)
-- [Features](features.md)
-- [World creation & settings](configuration.md)
-- [Changelog](changelog.md)
+-   ### [Cobblemon Picnic](/mod-wiki/picnic/)
 
-!!! note "License"
-    Cobblemon Routes is free for personal, non-commercial use with attribution. Any revenue-generating
-    use (for example a paid server or paid pack) requires sharing revenue with the author.
+    Picnics al estilo Scarlet/Violet en Cobblemon.
+
+    **Fabric + NeoForge**
+
+-   ### Cobblemon Nuzlocke *(en camino)*
+
+    El ruleset Hardcore-Nuzlocke completo —captura bloqueada al primer encuentro por zona, muerte
+    permanente, apodos obligatorios, cláusula de shiny y **Soul Link** co-op— separándose de Routes
+    como mod propio. Ver [#122](https://github.com/manucruzleiva/routes/issues/122).
+
+    Hasta que salga, su documentación vive en la wiki de Routes.
+
+-   ### Cobblemon Ditto HMs *(pendiente de migrar)*
+
+    HMs de las generaciones clásicas para Cobblemon.
+
+    Su documentación todavía no se migró a esta wiki.
+
+</div>
+
+## Reportar bugs o pedir features
+
+Cada mod tiene sus canales foro en Discord, y un bot los convierte en issues de GitHub
+automáticamente. No hace falta tener cuenta de GitHub: escribí en el foro del mod y listo.
+
+Los bots viven en [`intake-bots`](https://github.com/manucruzleiva/intake-bots), uno por proyecto.
+
+---
+
+!!! info "Esta wiki reemplaza a las anteriores"
+    Antes cada mod tenía su propia wiki y su propia URL (`cobblemon-routes-wiki`,
+    `cobblemon-picnic-wiki`). Ahora es una sola: **manucruzleiva.github.io/mod-wiki/**.
+    Los links viejos publicados en Modrinth y CurseForge conviene actualizarlos.

@@ -1,7 +1,17 @@
-name: Wiki (MkDocs → GitHub Pages)
+name: Wiki (portada)
 
-# Builds the docs/ site with MkDocs Material and publishes it to GitHub Pages.
-# One-time setup: in the repo, Settings → Pages → Source = "GitHub Actions".
+# Construye SOLO la portada de la wiki unica y la publica en la RAIZ de gh-pages.
+#
+# Este repo ya no es la wiki de Routes: es el hub de todos los mods. Cada mod publica su propia
+# wiki en su subdirectorio de esta misma rama gh-pages (routes -> /routes/, picnic -> /picnic/),
+# empujando desde SU repo con una deploy key.
+#
+# CAMBIO IMPORTANTE respecto de la version anterior: antes esto usaba actions/deploy-pages, que
+# exige Pages con Source = "GitHub Actions" y sirve un artifact unico — incompatible con que otros
+# repos depositen subdirectorios. Ahora publica a la rama gh-pages con peaceiris, igual que los
+# mods, para que todos escriban sobre el mismo arbol.
+#
+# Setup por unica vez: Settings -> Pages -> Source = "Deploy from a branch" -> gh-pages / (root).
 
 on:
   push:
@@ -9,20 +19,18 @@ on:
     paths:
       - "docs/**"
       - "mkdocs.yml"
-      - ".github/workflows/wiki.yml"
+      - ".github/workflows/deploy.yml"
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: wiki-landing
   cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,16 +39,14 @@ jobs:
           python-version: "3.x"
       - run: pip install mkdocs-material
       - run: mkdocs build --strict
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Publicar la portada en la raiz de gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages
+          # CRITICO: sin keep_files, este deploy borraria /routes/ y /picnic/ — los subdirectorios
+          # que publican los repos de cada mod y que este build no conoce.
+          keep_files: true
+          commit_message: "deploy landing from ${{ github.sha }}"

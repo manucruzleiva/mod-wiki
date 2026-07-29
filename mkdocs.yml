@@ -1,29 +1,42 @@
-site_name: Cobblemon Routes
+site_name: Modding Wiki
 site_description: >-
-  A Cobblemon add-on — physical routes generated during worldgen that connect the world's structures,
-  automated Hardcore-Nuzlocke rules, and quality-of-life utilities.
-# NOTE: update site_url + repo_url/name after you rename the GitHub repo to "cobblemon-routes".
-site_url: https://manucruzleiva.github.io/cobblemon-routes-wiki/
-repo_url: https://github.com/manucruzleiva/cobblemon-routes-wiki
-repo_name: manucruzleiva/cobblemon-routes-wiki
+  La wiki unica de todos los mods de Cobblemon de shiero — Routes, Nuzlocke, Picnic y Ditto HMs.
+site_url: https://manucruzleiva.github.io/mod-wiki/
+repo_url: https://github.com/manucruzleiva/mod-wiki
+repo_name: manucruzleiva/mod-wiki
 docs_dir: docs
+copyright: 'Mods por shiero — "If you make money, I make money" license'
+
+# Este repo construye SOLO la portada (la raiz del sitio). La wiki de cada mod la publica el
+# repo de ese mod, en su propio subdirectorio de la rama gh-pages:
+#
+#   /            <- este repo          (landing)
+#   /routes/     <- manucruzleiva/routes
+#   /picnic/     <- manucruzleiva/cobblemon-picnic
+#   /nuzlocke/   <- pendiente del split (#122)
+#   /ditto-hms/  <- pendiente
+#
+# Por eso la nav de aca son links absolutos a esos subdirectorios y no paginas locales: mkdocs
+# no conoce esos archivos, los deposita cada mod al deployar.
 
 theme:
   name: material
-  language: en
+  language: es
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: green
       accent: teal
       toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: green
       accent: teal
       toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
   features:
     - navigation.sections
     - navigation.top
@@ -35,6 +48,7 @@ theme:
 markdown_extensions:
   - admonition
   - attr_list
+  - md_in_html
   - tables
   - pymdownx.details
   - pymdownx.superfences
@@ -43,8 +57,10 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Home: index.md
-  - Installation: installation.md
-  - Features: features.md
-  - World creation & config: configuration.md
-  - Changelog: changelog.md
+  - Inicio: index.md
+  - Cobblemon Routes: /mod-wiki/routes/
+  - Cobblemon Picnic: /mod-wiki/picnic/
+  - 💛 Sponsor shiero: https://github.com/sponsors/manucruzleiva
+
+plugins:
+  - search
