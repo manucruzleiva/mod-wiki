@@ -1,37 +1,45 @@
 # Cobblemon Routes
 
-**Cobblemon Routes** is a **Cobblemon add-on** (Minecraft 1.21.1, Cobblemon 1.7.3) that turns any
-Cobblemon world into a linear, classic-style Pokémon RPG: **physical roads generated during worldgen**
-that connect the world's cities and structures, automated **Hardcore-Nuzlocke** rules, and integrated
-quality-of-life utilities. It works with any Cobblemon setup, and is compatible with packs like
-COBBLEVERSE (it connects their gyms when present).
+**Cobblemon Routes** is a **Cobblemon add-on** for **Minecraft 1.21.1 (Cobblemon 1.7.3)** that turns
+any Cobblemon world into a linear, classic-style Pokémon RPG. Two things happen automatically:
 
-!!! tip "Two halves"
-    - **Routes** — a dynamic road network that grows through the world during generation, seeking flat
-      ground, skirting coasts, tunnelling through mountains, and signposting every junction.
-    - **Nuzlocke RPG** — first-encounter capture lock, permadeath, spectator-on-loss, a starter
-      randomizer, modular healing, and more — all configurable per world from the world-creation screen.
+1. **Real roads grow through your world as it generates** — physical, walkable routes that connect your
+   towns and structures, signposted and named like the games (`Route 3: Plains Forest`).
+2. **A full Hardcore-Nuzlocke ruleset runs on top** — first-encounter capture lock, permadeath,
+   mandatory nicknames, a shiny clause, co-op Soul Link, and more.
+
+It works with any Cobblemon setup and plays nicely with big packs like **COBBLEVERSE** (it connects
+their gyms when they're present).
+
+!!! tip "You set everything up when you create the world"
+    All of Cobblemon Routes' rules are chosen on the **NUZLOCKE** and **ROUTES** tabs of the
+    create-world screen, and saved with that world. There is no separate options menu to fiddle with
+    later — you pick your adventure once, then play. See [World creation & settings](configuration.md).
 
 ## Highlights
 
-- 🗺️ **Dynamic routes** between cities/structures, fully part of worldgen (no commands, no walking the
-  area). Roads seek flat ground, stay off the coast, **tunnel mineshaft-style through mountains**, clear
-  whole trees from the path, and get English biome-based names (`Route 3: Plains Forest`).
-- 🎮 **Hardcore Nuzlocke**: per-zone first-encounter lock, permadeath with heal-blocking, mandatory
-  nicknames, spectator-on-loss, and a Defeated-Catch window (a downed wild stays catchable but inert).
-- 🧩 **World-creation tabs**: dedicated **NUZLOCKE** and **ROUTES** tabs on the vanilla create-world
-  screen — set every rule up-front, saved per world.
-- 🧭 **Integrations** (optional): Waystones (named route nodes) and Xaero's Minimap (auto waypoints).
+- 🗺️ **Dynamic routes** between your towns and structures, built during world generation — no commands,
+  no need to walk the area first. Roads seek flat ground, stay off the coast, tunnel through mountains,
+  clear trees out of the path, and put a signpost at every junction.
+- 🏘️ **Tidy towns** — the ground around each town is gently levelled into a flat platform *without*
+  bulldozing the buildings or clear-cutting the surrounding forest.
+- 🎮 **Hardcore Nuzlocke** — per-zone first-encounter lock, permadeath with heal-blocking,
+  spectator-on-loss, a Defeated-Catch window, and a classic **shiny clause** (a wild shiny is always
+  catchable).
+- 🤝 **Soul Link co-op** — link parties with friends so your fates are shared: when one linked Pokémon
+  dies, so do its soulmates.
+- 🧩 **One place to configure** — dedicated **NUZLOCKE** and **ROUTES** tabs on the vanilla create-world
+  screen let you set every rule up-front, saved per world.
+- 🧭 **Optional integrations** — Waystones (named route nodes) and Xaero's Minimap/World Map (auto
+  waypoints + coloured route/town tinting).
 
 ## Quick links
 
 - [Installation](installation.md)
 - [Features](features.md)
-- [World creation & configuration](configuration.md)
+- [World creation & settings](configuration.md)
 - [Changelog](changelog.md)
-- [Source on GitHub](https://github.com/manucruzleiva/cobbleverse-rpg)
 
 !!! note "License"
-    Cobblemon Routes is **source-available with revenue share**: free for personal / non-commercial use
-    with attribution; any revenue-generating use requires sharing revenue with the author. See the
-    [LICENSE](https://github.com/manucruzleiva/cobbleverse-rpg/blob/master/LICENSE).
+    Cobblemon Routes is free for personal, non-commercial use with attribution. Any revenue-generating
+    use (for example a paid server or paid pack) requires sharing revenue with the author.
