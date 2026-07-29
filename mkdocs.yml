@@ -1,27 +1,27 @@
 site_name: Modding Wiki
 site_description: >-
-  La wiki unica de todos los mods de Cobblemon de shiero — Routes, Nuzlocke, Picnic y Ditto HMs.
+  The single wiki for every Cobblemon mod by shiero — Routes, Nuzlocke & Soul Link, Picnic and Ditto HMs.
 site_url: https://manucruzleiva.github.io/mod-wiki/
 repo_url: https://github.com/manucruzleiva/mod-wiki
 repo_name: manucruzleiva/mod-wiki
 docs_dir: docs
-copyright: 'Mods por shiero — "If you make money, I make money" license'
+copyright: 'Mods by shiero — "If you make money, I make money" license'
 
-# Este repo construye SOLO la portada (la raiz del sitio). La wiki de cada mod la publica el
-# repo de ese mod, en su propio subdirectorio de la rama gh-pages:
+# This repo builds ONLY the landing page (the site root). Each mod publishes its own wiki from
+# its own repo, into its own subdirectory of the gh-pages branch:
 #
-#   /            <- este repo          (landing)
+#   /            <- this repo           (landing)
 #   /routes/     <- manucruzleiva/routes
 #   /picnic/     <- manucruzleiva/cobblemon-picnic
-#   /nuzlocke/   <- pendiente del split (#122)
-#   /ditto-hms/  <- pendiente
+#   /ditto-hms/  <- manucruzleiva/cobblemon-ditto-hms
+#   /nuzlocke/   <- pending the split  (#122)
 #
-# Por eso la nav de aca son links absolutos a esos subdirectorios y no paginas locales: mkdocs
-# no conoce esos archivos, los deposita cada mod al deployar.
+# That is why the nav below uses absolute links to those subdirectories rather than local pages:
+# mkdocs does not know those files — each mod drops them in when it deploys.
 
 theme:
   name: material
-  language: es
+  language: en
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -29,14 +29,14 @@ theme:
       accent: teal
       toggle:
         icon: material/weather-night
-        name: Cambiar a modo oscuro
+        name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: green
       accent: teal
       toggle:
         icon: material/weather-sunny
-        name: Cambiar a modo claro
+        name: Switch to light mode
   features:
     - navigation.sections
     - navigation.top
@@ -57,9 +57,10 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Inicio: index.md
+  - Home: index.md
   - Cobblemon Routes: /mod-wiki/routes/
   - Cobblemon Picnic: /mod-wiki/picnic/
+  - Cobblemon Ditto HMs: /mod-wiki/ditto-hms/
   - 💛 Sponsor shiero: https://github.com/sponsors/manucruzleiva
 
 plugins:

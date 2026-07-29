@@ -1,59 +1,57 @@
 # Modding Wiki
 
-Todos los mods de Cobblemon de **shiero**, documentados en un solo lugar.
+Every Cobblemon mod by **shiero**, documented in one place.
 
-Cada mod mantiene su documentación en su propio repositorio y la publica acá, en su subdirectorio.
-Esta página es sólo la portada.
+Each mod keeps its documentation in its own repository and publishes it here, under its own section.
+This page is just the front door.
 
-## Los mods
+## The mods
 
 <div class="grid cards" markdown>
 
 -   ### [Cobblemon Routes](/mod-wiki/routes/)
 
-    Rutas físicas generadas durante el worldgen que conectan las estructuras del mundo, con nombres
-    y carteles como en los juegos (`Route 3: Plains Forest`). Convierte cualquier mundo de Cobblemon
-    en un RPG lineal clásico.
+    Physical routes generated during worldgen that connect the world's structures, signposted and
+    named like the games (`Route 3: Plains Forest`). Turns any Cobblemon world into a classic linear
+    RPG.
 
     **MC 1.21.1 · Cobblemon 1.7.3 · Fabric + NeoForge**
 
 -   ### [Cobblemon Picnic](/mod-wiki/picnic/)
 
-    Picnics al estilo Scarlet/Violet en Cobblemon.
+    Scarlet/Violet-style picnics in Cobblemon.
 
     **Fabric + NeoForge**
 
--   ### Cobblemon Nuzlocke & Soul Link *(en camino)*
+-   ### [Cobblemon Ditto HMs](/mod-wiki/ditto-hms/)
 
-    El ruleset Hardcore-Nuzlocke completo: captura bloqueada al primer encuentro por zona, muerte
-    permanente, apodos obligatorios, cláusula de shiny, randomizer de starter y level caps. Todo eso
-    funciona **en solitario**.
+    Classic-generation HMs for Cobblemon.
 
-    Y encima, **Soul Link**: el modo co-op donde linkeás tu equipo con el de tus amigos y comparten
-    destino — cuando muere un Pokémon linkeado, mueren sus almas gemelas.
+-   ### Cobblemon Nuzlocke & Soul Link *(coming)*
 
-    Se está separando de Routes como mod propio. Ver
-    [#122](https://github.com/manucruzleiva/routes/issues/122). Hasta que salga, su documentación
-    vive en la wiki de Routes.
+    The full Hardcore-Nuzlocke ruleset: per-zone first-encounter capture lock, permadeath, mandatory
+    nicknames, a shiny clause, starter randomiser and level caps. All of it works **solo**.
 
--   ### Cobblemon Ditto HMs *(pendiente de migrar)*
+    On top of that, **Soul Link**: the co-op mode where you link parties with friends and share fates
+    — when one linked Pokémon dies, so do its soulmates.
 
-    HMs de las generaciones clásicas para Cobblemon.
-
-    Su documentación todavía no se migró a esta wiki.
+    Currently being split out of Routes into its own mod. See
+    [#122](https://github.com/manucruzleiva/routes/issues/122). Until it ships, its documentation
+    lives in the Routes wiki.
 
 </div>
 
-## Reportar bugs o pedir features
+## Reporting bugs and requesting features
 
-Cada mod tiene sus canales foro en Discord, y un bot los convierte en issues de GitHub
-automáticamente. No hace falta tener cuenta de GitHub: escribí en el foro del mod y listo.
+Every mod has its own Discord forum channels, and a bot turns posts into GitHub issues
+automatically. You don't need a GitHub account: post in the mod's forum and that's it.
 
-Los bots viven en [`intake-bots`](https://github.com/manucruzleiva/intake-bots), uno por proyecto.
+The bots live in [`intake-bots`](https://github.com/manucruzleiva/intake-bots), one per project.
 
 ---
 
-!!! info "Esta wiki reemplaza a las anteriores"
-    Antes cada mod tenía su propia wiki y su propia URL (`cobblemon-routes-wiki`,
-    `cobblemon-picnic-wiki`). Ahora es una sola: **manucruzleiva.github.io/mod-wiki/**.
-    Los links viejos publicados en Modrinth y CurseForge conviene actualizarlos.
+!!! info "This wiki replaces the old per-mod wikis"
+    Each mod used to have its own wiki at its own URL (`cobblemon-routes-wiki`,
+    `cobblemon-picnic-wiki`, `cobblemon-ditto-hms`). There is now a single one:
+    **manucruzleiva.github.io/mod-wiki/**. Old links published on Modrinth and CurseForge should be
+    updated.
