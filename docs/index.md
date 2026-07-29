@@ -23,13 +23,18 @@ Esta página es sólo la portada.
 
     **Fabric + NeoForge**
 
--   ### Cobblemon Nuzlocke *(en camino)*
+-   ### Cobblemon Nuzlocke & Soul Link *(en camino)*
 
-    El ruleset Hardcore-Nuzlocke completo —captura bloqueada al primer encuentro por zona, muerte
-    permanente, apodos obligatorios, cláusula de shiny y **Soul Link** co-op— separándose de Routes
-    como mod propio. Ver [#122](https://github.com/manucruzleiva/routes/issues/122).
+    El ruleset Hardcore-Nuzlocke completo: captura bloqueada al primer encuentro por zona, muerte
+    permanente, apodos obligatorios, cláusula de shiny, randomizer de starter y level caps. Todo eso
+    funciona **en solitario**.
 
-    Hasta que salga, su documentación vive en la wiki de Routes.
+    Y encima, **Soul Link**: el modo co-op donde linkeás tu equipo con el de tus amigos y comparten
+    destino — cuando muere un Pokémon linkeado, mueren sus almas gemelas.
+
+    Se está separando de Routes como mod propio. Ver
+    [#122](https://github.com/manucruzleiva/routes/issues/122). Hasta que salga, su documentación
+    vive en la wiki de Routes.
 
 -   ### Cobblemon Ditto HMs *(pendiente de migrar)*
 
