@@ -1,0 +1,1650 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Official wiki for Cobblemon Routes — physical routes generated during worldgen, automated Hardcore-Nuzlocke rules, and map integrations that turn any Cobblemon world into a classic RPG.">
+      
+      
+      
+        <link rel="canonical" href="https://manucruzleiva.github.io/mod-wiki/routes/commands/">
+      
+      
+        <link rel="prev" href="../configuration/">
+      
+      
+        <link rel="next" href="../reporting/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Commands - Cobblemon Routes Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <style>
+    .cr-ad-slot { font-size: .64rem; line-height: 1.5; }
+    .cr-ad-placeholder { display: block; border: 1px dashed var(--md-default-fg-color--lighter);
+      border-radius: .2rem; padding: .6rem .7rem; color: var(--md-default-fg-color--light);
+      text-decoration: none; background: var(--md-code-bg-color); }
+    .cr-ad-placeholder:hover { border-color: var(--md-accent-fg-color);
+      color: var(--md-accent-fg-color); }
+    .cr-ad-label { display: block; font-size: .55rem; letter-spacing: .05em;
+      text-transform: uppercase; opacity: .6; margin-bottom: .25rem; }
+    #cr-ad-side { margin: 1.2rem .8rem 0 .8rem; }
+    .cr-ad-footbar { max-width: 61rem; margin: 0 auto; padding: .4rem .8rem 1rem; }
+    .cr-ad-footbar .cr-ad-placeholder { text-align: center; }
+  </style>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Cobblemon Routes Wiki" class="md-header__button md-logo" aria-label="Cobblemon Routes Wiki" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cobblemon Routes Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Commands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Cobblemon Routes Wiki" class="md-nav__button md-logo" aria-label="Cobblemon Routes Wiki" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Cobblemon Routes Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../routes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dynamic Routes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nuzlocke/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardcore Nuzlocke
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soullock/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soullock (co-op)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../map-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Map Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Items & Recipes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    World Creation & Config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routes-the-road-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛤️ /routes — the road network
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛤️ /routes — the road network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        status — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-citiesroutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        list [cities|routes] — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nearest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nearest — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zone — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan-radiuschunks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scan [radiusChunks] — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        connect — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        structures — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addcity-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        addcity [name] — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rename-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rename &lt;name&gt; — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp-town" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tp &lt;town&gt; — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weave-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        weave [loops] — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repaint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        repaint — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        reset — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuzlocke-the-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧬 /nuzlocke — the run
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧬 /nuzlocke — the run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status-player-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        status [player] — 👤 ([player] 🛡️)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-keybind-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        log — 👤 · keybind I
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        map — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        reset [player] — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revive-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        revive [player] — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuzlocke-soullock-co-op-contracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❤️‍🔥 /nuzlocke soullock — co-op contracts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❤️‍🔥 /nuzlocke soullock — co-op contracts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link-player2-player3-player4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        link &lt;player2&gt; [player3] [player4] — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accept-decline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        accept / decline — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unlink" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        unlink — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        status — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        summary — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reporting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporting Bugs & Ideas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../credits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    License
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/sponsors/manucruzleiva" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💛 Sponsor shiero
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routes-the-road-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛤️ /routes — the road network
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛤️ /routes — the road network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        status — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-citiesroutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        list [cities|routes] — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nearest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nearest — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zone — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan-radiuschunks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scan [radiusChunks] — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        connect — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        structures — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addcity-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        addcity [name] — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rename-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rename &lt;name&gt; — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tp-town" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tp &lt;town&gt; — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weave-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        weave [loops] — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repaint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        repaint — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        reset — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuzlocke-the-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧬 /nuzlocke — the run
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧬 /nuzlocke — the run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status-player-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        status [player] — 👤 ([player] 🛡️)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-keybind-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        log — 👤 · keybind I
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        map — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        reset [player] — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revive-player" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        revive [player] — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nuzlocke-soullock-co-op-contracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❤️‍🔥 /nuzlocke soullock — co-op contracts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❤️‍🔥 /nuzlocke soullock — co-op contracts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link-player2-player3-player4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        link &lt;player2&gt; [player3] [player4] — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accept-decline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        accept / decline — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unlink" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        unlink — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        status — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        summary — 👤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="commands">⌨️ Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h1>
+<p>The complete manual for every command. There are two roots — <strong><code>/routes</code></strong> for the road network and
+<strong><code>/nuzlocke</code></strong> for the run.</p>
+<pre class="mermaid"><code>flowchart LR
+    R["/routes"] --&gt; RP[👤 status · list · nearest · zone]
+    R --&gt; RO[🛡️ scan · connect · structures · addcity&lt;br/&gt;rename · tp · weave · repaint · reset]
+    N["/nuzlocke"] --&gt; NP[👤 status · log · map]
+    N --&gt; NO[🛡️ status player · reset · revive]
+    N --&gt; S[soullock]
+    S --&gt; SP[👤 link · accept · decline · unlink&lt;br/&gt;status · summary]</code></pre>
+<p>👤 = every player · 🛡️ = operator (permission level 2)</p>
+<h2 id="quick-reference">Quick reference<a class="headerlink" href="#quick-reference" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th style="text-align: center;">Who</th>
+<th>One-liner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/routes status</code></td>
+<td style="text-align: center;">👤</td>
+<td>Network summary: towns, nodes, completed routes, queued edges.</td>
+</tr>
+<tr>
+<td><code>/routes list [cities\|routes]</code></td>
+<td style="text-align: center;">👤</td>
+<td>Every known town / completed route, with coordinates.</td>
+</tr>
+<tr>
+<td><code>/routes nearest</code></td>
+<td style="text-align: center;">👤</td>
+<td>Closest town and route, with distance and heading.</td>
+</tr>
+<tr>
+<td><code>/routes zone</code></td>
+<td style="text-align: center;">👤</td>
+<td>What the chunk you stand in is painted as.</td>
+</tr>
+<tr>
+<td><code>/routes scan [radius]</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Scan loaded chunks for city structures (1–100 chunks).</td>
+</tr>
+<tr>
+<td><code>/routes connect</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Queue a road between the two nearest cities.</td>
+</tr>
+<tr>
+<td><code>/routes structures</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Dump the structure-registry match report.</td>
+</tr>
+<tr>
+<td><code>/routes addcity [name]</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Register where you stand as a named city.</td>
+</tr>
+<tr>
+<td><code>/routes rename &lt;name&gt;</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Rename the nearest town.</td>
+</tr>
+<tr>
+<td><code>/routes tp &lt;town&gt;</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Teleport to a named town.</td>
+</tr>
+<tr>
+<td><code>/routes weave [loops]</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Force ring roads now (1–16).</td>
+</tr>
+<tr>
+<td><code>/routes repaint</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Re-broadcast the map paint to everyone online.</td>
+</tr>
+<tr>
+<td><code>/routes reset</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Wipe the roads and re-queue every connection.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke status [player]</code></td>
+<td style="text-align: center;">👤 / 🛡️</td>
+<td>Zone records + party deaths (<code>[player]</code> is op-only).</td>
+</tr>
+<tr>
+<td><code>/nuzlocke log</code> · key <strong>I</strong></td>
+<td style="text-align: center;">👤</td>
+<td>The visited-zones screen.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke map</code></td>
+<td style="text-align: center;">👤</td>
+<td>Dump your capture zones as map waypoints.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke reset [player]</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Clear a player's zone records.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke revive [player]</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Revive a party's dead Pokémon (lifts a game-over).</td>
+</tr>
+<tr>
+<td><code>/nuzlocke enable</code> · <code>/nuzlocke disable</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Master switch for this world — turn the whole Nuzlocke ruleset on (routes-only when off) or off, saved per world.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke set &lt;option&gt; &lt;value&gt;</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Change any single per-world setting live — the same options as the create-world tabs (e.g. <code>require_nicknames false</code>, <code>healing_mode ALL</code>). Tab-completes the names.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke soullock …</code></td>
+<td style="text-align: center;">👤</td>
+<td>The co-op soul-link suite (below).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="routes-the-road-network">🛤️ <code>/routes</code> — the road network<a class="headerlink" href="#routes-the-road-network" title="Permanent link">&para;</a></h2>
+<h3 id="status"><code>status</code> — 👤<a class="headerlink" href="#status" title="Permanent link">&para;</a></h3>
+<p>Prints the network at a glance: how many <strong>towns</strong> are known (and how many have real names), how
+many <strong>route nodes</strong> were discovered, how many <strong>routes are completed</strong>, and how many <strong>candidate
+edges</strong> wait in the build queue — then the first 16 routes with their endpoints.</p>
+<h3 id="list-citiesroutes"><code>list [cities|routes]</code> — 👤<a class="headerlink" href="#list-citiesroutes" title="Permanent link">&para;</a></h3>
+<p>The full inventory. <code>cities</code> lists every known town — its name (or <em>(unnamed town)</em>) and its <code>x, z</code>
+coordinates; <code>routes</code> lists every completed route with its two endpoints. With no argument you get
+both. Long lists are capped at 24 lines with an <em>"… and N more"</em> trailer.</p>
+<h3 id="nearest"><code>nearest</code> — 👤<a class="headerlink" href="#nearest" title="Permanent link">&para;</a></h3>
+<p>Where's civilization? Reports the <strong>closest town</strong> and the <strong>closest route</strong> to where you stand,
+each with the distance in blocks and a compass heading (N, NE, E, …). Great when you're lost in
+open wilderness.</p>
+<h3 id="zone"><code>zone</code> — 👤<a class="headerlink" href="#zone" title="Permanent link">&para;</a></h3>
+<p>The map-paint (and capture-zone) debugger: tells you what the <strong>chunk you are standing in</strong> is
+painted as — a <strong>CITY</strong> (with its name), a <strong>ROUTE</strong> (name and endpoints), an enclosed <strong>AREA</strong>
+(its <code>A#-Name</code>, or <em>unnamed until first entered</em>), or <strong>open wilderness</strong> (unpainted until your
+network encloses it). Always agrees with the map colours and the zone pop-ups.</p>
+<h3 id="scan-radiuschunks"><code>scan [radiusChunks]</code> — 🛡️<a class="headerlink" href="#scan-radiuschunks" title="Permanent link">&para;</a></h3>
+<p>Scans the <strong>already-loaded</strong> chunks around you (default 8, up to <strong>100</strong> chunks radius) and
+registers any city structures it finds as route nodes. Use after exploring somewhere new when you
+don't want to wait for the automatic discovery.</p>
+<h3 id="connect"><code>connect</code> — 🛡️<a class="headerlink" href="#connect" title="Permanent link">&para;</a></h3>
+<p>Locates the nearest connectable cities from your position (seed-based — no chunk loading) and
+queues a road between them. The road then builds incrementally.</p>
+<h3 id="structures"><code>structures</code> — 🛡️<a class="headerlink" href="#structures" title="Permanent link">&para;</a></h3>
+<p>Prints the structure-registry match report: which structure tags/ids from <strong>Cities include</strong> exist
+in this world and what matched. The first stop when a structure type isn't being connected.</p>
+<h3 id="addcity-name"><code>addcity [name]</code> — 🛡️<a class="headerlink" href="#addcity-name" title="Permanent link">&para;</a></h3>
+<p>Registers <strong>where you are standing</strong> as a city node (default name <code>Gym</code>) and queues its road
+connections. The escape hatch for places without a structure tag — player builds, modded
+structures, anything.</p>
+<h3 id="rename-name"><code>rename &lt;name&gt;</code> — 🛡️<a class="headerlink" href="#rename-name" title="Permanent link">&para;</a></h3>
+<p>Renames the <strong>nearest town within 160 blocks</strong>. The new name shows in arrival banners, the Escape
+Rope message and route endpoints; existing map waypoints refresh on rejoin.</p>
+<h3 id="tp-town"><code>tp &lt;town&gt;</code> — 🛡️<a class="headerlink" href="#tp-town" title="Permanent link">&para;</a></h3>
+<p>Teleports you to a <strong>named</strong> town (tab-completion suggests every real name), landing on the same
+safe spot the Escape Rope uses. Wrong name? It points you at <code>/routes list cities</code>.</p>
+<h3 id="weave-loops"><code>weave [loops]</code> — 🛡️<a class="headerlink" href="#weave-loops" title="Permanent link">&para;</a></h3>
+<p>Runs the <strong>ring-road pass right now</strong>: up to <code>loops</code> (default 4, max 16) direct connections are
+queued between towns that are close on the map but far apart by road. Every loop that completes
+<strong>encloses a new named AREA</strong> — this is the fastest way to grow your capture zones.</p>
+<h3 id="repaint"><code>repaint</code> — 🛡️<a class="headerlink" href="#repaint" title="Permanent link">&para;</a></h3>
+<p>Re-broadcasts the chunk-paint geometry to every online player, forcing the Xaero overlays to
+refresh without relogging.</p>
+<h3 id="reset"><code>reset</code> — 🛡️<a class="headerlink" href="#reset" title="Permanent link">&para;</a></h3>
+<p>⚠️ Wipes the <strong>road records</strong> and re-queues every connection from the known cities. Already-paved
+blocks stay in the world; the network rebuilds its bookkeeping from scratch.</p>
+<hr />
+<h2 id="nuzlocke-the-run">🧬 <code>/nuzlocke</code> — the run<a class="headerlink" href="#nuzlocke-the-run" title="Permanent link">&para;</a></h2>
+<h3 id="status-player-player"><code>status [player]</code> — 👤 (<code>[player]</code> 🛡️)<a class="headerlink" href="#status-player-player" title="Permanent link">&para;</a></h3>
+<p>A chat summary of the run: zones visited (caught / failed / pending) and how many party members are
+dead. Ops can inspect another player.</p>
+<h3 id="log-keybind-i"><code>log</code> — 👤 · keybind <strong>I</strong><a class="headerlink" href="#log-keybind-i" title="Permanent link">&para;</a></h3>
+<p>Opens the <strong>visited-zones screen</strong>: every zone with its coordinates, the encounter's species, how
+it went (✔ caught / ✘ lost / ● pending) and — for caught ones — whether that Pokémon is still
+<strong>♥ alive</strong>, <strong>✝ dead</strong> or <em>(gone)</em>. The same screen opens with the <strong>I</strong> key (rebindable under
+<em>Options → Controls → Cobblemon Routes</em>).</p>
+<h3 id="map"><code>map</code> — 👤<a class="headerlink" href="#map" title="Permanent link">&para;</a></h3>
+<p>Drops one waypoint per capture zone onto Xaero's map, named with its state symbol (● pending,
+✔ captured, ✘ lost). Harmless without Xaero installed.</p>
+<h3 id="reset-player"><code>reset [player]</code> — 🛡️<a class="headerlink" href="#reset-player" title="Permanent link">&para;</a></h3>
+<p>Clears a player's zone records (their first-encounter history starts fresh) and lifts their
+game-over flag. Admin/testing tool.</p>
+<h3 id="revive-player"><code>revive [player]</code> — 🛡️<a class="headerlink" href="#revive-player" title="Permanent link">&para;</a></h3>
+<p>Revives every <strong>dead</strong> Pokémon in the target's party and, if they were on a game-over, restores
+survival mode. The mercy switch.</p>
+<hr />
+<h2 id="nuzlocke-soullock-co-op-contracts">❤️‍🔥 <code>/nuzlocke soullock</code> — co-op contracts<a class="headerlink" href="#nuzlocke-soullock-co-op-contracts" title="Permanent link">&para;</a></h2>
+<p>See <a href="../soullock/">Soullock</a> for the rules.</p>
+<h3 id="link-player2-player3-player4"><code>link &lt;player2&gt; [player3] [player4]</code> — 👤<a class="headerlink" href="#link-player2-player3-player4" title="Permanent link">&para;</a></h3>
+<p>Sends a <strong>soul-link request</strong> to up to three other players. Nothing links until <strong>everyone
+accepts</strong> — souls are only shared by consent. Parties are linked slot by slot.</p>
+<h3 id="accept-decline"><code>accept</code> / <code>decline</code> — 👤<a class="headerlink" href="#accept-decline" title="Permanent link">&para;</a></h3>
+<p>Answer a pending request before it expires (timeout configurable, default 120 s).</p>
+<h3 id="unlink"><code>unlink</code> — 👤<a class="headerlink" href="#unlink" title="Permanent link">&para;</a></h3>
+<p>Dissolves <strong>your</strong> soul links. Groups left with fewer than two members dissolve entirely.</p>
+<h3 id="status_1"><code>status</code> — 👤<a class="headerlink" href="#status_1" title="Permanent link">&para;</a></h3>
+<p>Lists your soul links in chat — each group's Pokémon and owners, with ✝ marking the dead.</p>
+<h3 id="summary"><code>summary</code> — 👤<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
+<p>Opens the <strong>linked-teams screen</strong>: every soul-linked player (up to 4) with their full party —
+nickname, species, level, HP, dead/alive — soul-linked Pokémon marked ⇄. Offline partners' teams
+are included, loaded from storage.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      <div class="cr-ad-slot cr-ad-footbar">
+    <a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">
+      <span class="cr-ad-label">Supports the project</span>
+      💛 Enjoying Cobblemon Routes? A small sponsorship keeps the routes being built — no ads
+      needed when the community carries it.
+    </a>
+  </div>
+  
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Cobblemon Routes by shiero — "If you make money, I make money" license
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.sections", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+  
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    <script>
+    (function () {
+      function mount() {
+        var rail = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
+        if (!rail || document.getElementById('cr-ad-side')) { return; }
+        var slot = document.createElement('div');
+        slot.id = 'cr-ad-side';
+        slot.className = 'cr-ad-slot';
+        slot.innerHTML = '<a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">'
+          + '<span class="cr-ad-label">Supports the project</span>'
+          + '💛 This space supports Cobblemon Routes directly — sponsor shiero.</a>';
+        rail.appendChild(slot);
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', mount);
+      } else { mount(); }
+      if (typeof document$ !== 'undefined') { document$.subscribe(mount); }
+    })();
+  </script>
+
+  </body>
+</html>
