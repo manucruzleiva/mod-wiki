@@ -1,10 +1,10 @@
 # 🎮 Hardcore Nuzlocke
 
-Cobblemon Routes automates the classic Nuzlocke ruleset — no honor system needed. Everything is
+Routes automates the classic Nuzlocke ruleset — no honor system needed. Everything is
 enforced by the mod and configured per world from the **NUZLOCKE** tab.
 
 !!! tip "Just want the routes? Turn Nuzlocke off"
-    Cobblemon Routes works perfectly as a **routes-and-map mod with no Nuzlocke rules at all**.
+    Routes works perfectly as a **routes-and-map mod with no Nuzlocke rules at all**.
     Turning Nuzlocke off keeps road generation, waypoints and the map paint fully working, and
     stands down the first-encounter lock, permadeath, whiteout, mandatory nicknames and the zone HUD.
 

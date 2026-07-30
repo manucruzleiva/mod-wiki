@@ -16,8 +16,8 @@ flowchart TD
     CF --> CONTACT[Reach out on Discord<br/>BEFORE going commercial]
 ```
 
-!!! note "It depends on Cobblemon Routes"
-    This mod requires [Cobblemon Routes](../routes/index.md) to run. Routes carries
+!!! note "It depends on Routes"
+    This mod requires [Routes](../routes/index.md) to run. Routes carries
     [its own license](../routes/license.md) on the same terms — using them together means honouring
     both, which in practice is the same set of rules.
 

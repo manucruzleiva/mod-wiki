@@ -1,6 +1,6 @@
-# Installation
+# Getting Started
 
-Cobblemon Routes targets **Minecraft 1.21.1** on **Fabric** and **NeoForge**, alongside
+Routes targets **Minecraft 1.21.1** on **Fabric** and **NeoForge**, alongside
 **Cobblemon** and its dependencies.
 
 ```mermaid
@@ -30,7 +30,7 @@ The mod does **not** bundle these — they're expected to be present in your Cob
 ## Steps
 
 1. Download the version matching your loader from [Modrinth](https://modrinth.com/mod/routes)
-   or [CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobblemon-routes) — each release ships
+   or [CurseForge](https://www.curseforge.com/projects/1584243) — each release ships
    as `x.y.z+fabric` and `x.y.z+neoforge`.
 2. Drop the jar into your profile's `mods/` folder.
 3. Make sure only **one** `cobblemon_routes-*.jar` is present (remove older ones first).

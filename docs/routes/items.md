@@ -1,6 +1,6 @@
 # 🧗 Items
 
-Cobblemon Routes adds a small toolkit for life on the road. Right now that's the **Escape Rope** —
+Routes adds a small toolkit for life on the road. Right now that's the **Escape Rope** —
 a one-tap ticket back to town.
 
 ## 🧗 Escape Rope

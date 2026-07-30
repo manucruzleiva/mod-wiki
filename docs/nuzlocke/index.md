@@ -4,8 +4,8 @@ A **Cobblemon add-on** that runs a full **Hardcore-Nuzlocke** ruleset on your wo
 play with friends, links your parties together so your fates are shared.
 
 !!! warning "Not released yet"
-    This mod is being split out of [Cobblemon Routes](../routes/index.md), where all of these features
-    currently ship. Until the split lands, install **Cobblemon Routes** to get everything documented
+    This mod is being split out of [Routes](../routes/index.md), where all of these features
+    currently ship. Until the split lands, install **Routes** to get everything documented
     here. Progress updates land in [the Discord](https://discord.gg/SwcwXcCN4k).
 
     It will be published as
@@ -41,5 +41,5 @@ perfectly well on a single-player world.
 ## Zones come from Routes
 
 The "one catch per zone" rule needs a definition of *zone*, and it takes it from
-[Cobblemon Routes](../routes/index.md): the routes, areas and towns that Routes generates are the
+[Routes](../routes/index.md): the routes, areas and towns that Routes generates are the
 capture zones. That is why this mod **depends on Routes** rather than shipping its own zone model.

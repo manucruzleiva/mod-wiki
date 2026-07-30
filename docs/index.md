@@ -14,9 +14,9 @@ Each section follows the same shape: **Getting Started**, then the mod's own fea
 
 <div class="grid cards" markdown>
 
--   [![Cobblemon Routes](routes/assets/logo.png){ .mod-logo }](routes/index.md)
+-   [![Routes](routes/assets/logo.png){ .mod-logo }](routes/index.md)
 
-    ### [Cobblemon Routes](routes/index.md)
+    ### [Routes](routes/index.md)
 
     Turn any Cobblemon world into a classic Pokémon-style RPG: auto-generated routes and towns,
     named capture areas, route trainers and full Xaero map integration.
@@ -49,7 +49,7 @@ Each section follows the same shape: **Getting Started**, then the mod's own fea
     clause, starter randomiser and level caps — plus **Soul Link**, the co-op mode where linked
     parties share fates.
 
-    Still being split out of Routes. Until it ships, install **Cobblemon Routes** to get everything
+    Still being split out of Routes. Until it ships, install **Routes** to get everything
     documented here.
 
 </div>

@@ -1,6 +1,6 @@
 # 🗺️ Dynamic Routes
 
-Cobblemon Routes grows a **road network through your world during worldgen** — no commands, no
+Routes grows a **road network through your world during worldgen** — no commands, no
 walking the area first. Cities are found from the world seed, connected with terrain-aware paths,
 and every road is signposted and named.
 

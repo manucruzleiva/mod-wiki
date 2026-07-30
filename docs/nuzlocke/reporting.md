@@ -5,7 +5,7 @@ all you need to do. A bot picks it up from there and your report flows straight 
 
 !!! warning "Not released yet"
     Cobblemon Nuzlocke & Soul Link is still being split out of
-    [Cobblemon Routes](../routes/index.md). Until it ships, the Nuzlocke and Soul Link rules run
+    [Routes](../routes/index.md). Until it ships, the Nuzlocke and Soul Link rules run
     **inside Routes** — so if you hit a problem with them today, report it as a **Routes** issue and
     mention that it's about the Nuzlocke ruleset.
 

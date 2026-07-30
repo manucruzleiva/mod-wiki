@@ -1,6 +1,6 @@
 # Community Credits
 
-Cobblemon Routes is shaped by the people who play it. Everyone below reported a bug or suggested a
+Routes is shaped by the people who play it. Everyone below reported a bug or suggested a
 feature in our [Discord](https://discord.gg/SwcwXcCN4k) — thank you! 💚
 
 ## Reporters

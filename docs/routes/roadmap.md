@@ -1,6 +1,6 @@
 # 🧭 Roadmap
 
-Where Cobblemon Routes is heading after 1.0. Everything below is tracked from
+Where Routes is heading after 1.0. Everything below is tracked from
 [the Discord](https://discord.gg/SwcwXcCN4k) — say what you want first, or
 [suggest new ideas](reporting.md).
 

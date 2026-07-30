@@ -1,12 +1,12 @@
-# Cobblemon Routes
+# Routes
 
-![Cobblemon Routes](assets/logo.png){ width="160" align=right }
+![Routes](assets/logo.png){ width="160" align=right }
 
-**Cobblemon Routes** is a **Cobblemon add-on** by **shiero** (Minecraft 1.21.1, Cobblemon 1.7.3)
+**Routes** is a **Cobblemon add-on** by **shiero** (Minecraft 1.21.1, Cobblemon 1.7.3)
 that turns any Cobblemon world into a classic-style Pokémon RPG: **physical roads generated during
-worldgen** that connect the world's cities and structures, automated **Hardcore-Nuzlocke** rules,
-and map integrations that tie it all together. It works with any Cobblemon setup and is compatible
-with packs like COBBLEVERSE (it connects their gyms when present).
+worldgen** that connect the world's cities and structures, named capture zones, and map integrations
+that tie it all together. It works with any Cobblemon setup and is compatible with packs like
+COBBLEVERSE (it connects their gyms when present).
 
 ```mermaid
 flowchart LR
@@ -38,15 +38,15 @@ flowchart LR
 ## Get it
 
 Download for **Fabric** or **NeoForge** from [Modrinth](https://modrinth.com/mod/routes) or
-[CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobblemon-routes), then see
+[CurseForge](https://www.curseforge.com/projects/1584243), then see
 [Getting Started](getting-started.md). Questions or ideas? Join [the Discord](https://discord.gg/SwcwXcCN4k).
 
 !!! tip "💛 Enjoying the mod?"
-    Cobblemon Routes is made by **shiero** in their free time. If it made your world more fun,
+    Routes is made by **shiero** in their free time. If it made your world more fun,
     consider [sponsoring shiero](https://github.com/sponsors/manucruzleiva) — it keeps the routes
     being built!
 
 !!! note "License"
-    Cobblemon Routes is **source-available with revenue share**: free for personal and
+    Routes is **source-available with revenue share**: free for personal and
     non-commercial use with attribution; any revenue-generating use requires sharing revenue with
     the author. In short: *if you make money, shiero makes money.*

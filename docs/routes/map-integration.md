@@ -1,11 +1,11 @@
 # 🧭 Map Integration
 
-Cobblemon Routes talks to the maps you already use. Everything on this page is **optional** — the
+Routes talks to the maps you already use. Everything on this page is **optional** — the
 mod detects what's installed and stays inert otherwise.
 
 ```mermaid
 flowchart LR
-    CR[🗺️ Cobblemon Routes] -->|named city nodes| WS[🪨 Waystones]
+    CR[🗺️ Routes] -->|named city nodes| WS[🪨 Waystones]
     CR -->|waypoints + toasts| XM[🧭 Xaero's Minimap]
     CR -->|dotted golden trails| XM
     CR -->|chunk paint 🎨| XM

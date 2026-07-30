@@ -6,7 +6,7 @@ fastest way to weigh in is [the Discord](https://discord.gg/SwcwXcCN4k).
 ```mermaid
 timeline
     title Planned milestones
-    1.0.0 : Ship as its own mod : Depends on Cobblemon Routes
+    1.0.0 : Ship as its own mod : Depends on Routes
     1.1.0 : Duplicates clause : Egg encounters : Defeated Catch tuning
     1.2.0 : Nuzlocke log v2 — every zone, sprites, nicknames
     1.3.0 : Soul Link contracts from the interaction wheel
@@ -15,7 +15,7 @@ timeline
 
 ## 1.0.0 — Standing on its own
 
-Today the Nuzlocke and Soul Link rules ship **inside [Cobblemon Routes](../routes/index.md)**.
+Today the Nuzlocke and Soul Link rules ship **inside [Routes](../routes/index.md)**.
 The first milestone is simply to become a separate mod that depends on Routes, with no change in
 behaviour for anyone already playing.
 

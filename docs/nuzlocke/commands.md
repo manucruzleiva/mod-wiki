@@ -2,9 +2,9 @@
 
 Every command under the **`/nuzlocke`** root — the run itself and the co-op soul-link suite.
 
-!!! warning "These ship inside Cobblemon Routes today"
+!!! warning "These ship inside Routes today"
     Until this mod is released separately, `/nuzlocke` is registered by
-    **[Cobblemon Routes](../routes/index.md)**. Install Routes and the commands below are already
+    **[Routes](../routes/index.md)**. Install Routes and the commands below are already
     there. Routes' own road commands live under [`/routes`](../routes/commands.md).
 
 ```mermaid
