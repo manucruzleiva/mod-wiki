@@ -10,39 +10,47 @@ Each section follows the same shape: **Getting Started**, then the mod's own fea
 **Commands**, **Configuration**, **Reporting Bugs & Ideas**, **Roadmap**, **Community Credits** and
 **License**.
 
-## The mods
+## Pick a mod
 
 <div class="grid cards" markdown>
 
--   ### [Cobblemon Routes](routes/index.md)
+-   [![Cobblemon Routes](routes/assets/logo.png){ .mod-logo }](routes/index.md)
 
-    Physical routes generated during worldgen that connect the world's structures, signposted and
-    named like the games (`Route 3: Plains Forest`). Turns any Cobblemon world into a classic linear
-    RPG.
+    ### [Cobblemon Routes](routes/index.md)
+
+    Turn any Cobblemon world into a classic Pokémon-style RPG: auto-generated routes and towns,
+    named capture areas, route trainers and full Xaero map integration.
 
     **MC 1.21.1 · Cobblemon 1.7.3 · Fabric + NeoForge**
 
--   ### [Cobblemon Picnic](picnic/index.md)
+-   [![Cobblemon Picnic](picnic/assets/logo.png){ .mod-logo }](picnic/index.md)
 
-    Scarlet/Violet-style picnics in Cobblemon.
+    ### [Cobblemon Picnic](picnic/index.md)
 
-    **Fabric + NeoForge**
+    A picnic table that re-rolls nearby wild spawns on demand: hunt shinies or specific Pokémon
+    without roaming. Also a social station with a shiny aura, Pokémon care and trainer battles.
 
--   ### [Cobblemon Ditto HMs](ditto-hms/index.md)
+    **MC 1.21.1 · Fabric + NeoForge**
 
-    Classic-generation HMs for Cobblemon.
+-   [![Cobblemon Ditto HMs](ditto-hms/assets/logo.png){ .mod-logo }](ditto-hms/index.md)
 
--   ### Cobblemon Nuzlocke & Soul Link *(coming)*
+    ### [Cobblemon Ditto HMs](ditto-hms/index.md)
 
-    The full Hardcore-Nuzlocke ruleset: per-zone first-encounter capture lock, permadeath, mandatory
-    nicknames, a shiny clause, starter randomiser and level caps. All of it works **solo**.
+    Learn Ditto's 35 Pokopia HM abilities yourself — cut, fly, surf, teleport and more, fueled by
+    hunger.
 
-    On top of that, **Soul Link**: the co-op mode where you link parties with friends and share fates
-    — when one linked Pokémon dies, so do its soulmates.
+    **MC 1.21.1 · Fabric + NeoForge**
 
-    Currently being split out of Routes into its own mod. Until it ships, install **Cobblemon
-    Routes** to get everything documented here — progress updates land in
-    [the Discord](https://discord.gg/SwcwXcCN4k).
+-   <div class="mod-logo mod-logo--placeholder">🎲</div>
+
+    ### [Cobblemon Nuzlocke & Soul Link](nuzlocke/index.md) *(coming)*
+
+    A full Hardcore Nuzlocke ruleset: one catch per zone, permadeath, mandatory nicknames, shiny
+    clause, starter randomiser and level caps — plus **Soul Link**, the co-op mode where linked
+    parties share fates.
+
+    Still being split out of Routes. Until it ships, install **Cobblemon Routes** to get everything
+    documented here.
 
 </div>
 

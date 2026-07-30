@@ -1,0 +1,42 @@
+/* Mod picker on the landing page.
+   The four logos do not share a source size (Routes is 512x512, the others 128x128) and their art
+   styles differ, so they are normalised to one box here rather than by re-exporting the art. */
+
+.mod-logo {
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 0.8rem;
+  object-fit: contain;
+  /* 128px art upscales into a 128px box 1:1; Routes' 512px art downscales smoothly. */
+  image-rendering: auto;
+}
+
+/* Nuzlocke has no art yet — a neutral placeholder that keeps the row aligned instead of a
+   broken image or a borrowed logo from another mod. */
+.mod-logo--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  line-height: 1;
+  border-radius: 12px;
+  border: 2px dashed var(--md-default-fg-color--lighter);
+  color: var(--md-default-fg-color--light);
+}
+
+/* Keep the card title tight under the logo. */
+.grid.cards .mod-logo + h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 44.9375em) {
+  .mod-logo {
+    width: 96px;
+    height: 96px;
+  }
+  .mod-logo--placeholder {
+    font-size: 2.5rem;
+  }
+}
