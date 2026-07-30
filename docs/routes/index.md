@@ -24,9 +24,10 @@ flowchart LR
 - 🗺️ **[Dynamic routes](routes.md)** between cities and structures, fully part of worldgen — roads
   seek flat ground, stay off the coast, tunnel mineshaft-style through mountains, and get names like
   *Route 3: Steep Forest Pass*.
-- 🎮 **[Hardcore Nuzlocke](../nuzlocke/nuzlocke.md)**: per-zone first-encounter lock, permadeath with
-  heal-blocking, nicknames, Defeated Catch, and modular healing.
-- ❤️‍🔥 **[Soul Link](../nuzlocke/soullock.md)**: consented soul-links with friends — shared destiny, shared death.
+- 🎮 **[Hardcore Nuzlocke](../nuzlocke/nuzlocke.md)** and ❤️‍🔥 **[Soul Link](../nuzlocke/soullock.md)**:
+  per-zone encounter lock, permadeath and linked co-op runs. These belong to the
+  **[Nuzlocke & Soul Link](../nuzlocke/index.md)** add-on — which ships inside this jar for now, so
+  you get them either way. The zones they lock onto are the routes, areas and towns generated here.
 - 🧭 **[Map integration](map-integration.md)** (optional): Waystones city nodes plus Xaero's
   waypoints, route trails and chunk painting.
 - 🧗 **[Escape Rope](items.md)**: a craftable one-tap trip back to the nearest known town — works

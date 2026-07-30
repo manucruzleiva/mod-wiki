@@ -46,6 +46,9 @@ theme:
     - search.highlight
     - content.code.copy
 
+extra_css:
+  - stylesheets/extra.css
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -93,6 +96,8 @@ nav:
       - nuzlocke/index.md
       - Hardcore Nuzlocke: nuzlocke/nuzlocke.md
       - Soul Link (co-op): nuzlocke/soullock.md
+      - Commands: nuzlocke/commands.md
+      - Configuration: nuzlocke/configuration.md
       - Reporting Bugs & Ideas: nuzlocke/reporting.md
       - Roadmap: nuzlocke/roadmap.md
       - Community Credits: nuzlocke/credits.md
