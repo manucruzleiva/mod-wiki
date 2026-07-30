@@ -53,6 +53,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -622,34 +624,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nuzlocke-tab" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        NUZLOCKE tab
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="NUZLOCKE tab">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#starter-subsection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Starter subsection
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#routes-tab" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -835,6 +809,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -932,6 +910,62 @@
     
   
     Soul Link (co-op)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuzlocke/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuzlocke/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
   
 
     
@@ -1986,34 +2020,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nuzlocke-tab" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        NUZLOCKE tab
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="NUZLOCKE tab">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#starter-subsection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Starter subsection
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#routes-tab" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2067,120 +2073,18 @@
 
 
 <h1 id="world-creation-config">🧩 World Creation &amp; Config<a class="headerlink" href="#world-creation-config" title="Permanent link">&para;</a></h1>
-<p>Everything is decided <strong>when you create the world</strong> — two dedicated tabs sit next to
+<p>Everything is decided <strong>when you create the world</strong> — a dedicated <strong>ROUTES</strong> tab sits next to
 <strong>GAME / WORLD / MORE</strong> on the create-world screen. Outside world creation there's a global config
 screen for defaults.</p>
+<div class="admonition tip">
+<p class="admonition-title">Looking for the NUZLOCKE tab?</p>
+<p>The Nuzlocke ruleset, its starter options and the Soul Link toggles belong to
+<strong><a href="../../nuzlocke/configuration/">Cobblemon Nuzlocke &amp; Soul Link</a></strong>. That tab currently ships
+inside Routes, but it is documented in that mod's section.</p>
+</div>
 <pre class="mermaid"><code>flowchart LR
-    T[🆕 NUZLOCKE + ROUTES tabs&lt;br/&gt;at world creation] --&gt;|saved per world| W[🌍 Your world's rules&lt;br/&gt;never clobbered later]
+    T[🆕 ROUTES tab&lt;br/&gt;at world creation] --&gt;|saved per world| W[🌍 Your world's rules&lt;br/&gt;never clobbered later]
     K[⚙️ Global config — key K&lt;br/&gt;config/cobblemon_routes.json] --&gt;|defaults when a world&lt;br/&gt;wasn't configured| W</code></pre>
-<h2 id="nuzlocke-tab">NUZLOCKE tab<a class="headerlink" href="#nuzlocke-tab" title="Permanent link">&para;</a></h2>
-<p>Turn <strong>Nuzlocke</strong> on and the full ruleset comes with it — <strong>permadeath</strong>, <strong>spectator on Game Over</strong>
-and forced <strong>Hard</strong> difficulty are all part of Nuzlocke, no separate toggles. The tab holds the rest:</p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Default</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Nuzlocke</td>
-<td>on</td>
-<td>master switch — off = a normal Cobblemon world</td>
-</tr>
-<tr>
-<td>First-encounter lock</td>
-<td>on</td>
-<td>only the first wild per zone is catchable</td>
-</tr>
-<tr>
-<td>Mandatory nicknames</td>
-<td>on</td>
-<td><code>require_nicknames</code> — turn off the naming prompt</td>
-</tr>
-<tr>
-<td>Healing sources</td>
-<td>ALL</td>
-<td>ALL / MACHINES_ONLY / ITEMS_ONLY / NONE</td>
-</tr>
-<tr>
-<td>Above level cap → PC</td>
-<td>on</td>
-<td>over-cap catches boxed to the PC (follows RCT's cap)</td>
-</tr>
-<tr>
-<td>Starter level</td>
-<td>5</td>
-<td>1–25</td>
-</tr>
-<tr>
-<td>Shared EXP</td>
-<td>on</td>
-<td>whole team gains EXP</td>
-</tr>
-<tr>
-<td>EXP during battle (per KO)</td>
-<td>on</td>
-<td></td>
-</tr>
-<tr>
-<td>EXP boost</td>
-<td>x1</td>
-<td>x1 / x5 / x10 / x15 / x20 / x30 / x40 / x50 — applies to the whole-team share too</td>
-</tr>
-<tr>
-<td>PC only at the PC block</td>
-<td>on</td>
-<td>blocks remote PC access in Nuzlocke worlds</td>
-</tr>
-</tbody>
-</table>
-<p>The <strong>level cap itself is owned by Radical Cobblemon Trainers</strong> — the mod no longer defines its own.</p>
-<h3 id="starter-subsection">Starter subsection<a class="headerlink" href="#starter-subsection" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Default</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Starter selection</td>
-<td>Mix</td>
-<td>Normal / Random / Mix (Mix = one canonical starter per type, distinct gens)</td>
-</tr>
-<tr>
-<td>No Legendaries</td>
-<td>on</td>
-<td>exclude Legendary / Mythical from the random / mix roll</td>
-</tr>
-<tr>
-<td>No Paradox</td>
-<td>on</td>
-<td>exclude Paradox Pokémon</td>
-</tr>
-<tr>
-<td>No Ultra Beasts</td>
-<td>on</td>
-<td>exclude Ultra Beasts</td>
-</tr>
-<tr>
-<td>No typical starters</td>
-<td>off</td>
-<td>exclude the pack's usual starters from the RANDOM roll (Mix ignores it)</td>
-</tr>
-<tr>
-<td>Shiny starter</td>
-<td>Yes</td>
-<td>No / Yes (normal odds) / Always (guaranteed)</td>
-</tr>
-</tbody>
-</table>
-<p>Soul Link has its own toggles too — see <a href="../../nuzlocke/soullock/">Soul Link</a>.</p>
 <h2 id="routes-tab">ROUTES tab<a class="headerlink" href="#routes-tab" title="Permanent link">&para;</a></h2>
 <p>Customise dynamic route generation for the world:</p>
 <table>
@@ -2267,16 +2171,15 @@ world-creation choice — adjust it live from the sliders on
 <p class="admonition-title">Saved per world</p>
 <p>Choices made in these tabs are stored <strong>per world</strong> and only applied to a brand-new world —
 loading an existing world never gets its rules clobbered. Picking <strong>Hardcore</strong> at world
-creation auto-enables the full Nuzlocke rule set.</p>
+creation auto-enables the full <a href="../../nuzlocke/configuration/">Nuzlocke rule set</a>.</p>
 </div>
 <h2 id="global-defaults">Global defaults<a class="headerlink" href="#global-defaults" title="Permanent link">&para;</a></h2>
 <p>The global defaults live in <code>config/cobblemon_routes.json</code> (English &amp; Spanish labels) and are used
 when a world wasn't configured through the tabs. The map-paint intensity also has live sliders on
 <a href="../map-integration/">Xaero's world map</a>.</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
-<p>The roots are <code>/routes</code> and <code>/nuzlocke</code> (the old <code>/cobblemonroutes …</code> still works everywhere).
-The full manual — every command, argument, permission and behaviour — lives on
-<a href="../commands/">the Commands page</a>.</p>
+<p>The root is <code>/routes</code> (the old <code>/cobblemonroutes …</code> still works everywhere). The full manual — every
+command, argument, permission and behaviour — lives on <a href="../commands/">the Commands page</a>.</p>
 
 
 
