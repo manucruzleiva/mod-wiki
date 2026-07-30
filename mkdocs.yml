@@ -7,20 +7,18 @@ repo_name: manucruzleiva/mod-wiki
 docs_dir: docs
 copyright: 'Mods by shiero — "If you make money, I make money" license'
 
-# This repo builds ONLY the landing page (the site root). Each mod publishes its own wiki from
-# its own repo, into its own subdirectory of the gh-pages branch:
+# The docs LIVE here — one site, one build, one repo.
 #
-#   /            <- this repo           (landing)
-#   /routes/     <- manucruzleiva/routes
-#   /picnic/     <- manucruzleiva/cobblemon-picnic
-#   /ditto-hms/  <- manucruzleiva/cobblemon-ditto-hms
-#   /nuzlocke/   <- pending the split  (#122)
+# They used to live in each mod's repo and get deposited into a subdirectory of this repo's gh-pages
+# branch by four separate workflows, each with its own deploy key. That is gone: the sources moved here,
+# so there is a single mkdocs build and no cross-repo plumbing at all.
 #
-# That is why the nav below uses absolute links to those subdirectories rather than local pages:
-# mkdocs does not know those files — each mod drops them in when it deploys.
+# It also matters that this repo is PUBLIC while every mod repo is private: the documentation stays
+# openly readable and editable without exposing any code.
 
 theme:
   name: material
+  custom_dir: overrides
   language: en
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -38,29 +36,79 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
   features:
-    - navigation.sections
-    - navigation.top
+    - navigation.instant
     - navigation.tracking
-    - content.code.copy
+    - navigation.top
+    - navigation.sections
+    - navigation.indexes
+    - toc.follow
     - search.suggest
     - search.highlight
+    - content.code.copy
 
 markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
   - tables
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.emoji
   - toc:
       permalink: true
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
   - Home: index.md
-  - Cobblemon Routes: /mod-wiki/routes/
-  - Cobblemon Picnic: /mod-wiki/picnic/
-  - Cobblemon Ditto HMs: /mod-wiki/ditto-hms/
+  - Cobblemon Routes:
+      - routes/index.md
+      - Installation: routes/installation.md
+      - Dynamic Routes: routes/routes.md
+      - Map Integration: routes/map-integration.md
+      - Items & Recipes: routes/items.md
+      - World Creation & Config: routes/configuration.md
+      - Commands: routes/commands.md
+      - Gen2 Structures: routes/gen2-structures.md
+      - Reporting Bugs & Ideas: routes/reporting.md
+      - Roadmap: routes/roadmap.md
+      - Community Credits: routes/credits.md
+      - License: routes/license.md
+  - Cobblemon Nuzlocke & Soul Link:
+      - nuzlocke/index.md
+      - Hardcore Nuzlocke: nuzlocke/nuzlocke.md
+      - Soul Link (co-op): nuzlocke/soullock.md
+  - Cobblemon Picnic:
+      - picnic/index.md
+      - Getting Started: picnic/getting-started.md
+      - Picnic Tables: picnic/picnic-tables.md
+      - Spawn Re-rolling: picnic/spawn-rerolling.md
+      - Shiny Aura: picnic/shiny-aura.md
+      - Interactions & Items: picnic/interactions-and-items.md
+      - Battle Seeker: picnic/battle-seeker.md
+      - Commands: picnic/commands.md
+      - Configuration: picnic/configuration.md
+      - FAQ: picnic/faq.md
+      - Reporting Bugs & Features: picnic/reporting.md
+      - Community Credits: picnic/credits.md
+  - Cobblemon Ditto HMs:
+      - ditto-hms/index.md
+      - Getting Started: ditto-hms/getting-started.md
+      - Active HMs: ditto-hms/abilities/active.md
+      - Toggle HMs: ditto-hms/abilities/toggles.md
+      - HM Case: ditto-hms/hm-case.md
+      - Configuration: ditto-hms/config.md
+      - Commands: ditto-hms/commands.md
+      - Roadmap: ditto-hms/roadmap.md
+      - Changelog: ditto-hms/changelog.md
+      - Community Credits: ditto-hms/credits.md
+      - License: ditto-hms/license.md
   - 💛 Sponsor shiero: https://github.com/sponsors/manucruzleiva
 
 plugins:

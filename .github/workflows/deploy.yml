@@ -1,23 +1,24 @@
-name: Wiki (portada)
+name: Wiki
 
-# Construye SOLO la portada de la wiki unica y la publica en la RAIZ de gh-pages.
+# Builds the WHOLE wiki — every mod's docs live in this repo now — and publishes it to gh-pages.
 #
-# Este repo ya no es la wiki de Routes: es el hub de todos los mods. Cada mod publica su propia
-# wiki en su subdirectorio de esta misma rama gh-pages (routes -> /routes/, picnic -> /picnic/),
-# empujando desde SU repo con una deploy key.
+# Before this, each mod repo built its own MkDocs site and deposited it into a subdirectory of this
+# repo's gh-pages branch, using a deploy key per mod and peaceiris' destination_dir. That whole
+# arrangement is gone: the docs moved here, so there is one build, one source of truth, and no
+# cross-repo credentials at all.
 #
-# CAMBIO IMPORTANTE respecto de la version anterior: antes esto usaba actions/deploy-pages, que
-# exige Pages con Source = "GitHub Actions" y sirve un artifact unico — incompatible con que otros
-# repos depositen subdirectorios. Ahora publica a la rama gh-pages con peaceiris, igual que los
-# mods, para que todos escriban sobre el mismo arbol.
+# Consequently `keep_files` is NOT set any more. It existed only to stop the landing-page deploy from
+# deleting the subdirectories the other repos had pushed. With one build producing the entire site, a
+# clean replace is what we want — it is also what removes a page when it is deleted from docs/.
 #
-# Setup por unica vez: Settings -> Pages -> Source = "Deploy from a branch" -> gh-pages / (root).
+# Setup (already done): Settings -> Pages -> Source = "Deploy from a branch" -> gh-pages / (root).
 
 on:
   push:
     branches: [main]
     paths:
       - "docs/**"
+      - "overrides/**"
       - "mkdocs.yml"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
@@ -26,7 +27,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: wiki-landing
+  group: wiki
   cancel-in-progress: true
 
 jobs:
@@ -38,15 +39,13 @@ jobs:
         with:
           python-version: "3.x"
       - run: pip install mkdocs-material
+      # --strict so a dangling internal link fails the build instead of shipping a broken page.
       - run: mkdocs build --strict
 
-      - name: Publicar la portada en la raiz de gh-pages
+      - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
           publish_branch: gh-pages
-          # CRITICO: sin keep_files, este deploy borraria /routes/ y /picnic/ — los subdirectorios
-          # que publican los repos de cada mod y que este build no conoce.
-          keep_files: true
-          commit_message: "deploy landing from ${{ github.sha }}"
+          commit_message: "deploy wiki from ${{ github.sha }}"

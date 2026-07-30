@@ -55,3 +55,8 @@ The bots live in [`intake-bots`](https://github.com/manucruzleiva/intake-bots), 
     `cobblemon-picnic-wiki`, `cobblemon-ditto-hms`). There is now a single one:
     **manucruzleiva.github.io/mod-wiki/**. Old links published on Modrinth and CurseForge should be
     updated.
+
+!!! tip "Want to fix or improve a page?"
+    Every page here lives in [this repository](https://github.com/manucruzleiva/mod-wiki) — the mod
+    repos themselves are private, but the documentation is not. Open a pull request against
+    `docs/<mod>/` and it goes live on merge.
