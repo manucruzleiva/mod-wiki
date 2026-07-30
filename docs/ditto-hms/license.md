@@ -1,7 +1,7 @@
 # License
 
-Cobblemon Ditto HMs is **source-available with a revenue share** — the full terms live in
-[the LICENSE file](https://github.com/manucruzleiva/cobblemon-ditto-hms/blob/master/LICENSE).
+Cobblemon Ditto HMs is **source-available with a revenue share** — the full terms live in the
+project's `LICENSE` file; ask in [the Discord](https://discord.gg/SwcwXcCN4k) if you need a copy.
 The short version:
 
 ```mermaid

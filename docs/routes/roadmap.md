@@ -1,8 +1,8 @@
 # 🧭 Roadmap
 
-Where Cobblemon Routes is heading after 1.0. Everything below is tracked publicly on
-[the issue tracker](https://github.com/manucruzleiva/cobblemon-routes/issues) — vote and comment
-on what you want first, or [suggest new ideas](reporting.md).
+Where Cobblemon Routes is heading after 1.0. Everything below is tracked from
+[the Discord](https://discord.gg/SwcwXcCN4k) — say what you want first, or
+[suggest new ideas](reporting.md).
 
 ```mermaid
 timeline

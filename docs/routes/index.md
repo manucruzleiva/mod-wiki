@@ -24,9 +24,9 @@ flowchart LR
 - 🗺️ **[Dynamic routes](routes.md)** between cities and structures, fully part of worldgen — roads
   seek flat ground, stay off the coast, tunnel mineshaft-style through mountains, and get names like
   *Route 3: Steep Forest Pass*.
-- 🎮 **[Hardcore Nuzlocke](/mod-wiki/nuzlocke/nuzlocke/)**: per-zone first-encounter lock, permadeath with
+- 🎮 **[Hardcore Nuzlocke](../nuzlocke/nuzlocke.md)**: per-zone first-encounter lock, permadeath with
   heal-blocking, nicknames, Defeated Catch, and modular healing.
-- ❤️‍🔥 **[Soul Link](/mod-wiki/nuzlocke/soullock/)**: consented soul-links with friends — shared destiny, shared death.
+- ❤️‍🔥 **[Soul Link](../nuzlocke/soullock.md)**: consented soul-links with friends — shared destiny, shared death.
 - 🧭 **[Map integration](map-integration.md)** (optional): Waystones city nodes plus Xaero's
   waypoints, route trails and chunk painting.
 - 🧗 **[Escape Rope](items.md)**: a craftable one-tap trip back to the nearest known town — works
@@ -36,9 +36,9 @@ flowchart LR
 
 ## Get it
 
-Download for **Fabric** or **NeoForge** from [Modrinth](https://modrinth.com/mod/cobblemon-routes) or
+Download for **Fabric** or **NeoForge** from [Modrinth](https://modrinth.com/mod/routes) or
 [CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobblemon-routes), then see
-[Installation](installation.md). Questions or ideas? Join [the Discord](https://discord.gg/SwcwXcCN4k).
+[Getting Started](getting-started.md). Questions or ideas? Join [the Discord](https://discord.gg/SwcwXcCN4k).
 
 !!! tip "💛 Enjoying the mod?"
     Cobblemon Routes is made by **shiero** in their free time. If it made your world more fun,

@@ -135,7 +135,7 @@ survival mode. The mercy switch.
 
 ## ❤️‍🔥 `/nuzlocke soullock` — co-op contracts
 
-See [Soul Link](/mod-wiki/nuzlocke/soullock/) for the rules.
+See [Soul Link](../nuzlocke/soullock.md) for the rules.
 
 ### `link <player2> [player3] [player4]` — 👤
 Sends a **soul-link request** to up to three other players. Nothing links until **everyone

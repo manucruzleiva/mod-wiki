@@ -2,8 +2,8 @@
 
 Where Cobblemon Ditto HMs is heading. We add **new HMs a few at a time** so there's always
 something fresh to discover — and polish the existing ones in between. Plans can shift as
-development goes on; follow [the issue tracker](https://github.com/manucruzleiva/cobblemon-ditto-hms/issues)
-to weigh in!
+development goes on; drop into [the Discord](https://discord.gg/SwcwXcCN4k) to weigh in — see
+[Reporting Bugs & Ideas](reporting.md).
 
 ```mermaid
 timeline

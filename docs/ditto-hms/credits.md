@@ -20,10 +20,9 @@ _No reports yet — [be the first](https://discord.gg/SwcwXcCN4k)!_
 
 ## Translators
 
-_None yet — want to translate the mod into your language?
-[Open a feature request](https://github.com/manucruzleiva/cobblemon-ditto-hms/issues)!_
+_None yet — want to translate the mod into your language? Say so in
+[the Discord](https://discord.gg/SwcwXcCN4k)!_
 
 ---
 
-*Want your name here? Report a bug or suggest a feature on
-[the issue tracker](https://github.com/manucruzleiva/cobblemon-ditto-hms/issues).*
+*Want your name here? See [Reporting Bugs & Ideas](reporting.md).*

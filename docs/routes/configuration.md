@@ -41,7 +41,7 @@ The **level cap itself is owned by Radical Cobblemon Trainers** — the mod no l
 | No typical starters | off | exclude the pack's usual starters from the RANDOM roll (Mix ignores it) |
 | Shiny starter | Yes | No / Yes (normal odds) / Always (guaranteed) |
 
-Soul Link has its own toggles too — see [Soul Link](/mod-wiki/nuzlocke/soullock/).
+Soul Link has its own toggles too — see [Soul Link](../nuzlocke/soullock.md).
 
 ## ROUTES tab
 

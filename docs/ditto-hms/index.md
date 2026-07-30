@@ -51,7 +51,7 @@ it keeps new HMs coming.
 | [Active HMs](abilities/active.md) | 24 abilities activated on right-click |
 | [Toggle HMs](abilities/toggles.md) | 10 passive abilities that run continuously |
 | [HM Case](hm-case.md) | Manage all abilities from one item |
-| [Configuration](config.md) | Per-ability hunger / cooldown / power sliders |
+| [Configuration](configuration.md) | Per-ability hunger / cooldown / power sliders |
 | [Commands](commands.md) | Admin and player commands |
 | [Roadmap](roadmap.md) | What's coming in the next versions |
 | [Community Credits](credits.md) | The people who shape the mod |

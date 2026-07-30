@@ -2,14 +2,19 @@
 
 Every Cobblemon mod by **shiero**, documented in one place.
 
-Each mod keeps its documentation in its own repository and publishes it here, under its own section.
-This page is just the front door.
+Every page lives in **this** repository — one site, one build, one source of truth — with a section
+per mod. The mod repos themselves are private; the documentation is not. This page is just the front
+door.
+
+Each section follows the same shape: **Getting Started**, then the mod's own feature pages, then
+**Commands**, **Configuration**, **Reporting Bugs & Ideas**, **Roadmap**, **Community Credits** and
+**License**.
 
 ## The mods
 
 <div class="grid cards" markdown>
 
--   ### [Cobblemon Routes](/mod-wiki/routes/)
+-   ### [Cobblemon Routes](routes/index.md)
 
     Physical routes generated during worldgen that connect the world's structures, signposted and
     named like the games (`Route 3: Plains Forest`). Turns any Cobblemon world into a classic linear
@@ -17,13 +22,13 @@ This page is just the front door.
 
     **MC 1.21.1 · Cobblemon 1.7.3 · Fabric + NeoForge**
 
--   ### [Cobblemon Picnic](/mod-wiki/picnic/)
+-   ### [Cobblemon Picnic](picnic/index.md)
 
     Scarlet/Violet-style picnics in Cobblemon.
 
     **Fabric + NeoForge**
 
--   ### [Cobblemon Ditto HMs](/mod-wiki/ditto-hms/)
+-   ### [Cobblemon Ditto HMs](ditto-hms/index.md)
 
     Classic-generation HMs for Cobblemon.
 
@@ -35,9 +40,9 @@ This page is just the front door.
     On top of that, **Soul Link**: the co-op mode where you link parties with friends and share fates
     — when one linked Pokémon dies, so do its soulmates.
 
-    Currently being split out of Routes into its own mod. See
-    [#122](https://github.com/manucruzleiva/routes/issues/122). Until it ships, its documentation
-    lives in the Routes wiki.
+    Currently being split out of Routes into its own mod. Until it ships, install **Cobblemon
+    Routes** to get everything documented here — progress updates land in
+    [the Discord](https://discord.gg/SwcwXcCN4k).
 
 </div>
 

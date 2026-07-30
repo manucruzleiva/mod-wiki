@@ -65,17 +65,26 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
+# Every mod section follows the SAME spine, in this order:
+#
+#   index → Getting Started → (feature pages, mod-specific) → Commands → Configuration
+#         → Reporting Bugs & Ideas → Roadmap → Community Credits → License
+#
+# Only the feature-page block differs between mods. Labels are fixed too — it was
+# "Installation"/"Getting Started" and "World Creation & Config"/"Configuration" and
+# "Reporting Bugs & Ideas"/"...& Features" across sections, which made the sidebar read as four
+# unrelated sites. Keep a new mod's section to this shape.
 nav:
   - Home: index.md
   - Cobblemon Routes:
       - routes/index.md
-      - Installation: routes/installation.md
+      - Getting Started: routes/getting-started.md
       - Dynamic Routes: routes/routes.md
       - Map Integration: routes/map-integration.md
       - Items & Recipes: routes/items.md
-      - World Creation & Config: routes/configuration.md
-      - Commands: routes/commands.md
       - Gen2 Structures: routes/gen2-structures.md
+      - Commands: routes/commands.md
+      - Configuration: routes/configuration.md
       - Reporting Bugs & Ideas: routes/reporting.md
       - Roadmap: routes/roadmap.md
       - Community Credits: routes/credits.md
@@ -84,6 +93,10 @@ nav:
       - nuzlocke/index.md
       - Hardcore Nuzlocke: nuzlocke/nuzlocke.md
       - Soul Link (co-op): nuzlocke/soullock.md
+      - Reporting Bugs & Ideas: nuzlocke/reporting.md
+      - Roadmap: nuzlocke/roadmap.md
+      - Community Credits: nuzlocke/credits.md
+      - License: nuzlocke/license.md
   - Cobblemon Picnic:
       - picnic/index.md
       - Getting Started: picnic/getting-started.md
@@ -95,16 +108,19 @@ nav:
       - Commands: picnic/commands.md
       - Configuration: picnic/configuration.md
       - FAQ: picnic/faq.md
-      - Reporting Bugs & Features: picnic/reporting.md
+      - Reporting Bugs & Ideas: picnic/reporting.md
+      - Roadmap: picnic/roadmap.md
       - Community Credits: picnic/credits.md
+      - License: picnic/license.md
   - Cobblemon Ditto HMs:
       - ditto-hms/index.md
       - Getting Started: ditto-hms/getting-started.md
       - Active HMs: ditto-hms/abilities/active.md
       - Toggle HMs: ditto-hms/abilities/toggles.md
       - HM Case: ditto-hms/hm-case.md
-      - Configuration: ditto-hms/config.md
       - Commands: ditto-hms/commands.md
+      - Configuration: ditto-hms/configuration.md
+      - Reporting Bugs & Ideas: ditto-hms/reporting.md
       - Roadmap: ditto-hms/roadmap.md
       - Changelog: ditto-hms/changelog.md
       - Community Credits: ditto-hms/credits.md
