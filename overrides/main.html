@@ -67,6 +67,23 @@
       if (typeof document$ !== 'undefined') { document$.subscribe(paint); }
     })();
   </script>
+  {#- Las imagenes de contenido se cargan diferidas. Material no marca las del markdown, asi que en
+      una pagina larga el navegador se baja cada captura antes de pintar nada. Se salta la primera
+      del articulo: en los index es el logo del hero, arriba de todo, y diferirla solo agrega un
+      salto visible. -#}
+  <script>
+    (function () {
+      function defer() {
+        var imgs = document.querySelectorAll('.md-content img');
+        for (var i = 1; i < imgs.length; i++) {
+          imgs[i].loading = 'lazy';
+          imgs[i].decoding = 'async';
+        }
+      }
+      defer();
+      if (typeof document$ !== 'undefined') { document$.subscribe(defer); }
+    })();
+  </script>
   {#- Sidebar rail slot: appended under the page TOC so it never displaces content; it simply
       isn't there on narrow screens (the sidebar itself collapses). -#}
   <script>

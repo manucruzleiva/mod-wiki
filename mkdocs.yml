@@ -41,9 +41,10 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
-  font:
-    text: Inter
-    code: JetBrains Mono
+  # Sin Google Fonts: `font: text/code` hace que Material pida un CSS a fonts.googleapis.com que
+  # BLOQUEA el render, mas los woff2 de fonts.gstatic.com — Inter pedia ocho pesos. La pila del
+  # sistema se ve bien, llega en cero requests, y de paso no manda a cada lector a Google.
+  font: false
   features:
     # Four mods in one sidebar read as one endless list. Tabs give each mod its own top-level
     # entry, and the sidebar then only ever shows the section you are actually in.

@@ -53,12 +53,6 @@ Get in touch **before** any commercial use, in [the Discord](https://discord.gg/
 All copies and derivative works must credit the mod and its author, **shiero**, and link back to an
 official project page.
 
-## 🧩 Third-party assets
-
-Some models and textures shipped with these mods derive from other projects — **CobbleFurnies** and
-**Handcrafted**, in Cobblemon Picnic. Those assets stay under **their own original licenses**; this
-license covers only the original code and content authored by shiero.
-
 ## ⚖️ No warranty
 
 The software is provided *as is*, without warranty of any kind, express or implied. The author is
