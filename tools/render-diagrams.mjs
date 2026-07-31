@@ -58,7 +58,9 @@ let rendered = 0;
 let skipped = 0;
 
 for (const file of walk(docs)) {
-	const text = readFileSync(file, "utf8");
+	// MkDocs normaliza los finales de linea antes de que el hook vea el markdown, asi que un archivo
+	// con CRLF hashea distinto aca que alla y su diagrama quedaba sin renderizar para siempre.
+	const text = readFileSync(file, "utf8").replace(/\r\n/g, "\n");
 	for (const match of text.matchAll(FENCE)) {
 		const source = match[1].trim();
 		const digest = createHash("sha1").update(source, "utf8").digest("hex").slice(0, 16);
