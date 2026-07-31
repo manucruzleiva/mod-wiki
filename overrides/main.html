@@ -47,6 +47,26 @@
 
 {% block scripts %}
   {{ super() }}
+  {#- Per-mod theming. Each section owns a colour, and the palette variables hang off
+      `data-mod` on <body> (see stylesheets/extra.css). It is set from the URL rather than
+      baked in at build time because `navigation.instant` swaps pages without a reload —
+      a build-time class would stay stuck on whichever page was opened first. -#}
+  <script>
+    (function () {
+      var MODS = ['routes', 'nuzlocke', 'picnic', 'ditto-hms'];
+      function paint() {
+        var path = window.location.pathname;
+        var found = '';
+        for (var i = 0; i < MODS.length; i++) {
+          if (path.indexOf('/' + MODS[i] + '/') !== -1) { found = MODS[i]; break; }
+        }
+        if (found) { document.body.setAttribute('data-mod', found); }
+        else { document.body.removeAttribute('data-mod'); }
+      }
+      paint();
+      if (typeof document$ !== 'undefined') { document$.subscribe(paint); }
+    })();
+  </script>
   {#- Sidebar rail slot: appended under the page TOC so it never displaces content; it simply
       isn't there on narrow screens (the sidebar itself collapses). -#}
   <script>

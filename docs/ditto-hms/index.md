@@ -1,13 +1,24 @@
+<div class="hero hero--mod" markdown>
+
+![Cobblemon Ditto HMs](assets/logo.png){ .hero-logo }
+
+<div class="hero-copy" markdown>
+
 # Cobblemon Ditto HMs
 
-<div align="center">
-  <img src="assets/logo.png" alt="Cobblemon Ditto HMs" width="200"/>
+Become the HM slave you always made suffer. **35 Pokopia-inspired abilities** — 25 active and 10
+toggles — that *you* learn instead of teaching them to a Pokémon, paid for in hunger rather than a
+party slot.
+
+<span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.7.3</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
+
+<div class="hero-actions" markdown>
+[Get started](getting-started.md){ .md-button }
+[All 35 HMs](abilities/active.md){ .md-button }
 </div>
 
-**Cobblemon Ditto HMs** is a Minecraft 1.21.1 mod (Fabric & NeoForge) by **shiero** that brings
-Ditto's **35 Pokopia HM abilities** (25 active + 10 toggles) into the Cobblemon experience.
-
----
+</div>
+</div>
 
 ## How it works
 

@@ -16,35 +16,66 @@ copyright: 'Mods by shiero — "If you make money, I make money" license'
 # It also matters that this repo is PUBLIC while every mod repo is private: the documentation stays
 # openly readable and editable without exposing any code.
 
+# The palette is `custom` on purpose: the colours are defined as CSS variables in
+# stylesheets/extra.css, so light and dark are tuned as one system instead of being picked from
+# Material's fixed swatches. Green/teal out of the box read like an untouched default.
 theme:
   name: material
   custom_dir: overrides
   language: en
+  icon:
+    logo: material/map-marker-path
+    repo: fontawesome/brands/github
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: green
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: green
-      accent: teal
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
   features:
+    # Four mods in one sidebar read as one endless list. Tabs give each mod its own top-level
+    # entry, and the sidebar then only ever shows the section you are actually in.
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.instant
+    - navigation.instant.progress
     - navigation.tracking
     - navigation.top
-    - navigation.sections
     - navigation.indexes
+    - navigation.footer
     - toc.follow
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
+    - content.tooltips
+
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/SwcwXcCN4k
+      name: Discord — support and bug reports
+    - icon: simple/modrinth
+      link: https://modrinth.com/user/shiero
+      name: Modrinth
+    - icon: fontawesome/brands/github
+      link: https://github.com/manucruzleiva/mod-wiki
+      name: This wiki on GitHub
+    - icon: fontawesome/solid/heart
+      link: https://github.com/sponsors/manucruzleiva
+      name: Sponsor shiero
 
 extra_css:
   - stylesheets/extra.css

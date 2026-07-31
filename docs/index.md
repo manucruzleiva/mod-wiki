@@ -1,16 +1,26 @@
-# Modding Wiki
+---
+hide:
+  - navigation
+  - toc
+---
 
-Every Cobblemon mod by **shiero**, documented in one place.
+<div class="hero" markdown>
 
-Every page lives in **this** repository — one site, one build, one source of truth — with a section
-per mod. The mod repos themselves are private; the documentation is not. This page is just the front
-door.
+# Cobblemon mods by shiero
 
-Each section follows the same shape: **Getting Started**, then the mod's own feature pages, then
-**Commands**, **Configuration**, **Reporting Bugs & Ideas**, **Roadmap**, **Community Credits** and
-**License**.
+Four mods that turn a Cobblemon world into an adventure: roads and towns worth exploring, a
+Nuzlocke that enforces itself, a picnic table that bends the spawns, and every HM in your own
+hands. Documentation for all of them lives here.
 
-## Pick a mod
+<div class="hero-actions" markdown>
+[Browse the mods](#the-mods){ .md-button }
+[Report a bug](#found-a-bug-or-have-an-idea){ .md-button }
+[Discord](https://discord.gg/SwcwXcCN4k){ .md-button }
+</div>
+
+</div>
+
+## The mods
 
 <div class="grid cards" markdown>
 
@@ -18,58 +28,92 @@ Each section follows the same shape: **Getting Started**, then the mod's own fea
 
     ### [Routes](routes/index.md)
 
-    Turn any Cobblemon world into a classic Pokémon-style RPG: auto-generated routes and towns,
-    named capture areas, route trainers and full Xaero map integration.
+    Worldgen roads that connect the structures already in your world, plus named routes, areas and
+    towns, route trainers, and full Xaero map integration. The world stops being a random field and
+    starts being a region.
 
-    **MC 1.21.1 · Cobblemon 1.7.3 · Fabric + NeoForge**
+    [Getting started →](routes/getting-started.md)
+
+    <span class="badge badge--primary">MC 1.21.1</span> <span class="badge">Cobblemon 1.7.3</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
 
 -   [![Cobblemon Picnic](picnic/assets/logo.png){ .mod-logo }](picnic/index.md)
 
     ### [Cobblemon Picnic](picnic/index.md)
 
-    A picnic table that re-rolls nearby wild spawns on demand: hunt shinies or specific Pokémon
-    without roaming. Also a social station with a shiny aura, Pokémon care and trainer battles.
+    A picnic table that re-rolls the wild spawns around it on demand — hunt a shiny or a specific
+    Pokémon without walking the map raw. Doubles as a social spot: shiny aura, Pokémon care and
+    trainer battles.
 
-    **MC 1.21.1 · Fabric + NeoForge**
+    [Getting started →](picnic/getting-started.md)
+
+    <span class="badge badge--primary">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
 
 -   [![Cobblemon Ditto HMs](ditto-hms/assets/logo.png){ .mod-logo }](ditto-hms/index.md)
 
     ### [Cobblemon Ditto HMs](ditto-hms/index.md)
 
-    Learn Ditto's 35 Pokopia HM abilities yourself — cut, fly, surf, teleport and more, fueled by
-    hunger.
+    Become the HM slave you always made suffer: **35 Pokopia-inspired abilities** you learn
+    yourself — Cut, Fly, Surf, Teleport and more — powered by hunger instead of a party slot.
 
-    **MC 1.21.1 · Fabric + NeoForge**
+    [Getting started →](ditto-hms/getting-started.md)
 
--   <div class="mod-logo mod-logo--placeholder">🎲</div>
+    <span class="badge badge--primary">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
 
-    ### [Cobblemon Nuzlocke & Soul Link](nuzlocke/index.md) *(coming)*
+-   [![Cobblemon Nuzlocke & Soul Link](nuzlocke/assets/logo.png){ .mod-logo }](nuzlocke/index.md)
 
-    A full Hardcore Nuzlocke ruleset: one catch per zone, permadeath, mandatory nicknames, shiny
-    clause, starter randomiser and level caps — plus **Soul Link**, the co-op mode where linked
-    parties share fates.
+    ### [Cobblemon Nuzlocke & Soul Link](nuzlocke/index.md)
 
-    Still being split out of Routes. Until it ships, install **Routes** to get everything
-    documented here.
+    A Hardcore Nuzlocke the game enforces for you: one catch per zone, permadeath, mandatory
+    nicknames, level caps — plus **Soul Link**, where linked parties share fates.
+
+    [Read the rules →](nuzlocke/nuzlocke.md)
+
+    <span class="badge badge--soon">Not released yet</span> <span class="badge">Requires Routes</span>
 
 </div>
 
-## Reporting bugs and requesting features
+## Start here
 
-Every mod has its own Discord forum channels, and a bot turns posts into GitHub issues
-automatically. You don't need a GitHub account: post in the mod's forum and that's it.
+<div class="grid cards" markdown>
 
-The bots live in [`intake-bots`](https://github.com/manucruzleiva/intake-bots), one per project.
+-   ### :material-download: Installing
 
----
+    Every mod needs **Minecraft 1.21.1** and **Cobblemon 1.7.3**, on either **Fabric** or
+    **NeoForge**. Drop the jar for your loader into `mods/` — never both jars at once.
 
-!!! info "This wiki replaces the old per-mod wikis"
-    Each mod used to have its own wiki at its own URL (`cobblemon-routes-wiki`,
-    `cobblemon-picnic-wiki`, `cobblemon-ditto-hms`). There is now a single one:
-    **manucruzleiva.github.io/mod-wiki/**. Old links published on Modrinth and CurseForge should be
-    updated.
+    Each mod's *Getting Started* page lists its own dependencies.
+
+-   ### :material-tune: Configuring
+
+    Routes and Nuzlocke are set up on the **world-creation screen** and stored with that world.
+    Picnic and Ditto HMs use in-game config: a command, or the settings screen via Mod Menu.
+
+    See each mod's *Configuration* page.
+
+-   ### :material-map-search: Finding things
+
+    Every section follows the same order: **Getting Started**, the mod's own feature pages,
+    **Commands**, **Configuration**, **Reporting**, **Roadmap**, **Credits**, **License**.
+
+    The search box at the top covers all four mods at once.
+
+</div>
+
+## Found a bug, or have an idea?
+
+Post in the mod's **tickets thread on [Discord](https://discord.gg/SwcwXcCN4k)** and tag it —
+**Bug**, **Crash**, **Idea** or **Feedback**. A bot files it as an issue, replies in your thread
+with what it needs from you, and posts back there when it is closed. **You do not need a GitHub
+account.**
+
+For a crash, attach `crash-reports/crash-*.txt` — the stack trace is what turns a hunt into a fix.
 
 !!! tip "Want to fix or improve a page?"
-    Every page here lives in [this repository](https://github.com/manucruzleiva/mod-wiki) — the mod
-    repos themselves are private, but the documentation is not. Open a pull request against
-    `docs/<mod>/` and it goes live on merge.
+    Every page here lives in [this repository](https://github.com/manucruzleiva/mod-wiki). The mod
+    repos are private; the documentation is not. Open a pull request against `docs/<mod>/` and it
+    goes live on merge.
+
+!!! info "This wiki replaced the old per-mod wikis"
+    Each mod used to have its own site at its own URL. There is now a single one —
+    **manucruzleiva.github.io/mod-wiki/** — so old links published on Modrinth or CurseForge may
+    still point at a page that no longer exists.

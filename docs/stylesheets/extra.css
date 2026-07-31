@@ -1,42 +1,478 @@
-/* Mod picker on the landing page.
-   The four logos do not share a source size (Routes is 512x512, the others 128x128) and their art
-   styles differ, so they are normalised to one box here rather than by re-exporting the art. */
+/* ============================================================================
+   Modding Wiki — visual system
+   ----------------------------------------------------------------------------
+   One palette, defined once here and consumed by both schemes, instead of two
+   unrelated Material swatches. Everything else in this file is built on these
+   variables, so re-tinting the whole site is a three-line change.
 
-.mod-logo {
-  display: block;
-  width: 128px;
-  height: 128px;
-  margin: 0 auto 0.8rem;
-  object-fit: contain;
-  /* 128px art upscales into a 128px box 1:1; Routes' 512px art downscales smoothly. */
-  image-rendering: auto;
+   The hue is a deep field-green (the routes and the outdoors these mods are
+   about) with an amber accent that reads as a signpost — high contrast against
+   the green in both light and dark.
+   ========================================================================== */
+
+:root {
+  --brand-green-900: #0a3c2c;
+  --brand-green-700: #0e6a4b;
+  --brand-green-500: #17a06f;
+  --brand-green-300: #5ed3a3;
+  --brand-amber-500: #e08c1a;
+  --brand-amber-400: #f3a83c;
+
+  --wiki-radius: 14px;
+  --wiki-radius-sm: 9px;
+  /* Shadows carry the elevation: no borders-plus-shadow doubling up. */
+  --wiki-shadow: 0 1px 2px rgba(10, 40, 30, 0.05), 0 6px 20px -8px rgba(10, 40, 30, 0.18);
+  --wiki-shadow-lift: 0 2px 4px rgba(10, 40, 30, 0.07), 0 14px 34px -10px rgba(10, 40, 30, 0.28);
 }
 
-/* Nuzlocke has no art yet — a neutral placeholder that keeps the row aligned instead of a
-   broken image or a borrowed logo from another mod. */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--brand-green-700);
+  --md-primary-fg-color--light: var(--brand-green-500);
+  --md-primary-fg-color--dark: var(--brand-green-900);
+  --md-accent-fg-color: #b4700f;
+  --md-typeset-a-color: var(--brand-green-700);
+
+  --wiki-surface: #ffffff;
+  --wiki-surface-sunken: #f4f7f5;
+  --wiki-border: rgba(10, 60, 44, 0.12);
+  --wiki-hero-from: #0c5240;
+  --wiki-hero-to: #12805c;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0d5540;
+  --md-primary-fg-color--light: var(--brand-green-500);
+  --md-primary-fg-color--dark: #072a1f;
+  --md-accent-fg-color: var(--brand-amber-400);
+  --md-typeset-a-color: var(--brand-green-300);
+
+  /* Material's stock slate is a touch blue; nudged toward the green so the
+     chrome and the content agree. */
+  --md-default-bg-color: #10171a;
+  --wiki-surface: #161f22;
+  --wiki-surface-sunken: #121a1d;
+  --wiki-border: rgba(255, 255, 255, 0.09);
+  --wiki-hero-from: #0a3a2c;
+  --wiki-hero-to: #0f5c44;
+}
+
+/* ── One colour per mod ────────────────────────────────────────────────────
+   `data-mod` is set on <body> from the URL by overrides/main.html, so every
+   section re-tints the whole chrome — header, tabs, links, hero — and you can
+   tell which mod you are reading from the corner of your eye. The variables
+   are the same ones the base palette above defines, so nothing else in this
+   file needs to know these rules exist.
+
+   Each mod gets a primary of its own and an accent picked to stay legible
+   against it, in both schemes. */
+
+/* Routes — field green: roads, worldgen, the outdoors. */
+body[data-mod="routes"] {
+  --md-primary-fg-color: #0e6a4b;
+  --md-primary-fg-color--light: #17a06f;
+  --md-primary-fg-color--dark: #0a3c2c;
+  --md-accent-fg-color: #b4700f;
+  --md-typeset-a-color: #0e6a4b;
+  --wiki-hero-from: #0c5240;
+  --wiki-hero-to: #12805c;
+}
+
+/* Picnic — terracotta: the blanket, the food, the warm afternoon. */
+body[data-mod="picnic"] {
+  --md-primary-fg-color: #b1452c;
+  --md-primary-fg-color--light: #d76a4d;
+  --md-primary-fg-color--dark: #7a2c1a;
+  --md-accent-fg-color: #12776b;
+  --md-typeset-a-color: #a93f27;
+  --wiki-hero-from: #96351f;
+  --wiki-hero-to: #cc6141;
+}
+
+/* Ditto HMs — Ditto's violet-pink. */
+body[data-mod="ditto-hms"] {
+  --md-primary-fg-color: #7c3f97;
+  --md-primary-fg-color--light: #a568bd;
+  --md-primary-fg-color--dark: #52276a;
+  --md-accent-fg-color: #b4700f;
+  --md-typeset-a-color: #7c3f97;
+  --wiki-hero-from: #5c2c75;
+  --wiki-hero-to: #8f4bad;
+}
+
+/* Nuzlocke & Soul Link — deep indigo, with a rose accent for the stakes. */
+body[data-mod="nuzlocke"] {
+  --md-primary-fg-color: #33459b;
+  --md-primary-fg-color--light: #6172c9;
+  --md-primary-fg-color--dark: #212c68;
+  --md-accent-fg-color: #c2405f;
+  --md-typeset-a-color: #33459b;
+  --wiki-hero-from: #26307a;
+  --wiki-hero-to: #4452b0;
+}
+
+/* In dark mode the same hues need lifting: the primaries above are tuned for a
+   white page and go muddy on a dark one, and links have to clear the contrast
+   floor against #10171a. */
+body[data-md-color-scheme="slate"][data-mod="routes"] {
+  --md-primary-fg-color: #0d5540;
+  --md-typeset-a-color: #5ed3a3;
+  --md-accent-fg-color: #f3a83c;
+  --wiki-hero-from: #0a3a2c;
+  --wiki-hero-to: #0f5c44;
+}
+
+body[data-md-color-scheme="slate"][data-mod="picnic"] {
+  --md-primary-fg-color: #8e3721;
+  --md-typeset-a-color: #f0977a;
+  --md-accent-fg-color: #4cc0b0;
+  --wiki-hero-from: #6d2616;
+  --wiki-hero-to: #a44329;
+}
+
+body[data-md-color-scheme="slate"][data-mod="ditto-hms"] {
+  --md-primary-fg-color: #5f2f76;
+  --md-typeset-a-color: #d3a2e6;
+  --md-accent-fg-color: #f3a83c;
+  --wiki-hero-from: #47205c;
+  --wiki-hero-to: #7a3f96;
+}
+
+body[data-md-color-scheme="slate"][data-mod="nuzlocke"] {
+  --md-primary-fg-color: #28337a;
+  --md-typeset-a-color: #9aa5f0;
+  --md-accent-fg-color: #ef7191;
+  --wiki-hero-from: #1c2560;
+  --wiki-hero-to: #37429c;
+}
+
+/* Inter's default numerals are proportional; tabular ones keep version tables
+   from wobbling column to column. */
+body {
+  font-feature-settings: "kern", "liga", "tnum";
+}
+
+.md-typeset h1,
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+}
+
+/* ── Hero ──────────────────────────────────────────────────────────────────
+   Landing-page banner. Full-bleed colour, so the first thing on the site is
+   not a wall of grey text. */
+
+.hero {
+  position: relative;
+  margin: 0 0 2.6rem;
+  padding: 2.6rem 2rem 2.4rem;
+  border-radius: var(--wiki-radius);
+  background: linear-gradient(135deg, var(--wiki-hero-from) 0%, var(--wiki-hero-to) 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* A faint topographic wash — routes, roughly — kept low-contrast so text stays
+   readable and no image request is needed. */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.14) 0, transparent 42%),
+    radial-gradient(circle at 12% 88%, rgba(255, 255, 255, 0.09) 0, transparent 38%);
+  pointer-events: none;
+}
+
+.md-typeset .hero h1 {
+  margin: 0 0 0.5rem;
+  color: #fff;
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  position: relative;
+  max-width: 38rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+/* Mod-page variant: the logo carries the identity, so it sits inside the hero
+   instead of floating next to the first paragraph. */
+.hero--mod {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+}
+
+/* Markdown wraps a lone image in a <p>, so the paragraph — not the image — is
+   what the flex row lays out. */
+.hero--mod > p:first-of-type {
+  position: relative;
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.hero--mod .hero-logo {
+  display: block;
+  width: 132px;
+  height: 132px;
+  padding: 0.6rem;
+  border-radius: var(--wiki-radius-sm);
+  background: rgba(255, 255, 255, 0.13);
+  object-fit: contain;
+}
+
+/* Same wrapping happens to the badge row and the buttons. */
+.md-typeset .hero-copy p + p {
+  margin-top: 0.9rem;
+}
+
+.md-typeset .hero-actions > p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+/* A ¶ permalink hanging off a hero headline is noise. */
+.hero .headerlink {
+  display: none;
+}
+
+.hero--mod .hero-copy {
+  position: relative;
+  min-width: 0;
+}
+
+/* Badges sit on the gradient here, so they invert. */
+.hero .badge {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+}
+
+.hero-actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.md-typeset .hero-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 1.05rem;
+  /* .md-button brings its own primary-coloured border, which on the gradient
+     reads as an outline around the pill. */
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 120ms ease, background-color 120ms ease, border-color 120ms ease;
+}
+
+.md-typeset .hero-actions a:first-child {
+  background: #fff;
+  color: var(--wiki-hero-from);
+}
+
+.md-typeset .hero-actions a + a {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+
+.md-typeset .hero-actions a:hover {
+  transform: translateY(-1px);
+}
+
+.md-typeset .hero-actions a + a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+/* ── Mod cards ─────────────────────────────────────────────────────────────
+   Material renders `.grid.cards` from a list; these rules give the cards a
+   real surface, an aligned logo tile and a hover state. */
+
+.md-typeset .grid.cards > ul > li {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--wiki-border);
+  border-radius: var(--wiki-radius);
+  background: var(--wiki-surface);
+  box-shadow: var(--wiki-shadow);
+  padding: 1.3rem 1.3rem 1.1rem;
+  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-3px);
+  border-color: var(--md-primary-fg-color--light);
+  box-shadow: var(--wiki-shadow-lift);
+}
+
+.md-typeset .grid.cards > ul > li > hr {
+  margin: 0.7rem 0;
+  border-color: var(--wiki-border);
+}
+
+/* The four logos do not share a source size (Routes is 512x512, the others
+   128x128) and their art styles differ, so they are normalised to one box here
+   rather than by re-exporting the art. */
+.mod-logo {
+  display: block;
+  width: 108px;
+  height: 108px;
+  margin: 0 auto 0.9rem;
+  object-fit: contain;
+  border-radius: var(--wiki-radius-sm);
+  background: var(--wiki-surface-sunken);
+  padding: 0.5rem;
+}
+
 .mod-logo--placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1;
-  border-radius: 12px;
-  border: 2px dashed var(--md-default-fg-color--lighter);
+  border: 1px dashed var(--wiki-border);
   color: var(--md-default-fg-color--light);
 }
 
-/* Keep the card title tight under the logo. */
-.grid.cards .mod-logo + h3 {
+.md-typeset .grid.cards .mod-logo + h3 {
   margin-top: 0;
   text-align: center;
+  font-size: 0.92rem;
+  font-weight: 700;
 }
 
+.md-typeset .grid.cards h3 a {
+  text-decoration: none;
+}
+
+/* Push the badge row to the bottom edge so cards of different text lengths
+   still line their metadata up. */
+.md-typeset .grid.cards > ul > li > p:last-child {
+  margin-top: auto;
+  padding-top: 0.6rem;
+}
+
+/* ── Badges ────────────────────────────────────────────────────────────────
+   Small pills for versions and loaders: "MC 1.21.1", "Fabric", "NeoForge". */
+
+.badge {
+  display: inline-block;
+  padding: 0.16rem 0.55rem;
+  margin: 0.12rem 0.2rem 0.12rem 0;
+  border-radius: 999px;
+  border: 1px solid var(--wiki-border);
+  background: var(--wiki-surface-sunken);
+  color: var(--md-default-fg-color--light);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.badge--primary {
+  border-color: transparent;
+  background: var(--md-primary-fg-color);
+  color: #fff;
+}
+
+.badge--accent {
+  border-color: transparent;
+  background: var(--md-accent-fg-color);
+  color: #1b1200;
+}
+
+.badge--soon {
+  border-style: dashed;
+}
+
+/* ── Content polish ────────────────────────────────────────────────────────*/
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--wiki-border);
+  border-radius: var(--wiki-radius-sm);
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--wiki-surface-sunken);
+  font-weight: 700;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--wiki-radius-sm);
+  border-left-width: 3px;
+  box-shadow: none;
+}
+
+.md-typeset pre > code {
+  border-radius: var(--wiki-radius-sm);
+}
+
+.md-typeset kbd {
+  border-radius: 5px;
+}
+
+/* The tab bar sits directly on the header colour; a hairline keeps it from
+   bleeding into the content on scroll. */
+.md-tabs {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ── Ad / sponsor slots ────────────────────────────────────────────────────
+   See overrides/main.html for the rules these follow. Styled as a quiet card
+   rather than a dashed box, so an empty slot reads as intentional. */
+
+.cr-ad-placeholder {
+  border: 1px solid var(--wiki-border) !important;
+  border-radius: var(--wiki-radius-sm) !important;
+  background: var(--wiki-surface-sunken) !important;
+}
+
+.cr-ad-placeholder:hover {
+  border-color: var(--md-accent-fg-color) !important;
+}
+
+/* ── Narrow screens ───────────────────────────────────────────────────────*/
+
 @media screen and (max-width: 44.9375em) {
-  .mod-logo {
-    width: 96px;
-    height: 96px;
+  .hero {
+    padding: 2rem 1.3rem 1.8rem;
   }
+
+  .md-typeset .hero h1 {
+    font-size: 1.65rem;
+  }
+
+  .hero-actions a {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .mod-logo {
+    width: 88px;
+    height: 88px;
+  }
+
   .mod-logo--placeholder {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 }

@@ -1,12 +1,25 @@
-# 🧺 Cobblemon Picnic
+<div class="hero hero--mod" markdown>
 
-**Cobblemon Picnic** is a [Cobblemon](https://cobblemon.com/) add-on that turns spawn-hunting into
-a cozy picnic. Place a **Picnic Table**, right-click it, and it **despawns the nearby wild Pokémon
-and forces a fresh "maximized" natural respawn** around you — a **spawn re-roller** for hunting
-shinies or a specific species without roaming the world.
+![Cobblemon Picnic](assets/logo.png){ .hero-logo }
 
-It's also a **social station**: sit on the benches for a **shiny bonus**, care for your Pokémon,
-store snacks in baskets, and summon trainers to battle.
+<div class="hero-copy" markdown>
+
+# Cobblemon Picnic
+
+Spawn-hunting, made cozy. Place a **Picnic Table**, right-click it, and the wild Pokémon around you
+are despawned and re-rolled into a fresh maximised spawn — hunt a shiny or a specific species
+without walking the map raw. It doubles as a social station: shiny aura, Pokémon care and trainer
+battles.
+
+<span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.7.x</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
+
+<div class="hero-actions" markdown>
+[Get started](getting-started.md){ .md-button }
+[Picnic tables](picnic-tables.md){ .md-button }
+</div>
+
+</div>
+</div>
 
 !!! info "Requirements"
     **Minecraft 1.21.1** · **Fabric or NeoForge** · **[Cobblemon](https://modrinth.com/mod/cobblemon) 1.7.x**.

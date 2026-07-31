@@ -1,11 +1,24 @@
+<div class="hero hero--mod" markdown>
+
+![Cobblemon Nuzlocke & Soul Link](assets/logo.png){ .hero-logo }
+
+<div class="hero-copy" markdown>
+
 # Cobblemon Nuzlocke & Soul Link
 
-<div align="center">
-  <img src="assets/logo.png" alt="Cobblemon Nuzlocke & Soul Link" width="200"/>
+A full **Hardcore Nuzlocke** the game enforces for you — one catch per zone, permadeath, mandatory
+nicknames, level caps — so you play the run instead of policing yourself. And if you play with
+friends, **Soul Link** binds your parties: when one linked Pokémon dies, so do its soulmates.
+
+<span class="badge badge--soon">Not released yet</span> <span class="badge">Requires Routes</span> <span class="badge">MC 1.21.1</span>
+
+<div class="hero-actions" markdown>
+[The ruleset](nuzlocke.md){ .md-button }
+[Soul Link](soullock.md){ .md-button }
 </div>
 
-A **Cobblemon add-on** that runs a full **Hardcore-Nuzlocke** ruleset on your world — and, if you
-play with friends, links your parties together so your fates are shared.
+</div>
+</div>
 
 !!! warning "Not released yet"
     This mod is being split out of [Routes](../routes/index.md), where all of these features

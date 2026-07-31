@@ -1,12 +1,25 @@
+<div class="hero hero--mod" markdown>
+
+![Routes](assets/logo.png){ .hero-logo }
+
+<div class="hero-copy" markdown>
+
 # Routes
 
-![Routes](assets/logo.png){ width="160" align=right }
+Turn any Cobblemon world into a classic-style Pokémon region: **physical roads generated during
+worldgen** that connect its cities and structures, named capture zones, and map integration that
+ties it together. Works with any Cobblemon setup, and connects the gyms of packs like COBBLEVERSE
+when they are present.
 
-**Routes** is a **Cobblemon add-on** by **shiero** (Minecraft 1.21.1, Cobblemon 1.7.3)
-that turns any Cobblemon world into a classic-style Pokémon RPG: **physical roads generated during
-worldgen** that connect the world's cities and structures, named capture zones, and map integrations
-that tie it all together. It works with any Cobblemon setup and is compatible with packs like
-COBBLEVERSE (it connects their gyms when present).
+<span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.7.3</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
+
+<div class="hero-actions" markdown>
+[Get started](getting-started.md){ .md-button }
+[Commands](commands.md){ .md-button }
+</div>
+
+</div>
+</div>
 
 ```mermaid
 flowchart LR
