@@ -2,11 +2,6 @@
 
 The complete manual for every **`/routes`** command — the road network.
 
-!!! tip "Looking for `/nuzlocke`?"
-    The run, the zone log and the co-op soul links belong to
-    **[Cobblemon Nuzlocke & Soul Link](../nuzlocke/commands.md)**. Those commands currently ship
-    inside Routes, but they are documented in that mod's section.
-
 ```mermaid
 flowchart LR
     R["/routes"] --> RP[👤 status · list · nearest · zone]
@@ -97,14 +92,4 @@ refresh without relogging.
 ⚠️ Wipes the **road records** and re-queues every connection from the known cities. Already-paved
 blocks stay in the world; the network rebuilds its bookkeeping from scratch.
 
----
-
-## The `/nuzlocke` root
-
-Not a Routes command set. `/nuzlocke status`, `log`, `map`, `reset`, `revive`, `enable`, `disable`,
-`set` and the whole `soullock` co-op suite are documented on
-**[Nuzlocke & Soul Link → Commands](../nuzlocke/commands.md)**.
-
-They are registered by the Routes jar for now — the split into a separate mod is still in
-progress — so you do not need anything extra installed to use them today.
 

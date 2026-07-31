@@ -3,8 +3,8 @@ site_description: >-
   The single wiki for every Cobblemon mod by shiero — Routes, Nuzlocke & Soul Link, Picnic and Ditto HMs.
 site_url: https://manucruzleiva.github.io/mod-wiki/
 # Sin `repo_url` a proposito: Material lo dibuja en el header con el contador de estrellas y forks,
-# que no le dice nada a quien viene a leer como se instala un mod. El repo sigue enlazado donde
-# importa — el icono de GitHub del footer y la invitacion a mandar PRs en la portada.
+# que no le dice nada a quien viene a leer como se instala un mod. El repo queda enlazado solo desde
+# el icono de GitHub del footer: la wiki NO invita a mandar PRs, las correcciones entran por Discord.
 docs_dir: docs
 copyright: 'Mods by shiero — "If you make money, I make money" license'
 
@@ -70,6 +70,9 @@ extra:
     - icon: simple/modrinth
       link: https://modrinth.com/user/shiero
       name: Modrinth
+    - icon: simple/curseforge
+      link: https://www.curseforge.com/members/shiero/projects
+      name: CurseForge
     - icon: fontawesome/brands/github
       link: https://github.com/manucruzleiva/mod-wiki
       name: This wiki on GitHub
@@ -121,7 +124,6 @@ nav:
       - Dynamic Routes: routes/routes.md
       - Map Integration: routes/map-integration.md
       - Items & Recipes: routes/items.md
-      - Gen2 Structures: routes/gen2-structures.md
       - Commands: routes/commands.md
       - Configuration: routes/configuration.md
       - Roadmap: routes/roadmap.md

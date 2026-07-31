@@ -108,12 +108,4 @@ account.**
 
 For a crash, attach `crash-reports/crash-*.txt` — the stack trace is what turns a hunt into a fix.
 
-!!! tip "Want to fix or improve a page?"
-    Every page here lives in [this repository](https://github.com/manucruzleiva/mod-wiki). The mod
-    repos are private; the documentation is not. Open a pull request against `docs/<mod>/` and it
-    goes live on merge.
-
-!!! info "This wiki replaced the old per-mod wikis"
-    Each mod used to have its own site at its own URL. There is now a single one —
-    **manucruzleiva.github.io/mod-wiki/** — so old links published on Modrinth or CurseForge may
-    still point at a page that no longer exists.
+Something wrong on a page? Say so in the Discord — same place, same thread, and it gets fixed here.
