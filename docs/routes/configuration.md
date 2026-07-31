@@ -12,7 +12,7 @@ screen for defaults.
 ```mermaid
 flowchart LR
     T[🆕 ROUTES tab<br/>at world creation] -->|saved per world| W[🌍 Your world's rules<br/>never clobbered later]
-    K[⚙️ Global config — key K<br/>config/cobblemon_routes.json] -->|defaults when a world<br/>wasn't configured| W
+    K[⚙️ Global config — key K<br/>config/routes.json] -->|defaults when a world<br/>wasn't configured| W
 ```
 
 ## ROUTES tab
@@ -47,7 +47,7 @@ world-creation choice — adjust it live from the sliders on
 
 ## Global defaults
 
-The global defaults live in `config/cobblemon_routes.json` (English & Spanish labels) and are used
+The global defaults live in `config/routes.json` (English & Spanish labels) and are used
 when a world wasn't configured through the tabs. The map-paint intensity also has live sliders on
 [Xaero's world map](map-integration.md).
 

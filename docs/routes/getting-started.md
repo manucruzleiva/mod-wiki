@@ -33,7 +33,7 @@ The mod does **not** bundle these — they're expected to be present in your Cob
    or [CurseForge](https://www.curseforge.com/projects/1584243) — each release ships
    as `x.y.z+fabric` and `x.y.z+neoforge`.
 2. Drop the jar into your profile's `mods/` folder.
-3. Make sure only **one** `cobblemon_routes-*.jar` is present (remove older ones first).
+3. Make sure only **one** `routes-*.jar` is present (remove older ones first).
 4. Launch. Create a new world and look for the **NUZLOCKE** and **ROUTES** tabs on the
    create-world screen.
 

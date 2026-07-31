@@ -26,7 +26,7 @@ flowchart LR
     W[🌍 Your Cobblemon world] --> R[🗺️ Dynamic Routes<br/>roads, tunnels, signs]
     W --> N[🎮 Hardcore Nuzlocke<br/>encounter lock · permadeath]
     R --> M[🧭 Map Integration<br/>waypoints · trails · chunk paint]
-    N --> S[❤️‍🔥 Soullock co-op<br/>linked runs with friends]
+    N --> S[❤️‍🔥 Soul Link co-op<br/>linked runs with friends]
     M --> RPG[✨ A real Pokémon region]
     S --> RPG
     R --> RPG
@@ -37,7 +37,7 @@ flowchart LR
 - 🗺️ **[Dynamic routes](routes.md)** between cities and structures, fully part of worldgen — roads
   seek flat ground, stay off the coast, tunnel mineshaft-style through mountains, and get names like
   *Route 3: Steep Forest Pass*.
-- 🎮 **[Hardcore Nuzlocke](../nuzlocke/nuzlocke.md)** and ❤️‍🔥 **[Soul Link](../nuzlocke/soullock.md)**:
+- 🎮 **[Hardcore Nuzlocke](../nuzlocke/nuzlocke.md)** and ❤️‍🔥 **[Soul Link](../nuzlocke/soul-link.md)**:
   per-zone encounter lock, permadeath and linked co-op runs. These belong to the
   **[Nuzlocke & Soul Link](../nuzlocke/index.md)** add-on — which ships inside this jar for now, so
   you get them either way. The zones they lock onto are the routes, areas and towns generated here.

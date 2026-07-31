@@ -11,7 +11,7 @@ Every command under the **`/nuzlocke`** root — the run itself and the co-op so
 flowchart LR
     N["/nuzlocke"] --> NP[👤 status · log · map]
     N --> NO[🛡️ status player · reset · revive<br/>enable · disable · set]
-    N --> S[soullock]
+    N --> S[soul link]
     S --> SP[👤 link · accept · decline · unlink<br/>status · summary]
 ```
 
@@ -28,7 +28,7 @@ flowchart LR
 | `/nuzlocke revive [player]` | 🛡️ | Revive a party's dead Pokémon (lifts a game-over). |
 | `/nuzlocke enable` · `/nuzlocke disable` | 🛡️ | Master switch for this world — turn the whole Nuzlocke ruleset on (routes-only when off) or off, saved per world. |
 | `/nuzlocke set <option> <value>` | 🛡️ | Change any single per-world setting live — the same options as the create-world tab (e.g. `require_nicknames false`, `healing_mode ALL`). Tab-completes the names. |
-| `/nuzlocke soullock …` | 👤 | The co-op soul-link suite (below). |
+| `/nuzlocke soullink …` | 👤 | The co-op soul-link suite (below). |
 
 ---
 
@@ -58,9 +58,9 @@ survival mode. The mercy switch.
 
 ---
 
-## ❤️‍🔥 `/nuzlocke soullock` — co-op contracts
+## ❤️‍🔥 `/nuzlocke soullink` — co-op contracts
 
-See [Soul Link](soullock.md) for the rules.
+See [Soul Link](soul-link.md) for the rules.
 
 ### `link <player2> [player3] [player4]` — 👤
 Sends a **soul-link request** to up to three other players. Nothing links until **everyone

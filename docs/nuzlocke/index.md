@@ -14,7 +14,7 @@ friends, **Soul Link** binds your parties: when one linked Pokémon dies, so do 
 
 <div class="hero-actions" markdown>
 [The ruleset](nuzlocke.md){ .md-button }
-[Soul Link](soullock.md){ .md-button }
+[Soul Link](soul-link.md){ .md-button }
 </div>
 
 </div>
@@ -47,7 +47,7 @@ friends, **Soul Link** binds your parties: when one linked Pokémon dies, so do 
 - **Level caps**, EXP tuning, battle restrictions (Mega / Gigantamax / Z-Moves / Tera) and a
   configurable **Defeated-Catch window**.
 
-### [Soul Link](soullock.md) — co-op
+### [Soul Link](soul-link.md) — co-op
 
 Link parties with other players so your runs are bound together: when one linked Pokémon dies, so do
 its soulmates. Includes a lone-combat block so nobody grinds ahead alone.

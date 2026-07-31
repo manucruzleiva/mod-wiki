@@ -61,4 +61,4 @@ flowchart TD
 !!! tip "Choose Hardcore at world creation"
     Picking **Hardcore** on the create-world screen auto-enables the full ruleset — see
     [World Creation & Config](../routes/configuration.md) for every option. Playing with
-    friends? Try [Soul Link](soullock.md).
+    friends? Try [Soul Link](soul-link.md).
