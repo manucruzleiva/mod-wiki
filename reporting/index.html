@@ -2097,17 +2097,13 @@ the whole process. <strong>You do not need a GitHub account.</strong> A bot turn
 replies in your thread with what it needs from you, and posts back there when it is closed.</p>
 <p>One page for all four mods: the process is identical, and the mod-specific detail is in the tabs
 below.</p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant You as 🧑 You
-    participant D as 💬 Discord
-    participant Bot as 🤖 Intake bot
-    participant Dev as 🛠️ shiero
-    You-&gt;&gt;D: open a post in the mod's tickets thread + pick a tag
-    D-&gt;&gt;Bot: the bot reads it within ~10 minutes
-    Bot-&gt;&gt;Dev: files a tracked issue, labelled from your tag
-    Bot--&gt;&gt;You: replies in your thread with what it needs
-    Dev-&gt;&gt;Dev: fixes it in a release
-    Bot--&gt;&gt;You: 🎉 posts back when the issue closes</code></pre>
+<ol>
+<li><strong>You</strong> open a post in the mod's tickets thread and pick a tag.</li>
+<li><strong>The bot</strong> reads it within ~10 minutes and files a tracked issue, labelled from your tag.</li>
+<li><strong>The bot replies in your thread</strong> saying what it still needs from you, if anything.</li>
+<li><strong>shiero</strong> fixes it in a release.</li>
+<li><strong>The bot posts back</strong> in your thread when the issue closes. 🎉</li>
+</ol>
 <h2 id="pick-the-right-tag">Pick the right tag<a class="headerlink" href="#pick-the-right-tag" title="Permanent link">&para;</a></h2>
 <p>The tag you choose decides how the report is handled — and what the bot asks you for. It is the one
 thing worth getting right.</p>
