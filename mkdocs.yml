@@ -2,8 +2,9 @@ site_name: Modding Wiki
 site_description: >-
   The single wiki for every Cobblemon mod by shiero — Routes, Nuzlocke & Soul Link, Picnic and Ditto HMs.
 site_url: https://manucruzleiva.github.io/mod-wiki/
-repo_url: https://github.com/manucruzleiva/mod-wiki
-repo_name: manucruzleiva/mod-wiki
+# Sin `repo_url` a proposito: Material lo dibuja en el header con el contador de estrellas y forks,
+# que no le dice nada a quien viene a leer como se instala un mod. El repo sigue enlazado donde
+# importa — el icono de GitHub del footer y la invitacion a mandar PRs en la portada.
 docs_dir: docs
 copyright: 'Mods by shiero — "If you make money, I make money" license'
 
@@ -25,7 +26,6 @@ theme:
   language: en
   icon:
     logo: material/map-marker-path
-    repo: fontawesome/brands/github
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
