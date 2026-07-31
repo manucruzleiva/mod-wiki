@@ -24,7 +24,7 @@ Activates an ability you have learned (or toggles a passive on/off).
 ```
 /dittohm list
 ```
-Shows all 34 abilities with your learn status, toggle state, and configured hunger/cooldown.
+Shows all 35 abilities with your learn status, toggle state, and configured hunger/cooldown.
 
 ```
 /dittohm select <ability>
@@ -45,7 +45,7 @@ Gives the HM Disc for the specified ability.
 ```
 /dittohm learn_all [player]
 ```
-Instantly learns **all 34 HMs** for a player (does **not** auto-enable toggles).
+Instantly learns **all 35 HMs** for a player (does **not** auto-enable toggles).
 
 ```
 /dittohm forget <ability> [player]

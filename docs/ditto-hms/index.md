@@ -5,7 +5,7 @@
 </div>
 
 **Cobblemon Ditto HMs** is a Minecraft 1.21.1 mod (Fabric & NeoForge) by **shiero** that brings
-Ditto's **34 Pokopia HM abilities** (24 active + 10 toggles) into the Cobblemon experience.
+Ditto's **35 Pokopia HM abilities** (25 active + 10 toggles) into the Cobblemon experience.
 
 ---
 

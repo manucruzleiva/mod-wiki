@@ -8,7 +8,7 @@ development goes on; drop into [the Discord](https://discord.gg/SwcwXcCN4k) to w
 ```mermaid
 timeline
     title Planned versions
-    1.2.0 : Big polish pass + HM Case wheel : New HMs — Stockpile, Substitute
+    1.2.0 : Big polish pass + HM Case wheel : New HM — Substitute
     1.3.0 : Trainer Ditto wandering NPC : New HMs — Lava Plume, Absorb
     1.4.0 : New HMs — Thief, U-turn, Charge
     1.5.0 : New HMs — Bounce, Destiny Bond, Snowcaped
@@ -25,7 +25,6 @@ Dig, Charm, Dive, Rock Climb, Glide and more), plus:
   active HM and toggles; the management screen stays too.
 - **Same-move teachers** *(optional)* — let any Pokémon that knows an HM's namesake move teach it.
 - **Spawn with an HM Case** — new players start with the Case in hand.
-- 🆕 **Stockpile** — drink up the water or lava you aim at (lava burns going down!).
 - 🆕 **Substitute** — leave a decoy copy of yourself for a few minutes.
 
 ## 1.3.0 — A mysterious visitor

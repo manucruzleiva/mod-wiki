@@ -1,5 +1,9 @@
 # Cobblemon Nuzlocke & Soul Link
 
+<div align="center">
+  <img src="assets/logo.png" alt="Cobblemon Nuzlocke & Soul Link" width="200"/>
+</div>
+
 A **Cobblemon add-on** that runs a full **Hardcore-Nuzlocke** ruleset on your world — and, if you
 play with friends, links your parties together so your fates are shared.
 

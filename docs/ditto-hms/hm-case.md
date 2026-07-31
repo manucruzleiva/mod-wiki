@@ -1,6 +1,6 @@
 # HM Case
 
-The **HM Case** is a crafteable item that consolidates all 34 learned HMs into a single hotbar slot.
+The **HM Case** is a crafteable item that consolidates all 35 learned HMs into a single hotbar slot.
 It replaces the need to hold individual HM Discs and provides a management GUI.
 
 ---
@@ -63,7 +63,7 @@ The GUI is a **6-row chest** with two clearly separated sections (no spacer/head
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│ [ 24 active HM slots — rows 0–2 ]                             │
+│ [ 25 active HM slots — rows 0–2 ]                             │
 │ ( empty divider band — no spacer items )                     │
 │ [ 10 toggle HM slots — rows 4–5 ]                            │
 └──────────────────────────────────────────────────────────────┘

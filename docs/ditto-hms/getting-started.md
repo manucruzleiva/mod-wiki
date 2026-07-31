@@ -101,7 +101,7 @@ The **HM Case** lets you manage all learned abilities from a single hotbar slot.
 
 In the GUI you can:
 
-- See all 34 HMs (grey glass = not yet learned, disc icon = learned)
+- See all 35 HMs (grey glass = not yet learned, disc icon = learned)
 - **Right-click** an **Active HM** to set it as the quick-use ability
 - **Right-click** a **Toggle HM** to enable or disable it
 - **Left-click + drag** an HM onto another slot in the same section to reorder them
