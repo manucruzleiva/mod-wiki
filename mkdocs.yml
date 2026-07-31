@@ -55,7 +55,9 @@ theme:
     - navigation.tracking
     - navigation.top
     - navigation.indexes
-    - navigation.footer
+    # Sin navigation.footer: los botones Anterior/Siguiente encadenan paginas que no se leen en
+    # orden — de "License" a "Hardcore Nuzlocke" no hay ninguna continuidad. El indice de la
+    # izquierda y el buscador ya cubren el moverse.
     - toc.follow
     - search.suggest
     - search.highlight
