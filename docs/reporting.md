@@ -7,19 +7,11 @@ replies in your thread with what it needs from you, and posts back there when it
 One page for all four mods: the process is identical, and the mod-specific detail is in the tabs
 below.
 
-```mermaid
-sequenceDiagram
-    participant You as 🧑 You
-    participant D as 💬 Discord
-    participant Bot as 🤖 Intake bot
-    participant Dev as 🛠️ shiero
-    You->>D: open a post in the mod's tickets thread + pick a tag
-    D->>Bot: the bot reads it within ~10 minutes
-    Bot->>Dev: files a tracked issue, labelled from your tag
-    Bot-->>You: replies in your thread with what it needs
-    Dev->>Dev: fixes it in a release
-    Bot-->>You: 🎉 posts back when the issue closes
-```
+1. **You** open a post in the mod's tickets thread and pick a tag.
+2. **The bot** reads it within ~10 minutes and files a tracked issue, labelled from your tag.
+3. **The bot replies in your thread** saying what it still needs from you, if anything.
+4. **shiero** fixes it in a release.
+5. **The bot posts back** in your thread when the issue closes. 🎉
 
 ## Pick the right tag
 

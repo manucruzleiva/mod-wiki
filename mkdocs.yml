@@ -171,3 +171,8 @@ nav:
 
 plugins:
   - search
+  # Material se baja mermaid de unpkg.com en CADA pagina con diagrama — casi todas aca — y son ~1 MB
+  # desde un tercero, sin version fija, o sea sin cache larga y a merced de que unpkg ande. `privacy`
+  # lo descarga en tiempo de build y lo sirve desde el propio sitio: mismo origen, cacheable, y de
+  # paso ningun lector pasa por un CDN ajeno.
+  - privacy

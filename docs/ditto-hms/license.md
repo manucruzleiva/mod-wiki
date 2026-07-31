@@ -5,18 +5,12 @@ Link, Picnic and Ditto HMs all carry the same `LICENSE` file, word for word — 
 the jar**, so you always have a copy. The short version: *if you make money, shiero makes money.*
 That file is the binding document; this page is the friendly summary.
 
-```mermaid
-flowchart TD
-    Q{How are you using<br/>Cobblemon Ditto HMs?} --> P[🎮 Personal / non-commercial]
-    Q --> R[📦 A FREE modpack]
-    Q --> V[🎥 Videos, streams, reviews]
-    Q --> C[💰 Anything that earns money]
-    P --> PF[✅ Free]
-    R --> RF[✅ Free — keep the license<br/>and attribution intact]
-    V --> VF[✅ Free — monetize away!<br/>credit the mod + link a project page]
-    C --> CF[🤝 Needs a written agreement first<br/>with an agreed revenue share]
-    CF --> CONTACT[Ask in the Discord<br/>BEFORE going commercial]
-```
+| What you are doing | Where you stand |
+|---|---|
+| 🎮 Playing — solo, or on a server that does not charge | ✅ **Free** |
+| 📦 Putting it in a **free** modpack | ✅ **Free** — keep the license and attribution intact |
+| 🎥 Videos, streams, reviews — **monetized included** | ✅ **Free** — credit the mod and link a project page |
+| 💰 Anything that earns money off the mod itself | 🤝 **Ask first** — a written agreement with a revenue share |
 
 ## 💬 One way to reach the author
 
