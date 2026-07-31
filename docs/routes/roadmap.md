@@ -2,11 +2,16 @@
 
 Where Routes is heading after 1.0. Everything below is tracked from
 [the Discord](https://discord.gg/SwcwXcCN4k) — say what you want first, or
-[suggest new ideas](reporting.md).
+[suggest new ideas](../reporting.md).
 
+<!-- Los colores van fijados a mano: `timeline` pinta sus cajas con la escala cScale de mermaid, que
+     NO sigue el tema de Material — quedaban pasteles con texto claro encima, ilegibles en modo
+     oscuro. Estos seis tonos tienen contraste >= 5:1 contra el blanco de las etiquetas y funcionan
+     sobre fondo claro y oscuro por igual. El `title` se saco: lo dibuja en un gris que se pierde en
+     los dos temas, y el H1 de la pagina ya dice lo mismo. -->
 ```mermaid
+%%{init:{"theme":"base","themeVariables":{"cScale0":"#0e6a4b","cScaleLabel0":"#ffffff","cScale1":"#12776b","cScaleLabel1":"#ffffff","cScale2":"#33459b","cScaleLabel2":"#ffffff","cScale3":"#7c3f97","cScaleLabel3":"#ffffff","cScale4":"#b1452c","cScaleLabel4":"#ffffff","cScale5":"#96600d","cScaleLabel5":"#ffffff","lineColor":"#8b949e","textColor":"#8b949e"}}}%%
 timeline
-    title The road ahead
     1.0 : Out of the testing phase
         : Geography-complete capture zones
         : Ring roads & named areas
@@ -49,4 +54,4 @@ timeline
 
 !!! tip "Something missing?"
     The roadmap grows from player feedback — the fastest way to shape it is
-    [reporting ideas](reporting.md) on the Discord or the tracker.
+    [reporting ideas](../reporting.md) on the Discord or the tracker.

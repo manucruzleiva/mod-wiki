@@ -25,7 +25,7 @@ These come up often enough to be worth listing, but none is committed:
 ## How things get here
 
 Every entry above started as a Discord message. The
-[Reporting Bugs & Features](reporting.md) page explains the (very short) process — and everyone
+[Reporting Bugs & Features](../reporting.md) page explains the (very short) process — and everyone
 whose idea ships gets thanked on the [Community Credits](credits.md) page.
 
 ---

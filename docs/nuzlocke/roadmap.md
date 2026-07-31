@@ -3,9 +3,11 @@
 Where Cobblemon Nuzlocke & Soul Link is heading. Plans can shift as development goes on — the
 fastest way to weigh in is [the Discord](https://discord.gg/SwcwXcCN4k).
 
+<!-- Colores fijados a mano: ver la nota en routes/roadmap.md. La escala cScale de mermaid no sigue
+     el tema de Material y en modo oscuro quedaba ilegible. -->
 ```mermaid
+%%{init:{"theme":"base","themeVariables":{"cScale0":"#0e6a4b","cScaleLabel0":"#ffffff","cScale1":"#12776b","cScaleLabel1":"#ffffff","cScale2":"#33459b","cScaleLabel2":"#ffffff","cScale3":"#7c3f97","cScaleLabel3":"#ffffff","cScale4":"#b1452c","cScaleLabel4":"#ffffff","cScale5":"#96600d","cScaleLabel5":"#ffffff","lineColor":"#8b949e","textColor":"#8b949e"}}}%%
 timeline
-    title Planned milestones
     1.0.0 : Ship as its own mod : Depends on Routes
     1.1.0 : Duplicates clause : Egg encounters : Defeated Catch tuning
     1.2.0 : Nuzlocke log v2 — every zone, sprites, nicknames

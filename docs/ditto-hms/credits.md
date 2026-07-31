@@ -25,4 +25,4 @@ _None yet — want to translate the mod into your language? Say so in
 
 ---
 
-*Want your name here? See [Reporting Bugs & Ideas](reporting.md).*
+*Want your name here? See [Reporting Bugs & Ideas](../reporting.md).*

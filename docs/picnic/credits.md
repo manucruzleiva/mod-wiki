@@ -9,4 +9,4 @@ feature in our [Discord](https://discord.gg/SwcwXcCN4k) — thank you! 💚
 
 ---
 
-*Want your name here? See [Reporting Bugs & Features](reporting.md).*
+*Want your name here? See [Reporting Bugs & Features](../reporting.md).*

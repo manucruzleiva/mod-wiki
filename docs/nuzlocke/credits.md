@@ -14,4 +14,4 @@ or suggested a feature in our [Discord](https://discord.gg/SwcwXcCN4k) — thank
 
 ---
 
-*Want your name here? See [Reporting Bugs & Ideas](reporting.md).*
+*Want your name here? See [Reporting Bugs & Ideas](../reporting.md).*

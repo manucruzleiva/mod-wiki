@@ -1,38 +1,70 @@
-# License
+# 📜 License
 
-Cobblemon Ditto HMs is **source-available with a revenue share** — the full terms live in the
-project's `LICENSE` file; ask in [the Discord](https://discord.gg/SwcwXcCN4k) if you need a copy.
-The short version:
+Cobblemon Ditto HMs ships under **one license shared by every mod shiero publishes**. Routes, Nuzlocke & Soul
+Link, Picnic and Ditto HMs all carry the same `LICENSE` file, word for word — and it ships **inside
+the jar**, so you always have a copy. The short version: *if you make money, shiero makes money.*
+That file is the binding document; this page is the friendly summary.
 
 ```mermaid
 flowchart TD
-    A{How are you using the mod?} --> B[Playing solo or on a\nnon-profit server]
-    A --> C[Making videos, streams,\nguides or reviews]
-    A --> D[Running a server or modpack\nthat makes money]
-    B --> E[✅ Free — enjoy!]
-    C --> F[✅ Free — monetization welcome.\nJust credit the mod and link\nan official page]
-    D --> G[🤝 Revenue share — contact shiero\nbefore monetizing]
+    Q{How are you using<br/>Cobblemon Ditto HMs?} --> P[🎮 Personal / non-commercial]
+    Q --> R[📦 A FREE modpack]
+    Q --> V[🎥 Videos, streams, reviews]
+    Q --> C[💰 Anything that earns money]
+    P --> PF[✅ Free]
+    R --> RF[✅ Free — keep the license<br/>and attribution intact]
+    V --> VF[✅ Free — monetize away!<br/>credit the mod + link a project page]
+    C --> CF[🤝 Needs a written agreement first<br/>with an agreed revenue share]
+    CF --> CONTACT[Ask in the Discord<br/>BEFORE going commercial]
 ```
 
-## Personal use — free
+## 💬 One way to reach the author
 
-Download, install and play — single-player or private, non-profit servers — with no restrictions,
-as long as authorship is respected.
+Everything the license asks you to arrange happens in **[the Discord](https://discord.gg/SwcwXcCN4k)**.
+There is no contact email — the server is the only channel, and it is where agreements get sorted
+out fastest.
 
-## Content creation — free, monetization welcome 🎥
+## 🎥 Creators: yes, and monetized is fine
 
-Videos, livestreams, screenshots, reviews and guides about the mod are **encouraged**, including
-monetized ones (ads, sponsorships, donations, memberships). The only condition: **credit the mod
-by name and link an official project page** — [Modrinth](https://modrinth.com/mod/cobblemon-ditto-hms),
-[CurseForge](https://www.curseforge.com/projects/1587850) or [this wiki](index.md).
+Make videos, stream it, review it, write guides — **all free, all encouraged**, including
+**monetized** content (ads, sponsorships, donations, memberships, even patron-exclusive series).
+No agreement, no revenue share. The only ask: **credit the mod and link an official page**
+([Modrinth](https://modrinth.com/mod/cobblemon-ditto-hms), [CurseForge](https://www.curseforge.com/projects/1587850) or this wiki) in your description. Ask in the Discord if you want branding art for thumbnails — go
+make it look good. 💛
 
-## Commercial servers & paid modpacks — revenue share 💼
+## ✅ Free: personal, non-commercial, and free modpacks
 
-*"If you make money, I make money."* Any server or modpack generating revenue (ranks, VIP,
-subscriptions, paid access…) while using the mod needs a revenue-sharing agreement — contact the
-author **before** monetizing.
+Use it, copy it, modify it, share it — free of charge. Redistributing it **for free**, including
+inside a free modpack, is explicitly allowed. Every copy and derivative has to keep the license
+file and **clear attribution** to the original project.
 
-## Redistribution — not allowed
+## 💰 Revenue-share: commercial use
 
-Do not re-upload the mod files to third-party sites or launchers. Download pages must point to
-[the official sources](index.md#downloads).
+Anything that makes money off the **software itself** needs a **written agreement with the author
+first**: selling the mod or derivatives, charging for access, downloads or hosting, bundling it in
+a **paid modpack, server, product or service**, paid ranks or perks tied to it, or monetized
+distribution. The agreement includes an agreed share of that revenue. (Content creation is exempt —
+see above.)
+
+Get in touch **before** any commercial use, in [the Discord](https://discord.gg/SwcwXcCN4k).
+
+## 🏷️ Attribution
+
+All copies and derivative works must credit the mod and its author, **shiero**, and link back to an
+official project page.
+
+## 🧩 Third-party assets
+
+Some models and textures shipped with these mods derive from other projects — **CobbleFurnies** and
+**Handcrafted**, in Cobblemon Picnic. Those assets stay under **their own original licenses**; this
+license covers only the original code and content authored by shiero.
+
+## ⚖️ No warranty
+
+The software is provided *as is*, without warranty of any kind, express or implied. The author is
+not liable for any damages arising from its use — see the `LICENSE` file for the exact terms.
+
+!!! tip "Not sure which side you're on?"
+    Playing on a private server with friends, or handing the pack to them for free: **free**.
+    Charging players, donations-for-perks tied to the mod, or a paid pack that includes it: **ask
+    in the Discord first** — agreements are friendly and quick, and the answer is usually yes.

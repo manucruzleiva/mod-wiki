@@ -102,14 +102,19 @@ markdown_extensions:
 # Every mod section follows the SAME spine, in this order:
 #
 #   index → Getting Started → (feature pages, mod-specific) → Commands → Configuration
-#         → Reporting Bugs & Ideas → Roadmap → Community Credits → License
+#         → Roadmap → Community Credits → License
 #
 # Only the feature-page block differs between mods. Labels are fixed too — it was
-# "Installation"/"Getting Started" and "World Creation & Config"/"Configuration" and
-# "Reporting Bugs & Ideas"/"...& Features" across sections, which made the sidebar read as four
-# unrelated sites. Keep a new mod's section to this shape.
+# "Installation"/"Getting Started" and "World Creation & Config"/"Configuration" across sections,
+# which made the sidebar read as four unrelated sites. Keep a new mod's section to this shape.
+#
+# "Report a bug" es UNA sola pagina, arriba, fuera de los mods: el proceso es idéntico para los
+# cuatro y tenerlo repetido garantizaba que divergieran — la copia de picnic todavía hablaba de los
+# canales #bugs y #features, que ya no existen. Lo específico de cada mod vive en pestañas dentro
+# de esa página.
 nav:
   - Home: index.md
+  - Report a bug: reporting.md
   - Routes:
       - routes/index.md
       - Getting Started: routes/getting-started.md
@@ -119,7 +124,6 @@ nav:
       - Gen2 Structures: routes/gen2-structures.md
       - Commands: routes/commands.md
       - Configuration: routes/configuration.md
-      - Reporting Bugs & Ideas: routes/reporting.md
       - Roadmap: routes/roadmap.md
       - Community Credits: routes/credits.md
       - License: routes/license.md
@@ -129,7 +133,6 @@ nav:
       - Soul Link (co-op): nuzlocke/soullock.md
       - Commands: nuzlocke/commands.md
       - Configuration: nuzlocke/configuration.md
-      - Reporting Bugs & Ideas: nuzlocke/reporting.md
       - Roadmap: nuzlocke/roadmap.md
       - Community Credits: nuzlocke/credits.md
       - License: nuzlocke/license.md
@@ -144,7 +147,6 @@ nav:
       - Commands: picnic/commands.md
       - Configuration: picnic/configuration.md
       - FAQ: picnic/faq.md
-      - Reporting Bugs & Ideas: picnic/reporting.md
       - Roadmap: picnic/roadmap.md
       - Community Credits: picnic/credits.md
       - License: picnic/license.md
@@ -156,7 +158,6 @@ nav:
       - HM Case: ditto-hms/hm-case.md
       - Commands: ditto-hms/commands.md
       - Configuration: ditto-hms/configuration.md
-      - Reporting Bugs & Ideas: ditto-hms/reporting.md
       - Roadmap: ditto-hms/roadmap.md
       - Changelog: ditto-hms/changelog.md
       - Community Credits: ditto-hms/credits.md
