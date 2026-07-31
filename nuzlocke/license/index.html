@@ -45,12 +45,6 @@
     
     
       
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
-      
     
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
@@ -1180,17 +1174,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#third-party-assets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🧩 Third-party assets
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#no-warranty" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2130,17 +2113,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#third-party-assets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🧩 Third-party assets
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#no-warranty" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2212,10 +2184,6 @@ see above.)</p>
 <h2 id="attribution">🏷️ Attribution<a class="headerlink" href="#attribution" title="Permanent link">&para;</a></h2>
 <p>All copies and derivative works must credit the mod and its author, <strong>shiero</strong>, and link back to an
 official project page.</p>
-<h2 id="third-party-assets">🧩 Third-party assets<a class="headerlink" href="#third-party-assets" title="Permanent link">&para;</a></h2>
-<p>Some models and textures shipped with these mods derive from other projects — <strong>CobbleFurnies</strong> and
-<strong>Handcrafted</strong>, in Cobblemon Picnic. Those assets stay under <strong>their own original licenses</strong>; this
-license covers only the original code and content authored by shiero.</p>
 <h2 id="no-warranty">⚖️ No warranty<a class="headerlink" href="#no-warranty" title="Permanent link">&para;</a></h2>
 <p>The software is provided <em>as is</em>, without warranty of any kind, express or implied. The author is
 not liable for any damages arising from its use — see the <code>LICENSE</code> file for the exact terms.</p>
@@ -2399,6 +2367,18 @@ in the Discord first</strong> — agreements are friendly and quick, and the ans
       }
       paint();
       if (typeof document$ !== 'undefined') { document$.subscribe(paint); }
+    })();
+  </script><script>
+    (function () {
+      function defer() {
+        var imgs = document.querySelectorAll('.md-content img');
+        for (var i = 1; i < imgs.length; i++) {
+          imgs[i].loading = 'lazy';
+          imgs[i].decoding = 'async';
+        }
+      }
+      defer();
+      if (typeof document$ !== 'undefined') { document$.subscribe(defer); }
     })();
   </script><script>
     (function () {
