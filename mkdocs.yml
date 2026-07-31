@@ -169,6 +169,12 @@ nav:
       - License: ditto-hms/license.md
   - 💛 Sponsor shiero: https://github.com/sponsors/manucruzleiva
 
+hooks:
+  # Reemplaza cada ```mermaid por su SVG ya renderizado, para no mandarle a cada lector 3,4 MB de
+  # Mermaid.js. Si un diagrama todavia no tiene SVG, deja el fence y el navegador lo dibuja como
+  # siempre: nunca rompe el build, solo avisa cual falta.
+  - hooks/prerender_mermaid.py
+
 plugins:
   - search
   # Material se baja mermaid de unpkg.com en CADA pagina con diagrama — casi todas aca — y son ~1 MB
