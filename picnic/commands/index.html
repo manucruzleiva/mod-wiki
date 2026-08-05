@@ -1411,33 +1411,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cobblemonpicnicstats" class="md-nav__link">
+  <a href="#picnic-the-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        /cobblemonpicnicstats
+        /picnic — the settings
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cobblemonpicnicconfig" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        /cobblemonpicnicconfig
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="/cobblemonpicnicconfig">
+    <nav class="md-nav" aria-label="/picnic — the settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#settings-you-can-set" class="md-nav__link">
+  <a href="#attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Settings you can set
+        Attributes
       
     </span>
   </a>
@@ -1446,6 +1435,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#picnic-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /picnic stats
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2031,33 +2031,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cobblemonpicnicstats" class="md-nav__link">
+  <a href="#picnic-the-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        /cobblemonpicnicstats
+        /picnic — the settings
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cobblemonpicnicconfig" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        /cobblemonpicnicconfig
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="/cobblemonpicnicconfig">
+    <nav class="md-nav" aria-label="/picnic — the settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#settings-you-can-set" class="md-nav__link">
+  <a href="#attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Settings you can set
+        Attributes
       
     </span>
   </a>
@@ -2066,6 +2055,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#picnic-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /picnic stats
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2087,36 +2087,40 @@
 
 
 <h1 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h1>
-<h2 id="cobblemonpicnicstats"><code>/cobblemonpicnicstats</code><a class="headerlink" href="#cobblemonpicnicstats" title="Permanent link">&para;</a></h2>
-<p>Available to <strong>everyone</strong>. Shows a summary of picnic activity:</p>
-<ul>
-<li>Total re-rolls, Pokémon spawned / despawned</li>
-<li><strong>Shinies</strong> found (with ratio), <strong>legendaries / mythicals</strong></li>
-<li>Snacks consumed, distinct species</li>
-<li><strong>Most common</strong> and <strong>rarest</strong> species</li>
-</ul>
-<div class="highlight"><pre><span></span><code>/cobblemonpicnicstats          # show the summary
-/cobblemonpicnicstats reset    # (operator) clear the aggregates
+<p>Everything lives under one command: <strong><code>/picnic</code></strong>.</p>
+<div class="highlight"><pre><span></span><code>/picnic                             # print every setting (anyone)
+/picnic &lt;attribute&gt; &lt;value&gt;         # change one setting (operator)
+/picnic &lt;attribute&gt; default         # put that one setting back to its default (operator)
+/picnic stats                       # picnic statistics (anyone)
+/picnic stats reset                 # clear the aggregates (operator)
+/picnic reload                      # re-read the config file from disk (operator)
+/picnic reset                       # restore every default (operator)
 </code></pre></div>
-<p>Statistics persist in <code>config/cobblemon_picnic_stats.json</code> (aggregates) and
-<code>config/cobblemon_picnic_events.jsonl</code> (a granular per-re-roll log).</p>
-<h2 id="cobblemonpicnicconfig"><code>/cobblemonpicnicconfig</code><a class="headerlink" href="#cobblemonpicnicconfig" title="Permanent link">&para;</a></h2>
-<p><strong>Operator only.</strong> Read and change settings live.</p>
-<div class="highlight"><pre><span></span><code>/cobblemonpicnicconfig get                  # print current settings
-/cobblemonpicnicconfig reload               # reload config file from disk
-/cobblemonpicnicconfig reset                # restore defaults
-/cobblemonpicnicconfig set &lt;param&gt; &lt;value&gt;  # change one setting
+<p><code>default</code> works on <strong>every</strong> attribute — you never have to look up what the shipped value was.</p>
+<h2 id="picnic-the-settings"><code>/picnic</code> — the settings<a class="headerlink" href="#picnic-the-settings" title="Permanent link">&para;</a></h2>
+<p>Open to <strong>everyone</strong>: knowing the shiny-aura multiplier and the re-roll cooldown you're playing under
+is part of playing. Changing anything needs <strong>operator</strong> rank.</p>
+<div class="highlight"><pre><span></span><code>/picnic auramultiplier 3          # a full table now triples shiny odds
+/picnic auramultiplier default    # back to ×2
+/picnic reroll false              # switch the spawn re-roll off entirely
+/picnic spawncap glamping 16      # per-tier settings take the tier in the middle
+/picnic spawncap glamping default
 </code></pre></div>
-<h3 id="settings-you-can-set">Settings you can <code>set</code><a class="headerlink" href="#settings-you-can-set" title="Permanent link">&para;</a></h3>
+<h3 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
+<th>Attribute</th>
 <th>Value</th>
 <th>What it does</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>reroll</code></td>
+<td>true/false</td>
+<td>Master switch for the <a href="../spawn-rerolling/">spawn re-roll</a> itself. <em>Default on.</em></td>
+</tr>
 <tr>
 <td><code>spawncap &lt;basic\|camping\|glamping\|diving&gt;</code></td>
 <td>int</td>
@@ -2138,29 +2142,24 @@
 <td>Chance per re-roll a party Pokémon teaches another a legal move. <em>Default 0.05. 0 disables.</em></td>
 </tr>
 <tr>
-<td><code>light</code></td>
-<td>0–15</td>
-<td>Light level emitted by the table.</td>
-</tr>
-<tr>
-<td><code>aurabase</code></td>
-<td>0..1</td>
-<td>Base shiny boost per occupied seat.</td>
-</tr>
-<tr>
-<td><code>auramax</code></td>
-<td>0..1</td>
-<td>Cap on the total shiny boost.</td>
-</tr>
-<tr>
 <td><code>shinyaura</code></td>
 <td>true/false</td>
 <td>Master switch for the <a href="../shiny-aura/">Shiny Aura</a>.</td>
 </tr>
 <tr>
+<td><code>auramultiplier</code></td>
+<td>1–100</td>
+<td>How many times better your shiny odds get at a <strong>full table</strong>. <em>Default 2 (double).</em></td>
+</tr>
+<tr>
+<td><code>light</code></td>
+<td>0–15</td>
+<td>Light level emitted by the table.</td>
+</tr>
+<tr>
 <td><code>deployonsit</code></td>
 <td>true/false</td>
-<td>Whether sitting deploys the seat behavior.</td>
+<td>Whether sitting deploys your party.</td>
 </tr>
 <tr>
 <td><code>actiondistance</code></td>
@@ -2240,10 +2239,28 @@
 want the re-roll to spare. <code>disableseatedaggro</code> is <strong>on by default</strong>: sit at a table and hostile mobs
 within <code>seatedrepelradius</code> blocks lose their target and run away, like a creeper fleeing a cat.</p>
 </div>
+<h2 id="picnic-stats"><code>/picnic stats</code><a class="headerlink" href="#picnic-stats" title="Permanent link">&para;</a></h2>
+<p>Available to <strong>everyone</strong>. Shows a summary of picnic activity:</p>
+<ul>
+<li>Total re-rolls, Pokémon spawned / despawned</li>
+<li><strong>Shinies</strong> found (with ratio), <strong>legendaries / mythicals</strong></li>
+<li>Snacks consumed, distinct species</li>
+<li><strong>Most common</strong> and <strong>rarest</strong> species</li>
+</ul>
+<div class="highlight"><pre><span></span><code>/picnic stats          # show the summary
+/picnic stats reset    # (operator) clear the aggregates
+</code></pre></div>
+<p>Statistics persist in <code>config/cobblemon_picnic_stats.json</code> (aggregates) and
+<code>config/cobblemon_picnic_events.jsonl</code> (a granular per-re-roll log).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Seat counts are <strong>not</strong> configurable — they're fixed per tier. On a dedicated server use these
 commands; the <a href="../configuration/">Mod Menu screen</a> only edits the local client config.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Renamed in 1.27.0</p>
+<p><code>/cobblemonpicnicconfig</code> and <code>/cobblemonpicnicstats</code> are gone, and there is no <code>set</code> keyword any
+more: <code>/cobblemonpicnicconfig set light 12</code> is now simply <code>/picnic light 12</code>.</p>
 </div>
 
 

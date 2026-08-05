@@ -1327,10 +1327,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-it-shows" class="md-nav__link">
+  <a href="#it-multiplies-it-never-replaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How it shows
+        It multiplies, it never replaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-you-can-see-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where you can see it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-the-boost-applies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When the boost applies
       
     </span>
   </a>
@@ -2025,10 +2047,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-it-shows" class="md-nav__link">
+  <a href="#it-multiplies-it-never-replaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How it shows
+        It multiplies, it never replaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-you-can-see-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where you can see it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-the-boost-applies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When the boost applies
       
     </span>
   </a>
@@ -2076,20 +2120,78 @@
 
 <h1 id="shiny-aura">Shiny Aura<a class="headerlink" href="#shiny-aura" title="Permanent link">&para;</a></h1>
 <p>Picnics are better with friends — and <strong>more friends means more shinies</strong>.</p>
-<p><strong>Sit on a table's benches</strong> and each occupied seat raises the <strong>shiny odds</strong> for everyone seated —
-for the table's next <strong>re-roll</strong> <em>and</em> for <strong>wild Pokémon that spawn naturally around you while you
-sit</strong>. The more people seated, the stronger the <strong>Shiny Aura</strong>.</p>
-<h2 id="how-it-shows">How it shows<a class="headerlink" href="#how-it-shows" title="Permanent link">&para;</a></h2>
+<p><strong>Sit on a table's benches</strong> and everyone seated gets their <strong>shiny odds multiplied</strong>. A <strong>full table
+doubles them</strong>. Every seat is worth exactly the same share of that bonus, so the ladder is easy to read:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Seated</th>
+<th style="text-align: center;">Your shiny odds</th>
+<th style="text-align: center;">At Cobblemon's default 1/8192</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><strong>×1.25</strong></td>
+<td style="text-align: center;">≈ 1 in 6554</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><strong>×1.50</strong></td>
+<td style="text-align: center;">≈ 1 in 5461</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><strong>×1.75</strong></td>
+<td style="text-align: center;">≈ 1 in 4681</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>×2.00</strong></td>
+<td style="text-align: center;">≈ 1 in 4096</td>
+</tr>
+</tbody>
+</table>
+<p>Each person is worth <strong>+0.25×</strong>, and a full table is <strong>×2.00</strong> — that's the one number you can change
+(see <a href="#tuning">Tuning</a> below); the rungs in between are always split evenly.</p>
+<div class="admonition note">
+<p class="admonition-title">A full table means four seats</p>
+<p>The ladder is measured against the <strong>largest</strong> table (4 seats: Glamping and Diving). A smaller table
+simply stops earlier — a <strong>Basic</strong> table seats 2, so it tops out at <strong>×1.50</strong>, and a <strong>Camping</strong>
+table (3 seats) at <strong>×1.75</strong>. Sometimes you need a bigger table, not more friends.</p>
+</div>
+<h2 id="it-multiplies-it-never-replaces">It multiplies, it never replaces<a class="headerlink" href="#it-multiplies-it-never-replaces" title="Permanent link">&para;</a></h2>
+<p>The aura is applied <strong>last</strong>, on top of whatever your odds already are — your server's shiny rate, a
+Shiny Charm, anything else. ×2.00 means "twice as likely as you were a moment ago", whatever that was.
+It can only ever <strong>improve</strong> your odds.</p>
+<h2 id="where-you-can-see-it">Where you can see it<a class="headerlink" href="#where-you-can-see-it" title="Permanent link">&para;</a></h2>
 <ul>
-<li>A <strong>ring of particles</strong> hovers <strong>above the table</strong> while the aura is active.</li>
-<li>Anyone in range gets a <strong>"Shiny Aura" buff</strong> in their HUD, with a numeric <strong>level</strong> that scales
-  with how many people are seated (it reads at least <strong>1</strong> at one seat).</li>
+<li>A <strong>ring of particles</strong> hovers above the table, denser the fuller the table is.</li>
+<li>
+<p>The <strong>HUD</strong> (top right) reads your live aura in two lines:</p>
+<div class="highlight"><pre><span></span><code>Shiny Aura ✦ ×1.50 odds
+    2/4 seated · 1 in 5461
+</code></pre></div>
+</li>
+<li>
+<p><strong>Chat</strong> tells you the moment it changes — when you sit down, and again each time someone joins or
+  leaves your table.</p>
+</li>
+<li>A <strong>"Shiny Aura" buff</strong> appears in your inventory; its level (I–IV) is how many of you are seated.</li>
 </ul>
+<p>All of those numbers are calculated <strong>on the server</strong>, so on multiplayer you're reading its real
+settings, not a guess from your own config file.</p>
+<h2 id="when-the-boost-applies">When the boost applies<a class="headerlink" href="#when-the-boost-applies" title="Permanent link">&para;</a></h2>
+<p>The aura stays live <strong>the whole time you're seated</strong> (it clears about a second after you stand up), and
+while it's live it improves <strong>any</strong> shiny roll Cobblemon attributes to you — the table's <strong>re-roll</strong>
+<em>and</em> the <strong>natural wild spawns</strong> that appear around you as you sit. Triggering a re-roll also grants
+the table's multiplier to whoever pressed it, for that roll.</p>
 <h2 id="how-to-sit">How to sit<a class="headerlink" href="#how-to-sit" title="Permanent link">&para;</a></h2>
 <p>Right-click a <strong>bench cell</strong> (a side seat) with an <strong>empty hand</strong> to sit. Sneak or move to stand up.
 Seats are invisible mounts — you'll snap neatly onto the bench.</p>
 <h2 id="tuning">Tuning<a class="headerlink" href="#tuning" title="Permanent link">&para;</a></h2>
-<p>The aura is fully configurable (see <strong><a href="../configuration/">Configuration</a></strong>):</p>
+<p>See <strong><a href="../configuration/">Configuration</a></strong>:</p>
 <table>
 <thead>
 <tr>
@@ -2099,28 +2201,17 @@ Seats are invisible mounts — you'll snap neatly onto the bench.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>shinyaura &lt;true\|false&gt;</code></td>
+<td><code>/picnic shinyaura &lt;true\|false&gt;</code></td>
 <td>Master on/off switch for the whole feature.</td>
 </tr>
 <tr>
-<td><code>aurabase &lt;0..1&gt;</code></td>
-<td>Base shiny boost contributed per occupied seat.</td>
-</tr>
-<tr>
-<td><code>auramax &lt;0..1&gt;</code></td>
-<td>Cap on the total boost, no matter how many are seated.</td>
+<td><code>/picnic auramultiplier &lt;1..100&gt;</code></td>
+<td>Shiny odds at a <strong>full table</strong>. Default <strong>2</strong> (double). <code>1</code> turns the aura off.</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">When the boost applies</p>
-<p>The Shiny Aura is a per-player <strong>odds floor</strong> that stays live <strong>the whole time you're seated</strong> at a
-table (it clears about a second after you stand up). While it's live it improves the odds of <strong>any</strong>
-shiny roll Cobblemon attributes to you — that means the table's <strong>re-roll</strong> <em>and</em> the <strong>natural wild
-spawns</strong> that appear around you as you sit. Triggering a re-roll also grants the floor to the player
-who triggered it for that roll. It only ever <strong>raises</strong> your odds — it never lowers a boost already
-coming from a Shiny Charm or a higher server shiny rate.</p>
-</div>
+<p>In <strong>Mod Menu</strong> it's the <strong>"Shiny odds at a full table (×)"</strong> field, which prints the resulting ladder
+right underneath as you type.</p>
 
 
 

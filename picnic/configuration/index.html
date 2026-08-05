@@ -2103,15 +2103,16 @@
 <p>Runtime settings live in:</p>
 <div class="highlight"><pre><span></span><code>config/cobblemon_picnic.json
 </code></pre></div>
-<p>Edit it with a text editor, then apply your changes with <code>/cobblemonpicnicconfig reload</code> (no restart
+<p>Edit it with a text editor, then apply your changes with <code>/picnic reload</code> (no restart
 needed). Statistics are stored separately in <code>config/cobblemon_picnic_stats.json</code> and
 <code>config/cobblemon_picnic_events.jsonl</code>.</p>
 <h2 id="in-game-commands">In-game commands<a class="headerlink" href="#in-game-commands" title="Permanent link">&para;</a></h2>
-<p>The fastest way to change a single value is the <a href="../commands/"><code>/cobblemonpicnicconfig</code></a> command —
-see the <a href="../commands/#settings-you-can-set">Commands</a> page for the full parameter list. Highlights:</p>
+<p>The fastest way to change a single value is <a href="../commands/"><code>/picnic &lt;attribute&gt; &lt;value&gt;</code></a> — or
+<code>/picnic &lt;attribute&gt; default</code> to put one back the way it shipped. See the
+<a href="../commands/#attributes">Commands</a> page for the full list. Highlights:</p>
 <ul>
-<li><strong>Spawns:</strong> <code>spawncap &lt;tier&gt;</code>, <code>fuelcost &lt;tier&gt;</code>, <code>rerollcooldown &lt;seconds&gt;</code></li>
-<li><strong>Shiny aura:</strong> <code>shinyaura</code>, <code>aurabase</code>, <code>auramax</code></li>
+<li><strong>Spawns:</strong> <code>reroll</code> (master on/off), <code>spawncap &lt;tier&gt;</code>, <code>fuelcost &lt;tier&gt;</code>, <code>rerollcooldown &lt;seconds&gt;</code></li>
+<li><strong>Shiny aura:</strong> <code>shinyaura</code>, <code>auramultiplier</code> (odds at a full table — default <code>2</code>, i.e. double)</li>
 <li><strong>Care:</strong> <code>washfriendship</code>, <code>slimeballfriendship</code>, <code>slimeballbreakchance</code></li>
 <li><strong>Party fun:</strong> <code>tmteachchance</code> (rare TM cross-teaching on re-roll)</li>
 <li><strong>Battle Seeker:</strong> <code>spawnappropriatelvltrainer</code>, <code>trainerlevelgap</code></li>
@@ -2126,7 +2127,7 @@ GUI.</p>
 <div class="admonition warning">
 <p class="admonition-title">Mod Menu edits the <em>local</em> config</p>
 <p>On a <strong>dedicated server</strong>, the Mod Menu screen only changes your client's file — use
-<code>/cobblemonpicnicconfig set ...</code> to change the server's settings for everyone.</p>
+<code>/picnic &lt;attribute&gt; &lt;value&gt;</code> to change the server's settings for everyone.</p>
 </div>
 <h2 id="defaults-reference">Defaults reference<a class="headerlink" href="#defaults-reference" title="Permanent link">&para;</a></h2>
 <table>
@@ -2171,7 +2172,14 @@ GUI.</p>
 </tbody>
 </table>
 <p>Other notable defaults: <strong>re-roll cooldown</strong> <code>5</code> s (per-table + per-player), <strong>party TM cross-teach
-chance</strong> <code>0.05</code> (5%).</p>
+chance</strong> <code>0.05</code> (5%), <strong>full-table shiny multiplier</strong> <code>2</code> (a full table doubles your shiny odds).</p>
+<div class="admonition tip">
+<p class="admonition-title">Picnic without the spawn manipulation</p>
+<p><code>reroll false</code> (or <strong>General → "Spawn re-roll enabled"</strong> in Mod Menu) switches the re-roll off
+entirely: right-clicking a table then spawns and despawns nothing, and costs no bread. Seats, the
+<a href="../shiny-aura/">Shiny Aura</a>, baskets, the <a href="../battle-seeker/">Battle Seeker</a> and the
+<a href="../interactions-and-items/">care interactions</a> all keep working.</p>
+</div>
 
 
 
