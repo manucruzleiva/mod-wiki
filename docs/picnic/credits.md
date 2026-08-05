@@ -6,6 +6,8 @@ feature in our [Discord](https://discord.gg/SwcwXcCN4k) — thank you! 💚
 ## Reporters
 
 - **xed3355** — reported 2 bugs 🐛 and suggested 2 features ✨
+- **kurosock** — reported 1 bug 🐛
+- **airierurchin** — reported 1 bug 🐛
 
 ---
 

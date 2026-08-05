@@ -48,7 +48,8 @@ battles.
 
 ## Get it
 
-- **Download:** [Modrinth](https://modrinth.com/mod/cobblemon-picnic) (Fabric & NeoForge) · CurseForge
+- **Download:** [Modrinth](https://modrinth.com/mod/cobblemon-picnic) (Fabric & NeoForge) ·
+  [CurseForge](https://www.curseforge.com/projects/1581251)
 - **Bugs & ideas:** report them in the community **Discord** — they're forwarded straight to the
   project's issue tracker.
 

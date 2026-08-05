@@ -11,8 +11,9 @@ what players ask for in [the Discord](https://discord.gg/SwcwXcCN4k).
 
 ## Queued
 
-- **Turn off re-rolls** — a config option (and a per-table toggle) for servers that want the
-  picnic table's social and care features without the spawn re-rolling. Requested in the Discord.
+- **A per-table re-roll toggle** — the server-wide switch is
+  [`/picnic reroll`](commands.md); this would let one table re-roll while another stays purely
+  social. Requested in the Discord.
 
 ## Under consideration
 
