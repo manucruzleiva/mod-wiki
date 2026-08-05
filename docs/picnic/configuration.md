@@ -11,17 +11,18 @@ Runtime settings live in:
 config/cobblemon_picnic.json
 ```
 
-Edit it with a text editor, then apply your changes with `/cobblemonpicnicconfig reload` (no restart
+Edit it with a text editor, then apply your changes with `/picnic reload` (no restart
 needed). Statistics are stored separately in `config/cobblemon_picnic_stats.json` and
 `config/cobblemon_picnic_events.jsonl`.
 
 ## In-game commands
 
-The fastest way to change a single value is the [`/cobblemonpicnicconfig`](commands.md) command —
-see the [Commands](commands.md#settings-you-can-set) page for the full parameter list. Highlights:
+The fastest way to change a single value is [`/picnic <attribute> <value>`](commands.md) — or
+`/picnic <attribute> default` to put one back the way it shipped. See the
+[Commands](commands.md#attributes) page for the full list. Highlights:
 
-- **Spawns:** `spawncap <tier>`, `fuelcost <tier>`, `rerollcooldown <seconds>`
-- **Shiny aura:** `shinyaura`, `aurabase`, `auramax`
+- **Spawns:** `reroll` (master on/off), `spawncap <tier>`, `fuelcost <tier>`, `rerollcooldown <seconds>`
+- **Shiny aura:** `shinyaura`, `auramultiplier` (odds at a full table — default `2`, i.e. double)
 - **Care:** `washfriendship`, `slimeballfriendship`, `slimeballbreakchance`
 - **Party fun:** `tmteachchance` (rare TM cross-teaching on re-roll)
 - **Battle Seeker:** `spawnappropriatelvltrainer`, `trainerlevelgap`
@@ -37,7 +38,7 @@ GUI.
 
 !!! warning "Mod Menu edits the *local* config"
     On a **dedicated server**, the Mod Menu screen only changes your client's file — use
-    `/cobblemonpicnicconfig set ...` to change the server's settings for everyone.
+    `/picnic <attribute> <value>` to change the server's settings for everyone.
 
 ## Defaults reference
 
@@ -49,4 +50,10 @@ GUI.
 | Diving | 12 | 3 | 64 | 4 |
 
 Other notable defaults: **re-roll cooldown** `5` s (per-table + per-player), **party TM cross-teach
-chance** `0.05` (5%).
+chance** `0.05` (5%), **full-table shiny multiplier** `2` (a full table doubles your shiny odds).
+
+!!! tip "Picnic without the spawn manipulation"
+    `reroll false` (or **General → "Spawn re-roll enabled"** in Mod Menu) switches the re-roll off
+    entirely: right-clicking a table then spawns and despawns nothing, and costs no bread. Seats, the
+    [Shiny Aura](shiny-aura.md), baskets, the [Battle Seeker](battle-seeker.md) and the
+    [care interactions](interactions-and-items.md) all keep working.

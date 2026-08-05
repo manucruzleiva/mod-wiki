@@ -1,46 +1,45 @@
 # Commands
 
-## `/cobblemonpicnicstats`
-
-Available to **everyone**. Shows a summary of picnic activity:
-
-- Total re-rolls, Pokémon spawned / despawned
-- **Shinies** found (with ratio), **legendaries / mythicals**
-- Snacks consumed, distinct species
-- **Most common** and **rarest** species
+Everything lives under one command: **`/picnic`**.
 
 ```
-/cobblemonpicnicstats          # show the summary
-/cobblemonpicnicstats reset    # (operator) clear the aggregates
+/picnic                             # print every setting (anyone)
+/picnic <attribute> <value>         # change one setting (operator)
+/picnic <attribute> default         # put that one setting back to its default (operator)
+/picnic stats                       # picnic statistics (anyone)
+/picnic stats reset                 # clear the aggregates (operator)
+/picnic reload                      # re-read the config file from disk (operator)
+/picnic reset                       # restore every default (operator)
 ```
 
-Statistics persist in `config/cobblemon_picnic_stats.json` (aggregates) and
-`config/cobblemon_picnic_events.jsonl` (a granular per-re-roll log).
+`default` works on **every** attribute — you never have to look up what the shipped value was.
 
-## `/cobblemonpicnicconfig`
+## `/picnic` — the settings
 
-**Operator only.** Read and change settings live.
+Open to **everyone**: knowing the shiny-aura multiplier and the re-roll cooldown you're playing under
+is part of playing. Changing anything needs **operator** rank.
 
 ```
-/cobblemonpicnicconfig get                  # print current settings
-/cobblemonpicnicconfig reload               # reload config file from disk
-/cobblemonpicnicconfig reset                # restore defaults
-/cobblemonpicnicconfig set <param> <value>  # change one setting
+/picnic auramultiplier 3          # a full table now triples shiny odds
+/picnic auramultiplier default    # back to ×2
+/picnic reroll false              # switch the spawn re-roll off entirely
+/picnic spawncap glamping 16      # per-tier settings take the tier in the middle
+/picnic spawncap glamping default
 ```
 
-### Settings you can `set`
+### Attributes
 
-| Parameter | Value | What it does |
+| Attribute | Value | What it does |
 |-----------|-------|--------------|
+| `reroll` | true/false | Master switch for the [spawn re-roll](spawn-rerolling.md) itself. *Default on.* |
 | `spawncap <basic\|camping\|glamping\|diving>` | int | Max Pokémon per re-roll for that tier. |
 | `fuelcost <tier>` | int | Bread consumed per re-roll for that tier (defaults **7 / 5 / 3 / 3**). |
 | `rerollcooldown` | 0–3600 | Seconds between re-rolls (per-table **and** per-player). *Default 5. 0 disables.* |
 | `tmteachchance` | 0..1 | Chance per re-roll a party Pokémon teaches another a legal move. *Default 0.05. 0 disables.* |
-| `light` | 0–15 | Light level emitted by the table. |
-| `aurabase` | 0..1 | Base shiny boost per occupied seat. |
-| `auramax` | 0..1 | Cap on the total shiny boost. |
 | `shinyaura` | true/false | Master switch for the [Shiny Aura](shiny-aura.md). |
-| `deployonsit` | true/false | Whether sitting deploys the seat behavior. |
+| `auramultiplier` | 1–100 | How many times better your shiny odds get at a **full table**. *Default 2 (double).* |
+| `light` | 0–15 | Light level emitted by the table. |
+| `deployonsit` | true/false | Whether sitting deploys your party. |
 | `actiondistance` | number | Interaction range for picnic actions. |
 | `washfriendship` | int | Friendship gained from [washing](interactions-and-items.md). |
 | `washrequirestable` | true/false | Require a nearby table to wash. |
@@ -61,6 +60,27 @@ Statistics persist in `config/cobblemon_picnic_stats.json` (aggregates) and
     want the re-roll to spare. `disableseatedaggro` is **on by default**: sit at a table and hostile mobs
     within `seatedrepelradius` blocks lose their target and run away, like a creeper fleeing a cat.
 
+## `/picnic stats`
+
+Available to **everyone**. Shows a summary of picnic activity:
+
+- Total re-rolls, Pokémon spawned / despawned
+- **Shinies** found (with ratio), **legendaries / mythicals**
+- Snacks consumed, distinct species
+- **Most common** and **rarest** species
+
+```
+/picnic stats          # show the summary
+/picnic stats reset    # (operator) clear the aggregates
+```
+
+Statistics persist in `config/cobblemon_picnic_stats.json` (aggregates) and
+`config/cobblemon_picnic_events.jsonl` (a granular per-re-roll log).
+
 !!! note
     Seat counts are **not** configurable — they're fixed per tier. On a dedicated server use these
     commands; the [Mod Menu screen](configuration.md) only edits the local client config.
+
+!!! warning "Renamed in 1.27.0"
+    `/cobblemonpicnicconfig` and `/cobblemonpicnicstats` are gone, and there is no `set` keyword any
+    more: `/cobblemonpicnicconfig set light 12` is now simply `/picnic light 12`.
