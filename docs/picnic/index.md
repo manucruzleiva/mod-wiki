@@ -59,5 +59,4 @@ New here? Start with **[Getting Started](getting-started.md)**.
 
 !!! quote "License"
     Custom — **"If you make money, I make money."** Free to use and share for free; commercial use
-    requires a revenue-share agreement with the author. Table/bench models & textures were adapted
-    from **CobbleFurnies** and **Handcrafted**.
+    requires a revenue-share agreement with the author.

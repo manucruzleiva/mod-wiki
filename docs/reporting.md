@@ -35,8 +35,7 @@ thing worth getting right.
 
 !!! example "A report that gets fixed fast"
     > Placing a picnic table underwater near coral crashes the client. MC 1.21.1, Cobblemon 1.7.3,
-    > Picnic 1.26.0, Fabric. Happens every time; crash report attached. Only other furniture mod is
-    > Handcrafted.
+    > Picnic 1.26.0, Fabric. Happens every time; crash report attached.
 
 ## Extra detail, per mod
 
@@ -69,7 +68,7 @@ thing worth getting right.
     - Whether it was the **re-roll**, the **social** side (benches, shiny aura, care) or the
       **trainer battles**.
     - What was around the table: biome, other spawners, and whether a modpack tuned the spawn rules.
-    - For furniture or model issues, whether **Handcrafted** or **CobbleFurnies** are installed.
+    - For furniture or model issues, which other furniture mods are installed.
 
 === "Ditto HMs"
 
