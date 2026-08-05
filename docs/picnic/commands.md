@@ -20,7 +20,7 @@ Open to **everyone**: knowing the shiny-aura multiplier and the re-roll cooldown
 is part of playing. Changing anything needs **operator** rank.
 
 ```
-/picnic auramultiplier 3          # a full table now triples shiny odds
+/picnic auramultiplier 3          # a full table triples shiny odds
 /picnic auramultiplier default    # back to ×2
 /picnic reroll false              # switch the spawn re-roll off entirely
 /picnic spawncap glamping 16      # per-tier settings take the tier in the middle
@@ -80,7 +80,3 @@ Statistics persist in `config/cobblemon_picnic_stats.json` (aggregates) and
 !!! note
     Seat counts are **not** configurable — they're fixed per tier. On a dedicated server use these
     commands; the [Mod Menu screen](configuration.md) only edits the local client config.
-
-!!! warning "Renamed in 1.27.0"
-    `/cobblemonpicnicconfig` and `/cobblemonpicnicstats` are gone, and there is no `set` keyword any
-    more: `/cobblemonpicnicconfig set light 12` is now simply `/picnic light 12`.

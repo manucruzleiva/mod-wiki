@@ -12,10 +12,10 @@ That file is the binding document; this page is the friendly summary.
 | 🎥 Videos, streams, reviews — **monetized included** | ✅ **Free** — credit the mod and link a project page |
 | 💰 Anything that earns money off the mod itself | 🤝 **Ask first** — a written agreement with a revenue share |
 
-!!! note "This mod used to be stricter — it is not any more"
-    Cobblemon Picnic once counted monetized videos and mod-driven donations as commercial use. The
-    unified license drops that: **content creation is free here too**, on the same terms as the
-    other mods.
+!!! tip "Monetized content counts as free use"
+    Monetized videos and donations driven by your content are **not** commercial use of the mod —
+    content creation is free here, on the same terms as every other shiero mod.
+
 ## 💬 One way to reach the author
 
 Everything the license asks you to arrange happens in **[the Discord](https://discord.gg/SwcwXcCN4k)**.
