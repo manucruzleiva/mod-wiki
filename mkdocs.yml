@@ -123,7 +123,6 @@ nav:
       - Getting Started: routes/getting-started.md
       - Dynamic Routes: routes/routes.md
       - Map Integration: routes/map-integration.md
-      - Items & Recipes: routes/items.md
       - Commands: routes/commands.md
       - Configuration: routes/configuration.md
       - Roadmap: routes/roadmap.md
@@ -133,6 +132,7 @@ nav:
       - nuzlocke/index.md
       - Hardcore Nuzlocke: nuzlocke/nuzlocke.md
       - Soul Link (co-op): nuzlocke/soul-link.md
+      - Items & Recipes: nuzlocke/items.md
       - Commands: nuzlocke/commands.md
       - Configuration: nuzlocke/configuration.md
       - Roadmap: nuzlocke/roadmap.md

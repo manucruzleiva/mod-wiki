@@ -72,17 +72,18 @@ connections. The escape hatch for places without a structure tag — player buil
 structures, anything.
 
 ### `rename <name>` — 🛡️
-Renames the **nearest town within 160 blocks**. The new name shows in arrival banners, the Escape
-Rope message and route endpoints; existing map waypoints refresh on rejoin.
+Renames the **nearest town within 160 blocks**. The new name shows in arrival banners and route
+endpoints; existing map waypoints refresh on rejoin.
 
 ### `tp <town>` — 🛡️
-Teleports you to a **named** town (tab-completion suggests every real name), landing on the same
-safe spot the Escape Rope uses. Wrong name? It points you at `/routes list cities`.
+Teleports you to a **named** town (tab-completion suggests every real name), landing on a safe, dry
+column — the same spot-finder that places a new world's spawn. Wrong name? It points you at
+`/routes list cities`.
 
 ### `weave [loops]` — 🛡️
 Runs the **ring-road pass right now**: up to `loops` (default 4, max 16) direct connections are
 queued between towns that are close on the map but far apart by road. Every loop that completes
-**encloses a new named AREA** — this is the fastest way to grow your capture zones.
+**encloses a new named AREA** — this is the fastest way to fill your map with them.
 
 ### `repaint` — 🛡️
 Re-broadcasts the chunk-paint geometry to every online player, forcing the Xaero overlays to

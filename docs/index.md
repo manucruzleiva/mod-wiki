@@ -68,7 +68,7 @@ hands. Documentation for all of them lives here.
 
     [Read the rules →](nuzlocke/nuzlocke.md)
 
-    <span class="badge badge--soon">Not released yet</span> <span class="badge">Requires Routes</span>
+    <span class="badge badge--primary">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">Requires Routes</span>
 
 </div>
 

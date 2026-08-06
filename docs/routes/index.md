@@ -38,13 +38,12 @@ flowchart LR
   seek flat ground, stay off the coast, tunnel mineshaft-style through mountains, and get names like
   *Route 3: Steep Forest Pass*.
 - 🎮 **[Hardcore Nuzlocke](../nuzlocke/nuzlocke.md)** and ❤️‍🔥 **[Soul Link](../nuzlocke/soul-link.md)**:
-  per-zone encounter lock, permadeath and linked co-op runs. These belong to the
-  **[Nuzlocke & Soul Link](../nuzlocke/index.md)** add-on — which ships inside this jar for now, so
-  you get them either way. The zones they lock onto are the routes, areas and towns generated here.
+  per-zone encounter lock, permadeath and linked co-op runs. Those live in the separate
+  **[Nuzlocke & Soul Link](../nuzlocke/index.md)** add-on, along with the road trainers, the gyms
+  beside towns and the [Escape Rope](../nuzlocke/items.md). The zones they lock onto are the routes,
+  areas and towns generated here.
 - 🧭 **[Map integration](map-integration.md)** (optional): Waystones city nodes plus Xaero's
   waypoints, route trails and chunk painting.
-- 🧗 **[Escape Rope](items.md)**: a craftable one-tap trip back to the nearest known town — works
-  with or without Waystones.
 - 🧩 **[World-creation tabs](configuration.md)**: dedicated **NUZLOCKE** and **ROUTES** tabs on the
   create-world screen — every rule set up-front, saved per world.
 

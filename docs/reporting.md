@@ -54,14 +54,13 @@ thing worth getting right.
     - **Where you were**: the zone name the mod showed you.
     - For Soul Link: **how many players** were linked, and what each was doing at the time.
 
+    - Your **Routes version** as well as the Nuzlocke one — this mod is an add-on and the two move
+      together.
+
     !!! tip "Zone problems are usually Routes problems"
         "One catch per zone" is defined against Routes' zone model — the routes, areas and towns it
         generates **are** the capture zones. If the *zone itself* looks wrong (missing, badly shaped,
         oddly named), that is a Routes report, not a Nuzlocke one.
-
-    !!! warning "Not released yet"
-        The Nuzlocke and Soul Link rules currently ship **inside Routes**. Until the split lands,
-        report them in the **Routes** tickets thread and mention it is about the Nuzlocke ruleset.
 
 === "Picnic"
 
