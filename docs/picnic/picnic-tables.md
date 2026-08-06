@@ -38,7 +38,7 @@ example.
     color's Table (*White Table*, *Red Table*, …).
 
     <div class="cr-scroll">
-    <div class="cr-craft" title="3x Red Wool + 2x Oak Planks -> 1x Red Table">
+    <div class="cr-craft" title="3× Red Wool + 2× Oak Planks → 1× Red Table">
       <div class="cr-grid cr-grid--2row">
         <div class="cr-slot"><img src="../../assets/items/white_wool.png" alt="Wool"></div>
         <div class="cr-slot"><img src="../../assets/items/white_wool.png" alt="Wool"></div>
@@ -64,7 +64,7 @@ example.
     jungle, acacia, dark oak, mangrove, cherry, bamboo, crimson and warped.
 
     <div class="cr-scroll">
-    <div class="cr-craft" title="3x Oak Slab + 2x Oak Planks -> 2x Oak Dining Bench">
+    <div class="cr-craft" title="3× Oak Slab + 2× Oak Planks → 2× Oak Dining Bench">
       <div class="cr-grid cr-grid--2row">
         <div class="cr-slot"><img src="../../assets/items/oak_slab.png" alt="Oak Slab"></div>
         <div class="cr-slot"><img src="../../assets/items/oak_slab.png" alt="Oak Slab"></div>
@@ -90,7 +90,7 @@ example.
     black, blue, green, pink, red and yellow.
 
     <div class="cr-scroll">
-    <div class="cr-craft" title="2x Red Apricorn + 2x Apricorn Planks -> 1x Red Picnic Basket">
+    <div class="cr-craft" title="2× Red Apricorn + 2× Apricorn Planks → 1× Red Picnic Basket">
       <div class="cr-grid cr-grid--2row">
         <div class="cr-slot"><img src="../../assets/items/red_apricorn.png" alt="Apricorn"></div>
         <div class="cr-slot"><img src="../../assets/items/red_apricorn.png" alt="Apricorn"></div>
@@ -116,7 +116,7 @@ example.
 ### 2. The Basic Picnic Table
 
 <div class="cr-scroll">
-<div class="cr-craft" title="Picnic Basket + Nether Star + 2x Table + Campfire Pot + 2x Dining Bench + Campfire -> Basic Picnic Table">
+<div class="cr-craft" title="Picnic Basket + Nether Star + 2× Table + Campfire Pot + 2× Dining Bench + Campfire → Basic Picnic Table">
   <div class="cr-grid">
     <div class="cr-slot"><img src="../../assets/items/red_picnic_basket.png" alt="Picnic Basket"></div>
     <div class="cr-slot"></div>
@@ -156,7 +156,7 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 === "Camping"
 
     <div class="cr-scroll">
-    <div class="cr-craft" title="Shapeless: Basic Picnic Table + Diamond + Dining Bench -> Camping Picnic Table">
+    <div class="cr-craft" title="Shapeless: Basic Picnic Table + Diamond + Dining Bench → Camping Picnic Table">
       <div class="cr-grid cr-grid--2row">
         <div class="cr-slot"><img src="../../assets/items/picnic_table.png" alt="Basic Picnic Table"></div>
         <div class="cr-slot"><img src="../../assets/items/diamond.png" alt="Diamond"></div>
@@ -178,7 +178,7 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 === "Glamping"
 
     <div class="cr-scroll">
-    <div class="cr-craft" title="Shapeless: Camping Picnic Table + Netherite Ingot + Dining Bench -> Glamping Table">
+    <div class="cr-craft" title="Shapeless: Camping Picnic Table + Netherite Ingot + Dining Bench → Glamping Table">
       <div class="cr-grid cr-grid--2row">
         <div class="cr-slot"><img src="../../assets/items/camping_picnic_table.png" alt="Camping Picnic Table"></div>
         <div class="cr-slot"><img src="../../assets/items/netherite_ingot.png" alt="Netherite Ingot"></div>
@@ -200,7 +200,7 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 === "Diving"
 
     <div class="cr-scroll">
-    <div class="cr-craft" title="Shapeless: Glamping Table + Heart of the Sea -> Diving Picnic Table">
+    <div class="cr-craft" title="Shapeless: Glamping Table + Heart of the Sea → Diving Picnic Table">
       <div class="cr-grid cr-grid--2row">
         <div class="cr-slot"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
         <div class="cr-slot"><img src="../../assets/items/heart_of_the_sea.png" alt="Heart of the Sea"></div>

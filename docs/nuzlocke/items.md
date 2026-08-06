@@ -27,7 +27,7 @@ it works whether or not you run the Waystones mod.
 A **shapeless** recipe — drop the ingredients anywhere in the crafting grid:
 
 <div class="cr-scroll">
-<div class="cr-craft" title="Shapeless: 2x String + 1x Ender Pearl -> 2x Escape Rope">
+<div class="cr-craft" title="Shapeless: 2× String + 1× Ender Pearl → 2× Escape Rope">
   <div class="cr-grid">
     <div class="cr-slot"><img src="../../assets/items/string.png" alt="String"></div>
     <div class="cr-slot"><img src="../../assets/items/string.png" alt="String"></div>
