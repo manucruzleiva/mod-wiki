@@ -53,5 +53,5 @@ when a world wasn't configured through the tabs. The map-paint intensity also ha
 
 ## Commands
 
-The root is `/routes` (the old `/cobblemonroutes …` still works everywhere). The full manual — every
+The root is `/routes`; `/cobblemonroutes …` is accepted as an alias. The full manual — every
 command, argument, permission and behaviour — lives on [the Commands page](commands.md).

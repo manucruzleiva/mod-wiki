@@ -6,12 +6,12 @@
 
 # Routes
 
-Turn any Cobblemon world into a classic-style Pokémon region: **physical roads generated during
-worldgen** that connect its cities and structures, named capture zones, and map integration that
-ties it together. Works with any Cobblemon setup, and connects the gyms of packs like COBBLEVERSE
-when they are present.
+Give your world a road network: **physical roads generated during worldgen** that connect its towns
+and structures, named routes and areas, and map integration that ties it together. Roads are graded,
+bridged and tunnelled to the terrain they cross, and every settlement they reach is one the game
+really built.
 
-<span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.7.3</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
+<span class="badge">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
 
 <div class="hero-actions" markdown>
 [Get started](getting-started.md){ .md-button }
@@ -23,29 +23,25 @@ when they are present.
 
 ```mermaid
 flowchart LR
-    W[🌍 Your Cobblemon world] --> R[🗺️ Dynamic Routes<br/>roads, tunnels, signs]
-    W --> N[🎮 Hardcore Nuzlocke<br/>encounter lock · permadeath]
+    W[🌍 Your world] --> R[🗺️ Dynamic Routes<br/>roads, bridges, tunnels, signs]
     R --> M[🧭 Map Integration<br/>waypoints · trails · chunk paint]
-    N --> S[❤️‍🔥 Soul Link co-op<br/>linked runs with friends]
-    M --> RPG[✨ A real Pokémon region]
-    S --> RPG
-    R --> RPG
+    R --> Z[📍 Named routes & areas<br/>towns, roads, regions]
+    M --> RPG[✨ A world you can travel]
+    Z --> RPG
 ```
 
 ## Highlights
 
-- 🗺️ **[Dynamic routes](routes.md)** between cities and structures, fully part of worldgen — roads
-  seek flat ground, stay off the coast, tunnel mineshaft-style through mountains, and get names like
-  *Route 3: Steep Forest Pass*.
-- 🎮 **[Hardcore Nuzlocke](../nuzlocke/nuzlocke.md)** and ❤️‍🔥 **[Soul Link](../nuzlocke/soul-link.md)**:
-  per-zone encounter lock, permadeath and linked co-op runs. Those live in the separate
-  **[Nuzlocke & Soul Link](../nuzlocke/index.md)** add-on, along with the road trainers, the gyms
-  beside towns and the [Escape Rope](../nuzlocke/items.md). The zones they lock onto are the routes,
-  areas and towns generated here.
-- 🧭 **[Map integration](map-integration.md)** (optional): Waystones city nodes plus Xaero's
+- 🗺️ **[Dynamic routes](routes.md)** between towns and structures, fully part of worldgen — roads are
+  graded to the land, bridge the water, bore through what they cannot climb, share a trunk where they
+  run together, and get names like *Route 3: Steep Forest Pass*.
+- 🧭 **[Map integration](map-integration.md)** (optional): Waystones town nodes plus Xaero's
   waypoints, route trails and chunk painting.
-- 🧩 **[World-creation tabs](configuration.md)**: dedicated **NUZLOCKE** and **ROUTES** tabs on the
-  create-world screen — every rule set up-front, saved per world.
+- 🧩 **[World-creation tab](configuration.md)**: a dedicated **ROUTES** tab on the create-world
+  screen — every rule set up-front, saved per world.
+- 🎮 Playing a Pokémon world? **[Cobblemon Nuzlocke & Soul Link](../nuzlocke/index.md)** is a separate
+  add-on that builds on this one: it locks encounters to the routes, areas and towns generated here,
+  and adds the road trainers and the gyms beside towns.
 
 ## Get it
 
