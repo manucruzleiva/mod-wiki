@@ -476,3 +476,125 @@ body {
     font-size: 2.3rem;
   }
 }
+
+/* ── Crafting grids ───────────────────────────────────────────────────────
+   THE house style for every recipe on this wiki. Any page that documents how
+   an item is made draws it as a Minecraft crafting bench — the 3x3 of sunken
+   slots, the arrow, the outlined result with its stack count — followed by an
+   ingredient table that names each icon. A recipe written only as prose or as
+   a markdown table is a regression; readers scan the grid, they don't parse a
+   sentence.
+
+   The rules that keep the grids one system:
+     - Icons come from `docs/assets/items/`, ONE shared library for every mod,
+       referenced as `../../assets/items/<item>.png` from a `docs/<mod>/<page>.md`.
+       Never a per-mod copy: diamond.png and the apricorns were duplicated in
+       three of them.
+     - Every ingredient needs a real icon. If a block's inventory icon is a 3D
+       model render with no flat texture behind it, crop a representative
+       swatch from its block atlas rather than leaving the slot empty.
+     - Two ingredients that share a texture (planks and their slab) must not
+       render as identical squares — oak_slab.png is the planks texture at half
+       height for exactly that reason.
+     - Keep the ingredient table under the grid. It carries the exact names and
+       amounts, and it's what a screen reader gets.
+
+   Palette is the game's, not the site's, on purpose: a crafting bench that
+   followed the wiki's green would stop reading as a crafting bench. It stays
+   identical in light and dark for the same reason.
+   ------------------------------------------------------------------------- */
+
+.cr-craft {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: #c6c6c6;
+  border: 3px solid;
+  border-color: #ffffff #555555 #555555 #ffffff;
+  border-radius: 4px;
+  padding: 14px;
+  margin: 8px 0;
+  max-width: 100%;
+}
+
+.cr-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 44px);
+  grid-template-rows: repeat(3, 44px);
+  gap: 4px;
+}
+
+/* A recipe that never uses the bottom row (a 3x2 like the tables and benches)
+   declares .cr-grid--2row so the bench doesn't carry an empty strip. */
+.cr-grid--2row {
+  grid-template-rows: repeat(2, 44px);
+}
+
+.cr-slot {
+  width: 44px;
+  height: 44px;
+  background: #8b8b8b;
+  border: 2px solid;
+  border-color: #373737 #ffffff #ffffff #373737;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cr-slot img,
+.cr-result img,
+.cr-inline {
+  image-rendering: pixelated;
+}
+
+.cr-slot img {
+  width: 32px;
+  height: 32px;
+}
+
+.cr-arrow {
+  font-size: 30px;
+  color: #555555;
+  font-weight: bold;
+}
+
+.cr-result {
+  width: 58px;
+  height: 58px;
+  background: #8b8b8b;
+  border: 2px solid;
+  border-color: #373737 #ffffff #ffffff #373737;
+  outline: 3px solid #a0a0a0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cr-result img {
+  width: 40px;
+  height: 40px;
+}
+
+.cr-count {
+  position: absolute;
+  right: 2px;
+  bottom: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #3f3f3f;
+}
+
+.cr-inline {
+  width: 20px;
+  height: 20px;
+  vertical-align: text-bottom;
+}
+
+/* A bench is 3 slots + arrow + result ~= 230px; below that it scrolls inside
+   its own box rather than pushing the page sideways. */
+.cr-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}

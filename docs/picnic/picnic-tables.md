@@ -29,58 +29,119 @@ A Picnic Table is built in two steps: craft the **three components**, then assem
 
 ### 1. The components
 
+Each one comes in every color or wood the table can be built from — the grids below show one
+example.
+
 === "Table"
 
-    The tablecloth piece — **3 wool + 2 oak planks**. The wool's color is the table's color, so
-    there is one for each of the **16 dye colors** (*White Table*, *Red Table*, …).
+    The tablecloth piece. Any of the **16 dye colors** of wool, over **oak planks**, gives that
+    color's Table (*White Table*, *Red Table*, …).
 
-    | Left | Middle | Right |
-    |:--:|:--:|:--:|
-    | Wool | Wool | Wool |
-    | Oak Planks | *(empty)* | Oak Planks |
+    <div class="cr-scroll">
+    <div class="cr-craft" title="3x Red Wool + 2x Oak Planks -> 1x Red Table">
+      <div class="cr-grid cr-grid--2row">
+        <div class="cr-slot"><img src="../../assets/items/white_wool.png" alt="Wool"></div>
+        <div class="cr-slot"><img src="../../assets/items/white_wool.png" alt="Wool"></div>
+        <div class="cr-slot"><img src="../../assets/items/white_wool.png" alt="Wool"></div>
+        <div class="cr-slot"><img src="../../assets/items/oak_planks.png" alt="Oak Planks"></div>
+        <div class="cr-slot"></div>
+        <div class="cr-slot"><img src="../../assets/items/oak_planks.png" alt="Oak Planks"></div>
+      </div>
+      <div class="cr-arrow">➜</div>
+      <div class="cr-result"><img src="../../assets/items/table_red.png" alt="Table"></div>
+    </div>
+    </div>
 
-    **→ 1 Table** of that color.
+    | Ingredient | Amount |
+    | --- | :---: |
+    | <img class="cr-inline" src="../../assets/items/white_wool.png" alt=""> Wool — any of the 16 colors | 3 |
+    | <img class="cr-inline" src="../../assets/items/oak_planks.png" alt=""> Oak Planks | 2 |
+    | **→ <img class="cr-inline" src="../../assets/items/table_red.png" alt=""> Table** in that color | **1** |
 
 === "Dining Bench"
 
-    The seat — **3 slabs + 2 planks of the same wood**. Available in **11 woods**: oak, spruce,
-    birch, jungle, acacia, dark oak, mangrove, cherry, bamboo, crimson and warped.
+    The seat. Slabs and planks of the **same wood** — available in **11 woods**: oak, spruce, birch,
+    jungle, acacia, dark oak, mangrove, cherry, bamboo, crimson and warped.
 
-    | Left | Middle | Right |
-    |:--:|:--:|:--:|
-    | Slab | Slab | Slab |
-    | Planks | *(empty)* | Planks |
+    <div class="cr-scroll">
+    <div class="cr-craft" title="3x Oak Slab + 2x Oak Planks -> 2x Oak Dining Bench">
+      <div class="cr-grid cr-grid--2row">
+        <div class="cr-slot"><img src="../../assets/items/oak_slab.png" alt="Oak Slab"></div>
+        <div class="cr-slot"><img src="../../assets/items/oak_slab.png" alt="Oak Slab"></div>
+        <div class="cr-slot"><img src="../../assets/items/oak_slab.png" alt="Oak Slab"></div>
+        <div class="cr-slot"><img src="../../assets/items/oak_planks.png" alt="Oak Planks"></div>
+        <div class="cr-slot"></div>
+        <div class="cr-slot"><img src="../../assets/items/oak_planks.png" alt="Oak Planks"></div>
+      </div>
+      <div class="cr-arrow">➜</div>
+      <div class="cr-result"><img src="../../assets/items/dining_bench_oak.png" alt="Oak Dining Bench"><span class="cr-count">2</span></div>
+    </div>
+    </div>
 
-    **→ 2 Dining Benches** of that wood.
+    | Ingredient | Amount |
+    | --- | :---: |
+    | <img class="cr-inline" src="../../assets/items/oak_slab.png" alt=""> Slab — any of the 11 woods | 3 |
+    | <img class="cr-inline" src="../../assets/items/oak_planks.png" alt=""> Planks of the same wood | 2 |
+    | **→ <img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench** in that wood | **2** |
 
 === "Picnic Basket"
 
-    **2 apricorns + 2 apricorn planks**, in a 2×2 corner of the grid. One per apricorn color —
-    white, black, blue, green, pink, red and yellow.
+    Apricorns over apricorn planks, in a 2×2 corner of the grid. One per apricorn color — white,
+    black, blue, green, pink, red and yellow.
 
-    | Left | Right |
-    |:--:|:--:|
-    | Apricorn | Apricorn |
-    | Apricorn Planks | Apricorn Planks |
+    <div class="cr-scroll">
+    <div class="cr-craft" title="2x Red Apricorn + 2x Apricorn Planks -> 1x Red Picnic Basket">
+      <div class="cr-grid cr-grid--2row">
+        <div class="cr-slot"><img src="../../assets/items/red_apricorn.png" alt="Apricorn"></div>
+        <div class="cr-slot"><img src="../../assets/items/red_apricorn.png" alt="Apricorn"></div>
+        <div class="cr-slot"></div>
+        <div class="cr-slot"><img src="../../assets/items/apricorn_planks.png" alt="Apricorn Planks"></div>
+        <div class="cr-slot"><img src="../../assets/items/apricorn_planks.png" alt="Apricorn Planks"></div>
+        <div class="cr-slot"></div>
+      </div>
+      <div class="cr-arrow">➜</div>
+      <div class="cr-result"><img src="../../assets/items/red_picnic_basket.png" alt="Red Picnic Basket"></div>
+    </div>
+    </div>
 
-    **→ 1 Picnic Basket** of that color. It's also useful on its own as a
-    **[bread store](interactions-and-items.md#picnic-baskets)**.
+    | Ingredient | Amount |
+    | --- | :---: |
+    | <img class="cr-inline" src="../../assets/items/red_apricorn.png" alt=""> Apricorn — any of the 7 colors | 2 |
+    | <img class="cr-inline" src="../../assets/items/apricorn_planks.png" alt=""> Apricorn Planks | 2 |
+    | **→ <img class="cr-inline" src="../../assets/items/red_picnic_basket.png" alt=""> Picnic Basket** in that color | **1** |
+
+    A basket is also useful on its own, as a
+    **[bread store](interactions-and-items.md#picnic-baskets)** next to the table.
 
 ### 2. The Basic Picnic Table
 
-A full **3×3** recipe:
+<div class="cr-scroll">
+<div class="cr-craft" title="Picnic Basket + Nether Star + 2x Table + Campfire Pot + 2x Dining Bench + Campfire -> Basic Picnic Table">
+  <div class="cr-grid">
+    <div class="cr-slot"><img src="../../assets/items/red_picnic_basket.png" alt="Picnic Basket"></div>
+    <div class="cr-slot"></div>
+    <div class="cr-slot"><img src="../../assets/items/nether_star.png" alt="Nether Star"></div>
+    <div class="cr-slot"><img src="../../assets/items/table_red.png" alt="Table"></div>
+    <div class="cr-slot"><img src="../../assets/items/table_red.png" alt="Table"></div>
+    <div class="cr-slot"><img src="../../assets/items/campfire_pot_red.png" alt="Campfire Pot"></div>
+    <div class="cr-slot"><img src="../../assets/items/dining_bench_oak.png" alt="Dining Bench"></div>
+    <div class="cr-slot"><img src="../../assets/items/dining_bench_oak.png" alt="Dining Bench"></div>
+    <div class="cr-slot"><img src="../../assets/items/campfire.png" alt="Campfire"></div>
+  </div>
+  <div class="cr-arrow">➜</div>
+  <div class="cr-result"><img src="../../assets/items/picnic_table.png" alt="Basic Picnic Table"></div>
+</div>
+</div>
 
-| Left | Middle | Right |
-|:--:|:--:|:--:|
-| **Picnic Basket** | *(empty)* | **Nether Star** |
-| **Table** | **Table** | **Campfire Pot** |
-| **Dining Bench** | **Dining Bench** | **Campfire** |
-
-- **Picnic Basket** — any color.
-- **Table** — any two of the 16 colors. The **left** one sets the tablecloth color.
-- **Dining Bench** — any two of the 11 woods. The **left** one sets the frame wood.
-- **Campfire Pot** — any of Cobblemon's colored **Campfire Pots**, or Cobblemon's own **Campfire**.
-- **Campfire** — vanilla **Campfire** *or* **Soul Campfire**.
+| Ingredient | Amount | Accepts |
+| --- | :---: | --- |
+| <img class="cr-inline" src="../../assets/items/red_picnic_basket.png" alt=""> Picnic Basket | 1 | any of the 7 colors |
+| <img class="cr-inline" src="../../assets/items/nether_star.png" alt=""> Nether Star | 1 | — |
+| <img class="cr-inline" src="../../assets/items/table_red.png" alt=""> Table | 2 | any of the 16 colors — **the left one sets the tablecloth color** |
+| <img class="cr-inline" src="../../assets/items/campfire_pot_red.png" alt=""> Campfire Pot | 1 | any Cobblemon Campfire Pot, or Cobblemon's own Campfire |
+| <img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench | 2 | any of the 11 woods — **the left one sets the frame wood** |
+| <img class="cr-inline" src="../../assets/items/campfire.png" alt=""> Campfire | 1 | Campfire *or* <img class="cr-inline" src="../../assets/items/soul_campfire.png" alt=""> Soul Campfire |
+| **→ <img class="cr-inline" src="../../assets/items/picnic_table.png" alt=""> Basic Picnic Table** | **1** | |
 
 The result renders in that exact **color × wood** combination, using the mod's **own models and
 textures** (no other furniture mod required). The basket, pot and campfire are consumed but don't
@@ -88,16 +149,74 @@ change how the table looks. Every color/wood variant is also available in the Cr
 
 ### 3. Upgrading
 
-The three higher tiers are **shapeless** recipes — put the ingredients anywhere in the grid:
+The three higher tiers are **shapeless** — the ingredients can sit anywhere in the grid. An upgrade
+**keeps the color and wood** the table was crafted with, so it stays the same style all the way up;
+the bench you add is fuel for the recipe, not a new style, and its wood is ignored.
 
-| Result | Ingredients |
-|---|---|
-| **Camping Picnic Table** | Basic Picnic Table **+** Diamond **+** any Dining Bench |
-| **Glamping Table** | Camping Picnic Table **+** Netherite Ingot **+** any Dining Bench |
-| **Diving Picnic Table** | Glamping Table **+** Heart of the Sea |
+=== "Camping"
 
-An upgrade **keeps the color and wood** the table was crafted with, so it stays the same style all
-the way up. The bench you add is fuel for the recipe, not a new style — its wood is ignored.
+    <div class="cr-scroll">
+    <div class="cr-craft" title="Shapeless: Basic Picnic Table + Diamond + Dining Bench -> Camping Picnic Table">
+      <div class="cr-grid cr-grid--2row">
+        <div class="cr-slot"><img src="../../assets/items/picnic_table.png" alt="Basic Picnic Table"></div>
+        <div class="cr-slot"><img src="../../assets/items/diamond.png" alt="Diamond"></div>
+        <div class="cr-slot"><img src="../../assets/items/dining_bench_oak.png" alt="Dining Bench"></div>
+        <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
+      </div>
+      <div class="cr-arrow">➜</div>
+      <div class="cr-result"><img src="../../assets/items/camping_picnic_table.png" alt="Camping Picnic Table"></div>
+    </div>
+    </div>
+
+    | Ingredient | Amount |
+    | --- | :---: |
+    | <img class="cr-inline" src="../../assets/items/picnic_table.png" alt=""> Basic Picnic Table | 1 |
+    | <img class="cr-inline" src="../../assets/items/diamond.png" alt=""> Diamond | 1 |
+    | <img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench — any wood | 1 |
+    | **→ <img class="cr-inline" src="../../assets/items/camping_picnic_table.png" alt=""> Camping Picnic Table** | **1** |
+
+=== "Glamping"
+
+    <div class="cr-scroll">
+    <div class="cr-craft" title="Shapeless: Camping Picnic Table + Netherite Ingot + Dining Bench -> Glamping Table">
+      <div class="cr-grid cr-grid--2row">
+        <div class="cr-slot"><img src="../../assets/items/camping_picnic_table.png" alt="Camping Picnic Table"></div>
+        <div class="cr-slot"><img src="../../assets/items/netherite_ingot.png" alt="Netherite Ingot"></div>
+        <div class="cr-slot"><img src="../../assets/items/dining_bench_oak.png" alt="Dining Bench"></div>
+        <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
+      </div>
+      <div class="cr-arrow">➜</div>
+      <div class="cr-result"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+    </div>
+    </div>
+
+    | Ingredient | Amount |
+    | --- | :---: |
+    | <img class="cr-inline" src="../../assets/items/camping_picnic_table.png" alt=""> Camping Picnic Table | 1 |
+    | <img class="cr-inline" src="../../assets/items/netherite_ingot.png" alt=""> Netherite Ingot | 1 |
+    | <img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench — any wood | 1 |
+    | **→ <img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table** | **1** |
+
+=== "Diving"
+
+    <div class="cr-scroll">
+    <div class="cr-craft" title="Shapeless: Glamping Table + Heart of the Sea -> Diving Picnic Table">
+      <div class="cr-grid cr-grid--2row">
+        <div class="cr-slot"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+        <div class="cr-slot"><img src="../../assets/items/heart_of_the_sea.png" alt="Heart of the Sea"></div>
+        <div class="cr-slot"></div>
+        <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
+      </div>
+      <div class="cr-arrow">➜</div>
+      <div class="cr-result"><img src="../../assets/items/diving_picnic_table.png" alt="Diving Picnic Table"></div>
+    </div>
+    </div>
+
+    | Ingredient | Amount |
+    | --- | :---: |
+    | <img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table | 1 |
+    | <img class="cr-inline" src="../../assets/items/heart_of_the_sea.png" alt=""> Heart of the Sea | 1 |
+    | **→ <img class="cr-inline" src="../../assets/items/diving_picnic_table.png" alt=""> Diving Picnic Table** | **1** |
 
 !!! note "Diving table"
     The **Diving** table can **only be placed underwater**. Try to place it in air and it won't

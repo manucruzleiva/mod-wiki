@@ -40,55 +40,34 @@ The **HM Case** lets you manage all learned abilities from a single hotbar slot.
 
 **Recipe (shapeless)** — drop the ingredients anywhere in the crafting grid:
 
-<style>
-.cr-craft { display: inline-flex; align-items: center; gap: 14px; background: #c6c6c6;
-  border: 3px solid; border-color: #ffffff #555555 #555555 #ffffff; border-radius: 4px;
-  padding: 14px; margin: 8px 0; }
-.cr-grid { display: grid; grid-template-columns: repeat(3, 44px); grid-template-rows: repeat(3, 44px);
-  gap: 4px; }
-.cr-slot { width: 44px; height: 44px; background: #8b8b8b; border: 2px solid;
-  border-color: #373737 #ffffff #ffffff #373737; display: flex; align-items: center;
-  justify-content: center; }
-.cr-slot img, .cr-result img, .cr-inline { image-rendering: pixelated; }
-.cr-slot img { width: 32px; height: 32px; }
-.cr-arrow { font-size: 30px; color: #555555; font-weight: bold; }
-.cr-result { width: 58px; height: 58px; background: #8b8b8b; border: 2px solid;
-  border-color: #373737 #ffffff #ffffff #373737; outline: 3px solid #a0a0a0; display: flex;
-  align-items: center; justify-content: center; position: relative; }
-.cr-result img { width: 40px; height: 40px; }
-.cr-count { position: absolute; right: 2px; bottom: 0; font-size: 14px; font-weight: bold;
-  color: #ffffff; text-shadow: 1px 1px 0 #3f3f3f; }
-.cr-inline { width: 20px; height: 20px; vertical-align: text-bottom; }
-</style>
-
 <div class="cr-craft" title="Shapeless: Chest + Diamond + all 7 Apricorns → HM Case">
   <div class="cr-grid">
-    <div class="cr-slot"><img src="../assets/items/chest.png" alt="Chest"></div>
-    <div class="cr-slot"><img src="../assets/items/diamond.png" alt="Diamond"></div>
-    <div class="cr-slot"><img src="../assets/items/red_apricorn.png" alt="Red Apricorn"></div>
-    <div class="cr-slot"><img src="../assets/items/yellow_apricorn.png" alt="Yellow Apricorn"></div>
-    <div class="cr-slot"><img src="../assets/items/green_apricorn.png" alt="Green Apricorn"></div>
-    <div class="cr-slot"><img src="../assets/items/blue_apricorn.png" alt="Blue Apricorn"></div>
-    <div class="cr-slot"><img src="../assets/items/black_apricorn.png" alt="Black Apricorn"></div>
-    <div class="cr-slot"><img src="../assets/items/white_apricorn.png" alt="White Apricorn"></div>
-    <div class="cr-slot"><img src="../assets/items/pink_apricorn.png" alt="Pink Apricorn"></div>
+    <div class="cr-slot"><img src="../../assets/items/chest.png" alt="Chest"></div>
+    <div class="cr-slot"><img src="../../assets/items/diamond.png" alt="Diamond"></div>
+    <div class="cr-slot"><img src="../../assets/items/red_apricorn.png" alt="Red Apricorn"></div>
+    <div class="cr-slot"><img src="../../assets/items/yellow_apricorn.png" alt="Yellow Apricorn"></div>
+    <div class="cr-slot"><img src="../../assets/items/green_apricorn.png" alt="Green Apricorn"></div>
+    <div class="cr-slot"><img src="../../assets/items/blue_apricorn.png" alt="Blue Apricorn"></div>
+    <div class="cr-slot"><img src="../../assets/items/black_apricorn.png" alt="Black Apricorn"></div>
+    <div class="cr-slot"><img src="../../assets/items/white_apricorn.png" alt="White Apricorn"></div>
+    <div class="cr-slot"><img src="../../assets/items/pink_apricorn.png" alt="Pink Apricorn"></div>
   </div>
   <div class="cr-arrow">➜</div>
-  <div class="cr-result"><img src="../assets/items/hm_case.png" alt="HM Case"></div>
+  <div class="cr-result"><img src="../../assets/items/hm_case.png" alt="HM Case"></div>
 </div>
 
 | Ingredient | Quantity |
 |---|---|
-| <img class="cr-inline" src="../assets/items/chest.png" alt=""> Chest | 1 |
-| <img class="cr-inline" src="../assets/items/diamond.png" alt=""> Diamond | 1 |
-| <img class="cr-inline" src="../assets/items/red_apricorn.png" alt=""> Red Apricorn | 1 |
-| <img class="cr-inline" src="../assets/items/yellow_apricorn.png" alt=""> Yellow Apricorn | 1 |
-| <img class="cr-inline" src="../assets/items/green_apricorn.png" alt=""> Green Apricorn | 1 |
-| <img class="cr-inline" src="../assets/items/blue_apricorn.png" alt=""> Blue Apricorn | 1 |
-| <img class="cr-inline" src="../assets/items/black_apricorn.png" alt=""> Black Apricorn | 1 |
-| <img class="cr-inline" src="../assets/items/white_apricorn.png" alt=""> White Apricorn | 1 |
-| <img class="cr-inline" src="../assets/items/pink_apricorn.png" alt=""> Pink Apricorn | 1 |
-| **→ <img class="cr-inline" src="../assets/items/hm_case.png" alt=""> HM Case** | **1** |
+| <img class="cr-inline" src="../../assets/items/chest.png" alt=""> Chest | 1 |
+| <img class="cr-inline" src="../../assets/items/diamond.png" alt=""> Diamond | 1 |
+| <img class="cr-inline" src="../../assets/items/red_apricorn.png" alt=""> Red Apricorn | 1 |
+| <img class="cr-inline" src="../../assets/items/yellow_apricorn.png" alt=""> Yellow Apricorn | 1 |
+| <img class="cr-inline" src="../../assets/items/green_apricorn.png" alt=""> Green Apricorn | 1 |
+| <img class="cr-inline" src="../../assets/items/blue_apricorn.png" alt=""> Blue Apricorn | 1 |
+| <img class="cr-inline" src="../../assets/items/black_apricorn.png" alt=""> Black Apricorn | 1 |
+| <img class="cr-inline" src="../../assets/items/white_apricorn.png" alt=""> White Apricorn | 1 |
+| <img class="cr-inline" src="../../assets/items/pink_apricorn.png" alt=""> Pink Apricorn | 1 |
+| **→ <img class="cr-inline" src="../../assets/items/hm_case.png" alt=""> HM Case** | **1** |
 
 ---
 
