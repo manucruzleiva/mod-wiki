@@ -24,8 +24,10 @@ Cobblemon Picnic runs on **Fabric** *and* **NeoForge** for Minecraft **1.21.1**.
 
 ## Your first table
 
-1. **Craft a Picnic Table.** Tables are crafted from a **cloth** (any of the 16 dye colors) over a
-   **bench** of any wood — the table renders in that exact color/wood combo. See
+1. **Craft a Picnic Table.** First the components — a **Table** (wool + planks, one per dye color), a
+   **Dining Bench** (slabs + planks, one per wood) and a **Picnic Basket** (apricorns + apricorn
+   planks) — then combine them with a **Nether Star**, a **Campfire Pot** and a **Campfire** into the
+   Basic Picnic Table. The Table and Bench you use set its color and wood. Full grids in
    **[Picnic Tables → Crafting](picnic-tables.md#crafting)**.
 2. **Place it** on open, flat ground. The table is a **3×2 multiblock** that deploys **in front of
    you**, with the table column centered — so face the direction you want it and place.

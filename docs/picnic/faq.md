@@ -1,5 +1,12 @@
 # FAQ
 
+??? question "How do I craft a Picnic Table?"
+    Craft the three components first — a **Table** (wool + planks), a **Dining Bench** (slabs +
+    planks) and a **Picnic Basket** (apricorns + apricorn planks) — then combine them with a **Nether
+    Star**, a **Campfire Pot** and a **Campfire**. The grids are in
+    **[Picnic Tables → Crafting](picnic-tables.md#crafting)**, along with the upgrade recipes for
+    Camping, Glamping and Diving.
+
 ??? question "Does re-rolling despawn my own Pokémon?"
     No. The despawn step skips any Pokémon that has an **owner** (yours or another player's) and any
     tethered/busy Pokémon. Only **wild** Pokémon in range are cleared.

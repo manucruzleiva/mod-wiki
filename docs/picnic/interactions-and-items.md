@@ -23,6 +23,9 @@ options:
 
 **Picnic Baskets** are placeable furniture available in **every apricorn color**.
 
+- **Craft** one from **2 apricorns over 2 apricorn planks**
+  ([recipe](picnic-tables.md#1-the-components)) — a basket is also an ingredient of the Picnic Table
+  itself.
 - **Place** one on the ground like a block.
 - **Store bread** inside it.
 - A nearby **table pulls bread from baskets** to fuel its re-rolls — so you can keep a basket
