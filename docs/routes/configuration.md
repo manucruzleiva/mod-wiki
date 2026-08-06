@@ -6,8 +6,8 @@ screen for defaults.
 
 !!! tip "Looking for the NUZLOCKE tab?"
     The Nuzlocke ruleset, its starter options and the Soul Link toggles belong to
-    **[Cobblemon Nuzlocke & Soul Link](../nuzlocke/configuration.md)**. That tab currently ships
-    inside Routes, but it is documented in that mod's section.
+    **[Cobblemon Nuzlocke & Soul Link](../nuzlocke/configuration.md)** — install that add-on and its
+    tab appears next to this one.
 
 ```mermaid
 flowchart LR

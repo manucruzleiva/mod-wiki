@@ -2,10 +2,8 @@
 
 Every command under the **`/nuzlocke`** root — the run itself and the co-op soul-link suite.
 
-!!! warning "These ship inside Routes today"
-    Until this mod is released separately, `/nuzlocke` is registered by
-    **[Routes](../routes/index.md)**. Install Routes and the commands below are already
-    there. Routes' own road commands live under [`/routes`](../routes/commands.md).
+!!! tip "Routes has its own root"
+    Routes' road commands live under [`/routes`](../routes/commands.md) — the two never mix.
 
 ```mermaid
 flowchart LR

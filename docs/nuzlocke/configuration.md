@@ -3,10 +3,9 @@
 The whole ruleset is decided **when you create the world**, on a dedicated **NUZLOCKE** tab that
 sits next to **GAME / WORLD / MORE** on the create-world screen.
 
-!!! warning "This tab ships inside Routes today"
-    Until this mod is released separately, the NUZLOCKE tab is added by
-    **[Routes](../routes/index.md)**. Routes' own generation options live on its
-    [ROUTES tab](../routes/configuration.md).
+!!! tip "Two tabs, two mods"
+    Installing this add-on is what adds the NUZLOCKE tab. Routes' own generation options live
+    beside it, on its [ROUTES tab](../routes/configuration.md).
 
 ```mermaid
 flowchart LR

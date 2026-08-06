@@ -6,11 +6,9 @@ or suggested a feature in our [Discord](https://discord.gg/SwcwXcCN4k) — thank
 ## Reporters
 
 !!! info "No names here yet"
-    This mod hasn't had its own release, so it has no reports of its own. The Nuzlocke and Soul
-    Link features currently ship **inside Routes** — everyone who has shaped them so far
-    is thanked on the [Routes credits page](../routes/credits.md), and those names stay there.
-
-    Once this mod ships separately, reports filed against it get credited here.
+    Nobody has reported a bug or suggested a feature against this mod yet — the first person to do
+    so lands here. Everyone who shaped the Nuzlocke and Soul Link rules before they became their own
+    mod is thanked on the [Routes credits page](../routes/credits.md), and those names stay there.
 
 ---
 
