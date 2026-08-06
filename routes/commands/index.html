@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://manucruzleiva.github.io/mod-wiki/routes/commands/">
       
       
-        <link rel="prev" href="../items/">
+        <link rel="prev" href="../map-integration/">
       
       
         <link rel="next" href="../configuration/">
@@ -489,8 +489,6 @@
       
         
       
-        
-      
     
     
     
@@ -617,34 +615,6 @@
     
   
     Map Integration
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../items/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Items & Recipes
   
 
     
@@ -1050,6 +1020,8 @@
       
         
       
+        
+      
     
     
     
@@ -1145,6 +1117,34 @@
     
   
     Soul Link (co-op)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nuzlocke/items/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Items & Recipes
   
 
     
@@ -2476,15 +2476,16 @@ in this world and what matched. The first stop when a structure type isn't being
 connections. The escape hatch for places without a structure tag — player builds, modded
 structures, anything.</p>
 <h3 id="rename-name"><code>rename &lt;name&gt;</code> — 🛡️<a class="headerlink" href="#rename-name" title="Permanent link">&para;</a></h3>
-<p>Renames the <strong>nearest town within 160 blocks</strong>. The new name shows in arrival banners, the Escape
-Rope message and route endpoints; existing map waypoints refresh on rejoin.</p>
+<p>Renames the <strong>nearest town within 160 blocks</strong>. The new name shows in arrival banners and route
+endpoints; existing map waypoints refresh on rejoin.</p>
 <h3 id="tp-town"><code>tp &lt;town&gt;</code> — 🛡️<a class="headerlink" href="#tp-town" title="Permanent link">&para;</a></h3>
-<p>Teleports you to a <strong>named</strong> town (tab-completion suggests every real name), landing on the same
-safe spot the Escape Rope uses. Wrong name? It points you at <code>/routes list cities</code>.</p>
+<p>Teleports you to a <strong>named</strong> town (tab-completion suggests every real name), landing on a safe, dry
+column — the same spot-finder that places a new world's spawn. Wrong name? It points you at
+<code>/routes list cities</code>.</p>
 <h3 id="weave-loops"><code>weave [loops]</code> — 🛡️<a class="headerlink" href="#weave-loops" title="Permanent link">&para;</a></h3>
 <p>Runs the <strong>ring-road pass right now</strong>: up to <code>loops</code> (default 4, max 16) direct connections are
 queued between towns that are close on the map but far apart by road. Every loop that completes
-<strong>encloses a new named AREA</strong> — this is the fastest way to grow your capture zones.</p>
+<strong>encloses a new named AREA</strong> — this is the fastest way to fill your map with them.</p>
 <h3 id="repaint"><code>repaint</code> — 🛡️<a class="headerlink" href="#repaint" title="Permanent link">&para;</a></h3>
 <p>Re-broadcasts the chunk-paint geometry to every online player, forcing the Xaero overlays to
 refresh without relogging.</p>
