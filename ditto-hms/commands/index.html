@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://manucruzleiva.github.io/mod-wiki/ditto-hms/commands/">
       
       
-        <link rel="prev" href="../hm-case/">
+        <link rel="prev" href="../hm-wheel/">
       
       
         <link rel="next" href="../configuration/">
@@ -1695,14 +1695,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../hm-case/" class="md-nav__link">
+      <a href="../hm-wheel/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    HM Case
+    HM Wheel
   
 
     
@@ -1817,10 +1817,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#active-24" class="md-nav__link">
+  <a href="#active-33" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Active (24)
+        Active (33)
       
     </span>
   </a>
@@ -1828,10 +1828,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#toggle-10" class="md-nav__link">
+  <a href="#toggle-14" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Toggle (10)
+        Toggle (14)
       
     </span>
   </a>
@@ -2087,10 +2087,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#active-24" class="md-nav__link">
+  <a href="#active-33" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Active (24)
+        Active (33)
       
     </span>
   </a>
@@ -2098,10 +2098,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#toggle-10" class="md-nav__link">
+  <a href="#toggle-14" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Toggle (10)
+        Toggle (14)
       
     </span>
   </a>
@@ -2150,19 +2150,32 @@
 Activates an ability you have learned (or toggles a passive on/off).</p>
 <p><div class="highlight"><pre><span></span><code>/dittohm list
 </code></pre></div>
-Shows all 35 abilities with your learn status, toggle state, and configured hunger/cooldown.</p>
+Shows all 47 abilities with your learn status, toggle state, and configured hunger/cooldown.</p>
 <p><div class="highlight"><pre><span></span><code>/dittohm select &lt;ability&gt;
+/dittohm select none
 </code></pre></div>
-Sets the active ability in the HM Case currently in your hotbar.</p>
+Selects an active HM without opening the <a href="../hm-wheel/">HM wheel</a>, or clears the selection.</p>
 <hr />
 <h2 id="operator-commands">Operator commands<a class="headerlink" href="#operator-commands" title="Permanent link">&para;</a></h2>
 <p>Require <strong>permission level 2</strong>:</p>
-<p><div class="highlight"><pre><span></span><code>/dittohm give &lt;ability&gt; &lt;player&gt;
+<div class="admonition note">
+<p class="admonition-title">Every command takes an optional player</p>
+<p><code>give</code>, <code>learn</code>, <code>select</code>, <code>forget</code>, <code>forget_all</code> and both <code>trader</code> actions accept a trailing
+<code>[player]</code>. Leave it off and the command applies to you.</p>
+</div>
+<p><div class="highlight"><pre><span></span><code>/dittohm give &lt;ability&gt; [player]
 </code></pre></div>
 Gives the HM Disc for the specified ability.</p>
+<p><div class="highlight"><pre><span></span><code>/dittohm learn &lt;ability&gt; [player]
+</code></pre></div>
+Teaches the ability outright, with no disc involved.</p>
+<p><div class="highlight"><pre><span></span><code>/dittohm trader spawn [player]
+/dittohm trader forget [player]
+</code></pre></div>
+Summons a Trainer Ditto on demand, or undoes a catch so it will visit that player again.</p>
 <p><div class="highlight"><pre><span></span><code>/dittohm learn_all [player]
 </code></pre></div>
-Instantly learns <strong>all 35 HMs</strong> for a player (does <strong>not</strong> auto-enable toggles).</p>
+Instantly learns <strong>all 47 HMs</strong> for a player (does <strong>not</strong> auto-enable toggles).</p>
 <p><div class="highlight"><pre><span></span><code>/dittohm forget &lt;ability&gt; [player]
 /dittohm forget_all [player]
 </code></pre></div>
@@ -2181,7 +2194,7 @@ re-learn (<code>/dittohm forget_all</code> then <code>/dittohm learn_all</code>)
 </div>
 <hr />
 <h2 id="ability-ids">Ability IDs<a class="headerlink" href="#ability-ids" title="Permanent link">&para;</a></h2>
-<h3 id="active-24">Active (24)<a class="headerlink" href="#active-24" title="Permanent link">&para;</a></h3>
+<h3 id="active-33">Active (33)<a class="headerlink" href="#active-33" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2286,9 +2299,45 @@ re-learn (<code>/dittohm forget_all</code> then <code>/dittohm learn_all</code>)
 <td><code>charm</code></td>
 <td>Charm</td>
 </tr>
+<tr>
+<td><code>stockpile</code></td>
+<td>Stockpile</td>
+</tr>
+<tr>
+<td><code>substitute</code></td>
+<td>Substitute</td>
+</tr>
+<tr>
+<td><code>lava_plume</code></td>
+<td>Lava Plume</td>
+</tr>
+<tr>
+<td><code>thief</code></td>
+<td>Thief</td>
+</tr>
+<tr>
+<td><code>u_turn</code></td>
+<td>U-turn</td>
+</tr>
+<tr>
+<td><code>charge</code></td>
+<td>Charge</td>
+</tr>
+<tr>
+<td><code>destiny_bond</code></td>
+<td>Destiny Bond</td>
+</tr>
+<tr>
+<td><code>sweet_scent</code></td>
+<td>Sweet Scent</td>
+</tr>
+<tr>
+<td><code>headbutt</code></td>
+<td>Headbutt</td>
+</tr>
 </tbody>
 </table>
-<h3 id="toggle-10">Toggle (10)<a class="headerlink" href="#toggle-10" title="Permanent link">&para;</a></h3>
+<h3 id="toggle-14">Toggle (14)<a class="headerlink" href="#toggle-14" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -2336,6 +2385,22 @@ re-learn (<code>/dittohm forget_all</code> then <code>/dittohm learn_all</code>)
 <tr>
 <td><code>burning_bulwark</code></td>
 <td>Burning Bulwark</td>
+</tr>
+<tr>
+<td><code>absorb</code></td>
+<td>Absorb</td>
+</tr>
+<tr>
+<td><code>bounce</code></td>
+<td>Bounce</td>
+</tr>
+<tr>
+<td><code>snowscape</code></td>
+<td>Snowscape</td>
+</tr>
+<tr>
+<td><code>vine_whip</code></td>
+<td>Vine Whip</td>
 </tr>
 </tbody>
 </table>

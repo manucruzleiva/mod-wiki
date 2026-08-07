@@ -16,7 +16,7 @@
         <link rel="prev" href="../active/">
       
       
-        <link rel="next" href="../../hm-case/">
+        <link rel="next" href="../../hm-wheel/">
       
       
         
@@ -1870,6 +1870,50 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#absorb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Absorb
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bounce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bounce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snowscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snowscape
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vine-whip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vine Whip
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1891,14 +1935,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hm-case/" class="md-nav__link">
+      <a href="../../hm-wheel/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    HM Case
+    HM Wheel
   
 
     
@@ -2284,6 +2328,50 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#absorb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Absorb
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bounce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bounce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snowscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snowscape
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vine-whip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vine Whip
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2308,13 +2396,14 @@
 
 <h1 id="toggle-hms">Toggle HMs<a class="headerlink" href="#toggle-hms" title="Permanent link">&para;</a></h1>
 <p>Toggle HMs are <strong>passive abilities</strong> that stay active until you turn them off.
-Enable/disable them from the <strong>HM Case GUI</strong> (right-click the toggle slot) or with <code>/dittohm use &lt;id&gt;</code>.</p>
-<p>There are <strong>10 toggle HMs</strong>.</p>
+Switch them on from the inner ring of the <a href="../../hm-wheel/">HM wheel</a>, or with <code>/dittohm use &lt;id&gt;</code>.</p>
+<p>There are <strong>14 toggle HMs</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">HUD icons</p>
 <p>Every enabled toggle shows its <strong>own HM status-effect icon</strong> in your HUD (top-right), so
-it's obvious at a glance which toggles are on. The underlying vanilla effects are applied
-with their icons hidden, so you only ever see the HM icons.</p>
+it's obvious at a glance which toggles are on. Wherever the game has an equivalent attribute,
+the toggle uses that instead of a status effect, so the HM entry is the only one in your
+inventory rather than a hidden duplicate sitting next to it.</p>
 </div>
 <hr />
 <h2 id="hunger-cost">Hunger cost<a class="headerlink" href="#hunger-cost" title="Permanent link">&para;</a></h2>
@@ -2433,6 +2522,26 @@ The cap never drops below <strong>2</strong>.</p>
 <td>Gouging Fire</td>
 <td>Blaze Rod</td>
 </tr>
+<tr>
+<td>Absorb</td>
+<td>Gulpin, Swalot, Victreebel</td>
+<td>Hopper</td>
+</tr>
+<tr>
+<td>Bounce</td>
+<td>Spoink, Aipom, Hoppip</td>
+<td>Slime Ball</td>
+</tr>
+<tr>
+<td>Snowscape</td>
+<td>Froslass, Mamoswine</td>
+<td>Blue Ice</td>
+</tr>
+<tr>
+<td>Vine Whip</td>
+<td>Bulbasaur, Tangela</td>
+<td>Vine</td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -2479,6 +2588,27 @@ kicks in — dive to gain speed, level off to glide far. (Fly auto-enables this.
 <p>Makes you <strong>immune to fire</strong> and <strong>scorches hostile mobs that get too close</strong> — any hostile within
 ~1.6 blocks is set alight and takes thorns damage twice a second. Pokémon and friendly mobs are
 never harmed.</p>
+<hr />
+<h3 id="absorb">Absorb<a class="headerlink" href="#absorb" title="Permanent link">&para;</a></h3>
+<p><strong>HungerBlock:</strong> 2 · <strong>Power:</strong> magnet radius 6</p>
+<p>Loose items on the ground drift toward you while it is on, so a scattered drop or a mined vein
+gathers itself. Items are nudged rather than yanked, so they keep their normal pickup delay.</p>
+<hr />
+<h3 id="bounce">Bounce<a class="headerlink" href="#bounce" title="Permanent link">&para;</a></h3>
+<p><strong>HungerBlock:</strong> 2</p>
+<p>Every block you land on answers like a slime block. The harder you come down the higher you go, up
+to a ceiling — and the bounce carries the impact away, so the landing doesn't hurt.</p>
+<p>A short step doesn't bounce; you'd never get anywhere.</p>
+<hr />
+<h3 id="snowscape">Snowscape<a class="headerlink" href="#snowscape" title="Permanent link">&para;</a></h3>
+<p><strong>HungerBlock:</strong> 2 · <strong>Power:</strong> trail radius 3</p>
+<p>Winter follows you on foot: snow settles around you as you walk, and <strong>still water freezes over</strong> as
+you cross it. Flowing water is left alone, so a river keeps running instead of being paved.</p>
+<hr />
+<h3 id="vine-whip">Vine Whip<a class="headerlink" href="#vine-whip" title="Permanent link">&para;</a></h3>
+<p><strong>HungerBlock:</strong> 2 · <strong>Power:</strong> 3 extra blocks of reach</p>
+<p>Reach further — blocks and creatures several paces away come within arm's length. Mining, placing
+and hitting all get the extra range.</p>
 
 
 
