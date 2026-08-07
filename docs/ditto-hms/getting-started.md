@@ -28,64 +28,42 @@ Each ability is locked behind a **Pokémon interaction**. To unlock one:
 
 Once you have an HM Disc:
 
-- **Right-click** the disc → the ability is **permanently learned** and the disc stays in your inventory as a reusable badge.
-- **Left-click** with a learned disc to **use** the ability (or toggle a passive on/off).
+- **Right-click** the disc → the ability is **permanently learned**. That is all the disc does; in
+  survival it is consumed doing it.
+- The ability now lives in your **HM wheel** — there is nothing to craft and nothing to carry.
 - Learned abilities persist across deaths and world reloads (stored server-side).
 
----
+!!! tip "A shortcut you may stumble into"
+    A rare wandering **Trainer Ditto** turns up now and then with five HM Discs laid out, each
+    costing only that HM's own trigger item — it skips the hunt for the right Pokémon entirely.
+    If you haven't learned a single HM yet, your first disc from it is **free**.
 
-## Crafting the HM Case
-
-The **HM Case** lets you manage all learned abilities from a single hotbar slot.
-
-**Recipe (shapeless)** — drop the ingredients anywhere in the crafting grid:
-
-<div class="cr-craft" title="Shapeless: Chest + Diamond + all 7 Apricorns → HM Case">
-  <div class="cr-grid">
-    <div class="cr-slot"><img src="../../assets/items/chest.png" alt="Chest"></div>
-    <div class="cr-slot"><img src="../../assets/items/diamond.png" alt="Diamond"></div>
-    <div class="cr-slot"><img src="../../assets/items/red_apricorn.png" alt="Red Apricorn"></div>
-    <div class="cr-slot"><img src="../../assets/items/yellow_apricorn.png" alt="Yellow Apricorn"></div>
-    <div class="cr-slot"><img src="../../assets/items/green_apricorn.png" alt="Green Apricorn"></div>
-    <div class="cr-slot"><img src="../../assets/items/blue_apricorn.png" alt="Blue Apricorn"></div>
-    <div class="cr-slot"><img src="../../assets/items/black_apricorn.png" alt="Black Apricorn"></div>
-    <div class="cr-slot"><img src="../../assets/items/white_apricorn.png" alt="White Apricorn"></div>
-    <div class="cr-slot"><img src="../../assets/items/pink_apricorn.png" alt="Pink Apricorn"></div>
-  </div>
-  <div class="cr-arrow">➜</div>
-  <div class="cr-result"><img src="../../assets/items/hm_case.png" alt="HM Case"></div>
-</div>
-
-| Ingredient | Quantity |
-|---|---|
-| <img class="cr-inline" src="../../assets/items/chest.png" alt=""> Chest | 1 |
-| <img class="cr-inline" src="../../assets/items/diamond.png" alt=""> Diamond | 1 |
-| <img class="cr-inline" src="../../assets/items/red_apricorn.png" alt=""> Red Apricorn | 1 |
-| <img class="cr-inline" src="../../assets/items/yellow_apricorn.png" alt=""> Yellow Apricorn | 1 |
-| <img class="cr-inline" src="../../assets/items/green_apricorn.png" alt=""> Green Apricorn | 1 |
-| <img class="cr-inline" src="../../assets/items/blue_apricorn.png" alt=""> Blue Apricorn | 1 |
-| <img class="cr-inline" src="../../assets/items/black_apricorn.png" alt=""> Black Apricorn | 1 |
-| <img class="cr-inline" src="../../assets/items/white_apricorn.png" alt=""> White Apricorn | 1 |
-| <img class="cr-inline" src="../../assets/items/pink_apricorn.png" alt=""> Pink Apricorn | 1 |
-| **→ <img class="cr-inline" src="../../assets/items/hm_case.png" alt=""> HM Case** | **1** |
+    It is a Ditto in a coat. Throw a Poké Ball and you catch it like any other — but then it never
+    comes looking for you again — it will actually run from you on sight — so weigh the disc
+    stall against the perfect-IV Ditto.
 
 ---
 
-## Using the HM Case
+## Using an ability
 
-| Action | Result |
+Press **H** to open the [HM wheel](hm-wheel.md). The 25 active HMs sit on the outer ring, the 10
+toggles on the inner one, each tinted by the type of the move it is named after.
+
+| Ring | What a pick does |
 |---|---|
-| **Left-click** | Uses the currently selected (active) HM |
-| **Right-click** | Opens the HM Case GUI |
+| **Outer — active HMs** | Selects it |
+| **Inner — toggle HMs** | Switches it on or off straight away |
+| **Centre** | Clears your selection |
 
-In the GUI you can:
+An active HM then fires on a click — by default either button, with an **empty hand** or while
+holding the **HM Case**. Anything else in your hand keeps its normal click, so tools, weapons and
+blocks behave exactly as they always did. Both halves are configurable; see
+[HM Wheel](hm-wheel.md).
 
-- See all 35 HMs (grey glass = not yet learned, disc icon = learned)
-- **Right-click** an **Active HM** to set it as the quick-use ability
-- **Right-click** a **Toggle HM** to enable or disable it
-- **Left-click + drag** an HM onto another slot in the same section to reorder them
-
-See the [HM Case guide](hm-case.md) for full details.
+!!! tip "Getting your fist back"
+    While an HM is selected, a bare-handed click fires it instead of punching or hand-mining. Pick
+    the **centre** of the wheel to clear the selection — or set the activator to **HM Case** so
+    your fist is never involved.
 
 ---
 

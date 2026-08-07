@@ -9,6 +9,50 @@ flowchart LR
     D --> E
 ```
 
+## Activation
+
+How an HM fires is two settings, because no single answer suits everyone:
+
+| Setting | Options | Notes |
+|---|---|---|
+| **Activator item** | Empty hand · HM Case · either *(default)* | The empty hand costs you punching and hand-mining while an HM is selected; the Case costs a hotbar slot |
+| **Activator button** | **Left-click** *(default)* · Right-click · either | Left never opens chests or doors; right is answered by interactable blocks first |
+
+There is also **HM wheel disc size** (50%–200%) in the same section, for when the discs read too
+big or too small at your GUI scale.
+
+Both activator settings live at the top of the config screen, and as commands:
+
+```
+/dittohm config activator item empty_hand|hm_case|either
+/dittohm config activator button left|right|either
+```
+
+---
+
+## Trainer Ditto
+
+| Setting | Default | What it does |
+|---|---|---|
+| **Visits** | on | Whether the trader appears at all |
+| **Rarity** | 1 in 36 | Rolled once every 10 seconds per player — higher is rarer |
+| **Stays for** | 6000 ticks (5 min) | How long it waits before wandering off |
+| **Guaranteed perfect IVs** | 6 | 0 rolls it like any wild Ditto · 1 gives it one best stat · 6 is flawless |
+
+```
+/dittohm config trader enabled <true|false>
+/dittohm config trader rarity <1-200>
+/dittohm config trader stay <200-72000>
+/dittohm config trader ivs <0-6>
+```
+
+It always offers **five** discs, and it stops visiting a player for good once they catch it —
+from then on it actively keeps its distance from them, so bring an uncaught friend.
+
+---
+
+## Per-ability values
+
 Every ability has these tunable values:
 
 | Parameter | Description |
@@ -38,6 +82,8 @@ Operator-only (`permission level 2`):
 /dittohm config <ability> hungerblock <0–20>   (toggles only)
 /dittohm config <ability> reset
 /dittohm config reset_all
+/dittohm config activator item <empty_hand|hm_case|either>
+/dittohm config activator button <left|right|either>
 ```
 
 ---
@@ -81,6 +127,15 @@ You can edit it directly — changes take effect on next server start.
 | Crabhammer | 3 | 2s | — |
 | Revival Blessing | 1 | 20 min | — |
 | Charm | 2 | 3s | 2 min follow |
+| Stockpile | 1 | 1s | lava self-damage 2 |
+| Substitute | 4 | 20s | 2 min decoy |
+| Lava Plume | 2 | 6s | rise + fire immunity |
+| Thief | 2 | 5s | — |
+| U-turn | 1 | 2s | hop 12 (tenths of a block) |
+| Charge | 2 | 3s | 200t charged |
+| Destiny Bond | 4 | 30s | 200t window |
+| Sweet Scent | 6 | 30s | 5 Pokémon |
+| Headbutt | 2 | 2s | 14 (hop / damage / recoil) |
 
 \* Rest does not require hunger.
 
@@ -98,3 +153,7 @@ You can edit it directly — changes take effect on next server start.
 | Harden | 3 | full diamond armour |
 | Glide | 2 | elytra-like glide |
 | Burning Bulwark | 4 | thorns damage (2) |
+| Absorb | 2 | magnet radius 6 |
+| Bounce | 2 | — |
+| Snowscape | 2 | trail radius 3 |
+| Vine Whip | 2 | +3 blocks of reach |

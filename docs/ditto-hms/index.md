@@ -6,7 +6,7 @@
 
 # Cobblemon Ditto HMs
 
-Become the HM slave you always made suffer. **35 Pokopia-inspired abilities** — 25 active and 10
+Become the HM slave you always made suffer. **47 Pokopia-inspired abilities** — 33 active and 14
 toggles — that *you* learn instead of teaching them to a Pokémon, paid for in hunger rather than a
 party slot.
 
@@ -14,7 +14,7 @@ party slot.
 
 <div class="hero-actions" markdown>
 [Get started](getting-started.md){ .md-button }
-[All 35 HMs](abilities/active.md){ .md-button }
+[All 47 HMs](abilities/active.md){ .md-button }
 </div>
 
 </div>
@@ -27,14 +27,14 @@ flowchart LR
     A[🔍 Find the right\nPokémon] --> B[🤝 Sneak + right-click\nholding the trigger item]
     B --> C[💿 Receive an\nHM Disc]
     C --> D[✅ Right-click the disc:\nability learned forever]
-    D --> E[🎒 Manage everything\nfrom the HM Case]
+    D --> E[🎡 Pick it from the\nHM wheel]
 ```
 
 1. **Find the right Pokémon** in the wild — each ability is tied to one or more species.
 2. **Sneak + right-click** that Pokémon while holding the required trigger item.
 3. The Pokémon gives you an **HM Disc**.
-4. **Right-click the HM Disc** to learn the ability permanently (it stays in your inventory as a usable badge).
-5. Use your **HM Case** (craftable) to manage all learned abilities from a single hotbar slot.
+4. **Right-click the HM Disc** to learn the ability permanently.
+5. Press **H** for the **HM wheel** — every HM you know, nothing to craft and nothing to carry.
 
 !!! tip "Discovery is part of the game"
     The game itself never tells you which Pokémon teaches an HM or what item to hold —
@@ -58,10 +58,10 @@ it keeps new HMs coming.
 
 | | |
 |---|---|
-| [Getting Started](getting-started.md) | First steps, crafting, and the HM Case |
-| [Active HMs](abilities/active.md) | 24 abilities activated on right-click |
-| [Toggle HMs](abilities/toggles.md) | 10 passive abilities that run continuously |
-| [HM Case](hm-case.md) | Manage all abilities from one item |
+| [Getting Started](getting-started.md) | First steps and the HM wheel |
+| [Active HMs](abilities/active.md) | 33 abilities you fire on demand |
+| [Toggle HMs](abilities/toggles.md) | 14 passive abilities that run continuously |
+| [HM Wheel](hm-wheel.md) | Pick any HM you know from one radial menu |
 | [Configuration](configuration.md) | Per-ability hunger / cooldown / power sliders |
 | [Commands](commands.md) | Admin and player commands |
 | [Roadmap](roadmap.md) | What's coming in the next versions |

@@ -1,1 +1,5 @@
 ﻿site/
+# Local build scratch: mkdocs cache, pre-rendered diagram staging, hook bytecode.
+.cache/
+.diagram-tmp/
+__pycache__/

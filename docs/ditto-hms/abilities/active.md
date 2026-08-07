@@ -1,13 +1,13 @@
 # Active HMs
 
-Active HMs are used by **right-clicking** the HM Disc or by setting them as active in the HM Case.
-Each use costs hunger and (most) start a cooldown.
+Active HMs are fired on demand: pick one in the [HM wheel](../hm-wheel.md), then click with an
+empty hand or the HM Case. Each use costs hunger and (most) start a cooldown.
 
-There are **25 active HMs**.
+There are **33 active HMs**.
 
 ```mermaid
 flowchart LR
-    A[🖱️ Right-click\ndisc or Case] --> B{Learned?}
+    A[🖱️ Click with your\nchosen activator] --> B{Learned?}
     B -- no --> X[✖ Nothing happens]
     B -- yes --> C{Off cooldown &\nenough hunger?}
     C -- no --> X
@@ -48,6 +48,14 @@ Any one of the listed Pokémon can teach the HM. Hold the trigger item and **sne
 | Revival Blessing | Rabsca | Totem of Undying |
 | Charm | Jynx, Sylveon, Clefable | Pink Tulip |
 | Stockpile | Gulpin, Swalot | Sponge |
+| Substitute | Wobbuffet, Mew, Smeargle | Armor Stand |
+| Lava Plume | Magcargo, Slugma, Turtonator | Magma Cream |
+| Thief | Meowth, Purrloin, Sableye | Tripwire Hook |
+| U-turn | Yanma, Ninjask, Venipede | Rabbit's Foot |
+| Charge | Elekid, Electabuzz, Electivire | Redstone |
+| Destiny Bond | Misdreavus, Duskull, Shuppet | Echo Shard |
+| Sweet Scent | Gloom, Bellossom, Vileplume, Aromatisse | Lilac |
+| Headbutt | Cranidos, Rampardos, Cubone | Iron Helmet |
 
 ---
 
@@ -91,16 +99,17 @@ Tills the dirt-type block you're aiming at into Farmland (Dirt, Grass Block, Coa
 ### Camouflage
 **Hunger:** 3 · **Cooldown:** 10s · **Power:** 6000t (**5 minutes**)
 
-Disguise yourself as the **living creature** you're looking at:
+Become the **living creature** you're looking at. Your model is replaced by theirs — variant, gear
+and all — for everyone who can see you.
 
-- Aim at an **entity** in clear view → an inert copy of that creature (matching its
-  variant/equipment) is spawned over you and mirrors your movement, so you actually *look* like
-  that mob to everyone. Your own skin is hidden so it doesn't bleed through the disguise.
-- A block, a wall between you and the target, or empty air → nothing happens (you can only copy a
-  creature you can actually see).
+- Aim at a **creature** in clear view → you look exactly like it for 5 minutes, or until you use
+  Camouflage again.
+- A block, a wall between you and it, or empty air → nothing happens. You can only copy something
+  you can actually see.
+- Other **players** can't be copied.
 
-Lasts 5 minutes or until you use it again. *(Morphing onto another player falls back to a
-name-tag + size match, since players can't be cloned.)*
+The disguise is a costume, not a creature: nothing extra exists in the world, so there is nothing
+to hit, nothing in your way, and nothing that can be killed off you.
 
 ---
 
@@ -115,7 +124,18 @@ clearing a path. Water is free; **lava is spicy** and singes you for a little he
 ### Strength
 **Hunger:** 2 · **Cooldown:** none
 
-Pushes the aimed block one block in your horizontal facing direction. Won't move fluids or container blocks.
+Pushes the aimed block one block in whichever of the six directions you're looking — up and down
+included. Containers travel with their contents, and a **double chest moves as one unit**: both
+halves go together, or the push fails if either has nowhere to go. Won't move fluids.
+
+---
+
+### Substitute
+**Hunger:** 4 · **Cooldown:** 20s · **Power:** 2400t (**2 minutes**)
+
+Leaves a decoy of you standing where you were — wearing your head, your armour and whatever you
+were holding. Hostile creatures already hunting you switch to the decoy while it stands, so it buys
+you a way out of a fight. Casting it again replaces the decoy rather than adding a second.
 
 ---
 
@@ -123,6 +143,15 @@ Pushes the aimed block one block in your horizontal facing direction. Won't move
 **Hunger:** 2 · **Cooldown:** 6s · **Power:** 40t
 
 **While in water**, rides a strong upward current toward the surface. Must be in water to use.
+
+---
+
+### Lava Plume
+**Hunger:** 2 · **Cooldown:** 6s · **Power:** 40t
+
+Waterfall's twin for lava. **While in lava**, rides a rising current to the surface — and you are
+immune to fire for the ride plus a few seconds after, so climbing out doesn't finish what the pool
+started. Must be in lava to use.
 
 ---
 
@@ -192,9 +221,9 @@ Leaves you hungry afterwards.
 ---
 
 ### Dig
-**Hunger:** 2 · **Cooldown:** none · **Power:** Haste III
+**Hunger:** 2 · **Cooldown:** none
 
-Grants **Haste III** and instantly breaks the shovel-minable block you're aiming at (Netherite Shovel drops).
+Instantly breaks the shovel-minable block you're aiming at (Netherite Shovel drops).
 
 ---
 
@@ -244,3 +273,61 @@ Fully heals and **revives every Pokémon in your party** — clears faints and s
 **Hunger:** 2 · **Cooldown:** 3s · **Power:** 2400t (**2 minutes**)
 
 Aim at a mob and use it — that mob becomes **charmed** and follows you around for 2 minutes (it paths toward you when more than ~3 blocks away). Great for relocating a stubborn animal or keeping an ally close.
+
+---
+
+### Thief
+**Hunger:** 2 · **Cooldown:** 5s
+
+Takes whatever the creature in your crosshair is holding in its main hand and puts it in your
+inventory. Armour stays on. A creature with empty hands simply says so.
+
+---
+
+### U-turn
+**Hunger:** 1 · **Cooldown:** 2s · **Power:** hop distance (tenths of a block)
+
+Leaps you backwards and spins your view a full 180°, so you land already facing whatever you were
+running from. A disengage — the leap without the turn just leaves you sprinting blind.
+
+---
+
+### Charge
+**Hunger:** 2 · **Cooldown:** 3s · **Power:** 200t (**10 seconds**)
+
+Turns the block you aim at into a redstone power source — enough to throw a door, a piston or a
+lamp from across a room. **Temporary:** the original block comes back exactly as it was, and a
+second cast puts the first one back before charging the next.
+
+Blocks that hold something (chests, furnaces) are refused, because swapping them out and back would
+lose what's inside.
+
+---
+
+### Destiny Bond
+**Hunger:** 4 · **Cooldown:** 30s · **Power:** 200t (**10 seconds**)
+
+For a short window, whatever kills you dies with you. Something you spend when you think you're
+about to lose — not a permanent guarantee.
+
+---
+
+### Sweet Scent
+**Hunger:** 6 · **Cooldown:** 30s · **Power:** 5 (how many turn up)
+
+Draws a horde of wild Pokémon out of hiding all around you. Legendaries, mythicals, Ultra Beasts and
+Paradox Pokémon never answer — a crowd you can summon on a cooldown would otherwise be a farm.
+
+---
+
+### Headbutt
+**Hunger:** 2 · **Cooldown:** 2s · **Power:** drives the hop, the damage and the recoil
+
+Hurls you forward head-first.
+
+- Into a **tree**, the branches shake loose — sticks, saplings, the odd apple.
+- Into a **creature**, it hurts them.
+- Either way it hurts you. That's the joke.
+
+Only the first impact of each charge counts, so wedging yourself against a trunk can't chew through
+your health bar.

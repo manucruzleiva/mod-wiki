@@ -24,12 +24,13 @@ Activates an ability you have learned (or toggles a passive on/off).
 ```
 /dittohm list
 ```
-Shows all 35 abilities with your learn status, toggle state, and configured hunger/cooldown.
+Shows all 47 abilities with your learn status, toggle state, and configured hunger/cooldown.
 
 ```
 /dittohm select <ability>
+/dittohm select none
 ```
-Sets the active ability in the HM Case currently in your hotbar.
+Selects an active HM without opening the [HM wheel](hm-wheel.md), or clears the selection.
 
 ---
 
@@ -37,15 +38,30 @@ Sets the active ability in the HM Case currently in your hotbar.
 
 Require **permission level 2**:
 
+!!! note "Every command takes an optional player"
+    `give`, `learn`, `select`, `forget`, `forget_all` and both `trader` actions accept a trailing
+    `[player]`. Leave it off and the command applies to you.
+
 ```
-/dittohm give <ability> <player>
+/dittohm give <ability> [player]
 ```
 Gives the HM Disc for the specified ability.
 
 ```
+/dittohm learn <ability> [player]
+```
+Teaches the ability outright, with no disc involved.
+
+```
+/dittohm trader spawn [player]
+/dittohm trader forget [player]
+```
+Summons a Trainer Ditto on demand, or undoes a catch so it will visit that player again.
+
+```
 /dittohm learn_all [player]
 ```
-Instantly learns **all 35 HMs** for a player (does **not** auto-enable toggles).
+Instantly learns **all 47 HMs** for a player (does **not** auto-enable toggles).
 
 ```
 /dittohm forget <ability> [player]
@@ -70,7 +86,7 @@ Unlearns one or all HMs.
 
 ## Ability IDs
 
-### Active (24)
+### Active (33)
 
 | ID | Display name |
 |---|---|
@@ -98,8 +114,17 @@ Unlearns one or all HMs.
 | `crab_hammer` | Crabhammer |
 | `revival_blessing` | Revival Blessing |
 | `charm` | Charm |
+| `stockpile` | Stockpile |
+| `substitute` | Substitute |
+| `lava_plume` | Lava Plume |
+| `thief` | Thief |
+| `u_turn` | U-turn |
+| `charge` | Charge |
+| `destiny_bond` | Destiny Bond |
+| `sweet_scent` | Sweet Scent |
+| `headbutt` | Headbutt |
 
-### Toggle (10)
+### Toggle (14)
 
 | ID | Display name |
 |---|---|
@@ -113,3 +138,7 @@ Unlearns one or all HMs.
 | `harden` | Harden |
 | `glide` | Glide |
 | `burning_bulwark` | Burning Bulwark |
+| `absorb` | Absorb |
+| `bounce` | Bounce |
+| `snowscape` | Snowscape |
+| `vine_whip` | Vine Whip |
