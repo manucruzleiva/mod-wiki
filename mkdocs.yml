@@ -6,7 +6,10 @@ site_url: https://manucruzleiva.github.io/mod-wiki/
 # que no le dice nada a quien viene a leer como se instala un mod. El repo no se enlaza en ningun
 # lado: la wiki NO invita a mandar PRs, las correcciones entran por Discord.
 docs_dir: docs
-copyright: 'Mods by shiero — "If you make money, I make money" license'
+# The footer's only line, and the one place the license is linked from every page. It carries HTML on
+# purpose: each mod used to repeat the same license page, four near-identical copies that drifted
+# apart. There is now ONE at /license/, and this is how a reader reaches it from anywhere.
+copyright: 'Mods by shiero — <a href="/mod-wiki/license/">"If you make money, I make money" license</a>'
 
 # The docs LIVE here — one site, one build, one repo.
 #
@@ -66,6 +69,9 @@ theme:
     - content.tooltips
 
 extra:
+  # Quita el "Made with Material for MkDocs" del footer. Lo unico que queda abajo es la linea de
+  # licencia, que es la que el lector puede necesitar.
+  generator: false
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/SwcwXcCN4k
@@ -105,7 +111,10 @@ markdown_extensions:
 # Every mod section follows the SAME spine, in this order:
 #
 #   index → Getting Started → (feature pages, mod-specific) → Commands → Configuration
-#         → Roadmap → Community Credits → License
+#         → Roadmap → Community Credits
+#
+# La licencia NO va por mod. Es la misma para los cuatro, y cuatro copias casi iguales terminaron
+# divergiendo. Vive en /license/, enlazada desde el footer de todas las paginas.
 #
 # Only the feature-page block differs between mods. Labels are fixed too — it was
 # "Installation"/"Getting Started" and "World Creation & Config"/"Configuration" across sections,
@@ -127,7 +136,6 @@ nav:
       - Configuration: routes/configuration.md
       - Roadmap: routes/roadmap.md
       - Community Credits: routes/credits.md
-      - License: routes/license.md
   - Cobblemon Nuzlocke & Soul Link:
       - nuzlocke/index.md
       - Hardcore Nuzlocke: nuzlocke/nuzlocke.md
@@ -137,7 +145,6 @@ nav:
       - Configuration: nuzlocke/configuration.md
       - Roadmap: nuzlocke/roadmap.md
       - Community Credits: nuzlocke/credits.md
-      - License: nuzlocke/license.md
   - Cobblemon Picnic:
       - picnic/index.md
       - Getting Started: picnic/getting-started.md
@@ -148,7 +155,6 @@ nav:
       - Commands & Config: picnic/commands.md
       - Roadmap: picnic/roadmap.md
       - Community Credits: picnic/credits.md
-      - License: picnic/license.md
   - Cobblemon Ditto HMs:
       - ditto-hms/index.md
       - Getting Started: ditto-hms/getting-started.md
@@ -160,7 +166,6 @@ nav:
       - Roadmap: ditto-hms/roadmap.md
       - Changelog: ditto-hms/changelog.md
       - Community Credits: ditto-hms/credits.md
-      - License: ditto-hms/license.md
   - 💛 Sponsor shiero: https://github.com/sponsors/manucruzleiva
 
 hooks:

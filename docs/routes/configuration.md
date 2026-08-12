@@ -28,17 +28,17 @@ Customise dynamic route generation for the world:
 | Underwater lighting | Random | sea lanterns along aquatic crossings |
 | Routes per city | 2 | 1–5 roads out of each city |
 | Ring roads | on | keep closing loops between nearby towns — loops enclose named areas |
-| Gyms next to cities | on | each discovered city gets a gym beside it (needs a gym pack) |
 | Cities include | Villages + BCA Villages | 16-entry checklist: fossils, ruins, outposts, pyramids… |
 | Connect all structures | off | also connect non-city surface structures |
-| Route trainers | on | trainers along finished roads |
-| Trainer density | Medium | Low / Medium / High / Brutal — count scales with route length |
 | Water crossings | Aquatic channel (always) | open channel + paved seabed underneath |
 
-Route-trainer options (sight range, challenge delay, density, skirmishes) live under their own
-**Route Trainers** heading. The map **tint intensity** (City / Route / Area, 0–100 %) is not a
-world-creation choice — adjust it live from the sliders on
-[Xaero's world map](map-integration.md) or in the config file.
+Who stands on the roads and what gets built beside the towns is the Nuzlocke add-on's: **road
+trainers**, the **gyms next to towns** and the **league** are configured on its
+[NUZLOCKE tab](../nuzlocke/configuration.md). Routes on its own builds the towns and the roads
+between them.
+
+The map **tint intensity** (City / Route / Area, 0–100 %) is not a world-creation choice — adjust it
+live from the sliders on [Xaero's world map](map-integration.md) or in the config file.
 
 !!! info "Saved per world"
     Choices made in these tabs are stored **per world** and only applied to a brand-new world —

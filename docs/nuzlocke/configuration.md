@@ -44,6 +44,25 @@ The **level cap itself is owned by Radical Cobblemon Trainers** — this mod doe
 | No typical starters | off | exclude the pack's usual starters from the RANDOM roll (Mix ignores it) |
 | Shiny starter | Yes | No / Yes (normal odds) / Always (guaranteed) |
 
+### Roads and towns subsection
+
+What this add-on builds into the world Routes generates:
+
+| Option | Default | Notes |
+| --- | --- | --- |
+| Route trainers | on | trainers along the roads — needs a trainer mod, inert without one |
+| Trainer entity ID | `rctmod:trainer` | which NPC to place; Radical Cobblemon Trainers by default |
+| Trainer density | Medium | Low / Medium / High / Brutal — count scales with route length |
+| Trainer sight range | 15 | 0–64 blocks — how far a trainer spots you from |
+| Challenge delay | 20 | 0–100 ticks of "!" wind-up before the battle starts |
+| Trainer skirmishes | on | trainers duel each other near you between fights |
+| Fair-fight guard | on | a trainer far above your level never challenges you on sight |
+| Max trainer level gap | 5 | 0–50 — how far above you a trainer may still pick a fight |
+| Gyms beside towns | on | every town you discover gets a gym next to it (needs a gym pack) |
+
+Gyms come from whatever pack provides them — COBBLEVERSE, for instance — and are named after their
+Gym Leaders. The **league** is placed once per world, as its own settlement well away from any town.
+
 Soul Link has its own toggles too — see [Soul Link](soul-link.md).
 
 !!! info "Saved per world"

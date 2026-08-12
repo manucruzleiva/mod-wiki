@@ -52,4 +52,4 @@ battles.
 New here? Start with **[Getting Started](getting-started.md)**.
 
 **License** — custom, *"If you make money, I make money."* Free to use and share for free; commercial
-use needs a revenue-share agreement. [Full text](license.md).
+use needs a revenue-share agreement. [Full text](../license.md).

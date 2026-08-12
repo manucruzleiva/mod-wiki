@@ -63,6 +63,8 @@ perfectly well on a single-player world.
 - **Trainers along the roads** — they challenge you on sight and duel each other between fights.
 - **A gym beside every town** you discover, instead of gyms generating lost in the wilderness.
   Needs a pack that provides gym structures, such as COBBLEVERSE.
+- **The league as its own settlement** — one per world, out past the towns, with its own place on
+  the map rather than sitting in somebody's home town.
 - **The [Escape Rope](items.md)** — a craftable one-tap trip back to the nearest known town, which
   refuses to fire mid-battle.
 
