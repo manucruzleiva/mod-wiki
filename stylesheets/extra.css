@@ -641,16 +641,24 @@ DOM node and one request per family rather than one per frame.
 
 /* In a 44px slot the 32px strip needs centring by hand, since background-position
    is doing the animating and can't also carry the offset. */
+/* The window has to be EXACTLY one frame wide, or the strip shows a sliver of the
+   next colour beside the current one. Material sets box-sizing:border-box, so a
+   44px slot with 2px borders leaves 40px of content: 4px of padding brings that
+   to the 32px a frame measures. background-clip keeps the strip off the border. */
 .cr-slot.cr-cycle {
+  padding: 4px;
   background-origin: content-box;
-  padding: 6px;
+  background-clip: content-box;
 }
 
 /* The result slot is bigger, so its frames are drawn bigger to match .cr-result img. */
+/* Same arithmetic one size up: 58px wide, 2px borders, 54px of content, 7px of
+   padding leaves the 40px .cr-result img uses. */
 .cr-result.cr-cycle {
   background-size: calc(var(--n) * 40px) 40px;
+  padding: 7px;
   background-origin: content-box;
-  padding: 9px;
+  background-clip: content-box;
   animation-name: cr-cycle-step-lg;
 }
 
