@@ -46,16 +46,16 @@ example.
     <div class="cr-scroll">
     <div class="cr-craft" title="3× Red Wool + 2× Oak Planks → 1× Red Table">
       <div class="cr-grid">
-        <div class="cr-slot"><img src="../../assets/items/white_wool.png" alt="Wool"></div>
-        <div class="cr-slot"><img src="../../assets/items/white_wool.png" alt="Wool"></div>
-        <div class="cr-slot"><img src="../../assets/items/white_wool.png" alt="Wool"></div>
+        <div class="cr-slot cr-cycle cr-cycle--16" style="background-image:url(../../assets/items/strips/wool.png)" role="img" aria-label="Wool — any of the 16 colours"></div>
+        <div class="cr-slot cr-cycle cr-cycle--16" style="background-image:url(../../assets/items/strips/wool.png)" role="img" aria-label="Wool — any of the 16 colours"></div>
+        <div class="cr-slot cr-cycle cr-cycle--16" style="background-image:url(../../assets/items/strips/wool.png)" role="img" aria-label="Wool — any of the 16 colours"></div>
         <div class="cr-slot"><img src="../../assets/items/oak_planks.png" alt="Oak Planks"></div>
         <div class="cr-slot"></div>
         <div class="cr-slot"><img src="../../assets/items/oak_planks.png" alt="Oak Planks"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
       </div>
       <div class="cr-arrow">➜</div>
-      <div class="cr-result"><img src="../../assets/items/table_red.png" alt="Table"></div>
+      <div class="cr-result cr-cycle cr-cycle--16" style="background-image:url(../../assets/items/strips/table.png)" role="img" aria-label="Table in the wool colour you used"></div>
     </div>
     </div>
 
@@ -82,7 +82,7 @@ example.
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
       </div>
       <div class="cr-arrow">➜</div>
-      <div class="cr-result"><img src="../../assets/items/dining_bench_oak.png" alt="Oak Dining Bench"><span class="cr-count">2</span></div>
+      <div class="cr-result cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/dining_bench.png)" role="img" aria-label="Dining Bench in the wood you used"><span class="cr-count">2</span></div>
     </div>
     </div>
 
@@ -133,8 +133,8 @@ example.
     <div class="cr-slot"><img src="../../assets/items/table_red.png" alt="Table"></div>
     <div class="cr-slot"><img src="../../assets/items/table_red.png" alt="Table"></div>
     <div class="cr-slot"><img src="../../assets/items/campfire_pot_red.png" alt="Campfire Pot"></div>
-    <div class="cr-slot"><img src="../../assets/items/dining_bench_oak.png" alt="Dining Bench"></div>
-    <div class="cr-slot"><img src="../../assets/items/dining_bench_oak.png" alt="Dining Bench"></div>
+    <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/dining_bench.png)" role="img" aria-label="Dining Bench — any of the 11 woods"></div>
+    <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/dining_bench.png)" role="img" aria-label="Dining Bench — any of the 11 woods"></div>
     <div class="cr-slot"><img src="../../assets/items/campfire.png" alt="Campfire"></div>
   </div>
   <div class="cr-arrow">➜</div>
@@ -169,7 +169,7 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
       <div class="cr-grid">
         <div class="cr-slot"><img src="../../assets/items/picnic_table.png" alt="Basic Picnic Table"></div>
         <div class="cr-slot"><img src="../../assets/items/diamond.png" alt="Diamond"></div>
-        <div class="cr-slot"><img src="../../assets/items/dining_bench_oak.png" alt="Dining Bench"></div>
+        <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/dining_bench.png)" role="img" aria-label="Dining Bench — any of the 11 woods"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
       </div>
@@ -192,7 +192,7 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
       <div class="cr-grid">
         <div class="cr-slot"><img src="../../assets/items/camping_picnic_table.png" alt="Camping Picnic Table"></div>
         <div class="cr-slot"><img src="../../assets/items/netherite_ingot.png" alt="Netherite Ingot"></div>
-        <div class="cr-slot"><img src="../../assets/items/dining_bench_oak.png" alt="Dining Bench"></div>
+        <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/dining_bench.png)" role="img" aria-label="Dining Bench — any of the 11 woods"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
       </div>
