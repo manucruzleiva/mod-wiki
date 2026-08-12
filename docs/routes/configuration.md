@@ -6,7 +6,7 @@ screen for defaults.
 
 !!! tip "Looking for the NUZLOCKE tab?"
     The Nuzlocke ruleset, its starter options and the Soul Link toggles belong to
-    **[Cobblemon Nuzlocke & Soul Link](../nuzlocke/configuration.md)** — install that add-on and its
+    **[Cobblemon Nuzlocke & Soul Link](../nuzlocke/commands.md)** — install that add-on and its
     tab appears next to this one.
 
 ```mermaid
@@ -34,7 +34,7 @@ Customise dynamic route generation for the world:
 
 Who stands on the roads and what gets built beside the towns is the Nuzlocke add-on's: **road
 trainers**, the **gyms next to towns** and the **league** are configured on its
-[NUZLOCKE tab](../nuzlocke/configuration.md). Routes on its own builds the towns and the roads
+[NUZLOCKE tab](../nuzlocke/commands.md). Routes on its own builds the towns and the roads
 between them.
 
 The map **tint intensity** (City / Route / Area, 0–100 %) is not a world-creation choice — adjust it
@@ -43,7 +43,7 @@ live from the sliders on [Xaero's world map](map-integration.md) or in the confi
 !!! info "Saved per world"
     Choices made in these tabs are stored **per world** and only applied to a brand-new world —
     loading an existing world never gets its rules clobbered. Picking **Hardcore** at world
-    creation auto-enables the full [Nuzlocke rule set](../nuzlocke/configuration.md).
+    creation auto-enables the full [Nuzlocke rule set](../nuzlocke/commands.md).
 
 ## Global defaults
 

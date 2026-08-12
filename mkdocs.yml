@@ -140,9 +140,7 @@ nav:
       - nuzlocke/index.md
       - Hardcore Nuzlocke: nuzlocke/nuzlocke.md
       - Soul Link (co-op): nuzlocke/soul-link.md
-      - Items & Recipes: nuzlocke/items.md
-      - Commands: nuzlocke/commands.md
-      - Configuration: nuzlocke/configuration.md
+      - Commands & Config: nuzlocke/commands.md
       - Roadmap: nuzlocke/roadmap.md
       - Community Credits: nuzlocke/credits.md
   - Cobblemon Picnic:
