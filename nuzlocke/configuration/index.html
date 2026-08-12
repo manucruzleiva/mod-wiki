@@ -485,8 +485,6 @@
       
         
       
-        
-      
     
     
     
@@ -735,34 +733,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../routes/license/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    License
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -783,8 +753,6 @@
       
         
           
-        
-      
         
       
         
@@ -1057,6 +1025,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#roads-and-towns-subsection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roads and towns subsection
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1138,34 +1117,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../license/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    License
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1184,8 +1135,6 @@
       
         
           
-        
-      
         
       
         
@@ -1480,34 +1429,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../picnic/license/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    License
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1526,8 +1447,6 @@
       
         
           
-        
-      
         
       
         
@@ -1852,34 +1771,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ditto-hms/license/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    License
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1957,6 +1848,17 @@
     <span class="md-ellipsis">
       
         Starter subsection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roads-and-towns-subsection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roads and towns subsection
       
     </span>
   </a>
@@ -2123,6 +2025,66 @@ and forced <strong>Hard</strong> difficulty are all part of Nuzlocke, no separat
 </tr>
 </tbody>
 </table>
+<h3 id="roads-and-towns-subsection">Roads and towns subsection<a class="headerlink" href="#roads-and-towns-subsection" title="Permanent link">&para;</a></h3>
+<p>What this add-on builds into the world Routes generates:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Default</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Route trainers</td>
+<td>on</td>
+<td>trainers along the roads — needs a trainer mod, inert without one</td>
+</tr>
+<tr>
+<td>Trainer entity ID</td>
+<td><code>rctmod:trainer</code></td>
+<td>which NPC to place; Radical Cobblemon Trainers by default</td>
+</tr>
+<tr>
+<td>Trainer density</td>
+<td>Medium</td>
+<td>Low / Medium / High / Brutal — count scales with route length</td>
+</tr>
+<tr>
+<td>Trainer sight range</td>
+<td>15</td>
+<td>0–64 blocks — how far a trainer spots you from</td>
+</tr>
+<tr>
+<td>Challenge delay</td>
+<td>20</td>
+<td>0–100 ticks of "!" wind-up before the battle starts</td>
+</tr>
+<tr>
+<td>Trainer skirmishes</td>
+<td>on</td>
+<td>trainers duel each other near you between fights</td>
+</tr>
+<tr>
+<td>Fair-fight guard</td>
+<td>on</td>
+<td>a trainer far above your level never challenges you on sight</td>
+</tr>
+<tr>
+<td>Max trainer level gap</td>
+<td>5</td>
+<td>0–50 — how far above you a trainer may still pick a fight</td>
+</tr>
+<tr>
+<td>Gyms beside towns</td>
+<td>on</td>
+<td>every town you discover gets a gym next to it (needs a gym pack)</td>
+</tr>
+</tbody>
+</table>
+<p>Gyms come from whatever pack provides them — COBBLEVERSE, for instance — and are named after their
+Gym Leaders. The <strong>league</strong> is placed once per world, as its own settlement well away from any town.</p>
 <p>Soul Link has its own toggles too — see <a href="../soul-link/">Soul Link</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Saved per world</p>
@@ -2176,14 +2138,9 @@ whole ruleset can be switched off for the world with <code>/nuzlocke disable</co
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Mods by shiero — "If you make money, I make money" license
+      Mods by shiero — <a href="/mod-wiki/license/">"If you make money, I make money" license</a>
     </div>
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
