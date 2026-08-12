@@ -1447,6 +1447,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="/picnic stats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2067,6 +2084,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="/picnic stats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2092,6 +2126,8 @@
 /picnic &lt;attribute&gt; &lt;value&gt;         # change one setting (operator)
 /picnic &lt;attribute&gt; default         # put that one setting back to its default (operator)
 /picnic stats                       # picnic statistics (anyone)
+/picnic stats player|dimension|species &lt;value&gt;   # one slice of them (anyone)
+/picnic stats shiny                 # just the shinies (anyone)
 /picnic stats reset                 # clear the aggregates (operator)
 /picnic reload                      # re-read the config file from disk (operator)
 /picnic reset                       # restore every default (operator)
@@ -2162,6 +2198,11 @@ is part of playing. Changing anything needs <strong>operator</strong> rank.</p>
 <td>Whether sitting deploys your party.</td>
 </tr>
 <tr>
+<td><code>deploydistance &lt;min&gt; &lt;max&gt;</code></td>
+<td>two numbers</td>
+<td>How far out party members land when you sit (default <code>4 7</code>). Each Pokémon rolls its own distance in the band.</td>
+</tr>
+<tr>
 <td><code>actiondistance</code></td>
 <td>number</td>
 <td>Interaction range for picnic actions.</td>
@@ -2174,7 +2215,12 @@ is part of playing. Changing anything needs <strong>operator</strong> rank.</p>
 <tr>
 <td><code>washrequirestable</code></td>
 <td>true/false</td>
-<td>Require a nearby table to wash.</td>
+<td>Require a nearby table to wash. Off also shows the option on the wheel everywhere.</td>
+</tr>
+<tr>
+<td><code>washcooldown</code></td>
+<td>seconds</td>
+<td>Wait between washes, <strong>per Pokémon</strong> (default <code>3</code>).</td>
 </tr>
 <tr>
 <td><code>slimeballfriendship</code></td>
@@ -2184,12 +2230,22 @@ is part of playing. Changing anything needs <strong>operator</strong> rank.</p>
 <tr>
 <td><code>slimeballbreakchance</code></td>
 <td>0..1</td>
-<td>Chance the slime ball breaks when playing.</td>
+<td>Chance the slime ball breaks when playing. A <a href="../interactions-and-items/#fetchball">Fetchball</a> ignores this.</td>
 </tr>
 <tr>
 <td><code>slimeballrequirestable</code></td>
 <td>true/false</td>
-<td>Require a nearby table to play.</td>
+<td>Require a nearby table to play. Off also shows the option on the wheel everywhere.</td>
+</tr>
+<tr>
+<td><code>playcooldown</code></td>
+<td>seconds</td>
+<td>Wait between plays, <strong>per Pokémon</strong> (default <code>3</code>).</td>
+</tr>
+<tr>
+<td><code>flyingspawnlift</code></td>
+<td>blocks</td>
+<td>How high re-rolled fliers are lifted off the ground (default <code>12</code>, <code>0</code> grounds them). Never changes <em>which</em> Pokémon spawn.</td>
 </tr>
 <tr>
 <td><code>spawnappropriatelvltrainer</code></td>
@@ -2250,8 +2306,21 @@ within <code>seatedrepelradius</code> blocks lose their target and run away, lik
 <div class="highlight"><pre><span></span><code>/picnic stats          # show the summary
 /picnic stats reset    # (operator) clear the aggregates
 </code></pre></div>
+<h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
+<p>Ask for one slice instead of the lot. Each filter reports its own re-roll count, what came out, and
+the shiny rate for that slice alone — and for shinies, the species, level and coordinates of each one.
+All of them are open to everyone.</p>
+<div class="highlight"><pre><span></span><code>/picnic stats player &lt;name&gt;       # everything one trainer&#39;s re-rolls produced
+/picnic stats dimension &lt;id&gt;      # e.g. minecraft:the_nether
+/picnic stats species &lt;name&gt;      # every appearance of one species
+/picnic stats shiny               # just the shinies, and where they turned up
+</code></pre></div>
+<p><code>species</code> tab-completes from what the log has actually seen. <code>player</code> and <code>dimension</code> are free text,
+so you can ask about someone who's offline or a dimension that isn't loaded right now.</p>
 <p>Statistics persist in <code>config/cobblemon_picnic_stats.json</code> (aggregates) and
-<code>config/cobblemon_picnic_events.jsonl</code> (a granular per-re-roll log).</p>
+<code>config/cobblemon_picnic_events.jsonl</code> (a granular per-re-roll log). The <strong>summary</strong> reads the
+aggregates; the <strong>filters</strong> replay the log, which is the only place the per-re-roll detail survives —
+so a filter can look back further than the last <code>stats reset</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Seat counts are <strong>not</strong> configurable — they're fixed per tier. On a dedicated server use these

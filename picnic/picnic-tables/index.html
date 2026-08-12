@@ -1332,6 +1332,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where-each-table-can-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where each table can go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#placement-orientation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2125,6 +2136,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where-each-table-can-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where each table can go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#placement-orientation" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2201,6 +2223,22 @@ to the tier's seat cap. Leftover side cells stay empty.</p>
 <td style="text-align: center;">3 bread</td>
 <td><strong>Placed underwater only</strong></td>
 </tr>
+<tr>
+<td><strong>Hot</strong></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3 bread</td>
+<td><strong>Nether only</strong> — and the only table that survives there</td>
+</tr>
+<tr>
+<td><strong>Strange</strong></td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3 bread</td>
+<td><strong>End only</strong> — the only table allowed in</td>
+</tr>
 </tbody>
 </table>
 <ul>
@@ -2208,11 +2246,14 @@ to the tier's seat cap. Leftover side cells stay empty.</p>
 <li><strong>Radius</strong> — how far around the table wild Pokémon are despawned and re-rolled.</li>
 <li><strong>Seats</strong> — how many benches the footprint provides (seat counts are <strong>fixed per tier</strong>, not
   configurable).</li>
-<li><strong>Fuel</strong> — bread consumed per re-roll, on a <strong>7 / 5 / 3 / 3</strong> curve (cheaper as tiers improve).
-  Bread comes from the table's fuel slot or from a nearby
+<li><strong>Fuel</strong> — bread consumed per re-roll, cheaper as tiers improve (7 for Basic, 5 for Camping, 3 for
+  everything above). Bread comes from the table's fuel slot or from a nearby
   <strong><a href="../interactions-and-items/#picnic-baskets">Picnic Basket</a></strong>. The per-tier cost is configurable
   (<code>fuelcost &lt;tier&gt;</code>).</li>
 </ul>
+<p><strong>Basic → Camping → Glamping</strong> is the ladder. <strong>Diving</strong>, <strong>Hot</strong> and <strong>Strange</strong> are three steps
+sideways off the top of it: identical in what they do, different only in where they can go. See
+<a href="#where-each-table-can-go">Where each table can go</a>.</p>
 <h2 id="crafting">Crafting<a class="headerlink" href="#crafting" title="Permanent link">&para;</a></h2>
 <p>A Picnic Table is built in two steps: craft the <strong>three components</strong>, then assemble them into the
 <strong>Basic Picnic Table</strong>. Higher tiers are upgrades of that one.</p>
@@ -2417,7 +2458,7 @@ change how the table looks. Every color/wood variant is also available in the Cr
 <p>The three higher tiers are <strong>shapeless</strong> — the ingredients can sit anywhere in the grid. An upgrade
 <strong>keeps the color and wood</strong> the table was crafted with, so it stays the same style all the way up;
 the bench you add is fuel for the recipe, not a new style, and its wood is ignored.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Camping</label><label for="__tabbed_2_2">Glamping</label><label for="__tabbed_2_3">Diving</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Camping</label><label for="__tabbed_2_2">Glamping</label><label for="__tabbed_2_3">Diving</label><label for="__tabbed_2_4">Hot</label><label for="__tabbed_2_5">Strange</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><div class="cr-scroll">
@@ -2535,7 +2576,125 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 </tbody>
 </table>
 </div>
+<div class="tabbed-block">
+<p><div class="cr-scroll">
+<div class="cr-craft" title="Shapeless: Glamping Table + Netherite Ingot → Hot Picnic Table">
+  <div class="cr-grid cr-grid--2row">
+    <div class="cr-slot"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+    <div class="cr-slot"><img src="../../assets/items/netherite_ingot.png" alt="Netherite Ingot"></div>
+    <div class="cr-slot"></div>
+    <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
+  </div>
+  <div class="cr-arrow">➜</div>
+  <div class="cr-result"><img src="../../assets/items/hot_picnic_table.png" alt="Hot Picnic Table"></div>
 </div>
+</div></p>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th style="text-align: center;">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td><img class="cr-inline" src="../../assets/items/netherite_ingot.png" alt=""> Netherite Ingot</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td><strong>→ <img class="cr-inline" src="../../assets/items/hot_picnic_table.png" alt=""> Hot Picnic Table</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p><div class="cr-scroll">
+<div class="cr-craft" title="Shapeless: Glamping Table + Eye of Ender → Strange Picnic Table">
+  <div class="cr-grid cr-grid--2row">
+    <div class="cr-slot"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+    <div class="cr-slot"><img src="../../assets/items/ender_eye.png" alt="Eye of Ender"></div>
+    <div class="cr-slot"></div>
+    <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
+  </div>
+  <div class="cr-arrow">➜</div>
+  <div class="cr-result"><img src="../../assets/items/strange_picnic_table.png" alt="Strange Picnic Table"></div>
+</div>
+</div></p>
+<table>
+<thead>
+<tr>
+<th>Ingredient</th>
+<th style="text-align: center;">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td><img class="cr-inline" src="../../assets/items/ender_eye.png" alt=""> Eye of Ender</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td><strong>→ <img class="cr-inline" src="../../assets/items/strange_picnic_table.png" alt=""> Strange Picnic Table</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<h2 id="where-each-table-can-go">Where each table can go<a class="headerlink" href="#where-each-table-can-go" title="Permanent link">&para;</a></h2>
+<p>Every table is tied to a place, and the game tells you which one you want when you aim at the wrong
+one.</p>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th style="text-align: center;">Overworld</th>
+<th style="text-align: center;">Nether</th>
+<th style="text-align: center;">The End</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic / Camping / Glamping</strong></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">⚠️ catches fire</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td><strong>Diving</strong></td>
+<td style="text-align: center;">✅ underwater only</td>
+<td style="text-align: center;">⚠️ catches fire</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td><strong>Hot</strong></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr>
+<td><strong>Strange</strong></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">An ordinary table burns in the Nether</p>
+<p>Leave any table but the <strong>Hot</strong> one in the Nether and it has a <strong>30% chance every second</strong> of a
+flame taking hold on one of its cells. Nothing is destroyed outright — it burns from there under
+the normal fire rules, so you can still put it out. If you want to picnic down there, bring the
+<strong>Hot Picnic Table</strong>: it never catches fire.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Diving table</p>

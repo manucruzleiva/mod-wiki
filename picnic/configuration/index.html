@@ -2111,14 +2111,16 @@ needed). Statistics are stored separately in <code>config/cobblemon_picnic_stats
 <code>/picnic &lt;attribute&gt; default</code> to put one back the way it shipped. See the
 <a href="../commands/#attributes">Commands</a> page for the full list. Highlights:</p>
 <ul>
-<li><strong>Spawns:</strong> <code>reroll</code> (master on/off), <code>spawncap &lt;tier&gt;</code>, <code>fuelcost &lt;tier&gt;</code>, <code>rerollcooldown &lt;seconds&gt;</code></li>
+<li><strong>Spawns:</strong> <code>reroll</code> (master on/off), <code>spawncap &lt;tier&gt;</code>, <code>fuelcost &lt;tier&gt;</code>, <code>rerollcooldown &lt;seconds&gt;</code>,
+  <code>flyingspawnlift</code></li>
 <li><strong>Shiny aura:</strong> <code>shinyaura</code>, <code>auramultiplier</code> (odds at a full table — default <code>2</code>, i.e. double)</li>
-<li><strong>Care:</strong> <code>washfriendship</code>, <code>slimeballfriendship</code>, <code>slimeballbreakchance</code></li>
+<li><strong>Care:</strong> <code>washfriendship</code>, <code>slimeballfriendship</code>, <code>slimeballbreakchance</code>, <code>washcooldown</code>,
+  <code>playcooldown</code> (both per Pokémon)</li>
 <li><strong>Party fun:</strong> <code>tmteachchance</code> (rare TM cross-teaching on re-roll)</li>
 <li><strong>Battle Seeker:</strong> <code>spawnappropriatelvltrainer</code>, <code>trainerlevelgap</code></li>
 <li><strong>Re-roll protection:</strong> <code>protectshiny</code>, <code>protectlegendary</code>, <code>protectmythical</code>, <code>protectultrabeast</code></li>
 <li><strong>Peaceful picnic:</strong> <code>disableseatedaggro</code> (on by default), <code>seatedrepelradius</code></li>
-<li><strong>Misc:</strong> <code>light</code>, <code>actiondistance</code>, <code>deployonsit</code></li>
+<li><strong>Misc:</strong> <code>light</code>, <code>actiondistance</code>, <code>deployonsit</code>, <code>deploydistance</code></li>
 </ul>
 <h2 id="mod-menu-screen">Mod Menu screen<a class="headerlink" href="#mod-menu-screen" title="Permanent link">&para;</a></h2>
 <p>With <strong><a href="https://modrinth.com/mod/modmenu">Mod Menu</a></strong> + <strong><a href="https://modrinth.com/mod/cloth-config">Cloth Config</a></strong>
@@ -2176,7 +2178,7 @@ chance</strong> <code>0.05</code> (5%), <strong>full-table shiny multiplier</str
 <div class="admonition tip">
 <p class="admonition-title">Picnic without the spawn manipulation</p>
 <p><code>reroll false</code> (or <strong>General → "Spawn re-roll enabled"</strong> in Mod Menu) switches the re-roll off
-entirely: right-clicking a table then spawns and despawns nothing, and costs no bread. Seats, the
+entirely: left-clicking a table then spawns and despawns nothing, and costs no bread. Seats, the
 <a href="../shiny-aura/">Shiny Aura</a>, baskets, the <a href="../battle-seeker/">Battle Seeker</a> and the
 <a href="../interactions-and-items/">care interactions</a> all keep working.</p>
 </div>

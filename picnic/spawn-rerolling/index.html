@@ -1310,6 +1310,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where-they-appear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where they appear
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pokemon-that-fly-spawn-flying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pokémon that fly, spawn flying
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fuel" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2058,6 +2080,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#where-they-appear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where they appear
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pokemon-that-fly-spawn-flying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pokémon that fly, spawn flying
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fuel" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2119,7 +2163,7 @@
 
 
 <h1 id="spawn-re-rolling">Spawn Re-rolling<a class="headerlink" href="#spawn-re-rolling" title="Permanent link">&para;</a></h1>
-<p>The headline feature. <strong>Right-click the center (table) cells</strong> and the table will:</p>
+<p>The headline feature. <strong>Left-click the center (table) cells</strong> and the table will:</p>
 <ol>
 <li><strong>Despawn nearby wild Pokémon</strong> within the tier's <a href="../picnic-tables/#tiers">radius</a> — but <strong>never
    owned/tethered Pokémon</strong> (yours and other players' stay safe).</li>
@@ -2130,8 +2174,34 @@
 specific species without wandering the world.</p>
 <h2 id="how-many-spawn">How many spawn?<a class="headerlink" href="#how-many-spawn" title="Permanent link">&para;</a></h2>
 <p>Open the table's GUI and use the <strong>slider</strong> to choose how many Pokémon a re-roll spawns, up to the
-tier's <strong>spawn cap</strong> (Basic 5 → Glamping/Diving 12). The re-roll runs several spawner passes and
-stops early once it has placed enough or a pass yields nothing.</p>
+tier's <strong>spawn cap</strong> (Basic 5 → everything above 12). The re-roll runs several spawner passes and
+stops early once it has placed enough.</p>
+<h2 id="where-they-appear">Where they appear<a class="headerlink" href="#where-they-appear" title="Permanent link">&para;</a></h2>
+<p>Spawns land <strong>inside the table's own radius</strong>, 6 blocks out to the tier's limit, and the search
+follows the <strong>ground</strong> at whatever spot it picks. That is what makes a re-roll work on a mountain
+top, a ledge or a slope, where the terrain a few blocks away sits well below your feet.</p>
+<p>It also <strong>prefers ground near your own altitude</strong>. Stand on a summit and the re-roll fills the summit,
+not the valley below it — it only settles for lower ground when there's nothing else within reach, so
+a bare peak still gets its Pokémon.</p>
+<p>Underground and underwater the search keeps your own altitude instead, so caves and Diving tables
+behave the way you'd expect.</p>
+<p>A single unlucky spot doesn't end the attempt — the table keeps picking new ones until it fills your
+order or runs out of tries. If a place genuinely has nowhere to put a Pokémon, it says so plainly
+rather than reporting a silent zero. The bread is still spent: the area was cleared either way, and
+that can't be undone.</p>
+<h2 id="pokemon-that-fly-spawn-flying">Pokémon that fly, spawn flying<a class="headerlink" href="#pokemon-that-fly-spawn-flying" title="Permanent link">&para;</a></h2>
+<p>A re-rolled Pokémon whose species can fly is lifted <strong>3 to 12 blocks</strong> off the ground it appeared on,
+as far as clear air allows. Set the ceiling with <code>flyingspawnlift</code> (0 keeps everything on the ground).</p>
+<p>And a flier that spawned on ground <strong>below you climbs to your own altitude</strong>. On a peak that's the
+difference between watching them circle your table and never seeing them at all, because the only
+ground for a hundred blocks was somewhere down the mountainside. Clear air still has the final say, so
+none of them end up inside the mountain.</p>
+<div class="admonition note">
+<p class="admonition-title">It doesn't change your odds</p>
+<p>Lifting happens <strong>after</strong> the spawn is decided. Which Pokémon appear, and how often, is Cobblemon's
+call alone — its spawn pool, the biome, the light, and any <code>poke_snack</code> influence in range. Nothing
+is added, removed or re-rolled, so a shiny hunt runs at exactly the rate it always did.</p>
+</div>
 <h2 id="fuel">Fuel<a class="headerlink" href="#fuel" title="Permanent link">&para;</a></h2>
 <p>Each re-roll costs <strong>bread</strong>, depending on tier:</p>
 <table>
