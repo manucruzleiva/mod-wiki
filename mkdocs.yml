@@ -144,11 +144,8 @@ nav:
       - Picnic Tables: picnic/picnic-tables.md
       - Spawn Re-rolling: picnic/spawn-rerolling.md
       - Shiny Aura: picnic/shiny-aura.md
-      - Interactions & Items: picnic/interactions-and-items.md
-      - Battle Seeker: picnic/battle-seeker.md
-      - Commands: picnic/commands.md
-      - Configuration: picnic/configuration.md
-      - FAQ: picnic/faq.md
+      - Items & Care: picnic/interactions-and-items.md
+      - Commands & Config: picnic/commands.md
       - Roadmap: picnic/roadmap.md
       - Community Credits: picnic/credits.md
       - License: picnic/license.md

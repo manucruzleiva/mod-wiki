@@ -15,10 +15,9 @@ doubles them**. Every seat is worth exactly the same share of that bonus, so the
 Each person is worth **+0.25×**, and a full table is **×2.00** — that's the one number you can change
 (see [Tuning](#tuning) below); the rungs in between are always split evenly.
 
-!!! note "A full table means four seats"
-    The ladder is measured against the **largest** table (4 seats: Glamping and Diving). A smaller table
-    simply stops earlier — a **Basic** table seats 2, so it tops out at **×1.50**, and a **Camping**
-    table (3 seats) at **×1.75**. Sometimes you need a bigger table, not more friends.
+A **full table means four seats**, which is what Glamping, Diving, Hot and Strange provide. A smaller
+table simply stops earlier: **Basic** seats 2 and tops out at **×1.50**, **Camping** seats 3 and tops
+out at **×1.75**. Sometimes you need a bigger table, not more friends.
 
 ## It multiplies, it never replaces
 
@@ -57,7 +56,7 @@ Seats are invisible mounts — you'll snap neatly onto the bench.
 
 ## Tuning
 
-See **[Configuration](configuration.md)**:
+See **[Commands & Config](commands.md)**:
 
 | Setting | Meaning |
 |---------|---------|

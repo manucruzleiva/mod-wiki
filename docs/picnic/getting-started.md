@@ -1,53 +1,70 @@
 # Getting Started
 
-## Installation
+## Install
 
-Cobblemon Picnic runs on **Fabric** *and* **NeoForge** for Minecraft **1.21.1**.
+Cobblemon Picnic runs on **Fabric** *and* **NeoForge** for Minecraft **1.21.1**. Drop these in
+`mods/`:
 
-1. Install your loader for Minecraft **1.21.1**: **[Fabric Loader](https://fabricmc.net/use/)** *or*
-   **[NeoForge](https://neoforged.net/) 21.1.x**.
-2. Put these mods in your `mods/` folder:
-    - **Cobblemon Picnic** ([Modrinth](https://modrinth.com/mod/cobblemon-picnic) /
-      [CurseForge](https://www.curseforge.com/projects/1581251))
-    - **[Cobblemon](https://modrinth.com/mod/cobblemon) 1.7.x**
-    - **Fabric:** [Fabric API](https://modrinth.com/mod/fabric-api) +
-      [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin)
-    - **NeoForge:** [Architectury API](https://modrinth.com/mod/architectury-api) +
-      [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge)
-3. *(Optional)* **[Cloth Config](https://modrinth.com/mod/cloth-config)** for the in-game settings screen
-   (plus **[Mod Menu](https://modrinth.com/mod/modmenu)** on Fabric — on NeoForge the screen opens from the
-   mods list's **Config** button).
+| | |
+|---|---|
+| **Always** | **Cobblemon Picnic** ([Modrinth](https://modrinth.com/mod/cobblemon-picnic) · [CurseForge](https://www.curseforge.com/projects/1581251)) + [Cobblemon](https://modrinth.com/mod/cobblemon) 1.7.x |
+| **Fabric** | [Fabric API](https://modrinth.com/mod/fabric-api) + [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) |
+| **NeoForge** | [Architectury API](https://modrinth.com/mod/architectury-api) + [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) |
+| **Optional** | [Cloth Config](https://modrinth.com/mod/cloth-config) for the settings screen, plus [Mod Menu](https://modrinth.com/mod/modmenu) on Fabric |
 
-!!! tip "Server vs. client"
-    The mod runs on both. On a dedicated server, use the [commands](commands.md) to configure it
-    (the Mod Menu screen only edits the local client config).
+On a dedicated server, configure it with the [commands](commands.md) — the settings screen only
+edits your own client's file.
 
 ## Your first table
 
-1. **Craft a Picnic Table.** First the components — a **Table** (wool + planks, one per dye color), a
-   **Dining Bench** (slabs + planks, one per wood) and a **Picnic Basket** (apricorns + apricorn
-   planks) — then combine them with a **Nether Star**, a **Campfire Pot** and a **Campfire** into the
-   Basic Picnic Table. The Table and Bench you use set its color and wood. Full grids in
-   **[Picnic Tables → Crafting](picnic-tables.md#crafting)**.
-2. **Place it** on open, flat ground. The table is a **3×2 multiblock** that deploys **in front of
-   you**, with the table column centered — so face the direction you want it and place.
-3. **Add fuel.** **Right-click** a **center (table) cell** to open the GUI and drop **bread** into
-   the fuel slot, or place a **[Picnic Basket](interactions-and-items.md#picnic-baskets)** with bread
-   nearby.
-4. **Re-roll!** **Left-click** a **center (table) cell** to despawn the surrounding wild Pokémon and
-   roll a fresh batch. The slider in the GUI sets how many spawn (capped by tier).
+<div class="grid cards" markdown>
 
-!!! tip "One button each"
-    **Right-click** a table cell to open its GUI, **left-click** to re-roll, and **right-click a
-    bench** to sit. Table cells take no mining damage, so a re-roll can never break the table —
-    **hit a bench** when you want to pick the structure back up.
+- :material-hammer-wrench: **1 · Craft it**
 
-!!! note "Placement needs room"
-    The footprint is **3 wide × 2 deep**. If the cells are blocked, the table won't place. Leave a
-    clear area so spawns have room to appear.
+    ---
+
+    Three components — a **Table**, a **Dining Bench** and a **Picnic Basket** — then combine them
+    with a **Nether Star**, a **Campfire Pot** and a **Campfire**. The Table and Bench you pick set
+    its colour and wood.
+
+    [Full grids](picnic-tables.md#crafting)
+
+- :material-map-marker-plus: **2 · Place it**
+
+    ---
+
+    The table is a **3×2 multiblock** that deploys **in front of you**, table column centred on where
+    you aim. Face the way you want it and place. All six cells need to be free.
+
+- :material-bread-slice: **3 · Fuel it**
+
+    ---
+
+    **Right-click** a centre cell to open the GUI and put **bread** in the fuel slot — or leave a
+    [Picnic Basket](interactions-and-items.md#picnic-baskets) full of bread nearby and it pulls from
+    that.
+
+- :material-dice-multiple: **4 · Re-roll**
+
+    ---
+
+    **Left-click** a centre cell. The wild Pokémon around you are cleared and a fresh batch rolls in.
+    The GUI slider sets how many.
+
+</div>
+
+## One button each
+
+| Input | On a **table** cell | On a **bench** cell |
+|---|---|---|
+| **Right-click** | Opens the GUI | Sit down |
+| **Left-click** | Re-roll | Break the structure |
+
+Table cells take **no mining damage**, so a re-roll can never destroy the table by accident. When you
+want the structure back in your inventory, hit a **bench**.
 
 ## What next?
 
-- Bring friends and **[sit on the benches](shiny-aura.md)** to boost shiny odds.
-- Upgrade toward **Glamping** for the biggest radius and the **[Battle Seeker](battle-seeker.md)** slot.
-- Going underwater? Build a **[Diving table](picnic-tables.md#tiers)**.
+- Bring friends and **[sit on the benches](shiny-aura.md)** — a full table doubles everyone's shiny odds.
+- Upgrade to **[Glamping](picnic-tables.md#crafting)** for the biggest radius and the Battle Seeker slot.
+- Going somewhere strange? There's a table for **[underwater, the Nether and the End](picnic-tables.md#where-each-table-can-go)**.

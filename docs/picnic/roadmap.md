@@ -4,10 +4,9 @@ Cobblemon Picnic is **feature-complete for what it set out to do**: a picnic tab
 nearby wild spawns, plus the social layer around it. What comes next is driven almost entirely by
 what players ask for in [the Discord](https://discord.gg/SwcwXcCN4k).
 
-!!! info "This roadmap is short on purpose"
-    Unlike [Ditto HMs](../ditto-hms/roadmap.md), Picnic isn't marching toward a long feature list.
-    It gets **polish and options** as they're requested. If you want something, ask — small,
-    well-scoped requests tend to ship fast.
+This roadmap is short on purpose. Unlike [Ditto HMs](../ditto-hms/roadmap.md), Picnic isn't marching
+toward a long feature list — it gets **polish and options** as they're asked for. If you want
+something, ask: small, well-scoped requests tend to ship fast.
 
 ## Queued
 

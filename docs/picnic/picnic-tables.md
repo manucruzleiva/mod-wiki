@@ -10,7 +10,7 @@ to the tier's seat cap. Leftover side cells stay empty.
 |------|:---------:|:------:|:-----:|:--------------:|-------|
 | **Basic** | 5 | 32 | 2 | 7 bread | Entry tier |
 | **Camping** | 8 | 48 | 3 | 5 bread | Cheaper fuel, bigger |
-| **Glamping** | 12 | 64 | 4 | 3 bread | Unlocks the **[Battle Seeker](battle-seeker.md)** slot |
+| **Glamping** | 12 | 64 | 4 | 3 bread | Unlocks the **[Battle Seeker](interactions-and-items.md#battle-seeker)** slot |
 | **Diving** | 12 | 64 | 4 | 3 bread | **Placed underwater only** |
 | **Hot** | 12 | 64 | 4 | 3 bread | **Nether only** — and the only table that survives there |
 | **Strange** | 12 | 64 | 4 | 3 bread | **End only** — the only table allowed in |
@@ -278,22 +278,20 @@ one.
 | **Hot** | ❌ | ✅ | ❌ |
 | **Strange** | ❌ | ❌ | ✅ |
 
-!!! danger "An ordinary table burns in the Nether"
-    Leave any table but the **Hot** one in the Nether and it has a **30% chance every second** of a
-    flame taking hold on one of its cells. Nothing is destroyed outright — it burns from there under
-    the normal fire rules, so you can still put it out. If you want to picnic down there, bring the
-    **Hot Picnic Table**: it never catches fire.
+🔥 **An ordinary table burns in the Nether.** Leave any table but the **Hot** one down there and it
+has a **30% chance every second** of a flame taking hold on one of its cells. Nothing is destroyed
+outright — it burns from there under the normal fire rules, so you can still put it out. To picnic in
+the Nether properly, bring the Hot table: it never catches fire.
 
-!!! note "Diving table"
-    The **Diving** table can **only be placed underwater**. Try to place it in air and it won't
-    deploy.
+🌊 The **Diving** table is the same idea in water: it only deploys **submerged**, and won't place in air.
 
 ## Placement & orientation
 
-- The table **deploys in front of you** when you place it, with the **table column centered** on
-  where you aim. It orients to your facing — the "wide" axis runs left-to-right relative to you.
-- The structure is one block tall. Benches sit on the sides; the center is the functional table.
-- **Breaking** any cell breaks the whole structure and returns the table item.
+The table **deploys in front of you**, with the **table column centred** on where you aim, oriented to
+your facing — the "wide" axis runs left-to-right relative to you. The structure is one block tall:
+benches on the sides, the functional table down the middle. All six cells must be free, and each table
+needs its own footprint, since overlapping structures interfere with each other's cells.
 
-!!! warning "Don't place two tables touching"
-    Give each table its own footprint. Overlapping structures can interfere with each other's cells.
+**To pick it back up, break a bench.** Table cells take no mining damage — that's what keeps a re-roll
+from destroying the table you're clicking. Breaking any bench takes the whole structure and returns
+the table item.

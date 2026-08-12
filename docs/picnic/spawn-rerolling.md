@@ -44,10 +44,10 @@ difference between watching them circle your table and never seeing them at all,
 ground for a hundred blocks was somewhere down the mountainside. Clear air still has the final say, so
 none of them end up inside the mountain.
 
-!!! note "It doesn't change your odds"
-    Lifting happens **after** the spawn is decided. Which Pokémon appear, and how often, is Cobblemon's
-    call alone — its spawn pool, the biome, the light, and any `poke_snack` influence in range. Nothing
-    is added, removed or re-rolled, so a shiny hunt runs at exactly the rate it always did.
+**It doesn't change your odds.** Lifting happens *after* the spawn is decided. Which Pokémon appear,
+and how often, is Cobblemon's call alone — its spawn pool, the biome, the light, and any `poke_snack`
+influence in range. Nothing is added, removed or re-rolled, so a shiny hunt runs at exactly the rate
+it always did.
 
 ## Fuel
 
@@ -57,14 +57,13 @@ Each re-roll costs **bread**, depending on tier:
 |------|:-----------------:|
 | Basic | 7 |
 | Camping | 5 |
-| Glamping | 3 |
-| Diving | 3 |
+| Glamping · Diving · Hot · Strange | 3 |
 
-The cost follows a **7 / 5 / 3 / 3** curve — cheaper as tiers improve. Bread can come from the table's
+Fuel gets cheaper as tiers improve, and everything above Camping costs the same. Bread can come from the table's
 **fuel slot** or from a nearby placed
 **[Picnic Basket](interactions-and-items.md#picnic-baskets)** — the table will pull from baskets
 automatically. Out of bread? The table tells you and the re-roll is cancelled. Each per-tier cost is
-configurable via `fuelcost <tier>` (see **[Configuration](configuration.md)**).
+configurable via `fuelcost <tier>` (see **[Commands & Config](commands.md)**).
 
 ## Cooldown
 
@@ -86,6 +85,5 @@ If a **seasoned `poke_snack`** is nearby when you re-roll, the spawn **respects 
 influence** (so you can bias toward what the snack attracts) and **consumes one bite** of the closest
 snack. See **[Interactions & Items → Snacks](interactions-and-items.md#poke_snack-bias)**.
 
-!!! tip "Owned Pokémon are protected"
-    The despawn step explicitly skips Pokémon with an owner. You can leave your party out (or a
-    pasture nearby) and re-roll freely.
+**Owned Pokémon are always safe.** The despawn step skips anything with an owner, so you can leave
+your party out — or a pasture nearby — and re-roll freely.

@@ -1,4 +1,4 @@
-# Interactions & Items
+# Items & Care
 
 Beyond re-rolling, the picnic is a place to **care for your Pokémon** and **manage supplies**.
 
@@ -99,9 +99,8 @@ A bath sponge that never dries out. One of them washes a whole team, forever.
 | <img class="cr-inline" src="../../assets/items/slime_ball.png" alt=""> Slime Ball | 1 |
 | **→ <img class="cr-inline" src="../../assets/items/poke_sponge.png" alt=""> Poke-sponge** | **1** |
 
-!!! tip
-    The four sponge slots take **either** a dry Sponge or a Wet Sponge, in any mix — no need to dry
-    them out first. The two Water Buckets come back as empty buckets, as vanilla always returns them.
+The four sponge slots take **either** a dry Sponge or a Wet Sponge, in any mix — no need to dry them
+out first. The two Water Buckets come back as empty buckets, as vanilla always returns them.
 
 ## Picnic Baskets
 
@@ -144,12 +143,30 @@ table when you re-roll:
 
 This lets you steer a re-roll toward the kinds of Pokémon a given snack attracts.
 
-## Customization & misc
+## Battle Seeker
 
-- **Colors & woods** — tables come in **16 cloth colors × wood types**; baskets in every apricorn
-  color. All variants are in the Creative inventory.
-- **Flammable** — tables burn like wood planks if exposed to fire.
+Put a **Battle Seeker** in a **Glamping** table's fuel slot and every re-roll also **summons an RCT
+trainer** to battle. It is **never consumed** — it stays in the slot, so you can keep challenging
+trainers for as long as you like. Only the Glamping tier exposes that slot; every other tier uses it
+for bread.
 
-!!! tip
-    Friendship-building at the picnic stacks with normal Cobblemon mechanics — a good way to evolve
-    friendship-based Pokémon while you hunt.
+It has **no recipe**. It's rare loot from world chests, so keep looting structures.
+
+The trainer's level is matched to your party:
+
+| Setting | Meaning |
+|---------|---------|
+| `spawnappropriatelvltrainer <true\|false>` | Scale the trainer to your party's level. |
+| `trainerlevelgap <int>` | Level offset on top of the match, to make them tougher or softer. |
+
+⚠️ The summon needs **Radical Cobblemon Trainers (RCT)** installed. Without it the Battle Seeker
+simply does nothing and the rest of the table works normally.
+
+## Colours, woods and fire
+
+Tables come in **16 cloth colours × 11 woods**, baskets in every apricorn colour, and every variant is
+in the Creative inventory. All of them are **flammable** — they burn like wood planks, which is what
+the [Nether](picnic-tables.md#where-each-table-can-go) exploits.
+
+Friendship built at the picnic stacks with normal Cobblemon mechanics, so it's a good way to evolve
+friendship-based Pokémon while you hunt.

@@ -1,4 +1,4 @@
-# Commands
+# Commands & Config
 
 Everything lives under one command: **`/picnic`**.
 
@@ -34,8 +34,8 @@ is part of playing. Changing anything needs **operator** rank.
 | Attribute | Value | What it does |
 |-----------|-------|--------------|
 | `reroll` | true/false | Master switch for the [spawn re-roll](spawn-rerolling.md) itself. *Default on.* |
-| `spawncap <basic\|camping\|glamping\|diving>` | int | Max Pokémon per re-roll for that tier. |
-| `fuelcost <tier>` | int | Bread consumed per re-roll for that tier (defaults **7 / 5 / 3 / 3**). |
+| `spawncap <tier>` | int | Max Pokémon per re-roll for that tier. |
+| `fuelcost <tier>` | int | Bread consumed per re-roll for that tier (7 for Basic, 5 for Camping, 3 above). |
 | `rerollcooldown` | 0–3600 | Seconds between re-rolls (per-table **and** per-player). *Default 5. 0 disables.* |
 | `tmteachchance` | 0..1 | Chance per re-roll a party Pokémon teaches another a legal move. *Default 0.05. 0 disables.* |
 | `shinyaura` | true/false | Master switch for the [Shiny Aura](shiny-aura.md). |
@@ -52,7 +52,7 @@ is part of playing. Changing anything needs **operator** rank.
 | `slimeballrequirestable` | true/false | Require a nearby table to play. Off also shows the option on the wheel everywhere. |
 | `playcooldown` | seconds | Wait between plays, **per Pokémon** (default `3`). |
 | `flyingspawnlift` | blocks | How high re-rolled fliers are lifted off the ground (default `12`, `0` grounds them). Never changes *which* Pokémon spawn. |
-| `spawnappropriatelvltrainer` | true/false | Scale [Battle Seeker](battle-seeker.md) trainers to your level. |
+| `spawnappropriatelvltrainer` | true/false | Scale [Battle Seeker](interactions-and-items.md#battle-seeker) trainers to your level. |
 | `trainerlevelgap` | int | Level offset for summoned trainers. |
 | `protectshiny` | true/false | Re-roll keeps **shiny** wild Pokémon instead of despawning them. *Default off.* |
 | `protectlegendary` | true/false | Re-roll keeps **legendary** wild Pokémon. *Default off.* |
@@ -61,10 +61,9 @@ is part of playing. Changing anything needs **operator** rank.
 | `disableseatedaggro` | true/false | While someone is seated, hostile mobs **flee** the table. *Default on.* |
 | `seatedrepelradius` | 0–128 | How far (blocks) the seated mob-repulsion reaches. *Default 30.* |
 
-!!! tip "Peaceful picnic & rare protection"
-    The four `protect…` toggles are **opt-in** (default off) and granular — turn on only the rarities you
-    want the re-roll to spare. `disableseatedaggro` is **on by default**: sit at a table and hostile mobs
-    within `seatedrepelradius` blocks lose their target and run away, like a creeper fleeing a cat.
+The four `protect…` toggles are **opt-in** and granular — turn on only the rarities you want the
+re-roll to spare. `disableseatedaggro` is **on by default**: sit at a table and hostile mobs within
+`seatedrepelradius` blocks lose their target and run away, like a creeper fleeing a cat.
 
 ## `/picnic stats`
 
@@ -101,6 +100,43 @@ Statistics persist in `config/cobblemon_picnic_stats.json` (aggregates) and
 aggregates; the **filters** replay the log, which is the only place the per-re-roll detail survives —
 so a filter can look back further than the last `stats reset`.
 
-!!! note
-    Seat counts are **not** configurable — they're fixed per tier. On a dedicated server use these
-    commands; the [Mod Menu screen](configuration.md) only edits the local client config.
+## The settings screen
+
+With **[Cloth Config](https://modrinth.com/mod/cloth-config)** installed, the same values are editable
+in a GUI — on Fabric via **[Mod Menu](https://modrinth.com/mod/modmenu) → Cobblemon Picnic → Settings**,
+on NeoForge via the **Config** button in the mods list.
+
+⚠️ On a **dedicated server** that screen only edits **your own** client's file. Use the commands above
+to change the settings everyone plays under.
+
+## The config file
+
+```
+config/cobblemon_picnic.json          # settings
+config/cobblemon_picnic_stats.json    # statistics aggregates
+config/cobblemon_picnic_events.jsonl  # granular per-re-roll log
+```
+
+Edit the first by hand if you like, then apply it with `/picnic reload` — no restart needed.
+
+## Defaults
+
+| Tier | Spawn cap | Fuel/re-roll | Radius | Seats |
+|------|:---------:|:------------:|:------:|:-----:|
+| Basic | 5 | 7 | 32 | 2 |
+| Camping | 8 | 5 | 48 | 3 |
+| Glamping | 12 | 3 | 64 | 4 |
+| Diving | 12 | 3 | 64 | 4 |
+| Hot | 12 | 3 | 64 | 4 |
+| Strange | 12 | 3 | 64 | 4 |
+
+Seat counts are **fixed per tier** and not configurable. Elsewhere: re-roll cooldown **5 s**
+(per-table *and* per-player), party TM cross-teach **5%**, full-table shiny multiplier **×2**, wash
+and play cooldowns **3 s** each (per Pokémon), party deploy **4–7 blocks**.
+
+### Picnic without the spawn manipulation
+
+`/picnic reroll false` switches the re-roll off entirely — left-clicking a table then spawns and
+despawns nothing, and costs no bread. Seats, the [Shiny Aura](shiny-aura.md), baskets, the
+[Battle Seeker](interactions-and-items.md#battle-seeker) and the
+[care interactions](interactions-and-items.md) all keep working.
