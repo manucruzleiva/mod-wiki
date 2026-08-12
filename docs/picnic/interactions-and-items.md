@@ -108,19 +108,22 @@ out first. The two Water Buckets come back as empty buckets, as vanilla always r
 picks the color, and a basket is also an ingredient of the Picnic Table itself.
 
 <div class="cr-scroll">
-<div class="cr-craft" title="2× Red Apricorn + 2× Apricorn Planks → 1× Red Picnic Basket">
-  <div class="cr-grid cr-grid--2row">
-    <div class="cr-slot"><img src="../../assets/items/red_apricorn.png" alt="Apricorn"></div>
-    <div class="cr-slot"><img src="../../assets/items/red_apricorn.png" alt="Apricorn"></div>
+<div class="cr-craft" title="2× Apricorn + 2× Apricorn Planks → 1× Picnic Basket in that colour">
+  <div class="cr-grid">
+    <div class="cr-slot cr-cycle" style="--n:7; background-image:url(../../assets/items/strips/apricorn.png)" role="img" aria-label="Apricorn — any of the 7 colours"></div>
+    <div class="cr-slot cr-cycle" style="--n:7; background-image:url(../../assets/items/strips/apricorn.png)" role="img" aria-label="Apricorn — any of the 7 colours"></div>
     <div class="cr-slot"></div>
     <div class="cr-slot"><img src="../../assets/items/apricorn_planks.png" alt="Apricorn Planks"></div>
     <div class="cr-slot"><img src="../../assets/items/apricorn_planks.png" alt="Apricorn Planks"></div>
     <div class="cr-slot"></div>
+    <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
   </div>
   <div class="cr-arrow">➜</div>
-  <div class="cr-result"><img src="../../assets/items/red_picnic_basket.png" alt="Red Picnic Basket"></div>
+  <div class="cr-result cr-cycle" style="--n:7; background-image:url(../../assets/items/strips/basket.png)" role="img" aria-label="Picnic Basket in the apricorn's colour"></div>
 </div>
 </div>
+
+The apricorn and the basket cycle together: **whichever colour you put in is the colour you get out.**
 
 | Ingredient | Amount |
 | --- | :---: |
