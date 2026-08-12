@@ -1115,12 +1115,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
     
@@ -1243,10 +1237,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#install" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        Install
       
     </span>
   </a>
@@ -1258,6 +1252,17 @@
     <span class="md-ellipsis">
       
         Your first table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-button-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One button each
       
     </span>
   </a>
@@ -1382,35 +1387,7 @@
   <span class="md-ellipsis">
     
   
-    Interactions & Items
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../battle-seeker/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Battle Seeker
+    Items & Care
   
 
     
@@ -1438,63 +1415,7 @@
   <span class="md-ellipsis">
     
   
-    Commands
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configuration
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FAQ
+    Commands & Config
   
 
     
@@ -2025,10 +1946,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#install" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        Install
       
     </span>
   </a>
@@ -2040,6 +1961,17 @@
     <span class="md-ellipsis">
       
         Your first table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-button-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        One button each
       
     </span>
   </a>
@@ -2075,61 +2007,98 @@
 
 
 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>Cobblemon Picnic runs on <strong>Fabric</strong> <em>and</em> <strong>NeoForge</strong> for Minecraft <strong>1.21.1</strong>.</p>
-<ol>
-<li>Install your loader for Minecraft <strong>1.21.1</strong>: <strong><a href="https://fabricmc.net/use/">Fabric Loader</a></strong> <em>or</em>
-   <strong><a href="https://neoforged.net/">NeoForge</a> 21.1.x</strong>.</li>
-<li>Put these mods in your <code>mods/</code> folder:<ul>
-<li><strong>Cobblemon Picnic</strong> (<a href="https://modrinth.com/mod/cobblemon-picnic">Modrinth</a> /
-  <a href="https://www.curseforge.com/projects/1581251">CurseForge</a>)</li>
-<li><strong><a href="https://modrinth.com/mod/cobblemon">Cobblemon</a> 1.7.x</strong></li>
-<li><strong>Fabric:</strong> <a href="https://modrinth.com/mod/fabric-api">Fabric API</a> +
-  <a href="https://modrinth.com/mod/fabric-language-kotlin">Fabric Language Kotlin</a></li>
-<li><strong>NeoForge:</strong> <a href="https://modrinth.com/mod/architectury-api">Architectury API</a> +
-  <a href="https://modrinth.com/mod/kotlin-for-forge">Kotlin for Forge</a></li>
-</ul>
-</li>
-<li><em>(Optional)</em> <strong><a href="https://modrinth.com/mod/cloth-config">Cloth Config</a></strong> for the in-game settings screen
-   (plus <strong><a href="https://modrinth.com/mod/modmenu">Mod Menu</a></strong> on Fabric — on NeoForge the screen opens from the
-   mods list's <strong>Config</strong> button).</li>
-</ol>
-<div class="admonition tip">
-<p class="admonition-title">Server vs. client</p>
-<p>The mod runs on both. On a dedicated server, use the <a href="../commands/">commands</a> to configure it
-(the Mod Menu screen only edits the local client config).</p>
-</div>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<p>Cobblemon Picnic runs on <strong>Fabric</strong> <em>and</em> <strong>NeoForge</strong> for Minecraft <strong>1.21.1</strong>. Drop these in
+<code>mods/</code>:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Always</strong></td>
+<td><strong>Cobblemon Picnic</strong> (<a href="https://modrinth.com/mod/cobblemon-picnic">Modrinth</a> · <a href="https://www.curseforge.com/projects/1581251">CurseForge</a>) + <a href="https://modrinth.com/mod/cobblemon">Cobblemon</a> 1.7.x</td>
+</tr>
+<tr>
+<td><strong>Fabric</strong></td>
+<td><a href="https://modrinth.com/mod/fabric-api">Fabric API</a> + <a href="https://modrinth.com/mod/fabric-language-kotlin">Fabric Language Kotlin</a></td>
+</tr>
+<tr>
+<td><strong>NeoForge</strong></td>
+<td><a href="https://modrinth.com/mod/architectury-api">Architectury API</a> + <a href="https://modrinth.com/mod/kotlin-for-forge">Kotlin for Forge</a></td>
+</tr>
+<tr>
+<td><strong>Optional</strong></td>
+<td><a href="https://modrinth.com/mod/cloth-config">Cloth Config</a> for the settings screen, plus <a href="https://modrinth.com/mod/modmenu">Mod Menu</a> on Fabric</td>
+</tr>
+</tbody>
+</table>
+<p>On a dedicated server, configure it with the <a href="../commands/">commands</a> — the settings screen only
+edits your own client's file.</p>
 <h2 id="your-first-table">Your first table<a class="headerlink" href="#your-first-table" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Craft a Picnic Table.</strong> First the components — a <strong>Table</strong> (wool + planks, one per dye color), a
-   <strong>Dining Bench</strong> (slabs + planks, one per wood) and a <strong>Picnic Basket</strong> (apricorns + apricorn
-   planks) — then combine them with a <strong>Nether Star</strong>, a <strong>Campfire Pot</strong> and a <strong>Campfire</strong> into the
-   Basic Picnic Table. The Table and Bench you use set its color and wood. Full grids in
-   <strong><a href="../picnic-tables/#crafting">Picnic Tables → Crafting</a></strong>.</li>
-<li><strong>Place it</strong> on open, flat ground. The table is a <strong>3×2 multiblock</strong> that deploys <strong>in front of
-   you</strong>, with the table column centered — so face the direction you want it and place.</li>
-<li><strong>Add fuel.</strong> <strong>Right-click</strong> a <strong>center (table) cell</strong> to open the GUI and drop <strong>bread</strong> into
-   the fuel slot, or place a <strong><a href="../interactions-and-items/#picnic-baskets">Picnic Basket</a></strong> with bread
-   nearby.</li>
-<li><strong>Re-roll!</strong> <strong>Left-click</strong> a <strong>center (table) cell</strong> to despawn the surrounding wild Pokémon and
-   roll a fresh batch. The slider in the GUI sets how many spawn (capped by tier).</li>
-</ol>
-<div class="admonition tip">
-<p class="admonition-title">One button each</p>
-<p><strong>Right-click</strong> a table cell to open its GUI, <strong>left-click</strong> to re-roll, and <strong>right-click a
-bench</strong> to sit. Table cells take no mining damage, so a re-roll can never break the table —
-<strong>hit a bench</strong> when you want to pick the structure back up.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.78 15.3 6 6 2.11-2.16-6-6zm3.72-5.2c-.39 0-.81-.05-1.14-.19L4.97 21.25l-2.11-2.11 7.41-7.4L8.5 9.96l-.72.7-1.45-1.41v2.86l-.7.7-3.52-3.56.7-.7h2.81l-1.4-1.41 3.56-3.56a2.976 2.976 0 0 1 4.22 0L9.89 5.74l1.41 1.4-.71.71 1.79 1.78 1.82-1.88c-.14-.33-.2-.75-.2-1.12a3.49 3.49 0 0 1 3.5-3.52c.59 0 1.11.14 1.58.42L16.41 6.2l1.5 1.5 2.67-2.67c.28.47.42.97.42 1.6 0 1.92-1.55 3.47-3.5 3.47"/></svg></span> <strong>1 · Craft it</strong></p>
+<hr />
+<p>Three components — a <strong>Table</strong>, a <strong>Dining Bench</strong> and a <strong>Picnic Basket</strong> — then combine them
+with a <strong>Nether Star</strong>, a <strong>Campfire Pot</strong> and a <strong>Campfire</strong>. The Table and Bench you pick set
+its colour and wood.</p>
+<p><a href="../picnic-tables/#crafting">Full grids</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 11.5A2.5 2.5 0 0 0 11.5 9 2.5 2.5 0 0 0 9 6.5 2.5 2.5 0 0 0 6.5 9 2.5 2.5 0 0 0 9 11.5M9 2c3.86 0 7 3.13 7 7 0 5.25-7 13-7 13S2 14.25 2 9a7 7 0 0 1 7-7m6 15h3v-3h2v3h3v2h-3v3h-2v-3h-3z"/></svg></span> <strong>2 · Place it</strong></p>
+<hr />
+<p>The table is a <strong>3×2 multiblock</strong> that deploys <strong>in front of you</strong>, table column centred on where
+you aim. Face the way you want it and place. All six cells need to be free.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c5.5 0 10 3.36 10 7.5 0 1.69-.74 3.25-2 4.5v8H4v-8c-1.26-1.25-2-2.81-2-4.5C2 5.36 6.5 2 12 2M8 18h4v-4H8z"/></svg></span> <strong>3 · Fuel it</strong></p>
+<hr />
+<p><strong>Right-click</strong> a centre cell to open the GUI and put <strong>bread</strong> in the fuel slot — or leave a
+<a href="../interactions-and-items/#picnic-baskets">Picnic Basket</a> full of bread nearby and it pulls from
+that.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.78 3h-8.56C10.55 3 10 3.55 10 4.22V8h6v6h3.78c.67 0 1.22-.55 1.22-1.22V4.22C21 3.55 20.45 3 19.78 3m-7.34 3.67a1.23 1.23 0 1 1 0-2.46 1.23 1.23 0 0 1 1.23 1.23c0 .68-.55 1.23-1.23 1.23m6.12 6.11a1.23 1.23 0 1 1-.02-2.46c.68-.01 1.23.54 1.24 1.24-.01.67-.55 1.21-1.22 1.22m0-6.11a1.23 1.23 0 1 1-.02-2.46 1.231 1.231 0 0 1 .02 2.46M4.22 10h8.56A1.22 1.22 0 0 1 14 11.22v8.56c0 .67-.55 1.22-1.22 1.22H4.22C3.55 21 3 20.45 3 19.78v-8.56c0-.67.55-1.22 1.22-1.22m4.28 4.28c-.67 0-1.22.55-1.22 1.22s.55 1.22 1.22 1.22 1.22-.55 1.22-1.22a1.22 1.22 0 0 0-1.22-1.22m-3.06-3.06c-.67 0-1.22.55-1.22 1.22a1.22 1.22 0 0 0 1.22 1.22c.67 0 1.22-.55 1.22-1.22s-.55-1.22-1.22-1.22m6.11 6.11c-.67 0-1.22.55-1.22 1.22s.55 1.22 1.22 1.22a1.22 1.22 0 0 0 1.22-1.22c0-.67-.54-1.21-1.21-1.22z"/></svg></span> <strong>4 · Re-roll</strong></p>
+<hr />
+<p><strong>Left-click</strong> a centre cell. The wild Pokémon around you are cleared and a fresh batch rolls in.
+The GUI slider sets how many.</p>
+</li>
+</ul>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Placement needs room</p>
-<p>The footprint is <strong>3 wide × 2 deep</strong>. If the cells are blocked, the table won't place. Leave a
-clear area so spawns have room to appear.</p>
-</div>
+<h2 id="one-button-each">One button each<a class="headerlink" href="#one-button-each" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>On a <strong>table</strong> cell</th>
+<th>On a <strong>bench</strong> cell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Right-click</strong></td>
+<td>Opens the GUI</td>
+<td>Sit down</td>
+</tr>
+<tr>
+<td><strong>Left-click</strong></td>
+<td>Re-roll</td>
+<td>Break the structure</td>
+</tr>
+</tbody>
+</table>
+<p>Table cells take <strong>no mining damage</strong>, so a re-roll can never destroy the table by accident. When you
+want the structure back in your inventory, hit a <strong>bench</strong>.</p>
 <h2 id="what-next">What next?<a class="headerlink" href="#what-next" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Bring friends and <strong><a href="../shiny-aura/">sit on the benches</a></strong> to boost shiny odds.</li>
-<li>Upgrade toward <strong>Glamping</strong> for the biggest radius and the <strong><a href="../battle-seeker/">Battle Seeker</a></strong> slot.</li>
-<li>Going underwater? Build a <strong><a href="../picnic-tables/#tiers">Diving table</a></strong>.</li>
+<li>Bring friends and <strong><a href="../shiny-aura/">sit on the benches</a></strong> — a full table doubles everyone's shiny odds.</li>
+<li>Upgrade to <strong><a href="../picnic-tables/#crafting">Glamping</a></strong> for the biggest radius and the Battle Seeker slot.</li>
+<li>Going somewhere strange? There's a table for <strong><a href="../picnic-tables/#where-each-table-can-go">underwater, the Nether and the End</a></strong>.</li>
 </ul>
 
 

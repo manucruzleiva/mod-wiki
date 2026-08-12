@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://manucruzleiva.github.io/mod-wiki/picnic/commands/">
       
       
-        <link rel="prev" href="../battle-seeker/">
+        <link rel="prev" href="../interactions-and-items/">
       
       
-        <link rel="next" href="../configuration/">
+        <link rel="next" href="../roadmap/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Commands - Modding Wiki</title>
+        <title>Commands & Config - Modding Wiki</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#commands" class="md-skip">
+        <a href="#commands-config" class="md-skip">
           Skip to content
         </a>
       
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Commands
+              Commands & Config
             
           </span>
         </div>
@@ -1115,12 +1115,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
     
@@ -1302,35 +1296,7 @@
   <span class="md-ellipsis">
     
   
-    Interactions & Items
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../battle-seeker/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Battle Seeker
+    Items & Care
   
 
     
@@ -1367,7 +1333,7 @@
   <span class="md-ellipsis">
     
   
-    Commands
+    Commands & Config
   
 
     
@@ -1385,7 +1351,7 @@
   <span class="md-ellipsis">
     
   
-    Commands
+    Commands & Config
   
 
     
@@ -1466,66 +1432,60 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-settings-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The settings screen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The config file
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defaults
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defaults">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#picnic-without-the-spawn-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Picnic without the spawn manipulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configuration
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    FAQ
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -2103,6 +2063,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-settings-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The settings screen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The config file
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defaults
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defaults">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#picnic-without-the-spawn-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Picnic without the spawn manipulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2120,7 +2130,7 @@
 
 
 
-<h1 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h1>
+<h1 id="commands-config">Commands &amp; Config<a class="headerlink" href="#commands-config" title="Permanent link">&para;</a></h1>
 <p>Everything lives under one command: <strong><code>/picnic</code></strong>.</p>
 <div class="highlight"><pre><span></span><code>/picnic                             # print every setting (anyone)
 /picnic &lt;attribute&gt; &lt;value&gt;         # change one setting (operator)
@@ -2158,14 +2168,14 @@ is part of playing. Changing anything needs <strong>operator</strong> rank.</p>
 <td>Master switch for the <a href="../spawn-rerolling/">spawn re-roll</a> itself. <em>Default on.</em></td>
 </tr>
 <tr>
-<td><code>spawncap &lt;basic\|camping\|glamping\|diving&gt;</code></td>
+<td><code>spawncap &lt;tier&gt;</code></td>
 <td>int</td>
 <td>Max Pokémon per re-roll for that tier.</td>
 </tr>
 <tr>
 <td><code>fuelcost &lt;tier&gt;</code></td>
 <td>int</td>
-<td>Bread consumed per re-roll for that tier (defaults <strong>7 / 5 / 3 / 3</strong>).</td>
+<td>Bread consumed per re-roll for that tier (7 for Basic, 5 for Camping, 3 above).</td>
 </tr>
 <tr>
 <td><code>rerollcooldown</code></td>
@@ -2250,7 +2260,7 @@ is part of playing. Changing anything needs <strong>operator</strong> rank.</p>
 <tr>
 <td><code>spawnappropriatelvltrainer</code></td>
 <td>true/false</td>
-<td>Scale <a href="../battle-seeker/">Battle Seeker</a> trainers to your level.</td>
+<td>Scale <a href="../interactions-and-items/#battle-seeker">Battle Seeker</a> trainers to your level.</td>
 </tr>
 <tr>
 <td><code>trainerlevelgap</code></td>
@@ -2289,12 +2299,9 @@ is part of playing. Changing anything needs <strong>operator</strong> rank.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">Peaceful picnic &amp; rare protection</p>
-<p>The four <code>protect…</code> toggles are <strong>opt-in</strong> (default off) and granular — turn on only the rarities you
-want the re-roll to spare. <code>disableseatedaggro</code> is <strong>on by default</strong>: sit at a table and hostile mobs
-within <code>seatedrepelradius</code> blocks lose their target and run away, like a creeper fleeing a cat.</p>
-</div>
+<p>The four <code>protect…</code> toggles are <strong>opt-in</strong> and granular — turn on only the rarities you want the
+re-roll to spare. <code>disableseatedaggro</code> is <strong>on by default</strong>: sit at a table and hostile mobs within
+<code>seatedrepelradius</code> blocks lose their target and run away, like a creeper fleeing a cat.</p>
 <h2 id="picnic-stats"><code>/picnic stats</code><a class="headerlink" href="#picnic-stats" title="Permanent link">&para;</a></h2>
 <p>Available to <strong>everyone</strong>. Shows a summary of picnic activity:</p>
 <ul>
@@ -2321,11 +2328,82 @@ so you can ask about someone who's offline or a dimension that isn't loaded righ
 <code>config/cobblemon_picnic_events.jsonl</code> (a granular per-re-roll log). The <strong>summary</strong> reads the
 aggregates; the <strong>filters</strong> replay the log, which is the only place the per-re-roll detail survives —
 so a filter can look back further than the last <code>stats reset</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Seat counts are <strong>not</strong> configurable — they're fixed per tier. On a dedicated server use these
-commands; the <a href="../configuration/">Mod Menu screen</a> only edits the local client config.</p>
-</div>
+<h2 id="the-settings-screen">The settings screen<a class="headerlink" href="#the-settings-screen" title="Permanent link">&para;</a></h2>
+<p>With <strong><a href="https://modrinth.com/mod/cloth-config">Cloth Config</a></strong> installed, the same values are editable
+in a GUI — on Fabric via <strong><a href="https://modrinth.com/mod/modmenu">Mod Menu</a> → Cobblemon Picnic → Settings</strong>,
+on NeoForge via the <strong>Config</strong> button in the mods list.</p>
+<p>⚠️ On a <strong>dedicated server</strong> that screen only edits <strong>your own</strong> client's file. Use the commands above
+to change the settings everyone plays under.</p>
+<h2 id="the-config-file">The config file<a class="headerlink" href="#the-config-file" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>config/cobblemon_picnic.json          # settings
+config/cobblemon_picnic_stats.json    # statistics aggregates
+config/cobblemon_picnic_events.jsonl  # granular per-re-roll log
+</code></pre></div>
+<p>Edit the first by hand if you like, then apply it with <code>/picnic reload</code> — no restart needed.</p>
+<h2 id="defaults">Defaults<a class="headerlink" href="#defaults" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th style="text-align: center;">Spawn cap</th>
+<th style="text-align: center;">Fuel/re-roll</th>
+<th style="text-align: center;">Radius</th>
+<th style="text-align: center;">Seats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td>Camping</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">48</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td>Glamping</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td>Diving</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td>Hot</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td>Strange</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">64</td>
+<td style="text-align: center;">4</td>
+</tr>
+</tbody>
+</table>
+<p>Seat counts are <strong>fixed per tier</strong> and not configurable. Elsewhere: re-roll cooldown <strong>5 s</strong>
+(per-table <em>and</em> per-player), party TM cross-teach <strong>5%</strong>, full-table shiny multiplier <strong>×2</strong>, wash
+and play cooldowns <strong>3 s</strong> each (per Pokémon), party deploy <strong>4–7 blocks</strong>.</p>
+<h3 id="picnic-without-the-spawn-manipulation">Picnic without the spawn manipulation<a class="headerlink" href="#picnic-without-the-spawn-manipulation" title="Permanent link">&para;</a></h3>
+<p><code>/picnic reroll false</code> switches the re-roll off entirely — left-clicking a table then spawns and
+despawns nothing, and costs no bread. Seats, the <a href="../shiny-aura/">Shiny Aura</a>, baskets, the
+<a href="../interactions-and-items/#battle-seeker">Battle Seeker</a> and the
+<a href="../interactions-and-items/">care interactions</a> all keep working.</p>
 
 
 
