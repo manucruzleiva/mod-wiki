@@ -485,6 +485,12 @@ body {
    a markdown table is a regression; readers scan the grid, they don't parse a
    sentence.
 
+   ALWAYS draw the full 3x3, whatever the recipe uses. A grid cropped to the rows
+   that hold something stops looking like a crafting bench: a shapeless upgrade
+   reads as if it had to sit in one particular half of the table, and two recipes
+   side by side look like two different sizes of bench. The empty slots are part
+   of the picture.
+
    The rules that keep the grids one system:
      - Icons come from `docs/assets/items/`, ONE shared library for every mod,
        referenced as `../../assets/items/<item>.png` from a `docs/<mod>/<page>.md`.
@@ -522,12 +528,6 @@ body {
   grid-template-columns: repeat(3, 44px);
   grid-template-rows: repeat(3, 44px);
   gap: 4px;
-}
-
-/* A recipe that never uses the bottom row (a 3x2 like the tables and benches)
-   declares .cr-grid--2row so the bench doesn't carry an empty strip. */
-.cr-grid--2row {
-  grid-template-rows: repeat(2, 44px);
 }
 
 .cr-slot {
@@ -597,4 +597,71 @@ body {
 .cr-scroll {
   overflow-x: auto;
   max-width: 100%;
+}
+
+/* ── Cycling recipe slots ─────────────────────────────────────────────────────
+Several recipes take ANY member of a family — any of the 7 apricorns, any of the
+16 wool colours, any of the 11 woods — and the result matches whichever you used.
+A grid frozen on one colour hides that, and readers were left guessing whether
+the red basket in the picture was the only one they could make.
+
+A cycling slot flips through the whole family in place, and its result slot
+cycles in lockstep, so what you see going in and what comes out always agree.
+That is the mix-and-match rule shown instead of explained.
+
+Each family is ONE horizontal strip of 32px frames, stepped with `steps()`. That
+matters: the obvious alternative — stacking one <img> per frame and fading them
+with staggered delays — needs a keyframe whose percentages depend on the frame
+count, and `calc()` is not allowed in a @keyframes selector. Driving the strip
+instead keeps a single keyframe working for families of any size, and costs one
+DOM node and one request per family rather than one per frame.
+
+--n is the frame count, set inline next to the strip's URL.
+──────────────────────────────────────────────────────────────────────────────*/
+
+.cr-cycle {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: calc(var(--n) * 32px) 32px;
+  image-rendering: pixelated;
+  /* La cantidad de fotogramas viaja como clase, no como var(): steps() exige un
+     <integer> y meter una custom property adentro no es fiable en todos los motores. */
+  animation-name: cr-cycle-step;
+  animation-duration: calc(var(--n) * var(--cr-step, 1.1s));
+  animation-iteration-count: infinite;
+}
+
+@keyframes cr-cycle-step {
+  to { background-position: calc(var(--n) * -32px) 0; }
+}
+
+.cr-cycle--7  { --n: 7;  animation-timing-function: steps(7); }
+.cr-cycle--11 { --n: 11; animation-timing-function: steps(11); }
+.cr-cycle--16 { --n: 16; animation-timing-function: steps(16); }
+
+/* In a 44px slot the 32px strip needs centring by hand, since background-position
+   is doing the animating and can't also carry the offset. */
+.cr-slot.cr-cycle {
+  background-origin: content-box;
+  padding: 6px;
+}
+
+/* The result slot is bigger, so its frames are drawn bigger to match .cr-result img. */
+.cr-result.cr-cycle {
+  background-size: calc(var(--n) * 40px) 40px;
+  background-origin: content-box;
+  padding: 9px;
+  animation-name: cr-cycle-step-lg;
+}
+
+@keyframes cr-cycle-step-lg {
+  to { background-position: calc(var(--n) * -40px) 0; }
+}
+
+/* A wiki must not force motion on someone whose system asked for less of it:
+   the slot holds on its first frame instead. */
+@media (prefers-reduced-motion: reduce) {
+  .cr-cycle {
+    animation: none;
+  }
 }
