@@ -1,6 +1,6 @@
 # Spawn Re-rolling
 
-The headline feature. **Right-click the center (table) cells** and the table will:
+The headline feature. **Left-click the center (table) cells** and the table will:
 
 1. **Despawn nearby wild Pokémon** within the tier's [radius](picnic-tables.md#tiers) — but **never
    owned/tethered Pokémon** (yours and other players' stay safe).
@@ -13,8 +13,41 @@ specific species without wandering the world.
 ## How many spawn?
 
 Open the table's GUI and use the **slider** to choose how many Pokémon a re-roll spawns, up to the
-tier's **spawn cap** (Basic 5 → Glamping/Diving 12). The re-roll runs several spawner passes and
-stops early once it has placed enough or a pass yields nothing.
+tier's **spawn cap** (Basic 5 → everything above 12). The re-roll runs several spawner passes and
+stops early once it has placed enough.
+
+## Where they appear
+
+Spawns land **inside the table's own radius**, 6 blocks out to the tier's limit, and the search
+follows the **ground** at whatever spot it picks. That is what makes a re-roll work on a mountain
+top, a ledge or a slope, where the terrain a few blocks away sits well below your feet.
+
+It also **prefers ground near your own altitude**. Stand on a summit and the re-roll fills the summit,
+not the valley below it — it only settles for lower ground when there's nothing else within reach, so
+a bare peak still gets its Pokémon.
+
+Underground and underwater the search keeps your own altitude instead, so caves and Diving tables
+behave the way you'd expect.
+
+A single unlucky spot doesn't end the attempt — the table keeps picking new ones until it fills your
+order or runs out of tries. If a place genuinely has nowhere to put a Pokémon, it says so plainly
+rather than reporting a silent zero. The bread is still spent: the area was cleared either way, and
+that can't be undone.
+
+## Pokémon that fly, spawn flying
+
+A re-rolled Pokémon whose species can fly is lifted **3 to 12 blocks** off the ground it appeared on,
+as far as clear air allows. Set the ceiling with `flyingspawnlift` (0 keeps everything on the ground).
+
+And a flier that spawned on ground **below you climbs to your own altitude**. On a peak that's the
+difference between watching them circle your table and never seeing them at all, because the only
+ground for a hundred blocks was somewhere down the mountainside. Clear air still has the final say, so
+none of them end up inside the mountain.
+
+!!! note "It doesn't change your odds"
+    Lifting happens **after** the spawn is decided. Which Pokémon appear, and how often, is Cobblemon's
+    call alone — its spawn pool, the biome, the light, and any `poke_snack` influence in range. Nothing
+    is added, removed or re-rolled, so a shiny hunt runs at exactly the rate it always did.
 
 ## Fuel
 

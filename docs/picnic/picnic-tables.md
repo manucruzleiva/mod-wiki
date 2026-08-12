@@ -12,15 +12,21 @@ to the tier's seat cap. Leftover side cells stay empty.
 | **Camping** | 8 | 48 | 3 | 5 bread | Cheaper fuel, bigger |
 | **Glamping** | 12 | 64 | 4 | 3 bread | Unlocks the **[Battle Seeker](battle-seeker.md)** slot |
 | **Diving** | 12 | 64 | 4 | 3 bread | **Placed underwater only** |
+| **Hot** | 12 | 64 | 4 | 3 bread | **Nether only** — and the only table that survives there |
+| **Strange** | 12 | 64 | 4 | 3 bread | **End only** — the only table allowed in |
 
 - **Spawn cap** — the maximum Pokémon a single re-roll can spawn (and the GUI slider's max).
 - **Radius** — how far around the table wild Pokémon are despawned and re-rolled.
 - **Seats** — how many benches the footprint provides (seat counts are **fixed per tier**, not
   configurable).
-- **Fuel** — bread consumed per re-roll, on a **7 / 5 / 3 / 3** curve (cheaper as tiers improve).
-  Bread comes from the table's fuel slot or from a nearby
+- **Fuel** — bread consumed per re-roll, cheaper as tiers improve (7 for Basic, 5 for Camping, 3 for
+  everything above). Bread comes from the table's fuel slot or from a nearby
   **[Picnic Basket](interactions-and-items.md#picnic-baskets)**. The per-tier cost is configurable
   (`fuelcost <tier>`).
+
+**Basic → Camping → Glamping** is the ladder. **Diving**, **Hot** and **Strange** are three steps
+sideways off the top of it: identical in what they do, different only in where they can go. See
+[Where each table can go](#where-each-table-can-go).
 
 ## Crafting
 
@@ -217,6 +223,66 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
     | <img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table | 1 |
     | <img class="cr-inline" src="../../assets/items/heart_of_the_sea.png" alt=""> Heart of the Sea | 1 |
     | **→ <img class="cr-inline" src="../../assets/items/diving_picnic_table.png" alt=""> Diving Picnic Table** | **1** |
+
+=== "Hot"
+
+    <div class="cr-scroll">
+    <div class="cr-craft" title="Shapeless: Glamping Table + Netherite Ingot → Hot Picnic Table">
+      <div class="cr-grid cr-grid--2row">
+        <div class="cr-slot"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+        <div class="cr-slot"><img src="../../assets/items/netherite_ingot.png" alt="Netherite Ingot"></div>
+        <div class="cr-slot"></div>
+        <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
+      </div>
+      <div class="cr-arrow">➜</div>
+      <div class="cr-result"><img src="../../assets/items/hot_picnic_table.png" alt="Hot Picnic Table"></div>
+    </div>
+    </div>
+
+    | Ingredient | Amount |
+    | --- | :---: |
+    | <img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table | 1 |
+    | <img class="cr-inline" src="../../assets/items/netherite_ingot.png" alt=""> Netherite Ingot | 1 |
+    | **→ <img class="cr-inline" src="../../assets/items/hot_picnic_table.png" alt=""> Hot Picnic Table** | **1** |
+
+=== "Strange"
+
+    <div class="cr-scroll">
+    <div class="cr-craft" title="Shapeless: Glamping Table + Eye of Ender → Strange Picnic Table">
+      <div class="cr-grid cr-grid--2row">
+        <div class="cr-slot"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+        <div class="cr-slot"><img src="../../assets/items/ender_eye.png" alt="Eye of Ender"></div>
+        <div class="cr-slot"></div>
+        <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
+      </div>
+      <div class="cr-arrow">➜</div>
+      <div class="cr-result"><img src="../../assets/items/strange_picnic_table.png" alt="Strange Picnic Table"></div>
+    </div>
+    </div>
+
+    | Ingredient | Amount |
+    | --- | :---: |
+    | <img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table | 1 |
+    | <img class="cr-inline" src="../../assets/items/ender_eye.png" alt=""> Eye of Ender | 1 |
+    | **→ <img class="cr-inline" src="../../assets/items/strange_picnic_table.png" alt=""> Strange Picnic Table** | **1** |
+
+## Where each table can go
+
+Every table is tied to a place, and the game tells you which one you want when you aim at the wrong
+one.
+
+| Table | Overworld | Nether | The End |
+|---|:---:|:---:|:---:|
+| **Basic / Camping / Glamping** | ✅ | ⚠️ catches fire | ❌ |
+| **Diving** | ✅ underwater only | ⚠️ catches fire | ❌ |
+| **Hot** | ❌ | ✅ | ❌ |
+| **Strange** | ❌ | ❌ | ✅ |
+
+!!! danger "An ordinary table burns in the Nether"
+    Leave any table but the **Hot** one in the Nether and it has a **30% chance every second** of a
+    flame taking hold on one of its cells. Nothing is destroyed outright — it burns from there under
+    the normal fire rules, so you can still put it out. If you want to picnic down there, bring the
+    **Hot Picnic Table**: it never catches fire.
 
 !!! note "Diving table"
     The **Diving** table can **only be placed underwater**. Try to place it in air and it won't

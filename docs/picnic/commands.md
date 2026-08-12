@@ -40,12 +40,16 @@ is part of playing. Changing anything needs **operator** rank.
 | `auramultiplier` | 1–100 | How many times better your shiny odds get at a **full table**. *Default 2 (double).* |
 | `light` | 0–15 | Light level emitted by the table. |
 | `deployonsit` | true/false | Whether sitting deploys your party. |
+| `deploydistance <min> <max>` | two numbers | How far out party members land when you sit (default `4 7`). Each Pokémon rolls its own distance in the band. |
 | `actiondistance` | number | Interaction range for picnic actions. |
 | `washfriendship` | int | Friendship gained from [washing](interactions-and-items.md). |
-| `washrequirestable` | true/false | Require a nearby table to wash. |
+| `washrequirestable` | true/false | Require a nearby table to wash. Off also shows the option on the wheel everywhere. |
+| `washcooldown` | seconds | Wait between washes, **per Pokémon** (default `3`). |
 | `slimeballfriendship` | int | Friendship gained from [playing](interactions-and-items.md). |
-| `slimeballbreakchance` | 0..1 | Chance the slime ball breaks when playing. |
-| `slimeballrequirestable` | true/false | Require a nearby table to play. |
+| `slimeballbreakchance` | 0..1 | Chance the slime ball breaks when playing. A [Fetchball](interactions-and-items.md#fetchball) ignores this. |
+| `slimeballrequirestable` | true/false | Require a nearby table to play. Off also shows the option on the wheel everywhere. |
+| `playcooldown` | seconds | Wait between plays, **per Pokémon** (default `3`). |
+| `flyingspawnlift` | blocks | How high re-rolled fliers are lifted off the ground (default `12`, `0` grounds them). Never changes *which* Pokémon spawn. |
 | `spawnappropriatelvltrainer` | true/false | Scale [Battle Seeker](battle-seeker.md) trainers to your level. |
 | `trainerlevelgap` | int | Level offset for summoned trainers. |
 | `protectshiny` | true/false | Re-roll keeps **shiny** wild Pokémon instead of despawning them. *Default off.* |

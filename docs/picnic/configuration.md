@@ -21,14 +21,16 @@ The fastest way to change a single value is [`/picnic <attribute> <value>`](comm
 `/picnic <attribute> default` to put one back the way it shipped. See the
 [Commands](commands.md#attributes) page for the full list. Highlights:
 
-- **Spawns:** `reroll` (master on/off), `spawncap <tier>`, `fuelcost <tier>`, `rerollcooldown <seconds>`
+- **Spawns:** `reroll` (master on/off), `spawncap <tier>`, `fuelcost <tier>`, `rerollcooldown <seconds>`,
+  `flyingspawnlift`
 - **Shiny aura:** `shinyaura`, `auramultiplier` (odds at a full table — default `2`, i.e. double)
-- **Care:** `washfriendship`, `slimeballfriendship`, `slimeballbreakchance`
+- **Care:** `washfriendship`, `slimeballfriendship`, `slimeballbreakchance`, `washcooldown`,
+  `playcooldown` (both per Pokémon)
 - **Party fun:** `tmteachchance` (rare TM cross-teaching on re-roll)
 - **Battle Seeker:** `spawnappropriatelvltrainer`, `trainerlevelgap`
 - **Re-roll protection:** `protectshiny`, `protectlegendary`, `protectmythical`, `protectultrabeast`
 - **Peaceful picnic:** `disableseatedaggro` (on by default), `seatedrepelradius`
-- **Misc:** `light`, `actiondistance`, `deployonsit`
+- **Misc:** `light`, `actiondistance`, `deployonsit`, `deploydistance`
 
 ## Mod Menu screen
 
@@ -54,6 +56,6 @@ chance** `0.05` (5%), **full-table shiny multiplier** `2` (a full table doubles 
 
 !!! tip "Picnic without the spawn manipulation"
     `reroll false` (or **General → "Spawn re-roll enabled"** in Mod Menu) switches the re-roll off
-    entirely: right-clicking a table then spawns and despawns nothing, and costs no bread. Seats, the
+    entirely: left-clicking a table then spawns and despawns nothing, and costs no bread. Seats, the
     [Shiny Aura](shiny-aura.md), baskets, the [Battle Seeker](battle-seeker.md) and the
     [care interactions](interactions-and-items.md) all keep working.

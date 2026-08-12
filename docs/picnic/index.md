@@ -6,7 +6,7 @@
 
 # Cobblemon Picnic
 
-Spawn-hunting, made cozy. Place a **Picnic Table**, right-click it, and the wild Pokémon around you
+Spawn-hunting, made cozy. Place a **Picnic Table**, left-click it, and the wild Pokémon around you
 are despawned and re-rolled into a fresh maximised spawn — hunt a shiny or a specific species
 without walking the map raw. It doubles as a social station: shiny aura, Pokémon care and trainer
 battles.

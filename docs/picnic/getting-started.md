@@ -31,10 +31,16 @@ Cobblemon Picnic runs on **Fabric** *and* **NeoForge** for Minecraft **1.21.1**.
    **[Picnic Tables → Crafting](picnic-tables.md#crafting)**.
 2. **Place it** on open, flat ground. The table is a **3×2 multiblock** that deploys **in front of
    you**, with the table column centered — so face the direction you want it and place.
-3. **Add fuel.** Open the table (the GUI) and drop **bread** into the fuel slot, or place a
-   **[Picnic Basket](interactions-and-items.md#picnic-baskets)** with bread nearby.
-4. **Re-roll!** Right-click the **center (table) cells** to despawn the surrounding wild Pokémon and
+3. **Add fuel.** **Right-click** a **center (table) cell** to open the GUI and drop **bread** into
+   the fuel slot, or place a **[Picnic Basket](interactions-and-items.md#picnic-baskets)** with bread
+   nearby.
+4. **Re-roll!** **Left-click** a **center (table) cell** to despawn the surrounding wild Pokémon and
    roll a fresh batch. The slider in the GUI sets how many spawn (capped by tier).
+
+!!! tip "One button each"
+    **Right-click** a table cell to open its GUI, **left-click** to re-roll, and **right-click a
+    bench** to sit. Table cells take no mining damage, so a re-roll can never break the table —
+    **hit a bench** when you want to pick the structure back up.
 
 !!! note "Placement needs room"
     The footprint is **3 wide × 2 deep**. If the cells are blocked, the table won't place. Leave a
