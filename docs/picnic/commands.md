@@ -7,6 +7,8 @@ Everything lives under one command: **`/picnic`**.
 /picnic <attribute> <value>         # change one setting (operator)
 /picnic <attribute> default         # put that one setting back to its default (operator)
 /picnic stats                       # picnic statistics (anyone)
+/picnic stats player|dimension|species <value>   # one slice of them (anyone)
+/picnic stats shiny                 # just the shinies (anyone)
 /picnic stats reset                 # clear the aggregates (operator)
 /picnic reload                      # re-read the config file from disk (operator)
 /picnic reset                       # restore every default (operator)
@@ -78,8 +80,26 @@ Available to **everyone**. Shows a summary of picnic activity:
 /picnic stats reset    # (operator) clear the aggregates
 ```
 
+### Filters
+
+Ask for one slice instead of the lot. Each filter reports its own re-roll count, what came out, and
+the shiny rate for that slice alone — and for shinies, the species, level and coordinates of each one.
+All of them are open to everyone.
+
+```
+/picnic stats player <name>       # everything one trainer's re-rolls produced
+/picnic stats dimension <id>      # e.g. minecraft:the_nether
+/picnic stats species <name>      # every appearance of one species
+/picnic stats shiny               # just the shinies, and where they turned up
+```
+
+`species` tab-completes from what the log has actually seen. `player` and `dimension` are free text,
+so you can ask about someone who's offline or a dimension that isn't loaded right now.
+
 Statistics persist in `config/cobblemon_picnic_stats.json` (aggregates) and
-`config/cobblemon_picnic_events.jsonl` (a granular per-re-roll log).
+`config/cobblemon_picnic_events.jsonl` (a granular per-re-roll log). The **summary** reads the
+aggregates; the **filters** replay the log, which is the only place the per-re-roll detail survives —
+so a filter can look back further than the last `stats reset`.
 
 !!! note
     Seat counts are **not** configurable — they're fixed per tier. On a dedicated server use these
