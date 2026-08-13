@@ -6,6 +6,497 @@
 All notable changes are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) + SemVer.
 
+## [2.1.0] - 2026-08-13
+
+**Six new HMs, and three of the old ones became something else.** Everything below has been in
+development since 2.0.1.
+
+### ✨ New
+- **Seed Bomb** — lob a heavy seed that bursts where it lands. Small on purpose, and the blast is a
+  dial (#52).
+- **Eruption** — open a pool of lava on the face of the block you aim at, never underfoot. Respects
+  claims and spawn protection, exactly as a bucket does (#56).
+- **Miracle Eye** — find the nearest legendary monument: what it is, how far, and which way. Not
+  where. Which monuments count is a datapack tag (#11).
+- **Helping Hand** *(toggle)* — your mount spends half the effort on everything, so it lasts about
+  twice as long (#43).
+- **Tailwind** *(toggle)* — whatever you fly on moves half again as fast (#42).
+- **Swift** *(toggle)* — and gets up to speed twice as quickly, on land, in water and in the air.
+
+### 🌊 Three HMs found out what they were for
+- **Dive** stopped being a way to swim fast and became the ability to **work** underwater: mine at
+  full speed, walk the seabed as if it were dry land, breathe. It takes penalties away rather than
+  handing out a bonus (#44, #45).
+- **Lava Plume** is now Dive's twin for lava — move through it, walk its floor, see and breathe down
+  there, and sprint into a proper swim. It grants no fire protection of its own: it asks Burning
+  Bulwark for that (#65).
+- **Surf** now speeds up **the thing you are riding**, not you (#41).
+
+### 👤 The Trainer Ditto is an event the whole server shares
+One turns up every half hour, once, for everybody, announced in chat when it arrives and when it
+leaves — neither message says where. Its stall is rolled once and stays put, a disc you bought stays
+sold, and scarce HMs turn up scarcely. Beat one in battle and every one after it keeps its distance
+(#62, #55, #61, #58, #59).
+
+### 🎡 The wheel
+Open it, look, and back out — the bullseye cancels and changes nothing. The ring around it clears
+everything, selection and toggles alike. Star your favourites and the **HM Case** opens a short
+wheel holding only those. Whatever is live radiates, and the one HM that fires is marked apart from
+the ones merely running. Every HM can carry a required experience level, all shipping at zero
+(#66, #49, #60, #57, #63).
+
+### 🐛 Fixes
+- **Bullet Seed hits things.** It was firing dropped items, which cannot touch a creature (#53).
+- **Rock Smash takes the whole vein of netherite and quartz**, and of any ore a mod adds.
+- **Rest counts the room the way Minecraft does**, instead of demanding a unanimous yes from every
+  connected player (#54).
+- **Destiny Bond takes an armoured player down with you** (#51).
+- **Camouflage holds its shape and moves with you**, instead of cycling through creatures.
+- **Substitute wears your name and walks away with it**, and hides you for two seconds as you go.
+- **Headbutt** works from standing, only shakes what you actually reached, and shakes giant
+  mushrooms (#68).
+- Leafage leaves a meadow (#64); Rock Climb works from standing; the HM Case reports the real
+  reason it refused; a disguise holds its shape (#69); sky-clicks reach the server (#46); Headbutt
+  drops the right sapling (#50); a toggle you cannot pay for is refused (#48); and one shake in a
+  hundred knocks an Applin loose (#67).
+
+## [2.0.28] - 2026-08-13
+
+### ⛏️ Rock Smash takes the whole vein of netherite and quartz
+It knew about eight kinds of ore, and the two you actually go to the Nether for were not among
+them: **ancient debris belongs to no ore tag at all**, and **nether quartz ore has no tag of its
+own**. Both were being treated as ordinary rock and broken one block at a time. Any ore a mod adds
+now counts too — by the shared tag every modern one uses, and failing that, by simply being called
+an ore.
+
+### 🧿 Substitute lets you actually slip away
+You left a copy of yourself standing there and then stood next to it in plain sight, which fools
+nobody. Casting it now turns you **invisible for two seconds**: long enough to get behind
+something and let whatever was chasing you commit to the wrong target, short enough that it stays
+an escape rather than a cloak.
+
+## [2.0.27] - 2026-08-13
+
+### ⚡ New toggle — Swift
+Whatever you are riding gets up to speed **twice as quickly** — off the mark, out of a turn, after
+every stop. It is the third of the mount toggles and the only one that is not about top speed:
+Surf is faster in water, Tailwind faster in the air, Swift is quicker to get there in all three.
+
+Learned from a **Ninjask**, **Accelgor** or **Electrode** with **Sugar**.
+
+```
+/dittohm config swift power <0-512>
+```
+
+### 🐛 Headbutt only shakes what you actually reached
+Charging a tree with something in the way counted as a hit on the tree: it read the block two paces
+ahead and never checked whether you got there, so a wall with a trunk behind it dropped sticks while
+you bounced off the wall. It now looks for the **first** thing in the way, which is the only thing
+your head can have met.
+
+## [2.0.26] - 2026-08-13
+
+### 🍄 Headbutt shakes giant mushrooms
+The huge caps of the swamps and the Nether answer a headbutt the way a tree does, and give up
+mushrooms instead of saplings. They were never covered before because, for all they look like
+trees, the game does not count them as wood.
+
+## [2.0.25] - 2026-08-13
+
+### 🧿 Camouflage holds the shape you picked, and moves with you
+Two separate faults, both of them in how the costume was kept.
+
+- **It stopped being a slideshow.** The server re-sends your disguise every couple of seconds so
+  anyone who walks into view can see it, and every one of those resends was rebuilding the
+  stand-in — which is created as a *random* creature and then filled in from what the message
+  carries. The guard that was supposed to stop this compared the whole message, and the message is
+  re-read off the live target each time: health, timers, animation state, all of it moving on its
+  own, all of it different on every resend. What you are disguised as is **which creature**, so
+  that is what is compared now.
+- **The disguise walks when you walk.** A Pokémon's animations come from its own movement, not
+  from the walk cycle vanilla mobs use, so a stand-in placed frame by frame read as standing
+  perfectly still however fast you ran. It is handed your velocity and footing now.
+
+## [2.0.24] - 2026-08-13
+
+### 🌋 Sprinting in lava looks like swimming
+Setting the swim flag was not enough and the tick order is why: the game decides whether you are
+swimming — refusing outright unless the fluid is water — and then picks your pose from that answer,
+both before a mod gets a word in. So the flag was being set after the pose had already been chosen
+and cleared again before the next one, every tick, forever. The pose is now set directly, on your
+own game and on the server, so you see it and so does everyone else.
+
+## [2.0.23] - 2026-08-13
+
+### 🎡 The selected HM is marked on its slot
+Every attempt so far drew the marker around the **disc**, and an item picture is the one place on
+this screen that is hard to draw next to — it renders in its own pass, at its own depth, and
+whatever you put beside it is at the mercy of where that pass leaves things. So the mark moved to
+the **segment**: the selected HM's wedge is flooded white and edged top and bottom, through the
+same code that draws every slot on the wheel. Only one active can ever be selected, so there is
+never a second white wedge to mistake it for.
+
+### 🐛 The HM Case tells you the real reason again
+Firing from the Case reported **"No HM selected"** for every refusal there is — on cooldown, too
+hungry, not experienced enough. Each of those had already said exactly what was wrong, and the Case
+then talked over it with something untrue. It now only says that when nothing actually is selected.
+
+## [2.0.22] - 2026-08-13
+
+### 🎡 The glow sits around the disc, not behind it
+Both the radiance and the selected HM's white ring were sized as if a disc ended eight pixels from
+its middle. It does at the edges — but its **corners** reach a good deal further, so the ring was
+being drawn underneath them and came out as four disconnected arcs, and the glow only escaped at
+the top, bottom and sides. Both now start outside the picture, and both keep those proportions at
+any wheel size.
+
+## [2.0.21] - 2026-08-13
+
+### 🎡 You can tell what is selected again
+The glow said "this is running", and a dozen toggles can be running at once — so the one HM that
+actually fires when you click was lost among them. The **selected** one now carries a hard white
+ring of its own, which nothing else on the wheel has and only one thing can ever have. The
+type-coloured radiance goes on meaning "on".
+
+## [2.0.20] - 2026-08-13
+
+### 🐴 Surf, Tailwind and Helping Hand actually reach your mount
+They were being applied on the server — and **the rider is what simulates the ride**. Like a horse,
+a mounted Pokémon is moved by the game of whoever is sitting on it, and the server takes the result;
+a speed changed on the server alone was a number nobody was reading. The boost is now written on
+both sides, so the one that decides how fast you go has it too.
+
+## [2.0.19] - 2026-08-13
+
+### 🌋 Lava Plume has a second gear
+Hold sprint under lava and you **swim** — properly, in the pose and at the pace, not a slightly
+brisker wade. Vanilla's swim is hardcoded to water and can never happen in lava no matter what you
+do, so Lava Plume brings its own.
+
+### 🎡 Clear means clear
+The centre of the wheel switches off **every toggle** along with your selection, instead of only
+unsetting the active. One gesture puts you back to a bare fist — and switching a toggle back on is
+one click, which the old split never was.
+
+## [2.0.18] - 2026-08-13
+
+### ✨ A live HM glows
+The disc that is running now **radiates** — light coming off it in its own type colour, breathing
+slowly. It used to carry an enchantment glint, which was the wrong signal twice over: a sheen that
+sweeps across a picture is not the same as a picture giving off light, and at a glance it just read
+as "this item is enchanted".
+
+### 🔦 You can see in lava
+Lava is not dark, it is **foggy** — vanilla draws it at one block, three if you are fire resistant,
+which is why brightening it did nothing at all. With Lava Plume on you now see two dozen blocks
+down there.
+
+### 🐴 Helping Hand spends half instead of holding twice
+It was reaching for the wrong end of the same number and doubling what a mount **spends** rather
+than what it has, so it was quietly making mounts tire *faster*. Everything it does now costs half
+the effort, which is the same "lasts about twice as long" asked the right way round.
+
+## [2.0.17] - 2026-08-13
+
+### 🐛 Fixes
+- **Lava Plume no longer sends you skating.** Letting go of the controls left you sliding across the
+  pool like it was ice: lava's only brake is that it halves your momentum every tick, and taking the
+  drag off had taken the brake with it. Let go now and you come to rest the way you would on land.
+- **You can see something in there.** Lava is pitch black from the inside; Lava Plume lights it up
+  while you are under. The dense fog is drawn by your own game rather than the server, so this is
+  only half the answer — but it is the difference between the block in front of your face and
+  nothing at all.
+- **Surf and Tailwind find your mount however you are sitting on it.** They only looked at what you
+  were *directly* riding, so anything sat between you and the Pokémon hid it from them.
+
+### 🔧 For working out what is going on
+```
+/dittohm mount
+```
+Reports what the mount boosts can actually see — which Pokémon, whether each toggle is on, and the
+raw speed stat it is reading.
+
+## [2.0.16] - 2026-08-13
+
+### 👁️ New HM — Miracle Eye
+Reach out and find the nearest **legendary monument**. It tells you what it is, roughly how far, and
+which way — and deliberately **not** where. Knowing that Lake Verity is nine hundred blocks
+north-east is what makes it a journey; a pair of numbers is what ends one (#11).
+
+Five food and a thirty-second wait, because searching the world for one is genuinely hard work.
+
+Learned from a **Xatu**, **Sigilyph** or **Unown** with an **Eye of Ender**.
+
+**Which monuments it knows about is a datapack tag**, `cobblemon_ditto_hms:miracle_eye`. It ships
+pointing at the thirteen from **Legendary Monuments** — the three lakes, Turnback Cave, Stark
+Mountain, Giratina's island, Eternatus' cocoon, the distortion portal and the shrines — each listed
+as optional, so a world without that mod loads fine and the HM simply says there is nothing out
+there. Override the tag to point it at anything you like.
+
+## [2.0.15] - 2026-08-13
+
+### 🏄 Surf is for the thing you are riding
+Surf made **you** a better swimmer. It now makes your **mount** one: get on something in water with
+Surf on and it cuts through at half again its usual pace. Your own swimming on foot is untouched by
+it — that was never what an HM called Surf was supposed to mean (#41).
+
+### 💨 New toggle — Tailwind
+A following wind for whatever you are **flying** on: the same half-again, in the air instead of the
+water. Learned from a **Talonflame**, **Noivern** or **Staraptor** with a **Breeze Rod** (#42).
+
+```
+/dittohm config surf power <0-512>
+/dittohm config tailwind power <0-512>
+```
+
+Both boosts are put on the creature you are riding and taken straight off again the moment you get
+down or switch the toggle off — nothing about your Pokémon is changed for good.
+
+## [2.0.14] - 2026-08-13
+
+### 🌋 Lava Plume becomes the ability to work in lava
+Lava Plume was a one-shot ride to the surface of a pool. It is now what **Dive** is underwater: the
+ability to **live and work down there**. It is a toggle, so it lives in the wheel's inner ring now.
+
+- **Move through lava, and walk its floor, without the fluid dragging on you.** Lava normally cuts
+  you to about a third of a walking pace; it no longer does.
+- **Breathe while you are under.**
+- **Swimming out is exactly as it always was.** Like Dive, it takes a penalty away rather than
+  handing out a bonus.
+- **It gives you no fire protection of its own** — that is Burning Bulwark's job, and two HMs
+  handing out the same immunity makes one of them pointless. Lava Plume **asks for it** instead:
+  you need Burning Bulwark learned to switch it on, and switching it on switches Burning Bulwark on
+  with it. The same arrangement Fly already has with Glide (#65).
+
+For the ride to the surface of a **water** pool, that is still Waterfall.
+
+## [2.0.13] - 2026-08-13
+
+### ⭐ Favourites, and a short wheel to hold them
+Fifty HMs is a lot to read at a glance when you use six of them.
+
+- **Right-click a slot in the wheel to star it.** The wheel stays open, so you can set your whole
+  list up in one visit, and a starred slot carries a gold star from then on. Right-click again to
+  take it off.
+- **Hold the HM Case and open the wheel, and only your favourites are on it.** No new gesture to
+  learn: the Case is already in your hand as the activator, and now it is the short way in too.
+  It still fires your selection exactly as before.
+- Starred nothing yet? The Case shows the full wheel and tells you how to star something, rather
+  than opening an empty ring.
+
+Your list is saved with your world (#49).
+
+## [2.0.12] - 2026-08-13
+
+### 🐴 New toggle — Helping Hand
+Whatever you are riding keeps going **about twice as long** before it tires. Nothing else changes:
+it is not faster and it does not recover any quicker, it simply has more in the tank. Costs 2 food
+off your maximum while it is on, like most toggles (#43).
+
+```
+/dittohm config helping_hand power <0-512>
+```
+
+Learned from a **Plusle**, **Minun** or **Audino** with a **Saddle**.
+
+### 🌋 New HM — Eruption
+Opens a pool of lava **on the face of the block you are aiming at** — the same square a bucket
+would fill, and never underfoot. It refuses outright if you are standing close enough to end up in
+it, and it has to pass the same permission check a lava bucket does, so claims, spawn protection
+and the world border all hold: a plot you cannot build in is a plot you cannot erupt in.
+
+Five food and a ten-second wait, so it stays a deliberate act rather than something you pave with
+(#56).
+
+Learned from a **Camerupt**, **Magcargo** or **Heatran** with a **Magma Block**.
+
+## [2.0.11] - 2026-08-13
+
+### 💣 New HM — Seed Bomb
+Lob a single heavy seed and it bursts where it lands. It is Bullet Seed's ammunition with a fuse:
+same flight, same "it renders as the seed you actually threw", one of them instead of a dozen.
+
+The blast is **small on purpose** — a strength of 1, against a creeper's 3 and TNT's 4. It scatters
+what is standing there and takes a bite out of soft ground; it will not open a hole in your base.
+If you want a bigger bang, that is exactly what the dial is for (#52).
+
+```
+/dittohm config seed_bomb power <0-512>
+```
+
+It follows your world's mob-griefing rule, so a server with block damage off gets the bang and the
+knock without the crater. For moving terrain on purpose, **Explosion** is still the HM.
+
+Learned from a **Breloom**, **Torterra** or **Chesnaught** with **Melon Seeds**.
+
+### 🐛 Fixes
+- **Headbutt needs both feet on the ground.** You could fire it mid-air, which quietly turned it
+  into a flight tool: charge, hop, charge again before landing, and it carried you across anything.
+  It is a shoulder-charge — you have to push off something.
+
+## [2.0.10] - 2026-08-13
+
+### 🌱 Bullet Seed hits things
+It never has. The barrage was firing **dropped items** — seeds on the ground, thrown hard — and a
+dropped item cannot touch a creature, so every burst passed clean through whatever you aimed at no
+matter what the config said. They are proper projectiles now: they fly flat and fast, they still
+render as the exact seed you fired, and they hurt what they land on.
+
+Damage comes off the same **power** dial that decides how many seeds a burst holds, so turning
+Bullet Seed up makes it hit harder *and* more often (#53).
+
+### 🐛 Fixes
+- **Destiny Bond takes an armoured player down with you.** The blow was struck for the largest
+  number a computer can hold, which kills a bare mob and then quietly fails against armour: the
+  reduction arithmetic overflows and the victim walks away. It now strikes for enough and not more
+  (#51).
+
+## [2.0.9] - 2026-08-13
+
+### 🎡 You can open the wheel, look, and back out
+The middle of the wheel holds **two** things now, and they are not the same:
+
+- The **bullseye is Cancel.** It closes the wheel and changes nothing — not your selection, not a
+  single toggle. Until now every release did something, so there was no way to check what you had
+  without committing to it (#66).
+- The **ring around it clears your selection**, exactly as the centre used to, and your toggles go
+  right on running.
+
+A band of nothing separates both of them from the toggle ring, so a release that drifts a few
+pixels off centre can no longer flip a toggle on its way past. Letting go anywhere else that is not
+a slot — between the rings, off the wheel entirely — cancels as well.
+
+### 😴 Rest counts the room the way Minecraft does
+Rest asked for a **unanimous yes from every single connected player** — spectators, someone AFK in
+the Nether, everybody — so one person not joining in meant nothing happened at all, no matter how
+many of you were stood there resting.
+
+It now runs the same vote a bed does, `playersSleepingPercentage` and all: spectators are left out,
+anyone already asleep counts towards the tally, and the threshold is whatever your server set. The
+clock also moves **once** for the whole vote — it used to be pushed to the next boundary again for
+every player who agreed, which sent an odd number of you a full night too far (#54).
+
+## [2.0.8] - 2026-08-13
+
+### 🎚️ An HM can ask for an experience level
+Every HM carries a **required experience level**, and every one of them ships at **zero** — so
+nothing is gated and nothing about your game changes today. What it buys is that gating one
+tomorrow is a config line in a pack, not a new version of the mod.
+
+Where a pack does set one, it is a **requirement, not a price**: nothing is deducted when you use
+the HM, you simply cannot reach for it until you have got there. The wheel greys out a slot you
+have not qualified for and says which level it wants, and it lights back up the moment you level
+up (#57).
+
+```
+/dittohm config <ability> minlevel <0-100>
+```
+
+## [2.0.7] - 2026-08-13
+
+### 👤 The Trainer Ditto is an event the whole server shares
+One turns up **every half hour, once, for everybody** — and everyone is told in chat when it
+arrives, and again when it moves on. Neither message says where: finding it is the point. It stays
+five minutes as it always has, so there is a trader standing somewhere about a sixth of the time.
+
+It used to be a private dice roll per player, which made a rare visitor *commoner the busier the
+server was* — four players meant one turning up every ninety seconds, several at a time, each of
+them somebody else's. The wait survives a restart, and it runs while the server is empty: an
+appearance nobody was around for is missed rather than banked (#62).
+
+```
+/dittohm config trader every <ticks>
+```
+
+### 🛒 Its stall holds still
+- **What it lays out stays laid out.** The offers were worked out afresh every time the screen
+  opened, so learning anything — a disc bought from that very trader included — reshuffled the
+  whole table behind your back (#55).
+- **A disc you bought is sold out.** It used to go straight back on the shelf, and the same trader
+  would happily sell you the same disc twice (#55).
+- **The scarce HMs turn up scarcely.** Every HM carries a weight the stock is rolled against:
+  flight, blinking, a free heal and a suit of armour are the rare ones, the everyday tools are
+  common, and a pack can retune any of it — down to never offering something at all (#61).
+
+```
+/dittohm config <ability> weight <0-100>
+```
+
+### 🥊 It remembers being beaten
+Knock one out and word gets around: every trader after that keeps its distance from you, the same
+way they already do from someone who caught one. Your friends are unaffected, and it does not
+forget over a reload (#58).
+
+## [2.0.6] - 2026-08-12
+
+### 🌼 Leafage leaves a meadow, not a lawn
+Bare ground now answers a burst in **flowers**, with the odd blade of grass among them — the other
+way round from before. The blooms are ones the **biome you are standing in** would grow, read from
+its own worldgen, so a burst in a plains looks nothing like one in a flower forest, and no two
+patches come out the same (#64).
+
+Crops, saplings and berry trees still leap to full growth exactly as they did.
+
+## [2.0.5] - 2026-08-12
+
+### 🐛 Fixes
+- **Rock Climb works from standing.** It used to require you to already be off the ground, so the
+  only way to start a climb was to jump into the wall and catch it mid-air. Walk up to a wall,
+  look up, and you go up (#68).
+- **A disguise holds its shape.** Camouflage was re-rolling what you looked like every couple of
+  seconds, cycling through creatures instead of staying as the one you targeted (#69).
+
+### 🖥️ Small
+- **The "learned it!" message names your actual wheel key**, and stays right if you rebind it. It
+  also goes to chat now instead of flashing past on the action bar — it is the one line telling
+  you how to use what you just earned (#63).
+
+## [2.0.4] - 2026-08-12
+
+### 👤 No two Trainer Dittos are the same any more
+- **Its level is rolled**, from a band you can set, instead of every visitor arriving identical.
+- **Its IVs are rolled like any wild Ditto's.** Every trader used to be flawless, which turned a
+  rare visitor into a stat vending machine with nothing left to hope for. A pack that wants the
+  old behaviour can ask for it back (#59).
+
+```
+/dittohm config trader levels <min> <max>
+```
+
+## [2.0.3] - 2026-08-12
+
+### 🎡 The wheel tells you what it is doing
+- **The disc under your cursor grows.** No more guessing which slot a release will commit (#60).
+- **Whatever is live now pulses.** The selected HM and every toggle that is on carry a much
+  stronger halo, a bright rim and a slow breath of light — readable in a dark cave and at noon
+  alike. Size always means "about to be picked", light always means "running", so the two never
+  get confused for each other (#60).
+
+### 🐛 Fixes
+- **The HM Case fires at open sky again.** Left-clicking at nothing with the Case in hand did
+  nothing at all, which killed **Teleport** and **Explosion** — the two you use without aiming at a
+  block (#46).
+- **Headbutt drops the right sapling.** Shake a birch and you get a birch sapling; the same for
+  every other tree, modded ones included. Woods with nothing to plant drop none (#50).
+- **A toggle you cannot pay for is refused**, and says how much is spare, instead of switching on
+  into a state it cannot sustain (#48).
+
+### 🍎 And one for the tree-shakers
+- One shake in a hundred knocks an **Applin** loose. It lands at the foot of the trunk (#67).
+
+## [2.0.2] - 2026-08-12
+
+### 🌊 Dive becomes the ability to work underwater
+Dive was a way to swim faster. It is now the ability to **live and work** down there — it takes the
+water's penalties away rather than handing out a bonus.
+
+- **Mine underwater at full speed.** A block below the surface breaks as fast as the same block in
+  open air, and the weight a guardian temple puts on your arms lifts while you are under (#45).
+- **Walk the seabed as if it were dry land**, with no drag on every step.
+- **Breathe freely**, as before.
+- **Swimming is exactly as fast as it always was.** Push off the bottom and you move like anyone
+  else — if you want speed in the water, that is Surf's job (#44).
+
 ## [2.0.1] - 2026-08-07
 
 **Everything here since 1.1.0.** 34 abilities became **47**, HMs moved off an item and onto a

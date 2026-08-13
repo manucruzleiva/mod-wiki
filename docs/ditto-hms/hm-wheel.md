@@ -24,14 +24,18 @@ familiar HM is easy to find by colour before you can read the label.
           ╱    ╰────────────────────────╯    ╲
         ╱     ╱      ╱      │      ╲      ╲     ╲
            Rest   Charm  Strength  Waterfall   ...
-                    ( centre: clear )
+               ( centre: cancel / clear )
 ```
 
 | What you see | What it means |
 |---|---|
 | A disc on a type-coloured segment | Learned, ready to pick |
 | A dim pip on a dark segment | Not learned yet. The wheel never hints at which Pokémon unlocks it |
-| A glowing, glinting slot | Currently selected (active) or currently switched on (toggle) |
+| **A disc that has grown** | The slot under your cursor — release now and this is what you get |
+| **A slot pulsing with light, ringed and glinting** | Currently selected (active) or currently switched on (toggle) |
+
+The two cues never collide: **size** always means "the one I am about to pick", and **light** always
+means "this one is live". Hover a live HM and you see both at once.
 
 The middle of the wheel names whatever your cursor is over, its type, and its state; the ability's
 description sits just below the wheel.
@@ -44,10 +48,28 @@ description sits just below the wheel.
 |---|---|
 | **Outer — active HMs** | Selects it. Selecting it again deselects it |
 | **Inner — toggle HMs** | Switches it on or off straight away |
-| **Centre** | Clears your selection |
+| **Centre ring** | Clears your selection. Your toggles keep running |
+| **Bullseye** | Cancel — closes the wheel and changes nothing |
+| **Right-click a slot** | Stars it as a favourite. The wheel stays open |
 
 Hold **H**, move the cursor onto a slot and let go — the wheel closes on whatever you were pointing
 at. A quick tap instead leaves the wheel pinned open, so you can take your time and click.
+
+### The short wheel
+
+**Hold the HM Case and open the wheel, and only your favourites are on it.** With fifty HMs the full
+wheel is a lot to read when you use six of them, and the Case is already in your hand as the
+activator — so it doubles as the quick way in. It still fires your selection exactly as before.
+
+Star a slot by **right-clicking** it in the normal wheel; a starred slot carries a gold star, and
+right-clicking again takes it off. The list is saved with your world.
+
+If you have not starred anything yet, the Case opens the full wheel and says so rather than showing
+you an empty ring.
+
+Letting go anywhere that is not a slot cancels too: the gap between the rings, the band between the
+centre and the toggles, and everywhere outside the wheel. A release that is not clearly aimed at
+something changes nothing, so you can open the wheel, look, and back out.
 
 ---
 
@@ -72,8 +94,8 @@ Left-click is the default. Whatever you pick, anything else in your hand keeps i
 blocks place exactly as they always did.
 
 !!! tip "Getting your fist back"
-    If you use the empty hand as your activator, picking the **centre** of the wheel clears the
-    selection and gives you back punching and hand-mining. Setting the activator to **HM Case**
+    If you use the empty hand as your activator, picking the **centre ring** of the wheel clears
+    the selection and gives you back punching and hand-mining. Setting the activator to **HM Case**
     avoids the trade entirely.
 
 Toggle HMs need none of this — they are on the moment you switch them on in the wheel, and stay on

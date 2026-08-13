@@ -34,6 +34,9 @@ Any one of the listed Pokémon can teach the HM. Hold the trigger item and **sne
 | Magnet Rise | Magnemite, Magneton, Magnezone | Iron Nugget |
 | Ember | Charmander, Torchic, Tepig | Blaze Powder |
 | Bullet Seed | Seedot, Nuzleaf, Cacnea | Wheat Seeds |
+| Seed Bomb | Breloom, Torterra, Chesnaught | Melon Seeds |
+| Eruption | Camerupt, Magcargo, Heatran | Magma Block |
+| Miracle Eye | Xatu, Sigilyph, Unown | Eye of Ender |
 | Teleport | Abra, Kadabra, Alakazam, Ralts | Ender Eye |
 | Fly | Pidgeot, Charizard, Dragonite | Phantom Membrane |
 | Rain Dance | Politoed, Kyogre, Golduck | Prismarine Crystals |
@@ -49,7 +52,6 @@ Any one of the listed Pokémon can teach the HM. Hold the trigger item and **sne
 | Charm | Jynx, Sylveon, Clefable | Pink Tulip |
 | Stockpile | Gulpin, Swalot | Sponge |
 | Substitute | Wobbuffet, Mew, Smeargle | Armor Stand |
-| Lava Plume | Magcargo, Slugma, Turtonator | Magma Cream |
 | Thief | Meowth, Purrloin, Sableye | Tripwire Hook |
 | U-turn | Yanma, Ninjask, Venipede | Rabbit's Foot |
 | Charge | Elekid, Electabuzz, Electivire | Redstone |
@@ -71,7 +73,12 @@ Fires in the direction you're looking — extinguishes fire, wets sponges, and p
 ### Leafage
 **Hunger:** 1 · **Cooldown:** 2s · **Power:** radius 5
 
-Instantly grows **every crop around you** to full maturity — handy for fast harvests.
+Instantly grows **every crop around you** to full maturity — handy for fast harvests — and does
+the same for saplings and berry trees.
+
+The bare ground answers too, and it answers in **flowers**: a burst leaves a meadow rather than a
+lawn, with the odd blade of grass among it. The blooms are ones that belong to the biome you are
+standing in, so a burst in a plains looks nothing like one in a flower forest.
 
 ---
 
@@ -133,9 +140,13 @@ halves go together, or the push fails if either has nowhere to go. Won't move fl
 ### Substitute
 **Hunger:** 4 · **Cooldown:** 20s · **Power:** 2400t (**2 minutes**)
 
-Leaves a decoy of you standing where you were — wearing your head, your armour and whatever you
-were holding. Hostile creatures already hunting you switch to the decoy while it stands, so it buys
-you a way out of a fight. Casting it again replaces the decoy rather than adding a second.
+Leaves a decoy of you standing where you were — **wearing your name** and walking off under its own
+steam — and **turns you invisible for two seconds** so you can be somewhere else by the time
+anything looks up. Cast it at a run and the decoy carries your momentum off in roughly your
+direction; cast it standing and it picks a bearing of its own. It steps over anything knee-high in
+its way. Hostile creatures already hunting you switch to
+the decoy while it stands, so it buys you a way out of a fight. Casting it again replaces the decoy
+rather than adding a second.
 
 ---
 
@@ -143,15 +154,6 @@ you a way out of a fight. Casting it again replaces the decoy rather than adding
 **Hunger:** 2 · **Cooldown:** 6s · **Power:** 40t
 
 **While in water**, rides a strong upward current toward the surface. Must be in water to use.
-
----
-
-### Lava Plume
-**Hunger:** 2 · **Cooldown:** 6s · **Power:** 40t
-
-Waterfall's twin for lava. **While in lava**, rides a rising current to the surface — and you are
-immune to fire for the ride plus a few seconds after, so climbing out doesn't finish what the pool
-started. Must be in lava to use.
 
 ---
 
@@ -172,7 +174,52 @@ Works like **Flint & Steel** — places fire, primes TNT, and ignites entities i
 ### Bullet Seed
 **Hunger:** 2 · **Cooldown:** 1s · **Power:** 5 seeds per burst
 
-Fires a rapid barrage of seed projectiles, consuming any `"seed"` items from your inventory. Direction is locked at activation.
+Fires a rapid barrage of seed projectiles, consuming any `"seed"` items from your inventory. They
+render as the seed you fired, fly flat and fast, and hurt what they land on — **power** sets both how
+many go out and how hard each one lands.
+
+---
+
+### Miracle Eye
+**Hunger:** 5 · **Cooldown:** 30s · **Power:** search radius in chunks (default 100)
+
+Reaches out for the nearest **legendary monument** and tells you what it is, roughly how far, and
+which way — and deliberately **not** where. Knowing that Lake Verity is nine hundred blocks
+north-east is what makes it a journey.
+
+Which monuments it knows about is a **datapack tag**, `cobblemon_ditto_hms:miracle_eye`. It ships
+pointing at the thirteen from [Legendary Monuments](https://modrinth.com/mod/legendary-monuments),
+each listed as optional — so a world without that mod loads perfectly well and Miracle Eye simply
+reports that there is nothing out there. Override the tag in a datapack to point it anywhere else.
+
+---
+
+### Eruption
+**Hunger:** 5 · **Cooldown:** 10s · **Power:** reach in blocks (default 5)
+
+Opens a pool of lava **on the face of the block you are aiming at** — the same square a bucket would
+fill, never underfoot. It refuses if you are close enough to be standing in it.
+
+It has to pass the same permission check a lava bucket does, so claims, spawn protection and the
+world border all hold: a plot you cannot build in is a plot you cannot erupt in.
+
+---
+
+### Seed Bomb
+**Hunger:** 2 · **Cooldown:** 3s · **Power:** 10 (tenths of blast strength)
+
+Lobs a single heavy seed that bursts where it lands, costing one seed from your inventory.
+
+The blast is small on purpose: **power** is tenths of vanilla explosion strength, so the default 10
+is a strength of 1 — against a creeper's 30 and TNT's 40. It scatters what is standing there and
+takes a bite out of soft ground, and it will not open a hole. Turn it up if you want a bigger bang:
+
+```
+/dittohm config seed_bomb power <0-512>
+```
+
+It respects the world's mob-griefing rule, so a server with block damage turned off gets the bang
+and the knock without the crater. For flattening terrain on purpose, **Explosion** is the HM.
 
 ---
 
@@ -323,7 +370,8 @@ Paradox Pokémon never answer — a crowd you can summon on a cooldown would oth
 ### Headbutt
 **Hunger:** 2 · **Cooldown:** 2s · **Power:** drives the hop, the damage and the recoil
 
-Hurls you forward head-first.
+Hurls you forward head-first, **from standing** — you need both feet on the ground to throw
+yourself anywhere.
 
 - Into a **tree**, the branches shake loose — sticks, saplings, the odd apple.
 - Into a **creature**, it hurts them.

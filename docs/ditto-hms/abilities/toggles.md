@@ -55,6 +55,10 @@ When a toggle is turned **off**, its effects are removed **immediately**.
 | Harden | Metapod, Kakuna, Silcoon, Cascoon | Shield |
 | Glide | Dragonite, Togekiss, Aerodactyl | Feather |
 | Burning Bulwark | Gouging Fire | Blaze Rod |
+| Helping Hand | Plusle, Minun, Audino | Saddle |
+| Lava Plume | Magcargo, Slugma, Turtonator | Magma Cream |
+| Tailwind | Talonflame, Noivern, Staraptor | Breeze Rod |
+| Swift | Ninjask, Accelgor, Electrode | Sugar |
 | Absorb | Gulpin, Swalot, Victreebel | Hopper |
 | Bounce | Spoink, Aipom, Hoppip | Slime Ball |
 | Snowscape | Froslass, Mamoswine | Blue Ice |
@@ -70,9 +74,10 @@ When a toggle is turned **off**, its effects are removed **immediately**.
 Applies continuous **Jump Boost**. The `power` value equals the buff level, so `power = 4` gives Jump Boost IV. Shows in your HUD.
 
 ### Surf
-**Blocks:** 2
+**Blocks:** 2 · **Power:** tenths of the multiplier (default 15)
 
-Lets you **swim much faster** through water while the toggle is on.
+Whatever you are **riding** cuts through water half again as fast. Your own swimming, on foot, is
+untouched. Surf's twin in the air is **Tailwind**.
 
 ### Rollout
 **Blocks:** 2 · **Power:** speed amount
@@ -82,10 +87,15 @@ Increases your **movement speed** while active.
 ### Dive
 **Blocks:** 2
 
+Lets you **live and work underwater**. Water stops getting in your way:
+
 - **Breathe underwater** — never run out of air.
-- You gently **sink** when you stop swimming, so you can stay down and explore. The sink only
-  kicks in while you're idle and drifting down — swimming in any direction (including up) stops
-  it, so it never fights your swimming.
+- **Walk the seabed as if it were dry land** — no wading, no drag on every step.
+- **Mine at full speed** — a block underwater breaks as fast as the same block in open air, and
+  the weight a guardian temple puts on your arms lifts while you're under.
+
+Dive takes penalties away; it never hands out a bonus. Push off the bottom and you swim at exactly
+the speed you always did — if you want to be *fast* in the water, that's [Surf](#surf).
 
 ### Flash
 **Blocks:** 2
@@ -116,6 +126,51 @@ attributes, plus damage resistance). Costs more hunger than other toggles.
 
 Lets you **glide like an Elytra without needing the item**. While airborne the real Elytra gliding
 kicks in — dive to gain speed, level off to glide far. (Fly auto-enables this.)
+
+### Swift
+**Blocks:** 2 · **Power:** tenths of the multiplier (default 20)
+
+Whatever you are riding **gets up to speed twice as quickly** — off the mark, out of a turn, after
+every stop. The only one of the three mount toggles that is not about top speed: **Surf** is faster
+in water and **Tailwind** faster in the air, while Swift is quicker to get there in all three.
+
+---
+
+### Tailwind
+**Blocks:** 2 · **Power:** tenths of the multiplier (default 15)
+
+A following wind for whatever you are **flying** on: it moves half again as fast through the air.
+Tailwind's twin in water is **Surf**.
+
+---
+
+### Lava Plume
+**Blocks:** 2 · **Power:** tenths of the movement multiplier (default 17)
+
+Dive's twin for lava. It lets you **live and work down there**: move through lava and walk its floor
+without the fluid dragging on every step, and breathe while you are under. Swimming out is exactly
+as it always was — like Dive, it takes a penalty away rather than handing out a bonus.
+
+**It gives you no fire protection of its own.** That is [Burning Bulwark](#burning-bulwark)'s job,
+and two HMs handing out the same immunity would make one of them pointless — so Lava Plume asks for
+it instead: you must have learned Burning Bulwark to switch Lava Plume on, and switching Lava Plume
+on switches Burning Bulwark on with it. Between them they block 6 food from your maximum.
+
+For the ride to the surface of a **water** pool, that is still **Waterfall**.
+
+---
+
+### Helping Hand
+**Blocks:** 2 · **Power:** tenths of the stamina multiplier (default 20 = double)
+
+Whatever you are riding keeps going **about twice as long** before it tires. Nothing else about the
+mount changes — it is not faster, it does not recover any quicker, it simply has more in the tank.
+
+```
+/dittohm config helping_hand power <0-512>
+```
+
+---
 
 ### Burning Bulwark
 **Blocks:** 4 · **Power:** thorns damage (default 2)

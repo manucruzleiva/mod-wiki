@@ -35,19 +35,28 @@ Both activator settings live at the top of the config screen, and as commands:
 | Setting | Default | What it does |
 |---|---|---|
 | **Visits** | on | Whether the trader appears at all |
-| **Rarity** | 1 in 36 | Rolled once every 10 seconds per player — higher is rarer |
+| **Appears every** | 36000 ticks (30 min) | How long the whole server waits between appearances |
 | **Stays for** | 6000 ticks (5 min) | How long it waits before wandering off |
-| **Guaranteed perfect IVs** | 6 | 0 rolls it like any wild Ditto · 1 gives it one best stat · 6 is flawless |
+| **Guaranteed perfect IVs** | 0 | Rolled like any wild Ditto · 1 gives it one best stat · 6 is flawless |
+| **Level** | 15–45 | The band its level is rolled from, inclusive |
 
 ```
 /dittohm config trader enabled <true|false>
-/dittohm config trader rarity <1-200>
+/dittohm config trader every <1200-1728000>
 /dittohm config trader stay <200-72000>
 /dittohm config trader ivs <0-6>
+/dittohm config trader levels <min> <max>
 ```
 
-It always offers **five** discs, and it stops visiting a player for good once they catch it —
-from then on it actively keeps its distance from them, so bring an uncaught friend.
+One appearance is **one trader for the whole server**, not one per player, and everybody is told in
+chat when it arrives and when it leaves. The clock runs while the server is empty and survives a
+restart; an appearance that lands with nobody eligible is missed rather than saved up.
+
+It always offers **five** discs, rolled once and kept for as long as that trader is standing there.
+Which five is weighted per HM — see [Trader weight](#trader-weight) below.
+
+It stops visiting a player for good once they catch it, and it keeps its distance from anyone who
+has caught one **or beaten one in battle**, so bring a friend who has done neither.
 
 ---
 
@@ -61,12 +70,31 @@ Every ability has these tunable values:
 | **Cooldown** | Ticks between uses (20 ticks = 1 second; 0 = no cooldown) |
 | **Power** | Ability-specific: radius, duration, damage, count, level, etc. |
 | **HungerBlock** | *(toggles only)* food points blocked from your max while enabled |
+| **Trader weight** | How often the Trainer Ditto offers this disc, against the others |
+| **Required level** | Experience level needed before the HM will fire (every HM ships at 0) |
+
+### Required level
+
+A **requirement, not a price**: nothing is deducted when the HM fires, you simply cannot reach for
+it until you have got there. Every HM ships at **0**, so nothing is gated unless a pack says so.
+
+An HM you have not qualified for is greyed out in the wheel and says which level it wants, and it
+comes back to life the moment you level up. Switching a toggle **off** is never gated, so raising a
+requirement can never strand someone inside an effect they cannot end.
+
+### Trader weight
+
+A weight, not a percentage: what an HM's share works out to depends on which ones you still have
+left to learn. **10** is the common default, **6** covers the ones that reshape how you mine or
+fight, and **3** is reserved for flight, blinking, a free heal and a suit of armour. **0** keeps an
+HM out of the stall entirely — unless everything you have left is at 0, in which case the roll
+falls back to even odds rather than leaving the stall empty.
 
 ---
 
 ## Cloth Config GUI (Fabric)
 
-Open **Mod Menu → Cobblemon Ditto HMs → ⚙** to see sliders for every ability's three values.  
+Open **Mod Menu → Cobblemon Ditto HMs → ⚙** to see sliders for every ability's values.  
 Changes save automatically.
 
 ---
@@ -80,6 +108,8 @@ Operator-only (`permission level 2`):
 /dittohm config <ability> cooldown <0–24000>
 /dittohm config <ability> power <0–512>
 /dittohm config <ability> hungerblock <0–20>   (toggles only)
+/dittohm config <ability> weight <0–100>
+/dittohm config <ability> minlevel <0–100>
 /dittohm config <ability> reset
 /dittohm config reset_all
 /dittohm config activator item <empty_hand|hm_case|either>
@@ -129,13 +159,15 @@ You can edit it directly — changes take effect on next server start.
 | Charm | 2 | 3s | 2 min follow |
 | Stockpile | 1 | 1s | lava self-damage 2 |
 | Substitute | 4 | 20s | 2 min decoy |
-| Lava Plume | 2 | 6s | rise + fire immunity |
 | Thief | 2 | 5s | — |
 | U-turn | 1 | 2s | hop 12 (tenths of a block) |
 | Charge | 2 | 3s | 200t charged |
 | Destiny Bond | 4 | 30s | 200t window |
 | Sweet Scent | 6 | 30s | 5 Pokémon |
 | Headbutt | 2 | 2s | 14 (hop / damage / recoil) |
+| Seed Bomb | 2 | 3s | blast 10 (tenths of strength) |
+| Eruption | 5 | 10s | reach 5 blocks |
+| Miracle Eye | 5 | 30s | search radius 100 chunks |
 
 \* Rest does not require hunger.
 
@@ -144,7 +176,7 @@ You can edit it directly — changes take effect on next server start.
 | Ability | HungerBlock | Power |
 |---|---|---|
 | Jump | 2 | Jump Boost level (4 = IV) |
-| Surf | 2 | Dolphin's Grace |
+| Surf | 2 | mount swim-speed multiplier ×10 (15) |
 | Rollout | 2 | Speed amplifier (0 = I) |
 | Dive | 2 | Water Breathing |
 | Flash | 2 | Night Vision |
@@ -153,6 +185,10 @@ You can edit it directly — changes take effect on next server start.
 | Harden | 3 | full diamond armour |
 | Glide | 2 | elytra-like glide |
 | Burning Bulwark | 4 | thorns damage (2) |
+| Helping Hand | 2 | stamina multiplier ×10 (20 = double) |
+| Lava Plume | 2 | lava movement multiplier ×10 (17) |
+| Tailwind | 2 | mount flight-speed multiplier ×10 (15) |
+| Swift | 2 | mount acceleration multiplier ×10 (20) |
 | Absorb | 2 | magnet radius 6 |
 | Bounce | 2 | — |
 | Snowscape | 2 | trail radius 3 |
