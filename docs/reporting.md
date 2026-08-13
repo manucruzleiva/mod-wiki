@@ -22,7 +22,7 @@ thing worth getting right.
 |---|---|---|
 | 🚨 **Crash** | the game closes, freezes or fails to start | jumps the queue; asks for the crash report |
 | 🐛 **Bug** | something works, but wrong | asks for versions, loader and steps |
-| 💡 **Idea** | you want something that does not exist yet | files it against the roadmap — no logs needed |
+| 💡 **Idea** | you want something that does not exist yet | files it as a feature request — no logs needed |
 | 💬 **Feedback** | an impression, a balance opinion, a "this felt off" | recorded; nothing else needed from you |
 
 ## What makes a great report
@@ -79,8 +79,8 @@ thing worth getting right.
         [Configuration](ditto-hms/configuration.md) — every ability's hunger cost, cooldown and
         power is a server-side slider, so a modpack may have tuned it away from the defaults.
 
-    **Suggesting a new HM?** Those are the most common request, and plenty on the
-    [Roadmap](ditto-hms/roadmap.md) started that way. The ones that get built fastest describe: the
+    **Suggesting a new HM?** Those are the most common request, and plenty of the ones that shipped
+    started that way. The ones that get built fastest describe: the
     **Pokémon move** it is based on, what it should **do in Minecraft**, and whether it feels like an
     **active** (press to use, costs hunger) or a **toggle** (passive, blocks part of your hunger bar).
 

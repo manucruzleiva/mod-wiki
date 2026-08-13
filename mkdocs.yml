@@ -111,7 +111,10 @@ markdown_extensions:
 # Every mod section follows the SAME spine, in this order:
 #
 #   index → Getting Started → (feature pages, mod-specific) → Commands → Configuration
-#         → Roadmap → Community Credits
+#         → Community Credits
+#
+# Sin Roadmap: cuatro paginas de "lo que viene" que envejecian solas y contradecian al mod. Lo que
+# viene se sigue pidiendo por el bot de tickets, que es donde se decide.
 #
 # La licencia NO va por mod. Es la misma para los cuatro, y cuatro copias casi iguales terminaron
 # divergiendo. Vive en /license/, enlazada desde el footer de todas las paginas.
@@ -134,14 +137,12 @@ nav:
       - Map Integration: routes/map-integration.md
       - Commands: routes/commands.md
       - Configuration: routes/configuration.md
-      - Roadmap: routes/roadmap.md
       - Community Credits: routes/credits.md
   - Cobblemon Nuzlocke & Soul Link:
       - nuzlocke/index.md
       - Hardcore Nuzlocke: nuzlocke/nuzlocke.md
       - Soul Link (co-op): nuzlocke/soul-link.md
       - Commands & Config: nuzlocke/commands.md
-      - Roadmap: nuzlocke/roadmap.md
       - Community Credits: nuzlocke/credits.md
   - Cobblemon Picnic:
       - picnic/index.md
@@ -151,7 +152,6 @@ nav:
       - Shiny Aura: picnic/shiny-aura.md
       - Items & Care: picnic/interactions-and-items.md
       - Commands & Config: picnic/commands.md
-      - Roadmap: picnic/roadmap.md
       - Community Credits: picnic/credits.md
   - Cobblemon Ditto HMs:
       - ditto-hms/index.md
@@ -161,7 +161,6 @@ nav:
       - HM Wheel: ditto-hms/hm-wheel.md
       - Commands: ditto-hms/commands.md
       - Configuration: ditto-hms/configuration.md
-      - Roadmap: ditto-hms/roadmap.md
       - Changelog: ditto-hms/changelog.md
       - Community Credits: ditto-hms/credits.md
   - 💛 Sponsor shiero: https://github.com/sponsors/manucruzleiva

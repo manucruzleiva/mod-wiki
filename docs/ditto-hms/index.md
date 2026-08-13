@@ -64,7 +64,6 @@ it keeps new HMs coming.
 | [HM Wheel](hm-wheel.md) | Pick any HM you know from one radial menu |
 | [Configuration](configuration.md) | Per-ability hunger / cooldown / power sliders |
 | [Commands](commands.md) | Admin and player commands |
-| [Roadmap](roadmap.md) | What's coming in the next versions |
 | [Community Credits](credits.md) | The people who shape the mod |
 
 ---
