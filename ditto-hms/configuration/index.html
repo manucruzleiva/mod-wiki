@@ -1507,6 +1507,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Per-ability values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trader-weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trader weight
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1720,6 +1748,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Per-ability values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trader-weight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trader weight
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1853,9 +1909,9 @@ big or too small at your GUI scale.</p>
 <td>Whether the trader appears at all</td>
 </tr>
 <tr>
-<td><strong>Rarity</strong></td>
-<td>1 in 36</td>
-<td>Rolled once every 10 seconds per player — higher is rarer</td>
+<td><strong>Appears every</strong></td>
+<td>36000 ticks (30 min)</td>
+<td>How long the whole server waits between appearances</td>
 </tr>
 <tr>
 <td><strong>Stays for</strong></td>
@@ -1864,18 +1920,29 @@ big or too small at your GUI scale.</p>
 </tr>
 <tr>
 <td><strong>Guaranteed perfect IVs</strong></td>
-<td>6</td>
-<td>0 rolls it like any wild Ditto · 1 gives it one best stat · 6 is flawless</td>
+<td>0</td>
+<td>Rolled like any wild Ditto · 1 gives it one best stat · 6 is flawless</td>
+</tr>
+<tr>
+<td><strong>Level</strong></td>
+<td>15–45</td>
+<td>The band its level is rolled from, inclusive</td>
 </tr>
 </tbody>
 </table>
 <div class="highlight"><pre><span></span><code>/dittohm config trader enabled &lt;true|false&gt;
-/dittohm config trader rarity &lt;1-200&gt;
+/dittohm config trader every &lt;1200-1728000&gt;
 /dittohm config trader stay &lt;200-72000&gt;
 /dittohm config trader ivs &lt;0-6&gt;
+/dittohm config trader levels &lt;min&gt; &lt;max&gt;
 </code></pre></div>
-<p>It always offers <strong>five</strong> discs, and it stops visiting a player for good once they catch it —
-from then on it actively keeps its distance from them, so bring an uncaught friend.</p>
+<p>One appearance is <strong>one trader for the whole server</strong>, not one per player, and everybody is told in
+chat when it arrives and when it leaves. The clock runs while the server is empty and survives a
+restart; an appearance that lands with nobody eligible is missed rather than saved up.</p>
+<p>It always offers <strong>five</strong> discs, rolled once and kept for as long as that trader is standing there.
+Which five is weighted per HM — see <a href="#trader-weight">Trader weight</a> below.</p>
+<p>It stops visiting a player for good once they catch it, and it keeps its distance from anyone who
+has caught one <strong>or beaten one in battle</strong>, so bring a friend who has done neither.</p>
 <hr />
 <h2 id="per-ability-values">Per-ability values<a class="headerlink" href="#per-ability-values" title="Permanent link">&para;</a></h2>
 <p>Every ability has these tunable values:</p>
@@ -1903,11 +1970,31 @@ from then on it actively keeps its distance from them, so bring an uncaught frie
 <td><strong>HungerBlock</strong></td>
 <td><em>(toggles only)</em> food points blocked from your max while enabled</td>
 </tr>
+<tr>
+<td><strong>Trader weight</strong></td>
+<td>How often the Trainer Ditto offers this disc, against the others</td>
+</tr>
+<tr>
+<td><strong>Required level</strong></td>
+<td>Experience level needed before the HM will fire (every HM ships at 0)</td>
+</tr>
 </tbody>
 </table>
+<h3 id="required-level">Required level<a class="headerlink" href="#required-level" title="Permanent link">&para;</a></h3>
+<p>A <strong>requirement, not a price</strong>: nothing is deducted when the HM fires, you simply cannot reach for
+it until you have got there. Every HM ships at <strong>0</strong>, so nothing is gated unless a pack says so.</p>
+<p>An HM you have not qualified for is greyed out in the wheel and says which level it wants, and it
+comes back to life the moment you level up. Switching a toggle <strong>off</strong> is never gated, so raising a
+requirement can never strand someone inside an effect they cannot end.</p>
+<h3 id="trader-weight">Trader weight<a class="headerlink" href="#trader-weight" title="Permanent link">&para;</a></h3>
+<p>A weight, not a percentage: what an HM's share works out to depends on which ones you still have
+left to learn. <strong>10</strong> is the common default, <strong>6</strong> covers the ones that reshape how you mine or
+fight, and <strong>3</strong> is reserved for flight, blinking, a free heal and a suit of armour. <strong>0</strong> keeps an
+HM out of the stall entirely — unless everything you have left is at 0, in which case the roll
+falls back to even odds rather than leaving the stall empty.</p>
 <hr />
 <h2 id="cloth-config-gui-fabric">Cloth Config GUI (Fabric)<a class="headerlink" href="#cloth-config-gui-fabric" title="Permanent link">&para;</a></h2>
-<p>Open <strong>Mod Menu → Cobblemon Ditto HMs → ⚙</strong> to see sliders for every ability's three values.<br />
+<p>Open <strong>Mod Menu → Cobblemon Ditto HMs → ⚙</strong> to see sliders for every ability's values.<br />
 Changes save automatically.</p>
 <hr />
 <h2 id="in-game-commands">In-game commands<a class="headerlink" href="#in-game-commands" title="Permanent link">&para;</a></h2>
@@ -1916,6 +2003,8 @@ Changes save automatically.</p>
 /dittohm config &lt;ability&gt; cooldown &lt;0–24000&gt;
 /dittohm config &lt;ability&gt; power &lt;0–512&gt;
 /dittohm config &lt;ability&gt; hungerblock &lt;0–20&gt;   (toggles only)
+/dittohm config &lt;ability&gt; weight &lt;0–100&gt;
+/dittohm config &lt;ability&gt; minlevel &lt;0–100&gt;
 /dittohm config &lt;ability&gt; reset
 /dittohm config reset_all
 /dittohm config activator item &lt;empty_hand|hm_case|either&gt;
@@ -2098,12 +2187,6 @@ Changes save automatically.</p>
 <td>2 min decoy</td>
 </tr>
 <tr>
-<td>Lava Plume</td>
-<td>2</td>
-<td>6s</td>
-<td>rise + fire immunity</td>
-</tr>
-<tr>
 <td>Thief</td>
 <td>2</td>
 <td>5s</td>
@@ -2139,6 +2222,24 @@ Changes save automatically.</p>
 <td>2s</td>
 <td>14 (hop / damage / recoil)</td>
 </tr>
+<tr>
+<td>Seed Bomb</td>
+<td>2</td>
+<td>3s</td>
+<td>blast 10 (tenths of strength)</td>
+</tr>
+<tr>
+<td>Eruption</td>
+<td>5</td>
+<td>10s</td>
+<td>reach 5 blocks</td>
+</tr>
+<tr>
+<td>Miracle Eye</td>
+<td>5</td>
+<td>30s</td>
+<td>search radius 100 chunks</td>
+</tr>
 </tbody>
 </table>
 <p>* Rest does not require hunger.</p>
@@ -2160,7 +2261,7 @@ Changes save automatically.</p>
 <tr>
 <td>Surf</td>
 <td>2</td>
-<td>Dolphin's Grace</td>
+<td>mount swim-speed multiplier ×10 (15)</td>
 </tr>
 <tr>
 <td>Rollout</td>
@@ -2201,6 +2302,26 @@ Changes save automatically.</p>
 <td>Burning Bulwark</td>
 <td>4</td>
 <td>thorns damage (2)</td>
+</tr>
+<tr>
+<td>Helping Hand</td>
+<td>2</td>
+<td>stamina multiplier ×10 (20 = double)</td>
+</tr>
+<tr>
+<td>Lava Plume</td>
+<td>2</td>
+<td>lava movement multiplier ×10 (17)</td>
+</tr>
+<tr>
+<td>Tailwind</td>
+<td>2</td>
+<td>mount flight-speed multiplier ×10 (15)</td>
+</tr>
+<tr>
+<td>Swift</td>
+<td>2</td>
+<td>mount acceleration multiplier ×10 (20)</td>
 </tr>
 <tr>
 <td>Absorb</td>
