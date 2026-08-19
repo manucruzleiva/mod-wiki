@@ -12,8 +12,8 @@ to the tier's seat cap. Leftover side cells stay empty.
 | **Camping** | 8 | 48 | 3 | 5 bread | Cheaper fuel, bigger |
 | **Glamping** | 12 | 64 | 4 | 3 bread | Unlocks the **[Battle Seeker](interactions-and-items.md#battle-seeker)** slot |
 | **Diving** | 12 | 64 | 4 | 3 bread | **Placed underwater only** |
-| **Hot** | 12 | 64 | 4 | 3 bread | **Nether only** — and the only table that survives there |
-| **Strange** | 12 | 64 | 4 | 3 bread | **End only** — the only table allowed in |
+| **Hot** | 12 | 64 | 4 | 3 bread | At home in the **Nether** — the only table that survives there |
+| **Strange** | 12 | 64 | 4 | 3 bread | At home in **the End** — the only table that stays put there |
 
 - **Spawn cap** — the maximum Pokémon a single re-roll can spawn (and the GUI slider's max).
 - **Radius** — how far around the table wild Pokémon are despawned and re-rolled.
@@ -125,11 +125,11 @@ example.
 ### 2. The Basic Picnic Table
 
 <div class="cr-scroll">
-<div class="cr-craft" title="Picnic Basket + Nether Star + 2× Table + Campfire Pot + 2× Dining Bench + Campfire → Basic Picnic Table">
+<div class="cr-craft" title="Picnic Basket + Vivichoke + 2× Table + Campfire Pot + 2× Dining Bench + Campfire → Basic Picnic Table">
   <div class="cr-grid">
     <div class="cr-slot"><img src="../../assets/items/red_picnic_basket.png" alt="Picnic Basket"></div>
     <div class="cr-slot"></div>
-    <div class="cr-slot"><img src="../../assets/items/nether_star.png" alt="Nether Star"></div>
+    <div class="cr-slot"><img src="../../assets/items/vivichoke.png" alt="Vivichoke"></div>
     <div class="cr-slot"><img src="../../assets/items/table_red.png" alt="Table"></div>
     <div class="cr-slot"><img src="../../assets/items/table_red.png" alt="Table"></div>
     <div class="cr-slot"><img src="../../assets/items/campfire_pot_red.png" alt="Campfire Pot"></div>
@@ -145,7 +145,7 @@ example.
 | Ingredient | Amount | Accepts |
 | --- | :---: | --- |
 | <img class="cr-inline" src="../../assets/items/red_picnic_basket.png" alt=""> Picnic Basket | 1 | any of the 7 colors |
-| <img class="cr-inline" src="../../assets/items/nether_star.png" alt=""> Nether Star | 1 | — |
+| <img class="cr-inline" src="../../assets/items/vivichoke.png" alt=""> Vivichoke | 1 | — |
 | <img class="cr-inline" src="../../assets/items/table_red.png" alt=""> Table | 2 | any of the 16 colors — **the left one sets the tablecloth color** |
 | <img class="cr-inline" src="../../assets/items/campfire_pot_red.png" alt=""> Campfire Pot | 1 | any Cobblemon Campfire Pot, or Cobblemon's own Campfire |
 | <img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench | 2 | any of the 11 woods — **the left one sets the frame wood** |
@@ -276,20 +276,28 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 
 ## Where each table can go
 
-Every table is tied to a place, and the game tells you which one you want when you aim at the wrong
-one.
+**Any table can be placed in any dimension.** Where a table goes is your business — what the place
+does to it once it is standing there is the dimension's, and two of them do not take kindly to a
+picnic. Each has one table that is at home in it and comes through untouched.
 
 | Table | Overworld | Nether | The End |
 |---|:---:|:---:|:---:|
-| **Basic / Camping / Glamping** | ✅ | ⚠️ catches fire | ❌ |
-| **Diving** | ✅ underwater only | ⚠️ catches fire | ❌ |
-| **Hot** | ❌ | ✅ | ❌ |
-| **Strange** | ❌ | ❌ | ✅ |
+| **Basic / Camping / Glamping** | ✅ | ⚠️ catches fire | ⚠️ drifts away |
+| **Diving** | ✅ underwater only | ⚠️ catches fire | ⚠️ drifts away |
+| **Hot** | ✅ | ✅ **at home** | ⚠️ drifts away |
+| **Strange** | ✅ | ⚠️ catches fire | ✅ **at home** |
 
 🔥 **An ordinary table burns in the Nether.** Leave any table but the **Hot** one down there and it
 has a **30% chance every second** of a flame taking hold on one of its cells. Nothing is destroyed
 outright — it burns from there under the normal fire rules, so you can still put it out. To picnic in
 the Nether properly, bring the Hot table: it never catches fire.
+
+🌌 **The End will not hold a picnic still.** Sit down at any table but the **Strange** one out there,
+or try to re-roll at it, and the whole table is **somewhere else within 24 blocks** before the click
+lands — leaving you standing where it used to be. Nothing is lost: the bread in the slot, the cloth
+colour and bench wood it was crafted with, and your Pokémon-per-re-roll setting all travel with it. A
+table with nowhere to go — walled in, or ringed by void — stays put and works normally. To picnic in
+the End properly, bring the Strange table: it never drifts.
 
 🌊 The **Diving** table is the same idea in water: it only deploys **submerged**, and won't place in air.
 

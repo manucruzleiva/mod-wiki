@@ -24,7 +24,7 @@ edits your own client's file.
     ---
 
     Three components — a **Table**, a **Dining Bench** and a **Picnic Basket** — then combine them
-    with a **Nether Star**, a **Campfire Pot** and a **Campfire**. The Table and Bench you pick set
+    with a **Vivichoke**, a **Campfire Pot** and a **Campfire**. The Table and Bench you pick set
     its colour and wood.
 
     [Full grids](picnic-tables.md#crafting)
