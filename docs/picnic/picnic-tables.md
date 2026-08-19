@@ -125,10 +125,10 @@ example.
 ### 2. The Basic Picnic Table
 
 <div class="cr-scroll">
-<div class="cr-craft" title="Picnic Basket + Vivichoke + 2× Table + Campfire Pot + 2× Dining Bench + Campfire → Basic Picnic Table">
+<div class="cr-craft" title="Picnic Basket + Planks + Vivichoke + 2× Table + Campfire Pot + 2× Dining Bench + Campfire → Basic Picnic Table">
   <div class="cr-grid">
     <div class="cr-slot"><img src="../../assets/items/red_picnic_basket.png" alt="Picnic Basket"></div>
-    <div class="cr-slot"></div>
+    <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/planks.png)" role="img" aria-label="Planks — any of the 11 woods"></div>
     <div class="cr-slot"><img src="../../assets/items/vivichoke.png" alt="Vivichoke"></div>
     <div class="cr-slot"><img src="../../assets/items/table_red.png" alt="Table"></div>
     <div class="cr-slot"><img src="../../assets/items/table_red.png" alt="Table"></div>
@@ -146,21 +146,24 @@ example.
 | --- | :---: | --- |
 | <img class="cr-inline" src="../../assets/items/red_picnic_basket.png" alt=""> Picnic Basket | 1 | any of the 7 colors |
 | <img class="cr-inline" src="../../assets/items/vivichoke.png" alt=""> Vivichoke | 1 | — |
+| <img class="cr-inline" src="../../assets/items/oak_planks.png" alt=""> Planks | 1 | any of the 11 woods — **this sets the frame wood** |
 | <img class="cr-inline" src="../../assets/items/table_red.png" alt=""> Table | 2 | any of the 16 colors — **the left one sets the tablecloth color** |
 | <img class="cr-inline" src="../../assets/items/campfire_pot_red.png" alt=""> Campfire Pot | 1 | any Cobblemon Campfire Pot, or Cobblemon's own Campfire |
-| <img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench | 2 | any of the 11 woods — **the left one sets the frame wood** |
+| <img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench | 2 | any of the 11 woods — **the left one sets the bench wood** |
 | <img class="cr-inline" src="../../assets/items/campfire.png" alt=""> Campfire | 1 | Campfire *or* <img class="cr-inline" src="../../assets/items/soul_campfire.png" alt=""> Soul Campfire |
 | **→ <img class="cr-inline" src="../../assets/items/basic_picnic_table.png" alt=""> Basic Picnic Table** | **1** | |
 
-The result renders in that exact **color × wood** combination, using the mod's **own models and
-textures** (no other furniture mod required). The basket, pot and campfire are consumed but don't
-change how the table looks. Every color/wood variant is also available in the Creative inventory.
+The result renders in exactly that **cloth color**, **frame wood** and **bench wood**, using the
+mod's **own models and textures** (no other furniture mod required) — the three are chosen
+separately, so a cherry frame under a black cloth with spruce benches is a table you can build. The
+basket, pot and campfire are consumed but don't change how the table looks. Every variant is also
+available in the Creative inventory.
 
 ### 3. Upgrading
 
 The three higher tiers are **shapeless** — the ingredients can sit anywhere in the grid. An upgrade
-**keeps the color and wood** the table was crafted with, so it stays the same style all the way up;
-the bench you add is fuel for the recipe, not a new style, and its wood is ignored.
+**keeps the color and the woods** the table was crafted with, so it stays the same style all the way
+up; the bench you add is fuel for the recipe, not a new style, and its wood is ignored.
 
 === "Advanced"
 
@@ -295,7 +298,7 @@ the Nether properly, bring the Hot table: it never catches fire.
 🌌 **The End will not hold a picnic still.** Sit down at any table but the **Strange** one out there,
 or try to re-roll at it, and the whole table is **somewhere else within 24 blocks** before the click
 lands — leaving you standing where it used to be. Nothing is lost: the bread in the slot, the cloth
-colour and bench wood it was crafted with, and your Pokémon-per-re-roll setting all travel with it. A
+colour and the woods it was crafted with, and your Pokémon-per-re-roll setting all travel with it. A
 table with nowhere to go — walled in, or ringed by void — stays put and works normally. To picnic in
 the End properly, bring the Strange table: it never drifts.
 

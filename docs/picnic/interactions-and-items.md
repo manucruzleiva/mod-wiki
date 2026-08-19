@@ -167,8 +167,9 @@ simply does nothing and the rest of the table works normally.
 
 ## Colours, woods and fire
 
-Tables come in **16 cloth colours × 11 woods**, baskets in every apricorn colour, and every variant is
-in the Creative inventory. All of them are **flammable** — they burn like wood planks, which is what
+A picnic table is built in **16 cloth colours × 11 frame woods × 11 bench woods**, and the coloured
+tables, dining benches and apricorn-coloured baskets it is built from are all in the Creative
+inventory. All of them are **flammable** — they burn like wood planks, which is what
 the [Nether](picnic-tables.md#where-each-table-can-go) exploits.
 
 Friendship built at the picnic stacks with normal Cobblemon mechanics, so it's a good way to evolve
