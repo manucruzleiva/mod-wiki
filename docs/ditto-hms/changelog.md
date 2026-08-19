@@ -6,6 +6,34 @@
 All notable changes are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) + SemVer.
 
+## [2.1.1] - 2026-08-19
+
+**A round of things that fired twice, said too much, or quietly took your dinner.**
+
+### 🐛 Fixed
+- **One click, one HM.** Firing an HM with an empty hand could set it off twice. The vanilla client
+  re-sends a held left-click every few ticks, and every re-send was a fresh cast — which is why the
+  HMs with no cooldown of their own (Cut, Rock Smash, Rototiller, Strength, Dig) were the ones you
+  saw double. A press now pays out once, however long you hold it.
+- **The weather HMs give the sky back properly.** Sunny Day ended with a thunderstorm arriving the
+  instant the sun ran out, and Rain Dance ended with the rain stopping and lightning starting in the
+  same breath. Both handed rain and thunder the same countdown, so both went off together. Each is
+  now rolled separately, the way the game rolls them, and the sky is quiet in between.
+- **Leafage stopped wrecking the flowerbed.** Tall flowers were being planted as half a flower, so
+  the next cast in the same field knocked every one of them over. They are planted whole now, only
+  where there is room, and never on a spot that already has something growing on it. A biome with no
+  flowers of its own gets grass rather than a dandelion that does not belong there — and bone-mealing
+  a sunflower no longer showers you with free sunflowers.
+- **Rest keeps quiet.** It no longer writes a line into the chat log for every person it heals.
+- **Your food is not thrown away any more.** With toggles running, your hunger bar is capped below
+  full — and the game read that as "still hungry", so you could always eat, and the meal was clipped
+  straight back off. Food you cannot use is now refused, and it says so.
+
+### ✨ Changed
+- **Miracle Eye throws an eye.** No more line of text telling you the name, the distance and the
+  bearing: it flies off towards the monument and you follow it, exactly the way you find a
+  stronghold. It does not leave anything behind when it lands.
+
 ## [2.1.0] - 2026-08-13
 
 **Six new HMs, and three of the old ones became something else.** Everything below has been in

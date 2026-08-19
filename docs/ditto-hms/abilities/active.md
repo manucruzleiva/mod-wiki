@@ -183,9 +183,10 @@ many go out and how hard each one lands.
 ### Miracle Eye
 **Hunger:** 5 · **Cooldown:** 30s · **Power:** search radius in chunks (default 100)
 
-Reaches out for the nearest **legendary monument** and tells you what it is, roughly how far, and
-which way — and deliberately **not** where. Knowing that Lake Verity is nine hundred blocks
-north-east is what makes it a journey.
+Throws an eye that flies off towards the nearest **legendary monument** — exactly the way an Eye of
+Ender leads you to a stronghold. Follow it, throw another when it fades, and keep going. It tells
+you nothing in words: not the name, not the distance, not a bearing and certainly not coordinates.
+Walking there is the point. The eye leaves nothing behind when it fades.
 
 Which monuments it knows about is a **datapack tag**, `cobblemon_ditto_hms:miracle_eye`. It ships
 pointing at the thirteen from [Legendary Monuments](https://modrinth.com/mod/legendary-monuments),
