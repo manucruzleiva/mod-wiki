@@ -1849,8 +1849,8 @@ is part of playing. Changing anything needs <strong>operator</strong> rank.</p>
 <div class="highlight"><pre><span></span><code>/picnic auramultiplier 3          # a full table triples shiny odds
 /picnic auramultiplier default    # back to ×2
 /picnic reroll false              # switch the spawn re-roll off entirely
-/picnic spawncap glamping 16      # per-tier settings take the tier in the middle
-/picnic spawncap glamping default
+/picnic spawncap expert 16      # per-tier settings take the tier in the middle
+/picnic spawncap expert default
 </code></pre></div>
 <h3 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h3>
 <table>
@@ -1875,7 +1875,7 @@ is part of playing. Changing anything needs <strong>operator</strong> rank.</p>
 <tr>
 <td><code>fuelcost &lt;tier&gt;</code></td>
 <td>int</td>
-<td>Bread consumed per re-roll for that tier (7 for Basic, 5 for Camping, 3 above).</td>
+<td>Bread consumed per re-roll for that tier (7 for Basic, 5 for Advanced, 3 above).</td>
 </tr>
 <tr>
 <td><code>rerollcooldown</code></td>
@@ -2017,7 +2017,7 @@ re-roll to spare. <code>disableseatedaggro</code> is <strong>on by default</stro
 <p>Ask for one slice instead of the lot. Each filter reports its own re-roll count, what came out, and
 the shiny rate for that slice alone — and for shinies, the species, level and coordinates of each one.
 All of them are open to everyone.</p>
-<div class="highlight"><pre><span></span><code>/picnic stats player &lt;name&gt;       # everything one trainer&#39;s re-rolls produced
+<div class="highlight"><pre><span></span><code>/picnic stats player &lt;name&gt;       # everything one trainer's re-rolls produced
 /picnic stats dimension &lt;id&gt;      # e.g. minecraft:the_nether
 /picnic stats species &lt;name&gt;      # every appearance of one species
 /picnic stats shiny               # just the shinies, and where they turned up
@@ -2060,14 +2060,14 @@ config/cobblemon_picnic_events.jsonl  # granular per-re-roll log
 <td style="text-align: center;">2</td>
 </tr>
 <tr>
-<td>Camping</td>
+<td>Advanced</td>
 <td style="text-align: center;">8</td>
 <td style="text-align: center;">5</td>
 <td style="text-align: center;">48</td>
 <td style="text-align: center;">3</td>
 </tr>
 <tr>
-<td>Glamping</td>
+<td>Expert</td>
 <td style="text-align: center;">12</td>
 <td style="text-align: center;">3</td>
 <td style="text-align: center;">64</td>

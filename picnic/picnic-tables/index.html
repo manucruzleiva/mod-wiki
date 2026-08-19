@@ -1810,7 +1810,7 @@ to the tier's seat cap. Leftover side cells stay empty.</p>
 <td>Entry tier</td>
 </tr>
 <tr>
-<td><strong>Camping</strong></td>
+<td><strong>Advanced</strong></td>
 <td style="text-align: center;">8</td>
 <td style="text-align: center;">48</td>
 <td style="text-align: center;">3</td>
@@ -1818,7 +1818,7 @@ to the tier's seat cap. Leftover side cells stay empty.</p>
 <td>Cheaper fuel, bigger</td>
 </tr>
 <tr>
-<td><strong>Glamping</strong></td>
+<td><strong>Expert</strong></td>
 <td style="text-align: center;">12</td>
 <td style="text-align: center;">64</td>
 <td style="text-align: center;">4</td>
@@ -1831,7 +1831,7 @@ to the tier's seat cap. Leftover side cells stay empty.</p>
 <td style="text-align: center;">64</td>
 <td style="text-align: center;">4</td>
 <td style="text-align: center;">3 bread</td>
-<td><strong>Placed underwater only</strong></td>
+<td>At home <strong>underwater</strong> — on dry land it floods what is around it</td>
 </tr>
 <tr>
 <td><strong>Hot</strong></td>
@@ -1839,7 +1839,7 @@ to the tier's seat cap. Leftover side cells stay empty.</p>
 <td style="text-align: center;">64</td>
 <td style="text-align: center;">4</td>
 <td style="text-align: center;">3 bread</td>
-<td><strong>Nether only</strong> — and the only table that survives there</td>
+<td>At home in the <strong>Nether</strong> — anywhere else it scorches what is around it</td>
 </tr>
 <tr>
 <td><strong>Strange</strong></td>
@@ -1847,7 +1847,7 @@ to the tier's seat cap. Leftover side cells stay empty.</p>
 <td style="text-align: center;">64</td>
 <td style="text-align: center;">4</td>
 <td style="text-align: center;">3 bread</td>
-<td><strong>End only</strong> — the only table allowed in</td>
+<td>At home in <strong>the End</strong> — anywhere else it will not stay put</td>
 </tr>
 </tbody>
 </table>
@@ -1856,12 +1856,12 @@ to the tier's seat cap. Leftover side cells stay empty.</p>
 <li><strong>Radius</strong> — how far around the table wild Pokémon are despawned and re-rolled.</li>
 <li><strong>Seats</strong> — how many benches the footprint provides (seat counts are <strong>fixed per tier</strong>, not
   configurable).</li>
-<li><strong>Fuel</strong> — bread consumed per re-roll, cheaper as tiers improve (7 for Basic, 5 for Camping, 3 for
+<li><strong>Fuel</strong> — bread consumed per re-roll, cheaper as tiers improve (7 for Basic, 5 for Advanced, 3 for
   everything above). Bread comes from the table's fuel slot or from a nearby
   <strong><a href="../interactions-and-items/#picnic-baskets">Picnic Basket</a></strong>. The per-tier cost is configurable
   (<code>fuelcost &lt;tier&gt;</code>).</li>
 </ul>
-<p><strong>Basic → Camping → Glamping</strong> is the ladder. <strong>Diving</strong>, <strong>Hot</strong> and <strong>Strange</strong> are three steps
+<p><strong>Basic → Advanced → Expert</strong> is the ladder. <strong>Diving</strong>, <strong>Hot</strong> and <strong>Strange</strong> are three steps
 sideways off the top of it: identical in what they do, different only in where they can go. See
 <a href="#where-each-table-can-go">Where each table can go</a>.</p>
 <h2 id="crafting">Crafting<a class="headerlink" href="#crafting" title="Permanent link">&para;</a></h2>
@@ -1873,17 +1873,18 @@ example.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Table</label><label for="__tabbed_1_2">Dining Bench</label><label for="__tabbed_1_3">Picnic Basket</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>The tablecloth piece. Any of the <strong>16 dye colors</strong> of wool, over <strong>oak planks</strong>, gives that
-color's Table (<em>White Table</em>, <em>Red Table</em>, …).</p>
+<p>The tabletop. Any of the <strong>16 dye colors</strong> of wool over any of the <strong>11 woods</strong> of planks — the
+wool is the cloth and the planks are the frame, so there are <strong>176</strong> of them (<em>Red Table</em>,
+<em>Spruce Red Table</em>, <em>Cherry Black Table</em>, …). Oak's are the ones with no wood in the name.</p>
 <p><div class="cr-scroll">
-<div class="cr-craft" title="3× Red Wool + 2× Oak Planks → 1× Red Table">
+<div class="cr-craft" title="3× Wool + 2× Planks → 1× Table in that colour and wood">
   <div class="cr-grid">
     <div class="cr-slot cr-cycle cr-cycle--16" style="background-image:url(../../assets/items/strips/wool.png)" role="img" aria-label="Wool — any of the 16 colours"></div>
     <div class="cr-slot cr-cycle cr-cycle--16" style="background-image:url(../../assets/items/strips/wool.png)" role="img" aria-label="Wool — any of the 16 colours"></div>
     <div class="cr-slot cr-cycle cr-cycle--16" style="background-image:url(../../assets/items/strips/wool.png)" role="img" aria-label="Wool — any of the 16 colours"></div>
-    <div class="cr-slot"><img src="../../assets/items/oak_planks.png" alt="Oak Planks"></div>
+    <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/planks.png)" role="img" aria-label="Planks — any of the 11 woods"></div>
     <div class="cr-slot"></div>
-    <div class="cr-slot"><img src="../../assets/items/oak_planks.png" alt="Oak Planks"></div>
+    <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/planks.png)" role="img" aria-label="Planks — any of the 11 woods"></div>
     <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
   </div>
   <div class="cr-arrow">➜</div>
@@ -1903,11 +1904,11 @@ color's Table (<em>White Table</em>, <em>Red Table</em>, …).</p>
 <td style="text-align: center;">3</td>
 </tr>
 <tr>
-<td><img class="cr-inline" src="../../assets/items/oak_planks.png" alt=""> Oak Planks</td>
+<td><img class="cr-inline" src="../../assets/items/oak_planks.png" alt=""> Planks — any of the 11 woods</td>
 <td style="text-align: center;">2</td>
 </tr>
 <tr>
-<td><strong>→ <img class="cr-inline" src="../../assets/items/table_red.png" alt=""> Table</strong> in that color</td>
+<td><strong>→ <img class="cr-inline" src="../../assets/items/table_red.png" alt=""> Table</strong> in that color and wood</td>
 <td style="text-align: center;"><strong>1</strong></td>
 </tr>
 </tbody>
@@ -2001,11 +2002,11 @@ black, blue, green, pink, red and yellow.</p>
 </div>
 <h3 id="2-the-basic-picnic-table">2. The Basic Picnic Table<a class="headerlink" href="#2-the-basic-picnic-table" title="Permanent link">&para;</a></h3>
 <div class="cr-scroll">
-<div class="cr-craft" title="Picnic Basket + Nether Star + 2× Table + Campfire Pot + 2× Dining Bench + Campfire → Basic Picnic Table">
+<div class="cr-craft" title="Picnic Basket + Vivichoke + 2× Table + Campfire Pot + 2× Dining Bench + Campfire → Basic Picnic Table">
   <div class="cr-grid">
     <div class="cr-slot"><img src="../../assets/items/red_picnic_basket.png" alt="Picnic Basket"></div>
     <div class="cr-slot"></div>
-    <div class="cr-slot"><img src="../../assets/items/nether_star.png" alt="Nether Star"></div>
+    <div class="cr-slot"><img src="../../assets/items/vivichoke.png" alt="Vivichoke"></div>
     <div class="cr-slot"><img src="../../assets/items/table_red.png" alt="Table"></div>
     <div class="cr-slot"><img src="../../assets/items/table_red.png" alt="Table"></div>
     <div class="cr-slot"><img src="../../assets/items/campfire_pot_red.png" alt="Campfire Pot"></div>
@@ -2014,7 +2015,7 @@ black, blue, green, pink, red and yellow.</p>
     <div class="cr-slot"><img src="../../assets/items/campfire.png" alt="Campfire"></div>
   </div>
   <div class="cr-arrow">➜</div>
-  <div class="cr-result"><img src="../../assets/items/picnic_table.png" alt="Basic Picnic Table"></div>
+  <div class="cr-result"><img src="../../assets/items/basic_picnic_table.png" alt="Basic Picnic Table"></div>
 </div>
 </div>
 
@@ -2033,14 +2034,14 @@ black, blue, green, pink, red and yellow.</p>
 <td>any of the 7 colors</td>
 </tr>
 <tr>
-<td><img class="cr-inline" src="../../assets/items/nether_star.png" alt=""> Nether Star</td>
+<td><img class="cr-inline" src="../../assets/items/vivichoke.png" alt=""> Vivichoke</td>
 <td style="text-align: center;">1</td>
 <td>—</td>
 </tr>
 <tr>
 <td><img class="cr-inline" src="../../assets/items/table_red.png" alt=""> Table</td>
 <td style="text-align: center;">2</td>
-<td>any of the 16 colors — <strong>the left one sets the tablecloth color</strong></td>
+<td>any of the 176 — <strong>the left one sets the cloth colour and the frame wood</strong>. Tables from <strong>CobbleFurnies</strong> and <strong>Handcrafted</strong> work too</td>
 </tr>
 <tr>
 <td><img class="cr-inline" src="../../assets/items/campfire_pot_red.png" alt=""> Campfire Pot</td>
@@ -2050,7 +2051,7 @@ black, blue, green, pink, red and yellow.</p>
 <tr>
 <td><img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench</td>
 <td style="text-align: center;">2</td>
-<td>any of the 11 woods — <strong>the left one sets the frame wood</strong></td>
+<td>any of the 11 woods — <strong>each one becomes a seat, in the order you place them</strong>. Benches from <strong>Handcrafted</strong> work too</td>
 </tr>
 <tr>
 <td><img class="cr-inline" src="../../assets/items/campfire.png" alt=""> Campfire</td>
@@ -2058,33 +2059,35 @@ black, blue, green, pink, red and yellow.</p>
 <td>Campfire <em>or</em> <img class="cr-inline" src="../../assets/items/soul_campfire.png" alt=""> Soul Campfire</td>
 </tr>
 <tr>
-<td><strong>→ <img class="cr-inline" src="../../assets/items/picnic_table.png" alt=""> Basic Picnic Table</strong></td>
+<td><strong>→ <img class="cr-inline" src="../../assets/items/basic_picnic_table.png" alt=""> Basic Picnic Table</strong></td>
 <td style="text-align: center;"><strong>1</strong></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p>The result renders in that exact <strong>color × wood</strong> combination, using the mod's <strong>own models and
-textures</strong> (no other furniture mod required). The basket, pot and campfire are consumed but don't
-change how the table looks. Every color/wood variant is also available in the Creative inventory.</p>
+<p>The result is drawn as <strong>exactly the items you built it from</strong>: the cloth and the wood of the table
+you used, and <strong>a separate bench per seat</strong> — two benches of different woods come out as two
+different seats. All of it with the mod's <strong>own models and textures</strong>, so no other furniture mod is
+required. The basket, pot and campfire are consumed but don't change how the table looks.</p>
+<p>Hold <strong>Shift</strong> over a picnic table in your inventory to read back everything it is made of.</p>
 <h3 id="3-upgrading">3. Upgrading<a class="headerlink" href="#3-upgrading" title="Permanent link">&para;</a></h3>
 <p>The three higher tiers are <strong>shapeless</strong> — the ingredients can sit anywhere in the grid. An upgrade
-<strong>keeps the color and wood</strong> the table was crafted with, so it stays the same style all the way up;
-the bench you add is fuel for the recipe, not a new style, and its wood is ignored.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Camping</label><label for="__tabbed_2_2">Glamping</label><label for="__tabbed_2_3">Diving</label><label for="__tabbed_2_4">Hot</label><label for="__tabbed_2_5">Strange</label></div>
+<strong>keeps the colour and the woods</strong> the table was crafted with, and it adds a seat: <strong>the bench you
+hand over is the bench that seat is made of</strong>. A table can end up with four seats in four woods.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Advanced</label><label for="__tabbed_2_2">Expert</label><label for="__tabbed_2_3">Diving</label><label for="__tabbed_2_4">Hot</label><label for="__tabbed_2_5">Strange</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><div class="cr-scroll">
-<div class="cr-craft" title="Shapeless: Basic Picnic Table + Diamond + Dining Bench → Camping Picnic Table">
+<div class="cr-craft" title="Shapeless: Basic Picnic Table + Diamond + Dining Bench → Advanced Picnic Table">
   <div class="cr-grid">
-    <div class="cr-slot"><img src="../../assets/items/picnic_table.png" alt="Basic Picnic Table"></div>
+    <div class="cr-slot"><img src="../../assets/items/basic_picnic_table.png" alt="Basic Picnic Table"></div>
     <div class="cr-slot"><img src="../../assets/items/diamond.png" alt="Diamond"></div>
     <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/dining_bench.png)" role="img" aria-label="Dining Bench — any of the 11 woods"></div>
     <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
     <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
   </div>
   <div class="cr-arrow">➜</div>
-  <div class="cr-result"><img src="../../assets/items/camping_picnic_table.png" alt="Camping Picnic Table"></div>
+  <div class="cr-result"><img src="../../assets/items/advanced_picnic_table.png" alt="Advanced Picnic Table"></div>
 </div>
 </div></p>
 <table>
@@ -2096,7 +2099,7 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 </thead>
 <tbody>
 <tr>
-<td><img class="cr-inline" src="../../assets/items/picnic_table.png" alt=""> Basic Picnic Table</td>
+<td><img class="cr-inline" src="../../assets/items/basic_picnic_table.png" alt=""> Basic Picnic Table</td>
 <td style="text-align: center;">1</td>
 </tr>
 <tr>
@@ -2108,7 +2111,7 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 <td style="text-align: center;">1</td>
 </tr>
 <tr>
-<td><strong>→ <img class="cr-inline" src="../../assets/items/camping_picnic_table.png" alt=""> Camping Picnic Table</strong></td>
+<td><strong>→ <img class="cr-inline" src="../../assets/items/advanced_picnic_table.png" alt=""> Advanced Picnic Table</strong></td>
 <td style="text-align: center;"><strong>1</strong></td>
 </tr>
 </tbody>
@@ -2116,16 +2119,16 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 </div>
 <div class="tabbed-block">
 <p><div class="cr-scroll">
-<div class="cr-craft" title="Shapeless: Camping Picnic Table + Netherite Ingot + Dining Bench → Glamping Table">
+<div class="cr-craft" title="Shapeless: Advanced Picnic Table + Netherite Ingot + Dining Bench → Expert Picnic Table">
   <div class="cr-grid">
-    <div class="cr-slot"><img src="../../assets/items/camping_picnic_table.png" alt="Camping Picnic Table"></div>
+    <div class="cr-slot"><img src="../../assets/items/advanced_picnic_table.png" alt="Advanced Picnic Table"></div>
     <div class="cr-slot"><img src="../../assets/items/netherite_ingot.png" alt="Netherite Ingot"></div>
     <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/dining_bench.png)" role="img" aria-label="Dining Bench — any of the 11 woods"></div>
     <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
     <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
   </div>
   <div class="cr-arrow">➜</div>
-  <div class="cr-result"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+  <div class="cr-result"><img src="../../assets/items/expert_picnic_table.png" alt="Expert Picnic Table"></div>
 </div>
 </div></p>
 <table>
@@ -2137,7 +2140,7 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 </thead>
 <tbody>
 <tr>
-<td><img class="cr-inline" src="../../assets/items/camping_picnic_table.png" alt=""> Camping Picnic Table</td>
+<td><img class="cr-inline" src="../../assets/items/advanced_picnic_table.png" alt=""> Advanced Picnic Table</td>
 <td style="text-align: center;">1</td>
 </tr>
 <tr>
@@ -2149,7 +2152,7 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 <td style="text-align: center;">1</td>
 </tr>
 <tr>
-<td><strong>→ <img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table</strong></td>
+<td><strong>→ <img class="cr-inline" src="../../assets/items/expert_picnic_table.png" alt=""> Expert Picnic Table</strong></td>
 <td style="text-align: center;"><strong>1</strong></td>
 </tr>
 </tbody>
@@ -2157,9 +2160,9 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 </div>
 <div class="tabbed-block">
 <p><div class="cr-scroll">
-<div class="cr-craft" title="Shapeless: Glamping Table + Heart of the Sea → Diving Picnic Table">
+<div class="cr-craft" title="Shapeless: Expert Picnic Table + Heart of the Sea → Diving Picnic Table">
   <div class="cr-grid">
-    <div class="cr-slot"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+    <div class="cr-slot"><img src="../../assets/items/expert_picnic_table.png" alt="Expert Picnic Table"></div>
     <div class="cr-slot"><img src="../../assets/items/heart_of_the_sea.png" alt="Heart of the Sea"></div>
     <div class="cr-slot"></div>
     <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
@@ -2178,7 +2181,7 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 </thead>
 <tbody>
 <tr>
-<td><img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table</td>
+<td><img class="cr-inline" src="../../assets/items/expert_picnic_table.png" alt=""> Expert Picnic Table</td>
 <td style="text-align: center;">1</td>
 </tr>
 <tr>
@@ -2194,9 +2197,9 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 </div>
 <div class="tabbed-block">
 <p><div class="cr-scroll">
-<div class="cr-craft" title="Shapeless: Glamping Table + Netherite Ingot → Hot Picnic Table">
+<div class="cr-craft" title="Shapeless: Expert Picnic Table + Netherite Ingot → Hot Picnic Table">
   <div class="cr-grid">
-    <div class="cr-slot"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+    <div class="cr-slot"><img src="../../assets/items/expert_picnic_table.png" alt="Expert Picnic Table"></div>
     <div class="cr-slot"><img src="../../assets/items/netherite_ingot.png" alt="Netherite Ingot"></div>
     <div class="cr-slot"></div>
     <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
@@ -2215,7 +2218,7 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 </thead>
 <tbody>
 <tr>
-<td><img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table</td>
+<td><img class="cr-inline" src="../../assets/items/expert_picnic_table.png" alt=""> Expert Picnic Table</td>
 <td style="text-align: center;">1</td>
 </tr>
 <tr>
@@ -2231,9 +2234,9 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 </div>
 <div class="tabbed-block">
 <p><div class="cr-scroll">
-<div class="cr-craft" title="Shapeless: Glamping Table + Eye of Ender → Strange Picnic Table">
+<div class="cr-craft" title="Shapeless: Expert Picnic Table + Eye of Ender → Strange Picnic Table">
   <div class="cr-grid">
-    <div class="cr-slot"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+    <div class="cr-slot"><img src="../../assets/items/expert_picnic_table.png" alt="Expert Picnic Table"></div>
     <div class="cr-slot"><img src="../../assets/items/ender_eye.png" alt="Eye of Ender"></div>
     <div class="cr-slot"></div>
     <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
@@ -2252,7 +2255,7 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 </thead>
 <tbody>
 <tr>
-<td><img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table</td>
+<td><img class="cr-inline" src="../../assets/items/expert_picnic_table.png" alt=""> Expert Picnic Table</td>
 <td style="text-align: center;">1</td>
 </tr>
 <tr>
@@ -2269,8 +2272,12 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 </div>
 </div>
 <h2 id="where-each-table-can-go">Where each table can go<a class="headerlink" href="#where-each-table-can-go" title="Permanent link">&para;</a></h2>
-<p>Every table is tied to a place, and the game tells you which one you want when you aim at the wrong
-one.</p>
+<p><strong>Any table can be placed in any dimension.</strong> Where a table goes is your business — what the place
+does to it once it is standing there is the dimension's.</p>
+<p>Each themed table belongs somewhere, and <strong>carries that somewhere with it</strong>. At home it is simply a
+table. Anywhere else it inflicts on its surroundings exactly what an ordinary table suffers where
+that home is native: the Hot table scorches, the Strange one will not sit still, the Diving one
+floods.</p>
 <table>
 <thead>
 <tr>
@@ -2282,36 +2289,50 @@ one.</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Basic / Camping / Glamping</strong></td>
+<td><strong>Basic / Advanced / Expert</strong></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">⚠️ catches fire</td>
-<td style="text-align: center;">❌</td>
+<td style="text-align: center;">⚠️ drifts away</td>
 </tr>
 <tr>
 <td><strong>Diving</strong></td>
-<td style="text-align: center;">✅ underwater only</td>
-<td style="text-align: center;">⚠️ catches fire</td>
-<td style="text-align: center;">❌</td>
+<td style="text-align: center;">🌊 floods around it</td>
+<td style="text-align: center;">🔥 <strong>burns at once</strong></td>
+<td style="text-align: center;">🌊 floods · ⚠️ drifts away</td>
 </tr>
 <tr>
 <td><strong>Hot</strong></td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌</td>
+<td style="text-align: center;">🔥 scorches around it</td>
+<td style="text-align: center;">✅ <strong>at home</strong></td>
+<td style="text-align: center;">🔥 scorches · ⚠️ drifts away</td>
 </tr>
 <tr>
 <td><strong>Strange</strong></td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">✅</td>
+<td style="text-align: center;">⚠️ drifts away</td>
+<td style="text-align: center;">⚠️ drifts · catches fire</td>
+<td style="text-align: center;">✅ <strong>at home</strong></td>
 </tr>
 </tbody>
 </table>
 <p>🔥 <strong>An ordinary table burns in the Nether.</strong> Leave any table but the <strong>Hot</strong> one down there and it
-has a <strong>30% chance every second</strong> of a flame taking hold on one of its cells. Nothing is destroyed
-outright — it burns from there under the normal fire rules, so you can still put it out. To picnic in
-the Nether properly, bring the Hot table: it never catches fire.</p>
-<p>🌊 The <strong>Diving</strong> table is the same idea in water: it only deploys <strong>submerged</strong>, and won't place in air.</p>
+has a <strong>30% chance every second</strong> of a flame taking hold on it. Nothing is destroyed outright — it
+burns from there under the normal fire rules, so you can still put it out. The <strong>Diving</strong> table is
+the exception in the other direction: a tableful of water in that heat goes up <strong>the moment it
+arrives</strong>. To picnic in the Nether properly, bring the Hot table: nothing sets it alight, anywhere.</p>
+<p>🌡️ <strong>The Hot table takes the Nether with it.</strong> Standing anywhere else, once a second it sets a flame
+on the ground within <strong>3 blocks</strong> and burns everything in that radius — <strong>including whoever is
+sitting at it</strong>. It can also be sunk into lava. It is a table for the Nether, and taking it home is
+supposed to be a bad idea.</p>
+<p>🌊 <strong>The Diving table takes the water with it.</strong> Placed on dry land it fills the ring of blocks
+around itself with water and lets it run downhill from there; put it back underwater and it just
+sits there, because there is nothing left to spill.</p>
+<p>🌌 <strong>The End will not hold a picnic still, and the Strange table will not sit still anywhere else.</strong>
+Sit down at any table but the <strong>Strange</strong> one out there,
+or try to re-roll at it, and the whole table is <strong>somewhere else within 24 blocks</strong> before the click
+lands — leaving you standing where it used to be. Nothing is lost: the bread in the slot, the cloth
+colour and the woods it was crafted with, and your Pokémon-per-re-roll setting all travel with it. A
+table with nowhere to go — walled in, or ringed by void — stays put and works normally. To picnic in
+the End properly, bring the Strange table: it never drifts.</p>
 <h2 id="placement-orientation">Placement &amp; orientation<a class="headerlink" href="#placement-orientation" title="Permanent link">&para;</a></h2>
 <p>The table <strong>deploys in front of you</strong>, with the <strong>table column centred</strong> on where you aim, oriented to
 your facing — the "wide" axis runs left-to-right relative to you. The structure is one block tall:

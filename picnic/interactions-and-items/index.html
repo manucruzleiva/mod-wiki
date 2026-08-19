@@ -1284,6 +1284,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Colours, woods and fire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-handcrafted-or-cobblefurnies-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        With Handcrafted or CobbleFurnies installed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1843,6 +1860,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Colours, woods and fire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#with-handcrafted-or-cobblefurnies-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        With Handcrafted or CobbleFurnies installed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1883,6 +1917,9 @@ Tunables: <code>slimeballfriendship</code>, <code>slimeballbreakchance</code>.</
 </div>
 <p>When you carry both, the crafted item wins — you never spend a wet sponge while a Poke-sponge is in
 your bag.</p>
+<p>The wheel is not the only way in. Holding the <strong>Poke-sponge</strong>, you can <strong>right-click a Pokémon</strong> to
+wash it there and then; and the <strong>Fetchball</strong> can simply be <a href="#fetchball">thrown</a>, at nothing in
+particular. Both check exactly the same conditions the wheel does.</p>
 <h3 id="you-have-to-be-at-a-picnic">You have to be at a picnic<a class="headerlink" href="#you-have-to-be-at-a-picnic" title="Permanent link">&para;</a></h3>
 <p>Both options only appear on the wheel while a <strong>picnic table is in range</strong> (<code>actiondistance</code>, 25
 blocks by default) — the wheel never offers something that is about to be refused. Turn
@@ -1896,7 +1933,20 @@ single Pokémon can't be farmed for friendship, not to slow down caring for a wh
 anything: the plain slime ball and the wet sponge keep working exactly as they always have.</p>
 <h3 id="fetchball">Fetchball<a class="headerlink" href="#fetchball" title="Permanent link">&para;</a></h3>
 <p>A slime ball bound in leather and string. Play fetch with it and your Pokémon brings it back
-<strong>every time</strong> — it never splatters, and it never leaves your inventory.</p>
+<strong>every time</strong> — it never splatters.</p>
+<p><strong>You can also just throw it.</strong> Right-click with the Fetchball in hand and it flies where you are
+looking, with no Pokémon picked beforehand and no table to stand at. Where it lands it <strong>stays</strong>,
+as an item on the ground that never despawns, and what happens next is up to who reaches it:</p>
+<ul>
+<li><strong>You walk over and pick it up</strong> → nothing. Fetching your own ball is not playing with anyone.</li>
+<li><strong>One of your Pokémon fetches it</strong> → they carry it back to your hand, and <em>that</em> is worth
+  <strong>friendship</strong>. It keeps waiting while nobody comes, so sending one out after the throw still
+  counts.</li>
+</ul>
+<p>It has to be <strong>your</strong> Pokémon, within 12 blocks of you, off cooldown — and near an Advanced table if
+<code>slimeballrequirestable</code> is on. <strong>Water is no obstacle</strong>: the ball floats and they go in after it.
+<strong>Lava is</strong> — a Pokémon that would have to reach into it turns around and walks back to where it was
+standing, and the ball is gone.</p>
 <div class="cr-scroll">
 <div class="cr-craft" title="4× String + 4× Leather + 1× Slime Ball → 1× Fetchball">
   <div class="cr-grid">
@@ -1942,7 +1992,8 @@ anything: the plain slime ball and the wet sponge keep working exactly as they a
 </tbody>
 </table>
 <h3 id="poke-sponge">Poke-sponge<a class="headerlink" href="#poke-sponge" title="Permanent link">&para;</a></h3>
-<p>A bath sponge that never dries out. One of them washes a whole team, forever.</p>
+<p>A bath sponge that never dries out. One of them washes a whole team, forever. <strong>Right-click a
+Pokémon</strong> with it in hand to wash without opening the wheel.</p>
 <div class="cr-scroll">
 <div class="cr-craft" title="2× Water Bucket + 2× String + 4× Sponge + 1× Slime Ball → 1× Poke-sponge">
   <div class="cr-grid">
@@ -2050,9 +2101,9 @@ table when you re-roll:</p>
 </ul>
 <p>This lets you steer a re-roll toward the kinds of Pokémon a given snack attracts.</p>
 <h2 id="battle-seeker">Battle Seeker<a class="headerlink" href="#battle-seeker" title="Permanent link">&para;</a></h2>
-<p>Put a <strong>Battle Seeker</strong> in a <strong>Glamping</strong> table's fuel slot and every re-roll also <strong>summons an RCT
+<p>Put a <strong>Battle Seeker</strong> in a <strong>Expert</strong> table's fuel slot and every re-roll also <strong>summons an RCT
 trainer</strong> to battle. It is <strong>never consumed</strong> — it stays in the slot, so you can keep challenging
-trainers for as long as you like. Only the Glamping tier exposes that slot; every other tier uses it
+trainers for as long as you like. Only the Expert tier exposes that slot; every other tier uses it
 for bread.</p>
 <p>It has <strong>no recipe</strong>. It's rare loot from world chests, so keep looting structures.</p>
 <p>The trainer's level is matched to your party:</p>
@@ -2077,9 +2128,21 @@ for bread.</p>
 <p>⚠️ The summon needs <strong>Radical Cobblemon Trainers (RCT)</strong> installed. Without it the Battle Seeker
 simply does nothing and the rest of the table works normally.</p>
 <h2 id="colours-woods-and-fire">Colours, woods and fire<a class="headerlink" href="#colours-woods-and-fire" title="Permanent link">&para;</a></h2>
-<p>Tables come in <strong>16 cloth colours × 11 woods</strong>, baskets in every apricorn colour, and every variant is
-in the Creative inventory. All of them are <strong>flammable</strong> — they burn like wood planks, which is what
-the <a href="../picnic-tables/#where-each-table-can-go">Nether</a> exploits.</p>
+<p>A picnic table is built in <strong>16 cloth colours × 11 frame woods</strong>, with <strong>a wood per seat</strong> on top of
+that, and every piece it is made of is in the Creative inventory. All of them are <strong>flammable</strong> —
+they burn like wood planks, which is what the <a href="../picnic-tables/#where-each-table-can-go">Nether</a>
+exploits.</p>
+<p>The tables and dining benches are furniture in their own right: <strong>you can sit on a bench</strong>, and a
+row of either <strong>joins up</strong> into one long piece as you place them.</p>
+<h3 id="with-handcrafted-or-cobblefurnies-installed">With Handcrafted or CobbleFurnies installed<a class="headerlink" href="#with-handcrafted-or-cobblefurnies-installed" title="Permanent link">&para;</a></h3>
+<p>Their furniture works in the picnic table recipe — every CobbleFurnies table, and Handcrafted's
+tables and benches — and the picnic table is drawn in whichever wood and cloth the piece you used is
+made of.</p>
+<p>When one of those mods is there, the pieces of ours it already provides <strong>step aside</strong>: our dining
+benches go when Handcrafted is installed, and our oak tables go when CobbleFurnies is. They leave
+the creative tab and stop being craftable, so there is only ever one of each to pick from. The
+<strong>160 wood-and-colour combinations stay</strong> — nothing else provides those — and anything you already
+built keeps working, because nothing is ever removed from the game.</p>
 <p>Friendship built at the picnic stacks with normal Cobblemon mechanics, so it's a good way to evolve
 friendship-based Pokémon while you hunt.</p>
 
