@@ -66,5 +66,5 @@ want the structure back in your inventory, hit a **bench**.
 ## What next?
 
 - Bring friends and **[sit on the benches](shiny-aura.md)** — a full table doubles everyone's shiny odds.
-- Upgrade to **[Glamping](picnic-tables.md#crafting)** for the biggest radius and the Battle Seeker slot.
+- Upgrade to **[Expert](picnic-tables.md#crafting)** for the biggest radius and the Battle Seeker slot.
 - Going somewhere strange? There's a table for **[underwater, the Nether and the End](picnic-tables.md#where-each-table-can-go)**.

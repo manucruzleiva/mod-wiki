@@ -25,8 +25,8 @@ is part of playing. Changing anything needs **operator** rank.
 /picnic auramultiplier 3          # a full table triples shiny odds
 /picnic auramultiplier default    # back to ×2
 /picnic reroll false              # switch the spawn re-roll off entirely
-/picnic spawncap glamping 16      # per-tier settings take the tier in the middle
-/picnic spawncap glamping default
+/picnic spawncap expert 16      # per-tier settings take the tier in the middle
+/picnic spawncap expert default
 ```
 
 ### Attributes
@@ -35,7 +35,7 @@ is part of playing. Changing anything needs **operator** rank.
 |-----------|-------|--------------|
 | `reroll` | true/false | Master switch for the [spawn re-roll](spawn-rerolling.md) itself. *Default on.* |
 | `spawncap <tier>` | int | Max Pokémon per re-roll for that tier. |
-| `fuelcost <tier>` | int | Bread consumed per re-roll for that tier (7 for Basic, 5 for Camping, 3 above). |
+| `fuelcost <tier>` | int | Bread consumed per re-roll for that tier (7 for Basic, 5 for Advanced, 3 above). |
 | `rerollcooldown` | 0–3600 | Seconds between re-rolls (per-table **and** per-player). *Default 5. 0 disables.* |
 | `tmteachchance` | 0..1 | Chance per re-roll a party Pokémon teaches another a legal move. *Default 0.05. 0 disables.* |
 | `shinyaura` | true/false | Master switch for the [Shiny Aura](shiny-aura.md). |
@@ -124,8 +124,8 @@ Edit the first by hand if you like, then apply it with `/picnic reload` — no r
 | Tier | Spawn cap | Fuel/re-roll | Radius | Seats |
 |------|:---------:|:------------:|:------:|:-----:|
 | Basic | 5 | 7 | 32 | 2 |
-| Camping | 8 | 5 | 48 | 3 |
-| Glamping | 12 | 3 | 64 | 4 |
+| Advanced | 8 | 5 | 48 | 3 |
+| Expert | 12 | 3 | 64 | 4 |
 | Diving | 12 | 3 | 64 | 4 |
 | Hot | 12 | 3 | 64 | 4 |
 | Strange | 12 | 3 | 64 | 4 |

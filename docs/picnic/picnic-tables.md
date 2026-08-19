@@ -9,8 +9,8 @@ to the tier's seat cap. Leftover side cells stay empty.
 | Tier | Spawn cap | Radius | Seats | Fuel / re-roll | Notes |
 |------|:---------:|:------:|:-----:|:--------------:|-------|
 | **Basic** | 5 | 32 | 2 | 7 bread | Entry tier |
-| **Camping** | 8 | 48 | 3 | 5 bread | Cheaper fuel, bigger |
-| **Glamping** | 12 | 64 | 4 | 3 bread | Unlocks the **[Battle Seeker](interactions-and-items.md#battle-seeker)** slot |
+| **Advanced** | 8 | 48 | 3 | 5 bread | Cheaper fuel, bigger |
+| **Expert** | 12 | 64 | 4 | 3 bread | Unlocks the **[Battle Seeker](interactions-and-items.md#battle-seeker)** slot |
 | **Diving** | 12 | 64 | 4 | 3 bread | **Placed underwater only** |
 | **Hot** | 12 | 64 | 4 | 3 bread | At home in the **Nether** — the only table that survives there |
 | **Strange** | 12 | 64 | 4 | 3 bread | At home in **the End** — the only table that stays put there |
@@ -19,12 +19,12 @@ to the tier's seat cap. Leftover side cells stay empty.
 - **Radius** — how far around the table wild Pokémon are despawned and re-rolled.
 - **Seats** — how many benches the footprint provides (seat counts are **fixed per tier**, not
   configurable).
-- **Fuel** — bread consumed per re-roll, cheaper as tiers improve (7 for Basic, 5 for Camping, 3 for
+- **Fuel** — bread consumed per re-roll, cheaper as tiers improve (7 for Basic, 5 for Advanced, 3 for
   everything above). Bread comes from the table's fuel slot or from a nearby
   **[Picnic Basket](interactions-and-items.md#picnic-baskets)**. The per-tier cost is configurable
   (`fuelcost <tier>`).
 
-**Basic → Camping → Glamping** is the ladder. **Diving**, **Hot** and **Strange** are three steps
+**Basic → Advanced → Expert** is the ladder. **Diving**, **Hot** and **Strange** are three steps
 sideways off the top of it: identical in what they do, different only in where they can go. See
 [Where each table can go](#where-each-table-can-go).
 
@@ -138,7 +138,7 @@ example.
     <div class="cr-slot"><img src="../../assets/items/campfire.png" alt="Campfire"></div>
   </div>
   <div class="cr-arrow">➜</div>
-  <div class="cr-result"><img src="../../assets/items/picnic_table.png" alt="Basic Picnic Table"></div>
+  <div class="cr-result"><img src="../../assets/items/basic_picnic_table.png" alt="Basic Picnic Table"></div>
 </div>
 </div>
 
@@ -150,7 +150,7 @@ example.
 | <img class="cr-inline" src="../../assets/items/campfire_pot_red.png" alt=""> Campfire Pot | 1 | any Cobblemon Campfire Pot, or Cobblemon's own Campfire |
 | <img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench | 2 | any of the 11 woods — **the left one sets the frame wood** |
 | <img class="cr-inline" src="../../assets/items/campfire.png" alt=""> Campfire | 1 | Campfire *or* <img class="cr-inline" src="../../assets/items/soul_campfire.png" alt=""> Soul Campfire |
-| **→ <img class="cr-inline" src="../../assets/items/picnic_table.png" alt=""> Basic Picnic Table** | **1** | |
+| **→ <img class="cr-inline" src="../../assets/items/basic_picnic_table.png" alt=""> Basic Picnic Table** | **1** | |
 
 The result renders in that exact **color × wood** combination, using the mod's **own models and
 textures** (no other furniture mod required). The basket, pot and campfire are consumed but don't
@@ -162,58 +162,58 @@ The three higher tiers are **shapeless** — the ingredients can sit anywhere in
 **keeps the color and wood** the table was crafted with, so it stays the same style all the way up;
 the bench you add is fuel for the recipe, not a new style, and its wood is ignored.
 
-=== "Camping"
+=== "Advanced"
 
     <div class="cr-scroll">
-    <div class="cr-craft" title="Shapeless: Basic Picnic Table + Diamond + Dining Bench → Camping Picnic Table">
+    <div class="cr-craft" title="Shapeless: Basic Picnic Table + Diamond + Dining Bench → Advanced Picnic Table">
       <div class="cr-grid">
-        <div class="cr-slot"><img src="../../assets/items/picnic_table.png" alt="Basic Picnic Table"></div>
+        <div class="cr-slot"><img src="../../assets/items/basic_picnic_table.png" alt="Basic Picnic Table"></div>
         <div class="cr-slot"><img src="../../assets/items/diamond.png" alt="Diamond"></div>
         <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/dining_bench.png)" role="img" aria-label="Dining Bench — any of the 11 woods"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
       </div>
       <div class="cr-arrow">➜</div>
-      <div class="cr-result"><img src="../../assets/items/camping_picnic_table.png" alt="Camping Picnic Table"></div>
+      <div class="cr-result"><img src="../../assets/items/advanced_picnic_table.png" alt="Advanced Picnic Table"></div>
     </div>
     </div>
 
     | Ingredient | Amount |
     | --- | :---: |
-    | <img class="cr-inline" src="../../assets/items/picnic_table.png" alt=""> Basic Picnic Table | 1 |
+    | <img class="cr-inline" src="../../assets/items/basic_picnic_table.png" alt=""> Basic Picnic Table | 1 |
     | <img class="cr-inline" src="../../assets/items/diamond.png" alt=""> Diamond | 1 |
     | <img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench — any wood | 1 |
-    | **→ <img class="cr-inline" src="../../assets/items/camping_picnic_table.png" alt=""> Camping Picnic Table** | **1** |
+    | **→ <img class="cr-inline" src="../../assets/items/advanced_picnic_table.png" alt=""> Advanced Picnic Table** | **1** |
 
-=== "Glamping"
+=== "Expert"
 
     <div class="cr-scroll">
-    <div class="cr-craft" title="Shapeless: Camping Picnic Table + Netherite Ingot + Dining Bench → Glamping Table">
+    <div class="cr-craft" title="Shapeless: Advanced Picnic Table + Netherite Ingot + Dining Bench → Expert Picnic Table">
       <div class="cr-grid">
-        <div class="cr-slot"><img src="../../assets/items/camping_picnic_table.png" alt="Camping Picnic Table"></div>
+        <div class="cr-slot"><img src="../../assets/items/advanced_picnic_table.png" alt="Advanced Picnic Table"></div>
         <div class="cr-slot"><img src="../../assets/items/netherite_ingot.png" alt="Netherite Ingot"></div>
         <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/dining_bench.png)" role="img" aria-label="Dining Bench — any of the 11 woods"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
       </div>
       <div class="cr-arrow">➜</div>
-      <div class="cr-result"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+      <div class="cr-result"><img src="../../assets/items/expert_picnic_table.png" alt="Expert Picnic Table"></div>
     </div>
     </div>
 
     | Ingredient | Amount |
     | --- | :---: |
-    | <img class="cr-inline" src="../../assets/items/camping_picnic_table.png" alt=""> Camping Picnic Table | 1 |
+    | <img class="cr-inline" src="../../assets/items/advanced_picnic_table.png" alt=""> Advanced Picnic Table | 1 |
     | <img class="cr-inline" src="../../assets/items/netherite_ingot.png" alt=""> Netherite Ingot | 1 |
     | <img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench — any wood | 1 |
-    | **→ <img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table** | **1** |
+    | **→ <img class="cr-inline" src="../../assets/items/expert_picnic_table.png" alt=""> Expert Picnic Table** | **1** |
 
 === "Diving"
 
     <div class="cr-scroll">
-    <div class="cr-craft" title="Shapeless: Glamping Table + Heart of the Sea → Diving Picnic Table">
+    <div class="cr-craft" title="Shapeless: Expert Picnic Table + Heart of the Sea → Diving Picnic Table">
       <div class="cr-grid">
-        <div class="cr-slot"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+        <div class="cr-slot"><img src="../../assets/items/expert_picnic_table.png" alt="Expert Picnic Table"></div>
         <div class="cr-slot"><img src="../../assets/items/heart_of_the_sea.png" alt="Heart of the Sea"></div>
         <div class="cr-slot"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
@@ -226,16 +226,16 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 
     | Ingredient | Amount |
     | --- | :---: |
-    | <img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table | 1 |
+    | <img class="cr-inline" src="../../assets/items/expert_picnic_table.png" alt=""> Expert Picnic Table | 1 |
     | <img class="cr-inline" src="../../assets/items/heart_of_the_sea.png" alt=""> Heart of the Sea | 1 |
     | **→ <img class="cr-inline" src="../../assets/items/diving_picnic_table.png" alt=""> Diving Picnic Table** | **1** |
 
 === "Hot"
 
     <div class="cr-scroll">
-    <div class="cr-craft" title="Shapeless: Glamping Table + Netherite Ingot → Hot Picnic Table">
+    <div class="cr-craft" title="Shapeless: Expert Picnic Table + Netherite Ingot → Hot Picnic Table">
       <div class="cr-grid">
-        <div class="cr-slot"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+        <div class="cr-slot"><img src="../../assets/items/expert_picnic_table.png" alt="Expert Picnic Table"></div>
         <div class="cr-slot"><img src="../../assets/items/netherite_ingot.png" alt="Netherite Ingot"></div>
         <div class="cr-slot"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
@@ -248,16 +248,16 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 
     | Ingredient | Amount |
     | --- | :---: |
-    | <img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table | 1 |
+    | <img class="cr-inline" src="../../assets/items/expert_picnic_table.png" alt=""> Expert Picnic Table | 1 |
     | <img class="cr-inline" src="../../assets/items/netherite_ingot.png" alt=""> Netherite Ingot | 1 |
     | **→ <img class="cr-inline" src="../../assets/items/hot_picnic_table.png" alt=""> Hot Picnic Table** | **1** |
 
 === "Strange"
 
     <div class="cr-scroll">
-    <div class="cr-craft" title="Shapeless: Glamping Table + Eye of Ender → Strange Picnic Table">
+    <div class="cr-craft" title="Shapeless: Expert Picnic Table + Eye of Ender → Strange Picnic Table">
       <div class="cr-grid">
-        <div class="cr-slot"><img src="../../assets/items/glamping_table.png" alt="Glamping Table"></div>
+        <div class="cr-slot"><img src="../../assets/items/expert_picnic_table.png" alt="Expert Picnic Table"></div>
         <div class="cr-slot"><img src="../../assets/items/ender_eye.png" alt="Eye of Ender"></div>
         <div class="cr-slot"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
@@ -270,7 +270,7 @@ the bench you add is fuel for the recipe, not a new style, and its wood is ignor
 
     | Ingredient | Amount |
     | --- | :---: |
-    | <img class="cr-inline" src="../../assets/items/glamping_table.png" alt=""> Glamping Table | 1 |
+    | <img class="cr-inline" src="../../assets/items/expert_picnic_table.png" alt=""> Expert Picnic Table | 1 |
     | <img class="cr-inline" src="../../assets/items/ender_eye.png" alt=""> Eye of Ender | 1 |
     | **→ <img class="cr-inline" src="../../assets/items/strange_picnic_table.png" alt=""> Strange Picnic Table** | **1** |
 
@@ -282,7 +282,7 @@ picnic. Each has one table that is at home in it and comes through untouched.
 
 | Table | Overworld | Nether | The End |
 |---|:---:|:---:|:---:|
-| **Basic / Camping / Glamping** | ✅ | ⚠️ catches fire | ⚠️ drifts away |
+| **Basic / Advanced / Expert** | ✅ | ⚠️ catches fire | ⚠️ drifts away |
 | **Diving** | ✅ underwater only | ⚠️ catches fire | ⚠️ drifts away |
 | **Hot** | ✅ | ✅ **at home** | ⚠️ drifts away |
 | **Strange** | ✅ | ⚠️ catches fire | ✅ **at home** |

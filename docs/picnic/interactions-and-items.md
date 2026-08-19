@@ -148,9 +148,9 @@ This lets you steer a re-roll toward the kinds of Pokémon a given snack attract
 
 ## Battle Seeker
 
-Put a **Battle Seeker** in a **Glamping** table's fuel slot and every re-roll also **summons an RCT
+Put a **Battle Seeker** in a **Expert** table's fuel slot and every re-roll also **summons an RCT
 trainer** to battle. It is **never consumed** — it stays in the slot, so you can keep challenging
-trainers for as long as you like. Only the Glamping tier exposes that slot; every other tier uses it
+trainers for as long as you like. Only the Expert tier exposes that slot; every other tier uses it
 for bread.
 
 It has **no recipe**. It's rare loot from world chests, so keep looting structures.

@@ -56,10 +56,10 @@ Each re-roll costs **bread**, depending on tier:
 | Tier | Bread per re-roll |
 |------|:-----------------:|
 | Basic | 7 |
-| Camping | 5 |
-| Glamping · Diving · Hot · Strange | 3 |
+| Advanced | 5 |
+| Expert · Diving · Hot · Strange | 3 |
 
-Fuel gets cheaper as tiers improve, and everything above Camping costs the same. Bread can come from the table's
+Fuel gets cheaper as tiers improve, and everything above Advanced costs the same. Bread can come from the table's
 **fuel slot** or from a nearby placed
 **[Picnic Basket](interactions-and-items.md#picnic-baskets)** — the table will pull from baskets
 automatically. Out of bread? The table tells you and the re-roll is cancelled. Each per-tier cost is
