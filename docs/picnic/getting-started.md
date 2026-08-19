@@ -24,8 +24,8 @@ edits your own client's file.
     ---
 
     Three components — a **Table**, a **Dining Bench** and a **Picnic Basket** — then combine them
-    with **Planks**, a **Vivichoke**, a **Campfire Pot** and a **Campfire**. The Table sets its
-    cloth colour, the Planks its frame wood and the Bench its bench wood.
+    with a **Vivichoke**, a **Campfire Pot** and a **Campfire**. The Table you use sets its cloth
+    colour *and* its frame wood; each Bench becomes one of its seats.
 
     [Full grids](picnic-tables.md#crafting)
 

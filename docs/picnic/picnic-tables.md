@@ -11,9 +11,9 @@ to the tier's seat cap. Leftover side cells stay empty.
 | **Basic** | 5 | 32 | 2 | 7 bread | Entry tier |
 | **Advanced** | 8 | 48 | 3 | 5 bread | Cheaper fuel, bigger |
 | **Expert** | 12 | 64 | 4 | 3 bread | Unlocks the **[Battle Seeker](interactions-and-items.md#battle-seeker)** slot |
-| **Diving** | 12 | 64 | 4 | 3 bread | **Placed underwater only** |
-| **Hot** | 12 | 64 | 4 | 3 bread | At home in the **Nether** — the only table that survives there |
-| **Strange** | 12 | 64 | 4 | 3 bread | At home in **the End** — the only table that stays put there |
+| **Diving** | 12 | 64 | 4 | 3 bread | At home **underwater** — on dry land it floods what is around it |
+| **Hot** | 12 | 64 | 4 | 3 bread | At home in the **Nether** — anywhere else it scorches what is around it |
+| **Strange** | 12 | 64 | 4 | 3 bread | At home in **the End** — anywhere else it will not stay put |
 
 - **Spawn cap** — the maximum Pokémon a single re-roll can spawn (and the GUI slider's max).
 - **Radius** — how far around the table wild Pokémon are despawned and re-rolled.
@@ -40,18 +40,19 @@ example.
 
 === "Table"
 
-    The tablecloth piece. Any of the **16 dye colors** of wool, over **oak planks**, gives that
-    color's Table (*White Table*, *Red Table*, …).
+    The tabletop. Any of the **16 dye colors** of wool over any of the **11 woods** of planks — the
+    wool is the cloth and the planks are the frame, so there are **176** of them (*Red Table*,
+    *Spruce Red Table*, *Cherry Black Table*, …). Oak's are the ones with no wood in the name.
 
     <div class="cr-scroll">
-    <div class="cr-craft" title="3× Red Wool + 2× Oak Planks → 1× Red Table">
+    <div class="cr-craft" title="3× Wool + 2× Planks → 1× Table in that colour and wood">
       <div class="cr-grid">
         <div class="cr-slot cr-cycle cr-cycle--16" style="background-image:url(../../assets/items/strips/wool.png)" role="img" aria-label="Wool — any of the 16 colours"></div>
         <div class="cr-slot cr-cycle cr-cycle--16" style="background-image:url(../../assets/items/strips/wool.png)" role="img" aria-label="Wool — any of the 16 colours"></div>
         <div class="cr-slot cr-cycle cr-cycle--16" style="background-image:url(../../assets/items/strips/wool.png)" role="img" aria-label="Wool — any of the 16 colours"></div>
-        <div class="cr-slot"><img src="../../assets/items/oak_planks.png" alt="Oak Planks"></div>
+        <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/planks.png)" role="img" aria-label="Planks — any of the 11 woods"></div>
         <div class="cr-slot"></div>
-        <div class="cr-slot"><img src="../../assets/items/oak_planks.png" alt="Oak Planks"></div>
+        <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/planks.png)" role="img" aria-label="Planks — any of the 11 woods"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
       </div>
       <div class="cr-arrow">➜</div>
@@ -62,8 +63,8 @@ example.
     | Ingredient | Amount |
     | --- | :---: |
     | <img class="cr-inline" src="../../assets/items/white_wool.png" alt=""> Wool — any of the 16 colors | 3 |
-    | <img class="cr-inline" src="../../assets/items/oak_planks.png" alt=""> Oak Planks | 2 |
-    | **→ <img class="cr-inline" src="../../assets/items/table_red.png" alt=""> Table** in that color | **1** |
+    | <img class="cr-inline" src="../../assets/items/oak_planks.png" alt=""> Planks — any of the 11 woods | 2 |
+    | **→ <img class="cr-inline" src="../../assets/items/table_red.png" alt=""> Table** in that color and wood | **1** |
 
 === "Dining Bench"
 
@@ -125,10 +126,10 @@ example.
 ### 2. The Basic Picnic Table
 
 <div class="cr-scroll">
-<div class="cr-craft" title="Picnic Basket + Planks + Vivichoke + 2× Table + Campfire Pot + 2× Dining Bench + Campfire → Basic Picnic Table">
+<div class="cr-craft" title="Picnic Basket + Vivichoke + 2× Table + Campfire Pot + 2× Dining Bench + Campfire → Basic Picnic Table">
   <div class="cr-grid">
     <div class="cr-slot"><img src="../../assets/items/red_picnic_basket.png" alt="Picnic Basket"></div>
-    <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/planks.png)" role="img" aria-label="Planks — any of the 11 woods"></div>
+    <div class="cr-slot"></div>
     <div class="cr-slot"><img src="../../assets/items/vivichoke.png" alt="Vivichoke"></div>
     <div class="cr-slot"><img src="../../assets/items/table_red.png" alt="Table"></div>
     <div class="cr-slot"><img src="../../assets/items/table_red.png" alt="Table"></div>
@@ -146,24 +147,24 @@ example.
 | --- | :---: | --- |
 | <img class="cr-inline" src="../../assets/items/red_picnic_basket.png" alt=""> Picnic Basket | 1 | any of the 7 colors |
 | <img class="cr-inline" src="../../assets/items/vivichoke.png" alt=""> Vivichoke | 1 | — |
-| <img class="cr-inline" src="../../assets/items/oak_planks.png" alt=""> Planks | 1 | any of the 11 woods — **this sets the frame wood** |
-| <img class="cr-inline" src="../../assets/items/table_red.png" alt=""> Table | 2 | any of the 16 colors — **the left one sets the tablecloth color** |
+| <img class="cr-inline" src="../../assets/items/table_red.png" alt=""> Table | 2 | any of the 176 — **the left one sets the cloth colour and the frame wood**. Tables from **CobbleFurnies** and **Handcrafted** work too |
 | <img class="cr-inline" src="../../assets/items/campfire_pot_red.png" alt=""> Campfire Pot | 1 | any Cobblemon Campfire Pot, or Cobblemon's own Campfire |
-| <img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench | 2 | any of the 11 woods — **the left one sets the bench wood** |
+| <img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench | 2 | any of the 11 woods — **each one becomes a seat, in the order you place them**. Benches from **Handcrafted** work too |
 | <img class="cr-inline" src="../../assets/items/campfire.png" alt=""> Campfire | 1 | Campfire *or* <img class="cr-inline" src="../../assets/items/soul_campfire.png" alt=""> Soul Campfire |
 | **→ <img class="cr-inline" src="../../assets/items/basic_picnic_table.png" alt=""> Basic Picnic Table** | **1** | |
 
-The result renders in exactly that **cloth color**, **frame wood** and **bench wood**, using the
-mod's **own models and textures** (no other furniture mod required) — the three are chosen
-separately, so a cherry frame under a black cloth with spruce benches is a table you can build. The
-basket, pot and campfire are consumed but don't change how the table looks. Every variant is also
-available in the Creative inventory.
+The result is drawn as **exactly the items you built it from**: the cloth and the wood of the table
+you used, and **a separate bench per seat** — two benches of different woods come out as two
+different seats. All of it with the mod's **own models and textures**, so no other furniture mod is
+required. The basket, pot and campfire are consumed but don't change how the table looks.
+
+Hold **Shift** over a picnic table in your inventory to read back everything it is made of.
 
 ### 3. Upgrading
 
 The three higher tiers are **shapeless** — the ingredients can sit anywhere in the grid. An upgrade
-**keeps the color and the woods** the table was crafted with, so it stays the same style all the way
-up; the bench you add is fuel for the recipe, not a new style, and its wood is ignored.
+**keeps the colour and the woods** the table was crafted with, and it adds a seat: **the bench you
+hand over is the bench that seat is made of**. A table can end up with four seats in four woods.
 
 === "Advanced"
 
@@ -280,29 +281,44 @@ up; the bench you add is fuel for the recipe, not a new style, and its wood is i
 ## Where each table can go
 
 **Any table can be placed in any dimension.** Where a table goes is your business — what the place
-does to it once it is standing there is the dimension's, and two of them do not take kindly to a
-picnic. Each has one table that is at home in it and comes through untouched.
+does to it once it is standing there is the dimension's.
+
+Each themed table belongs somewhere, and **carries that somewhere with it**. At home it is simply a
+table. Anywhere else it inflicts on its surroundings exactly what an ordinary table suffers where
+that home is native: the Hot table scorches, the Strange one will not sit still, the Diving one
+floods.
 
 | Table | Overworld | Nether | The End |
 |---|:---:|:---:|:---:|
 | **Basic / Advanced / Expert** | ✅ | ⚠️ catches fire | ⚠️ drifts away |
-| **Diving** | ✅ underwater only | ⚠️ catches fire | ⚠️ drifts away |
-| **Hot** | ✅ | ✅ **at home** | ⚠️ drifts away |
-| **Strange** | ✅ | ⚠️ catches fire | ✅ **at home** |
+| **Diving** | 🌊 floods around it | 🔥 **burns at once** | 🌊 floods · ⚠️ drifts away |
+| **Hot** | 🔥 scorches around it | ✅ **at home** | 🔥 scorches · ⚠️ drifts away |
+| **Strange** | ⚠️ drifts away | ⚠️ drifts · catches fire | ✅ **at home** |
 
 🔥 **An ordinary table burns in the Nether.** Leave any table but the **Hot** one down there and it
-has a **30% chance every second** of a flame taking hold on one of its cells. Nothing is destroyed
-outright — it burns from there under the normal fire rules, so you can still put it out. To picnic in
-the Nether properly, bring the Hot table: it never catches fire.
+has a **30% chance every second** of a flame taking hold on it. Nothing is destroyed outright — it
+burns from there under the normal fire rules, so you can still put it out. The **Diving** table is
+the exception in the other direction: a tableful of water in that heat goes up **the moment it
+arrives**. To picnic in the Nether properly, bring the Hot table: nothing sets it alight, anywhere.
 
-🌌 **The End will not hold a picnic still.** Sit down at any table but the **Strange** one out there,
+🌡️ **The Hot table takes the Nether with it.** Standing anywhere else, once a second it sets a flame
+on the ground within **3 blocks** and burns everything in that radius — **including whoever is
+sitting at it**. It can also be sunk into lava. It is a table for the Nether, and taking it home is
+supposed to be a bad idea.
+
+🌊 **The Diving table takes the water with it.** Placed on dry land it fills the ring of blocks
+around itself with water and lets it run downhill from there; put it back underwater and it just
+sits there, because there is nothing left to spill.
+
+🌌 **The End will not hold a picnic still, and the Strange table will not sit still anywhere else.**
+Sit down at any table but the **Strange** one out there,
 or try to re-roll at it, and the whole table is **somewhere else within 24 blocks** before the click
 lands — leaving you standing where it used to be. Nothing is lost: the bread in the slot, the cloth
 colour and the woods it was crafted with, and your Pokémon-per-re-roll setting all travel with it. A
 table with nowhere to go — walled in, or ringed by void — stays put and works normally. To picnic in
 the End properly, bring the Strange table: it never drifts.
 
-🌊 The **Diving** table is the same idea in water: it only deploys **submerged**, and won't place in air.
+
 
 ## Placement & orientation
 

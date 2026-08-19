@@ -22,6 +22,10 @@ options:
 When you carry both, the crafted item wins — you never spend a wet sponge while a Poke-sponge is in
 your bag.
 
+The wheel is not the only way in. Holding the **Poke-sponge**, you can **right-click a Pokémon** to
+wash it there and then; and the **Fetchball** can simply be [thrown](#fetchball), at nothing in
+particular. Both check exactly the same conditions the wheel does.
+
 ### You have to be at a picnic
 
 Both options only appear on the wheel while a **picnic table is in range** (`actiondistance`, 25
@@ -42,7 +46,21 @@ anything: the plain slime ball and the wet sponge keep working exactly as they a
 ### Fetchball
 
 A slime ball bound in leather and string. Play fetch with it and your Pokémon brings it back
-**every time** — it never splatters, and it never leaves your inventory.
+**every time** — it never splatters.
+
+**You can also just throw it.** Right-click with the Fetchball in hand and it flies where you are
+looking, with no Pokémon picked beforehand and no table to stand at. Where it lands it **stays**,
+as an item on the ground that never despawns, and what happens next is up to who reaches it:
+
+- **You walk over and pick it up** → nothing. Fetching your own ball is not playing with anyone.
+- **One of your Pokémon fetches it** → they carry it back to your hand, and *that* is worth
+  **friendship**. It keeps waiting while nobody comes, so sending one out after the throw still
+  counts.
+
+It has to be **your** Pokémon, within 12 blocks of you, off cooldown — and near an Advanced table if
+`slimeballrequirestable` is on. **Water is no obstacle**: the ball floats and they go in after it.
+**Lava is** — a Pokémon that would have to reach into it turns around and walks back to where it was
+standing, and the ball is gone.
 
 <div class="cr-scroll">
 <div class="cr-craft" title="4× String + 4× Leather + 1× Slime Ball → 1× Fetchball">
@@ -71,7 +89,8 @@ A slime ball bound in leather and string. Play fetch with it and your Pokémon b
 
 ### Poke-sponge
 
-A bath sponge that never dries out. One of them washes a whole team, forever.
+A bath sponge that never dries out. One of them washes a whole team, forever. **Right-click a
+Pokémon** with it in hand to wash without opening the wheel.
 
 <div class="cr-scroll">
 <div class="cr-craft" title="2× Water Bucket + 2× String + 4× Sponge + 1× Slime Ball → 1× Poke-sponge">
@@ -167,10 +186,25 @@ simply does nothing and the rest of the table works normally.
 
 ## Colours, woods and fire
 
-A picnic table is built in **16 cloth colours × 11 frame woods × 11 bench woods**, and the coloured
-tables, dining benches and apricorn-coloured baskets it is built from are all in the Creative
-inventory. All of them are **flammable** — they burn like wood planks, which is what
-the [Nether](picnic-tables.md#where-each-table-can-go) exploits.
+A picnic table is built in **16 cloth colours × 11 frame woods**, with **a wood per seat** on top of
+that, and every piece it is made of is in the Creative inventory. All of them are **flammable** —
+they burn like wood planks, which is what the [Nether](picnic-tables.md#where-each-table-can-go)
+exploits.
+
+The tables and dining benches are furniture in their own right: **you can sit on a bench**, and a
+row of either **joins up** into one long piece as you place them.
+
+### With Handcrafted or CobbleFurnies installed
+
+Their furniture works in the picnic table recipe — every CobbleFurnies table, and Handcrafted's
+tables and benches — and the picnic table is drawn in whichever wood and cloth the piece you used is
+made of.
+
+When one of those mods is there, the pieces of ours it already provides **step aside**: our dining
+benches go when Handcrafted is installed, and our oak tables go when CobbleFurnies is. They leave
+the creative tab and stop being craftable, so there is only ever one of each to pick from. The
+**160 wood-and-colour combinations stay** — nothing else provides those — and anything you already
+built keeps working, because nothing is ever removed from the game.
 
 Friendship built at the picnic stacks with normal Cobblemon mechanics, so it's a good way to evolve
 friendship-based Pokémon while you hunt.
