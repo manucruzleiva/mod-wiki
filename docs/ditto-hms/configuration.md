@@ -134,6 +134,9 @@ You can edit it directly — changes take effect on next server start.
 Durations in the **Power** column are in **ticks** (20 ticks = 1 second), because that is
 what the config takes.
 
+Durations in the **Power** column are in **ticks** (20 ticks = 1 second), because that is
+what the config takes.
+
 | Ability | Hunger | Cooldown | Power |
 |---|---|---|---|
 | Water Gun | 1 | 2s | 3 |
@@ -162,7 +165,6 @@ what the config takes.
 | Stockpile | 1 | 1s | lava self-damage — **7** |
 | Substitute | 4 | 20s | decoy lifetime in ticks — **2400** |
 | Thief | 2 | 5s | 1 |
-| U-turn | 1 | 2s | tenths of a block of hop — **12** |
 | Charge | 2 | 3s | ticks between sparks — **10** |
 | Destiny Bond | 4 | 30s | how long the bond holds — **200** |
 | Sweet Scent | 6 | 90s | how many turn up — **5** |
@@ -181,7 +183,7 @@ what the config takes.
 | Present | 12 | 20 min | — |
 | Blizzard | 6 | 30s | radius — **6** |
 | Boomerang | 1 | 1s | tenths of a half-heart — **50** |
-| Decorate | 4 | 1 min | radius — **5** |
+| Decorate | 4 | 1 min | percent chance of a shiny — **5** |
 
 \* Rest does not require hunger.
 
@@ -201,6 +203,7 @@ what the config takes.
 | Glide | 2 | — |
 | Burning Bulwark | 4 | thorns damage — **2** |
 | Lava Plume | 2 | tenths of the lava-stride multiplier — **17** |
+| U-turn | 2 | tenths of the mount's turn multiplier — **18** |
 | Bounce | 2 | — |
 | Snowscape | 2 | trail radius — **3** |
 | Vine Whip | 2 | extra blocks of reach — **3** |
@@ -210,4 +213,5 @@ what the config takes.
 | Swift | 2 | tenths of the mount's acceleration multiplier — **20** |
 | Lucky Chant | 2 | Luck amplifier — **1** |
 | Acid Armor | 3 | poison ticks — **900** |
+| Powder Snow | 3 | radius of the cold — **5** |
 

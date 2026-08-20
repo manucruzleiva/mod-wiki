@@ -117,7 +117,6 @@ Unlearns one or all HMs.
 | `stockpile` | Stockpile |
 | `substitute` | Substitute |
 | `thief` | Thief |
-| `u_turn` | U-turn |
 | `charge` | Charge |
 | `destiny_bond` | Destiny Bond |
 | `sweet_scent` | Sweet Scent |
@@ -154,6 +153,7 @@ Unlearns one or all HMs.
 | `glide` | Glide |
 | `burning_bulwark` | Burning Bulwark |
 | `lava_plume` | Lava Plume |
+| `u_turn` | U-turn |
 | `bounce` | Bounce |
 | `snowscape` | Snowscape |
 | `vine_whip` | Vine Whip |
@@ -163,3 +163,4 @@ Unlearns one or all HMs.
 | `swift` | Swift |
 | `lucky_chant` | Lucky Chant |
 | `acid_armor` | Acid Armor |
+| `powder_snow` | Powder Snow |

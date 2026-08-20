@@ -31,7 +31,7 @@ Any one of the listed Pokémon can teach the HM. Hold the trigger item and **sne
 | Waterfall | Gyarados, Ludicolo, Feraligatr | Prismarine Shard |
 | Ember | Charmander, Torchic, Tepig | Blaze Powder |
 | Bullet Seed | Seedot, Nuzleaf, Cacnea | Wheat Seeds |
-| Teleport | Abra, Kadabra, Alakazam, Ralts | Ender Eye |
+| Teleport | Abra, Kadabra, Alakazam, Ralts | Ender Pearl |
 | Fly | Pidgeot, Charizard, Dragonite | Phantom Membrane |
 | Rain Dance | Politoed, Kyogre, Golduck | Prismarine Crystals |
 | Sunny Day | Torkoal, Sunkern, Volcarona | Sunflower |
@@ -47,7 +47,6 @@ Any one of the listed Pokémon can teach the HM. Hold the trigger item and **sne
 | Stockpile | Gulpin, Swalot | Sponge |
 | Substitute | Wobbuffet, Mew, Smeargle | Armor Stand |
 | Thief | Meowth, Purrloin, Sableye | Tripwire Hook |
-| U-turn | Yanma, Ninjask, Venipede | Rabbit's Foot |
 | Charge | Elekid, Electabuzz, Electivire | Redstone |
 | Destiny Bond | Misdreavus, Duskull, Shuppet | Echo Shard |
 | Sweet Scent | Gloom, Bellossom, Vileplume, Aromatisse | Lilac |
@@ -64,7 +63,7 @@ Any one of the listed Pokémon can teach the HM. Hold the trigger item and **sne
 | Earthquake | Donphan, Rhydon, Gigalith | Deepslate |
 | Rock Throw | Geodude, Onix, Nosepass | Cobblestone |
 | Present | Delibird, Stantler, Spinda | Paper |
-| Blizzard | Abomasnow, Glalie, Froslass | Powder Snow Bucket |
+| Blizzard | Abomasnow, Glalie, Froslass | Snowball |
 | Boomerang | Cubone, Marowak, Houndoom | Bone |
 | Decorate | Sylveon, Milcery, Togekiss | Painting |
 
@@ -293,7 +292,12 @@ Calls down 3 lightning bolts around your position.
 ### String Shot
 **Hunger:** 1 · **Cooldown:** 2s · **Power:** radius 1
 
-Lays cobwebs around you, slowing anyone who walks into them.
+Two different tools, and **what you were already doing decides which you meant**.
+
+- **On the move** — two cobwebs go up directly behind you, foot and head height, and they are
+  gone in a second. An escape: something to leave in a doorway you have just come through.
+- **Standing still** — one web goes exactly where you are **aiming**, and it **stays**. A trap
+  you set on purpose, or something to break a fall at the bottom of a shaft.
 
 ---
 
@@ -330,14 +334,6 @@ Aim at a mob and use it — that mob becomes **charmed** and follows you around 
 
 Takes whatever the creature in your crosshair is holding in its main hand and puts it in your
 inventory. Armour stays on. A creature with empty hands simply says so.
-
----
-
-### U-turn
-**Hunger:** 1 · **Cooldown:** 2s · **Power:** hop distance (tenths of a block)
-
-Leaps you backwards and spins your view a full 180°, so you land already facing whatever you were
-running from. A disengage — the leap without the turn just leaves you sprinting blind.
 
 ---
 
@@ -505,12 +501,17 @@ things.
 ### Blizzard
 **Hunger:** 6 · **Cooldown:** 30s · **Power:** radius
 
-Leaves a circle of standing cold where you cast it. Anything that walks in freezes the way powder
-snow freezes it, and thaws again on the way out.
+**It snows.** Flakes fall inside the area and snow settles on the ground a layer at a time — the
+same block a real snowfall leaves — **whatever the biome**. Call one down in a desert and it snows
+in the desert.
 
-**Its edge is drawn on the ground**, at exactly the radius that bites — an area effect that punishes
-you for entering without showing you where it starts is a trap, not a mechanic. You are exempt from
-your own storm.
+The biome is never touched to do it: the weather is simulated where it stands, because asking
+vanilla for snow in a warm biome means rewriting that biome permanently, which is not something a
+click should do to somebody's world.
+
+And it **melts on its own**. The snow obeys the world's own light and temperature rules from the
+moment it lands, so a blizzard in a taiga stays and a blizzard in a desert is gone by morning.
+Leaving that to vanilla is what keeps this from being a landscaping tool.
 
 ---
 

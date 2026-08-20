@@ -6,6 +6,111 @@
 All notable changes are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) + SemVer.
 
+## [2.1.20] - 2026-08-20
+
+### ✨ Changed
+- **Blizzard makes it snow.** Actual snowfall where you cast it — flakes in the air and snow
+  settling on the ground, a layer at a time — **whatever the biome**. A desert gets a blizzard if
+  that is where you called one down, and the biome is never touched to do it. The snow then obeys
+  the world's own rules: it stays in a taiga and it is gone from a desert by morning, because
+  leaving that to vanilla is what keeps this from being a landscaping tool. Learned with a
+  **Snowball** now.
+
+### ✨ New
+- **Powder Snow** *(toggle)* — the freezing cold Blizzard used to leave behind, except now you
+  **carry** it. Anything that comes near frosts over and starts to freeze; step out and it thaws.
+  Its edge is drawn on the ground at exactly the radius that bites, which matters more than ever
+  now that the edge walks around with you. You are exempt from your own cold.
+
+## [2.1.19] - 2026-08-20
+
+### ✨ Changed
+- **Rock Climb is steered by the movement keys.** **W** climbs, **S** descends, and holding nothing
+  holds your place on the wall — which is the one thing the old version could not express, because
+  you are always looking somewhere. It used to read your pitch, so "look up to go up" was the only
+  way, and glancing down mid-climb dropped you.
+- **Decorate carpets the whole floor, and hangs the painting where you point.** Both were scattered
+  at random before, and random decoration is not decoration: you cannot aim a sprinkle, and a room
+  you cannot aim is a room you cannot finish. Its **power is now the shiny chance**, a plain
+  percentage from 1 to 100, for a server to set as generous or as cruel as it likes.
+
+## [2.1.18] - 2026-08-20
+
+### 🐛 Fixed
+- **Mean Look stopped playing tug of war.** Frightened Pokémon ran a few steps, turned round and
+  came straight back, over and over. They were still hunting you the whole time — the flee path was
+  being set and their own AI was undoing it every tick. They now **let go of you** first, which
+  ends the chase properly: the Pokémon runs off, calms down, and you can walk up to it afterwards.
+
+### ✨ Changed
+- **String Shot does something different standing still.** On the move it still spits a web behind
+  you that is gone in a second — an escape, left in a doorway. **Standing still**, it plants one
+  where you are **aiming**, and that one **stays**: a trap you set on purpose, or something to break
+  a fall at the bottom of a shaft. What you were already doing decides which you meant.
+- **Teleport is learned with an Ender Pearl** instead of an Eye of Ender. It also fixes a real
+  clash: Teleport and Miracle Eye shared the Eye, and anything looking an HM up by its item alone
+  could only ever find the first of the two.
+
+### ✨ New
+- **Your real food bar shows what the toggles have taken.** The red the HM wheel draws is now
+  painted over the vanilla bar too — which is where you are actually looking when you wonder why it
+  will not fill.
+
+## [2.1.17] - 2026-08-20
+
+### 🐛 Fixed
+- **Half your HMs had no name.** Nine toggle effects, eighteen keybinds and sixteen discs were
+  missing their text entirely, so the game fell back to showing the raw key —
+  `effect.cobblemon_ditto_hms.hm_swift` sitting in your status bar where a name should be. Every one
+  of those is now generated from the ability list itself, so an HM added later cannot arrive
+  nameless.
+- **The thrown projectile is not called "Seed".** It is shared by Bullet Seed, Egg Bomb, Rock Throw
+  and Boomerang, and it renders as whatever it was loaded with.
+- **A two-line HM description no longer falls off the bottom of the screen.** The text is measured
+  and lifted until it fits.
+
+### ✨ Changed
+- **The selected active HM gets a light of its own**, amber where a running toggle is green. "This
+  is what fires" and "this is running" are now the same mark in different colours, instead of one
+  being a light and the other a ring you had to know to look for.
+
+## [2.1.16] - 2026-08-20
+
+**The first two fixes that came from actually playing the mod.**
+
+### 🐛 Fixed
+- **Magnet Rise flew at full creative speed, and the dash still worked.** Halving the flight speed
+  was only half the job: the game **doubles it again while you sprint**, and it does that on your
+  own machine as it works out where you moved to — so holding Ctrl handed the whole reduction back.
+  The doubling is now cancelled where it happens, which means the speed is the same whether or not
+  the key is down. That is what "no dash" was always supposed to mean.
+- **Tail Whip swept nothing, and said it had.** It also charged you for the privilege. It now
+  re-reads the block between strokes — the last one replaces it, and holding on to the old one is
+  how the sweep quietly stopped short — and if it does not finish, it refuses and costs nothing
+  instead of playing a happy sound over an untouched block.
+
+## [2.1.15] - 2026-08-20
+
+### ✨ New
+- **HMs can be paid for with experience.** A new setting picks the currency — experience then
+  hunger (the new default), hunger then experience, or strictly one or the other. Every HM keeps a
+  single price, quoted in food, and it is converted at the till, so switching your server to XP
+  does not re-balance anything: the relative cost of everything stays exactly where it was.
+  `/dittohm config cost order <mode>` and `/dittohm config cost xp <n>`.
+- **[Cobblemon: PlayerXP](https://modrinth.com/mod/cobblemon-playerxp)
+  ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobblemon-playerxp)) is now a declared
+  optional dependency.** Vanilla only pays experience for killing things, so on a Cobblemon server
+  with mob spawning turned down the XP modes would be a slow starvation. PlayerXP pays you for the
+  battles your Pokémon win — install it and the currency refills from the thing you were already
+  doing.
+
+### ✨ Changed
+- **U-turn is a toggle, and it is about turning.** Whatever you are riding corners far more
+  sharply, on land, in water and in the air. It used to be a backwards hop.
+- **Your double does what you were doing.** Cast Substitute at a run and it keeps running your way
+  at your pace; cast it standing still and it **stands still**. It used to wander off on a random
+  bearing when you were still, which gave it away just as badly as freezing would have.
+
 ## [2.1.14] - 2026-08-20
 
 ### ✨ New

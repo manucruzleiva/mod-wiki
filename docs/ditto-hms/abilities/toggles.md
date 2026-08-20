@@ -55,8 +55,9 @@ When a toggle is turned **off**, its effects are removed **immediately**.
 | Mean Look | Mimikyu, Gengar, Noctowl | Ominous Bottle |
 | Harden | Metapod, Kakuna, Silcoon, Cascoon | Shield |
 | Glide | Dragonite, Togekiss, Aerodactyl | Feather |
-| Burning Bulwark | Gouging Fire | Blaze Rod |
+| Burning Bulwark | Gougingfire | Blaze Rod |
 | Lava Plume | Magcargo, Slugma, Turtonator | Magma Cream |
+| U-turn | Yanma, Ninjask, Venipede | Rabbit's Foot |
 | Bounce | Spoink, Aipom, Hoppip | Slime Ball |
 | Snowscape | Froslass, Mamoswine | Blue Ice |
 | Vine Whip | Bulbasaur, Tangela | Vine |
@@ -66,6 +67,7 @@ When a toggle is turned **off**, its effects are removed **immediately**.
 | Swift | Ninjask, Accelgor, Electrode | Sugar |
 | Lucky Chant | Clefairy, Chimecho, Togetic | Emerald |
 | Acid Armor | Grimer, Muk, Goodra | Slime Block |
+| Powder Snow | Cetoddle, Cetitan, Beartic | Powder Snow Bucket |
 
 ---
 
@@ -103,8 +105,8 @@ Lets you **see clearly in the dark**, even in caves and at night. Toggle off to 
 ### Rock Climb
 **Blocks:** 2
 
-Every vertical surface behaves like a ladder. Face a wall and **look up** to climb, **look down** or
-hold **sneak** to descend, and look level to hold on where you are.
+Every vertical surface behaves like a ladder, and it is steered by the **movement keys**: **W**
+climbs, **S** descends, and holding nothing holds your place on the wall.
 
 Your horizontal movement is left alone, so you can travel along a face and step off it whenever you
 like — a wall is something to climb, not something to be stuck to. On the ground it only takes over
@@ -251,3 +253,18 @@ A caustic coat worth **a quarter of a full diamond set**, and whatever lands a b
 One dose per hit, and only from whatever actually reached you — an archer three blocks back never
 touched the acid.
 
+### U-turn
+**Blocks:** 2
+
+Whatever you are riding **turns far more sharply** — on land, in water and in the air. Cornering is
+not something that only happens on the ground, so it applies wherever your mount happens to be.
+
+### Powder Snow
+**Blocks:** 3
+
+A cold you **carry**. Anything that comes near frosts over and starts to freeze, the way powder snow
+freezes it, and thaws again once it is out of reach.
+
+**Its edge is drawn on the ground**, at exactly the radius that bites — which matters more here than
+anywhere else in the mod, because that edge is walking around with you. You are exempt from your own
+cold, which is the only reason this can be worn at all.

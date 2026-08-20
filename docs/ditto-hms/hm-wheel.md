@@ -33,14 +33,14 @@ familiar HM is easy to find by colour before you can read the label.
 | A dim pip on a dark segment | Not learned yet. The wheel never hints at which Pokémon unlocks it |
 | **A disc that has grown** | The slot under your cursor — release now and this is what you get |
 | **A slot pulsing with light, ringed and glinting** | Currently selected (active) or currently switched on (toggle) |
-| **A small light in the corner of a disc** | This is a **toggle**. Green means it is running right now; dark means it is not |
+| **A small light in the corner of a disc** | **Green** — a toggle that is running. **Amber** — the active you have selected. **Dark** — neither |
 
 The two cues never collide: **size** always means "the one I am about to pick", and **light** always
 means "this one is live". Hover a live HM and you see both at once.
 
-Only **toggles** carry the little corner light, so its presence tells you what kind of HM you are
-looking at and its colour tells you whether that one is on. The glow cannot answer the second
-question on its own, because a selected active glows too.
+Every disc carries the little corner light and the **colour** is what it says: green for a toggle
+that is running, amber for the one active you have selected, dark for everything else. The glow
+cannot answer that on its own, because a selected active glows exactly like a running toggle.
 
 The middle of the wheel names whatever your cursor is over, its type, and its state; the ability's
 description sits just below the wheel.

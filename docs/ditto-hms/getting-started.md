@@ -64,7 +64,12 @@ blocks behave exactly as they always did. Both halves are configurable; see
 
 ## The hunger system
 
-- **Active HMs** cost hunger on use (configurable per ability).
+- **Active HMs** cost hunger on use (configurable per ability) — or **experience**, if the server
+  says so. Every HM carries one price, quoted in food, and the server picks the currency:
+  experience then hunger (the default), hunger then experience, or strictly one of the two.
+  Installing [Cobblemon: PlayerXP](https://modrinth.com/mod/cobblemon-playerxp) is what makes
+  the experience modes worth using — it pays you for the battles your Pokémon win, so the
+  currency refills from the thing you were already doing.
 - **Toggle HMs** block your maximum hunger while enabled — most reduce your max food bar by **2
   points**, a few by more, and **Magnet Rise by 15**, because flight should cost nearly everything
   you have. You still regenerate health at the cap. The cap never drops below 2.
