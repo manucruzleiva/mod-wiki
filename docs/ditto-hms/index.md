@@ -6,15 +6,14 @@
 
 # Cobblemon Ditto HMs
 
-Become the HM slave you always made suffer. **47 Pokopia-inspired abilities** — 33 active and 14
-toggles — that *you* learn instead of teaching them to a Pokémon, paid for in hunger rather than a
-party slot.
+Become the HM slave you always made suffer. Pokopia-inspired abilities that *you* learn instead of
+teaching them to a Pokémon, paid for in hunger rather than a party slot.
 
 <span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.7.3</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
 
 <div class="hero-actions" markdown>
 [Get started](getting-started.md){ .md-button }
-[All 47 HMs](abilities/active.md){ .md-button }
+[Every HM](abilities/active.md){ .md-button }
 </div>
 
 </div>
@@ -25,16 +24,18 @@ party slot.
 ```mermaid
 flowchart LR
     A[🔍 Find the right\nPokémon] --> B[🤝 Sneak + right-click\nholding the trigger item]
-    B --> C[💿 Receive an\nHM Disc]
-    C --> D[✅ Right-click the disc:\nability learned forever]
-    D --> E[🎡 Pick it from the\nHM wheel]
+    B --> C[🧠 It teaches you\nthe move, for good]
+    C --> D[🎡 Pick it from the\nHM wheel]
 ```
 
 1. **Find the right Pokémon** in the wild — each ability is tied to one or more species.
 2. **Sneak + right-click** that Pokémon while holding the required trigger item.
-3. The Pokémon gives you an **HM Disc**.
-4. **Right-click the HM Disc** to learn the ability permanently.
-5. Press **H** for the **HM wheel** — every HM you know, nothing to craft and nothing to carry.
+3. It **teaches you the move**, permanently. The trigger item is what you pay.
+4. Press **H** for the **HM wheel** — every HM you know, nothing to craft and nothing to carry.
+
+!!! info "What you know cannot be handed over"
+    Nothing changes hands: there is no disc to drop in a chest and no HM to post to a friend who
+    never went and found the Pokémon. Everyone earns their own.
 
 !!! tip "Discovery is part of the game"
     The game itself never tells you which Pokémon teaches an HM or what item to hold —
@@ -59,8 +60,8 @@ it keeps new HMs coming.
 | | |
 |---|---|
 | [Getting Started](getting-started.md) | First steps and the HM wheel |
-| [Active HMs](abilities/active.md) | 33 abilities you fire on demand |
-| [Toggle HMs](abilities/toggles.md) | 14 passive abilities that run continuously |
+| [Active HMs](abilities/active.md) | Everything you fire on demand |
+| [Toggle HMs](abilities/toggles.md) | The passives that run continuously |
 | [HM Wheel](hm-wheel.md) | Pick any HM you know from one radial menu |
 | [Configuration](configuration.md) | Per-ability hunger / cooldown / power sliders |
 | [Commands](commands.md) | Admin and player commands |

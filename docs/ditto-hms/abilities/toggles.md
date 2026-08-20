@@ -3,8 +3,6 @@
 Toggle HMs are **passive abilities** that stay active until you turn them off.
 Switch them on from the inner ring of the [HM wheel](../hm-wheel.md), or with `/dittohm use <id>`.
 
-There are **14 toggle HMs**.
-
 !!! tip "HUD icons"
     Every enabled toggle shows its **own HM status-effect icon** in your HUD (top-right), so
     it's obvious at a glance which toggles are on. Wherever the game has an equivalent attribute,
@@ -23,7 +21,9 @@ flowchart LR
     E[🔄 Toggle OFF] --> F[Effects removed\nimmediately + hunger\ncap restored]
 ```
 
-Each enabled toggle **blocks food points** from your maximum food bar (most block 2; **Harden blocks 3**, **Burning Bulwark blocks 4**).
+Each enabled toggle **blocks food points** from your maximum food bar. Most block 2; **Harden**
+blocks 3, **Burning Bulwark** 4, and **Magnet Rise** a full **15** — flight costs nearly the whole
+budget, which is the point of it.
 At your effective cap a slow **Regeneration I** effect keeps you healing normally.
 The cap never drops below **2**.
 
@@ -45,9 +45,10 @@ When a toggle is turned **off**, its effects are removed **immediately**.
 
 | HM | Pokémon (any of) | Trigger item |
 |---|---|---|
+| Magnet Rise | Magnemite, Magneton, Magnezone | Iron Nugget |
 | Jump | Magikarp, Buneary, Spoink | Cod |
 | Surf | Lapras, Kyogre, Suicune | Kelp |
-| Rollout | Graveler, Golem, Spheal | Cobblestone |
+| Agility | Alakazam, Jolteon, Aerodactyl | Amethyst Shard |
 | Dive | Vaporeon, Lapras, Wailord | Nautilus Shell |
 | Flash | Ampharos, Jolteon, Lanturn | Glowstone Dust |
 | Rock Climb | Rhydon, Rhyperior, Sneasel | Chain |
@@ -55,14 +56,16 @@ When a toggle is turned **off**, its effects are removed **immediately**.
 | Harden | Metapod, Kakuna, Silcoon, Cascoon | Shield |
 | Glide | Dragonite, Togekiss, Aerodactyl | Feather |
 | Burning Bulwark | Gouging Fire | Blaze Rod |
-| Helping Hand | Plusle, Minun, Audino | Saddle |
 | Lava Plume | Magcargo, Slugma, Turtonator | Magma Cream |
-| Tailwind | Talonflame, Noivern, Staraptor | Breeze Rod |
-| Swift | Ninjask, Accelgor, Electrode | Sugar |
-| Absorb | Gulpin, Swalot, Victreebel | Hopper |
 | Bounce | Spoink, Aipom, Hoppip | Slime Ball |
 | Snowscape | Froslass, Mamoswine | Blue Ice |
 | Vine Whip | Bulbasaur, Tangela | Vine |
+| Absorb | Gulpin, Swalot, Victreebel | Hopper |
+| Helping Hand | Plusle, Minun, Audino | Saddle |
+| Tailwind | Talonflame, Noivern, Staraptor | Breeze Rod |
+| Swift | Ninjask, Accelgor, Electrode | Sugar |
+| Lucky Chant | Clefairy, Chimecho, Togetic | Emerald |
+| Acid Armor | Grimer, Muk, Goodra | Slime Block |
 
 ---
 
@@ -78,11 +81,6 @@ Applies continuous **Jump Boost**. The `power` value equals the buff level, so `
 
 Whatever you are **riding** cuts through water half again as fast. Your own swimming, on foot, is
 untouched. Surf's twin in the air is **Tailwind**.
-
-### Rollout
-**Blocks:** 2 · **Power:** speed amount
-
-Increases your **movement speed** while active.
 
 ### Dive
 **Blocks:** 2
@@ -105,15 +103,23 @@ Lets you **see clearly in the dark**, even in caves and at night. Toggle off to 
 ### Rock Climb
 **Blocks:** 2
 
-Lets you **climb any wall you're facing** — while airborne, look at a wall to climb up; hold
-**sneak** to climb down. No vanilla movement buffs are applied.
+Every vertical surface behaves like a ladder. Face a wall and **look up** to climb, **look down** or
+hold **sneak** to descend, and look level to hold on where you are.
+
+Your horizontal movement is left alone, so you can travel along a face and step off it whenever you
+like — a wall is something to climb, not something to be stuck to. On the ground it only takes over
+when you are actually asking to go up, so walking and jumping near a wall work normally.
 
 ### Mean Look
 **Blocks:** 2 · **Power:** detect radius (default 30)
 
-Nearby **hostile mobs flee from you**, running away with real pathfinding — exactly like creepers
-running from a cat (they even sprint when you get close). It **never** affects Pokémon, friendly
-mobs, or other players.
+Anything that means you harm **flees from you**, running away with real pathfinding — exactly like
+creepers running from a cat (they even sprint when you get close).
+
+That covers the mobs the game calls hostile, and **any Pokémon that is currently hunting you** —
+wild Cobblemon are not hostile by species, they pick fights by behaviour, so the test is whether one
+has decided to come for you. Everything else in the field is left exactly where it is, and other
+players are never affected.
 
 ### Harden
 **Blocks:** 3
@@ -161,7 +167,7 @@ For the ride to the surface of a **water** pool, that is still **Waterfall**.
 ---
 
 ### Helping Hand
-**Blocks:** 2 · **Power:** tenths of the stamina multiplier (default 20 = double)
+**Blocks:** 2 · **Power:** tenths of the stamina it spends (default 5 = half)
 
 Whatever you are riding keeps going **about twice as long** before it tires. Nothing else about the
 mount changes — it is not faster, it does not recover any quicker, it simply has more in the tank.
@@ -212,3 +218,36 @@ you cross it. Flowing water is left alone, so a river keeps running instead of b
 
 Reach further — blocks and creatures several paces away come within arm's length. Mining, placing
 and hitting all get the extra range.
+
+### Magnet Rise
+**Blocks:** 15
+
+**Flight.** Switch it on and you are off the ground for as long as you like, drifting at half your
+walking pace with no dash.
+
+The price is the steepest of any toggle and it is paid once: **fifteen** food points off your
+maximum, out of a budget of eighteen. Flying is very nearly everything you have, which is the
+point.
+
+
+### Agility
+**Blocks:** 2
+
+You move faster while it is on.
+
+
+### Lucky Chant
+**Blocks:** 2
+
+Fortune leans your way while it lasts: what you break and what you fish give up a little more.
+
+
+### Acid Armor
+**Blocks:** 3
+
+A caustic coat worth **a quarter of a full diamond set**, and whatever lands a blow on you gets
+**poisoned** for its trouble.
+
+One dose per hit, and only from whatever actually reached you — an archer three blocks back never
+touched the acid.
+

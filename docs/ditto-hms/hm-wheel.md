@@ -14,17 +14,17 @@ the **type of the move the HM is named after** — so Water HMs sit in blue, Fir
 familiar HM is easy to find by colour before you can read the label.
 
 ```
-              ╭──── outer ring: the 25 ACTIVE HMs ────╮
-           Cut     Fly     Dig    Ember   Teleport   ...
-        ╲     ╲      ╲      │      ╱      ╱     ╱
-          ╲    ╭────────────────────────╮    ╱
-            ╲  │  inner ring: 10 TOGGLES │  ╱
-      Water ──┤   Jump  Surf  Dive  ...  ├── Thunder
-            ╱  │                         │  ╲
-          ╱    ╰────────────────────────╯    ╲
-        ╱     ╱      ╱      │      ╲      ╲     ╲
-           Rest   Charm  Strength  Waterfall   ...
-               ( centre: cancel / clear )
+   ▓                ╭──── outer ring: ACTIVE HMs ────╮
+   ▓ f           Cut     Fly     Dig    Ember   Teleport   ...
+   ▓ o        ╲     ╲      ╲      │      ╱      ╱     ╱
+   ▓ o          ╲    ╭───────────────────────╮    ╱
+   ░ d            ╲  │  inner ring: TOGGLES  │  ╱
+   ░              ──┤   Jump  Surf  Dive ●   ├──
+   ░ b            ╱  │                       │  ╲
+   █ a          ╱    ╰───────────────────────╯    ╲
+   █ r        ╱     ╱      ╱      │      ╲      ╲     ╲
+   █             Rest   Charm  Strength  Waterfall   ...
+   █                  ( ✖ cancel · 🧹 clear all )
 ```
 
 | What you see | What it means |
@@ -33,12 +33,38 @@ familiar HM is easy to find by colour before you can read the label.
 | A dim pip on a dark segment | Not learned yet. The wheel never hints at which Pokémon unlocks it |
 | **A disc that has grown** | The slot under your cursor — release now and this is what you get |
 | **A slot pulsing with light, ringed and glinting** | Currently selected (active) or currently switched on (toggle) |
+| **A small light in the corner of a disc** | This is a **toggle**. Green means it is running right now; dark means it is not |
 
 The two cues never collide: **size** always means "the one I am about to pick", and **light** always
 means "this one is live". Hover a live HM and you see both at once.
 
+Only **toggles** carry the little corner light, so its presence tells you what kind of HM you are
+looking at and its colour tells you whether that one is on. The glow cannot answer the second
+question on its own, because a selected active glows too.
+
 The middle of the wheel names whatever your cursor is over, its type, and its state; the ability's
 description sits just below the wheel.
+
+---
+
+## The food bar
+
+A column of twenty pips stands down the left of the wheel, and it answers three questions at once:
+
+| Colour | What it is |
+|---|---|
+| **Red, at the top** | Maximum your running toggles have taken. Not yours again until one goes off |
+| **Full** | What you have left |
+| **Empty** | Room to eat |
+| **Flashing** | What the HM under your cursor would cost, before you commit to it |
+
+Hover an **active** and it flashes what that use would eat off the top of what you are carrying.
+Hover a **toggle** and it flashes the slice of maximum it would claim — or, if it is already on, the
+slice it would hand back.
+
+!!! tip "Your food is not wasted"
+    At the cap the game would normally still let you eat, because your bar is not full. It is
+    refused instead, so a steak is never spent on nothing.
 
 ---
 
@@ -48,9 +74,10 @@ description sits just below the wheel.
 |---|---|
 | **Outer — active HMs** | Selects it. Selecting it again deselects it |
 | **Inner — toggle HMs** | Switches it on or off straight away |
-| **Centre ring** | Clears your selection. Your toggles keep running |
-| **Bullseye** | Cancel — closes the wheel and changes nothing |
+| **Centre ring (🧹 brushes)** | Clears everything — your selection *and* every toggle |
+| **Bullseye (✖)** | Cancel — closes the wheel and changes nothing |
 | **Right-click a slot** | Stars it as a favourite. The wheel stays open |
+| **Scroll** | Resizes the discs, and remembers it |
 
 Hold **H**, move the cursor onto a slot and let go — the wheel closes on whatever you were pointing
 at. A quick tap instead leaves the wheel pinned open, so you can take your time and click.
@@ -155,3 +182,13 @@ says nothing is a bug; please [report it](../reporting.md).
 
 Learning is tracked **per player**, server-side, and survives death and world reloads. The HM Disc
 is only the teacher: right-click it once and it has done its job.
+
+---
+
+## Disc size
+
+**Scroll on the wheel** to make the discs bigger or smaller. Where you leave it is remembered on
+your own machine and carried between worlds — the right size depends on your monitor, your GUI
+scale and how many HMs you happen to know, none of which a server can see.
+
+A server can set the size everyone *starts* at, in the config; scrolling is your answer to it.

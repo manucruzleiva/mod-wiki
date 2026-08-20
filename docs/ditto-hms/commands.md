@@ -45,7 +45,8 @@ Require **permission level 2**:
 ```
 /dittohm give <ability> [player]
 ```
-Gives the HM Disc for the specified ability.
+Gives the HM Disc for the specified ability — the operator's way in, since nothing in
+survival hands one out any more. Right-clicking it still teaches the HM.
 
 ```
 /dittohm learn <ability> [player]
@@ -86,7 +87,7 @@ Unlearns one or all HMs.
 
 ## Ability IDs
 
-### Active (33)
+### Active
 
 | ID | Display name |
 |---|---|
@@ -98,7 +99,6 @@ Unlearns one or all HMs.
 | `camouflage` | Camouflage |
 | `strength` | Strength |
 | `waterfall` | Waterfall |
-| `magnet_rise` | Magnet Rise |
 | `ember` | Ember |
 | `bullet_seed` | Bullet Seed |
 | `teleport` | Teleport |
@@ -116,21 +116,36 @@ Unlearns one or all HMs.
 | `charm` | Charm |
 | `stockpile` | Stockpile |
 | `substitute` | Substitute |
-| `lava_plume` | Lava Plume |
 | `thief` | Thief |
 | `u_turn` | U-turn |
 | `charge` | Charge |
 | `destiny_bond` | Destiny Bond |
 | `sweet_scent` | Sweet Scent |
 | `headbutt` | Headbutt |
+| `egg_bomb` | Egg Bomb |
+| `eruption` | Eruption |
+| `miracle_eye` | Miracle Eye |
+| `protect` | Protect |
+| `celebrate` | Celebrate |
+| `tail_whip` | Tail Whip |
+| `whirlwind` | Whirlwind |
+| `barrier` | Barrier |
+| `x_scissor` | X-Scissor |
+| `earthquake` | Earthquake |
+| `rock_throw` | Rock Throw |
+| `present` | Present |
+| `blizzard` | Blizzard |
+| `boomerang` | Boomerang |
+| `decorate` | Decorate |
 
-### Toggle (14)
+### Toggle
 
 | ID | Display name |
 |---|---|
+| `magnet_rise` | Magnet Rise |
 | `jump` | Jump |
 | `surf` | Surf |
-| `rollout` | Rollout |
+| `agility` | Agility |
 | `dive` | Dive |
 | `flash` | Flash |
 | `rock_climb` | Rock Climb |
@@ -138,7 +153,13 @@ Unlearns one or all HMs.
 | `harden` | Harden |
 | `glide` | Glide |
 | `burning_bulwark` | Burning Bulwark |
-| `absorb` | Absorb |
+| `lava_plume` | Lava Plume |
 | `bounce` | Bounce |
 | `snowscape` | Snowscape |
 | `vine_whip` | Vine Whip |
+| `absorb` | Absorb |
+| `helping_hand` | Helping Hand |
+| `tailwind` | Tailwind |
+| `swift` | Swift |
+| `lucky_chant` | Lucky Chant |
+| `acid_armor` | Acid Armor |

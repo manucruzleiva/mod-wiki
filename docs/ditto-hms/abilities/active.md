@@ -3,8 +3,6 @@
 Active HMs are fired on demand: pick one in the [HM wheel](../hm-wheel.md), then click with an
 empty hand or the HM Case. Each use costs hunger and (most) start a cooldown.
 
-There are **33 active HMs**.
-
 ```mermaid
 flowchart LR
     A[🖱️ Click with your\nchosen activator] --> B{Learned?}
@@ -31,12 +29,8 @@ Any one of the listed Pokémon can teach the HM. Hold the trigger item and **sne
 | Camouflage | Zorua, Kecleon, Ditto | Ink Sac |
 | Strength | Machoke, Machamp, Conkeldurr | Iron Ingot |
 | Waterfall | Gyarados, Ludicolo, Feraligatr | Prismarine Shard |
-| Magnet Rise | Magnemite, Magneton, Magnezone | Iron Nugget |
 | Ember | Charmander, Torchic, Tepig | Blaze Powder |
 | Bullet Seed | Seedot, Nuzleaf, Cacnea | Wheat Seeds |
-| Seed Bomb | Breloom, Torterra, Chesnaught | Melon Seeds |
-| Eruption | Camerupt, Magcargo, Heatran | Magma Block |
-| Miracle Eye | Xatu, Sigilyph, Unown | Eye of Ender |
 | Teleport | Abra, Kadabra, Alakazam, Ralts | Ender Eye |
 | Fly | Pidgeot, Charizard, Dragonite | Phantom Membrane |
 | Rain Dance | Politoed, Kyogre, Golduck | Prismarine Crystals |
@@ -58,6 +52,21 @@ Any one of the listed Pokémon can teach the HM. Hold the trigger item and **sne
 | Destiny Bond | Misdreavus, Duskull, Shuppet | Echo Shard |
 | Sweet Scent | Gloom, Bellossom, Vileplume, Aromatisse | Lilac |
 | Headbutt | Cranidos, Rampardos, Cubone | Iron Helmet |
+| Egg Bomb | Chansey, Blissey, Exeggutor | Egg |
+| Eruption | Camerupt, Magcargo, Heatran | Magma Block |
+| Miracle Eye | Xatu, Sigilyph, Unown | Ender Eye |
+| Protect | Shuckle, Wobbuffet, Cloyster | Turtle Helmet |
+| Celebrate | Jigglypuff, Ludicolo, Alcremie | Firework Rocket |
+| Tail Whip | Rattata, Sentret, Buneary | Brush |
+| Whirlwind | Pidgeot, Fearow, Swellow | Wind Charge |
+| Barrier | Mr. Mime, Screamtail, Hatterene | Glass Pane |
+| X-Scissor | Scyther, Kleavor, Vikavolt | Iron Sword |
+| Earthquake | Donphan, Rhydon, Gigalith | Deepslate |
+| Rock Throw | Geodude, Onix, Nosepass | Cobblestone |
+| Present | Delibird, Stantler, Spinda | Paper |
+| Blizzard | Abomasnow, Glalie, Froslass | Powder Snow Bucket |
+| Boomerang | Cubone, Marowak, Houndoom | Bone |
+| Decorate | Sylveon, Milcery, Togekiss | Painting |
 
 ---
 
@@ -78,14 +87,27 @@ the same for saplings and berry trees.
 
 The bare ground answers too, and it answers in **flowers**: a burst leaves a meadow rather than a
 lawn, with the odd blade of grass among it. The blooms are ones that belong to the biome you are
-standing in, so a burst in a plains looks nothing like one in a flower forest.
+standing in, so a burst in a plains looks nothing like one in a flower forest — and a biome with no
+flowers of its own gets grass rather than a dandelion that does not belong there.
+
+It only ever plants on **bare ground**. A spot that already has something growing on it is left
+exactly as it stands, so casting twice in the same meadow thickens it instead of disturbing it, and
+tall flowers are planted whole rather than as a half that topples.
 
 ---
 
 ### Cut
 **Hunger:** 2 · **Cooldown:** none · **Power:** max 128 blocks
 
-Treecapitator (BFS). Aim at a **log** → cut all connected logs (+ attached leaves); aim at a **leaf** → strip connected leaves. Drops match a Netherite Axe.
+Aim at a **log** and the whole tree comes down — every connected log, with the leaves and vines
+tangled in it. Aim at a **leaf** or a **vine** and just that tangle goes.
+
+It also **cuts plants**: grass, ferns, crops, ground cover. Those come away as if you had used
+shears, so the drops are the careful ones — the grass itself rather than a couple of seeds — and
+that holds for plants added by a datapack too, because it is the game's own loot tables answering.
+
+Felling a tree and cutting a plant both cost hunger. A single isolated log, and shearing a sheep,
+are free.
 
 ---
 
@@ -104,13 +126,14 @@ Tills the dirt-type block you're aiming at into Farmland (Dirt, Grass Block, Coa
 ---
 
 ### Camouflage
-**Hunger:** 3 · **Cooldown:** 10s · **Power:** 6000t (**5 minutes**)
+**Hunger:** 3 · **Cooldown:** 15 min · **Power:** 18000t (**15 minutes**)
 
-Become the **living creature** you're looking at. Your model is replaced by theirs — variant, gear
-and all — for everyone who can see you.
+Become the **living creature** you're looking at. Your model is replaced by theirs — species, form,
+variant, gear and its nametag — for everyone who can see you.
 
-- Aim at a **creature** in clear view → you look exactly like it for 5 minutes, or until you use
-  Camouflage again.
+- Aim at a **creature** in clear view → you look exactly like it for 15 minutes.
+- **Fire it again while you are wearing one** → the costume comes off and the HM is ready
+  immediately, so changing disguise is two presses.
 - A block, a wall between you and it, or empty air → nothing happens. You can only copy something
   you can actually see.
 - Other **players** can't be copied.
@@ -157,13 +180,6 @@ rather than adding a second.
 
 ---
 
-### Magnet Rise
-**Hunger:** 2 · **Cooldown:** 10s · **Power:** 100t (5s)
-
-**Airborne-only** — you must be off the ground to use it. Grants **Levitation II + Slow Falling** for 5 seconds, letting you gain and hold height mid-air like a Magnezone. Using it on the ground does nothing.
-
----
-
 ### Ember
 **Hunger:** 1 · **Cooldown:** 1s · **Power:** reach 5 blocks
 
@@ -206,24 +222,6 @@ world border all hold: a plot you cannot build in is a plot you cannot erupt in.
 
 ---
 
-### Seed Bomb
-**Hunger:** 2 · **Cooldown:** 3s · **Power:** 10 (tenths of blast strength)
-
-Lobs a single heavy seed that bursts where it lands, costing one seed from your inventory.
-
-The blast is small on purpose: **power** is tenths of vanilla explosion strength, so the default 10
-is a strength of 1 — against a creeper's 30 and TNT's 40. It scatters what is standing there and
-takes a bite out of soft ground, and it will not open a hole. Turn it up if you want a bigger bang:
-
-```
-/dittohm config seed_bomb power <0-512>
-```
-
-It respects the world's mob-griefing rule, so a server with block damage turned off gets the bang
-and the knock without the crater. For flattening terrain on purpose, **Explosion** is the HM.
-
----
-
 ### Teleport
 **Hunger:** 5 · **Cooldown:** 5s · **Power:** max 30 blocks
 
@@ -258,10 +256,10 @@ Clears the weather to **sunny**.
 ---
 
 ### Rest
-**Hunger:** 0 required · **Cooldown:** 10 min
+**Hunger:** 0 · **Cooldown:** 10 min
 
 Restores your **full HP**, clears your status effects, and **skips the night** (like sleeping).
-Leaves you hungry afterwards.
+Leaves you hungry afterwards, and says nothing at all while it does it.
 
 !!! warning "Multiplayer"
     In multiplayer, **all online players must agree** to rest within a short window.
@@ -278,7 +276,10 @@ Instantly breaks the shovel-minable block you're aiming at (Netherite Shovel dro
 ### Explosion
 **Hunger:** 15 · **Cooldown:** 10s · **Power:** 4 (blast radius)
 
-A large explosion centered on you. **You survive at 1 HP**; everything around you does not.
+A large explosion centred on you. **Nine times out of ten it kills you outright** — the tenth
+leaves you standing on a single heart.
+
+It is not a tool with a downside. It is the last thing you do, and one time in ten it is not.
 
 ---
 
@@ -344,24 +345,29 @@ running from. A disengage — the leap without the turn just leaves you sprintin
 **Hunger:** 2 · **Cooldown:** 3s · **Power:** 200t (**10 seconds**)
 
 Turns the block you aim at into a redstone power source — enough to throw a door, a piston or a
-lamp from across a room. **Temporary:** the original block comes back exactly as it was, and a
-second cast puts the first one back before charging the next.
+lamp from across a room. **It does not run out.** The charge ends when you charge something else or
+leave, and never on a timer: a power source that switches itself off after a minute is not a power
+source, it is a fault to go and find.
 
-Blocks that hold something (chests, furnaces) are refused, because swapping them out and back would
-lose what's inside.
+The block is never replaced — it stays exactly what it is and simply *answers* as a power source —
+so you can charge a chest, a furnace, a statue or a wall without losing anything. While it is live
+it throws off **electric sparks**, so a charged block is one you can find again.
 
 ---
 
 ### Destiny Bond
 **Hunger:** 4 · **Cooldown:** 30s · **Power:** 200t (**10 seconds**)
 
-For a short window, whatever kills you dies with you. Something you spend when you think you're
-about to lose — not a permanent guarantee.
+**Aim at a creature to tie yourself to it.** For a short window after that, however you die — a
+mob, a fall, lava, your own Explosion — it dies too, wherever it happens to be standing.
+
+You choose who you are taking with you, and then you have to be right. Other players cannot be
+bound.
 
 ---
 
 ### Sweet Scent
-**Hunger:** 6 · **Cooldown:** 30s · **Power:** 5 (how many turn up)
+**Hunger:** 6 · **Cooldown:** 90s · **Power:** 5 (how many turn up)
 
 Draws a horde of wild Pokémon out of hiding all around you. Legendaries, mythicals, Ultra Beasts and
 Paradox Pokémon never answer — a crowd you can summon on a cooldown would otherwise be a farm.
@@ -374,9 +380,158 @@ Paradox Pokémon never answer — a crowd you can summon on a cooldown would oth
 Hurls you forward head-first, **from standing** — you need both feet on the ground to throw
 yourself anywhere.
 
-- Into a **tree**, the branches shake loose — sticks, saplings, the odd apple.
+- Into a **tree**, the branches shake loose. Sticks from any tree, and the sapling that grows that
+  particular wood. **Apples — and the Applin that grew inside one — only fall out of apple trees**;
+  shaking a spruce gets you spruce things.
+- One shake in sixty turns out to have had a **Greedent** in it, whatever the tree, and it does not
+  enjoy being woken up.
+- A **hive** in the tree comes out after you, exactly as it would if you had broken into it.
 - Into a **creature**, it hurts them.
 - Either way it hurts you. That's the joke.
 
 Only the first impact of each charge counts, so wedging yourself against a trunk can't chew through
 your health bar.
+
+---
+
+### Egg Bomb
+**Hunger:** 2 · **Cooldown:** 3s · **Power:** blast strength ×10 (10 = 1.0)
+
+Lobs a single heavy **egg**, taken from your own supply, that bursts where it lands. The blast is
+deliberately small — a strength of 1, against a creeper's 3 — so it scatters what is standing there
+and takes a bite out of soft ground without opening a hole.
+
+---
+
+### Protect
+**Hunger:** 1 · **Cooldown:** 10s · **Power:** ticks of immunity (20 = 1s)
+
+**Nothing can touch you for one second.** Falls, drowning, lava, the void, a hit that would
+otherwise be unblockable — all of it. Then nothing again for ten seconds.
+
+It is not a shield you stand behind, it is a **read**: you spend it on the creeper you heard or the
+arrow you saw leave the bow, and if you spend it a moment early you have nothing left when the blow
+actually lands.
+
+---
+
+### Celebrate
+**Hunger:** 1 · **Cooldown:** 10 min · **Power:** how many rockets
+
+A firework show over your head, for no reason at all. It does nothing, which is the point — and why
+it costs almost no hunger and comes back only once every ten minutes. A party you can throw every
+few seconds is a particle effect; one you get a few times an evening is an occasion.
+
+---
+
+### Tail Whip
+**Hunger:** 2 · **Cooldown:** 2s
+
+Sweeps a **suspicious sand or gravel** block clean in a single motion instead of a dozen slow ones,
+and finds exactly what a brush would have found. **Rooted dirt** counts too: it is not brushable in
+vanilla, but it is the same gesture on the same kind of thing, so it gives up its hanging roots.
+
+---
+
+### Whirlwind
+**Hunger:** 2 · **Cooldown:** 5s · **Power:** percent of the full gust
+
+Blows whatever you aim at about ten blocks away, and **does no harm at all**. It resolves an
+encounter without resolving a creature — which makes it the answer both to the things you would
+rather not kill and the things you could not.
+
+---
+
+### Barrier
+**Hunger:** 3 · **Cooldown:** 15s · **Power:** how long the wall stands
+
+Raises a **3×3 wall you cannot see** directly in front of you. An arrow stops in mid-air; a creeper
+walks into nothing.
+
+It fills **empty space only**, and when it comes down it removes only what it put there — so it can
+never take a bite out of somebody's house, and never leaves a hole where one was not.
+
+---
+
+### X-Scissor
+**Hunger:** 2 · **Cooldown:** 3s · **Power:** radius
+
+Clears the ground around you, in three passes of decreasing politeness:
+
+1. **Weeds first** — grass, ferns, dead bushes. If there are any, that is all it touches.
+2. **Then what somebody planted** — flowers and crops, and *only* once there is not a single weed
+   left in range. Casting by accident in your own wheat field costs you the weeds, not the field.
+3. **And if nothing is growing at all**, the grass itself is stripped down to dirt.
+
+Everything comes away as if cut with shears, so the drops are the careful ones.
+
+---
+
+### Earthquake
+**Hunger:** 4 · **Cooldown:** 10s · **Power:** radius
+
+Shakes the ground out of true around you: some of the surface rises a block, some of it is simply
+gone, most of it stays. The result is not a crater — it is ground nobody can path across cleanly,
+which is worse to be chased over.
+
+It will not move anything with something **inside** it, and nothing tougher than stone, so chests
+keep their contents and built floors stay built.
+
+---
+
+### Rock Throw
+**Hunger:** 1 · **Cooldown:** 1s · **Power:** tenths of a half-heart of damage
+
+Throws a stone out of your pockets — cobblestone, blackstone, deepslate, any base stone. It hurts
+what it hits, and if it hits nothing it **lands as a stone**, including somewhere you could never
+have reached to place one. Ammunition you can pick back up is ammunition you can afford to miss
+with.
+
+---
+
+### Present
+**Hunger:** 12 · **Cooldown:** 20 min
+
+Point it at an **empty** container and it fills itself, out of the loot tables the game uses for the
+chests nobody placed on purpose — a mineshaft's, a dungeon's, a bonus chest — one of them rolled at
+random.
+
+**One in ten is a lump of coal.** That is the joke, and it is why the cooldown is a full Minecraft
+day. It refuses a container with anything already in it: a present does not go on top of your
+things.
+
+---
+
+### Blizzard
+**Hunger:** 6 · **Cooldown:** 30s · **Power:** radius
+
+Leaves a circle of standing cold where you cast it. Anything that walks in freezes the way powder
+snow freezes it, and thaws again on the way out.
+
+**Its edge is drawn on the ground**, at exactly the radius that bites — an area effect that punishes
+you for entering without showing you where it starts is a trap, not a mechanic. You are exempt from
+your own storm.
+
+---
+
+### Boomerang
+**Hunger:** 1 · **Cooldown:** 1s · **Power:** tenths of a half-heart of damage
+
+Throws a **bone** that flies out flat, turns, and comes back to your hand. Hit something and it
+stops there instead, on the ground beside it — so a clean miss costs you nothing and a hit costs you
+the walk over to fetch it.
+
+---
+
+### Decorate
+**Hunger:** 4 · **Cooldown:** 1 min · **Power:** radius
+
+Two different things depending on what you point it at.
+
+**At the ground** — carpets across the area, all one colour, rolled fresh every cast, and whatever
+art fits hung on the walls in reach.
+
+**At a Pokémon** — a single long shot at making it **shiny, permanently**, at the game's own shiny
+odds. It is not a shiny generator: it is the same lottery everybody else plays, offered once per
+cast on a long cooldown, and it says nothing when it misses because the game says nothing either.
+

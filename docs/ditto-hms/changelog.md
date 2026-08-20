@@ -6,6 +6,240 @@
 All notable changes are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) + SemVer.
 
+## [2.1.14] - 2026-08-20
+
+### ✨ New
+- **Present** — point it at an empty container and it fills itself, out of the tables the game uses
+  for the chests nobody placed on purpose: a mineshaft's, a dungeon's, a bonus chest. **One in ten
+  is a lump of coal**, which is the whole joke and the reason the cooldown is a full day. It refuses
+  a container with anything already in it — a present does not go on top of your things.
+- **Blizzard** — leaves a circle of standing cold where you cast it. Anything that walks in freezes
+  the way powder snow freezes it, and thaws on the way out. **Its edge is drawn on the ground**, at
+  exactly the radius that bites: an area effect that punishes you for entering without showing you
+  where it starts is a trap, not a mechanic. The caster is exempt — it is their storm.
+- **Boomerang** — throws a bone that turns around and comes back to your hand. Hit something and it
+  stops there instead, on the ground beside it, which makes a clean miss the cheap outcome and a hit
+  cost you the walk over.
+- **Decorate** — carpets the ground around you, all one colour, rolled fresh each time, and hangs
+  whatever art fits on the walls in reach. Aimed at a **Pokémon** instead, it takes a single long
+  shot at making it shiny — permanently, at the game's own odds, and quietly when it misses.
+
+## [2.1.13] - 2026-08-19
+
+### ✨ New
+- **X-Scissor** — clears the ground around you, and it clears it in an order. Weeds first: grass,
+  ferns, dead bushes, the things nobody planted. Only when there is not a single weed left in range
+  does it start on flowers and crops — so standing in your own wheat field and casting by accident
+  costs you the weeds, not the field. And if nothing is growing at all, it strips the grass down to
+  dirt.
+- **Earthquake** — shakes the ground out of true around you. Some of it rises a block, some of it is
+  simply gone, most of it stays: what you get is ground nobody can trust, which is worse to be
+  chased across than a crater. It will not move anything with something inside it, and it will not
+  move anything tougher than stone, so nobody's floor goes with it.
+- **Rock Throw** — throws a stone out of your pockets. It hurts what it hits, and if it hits nothing
+  it **lands as a stone**, including somewhere you could never have reached to place one. Ammunition
+  you can pick back up is ammunition you can afford to miss with.
+
+## [2.1.12] - 2026-08-19
+
+### ✨ New
+- **Barrier** — a three-by-three wall you cannot see, straight in front of you, for a while. An
+  arrow stops in mid-air; a creeper walks into nothing. It fills empty space only and takes away
+  only what it put down, so it can never eat a piece of anybody's house.
+- **Acid Armor** *(toggle)* — a caustic coat worth a quarter of a full diamond set, and whatever
+  lands a blow on you gets poisoned for its trouble. One dose per hit, from whatever actually
+  reached you: an archer three blocks back never touched the acid.
+
+### 🗑️ Removed
+- **Aura Sphere** is gone. It was an early draft of what became Whirlwind, and keeping both meant
+  shipping the sketch alongside the drawing.
+
+## [2.1.11] - 2026-08-19
+
+### ✨ New
+- **Whirlwind** — takes whatever you aim at and puts it ten blocks away, without hurting it at all.
+  It ends an encounter without ending a creature, which makes it the answer to the things you would
+  rather not kill and the things you could not.
+
+## [2.1.10] - 2026-08-19
+
+**The mod can hold as many HMs as it likes now.**
+
+### 🐛 Fixed
+- **The sixty-four HM ceiling is gone.** What you have learned was stored as one number with one bit
+  per HM, and a number of that kind holds exactly sixty-four of them. The mod was at fifty-six with
+  more on the way, and going past the line would not have thrown an error — the sixty-fifth HM would
+  have quietly shared a bit with the first, so learning one would have taught you the other. It is
+  stored as a growing set of numbers instead, with no limit. **Existing worlds are read as they
+  are** and convert themselves the next time they save; nothing has to be done by hand.
+
+### ✨ New
+- **Tail Whip** — sweeps a suspicious block clean in one motion instead of a dozen slow ones, and
+  finds exactly what a brush would have. Rooted dirt gives up its hanging roots to it too.
+- **Aura Sphere** — a punch that lands harder the worse off you are: nothing at all while you are
+  healthy, five hearts and halfway across the clearing on your last one. A weapon that only becomes
+  worth having at the moment you would rather be running.
+
+## [2.1.9] - 2026-08-19
+
+### ✨ New
+- **Protect** — nothing can touch you for a single second, and then not again for ten. It is not a
+  shield you stand behind; it is a read. Spend it on the creeper you heard, the arrow you saw leave
+  the bow, the lava you are about to land in — and spend it a moment early and you have nothing left
+  when the blow lands. It blocks **everything**, falls and drowning and the void included.
+- **Lucky Chant** *(toggle)* — fortune leans your way while it is on. What you break and what you
+  fish give up a little more.
+- **Celebrate** — a firework show over your head, for absolutely no reason. Costs almost nothing and
+  comes back almost never, which is the only way a party stays a party.
+- **A running toggle can be seen from outside.** Each one breathes out its own type's particle on a
+  slow loop, so a player with four going no longer looks exactly like a player with none. Sparse on
+  purpose — it is a sign, not a firework.
+
+### ✨ Changed
+- **The HM Case shows the cooldown.** Fire an active and the Case in your hotbar sweeps around with
+  Minecraft's own cooldown shadow, the one every player can already read without being taught.
+
+### 🐛 Fixed
+- **Mean Look stopped quietly clearing your luck.** It had not granted any since it became a repel,
+  but it was still switching Luck off every tick — which would have fought Lucky Chant for it.
+
+## [2.1.8] - 2026-08-19
+
+**The wheel tells you what things cost before you pay for them.**
+
+### ✨ New
+- **A food bar down the side of the wheel.** Twenty pips, and it answers three questions at once:
+  how much of your maximum the running toggles have taken (in red — that capacity is not yours
+  again until one goes off), how much you have left, and **what the HM under the cursor would
+  cost**, flashing, before you commit to it. Hover an active and it flashes what it would eat;
+  hover a toggle and it flashes the slice it would claim, or hand back if it is already on.
+- **Toggles wear a little green light.** Only toggles have one, so at a glance you can tell what
+  fires from what stays on — and lit means that one is running right now. The glow could never say
+  that on its own, because a selected active glows too.
+- **Scroll on the wheel to resize the discs.** They start twice as big as they used to and go
+  twice as far again, and where you leave them is remembered between worlds — the right size
+  depends on your monitor and how many HMs you know, which is not something a server can guess.
+
+### ✨ Changed
+- **The two ways out of the middle look like buttons now.** A red ✖ for cancel and brushes around
+  the ring for clear-everything, visible before you hover them rather than after.
+
+## [2.1.7] - 2026-08-19
+
+**Two HMs turned out to be the wrong move under the right effect.**
+
+### ✨ Changed
+- **Rollout is now Agility.** The effect is the same — you move faster while it is on — but it is a
+  Psychic move now, learned from different Pokémon, obtained with a different item and wearing a
+  different disc. Rolling downhill was never what the speed felt like.
+- **Seed Bomb is now Egg Bomb.** Same lob, same small deliberate blast; it throws an **egg**, from
+  your own supply, and it flies as one. Learned from the Pokémon you would expect to be carrying
+  eggs.
+
+> **Both keep your progress.** If you had learned Rollout or Seed Bomb, you know Agility or Egg Bomb
+> — it is the same slot, wearing a different name. Their old discs are gone from the game, and the
+> settings for them go back to defaults; run `/dittohm config reset_all` after updating.
+
+### 🐛 Fixed
+- **No more counting HMs at people.** The store page and the README stated exactly how many HMs
+  there were, in three places, and all three were already wrong. Numbers that go stale the moment
+  an HM is added do not belong in a description.
+
+## [2.1.6] - 2026-08-19
+
+**HMs are taught to you now. They are not handed over.**
+
+### ✨ Changed
+- **You learn an HM from the Pokémon itself.** Sneak-click one holding the right item and it shows
+  you the move — there is no disc in the middle any more, and the Trainer Ditto teaches across the
+  counter rather than selling you a badge. The reason is simple: a disc is an item, an item goes in
+  a chest, and an HM that can be posted to a friend who never went looking for the Pokémon is not
+  something anyone had to earn. What you know cannot be traded away.
+- **HM Discs are an operator's tool.** They are still registered, still in the creative tab, still
+  work exactly as they did — nothing in survival hands one out.
+- **The Trainer Ditto will not deal with you if it is afraid of you.** Catch one, or knock one out,
+  and every trader after it backs away instead of opening the stall. It used to only run, which
+  meant cornering one against a wall got you a shop as though nothing had happened.
+
+### ✨ New
+- **Every HM can be switched off, one at a time.** `/dittohm config <hm> enabled false` closes all
+  three doors in at once — nobody can learn it, no Pokémon will teach it, and the Trainer Ditto
+  stops offering it. Players who already know it keep it: closing the door is not the same decision
+  as taking something back.
+
+## [2.1.5] - 2026-08-19
+
+**Magnet Rise finally does the thing its name says, and Headbutt learned what lives in a tree.**
+
+### ✨ Changed
+- **Magnet Rise is a toggle, and it is flight.** Not five seconds of floating — switch it on and you
+  are off the ground for as long as you like, drifting at half your walking pace with no dash. The
+  price is the steepest of any toggle and it is paid once: fifteen food points off your maximum,
+  out of a budget of eighteen. Flying is nearly everything you have.
+- **Destiny Bond picks its victim.** Aim at a creature to tie yourself to it, and then **however**
+  you die — a mob, a fall, lava, your own Explosion — it dies with you, wherever it happens to be
+  standing. It used to only avenge you against whatever landed the last blow, which asked nothing
+  of you. Now you choose who you are taking, and then you have to be right.
+- **Headbutt knows which trees bear fruit.** Apples — and the Applin that grew inside one — only
+  come out of apple trees. Every tree still gives up sticks and its own sapling.
+
+### ✨ New
+- **There is sometimes a Greedent in the tree**, and it does not enjoy being woken up.
+- **Bees notice.** Headbutt a tree with a hive in it and the whole hive comes out after you, exactly
+  as it would if you had broken into it.
+
+## [2.1.4] - 2026-08-19
+
+**Six of the older HMs were not quite the thing their name promised.**
+
+### ✨ Changed
+- **Charge is permanent, and it shows.** A charged block stays charged until you charge another one
+  or leave — no timer — and it throws off sparks the whole time it is live. A power source that
+  switches itself off after a minute is not a power source, it is a fault to go and find.
+- **Explosion is what it sounds like.** Nine times in ten it kills you outright. The tenth leaves you
+  standing on a single heart. It is not a tool with a downside; it is the last thing you do.
+- **Rock Climb stops gluing you to the wall.** You can travel along a face now, and step off it,
+  instead of being cut to a fifth speed the moment you touch one. Up, down and holding on are
+  unchanged.
+- **Mean Look holds off Pokémon that are hunting you**, not only the mobs the game calls hostile.
+  Anything else in the field is left where it is.
+- **Cut cuts plants.** Grass, ferns, crops and ground cover come away as if you had used shears —
+  the right drop, every time, including for plants added by a datapack — and it costs hunger, so it
+  is a tool and not an infinite harvester.
+- **Sweet Scent takes three times as long to come back.** It was far too quick.
+
+## [2.1.3] - 2026-08-19
+
+**Substitute goes back to doing the one thing a substitute is for: taking the hit.**
+
+### 🐛 Fixed
+- **The decoy takes damage now, and pops when it has taken enough.** It could not be hurt at all —
+  not because it was set invulnerable, but because it was set *invisible*, and the game refuses every
+  blow aimed at an invisible armour stand before it checks anything else. It soaks up a quarter of
+  your own maximum health and then goes off in a puff. Nothing drops when it does.
+- **The decoy wears your name.** A disguise drawn in a player skin was skipping the nametag
+  altogether, so your double stood there anonymous — the one detail that gives a double away. The
+  **Trainer Ditto** gets its label back for the same reason.
+
+## [2.1.2] - 2026-08-19
+
+**Camouflage finally copies the thing you are looking at.**
+
+### 🐛 Fixed
+- **The disguise is the creature you aimed at.** It had been turning you into a random Pokémon at
+  zero health, and it was not random at all: the costume was packed the way a *world save* is written
+  and unpacked the way the *client* expects, the read failed every single time, and the game quietly
+  handed out a blank Pokémon instead. It is packed the client's way now — right species, right form,
+  right shiny, right everything — and with a real creature underneath, the animations follow.
+- **The disguise wears the target's nametag.** Whatever hangs over the thing you copied now hangs
+  over you, word for word, and nothing hangs over you if nothing hung over it. Trainers, traders and
+  named mobs included — it is no longer only Pokémon that carry their label across.
+
+### ✨ Changed
+- **Camouflage lasts a quarter of an hour, and you can take it off.** Fifteen minutes instead of
+  five, and firing it again while it is running sheds the costume on the spot and frees the HM
+  immediately — so swapping from one disguise to another is two presses, not a wait.
+
 ## [2.1.1] - 2026-08-19
 
 **A round of things that fired twice, said too much, or quietly took your dinner.**
