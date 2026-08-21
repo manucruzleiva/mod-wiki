@@ -24,7 +24,7 @@ Activates an ability you have learned (or toggles a passive on/off).
 ```
 /dittohm list
 ```
-Shows all 47 abilities with your learn status, toggle state, and configured hunger/cooldown.
+Shows every ability with your learn status, toggle state, and configured hunger/cooldown.
 
 ```
 /dittohm select <ability>
@@ -62,7 +62,7 @@ Summons a Trainer Ditto on demand, or undoes a catch so it will visit that playe
 ```
 /dittohm learn_all [player]
 ```
-Instantly learns **all 47 HMs** for a player (does **not** auto-enable toggles).
+Instantly learns **every HM** for a player (does **not** auto-enable toggles).
 
 ```
 /dittohm forget <ability> [player]
@@ -164,3 +164,6 @@ Unlearns one or all HMs.
 | `lucky_chant` | Lucky Chant |
 | `acid_armor` | Acid Armor |
 | `powder_snow` | Powder Snow |
+| `shadow_sneak` | Shadow Sneak |
+| `obstruct` | Obstruct |
+| `confusion` | Confusion |

@@ -5,7 +5,7 @@
 ```mermaid
 sequenceDiagram
     actor You
-    participant P as Wild Pokémon
+    participant P as Any Pokémon
     You->>You: Hold the trigger item
     You->>P: Sneak + right-click
     P-->>You: 🧠 It teaches you the move (trigger item consumed)
@@ -13,7 +13,9 @@ sequenceDiagram
 
 Every ability is locked behind a **Pokémon interaction**. To learn one:
 
-1. Locate the required Pokémon in the world (or spawn it with `/pokespawn <species>`).
+1. Find one of the Pokémon that teaches it. **It does not have to be wild** — your own sent-out
+   Pokémon works, and so does another player's. Nothing checks who owns it. (Or spawn one with
+   `/pokespawn <species>`.)
 2. Hold the **trigger item** in your main hand.
 3. **Sneak + right-click** the Pokémon.
 4. The trigger item is consumed and the Pokémon **teaches you the move**, permanently.
@@ -34,7 +36,9 @@ stays there across deaths and world reloads.
 
     It is a Ditto in a coat. Throw a Poké Ball and you catch it like any other — but every trader
     after that keeps its distance and **will not open its stall for you again**, so weigh the shop
-    against the perfect-IV Ditto.
+    against the Ditto. How good that Ditto is is the server's call, and **out of the box it rolls
+    its IVs like any other**: guaranteed perfect stats are an option an operator turns on, not
+    something the trader comes with.
 
 ---
 

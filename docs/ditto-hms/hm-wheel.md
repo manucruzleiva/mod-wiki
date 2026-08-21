@@ -156,7 +156,7 @@ Case behaves like any other and there is no reason to carry two.
 ### A key per HM
 
 Every HM has its own keybind under *Options → Controls → Cobblemon Ditto HMs*. They are all
-**unbound by default** — binding 38 keys for you would collide with half the game — so pick the two
+**unbound by default** — binding a key per HM for you would collide with half the game — so pick the two
 or three you reach for constantly and leave the rest to the wheel.
 
 A keybind ignores the activator entirely: it works whatever is in your hand and wherever you are
