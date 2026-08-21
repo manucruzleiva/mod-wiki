@@ -47,6 +47,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/discs.css">
+    
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -1432,6 +1434,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-food-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The food bar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#picking-an-hm" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1542,6 +1555,17 @@
     <span class="md-ellipsis">
       
         HMs belong to you, not to an item
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disc-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disc size
       
     </span>
   </a>
@@ -1741,6 +1765,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-food-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The food bar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#picking-an-hm" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1857,6 +1892,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#disc-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disc size
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1883,17 +1929,17 @@ There is nothing to craft and nothing to carry: learn an ability and it is in th
 <p>The wheel has two rings. Each slot shows that HM's disc, and the segment behind it is tinted with
 the <strong>type of the move the HM is named after</strong> — so Water HMs sit in blue, Fire in orange, and a
 familiar HM is easy to find by colour before you can read the label.</p>
-<div class="highlight"><pre><span></span><code>              ╭──── outer ring: the 25 ACTIVE HMs ────╮
-           Cut     Fly     Dig    Ember   Teleport   ...
-        ╲     ╲      ╲      │      ╱      ╱     ╱
-          ╲    ╭────────────────────────╮    ╱
-            ╲  │  inner ring: 10 TOGGLES │  ╱
-      Water ──┤   Jump  Surf  Dive  ...  ├── Thunder
-            ╱  │                         │  ╲
-          ╱    ╰────────────────────────╯    ╲
-        ╱     ╱      ╱      │      ╲      ╲     ╲
-           Rest   Charm  Strength  Waterfall   ...
-               ( centre: cancel / clear )
+<div class="highlight"><pre><span></span><code>   ▓                ╭──── outer ring: ACTIVE HMs ────╮
+   ▓ f           Cut     Fly     Dig    Ember   Teleport   ...
+   ▓ o        ╲     ╲      ╲      │      ╱      ╱     ╱
+   ▓ o          ╲    ╭───────────────────────╮    ╱
+   ░ d            ╲  │  inner ring: TOGGLES  │  ╱
+   ░              ──┤   Jump  Surf  Dive ●   ├──
+   ░ b            ╱  │                       │  ╲
+   █ a          ╱    ╰───────────────────────╯    ╲
+   █ r        ╱     ╱      ╱      │      ╲      ╲     ╲
+   █             Rest   Charm  Strength  Waterfall   ...
+   █                  ( ✖ cancel · 🧹 clear all )
 </code></pre></div>
 <table>
 <thead>
@@ -1919,12 +1965,56 @@ familiar HM is easy to find by colour before you can read the label.</p>
 <td><strong>A slot pulsing with light, ringed and glinting</strong></td>
 <td>Currently selected (active) or currently switched on (toggle)</td>
 </tr>
+<tr>
+<td><strong>A small light in the corner of a disc</strong></td>
+<td><strong>Green</strong> — a toggle that is running. <strong>Amber</strong> — the active you have selected. <strong>Dark</strong> — neither</td>
+</tr>
 </tbody>
 </table>
 <p>The two cues never collide: <strong>size</strong> always means "the one I am about to pick", and <strong>light</strong> always
 means "this one is live". Hover a live HM and you see both at once.</p>
+<p>Every disc carries the little corner light and the <strong>colour</strong> is what it says: green for a toggle
+that is running, amber for the one active you have selected, dark for everything else. The glow
+cannot answer that on its own, because a selected active glows exactly like a running toggle.</p>
 <p>The middle of the wheel names whatever your cursor is over, its type, and its state; the ability's
 description sits just below the wheel.</p>
+<hr />
+<h2 id="the-food-bar">The food bar<a class="headerlink" href="#the-food-bar" title="Permanent link">&para;</a></h2>
+<p>A column of twenty pips stands down the left of the wheel, and it answers three questions at once:</p>
+<table>
+<thead>
+<tr>
+<th>Colour</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Red, at the top</strong></td>
+<td>Maximum your running toggles have taken. Not yours again until one goes off</td>
+</tr>
+<tr>
+<td><strong>Full</strong></td>
+<td>What you have left</td>
+</tr>
+<tr>
+<td><strong>Empty</strong></td>
+<td>Room to eat</td>
+</tr>
+<tr>
+<td><strong>Flashing</strong></td>
+<td>What the HM under your cursor would cost, before you commit to it</td>
+</tr>
+</tbody>
+</table>
+<p>Hover an <strong>active</strong> and it flashes what that use would eat off the top of what you are carrying.
+Hover a <strong>toggle</strong> and it flashes the slice of maximum it would claim — or, if it is already on, the
+slice it would hand back.</p>
+<div class="admonition tip">
+<p class="admonition-title">Your food is not wasted</p>
+<p>At the cap the game would normally still let you eat, because your bar is not full. It is
+refused instead, so a steak is never spent on nothing.</p>
+</div>
 <hr />
 <h2 id="picking-an-hm">Picking an HM<a class="headerlink" href="#picking-an-hm" title="Permanent link">&para;</a></h2>
 <table>
@@ -1944,16 +2034,20 @@ description sits just below the wheel.</p>
 <td>Switches it on or off straight away</td>
 </tr>
 <tr>
-<td><strong>Centre ring</strong></td>
-<td>Clears your selection. Your toggles keep running</td>
+<td><strong>Centre ring (🧹 brushes)</strong></td>
+<td>Clears everything — your selection <em>and</em> every toggle</td>
 </tr>
 <tr>
-<td><strong>Bullseye</strong></td>
+<td><strong>Bullseye (✖)</strong></td>
 <td>Cancel — closes the wheel and changes nothing</td>
 </tr>
 <tr>
 <td><strong>Right-click a slot</strong></td>
 <td>Stars it as a favourite. The wheel stays open</td>
+</tr>
+<tr>
+<td><strong>Scroll</strong></td>
+<td>Resizes the discs, and remembers it</td>
 </tr>
 </tbody>
 </table>
@@ -2068,6 +2162,12 @@ says nothing is a bug; please <a href="../../reporting/">report it</a>.</p>
 <h2 id="hms-belong-to-you-not-to-an-item">HMs belong to you, not to an item<a class="headerlink" href="#hms-belong-to-you-not-to-an-item" title="Permanent link">&para;</a></h2>
 <p>Learning is tracked <strong>per player</strong>, server-side, and survives death and world reloads. The HM Disc
 is only the teacher: right-click it once and it has done its job.</p>
+<hr />
+<h2 id="disc-size">Disc size<a class="headerlink" href="#disc-size" title="Permanent link">&para;</a></h2>
+<p><strong>Scroll on the wheel</strong> to make the discs bigger or smaller. Where you leave it is remembered on
+your own machine and carried between worlds — the right size depends on your monitor, your GUI
+scale and how many HMs you happen to know, none of which a server can see.</p>
+<p>A server can set the size everyone <em>starts</em> at, in the config; scrolling is your answer to it.</p>
 
 
 
