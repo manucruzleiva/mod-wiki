@@ -43,48 +43,49 @@ When a toggle is turned **off**, its effects are removed **immediately**.
 
 ## Acquisition
 
-| HM | Pokémon (any of) | Trigger item |
-|---|---|---|
-| Magnet Rise | Magnemite, Magneton, Magnezone | Iron Nugget |
-| Jump | Magikarp, Buneary, Spoink | Cod |
-| Surf | Lapras, Kyogre, Suicune | Kelp |
-| Agility | Alakazam, Jolteon, Aerodactyl | Amethyst Shard |
-| Dive | Vaporeon, Lapras, Wailord | Nautilus Shell |
-| Flash | Ampharos, Jolteon, Lanturn | Glowstone Dust |
-| Rock Climb | Rhydon, Rhyperior, Sneasel | Chain |
-| Mean Look | Mimikyu, Gengar, Noctowl | Ominous Bottle |
-| Harden | Metapod, Kakuna, Silcoon, Cascoon | Shield |
-| Glide | Dragonite, Togekiss, Aerodactyl | Feather |
-| Burning Bulwark | Gougingfire | Blaze Rod |
-| Lava Plume | Magcargo, Slugma, Turtonator | Magma Cream |
-| U-turn | Yanma, Ninjask, Venipede | Rabbit's Foot |
-| Bounce | Spoink, Aipom, Hoppip | Slime Ball |
-| Snowscape | Froslass, Mamoswine | Blue Ice |
-| Vine Whip | Bulbasaur, Tangela | Vine |
-| Absorb | Gulpin, Swalot, Victreebel | Hopper |
-| Helping Hand | Plusle, Minun, Audino | Saddle |
-| Tailwind | Talonflame, Noivern, Staraptor | Breeze Rod |
-| Swift | Ninjask, Accelgor, Electrode | Sugar |
-| Lucky Chant | Clefairy, Chimecho, Togetic | Emerald |
-| Acid Armor | Grimer, Muk, Goodra | Slime Block |
-| Powder Snow | Cetoddle, Cetitan, Beartic | Powder Snow Bucket |
+| Disc | HM | Pokémon (any of) | Trigger item |
+|---|---|---|---|
+| <img class="hm-disc" src="../../../assets/items/hm_magnet_rise.png" alt=""> | Magnet Rise | Magnemite, Magneton, Magnezone | Iron Nugget |
+| <img class="hm-disc" src="../../../assets/items/hm_jump.png" alt=""> | Jump | Magikarp, Buneary, Spoink | Raw Cod |
+| <img class="hm-disc" src="../../../assets/items/hm_surf.png" alt=""> | Surf | Lapras, Kyogre, Suicune | Kelp |
+| <img class="hm-disc" src="../../../assets/items/hm_agility.png" alt=""> | Agility | Alakazam, Jolteon, Aerodactyl | Amethyst Shard |
+| <img class="hm-disc" src="../../../assets/items/hm_dive.png" alt=""> | Dive | Vaporeon, Lapras, Wailord | Nautilus Shell |
+| <img class="hm-disc" src="../../../assets/items/hm_flash.png" alt=""> | Flash | Ampharos, Jolteon, Lanturn | Glowstone Dust |
+| <img class="hm-disc" src="../../../assets/items/hm_rock_climb.png" alt=""> | Rock Climb | Rhydon, Rhyperior, Sneasel | Chain |
+| <img class="hm-disc" src="../../../assets/items/hm_mean_look.png" alt=""> | Mean Look | Mimikyu, Gengar, Noctowl | Ominous Bottle |
+| <img class="hm-disc" src="../../../assets/items/hm_harden.png" alt=""> | Harden | Metapod, Kakuna, Silcoon, Cascoon | Shield |
+| <img class="hm-disc" src="../../../assets/items/hm_glide.png" alt=""> | Glide | Dragonite, Togekiss, Aerodactyl | Feather |
+| <img class="hm-disc" src="../../../assets/items/hm_burning_bulwark.png" alt=""> | Burning Bulwark | Gouging Fire | Blaze Rod |
+| <img class="hm-disc" src="../../../assets/items/hm_lava_plume.png" alt=""> | Lava Plume | Magcargo, Slugma, Turtonator | Magma Cream |
+| <img class="hm-disc" src="../../../assets/items/hm_u_turn.png" alt=""> | U-turn | Yanma, Ninjask, Venipede | Rabbit's Foot |
+| <img class="hm-disc" src="../../../assets/items/hm_bounce.png" alt=""> | Bounce | Spoink, Aipom, Hoppip | Slimeball |
+| <img class="hm-disc" src="../../../assets/items/hm_snowscape.png" alt=""> | Snowscape | Froslass, Mamoswine | Blue Ice |
+| <img class="hm-disc" src="../../../assets/items/hm_vine_whip.png" alt=""> | Vine Whip | Bulbasaur, Tangela | Vines |
+| <img class="hm-disc" src="../../../assets/items/hm_absorb.png" alt=""> | Absorb | Gulpin, Swalot, Victreebel | Hopper |
+| <img class="hm-disc" src="../../../assets/items/hm_helping_hand.png" alt=""> | Helping Hand | Plusle, Minun, Audino | Saddle |
+| <img class="hm-disc" src="../../../assets/items/hm_tailwind.png" alt=""> | Tailwind | Talonflame, Noivern, Staraptor | Breeze Rod |
+| <img class="hm-disc" src="../../../assets/items/hm_swift.png" alt=""> | Swift | Ninjask, Accelgor, Electrode | Sugar |
+| <img class="hm-disc" src="../../../assets/items/hm_lucky_chant.png" alt=""> | Lucky Chant | Clefairy, Chimecho, Togetic | Emerald |
+| <img class="hm-disc" src="../../../assets/items/hm_acid_armor.png" alt=""> | Acid Armor | Grimer, Muk, Goodra | Slime Block |
+| <img class="hm-disc" src="../../../assets/items/hm_powder_snow.png" alt=""> | Powder Snow | Cetoddle, Cetitan, Beartic | Powder Snow Bucket |
+| <img class="hm-disc" src="../../../assets/items/hm_shadow_sneak.png" alt=""> | Shadow Sneak | Gengar, Banette, Spiritomb | Black Dye |
 
 ---
 
 ## Ability details
 
-### Jump
+### <img class="hm-disc" src="../../../assets/items/hm_jump.png" alt=""> Jump
 **Blocks:** 2 · **Power:** Jump Boost level (default **IV**)
 
 Applies continuous **Jump Boost**. The `power` value equals the buff level, so `power = 4` gives Jump Boost IV. Shows in your HUD.
 
-### Surf
+### <img class="hm-disc" src="../../../assets/items/hm_surf.png" alt=""> Surf
 **Blocks:** 2 · **Power:** tenths of the multiplier (default 15)
 
 Whatever you are **riding** cuts through water half again as fast. Your own swimming, on foot, is
 untouched. Surf's twin in the air is **Tailwind**.
 
-### Dive
+### <img class="hm-disc" src="../../../assets/items/hm_dive.png" alt=""> Dive
 **Blocks:** 2
 
 Lets you **live and work underwater**. Water stops getting in your way:
@@ -97,12 +98,12 @@ Lets you **live and work underwater**. Water stops getting in your way:
 Dive takes penalties away; it never hands out a bonus. Push off the bottom and you swim at exactly
 the speed you always did — if you want to be *fast* in the water, that's [Surf](#surf).
 
-### Flash
+### <img class="hm-disc" src="../../../assets/items/hm_flash.png" alt=""> Flash
 **Blocks:** 2
 
 Lets you **see clearly in the dark**, even in caves and at night. Toggle off to remove instantly.
 
-### Rock Climb
+### <img class="hm-disc" src="../../../assets/items/hm_rock_climb.png" alt=""> Rock Climb
 **Blocks:** 2
 
 Every vertical surface behaves like a ladder, and it is steered by the **movement keys**: **W**
@@ -112,7 +113,7 @@ Your horizontal movement is left alone, so you can travel along a face and step 
 like — a wall is something to climb, not something to be stuck to. On the ground it only takes over
 when you are actually asking to go up, so walking and jumping near a wall work normally.
 
-### Mean Look
+### <img class="hm-disc" src="../../../assets/items/hm_mean_look.png" alt=""> Mean Look
 **Blocks:** 2 · **Power:** detect radius (default 30)
 
 Anything that means you harm **flees from you**, running away with real pathfinding — exactly like
@@ -123,19 +124,19 @@ wild Cobblemon are not hostile by species, they pick fights by behaviour, so the
 has decided to come for you. Everything else in the field is left exactly where it is, and other
 players are never affected.
 
-### Harden
+### <img class="hm-disc" src="../../../assets/items/hm_harden.png" alt=""> Harden
 **Blocks:** 3
 
 Hardens your body to **greatly reduce the damage you take** (+20 armour, +8 toughness applied via
 attributes, plus damage resistance). Costs more hunger than other toggles.
 
-### Glide
+### <img class="hm-disc" src="../../../assets/items/hm_glide.png" alt=""> Glide
 **Blocks:** 2
 
 Lets you **glide like an Elytra without needing the item**. While airborne the real Elytra gliding
 kicks in — dive to gain speed, level off to glide far. (Fly auto-enables this.)
 
-### Swift
+### <img class="hm-disc" src="../../../assets/items/hm_swift.png" alt=""> Swift
 **Blocks:** 2 · **Power:** tenths of the multiplier (default 20)
 
 Whatever you are riding **gets up to speed twice as quickly** — off the mark, out of a turn, after
@@ -144,7 +145,7 @@ in water and **Tailwind** faster in the air, while Swift is quicker to get there
 
 ---
 
-### Tailwind
+### <img class="hm-disc" src="../../../assets/items/hm_tailwind.png" alt=""> Tailwind
 **Blocks:** 2 · **Power:** tenths of the multiplier (default 15)
 
 A following wind for whatever you are **flying** on: it moves half again as fast through the air.
@@ -152,7 +153,7 @@ Tailwind's twin in water is **Surf**.
 
 ---
 
-### Lava Plume
+### <img class="hm-disc" src="../../../assets/items/hm_lava_plume.png" alt=""> Lava Plume
 **Blocks:** 2 · **Power:** tenths of the movement multiplier (default 17)
 
 Dive's twin for lava. It lets you **live and work down there**: move through lava and walk its floor
@@ -168,7 +169,7 @@ For the ride to the surface of a **water** pool, that is still **Waterfall**.
 
 ---
 
-### Helping Hand
+### <img class="hm-disc" src="../../../assets/items/hm_helping_hand.png" alt=""> Helping Hand
 **Blocks:** 2 · **Power:** tenths of the stamina it spends (default 5 = half)
 
 Whatever you are riding keeps going **about twice as long** before it tires. Nothing else about the
@@ -180,7 +181,7 @@ mount changes — it is not faster, it does not recover any quicker, it simply h
 
 ---
 
-### Burning Bulwark
+### <img class="hm-disc" src="../../../assets/items/hm_burning_bulwark.png" alt=""> Burning Bulwark
 **Blocks:** 4 · **Power:** thorns damage (default 2)
 
 Makes you **immune to fire** and **scorches hostile mobs that get too close** — any hostile within
@@ -189,7 +190,7 @@ never harmed.
 
 ---
 
-### Absorb
+### <img class="hm-disc" src="../../../assets/items/hm_absorb.png" alt=""> Absorb
 **HungerBlock:** 2 · **Power:** magnet radius 6
 
 Loose items on the ground drift toward you while it is on, so a scattered drop or a mined vein
@@ -197,7 +198,7 @@ gathers itself. Items are nudged rather than yanked, so they keep their normal p
 
 ---
 
-### Bounce
+### <img class="hm-disc" src="../../../assets/items/hm_bounce.png" alt=""> Bounce
 **HungerBlock:** 2
 
 Every block you land on answers like a slime block. The harder you come down the higher you go, up
@@ -207,7 +208,7 @@ A short step doesn't bounce; you'd never get anywhere.
 
 ---
 
-### Snowscape
+### <img class="hm-disc" src="../../../assets/items/hm_snowscape.png" alt=""> Snowscape
 **HungerBlock:** 2 · **Power:** trail radius 3
 
 Winter follows you on foot: snow settles around you as you walk, and **still water freezes over** as
@@ -215,13 +216,13 @@ you cross it. Flowing water is left alone, so a river keeps running instead of b
 
 ---
 
-### Vine Whip
+### <img class="hm-disc" src="../../../assets/items/hm_vine_whip.png" alt=""> Vine Whip
 **HungerBlock:** 2 · **Power:** 3 extra blocks of reach
 
 Reach further — blocks and creatures several paces away come within arm's length. Mining, placing
 and hitting all get the extra range.
 
-### Magnet Rise
+### <img class="hm-disc" src="../../../assets/items/hm_magnet_rise.png" alt=""> Magnet Rise
 **Blocks:** 15
 
 **Flight.** Switch it on and you are off the ground for as long as you like, drifting at half your
@@ -232,19 +233,19 @@ maximum, out of a budget of eighteen. Flying is very nearly everything you have,
 point.
 
 
-### Agility
+### <img class="hm-disc" src="../../../assets/items/hm_agility.png" alt=""> Agility
 **Blocks:** 2
 
 You move faster while it is on.
 
 
-### Lucky Chant
+### <img class="hm-disc" src="../../../assets/items/hm_lucky_chant.png" alt=""> Lucky Chant
 **Blocks:** 2
 
 Fortune leans your way while it lasts: what you break and what you fish give up a little more.
 
 
-### Acid Armor
+### <img class="hm-disc" src="../../../assets/items/hm_acid_armor.png" alt=""> Acid Armor
 **Blocks:** 3
 
 A caustic coat worth **a quarter of a full diamond set**, and whatever lands a blow on you gets
@@ -253,13 +254,26 @@ A caustic coat worth **a quarter of a full diamond set**, and whatever lands a b
 One dose per hit, and only from whatever actually reached you — an archer three blocks back never
 touched the acid.
 
-### U-turn
+### <img class="hm-disc" src="../../../assets/items/hm_u_turn.png" alt=""> U-turn
 **Blocks:** 2
 
 Whatever you are riding **turns far more sharply** — on land, in water and in the air. Cornering is
 not something that only happens on the ground, so it applies wherever your mount happens to be.
 
-### Powder Snow
+### <img class="hm-disc" src="../../../assets/items/hm_shadow_sneak.png" alt=""> Shadow Sneak
+**Blocks:** 3 · **Power:** percent of your speed you keep (default **55**)
+
+Total stealth on foot. No footstep sounds, no name over your head, and **nothing underfoot notices
+you** — not pressure plates, not tripwires, not a sculk sensor.
+
+You move slower than a walk for it, though faster than a crouch, so it is something you can actually
+travel in rather than a stationary hiding trick.
+
+!!! note "If you are already on a scoreboard team"
+    The hidden nametag is done with a vanilla team, so a player who already belongs to one keeps
+    their team and simply does not get that part of the effect. Everything else still applies.
+
+### <img class="hm-disc" src="../../../assets/items/hm_powder_snow.png" alt=""> Powder Snow
 **Blocks:** 3
 
 A cold you **carry**. Anything that comes near frosts over and starts to freeze, the way powder snow

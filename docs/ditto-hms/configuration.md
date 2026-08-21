@@ -181,17 +181,19 @@ what the config takes.
 | Earthquake | 4 | 10s | radius — **5** |
 | Rock Throw | 1 | 1s | tenths of a half-heart — **40** |
 | Present | 12 | 20 min | — |
-| Blizzard | 6 | 30s | radius — **6** |
-| Boomerang | 1 | 1s | tenths of a half-heart — **50** |
+| Blizzard | 6 | 30s | radius — **180** |
+| Boomerang | 1 | 1.5s | tenths of a half-heart — **50** |
 | Decorate | 4 | 1 min | percent chance of a shiny — **5** |
 
 \* Rest does not require hunger.
+| Confusion | 3 | 10s | how long it lasts — **200** |
+| Obstruct | 3 | 1 min | how long the seal holds — **6000** |
 
 ## Default values — Toggle HMs
 
 | Ability | HungerBlock | Power |
 |---|---|---|
-| Magnet Rise | 15 | 50 |
+| Magnet Rise | 15 | 25 |
 | Jump | 2 | Jump Boost level — **4** |
 | Surf | 2 | tenths of the mount's swim-speed multiplier — **15** |
 | Agility | 2 | — |
@@ -208,10 +210,10 @@ what the config takes.
 | Snowscape | 2 | trail radius — **3** |
 | Vine Whip | 2 | extra blocks of reach — **3** |
 | Absorb | 2 | magnet radius — **6** |
-| Helping Hand | 2 | tenths of the stamina SPEND — **5** |
+| Helping Hand | 2 | tenths of the stamina SPEND — **2** |
 | Tailwind | 2 | tenths of the mount's flight-speed multiplier — **15** |
 | Swift | 2 | tenths of the mount's acceleration multiplier — **20** |
 | Lucky Chant | 2 | Luck amplifier — **1** |
 | Acid Armor | 3 | poison ticks — **900** |
 | Powder Snow | 3 | radius of the cold — **5** |
-
+| Shadow Sneak | 3 | percent of your speed you keep — **55** |

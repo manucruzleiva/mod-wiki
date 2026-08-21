@@ -6,6 +6,240 @@
 All notable changes are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) + SemVer.
 
+## [2.2.0] - 2026-08-20
+
+Everything since 2.1.0, gathered into one release: **eighteen new HMs**, a second way to pay for
+them, and a wheel rebuilt around the fact that you now know far more HMs than it was drawn for.
+
+### ✨ Eighteen new HMs
+
+- **Shadow Sneak** *(toggle)* — no footsteps, no name over your head, and **nothing underfoot
+  notices you**: not pressure plates, not tripwires, not a sculk sensor.
+- **Powder Snow** *(toggle)* — you carry the cold with you. Anything that comes near frosts over;
+  step out and it thaws. You are exempt from your own.
+- **Acid Armor** *(toggle)* — a quarter of a suit of armour, and it poisons whoever hits you.
+- **Lucky Chant** *(toggle)* — luck, for as long as it is on.
+- **Blizzard** — real snowfall where you call it down, **whatever the biome**, lasting as long as a
+  thunderstorm. The snow then obeys the world's own rules: it stays in a taiga and it is gone from
+  a desert by morning.
+- **Confusion** — turns the target around inside its own head. A player loses which way is forward;
+  anything else simply loses the thread.
+- **Obstruct** — seals a container shut, **and against its own hoppers**, which is the half that
+  makes it a seal.
+- **Earthquake** — the ground goes out from under everything nearby.
+- **Whirlwind** — knocks back whatever is in front of you.
+- **X-Scissor** — clears the undergrowth around you.
+- **Rock Throw** — cobblestone from your inventory, thrown. If it hits nothing, it lands.
+- **Boomerang** — a bone that comes back, and drops beside whatever it hit.
+- **Tail Whip** — a brush finished in one motion, on suspicious sand, gravel and rooted dirt.
+- **Decorate** — carpets the whole floor and hangs a painting where you point.
+- **Barrier** — a wall that is not there for anything but you.
+- **Protect** — the hit does not land.
+- **Celebrate** — fireworks. Enormous cooldown, almost no hunger.
+- **Present** — one a day, and it might be coal.
+
+### ✨ New
+
+- **HMs can be paid for with experience.** Hunger was the only currency and it made the mod a food
+  problem; now a server picks which one it wants, or both in order.
+- **The wheel became usable at scale.** Discs size themselves to how many HMs you know, so the ring
+  never turns into an unreadable band. A food bar runs down the side, a green light marks what is
+  running and an amber one what is selected, scrolling resizes, and each toggle can be switched off
+  on its own.
+- **A running toggle can be seen from outside**, so other players know what you are doing.
+- **Your mount is part of the kit.** Surf, Tailwind, Swift, U-turn and Jump make the thing you are
+  riding better at something, Helping Hand makes its stamina last five times as long, and all of it
+  shows in the Pokémon's own summary.
+
+### ✨ Changed
+
+- **You learn an HM from the Pokémon itself.** Discs became an operator's tool rather than the way
+  in.
+- **Flash is real full brightness** — not Night Vision wearing another name, and brighter than the
+  brightness slider goes.
+- **Magnet Rise is a toggle, and it is flight**, at a half-step's pace with no dash.
+- **Rock Climb is steered by W and S**, so glancing down mid-climb no longer drops you.
+- **Camouflage lasts a quarter of an hour and you can take it off** — and the disguise now walks
+  when you walk and sits the camera where its head is.
+- **Substitute leaves a decoy that does what you were doing**, takes real damage, and hides
+  everything you are carrying while you get away.
+- **Rollout is now Agility, Seed Bomb is now Egg Bomb, and Teleport is learned with an Ender
+  Pearl.**
+
+### 🐛 Fixed
+
+Thirty-five fixes, most of them found by playing rather than reading. The ones worth naming: the
+sixty-four HM ceiling is gone, half the HMs were missing their names entirely, Leafage no longer
+wrecks flowers it did not plant, and Tail Whip, Mean Look, Rototiller and String Shot all now do
+the thing they said they did.
+
+## [2.1.32] - 2026-08-20
+
+### 🐛 Fixed
+- **A Substitute decoy really does leave nothing behind now.** The last attempt cancelled the shared
+  half of the break and missed the line that drops the stand itself, which is the half anyone would
+  notice.
+- **String Shot tells sprinting from standing.** Sprinting is a thing the game states outright, so
+  it is simply asked; walking is measured once a tick instead of at the moment the HM fires, when
+  the reading has usually already been overwritten.
+- **Flash is brighter than the brightness slider goes.** The blend it drives is not capped where the
+  slider is — above the top of the scale it carries past white rather than stopping at it, which is
+  how a full-bright is supposed to look and what the setting will not let you ask for.
+
+### 🎯 Improved
+- **A Blizzard lasts as long as a thunderstorm** — three to thirteen minutes, rolled from the same
+  table the weather itself uses. It used to run for fifteen seconds, which is long enough to see
+  snowflakes and nowhere near long enough to be weather.
+
+## [2.1.31] - 2026-08-20
+
+### 🐛 Fixed
+- **2.1.30 would not start.** The third-person camera change declared its hook with the wrong number
+  type, and a mixin whose signature does not match its target refuses to apply — which on this one
+  meant the game could not build its renderer at all. Nothing else in 2.1.30 was affected.
+
+## [2.1.30] - 2026-08-20
+
+### 🐛 Fixed
+- **Right-click fires an HM again.** The activator shipped set to left-click only, which the
+  documentation had never said and which quietly made half the HMs awkward: the one button that
+  worked is also the button that mines the block you are aiming at.
+- **String Shot finally tells moving from standing.** It was asking the server how fast you were
+  going, and a server never simulates a player's walking — it is told where they ended up. The
+  number it read was always zero, so every shot was the standing-still one.
+- **Flash is as bright as it says.** Overriding the brightness curve only changed the *target* of
+  the blend the game does at the end; **how much of it landed was the player's own brightness
+  slider**, so at a low setting the HM did almost nothing. Both ends are now handled, for exactly
+  the span of the one method that reads them, and your Options value is never actually touched.
+- **A Substitute decoy leaves nothing behind.** Breaking it dropped an armour stand, which both
+  says out loud what the decoy was made of and hands out free crafting material every cast.
+
+### 🎯 Improved
+- **Jump doubles what your mount can clear.** A flat 2×, not derived from the setting — that number
+  is the potion strength of Jump's other half, the one that makes *you* jump higher.
+- **Helping Hand is three times the help.** A mount spends a fifth of the stamina it used to, so it
+  goes five times as far and the bar drains slowly enough to notice.
+- **Blizzard is ten times the radius, and this time it shipped.** The last change to it never
+  reached the game: the handler clamped the radius to 16 regardless of the setting, so raising the
+  setting to 18 did nothing at all. The clamp is gone, and the snowfall now scales with the area so
+  a bigger storm is a bigger storm rather than the same snow spread thinner.
+- **Third person backs off far enough to see your disguise.** The camera sat at a fixed four blocks
+  because a player is always the same size; wear something large and it was inside its shoulder.
+- **A Pokémon disguise gets told to change its animation.** Writing the pose was not enough —
+  Cobblemon learns which animation to play from the callback that fires when a *packet* assigns
+  that value, and local code writing it announces nothing.
+
+## [2.1.29] - 2026-08-20
+
+### 🐛 Fixed
+- **Ten HM discs were wearing the wrong picture.** Absorb's showed a flat slab of a hopper's flank
+  instead of a hopper, and nine others carried a single face of a block where the block itself
+  belonged. The disc art now asks the game what it draws in that slot rather than guessing at a
+  texture: items with a real icon get it exactly, and block items — which have no picture anywhere,
+  only a model the game renders on the spot — get one built the same way, from the same textures.
+  Fixed: Absorb, Rototiller, Defog, Stockpile, Acid Armor, Rock Throw, Snowscape, Eruption,
+  Earthquake and Barrier.
+
+## [2.1.28] - 2026-08-20
+
+### 🎯 Improved
+- **The HM wheel sizes its discs to how many HMs you know.** One number could never be right at both
+  ends — a ring divides 360° between however many slots it has, so a size with comfortable air
+  around three discs has twenty-six of them overlapping into a band. Each ring now works out how
+  much room a slot actually has and draws the disc to fit, with a margin. The scroll still sets how
+  big you want them and still wins whenever there is space; the only thing it can no longer do is
+  ask for more room than exists.
+- **Blizzard covers three times the ground.** It became real weather rather than a circle of cold,
+  and weather six blocks across read as a bug.
+- **Magnet Rise is half as fast again.** It is meant to be a half-step off the ground, not flight.
+
+## [2.1.27] - 2026-08-20
+
+### 🐛 Fixed
+- **A Camouflage disguise moves its legs.** A Pokémon costume slid along the ground in a permanent
+  idle no matter how fast you ran: the stand-in is deliberately never put into the world, so nothing
+  ever ticked it, and Cobblemon animates from state that only ticking produces. Both halves — which
+  animation to play, and advancing it — are now driven from the player wearing it.
+- **The camera sits where the disguise's head is.** The costume borrowed the size its *entity type*
+  was registered with, which for a Pokémon is one placeholder shared by every species, so a Wailord
+  and a Joltik got the same box and the same eye height. It takes the size of the actual creature
+  being drawn.
+- **Substitute hides everything you are carrying.** Vanilla invisibility hides the body and leaves
+  the armour, the held items, and anything a third-party mod draws on a player — beside a decoy
+  wearing your own face, that pointed straight at which of the two was real. Nothing about you is
+  drawn at all for the two seconds you have to get away.
+
+## [2.1.26] - 2026-08-20
+
+### 🐛 Fixed
+- **Rototiller no longer destroys what is growing on the ground.** Farmland cannot hold a flower, so
+  tilling under one quietly deleted it. The plant is picked instead — it lands at your feet as an
+  item and the tilling goes ahead. Aiming at the flower now tills the soil under it, too.
+- **String Shot leaves a web behind you that stays there.** The escape half lasted one second, which
+  is less time than it takes for the thing chasing you to arrive; and it read your facing rather
+  than your movement, so running backwards put the web in front of you.
+
+### 🎯 Improved
+- **Charge, used again on the block it is already on, turns it off.** A charge is permanent by
+  design, and a power source you can only cancel by walking somewhere else to dump it is a fault.
+
+## [2.1.25] - 2026-08-20
+
+### 🐛 Fixed
+- **Tail Whip finishes the brushing, every time.** It worked once and then refused for nine seconds
+  on any block it had touched: it was driving vanilla's brush with a fabricated clock to get ten
+  strokes into one gesture, and the brush **writes that time back** as its own cooldown. It goes at
+  the finish directly now — no invented clock, nothing left poisoned, and the same loot table as a
+  real brush. The failure message also names the block instead of talking about sand at a gravel.
+- **Leafage stops wrecking flowers it did not plant.** The old guard protected the flowers it knew
+  about by class, so a modpack's own wildflowers were not on the list. It reads the `#minecraft:flowers`
+  tag instead — the thing a mod uses to say "this is a flower" — and any plant that grows nothing
+  from being bone-mealed is left alone after a single try instead of being asked four times.
+- **Jump reaches the thing you are riding.** It was putting vanilla's jump boost on the *player*,
+  and a mounted player is not who is jumping — Cobblemon moves a mount by its own riding stats and
+  an attribute on the rider never gets there. Same lesson as Surf and Tailwind.
+
+## [2.1.24] - 2026-08-20
+
+### 🎯 Improved
+- **The mount HMs now show up in the Pokémon's own summary.** Surf, Tailwind, Swift and U-turn make
+  the thing you are riding better at something, and until now the only place that was visible was in
+  how it felt. Open the summary on the Pokémon you are riding and its **Ride** chart draws the
+  boosted figures — a helped stat reads over its own maximum, which is what a temporary buff is.
+  Any other party member still shows its honest numbers.
+
+## [2.1.23] - 2026-08-20
+
+### ✨ New
+- **Confusion** — turns the target around inside its own head, and it means two different things
+  because its victims do. A **player** loses which way is forward: W walks them backwards, A and D
+  swap, and the camera inverts on both axes. Anything **else** has no keys to invert, so it loses
+  the thread instead — forgets what it was chasing and blunders off somewhere. Pretending a zombie
+  has a W key would have been the wrong translation, and doing nothing to mobs would have made this
+  an HM that does nothing at all in single player.
+
+## [2.1.22] - 2026-08-20
+
+### ✨ New
+- **Obstruct** — seals a container shut for a long while, **and seals it against its own hoppers**.
+  That second half is the one that makes it a seal: a chest with a hopper under it is a chest with a
+  hole in the bottom, so stopping the lid and leaving the hopper draining would have looked like
+  protection without being any. A hopper pointed at a sealed chest simply idles, the way one
+  pointed at nothing does.
+
+## [2.1.21] - 2026-08-20
+
+### ✨ New
+- **Shadow Sneak** *(toggle)* — total stealth on foot. No footsteps, no name over your head, and
+  **nothing underfoot notices you**: not pressure plates, not tripwires, not a sculk sensor. You
+  move slower than a walk for it, though faster than a crouch, so it is something you can actually
+  travel in.
+
+### ✨ Changed
+- **Flash is real full brightness.** It used to be Night Vision wearing a different name — the blue
+  wash and all. Now the world is simply lit, the way a brightness slider turned past its own limit
+  would light it.
+
 ## [2.1.20] - 2026-08-20
 
 ### ✨ Changed
