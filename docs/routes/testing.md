@@ -207,10 +207,9 @@ map by category and drops a waypoint the first time you reach a town, a route or
    untinted.
 3. Walk into a town you have not visited, then onto a road you have not visited.
 4. Quit to title and rejoin, then reopen the map.
-5. In the panel on the map, drag the intensity sliders and change a colour.
 
 **Expected** — step 3 drops one waypoint each, once. Step 4 shows them still there and **not
-duplicated**. Step 5 re-tints the map live, and 0 % hides that category entirely.
+duplicated**.
 
 **Also worth checking** — the paint shows on the full-screen world map regardless of your Y level and
 of the minimap's Cave Mode.
@@ -220,31 +219,30 @@ the world map, and a screenshot of the map itself.
 
 ---
 
-## 8. The world-map panel — Load chunks
+## 8. `/routesmap` — how your map looks
 
-**What it is** — the map can generate the ground around you so the map fills in without you walking
-it. You choose how many chunks; it tells you the cost before anything starts.
+**What it is** — every choice about how the chunk paint looks on **your** map is a
+[command any player can use](map-integration.md#changing-how-it-looks-routesmap). It never reaches the
+server.
 
 **How to test**
 
-1. Open the world map with **M** and find Routes' panel down the left edge.
-2. Set the chunk count with the slider and press **Load chunks**.
-3. Read the confirmation, then confirm.
-4. Watch the map and the action bar.
-5. **Press Cancel while it is still running.** This is the step most likely to find a bug.
-6. Close the map and reopen it.
-7. Collapse the panel with its handle, then bring it back.
+1. In a world with Xaero's installed and some roads already on the map, run `/routesmap` and read what
+   it prints.
+2. Run `/routesmap opacity route 0`, then open the world map with **M**.
+3. Run `/routesmap opacity route 100` and `/routesmap colour route blue`.
+4. Run `/routesmap paint off`, look at both maps, then `/routesmap paint on`.
+5. Quit to title, rejoin, and run `/routesmap` again.
+6. On a server, as a player **without** operator rights, repeat step 2.
 
-**Expected** — step 3 says how many chunks and roughly how long, **before** anything is generated.
-Step 4 fills the map in as it goes, with a counter, and the button now reads Cancel. Step 5 stops it
-and leaves the map **consistent, not half-painted**. Step 6 remembers the number you chose. Step 7
-hides the controls and nothing else — the paint and the waypoints keep working.
+**Expected** — step 1 lists the paint, the three opacities, the three colours and the waypoint
+grouping. Step 2 hides the roads' tint on the minimap and on the world map, with no relog. Step 3
+brings it back, blue and at full strength, straight away. Step 4 clears both maps and then restores
+them. Step 5 prints what you set, not the defaults. Step 6 behaves exactly like single-player — no
+permission message.
 
-**On a server** — as a non-operator, the button must refuse with a message rather than doing nothing.
-In your own single-player world it should work without cheats being on.
-
-**If it looks wrong** — how many chunks you asked for, whether you cancelled, and whether it was
-single-player or a server (and your permission level there).
+**If it looks wrong** — the exact command you typed, the line it printed back, and whether the
+minimap and the world map disagreed with each other.
 
 ---
 
@@ -284,8 +282,9 @@ quietly builds some ground around spawn in the background so the map is not empt
 4. Make another world with **Pregenerate around spawn** set to 0.
 
 **Expected** — step 1 puts you on dry, solid ground in or beside a town, never in water. Step 2
-already shows some towns and roads. Step 4 shows an empty map at first, which is correct — that is
-what 0 means.
+already shows some towns and roads, and while the ground is still being built a counter on the action
+bar says how far it has got, then how many chunks it generated. Step 4 shows an empty map at first,
+and no counter, which is correct — that is what 0 means.
 
 **If it looks wrong** — the seed, the coordinates you landed on, and the output of
 `/routes debug spawn`.

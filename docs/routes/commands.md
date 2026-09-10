@@ -1,6 +1,7 @@
 # ⌨️ Commands
 
-The complete manual for every **`/routes`** command — the road network.
+The complete manual for every **`/routes`** command — the road network — and for **`/routesmap`**,
+which changes how the map looks to you.
 
 ```mermaid
 flowchart LR
@@ -42,6 +43,7 @@ flowchart LR
 | `/routes settlement …` | 🛡️ | Your own towns and connections in the gen2 graph. |
 | `/routes config …` | 👤/🛡️ | Read and change this world's settings from in game. |
 | `/routes debug …` | 🛡️ | Thirteen read-only reports, for pasting into a bug report. |
+| `/routesmap …` | 👤 | How the chunk paint looks on your own map. Never reaches the server. |
 
 ---
 
@@ -290,6 +292,29 @@ Back to the mod's own default for that option.
     Anything about the shape of the road network — how many roads leave a town, how long they may be,
     how steep, how wide — decides what gets **built**. Changing it does not rebuild what is already
     there. See the note on each option in [Configuration](configuration.md).
+
+---
+
+## 🎨 `/routesmap` — how your map looks
+
+A separate command from `/routes`, because it answers a different question: not what the world is,
+but how the [chunk paint](map-integration.md) looks on **your** map. It runs entirely in your own
+game — it never reaches the server — so every player can use it, with no operator rights, on any
+server, including one that has never heard of Routes.
+
+Changes show on the minimap and the world map the moment you press Enter, and are still yours after
+rejoining.
+
+| Command | What it does |
+| --- | --- |
+| `/routesmap` | prints every setting at once |
+| `/routesmap paint on\|off` | the chunk paint on both maps |
+| `/routesmap opacity city\|route\|area <0-100>` | how strong that category's tint is; **0 hides it** |
+| `/routesmap colour city\|route\|area <colour>` | that category's colour: `magenta`, `orange`, `teal`, `red`, `green`, `blue`, `yellow` or `white` |
+| `/routesmap waypoints per_category\|all_in_one` | one waypoint set per category, so each can be hidden on its own — or one set for the whole mod, so a single switch hides them all |
+
+A colour drives the tint and the matching waypoints together, so the map and its markers always agree;
+the waypoints take it on your next join. A new grouping re-files each waypoint as you rediscover it.
 
 ---
 

@@ -82,8 +82,8 @@ trainers**, the **gyms next to towns** and the **league** are configured on its
 between them.
 
 The map **tint intensity** and **colours** (City / Route / Area) are not world-creation choices —
-adjust them live from the panel on [Xaero's world map](map-integration.md), where you can see what
-you are changing.
+set them in play with [`/routesmap`](map-integration.md#changing-how-it-looks-routesmap), with the map
+in front of you.
 
 !!! info "Saved per world"
     Choices made in these tabs are stored **per world** and only applied to a brand-new world —
@@ -93,8 +93,8 @@ you are changing.
 ## Global defaults
 
 The global defaults live in `config/routes.json` (English & Spanish labels) and are used
-when a world wasn't configured through the tabs. The map-paint intensity also has live sliders on
-[Xaero's world map](map-integration.md).
+when a world wasn't configured through the tabs. The map-paint intensity and colours are changed in
+play with [`/routesmap`](map-integration.md#changing-how-it-looks-routesmap).
 
 ## Commands
 
