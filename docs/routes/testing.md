@@ -90,9 +90,9 @@ it is a bridge. Say whether the world was made with tunnels and bridges **on or 
 
 ## 3. Water crossings and the shoreline
 
-**What it is** — where a route meets water it does not stop: it lays an open lane you can swim
-through, with the seabed paved and lit beneath you. Frozen lakes are crossed **under** the ice, never
-paved over it.
+**What it is** — where a route meets water it does not stop: the road runs to the shore, and an open
+lane marked by stones on both sides carries on across the water. Frozen lakes are crossed **under**
+the ice, never paved over it.
 
 **How to test**
 
@@ -101,13 +101,12 @@ paved over it.
 2. **Stand in the water and look back at the shore.**
 3. Swim the crossing to the far side and come out.
 
-**Expected** — the shore comes down to the waterline. There is **no mound or bank** built up either
-side of the crossing that the road then has to climb back down. The lane is marked, the seabed under
-it is paved and lit, and you can surface anywhere along it.
+**Expected** — the road runs at the ground's own height right up to the shore: **nothing is cut into
+the bank or built up on it**. Where the bank stands above the water there is a step down into the
+lane. The lane is marked on both sides and you can surface anywhere along it.
 
-**Then check the other half** — find a **bridge** and walk onto it from land. The approach must still
-rise to meet the deck in a single step. Both halves matter: the mound and the bridge approach are the
-same piece of code seen from two sides.
+**Then check a bridge** — walk onto one from land. The approach must rise to meet the deck in a single
+step.
 
 **If it looks wrong** — say which one it was (open water crossing or bridge), give coordinates, and a
 screenshot taken **from the water looking at the land**.
