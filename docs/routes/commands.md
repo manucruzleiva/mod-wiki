@@ -25,7 +25,7 @@ flowchart LR
 | `/routes zone` | 👤 | What the chunk you stand in is painted as. |
 | `/routes scan [radius]` | 🛡️ | Scan loaded chunks for city structures (1–100 chunks). |
 | `/routes connect` | 🛡️ | Queue a road between the two nearest cities. |
-| `/routes structures` | 🛡️ | Dump the structure-registry match report. |
+| `/routes structures` | 🛡️ | Write every structure to a file, grouped into settlements, landmarks and the rest. |
 | `/routes addcity [name]` | 🛡️ | Register where you stand as a named city. |
 | `/routes rename <name>` | 🛡️ | Rename the nearest town. |
 | `/routes tp <town>` | 🛡️ | Teleport to a named town. |
@@ -74,8 +74,10 @@ Locates the nearest connectable cities from your position (seed-based — no chu
 queues a road between them. The road then builds incrementally.
 
 ### `structures` — 🛡️
-Prints the structure-registry match report: which structure tags/ids from **Cities include** exist
-in this world and what matched. The first stop when a structure type isn't being connected.
+Writes every structure of this world to `routes_structures.txt` in three groups — **settlements**
+(roads are planned to them), **landmarks** and **neither** — each with its tags, and says how many of
+each there are. The first stop when a structure type isn't being connected; see
+[Which structures get roads](which-structures.md) for how each one is decided.
 
 ### `addcity [name]` — 🛡️
 Registers **where you are standing** as a city node (default name `Gym`) and queues its road
@@ -329,7 +331,7 @@ usually what you want.
 
 | Command | Radius | What it reports |
 | --- | :---: | --- |
-| `debug structures` | — | which structure tags and ids from **Cities include** exist in this world, and what matched. The first stop when a structure type is not being connected |
+| `debug structures` | — | every structure of this world, written to `routes_structures.txt` in three groups — settlements, landmarks, neither — with its tags. The first stop when a structure type is not being connected |
 | `debug towns [r]` | 8–512, def. 128 | every settlement the seed puts in range, as the road network sees them |
 | `debug settlements [r]` | 8–256, def. 64 | the settlement graph with a **census**: how many roads each rule contributed, and how many were folded into shared trunks. The answer to "why does this world have so many roads" |
 | `debug graph [r]` | 8–512, def. 128 | the graph's nodes and how they cluster |

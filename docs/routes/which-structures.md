@@ -1,50 +1,61 @@
 # 🏘️ Which structures get roads
 
-Routes connects **settlements**. Everything else in your world — pyramids, mineshafts, monuments,
-ruins — is left alone, and no road is planned to it.
+Every structure in your world is one of three things to the road network:
 
-What counts as a settlement is **yours to decide**, and there are three ways to say it, from the one
-almost everybody wants to the one for pack authors.
+| | What it is | What the roads do |
+|---|---|---|
+| **Settlement** | a town — a village, a city | roads are planned **to** it |
+| **Landmark** | somewhere worth seeing — a pyramid, a ruin, a tower | no road is planned to it |
+| **Ignored** | underground, at sea, or not in the Overworld | nothing at all |
+
+Which is which is **yours to decide**, and there are three ways to say it, from the one almost
+everybody wants to the one for pack authors.
 
 ---
 
-## The Cities include checklist
+## The Towns & landmarks checklist
 
 The **ROUTES** tab on the create-world screen carries a checklist built from **the structures your
 world actually has** — every mod and datapack you installed, grouped by the mod each one came from.
-Tick a structure and roads will run to it; untick it and they will not.
+Every row reads **Settlement**, **Landmark** or **Ignored**; click it to cycle.
 
 !!! tip "It is built from your world, not from a fixed list"
     The checklist is generated when you open the tab, so a settlement from a mod nobody has ever
     heard of appears in it the same as a vanilla village.
 
-This is the way to do it. The two below exist for cases the checklist cannot reach.
+Each row starts on the automatic answer (see [the order things are decided in](#the-order-things-are-decided-in)),
+so you only touch the ones you disagree with. This is the way to do it. The two below exist for cases
+the checklist cannot reach.
 
 ---
 
-## The structure list, by hand
+## The structure lists, by hand
 
-`route_city_structure_tags` in the config takes structure **ids** and structure **tags**, and it
-**adds to** the automatic rule rather than replacing it:
+Two lists in the config, one per role, with the same grammar. Both **add to** the automatic rule
+rather than replacing it:
+
+- `route_city_structure_tags` — what counts as a **settlement**;
+- `route_landmark_structure_tags` — what counts as a **landmark**, among the things that are not
+  settlements.
 
 | You write | It means |
 |---|---|
-| `minecraft:village_plains` | this exact structure counts as a settlement |
-| `#bca:villages` | every structure in that tag counts |
-| `-minecraft:village_desert` | this one does **not** count, whatever anything else says |
-| `-#minecraft:village` | nothing in that tag counts |
+| `minecraft:village_plains` | this exact structure is one |
+| `#bca:villages` | every structure in that tag is one |
+| `-minecraft:village_desert` | this one is **not**, whatever anything else says |
+| `-#minecraft:village` | nothing in that tag is |
 
-The `-` prefix is what the checklist writes when you untick a row, and it is read **before**
+The `-` prefix is what the checklist writes when you move a row off a role, and it is read **before**
 everything else — so an exclusion always wins, including over the built-in rule that says a village
-is a settlement.
+is a settlement. A structure excluded from both lists is **Ignored**.
 
 ---
 
 ## The allowlist, for total control
 
 `gen2_settlement_allowlist` is different from everything above: **the moment it holds a single id, it
-is the whole truth.** Only the ids in it count as settlements, the automatic rule stops applying, and
-`route_city_structure_tags` is not consulted at all.
+is the whole truth about settlements.** Only the ids in it are settlements, the automatic rule stops
+applying, and `route_city_structure_tags` is not consulted at all.
 
 !!! warning "It is all-or-nothing, and that is the point"
     Put one gym in it and your world's villages stop getting roads. Leave it empty — the default —
@@ -54,8 +65,8 @@ is the whole truth.** Only the ids in it count as settlements, the automatic rul
 
 ## Connect all structures
 
-`connect_all_structures` is the opposite extreme: every **surface** structure becomes a road node,
-not just settlements. Underground landmarks are still skipped, so roads do not dive for a mineshaft.
+`connect_all_structures` is the opposite extreme: every **surface** structure becomes a settlement,
+not just towns. Underground ones are still skipped, so roads do not dive for a mineshaft.
 
 It makes for a very dense network. It is there for map makers and for seeing what a pack contains.
 
@@ -63,17 +74,28 @@ It makes for a very dense network. It is there for map makers and for seeing wha
 
 ## The order things are decided in
 
-When Routes asks "is this a settlement?", it stops at the first rule that answers:
+Routes first asks "is this a settlement?", and stops at the first rule that answers:
 
 1. **The allowlist**, if it has anything in it — that is the whole answer.
-2. **Connect all structures**, if it is on — every surface structure is a node.
-3. **Your exclusions** — anything you wrote with a `-`, or unticked on the checklist.
+2. **Connect all structures**, if it is on — every surface structure is one.
+3. **Your settlement exclusions** — anything you wrote with a `-`, or moved off Settlement.
 4. **The village rule** — anything in the `#minecraft:village` tag.
-5. **Your inclusions** — the ids and tags you added.
-6. Otherwise it is **not** a settlement.
+5. **Your settlement inclusions** — the ids and tags you added.
+6. **The name rule** — an id that calls itself a village, a town or a city.
 
-The reason exclusions sit above the village rule is so unticking **Villages** actually works: without
-that, the village rule would answer first and the tick would do nothing.
+Anything that is not a settlement then gets the second question — landmark or ignored:
+
+1. **Your landmark exclusions** — Ignored.
+2. **Your landmark inclusions** — Landmark.
+3. Otherwise it is a **Landmark**, unless it is not in the Overworld, every biome it can generate
+   in is ocean, or its name says it is built underground — a mineshaft, a stronghold, a dungeon, a
+   buried or sunken thing, an ancient city, trial chambers. Those are **Ignored**.
+
+The reason exclusions sit above the village rule is so moving **Villages** off Settlement actually
+works: without that, the village rule would answer first and the change would do nothing.
+
+`/routes structures` writes every structure of your world to `routes_structures.txt`, grouped into
+the three roles, so you can see exactly what these rules decided.
 
 ---
 
