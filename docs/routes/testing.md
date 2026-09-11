@@ -222,25 +222,25 @@ the world map, and a screenshot of the map itself.
 
 ## 8. `/routesmap` — how your map looks
 
-**What it is** — every choice about how the chunk paint looks on **your** map is a
-[command any player can use](map-integration.md#changing-how-it-looks-routesmap). It never reaches the
-server.
+**What it is** — every choice about how the chunk paint looks on **your** map, in a small screen and
+as [commands any player can use](map-integration.md#changing-how-it-looks-routesmap). None of it
+reaches the server.
 
 **How to test**
 
-1. In a world with Xaero's installed and some roads already on the map, run `/routesmap` and read what
-   it prints.
-2. Run `/routesmap opacity route 0`, then open the world map with **M**.
-3. Run `/routesmap opacity route 100` and `/routesmap colour route blue`.
-4. Run `/routesmap paint off`, look at both maps, then `/routesmap paint on`.
-5. Quit to title, rejoin, and run `/routesmap` again.
-6. On a server, as a player **without** operator rights, repeat step 2.
+1. In a world with Xaero's installed and some roads already on the map, type `/routesmap`.
+2. In the screen, drag **Route intensity** down to 0 while watching the minimap, then back up.
+3. Change **Route colour**, turn **Chunk paint** off and on again, then press **Done**.
+4. Run `/routesmap list`, then `/routesmap opacity route 0` and open the world map with **M**.
+5. Quit to title, rejoin, and run `/routesmap list` again.
+6. On a server, as a player **without** operator rights, repeat steps 1 and 2.
 
-**Expected** — step 1 lists the paint, the three opacities, the three colours and the waypoint
-grouping. Step 2 hides the roads' tint on the minimap and on the world map, with no relog. Step 3
-brings it back, blue and at full strength, straight away. Step 4 clears both maps and then restores
-them. Step 5 prints what you set, not the defaults. Step 6 behaves exactly like single-player — no
-permission message.
+**Expected** — step 1 closes the chat and opens a small screen over the world, which stays in view and
+keeps running behind it. Step 2 fades the roads' tint on the minimap as the slider moves and brings it
+back. Step 3 recolours both maps straight away, and the paint toggle clears and restores them
+instantly. Step 4 lists the paint, the three opacities, the three colours and the waypoint grouping,
+then hides the roads' tint with no relog. Step 5 prints what you set, not the defaults. Step 6 behaves
+exactly like single-player — no permission message.
 
 **If it looks wrong** — the exact command you typed, the line it printed back, and whether the
 minimap and the world map disagreed with each other.

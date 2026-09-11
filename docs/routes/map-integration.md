@@ -43,8 +43,10 @@ game. It turns the paint on and off, sets how strong each of the three tints is 
 category**), picks each one's colour — which the matching waypoints follow — and chooses whether the
 waypoints land in one set or one per category.
 
-The paint changes on both maps the moment you press Enter, and your choices are still there after
-rejoining. Every argument is on [the Commands page](commands.md#routesmap-how-your-map-looks); see
+Type `/routesmap` on its own and a small screen opens over the world with all of it: drag a slider
+and the minimap behind it re-tints as you go. Each setting is also a subcommand, for anyone who would
+rather type it. Your choices are still there after rejoining. Every argument is on
+[the Commands page](commands.md#routesmap-how-your-map-looks); see
 [how to test it](testing.md#8-routesmap-how-your-map-looks).
 
 !!! note

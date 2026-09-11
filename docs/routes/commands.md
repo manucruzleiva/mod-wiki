@@ -307,7 +307,8 @@ rejoining.
 
 | Command | What it does |
 | --- | --- |
-| `/routesmap` | prints every setting at once |
+| `/routesmap` | opens a small screen with every setting below — changes apply as you make them, with the map still in view |
+| `/routesmap list` | prints every setting at once |
 | `/routesmap paint on\|off` | the chunk paint on both maps |
 | `/routesmap opacity city\|route\|area <0-100>` | how strong that category's tint is; **0 hides it** |
 | `/routesmap colour city\|route\|area <colour>` | that category's colour: `magenta`, `orange`, `teal`, `red`, `green`, `blue`, `yellow` or `white` |
