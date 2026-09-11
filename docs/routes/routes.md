@@ -23,8 +23,9 @@ flowchart TD
 - **Flat & inland paths** — the pathfinder strongly penalises slopes and keeps a buffer away from
   shorelines, while still crossing water when there's no alternative.
 - **Mineshaft tunnels** — when a climb is too steep (or there's no surface path at all), the route
-  bores a clean, walkable, oak-framed tunnel instead of an impassable cliff. About a third of
-  tunnels are atmospheric **dark caves** — bring torches!
+  bores a clean, walkable, oak-framed tunnel — twice the road's width and eight blocks tall —
+  instead of an impassable cliff. About a third of tunnels are atmospheric **dark caves** — bring
+  torches!
 - **Descriptive route names** — every road gets a code plus an auto-generated name from the terrain
   it crosses (*Route 5: Coastal Road*, *Route 8: Marsh Crossing*), always the same for your seed.
 - **Clean tree clearing** — a road crossing a tree removes the whole trunk and canopy; no floating

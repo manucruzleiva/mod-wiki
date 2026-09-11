@@ -49,6 +49,8 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | Road curviness | 5 | 0 = ruler-straight, 10 = maximum seeded wander |
 | Steepest climb | 8 | tenths of a block per block, before a road cuts or bores instead of hugging the ground |
 | Dig tunnels | on | off, a planned tunnel is built as a steep surface road over the top |
+| Tunnel width | 9 | a tunnel's own width, twice the road's — only the bore, the ramp down to it stays road-width. Odd numbers, like the road |
+| Tunnel height | 8 | floor to ceiling. Taller tunnels leave a thinner roof in low hills |
 | Build bridges | on | off, a river becomes an open water lane and a dry gap is followed on the ground |
 | Shape terrain around roads | on | the ground is road-shaped **before** anything is planted on it, instead of demolished afterwards. Decided once, when the world is created |
 | Warm road chunks ahead | on | generate a road's chunks a little before you reach them, so the cost lands while you walk |
