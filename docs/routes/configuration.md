@@ -42,6 +42,10 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | Bigger towns, more roads | on | settlements come as village, town or city by their real footprint, and a bigger one carries more roads. Needs **Confirm towns exist** |
 | Town size | 64 | blocks across from which a settlement is a town rather than a village |
 | City size | 128 | blocks across from which it is a city. `/routes debug settlements` shows how your world's towns fall into the three |
+| Roads go around landmarks | on | a road steers around a landmark's real footprint instead of cutting through it; where one fills the only way through, the road is still built |
+| Landmark pull | 3 | 0–10: how strongly a road bends to pass beside the one landmark it visits — a few blocks, never a detour. 0 = off |
+| Landmark reach | 96 | how far off a road's straight line, in blocks, a landmark can be and still pull it |
+| Landmark signs | on | a signpost beside the road names the landmark it passes |
 
 ### Road Shape
 

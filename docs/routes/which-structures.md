@@ -5,11 +5,25 @@ Every structure in your world is one of three things to the road network:
 | | What it is | What the roads do |
 |---|---|---|
 | **Settlement** | a town — a village, a city | roads are planned **to** it |
-| **Landmark** | somewhere worth seeing — a pyramid, a ruin, a tower | no road is planned to it |
+| **Landmark** | somewhere worth seeing — a pyramid, a ruin, a tower | no road is planned **to** it; a road passing near it bends a little to go **by** it, keeps off its footprint, and signs it |
 | **Ignored** | underground, at sea, or not in the Overworld | nothing at all |
 
 Which is which is **yours to decide**, and there are three ways to say it, from the one almost
 everybody wants to the one for pack authors.
+
+## What a road does beside a landmark
+
+- **It goes around it.** The road steers clear of the structure's real footprint, never through the
+  middle of a ruin. Where a landmark fills the only way through, the road still gets built.
+- **It passes by it.** A landmark close to where a road is heading pulls the road over a few blocks so
+  you walk past it. A road visits **at most one**, the one nearest its line, so roads don't zigzag.
+- **It signs it.** Where the road passes, a signpost beside it names the landmark. A structure from a
+  mod the sign doesn't know is named from its id, so it still reads as a name.
+
+A structure from a resource or data pack that you want roads to pass by, rather than reach, is simply a
+**Landmark** in the checklist below. Each of the three behaviours has its own option under
+[Towns & Settlements](configuration.md). They apply to worlds created with them and to ground that has
+not generated yet.
 
 ---
 
