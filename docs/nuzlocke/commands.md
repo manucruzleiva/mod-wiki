@@ -133,4 +133,23 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | Gyms beside towns | on | needs a gym pack |
 | Gyms on the surface | on | lifts a gym whose own definition would bury it |
 
+### Route Pokémon
+
+Every generated road carries encounter sources, disguised Cobblemon habitat blocks set into the
+paving. Each one offers **one species of its own**, at the evolution stage that fits its level. Needs
+Cobblemon 1.8.
+
+| Option | Default | Notes |
+| --- | :---: | --- |
+| Route encounters | On | Off leaves roads with the ordinary spawns |
+| Distance between sources | 128 | blocks of road from one source to the next, 32–512 |
+| Source looks like | `minecraft:diamond_block` | the block a source is disguised as; set it to the road's own surface to hide them |
+| Pokémon out per source | 10 | how many of its own a source can have out at once, 1–64 |
+| Source spawn chance per tick | 100% | 100 refills a source at once, 1 is about one Pokémon every five seconds |
+| Wild spawns held back around a source | 16 | blocks around a source where only its own Pokémon appear; 0 = ordinary spawns there too |
+| Typical source level | 32 | each source has its own five-level band, drawn from a bell curve centred here |
+| Source level spread | 14 | how widely sources spread: most sit between 25 and 40, level 1–5 is rare and 75+ rarer still |
+| Allow Legendaries · Ultra Beasts · Paradox Pokémon | off | |
+| Allow starters | off | every family in the starter picker stays off the roads |
+
 [Soul Link](soul-link.md#settings) has its own settings.
