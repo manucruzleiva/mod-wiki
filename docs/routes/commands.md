@@ -243,15 +243,28 @@ A separate subtree from `addcity` and `connect`, and the distinction matters: th
 classic route network, while these feed **gen2's settlement graph** — the one that draws roads during
 worldgen. The two are not the same network.
 
-Declared settlements and connections are remembered with the world and survive a restart.
+Declared settlements and connections, and everything removed or withdrawn, are remembered with the
+world and survive a restart. Every removal here only affects **chunks generated from now on**: ground
+already generated keeps what was built on it.
+
+### `remove` — 🛡️
+Removes **whatever you are standing on**. In a town it removes the town, exactly as
+`settlement remove` does. On a road it withdraws **that road**, and names it — *Route 7: Ashvale ↔
+Mirefield*. The road is the one actually drawn through your chunk, so standing in the middle of a route
+is enough, with neither of its towns in sight. If two roads run through the chunk, it lists them and
+removes nothing; walk to where only one does. Right after loading, the roads nearby may still be
+planning; it says so, and asking again a moment later works. `settlement reconnect` puts a road back.
 
 ### `settlement add [name]` — 🛡️
 Registers **where you are standing** as a settlement in the gen2 graph, optionally named. Roads plan
 to it as if the world had generated a town there.
 
 ### `settlement remove` — 🛡️
-Removes the declared settlement nearest to you. Only your own: a settlement the world generated is not
-yours to delete.
+Removes the settlement nearest to you. One you declared is deleted. One the world generated is taken out
+of the network, along with every road it carried.
+
+### `settlement restore` — 🛡️
+Puts back the nearest generated town you removed, exactly as it was: its name and its roads.
 
 ### `settlement list` — 🛡️
 Every settlement and connection you have declared in this world, with coordinates.
@@ -262,8 +275,13 @@ connection is the one edge nothing is allowed to re-route: it exists because you
 are joined.
 
 ### `settlement disconnect <x> <z>` — 🛡️
-Removes that declaration. The two places may still end up connected by the ordinary rules — this only
-withdraws your instruction.
+Takes the road between the town you stand at and the one nearest `x, z` out of the network. A road you
+declared is deleted. A road the world generated is withdrawn, and both towns keep their other roads.
+
+### `settlement reconnect [<x> <z>]` — 🛡️
+Puts a withdrawn road back. With no position, it restores the road withdrawn most recently, which is
+the only way to bring back a branch that starts at a fork. With a position, it restores the road between
+the town you stand at and the one nearest `x, z`.
 
 ---
 
