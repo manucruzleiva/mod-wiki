@@ -45,7 +45,10 @@ waypoints land in one set or one per category.
 
 Type `/routesmap` on its own and a small screen opens over the world with all of it: drag a slider
 and the minimap behind it re-tints as you go. Each setting is also a subcommand, for anyone who would
-rather type it. Your choices are still there after rejoining. Every argument is on
+rather type it. Your choices are still there after rejoining.
+
+To hide and show the paint with one key, bind **Show / hide chunk paint** under **Routes** in
+Options → Controls → Key Binds. It ships unbound, so it never fights Xaero's own keys. Every argument is on
 [the Commands page](commands.md#routesmap-how-your-map-looks); see
 [how to test it](testing.md#8-routesmap-how-your-map-looks).
 
