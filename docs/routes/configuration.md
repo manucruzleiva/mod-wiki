@@ -27,7 +27,7 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | Generate routes | on | master switch |
 | Native route generation | on | roads are drawn as chunks generate — no walking needed. Off falls back to the classic generator that builds as you explore |
 | Connect all structures | off | also connect surface structures that are not towns |
-| Routes per city | 4 | a **ceiling**, not a count: each town rolls its own between 1 and this, so the network has hamlets and crossroads |
+| Routes per city | 4 | a **ceiling**, not a count: each town rolls its own up to this, inside the band its size puts it in — a village low, a city high — so the network has hamlets and crossroads |
 | Longest road | 1600 | the farthest two towns can be and still get a direct road |
 | Ring roads | on | keep closing loops between nearby towns — loops are what enclose named **areas** |
 
@@ -35,10 +35,13 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 
 | Option | Default | Notes |
 | --- | --- | --- |
-| Cities include | Villages + BCA Villages | 16-entry checklist: fossils, ruins, outposts, pyramids… |
+| Towns & landmarks | automatic | every structure your world has, each set to Settlement, Landmark or Ignored — see [Which structures get roads](which-structures.md) |
 | Settlement allowlist (advanced) | empty | exact structure ids that count as towns. Empty = the automatic rule |
 | Never spawn here | RS ocean village | towns that may never be the world's **first** town. They stay ordinary towns otherwise |
 | Confirm towns exist | on | check the jigsaw really assembles before the network treats a candidate as a town — no towns on the map with an empty field under them |
+| Bigger towns, more roads | on | settlements come as village, town or city by their real footprint, and a bigger one carries more roads. Needs **Confirm towns exist** |
+| Town size | 64 | blocks across from which a settlement is a town rather than a village |
+| City size | 128 | blocks across from which it is a city. `/routes debug settlements` shows how your world's towns fall into the three |
 
 ### Road Shape
 
