@@ -103,7 +103,9 @@ the ice, never paved over it.
 
 **Expected** — the road runs at the ground's own height right up to the shore: **nothing is cut into
 the bank or built up on it**. Where the bank stands above the water there is a step down into the
-lane. The lane is marked on both sides and you can surface anywhere along it.
+lane. The lane is marked on both sides and you can surface anywhere along it. Over open water each
+marker stone stands on a short pillar, and on a lit crossing the block under the stone is a sea
+lantern, so at night the lane reads as pairs of lights.
 
 **Then check a bridge** — walk onto one from land. The approach must rise to meet the deck in a single
 step.

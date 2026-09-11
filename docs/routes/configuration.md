@@ -62,7 +62,7 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | Road surface | Random (per route) | each route picks its own material, or fix one for every road |
 | Road lamp posts | Random | Random / On / Off — Random decides per route |
 | Tunnel lighting | Random | Random keeps some tunnels as dark caves |
-| Underwater lighting | Random | sea lanterns along aquatic crossings |
+| Underwater lighting | Random | a sea lantern in the pillar under each water-crossing marker — Random decides per route |
 
 ### World Spawn
 
