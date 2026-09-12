@@ -54,6 +54,7 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | Road width | 5 | odd numbers; the brush is symmetric around the centreline |
 | Water crossing width | 10 | its own number, not a multiple of the road — open water reads much wider than it is |
 | Road curviness | 5 | 0 = ruler-straight, 10 = maximum seeded wander |
+| Straight bridges | on | a bridge over water runs straight from bank to bank however much the roads wander; off, the crossing weaves with the road. A bridge over a dry gap weaves either way |
 | Steepest climb | 8 | tenths of a block per block, before a road cuts or bores instead of hugging the ground |
 | Dig tunnels | on | off, a planned tunnel is built as a steep surface road over the top |
 | Tunnel width | 9 | a tunnel's own width, twice the road's — only the bore, the ramp down to it stays road-width. Odd numbers, like the road |
