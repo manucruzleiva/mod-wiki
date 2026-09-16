@@ -137,19 +137,29 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 ### Route Pokémon
 
 Every generated road carries encounter sources, disguised Cobblemon habitat blocks set into the
-paving. Each one offers **one species of its own**, at the evolution stage that fits its level. Needs
-Cobblemon 1.8.
+paving. Each one offers **one family of its own**: the evolution stage that fits its level, and, when
+that stage is about to evolve, about one of the next stage for every three, five levels higher.
+
+- **Most sources offer something native to where they stand**: the biome on land, the sea or river
+  under a water crossing. A source on a bridge deck leans toward Flying types instead.
+- **Each source keeps its own number of Pokémon out**, picked once from a range.
+- **Now and then a source spawns an alpha**, which counts as the zone's encounter like any other.
+
+Needs Cobblemon 1.8.
 
 | Option | Default | Notes |
 | --- | :---: | --- |
 | Route encounters | On | Off leaves roads with the ordinary spawns |
 | Distance between sources | 128 | blocks of road from one source to the next, 32–512 |
 | Source looks like | `minecraft:diamond_block` | the block a source is disguised as; set it to the road's own surface to hide them |
-| Pokémon out per source | 10 | how many of its own a source can have out at once, 1–64 |
+| Fewest Pokémon out per source | 2 | the bottom of the range each source picks its number from, 1–64 |
+| Most Pokémon out per source | 10 | the top of that range: how many of its own a source can have out at once |
 | Source spawn chance per tick | 100% | 100 refills a source at once, 1 is about one Pokémon every five seconds |
 | Wild spawns held back around a source | 16 | blocks around a source where only its own Pokémon appear; 0 = ordinary spawns there too |
 | Typical source level | 32 | each source has its own five-level band, drawn from a bell curve centred here |
 | Source level spread | 14 | how widely sources spread: most sit between 25 and 40, level 1–5 is rare and 75+ rarer still |
+| Sources native to their biome | 60% | share of sources that offer a Pokémon native to where they stand (Flying types on a bridge); 0 = any species |
+| Alpha chance at a source | 2% | chance that a Pokémon a source spawns is an alpha; 0 = never |
 | Allow Legendaries · Ultra Beasts · Paradox Pokémon | off | |
 | Allow starters | off | every family in the starter picker stays off the roads |
 

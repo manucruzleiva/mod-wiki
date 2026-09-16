@@ -76,7 +76,6 @@ a battle while **every Pokémon on your team** carries it.
 
 - **Each player is asked at character creation**, and answers for themselves. Declining is one click.
   Server owners can switch the offer off for everyone.
-- **Your type spawns more often** while the challenge runs — a thumb on the scale, not a filter.
 - **An off-type catch still spends the zone.** The challenge decides what you may *use*, not how many
   tries you get. Off-type Pokémon go to the PC.
 
