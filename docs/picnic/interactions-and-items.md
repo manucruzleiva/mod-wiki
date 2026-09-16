@@ -10,7 +10,7 @@ options:
 === "Wash 🧽"
 
     Wash a Pokémon → **+friendship**. Carry either a **wet sponge**, which is used up, or a
-    [**Poke-sponge**](#poke-sponge), which never is. Friendship gained is set by `washfriendship`.
+    [**Poke-sponge**](#poke-sponge), which never is. Friendship gained is set by `/picnic config wash friendship`.
 
 === "Play 🟢"
 
@@ -28,8 +28,8 @@ particular. Both check exactly the same conditions the wheel does.
 
 ### You have to be at a picnic
 
-Both options only appear on the wheel while a **picnic table is in range** (`actiondistance`, 25
-blocks by default) — the wheel never offers something that is about to be refused. Turn
+Both options only appear on the wheel while a **picnic table is in range**
+(`/picnic config table actiondistance`, 25 blocks by default) — the wheel never offers something that is about to be refused. Turn
 `requirestable` off under `/picnic config wash` or `/picnic config play` and that option shows up
 anywhere. On a server, the wheel follows the server's settings, not your own game's.
 
@@ -39,7 +39,8 @@ does nothing either.
 
 ### One Pokémon at a time
 
-Each option has a **3-second cooldown, counted per Pokémon** (`washcooldown`, `playcooldown`). Look
+Each option has a **3-second cooldown, counted per Pokémon** (`cooldown`, under
+`/picnic config wash` and `/picnic config play`). Look
 after one and you can turn straight to the next; come back to the first and you wait. It's there so a
 single Pokémon can't be farmed for friendship, not to slow down caring for a whole team.
 

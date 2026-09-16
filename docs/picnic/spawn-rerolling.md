@@ -64,7 +64,7 @@ Fuel gets cheaper as tiers improve, and everything above Advanced costs the same
 **fuel slot** or from a nearby placed
 **[Picnic Basket](interactions-and-items.md#picnic-baskets)** — the table will pull from baskets
 automatically. Out of bread? The table tells you and the re-roll is cancelled. Each per-tier cost is
-configurable via `fuelcost <tier>` (see **[Commands & Config](commands.md)**).
+configurable via `/picnic config reroll fuelcost <tier>` (see **[Commands & Config](commands.md)**).
 
 ## Cooldown
 

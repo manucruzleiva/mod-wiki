@@ -22,7 +22,7 @@ to the tier's seat cap. Leftover side cells stay empty.
 - **Fuel** — bread consumed per re-roll, cheaper as tiers improve (7 for Basic, 5 for Advanced, 3 for
   everything above). Bread comes from the table's fuel slot or from a nearby
   **[Picnic Basket](interactions-and-items.md#picnic-baskets)**. The per-tier cost is configurable
-  (`fuelcost <tier>`).
+  (`/picnic config reroll fuelcost <tier>`).
 
 **Basic → Advanced → Expert** is the ladder. **Diving**, **Hot** and **Strange** are three steps
 sideways off the top of it: identical in what they do, different only in where they can go. See
