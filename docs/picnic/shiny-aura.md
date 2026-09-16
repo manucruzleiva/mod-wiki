@@ -60,8 +60,8 @@ See **[Commands & Config](commands.md)**:
 
 | Setting | Meaning |
 |---------|---------|
-| `/picnic shinyaura <true\|false>` | Master on/off switch for the whole feature. |
-| `/picnic auramultiplier <1..100>` | Shiny odds at a **full table**. Default **2** (double). `1` turns the aura off. |
+| `/picnic config shinyaura enabled <true\|false>` | Master on/off switch for the whole feature. |
+| `/picnic config shinyaura multiplier <1..100>` | Shiny odds at a **full table**. Default **2** (double). `1` turns the aura off. |
 
 In **Mod Menu** it's the **"Shiny odds at a full table (×)"** field, which prints the resulting ladder
 right underneath as you type.

@@ -318,6 +318,9 @@ colour and the woods it was crafted with, and your Pokémon-per-re-roll setting 
 table with nowhere to go — walled in, or ringed by void — stays put and works normally. To picnic in
 the End properly, bring the Strange table: it never drifts.
 
+A server that wants none of this switches it all off with `/picnic config hazards enabled false`. Every
+table is then plain furniture, wherever it stands.
+
 
 
 ## Placement & orientation

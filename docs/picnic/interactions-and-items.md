@@ -17,7 +17,7 @@ options:
     Play fetch → **+friendship**. Carry either a **slime ball**, which has a chance to splatter and
     be lost, or a [**Fetchball**](#fetchball), which always comes back. The Pokémon **sprints** after
     the ball, tracking it as it bounces and rolls, then **walks back at a normal pace** with it.
-    Tunables: `slimeballfriendship`, `slimeballbreakchance`.
+    Tunables: `friendship` and `breakchance`, under `/picnic config play`.
 
 When you carry both, the crafted item wins — you never spend a wet sponge while a Poke-sponge is in
 your bag.
@@ -30,7 +30,12 @@ particular. Both check exactly the same conditions the wheel does.
 
 Both options only appear on the wheel while a **picnic table is in range** (`actiondistance`, 25
 blocks by default) — the wheel never offers something that is about to be refused. Turn
-`washrequirestable` or `slimeballrequirestable` off and that option shows up anywhere.
+`requirestable` off under `/picnic config wash` or `/picnic config play` and that option shows up
+anywhere. On a server, the wheel follows the server's settings, not your own game's.
+
+Either one can be switched off outright with `/picnic config wash enabled false` or
+`/picnic config play enabled false`. The option leaves the wheel, and the Poke-sponge or the Fetchball
+does nothing either.
 
 ### One Pokémon at a time
 
@@ -58,7 +63,7 @@ as an item on the ground that never despawns, and what happens next is up to who
   counts.
 
 It has to be **your** Pokémon, within 12 blocks of you, off cooldown — and near an Advanced table if
-`slimeballrequirestable` is on. **Water is no obstacle**: the ball floats and they go in after it.
+`play requirestable` is on. **Water is no obstacle**: the ball floats and they go in after it.
 **Lava is** — a Pokémon that would have to reach into it turns around and walks back to where it was
 standing, and the ball is gone.
 
@@ -178,8 +183,9 @@ The trainer's level is matched to your party:
 
 | Setting | Meaning |
 |---------|---------|
-| `spawnappropriatelvltrainer <true\|false>` | Scale the trainer to your party's level. |
-| `trainerlevelgap <int>` | Level offset on top of the match, to make them tougher or softer. |
+| `/picnic config battleseeker matchlevel <true\|false>` | Scale the trainer to your party's level. |
+| `/picnic config battleseeker levelgap <int>` | Level offset on top of the match, to make them tougher or softer. |
+| `/picnic config battleseeker enabled <true\|false>` | Off locks the seeker slot and summons nobody; chests stop holding one after the next `/reload`. |
 
 ⚠️ The summon needs **Radical Cobblemon Trainers (RCT)** installed. Without it the Battle Seeker
 simply does nothing and the rest of the table works normally.

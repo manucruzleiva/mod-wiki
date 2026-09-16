@@ -37,7 +37,8 @@ that can't be undone.
 ## Pokémon that fly, spawn flying
 
 A re-rolled Pokémon whose species can fly is lifted **3 to 12 blocks** off the ground it appeared on,
-as far as clear air allows. Set the ceiling with `flyingspawnlift` (0 keeps everything on the ground).
+as far as clear air allows. Set the ceiling with `/picnic config reroll flyinglift` (0 keeps everything
+on the ground).
 
 And a flier that spawned on ground **below you climbs to your own altitude**. On a peak that's the
 difference between watching them circle your table and never seeing them at all, because the only
@@ -70,14 +71,15 @@ configurable via `fuelcost <tier>` (see **[Commands & Config](commands.md)**).
 To stop a table being spammed, each re-roll starts a **cooldown** (default **5 seconds**). It's
 enforced **both per-table and per-player** — whichever is still counting down blocks the re-roll, so
 you can't dodge it by hopping between tables. A blocked attempt shows a short **actionbar countdown**
-and costs no bread. Change it with `rerollcooldown <seconds>` (0 disables the wait).
+and costs no bread. Change it with `/picnic config reroll cooldown <seconds>` (0 disables the wait).
 
 ## Party TM teaching
 
 Every re-roll has a small chance (**5%** by default) that one of **your party Pokémon teaches another
 party member** one of its moves — a little picnic bonding. A Pokémon only ever learns a move it is
 **actually able to learn** (its normal learnset / TM compatibility), so it never gains an illegal move;
-if all four slots are full, one move is swapped out. Tune or disable it with `tmteachchance <0..1>`.
+if all four slots are full, one move is swapped out. Tune it with `/picnic config tmteach chance <0..1>`,
+or switch it off with `/picnic config tmteach enabled false`.
 
 ## Snack bias
 
