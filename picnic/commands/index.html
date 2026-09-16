@@ -1269,22 +1269,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#picnic-the-settings" class="md-nav__link">
+  <a href="#picnic-config-the-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        /picnic — the settings
+        /picnic config — the settings
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="/picnic — the settings">
+    <nav class="md-nav" aria-label="/picnic config — the settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#attributes" class="md-nav__link">
+  <a href="#features-and-their-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Attributes
+        Features and their settings
       
     </span>
   </a>
@@ -2108,22 +2108,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#picnic-the-settings" class="md-nav__link">
+  <a href="#picnic-config-the-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        /picnic — the settings
+        /picnic config — the settings
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="/picnic — the settings">
+    <nav class="md-nav" aria-label="/picnic config — the settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#attributes" class="md-nav__link">
+  <a href="#features-and-their-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Attributes
+        Features and their settings
       
     </span>
   </a>
@@ -2232,31 +2232,39 @@
 
 <h1 id="commands-config">Commands &amp; Config<a class="headerlink" href="#commands-config" title="Permanent link">&para;</a></h1>
 <p>Everything lives under one command: <strong><code>/picnic</code></strong>.</p>
-<div class="highlight"><pre><span></span><code>/picnic                             # print every setting (anyone)
-/picnic &lt;attribute&gt; &lt;value&gt;         # change one setting (operator)
-/picnic &lt;attribute&gt; default         # put that one setting back to its default (operator)
-/picnic stats                       # picnic statistics (anyone)
-/picnic stats player|dimension|species &lt;value&gt;   # one slice of them (anyone)
-/picnic stats shiny                 # just the shinies (anyone)
-/picnic stats reset                 # clear the aggregates (operator)
-/picnic reload                      # re-read the config file from disk (operator)
-/picnic reset                       # restore every default (operator)
+<div class="highlight"><pre><span></span><code>/picnic                                           # print every setting (anyone)
+/picnic config                                    # the same listing, for an operator
+/picnic config &lt;feature&gt;                          # one feature's settings (operator)
+/picnic config &lt;feature&gt; &lt;setting&gt; &lt;value&gt;        # change one (operator)
+/picnic config &lt;feature&gt; &lt;setting&gt; default        # put it back to its default (operator)
+/picnic config &lt;feature&gt; reset                    # put the whole feature back (operator)
+/picnic stats                                     # picnic statistics (anyone)
+/picnic stats player|dimension|species &lt;value&gt;    # one slice of them (anyone)
+/picnic stats shiny                               # just the shinies (anyone)
+/picnic stats reset                               # clear the aggregates (operator)
+/picnic reload                                    # re-read the config file from disk (operator)
+/picnic reset                                     # restore every default (operator)
 </code></pre></div>
-<p><code>default</code> works on <strong>every</strong> attribute — you never have to look up what the shipped value was.</p>
-<h2 id="picnic-the-settings"><code>/picnic</code> — the settings<a class="headerlink" href="#picnic-the-settings" title="Permanent link">&para;</a></h2>
-<p>Open to <strong>everyone</strong>: knowing the shiny-aura multiplier and the re-roll cooldown you're playing under
-is part of playing. Changing anything needs <strong>operator</strong> rank.</p>
-<div class="highlight"><pre><span></span><code>/picnic auramultiplier 3          # a full table triples shiny odds
-/picnic auramultiplier default    # back to ×2
-/picnic reroll false              # switch the spawn re-roll off entirely
-/picnic spawncap expert 16      # per-tier settings take the tier in the middle
-/picnic spawncap expert default
+<p><code>default</code> works on <strong>every</strong> setting — you never have to look up what the shipped value was.</p>
+<h2 id="picnic-config-the-settings"><code>/picnic config</code> — the settings<a class="headerlink" href="#picnic-config-the-settings" title="Permanent link">&para;</a></h2>
+<p>Reading them is open to <strong>everyone</strong> through <code>/picnic</code>: knowing the shiny-aura multiplier and the
+re-roll cooldown you're playing under is part of playing. Changing anything needs <strong>operator</strong> rank.</p>
+<p>Every feature has an <code>enabled</code> switch, so a server can keep the picnic and drop any part of it.</p>
+<div class="highlight"><pre><span></span><code>/picnic config shinyaura multiplier 3             # a full table triples shiny odds
+/picnic config shinyaura multiplier default       # back to ×2
+/picnic config reroll enabled false               # switch the spawn re-roll off entirely
+/picnic config reroll spawncap expert 16          # per-tier settings take the tier in the middle
+/picnic config reroll protectshiny expert true    # per-rung settings take the rung
+/picnic config wash reset                         # every washing setting back to its default
 </code></pre></div>
-<h3 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h3>
+<p>Tiers are <code>basic</code>, <code>advanced</code>, <code>expert</code>, <code>diving</code>, <code>hot</code> and <code>strange</code>. Rungs are <code>basic</code>, <code>advanced</code>
+and <code>expert</code>; the Diving, Hot and Strange tables count as <code>expert</code>.</p>
+<h3 id="features-and-their-settings">Features and their settings<a class="headerlink" href="#features-and-their-settings" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Attribute</th>
+<th>Feature</th>
+<th>Setting</th>
 <th>Value</th>
 <th>What it does</th>
 </tr>
@@ -2264,144 +2272,213 @@ is part of playing. Changing anything needs <strong>operator</strong> rank.</p>
 <tbody>
 <tr>
 <td><code>reroll</code></td>
+<td><code>enabled</code></td>
 <td>true/false</td>
-<td>Master switch for the <a href="../spawn-rerolling/">spawn re-roll</a> itself. <em>Default on.</em></td>
+<td>The <a href="../spawn-rerolling/">spawn re-roll</a> itself. <em>Default on.</em></td>
 </tr>
 <tr>
+<td></td>
+<td><code>cooldown</code></td>
+<td>0–3600</td>
+<td>Seconds between re-rolls, per table <strong>and</strong> per player. <em>Default 5. 0 disables.</em></td>
+</tr>
+<tr>
+<td></td>
 <td><code>spawncap &lt;tier&gt;</code></td>
 <td>int</td>
 <td>Max Pokémon per re-roll for that tier.</td>
 </tr>
 <tr>
+<td></td>
 <td><code>fuelcost &lt;tier&gt;</code></td>
 <td>int</td>
-<td>Bread consumed per re-roll for that tier (7 for Basic, 5 for Advanced, 3 above).</td>
+<td>Bread per re-roll for that tier (7 Basic, 5 Advanced, 3 above). <code>0</code> makes it free.</td>
 </tr>
 <tr>
-<td><code>rerollcooldown</code></td>
-<td>0–3600</td>
-<td>Seconds between re-rolls (per-table <strong>and</strong> per-player). <em>Default 5. 0 disables.</em></td>
+<td></td>
+<td><code>flyinglift</code></td>
+<td>0–64</td>
+<td>How high re-rolled fliers are lifted off the ground (default <code>12</code>, <code>0</code> grounds them). Never changes <em>which</em> Pokémon spawn.</td>
 </tr>
 <tr>
-<td><code>tmteachchance</code></td>
+<td></td>
+<td><code>protectshiny &lt;rung&gt;</code></td>
+<td>true/false</td>
+<td>The re-roll keeps <strong>shiny</strong> wild Pokémon instead of despawning them. <em>Default off.</em></td>
+</tr>
+<tr>
+<td></td>
+<td><code>protectlegendary &lt;rung&gt;</code></td>
+<td>true/false</td>
+<td>Keeps <strong>legendary</strong> wild Pokémon. <em>Default off.</em></td>
+</tr>
+<tr>
+<td></td>
+<td><code>protectmythical &lt;rung&gt;</code></td>
+<td>true/false</td>
+<td>Keeps <strong>mythical</strong> wild Pokémon. <em>Default off.</em></td>
+</tr>
+<tr>
+<td></td>
+<td><code>protectultrabeast &lt;rung&gt;</code></td>
+<td>true/false</td>
+<td>Keeps <strong>Ultra Beast</strong> wild Pokémon. <em>Default off.</em></td>
+</tr>
+<tr>
+<td><code>snackbias</code></td>
+<td><code>enabled</code></td>
+<td>true/false</td>
+<td>A re-roll borrows the spawn influences of a nearby seasoned poke-snack. <em>Default off.</em></td>
+</tr>
+<tr>
+<td><code>tmteach</code></td>
+<td><code>enabled</code></td>
+<td>true/false</td>
+<td><a href="../spawn-rerolling/#party-tm-teaching">Party TM teaching</a> on a re-roll. <em>Default on.</em></td>
+</tr>
+<tr>
+<td></td>
+<td><code>chance</code></td>
 <td>0..1</td>
-<td>Chance per re-roll a party Pokémon teaches another a legal move. <em>Default 0.05. 0 disables.</em></td>
+<td>Chance per re-roll. <em>Default 0.05.</em></td>
 </tr>
 <tr>
 <td><code>shinyaura</code></td>
+<td><code>enabled</code></td>
 <td>true/false</td>
-<td>Master switch for the <a href="../shiny-aura/">Shiny Aura</a>.</td>
+<td>The <a href="../shiny-aura/">Shiny Aura</a>. <em>Default on.</em></td>
 </tr>
 <tr>
-<td><code>auramultiplier</code></td>
+<td></td>
+<td><code>multiplier</code></td>
 <td>1–100</td>
 <td>How many times better your shiny odds get at a <strong>full table</strong>. <em>Default 2 (double).</em></td>
 </tr>
 <tr>
-<td><code>light</code></td>
-<td>0–15</td>
-<td>Light level emitted by the table.</td>
-</tr>
-<tr>
-<td><code>deployonsit</code></td>
+<td><code>deploy</code></td>
+<td><code>enabled</code></td>
 <td>true/false</td>
-<td>Whether sitting deploys your party.</td>
+<td>Sitting down sends out your party. <em>Default on.</em></td>
 </tr>
 <tr>
-<td><code>deploydistance &lt;min&gt; &lt;max&gt;</code></td>
-<td>two numbers</td>
-<td>How far out party members land when you sit (default <code>4 7</code>). Each Pokémon rolls its own distance in the band.</td>
+<td></td>
+<td><code>mindistance</code></td>
+<td>0–32</td>
+<td>Closest a party member lands, in blocks. <em>Default 4.</em></td>
 </tr>
 <tr>
-<td><code>actiondistance</code></td>
-<td>number</td>
-<td>Interaction range for picnic actions.</td>
+<td></td>
+<td><code>maxdistance</code></td>
+<td>0–32</td>
+<td>Furthest a party member lands. <em>Default 7.</em> Each Pokémon rolls its own distance in the band, and a max below the min is raised to it.</td>
 </tr>
 <tr>
-<td><code>washfriendship</code></td>
-<td>int</td>
-<td>Friendship gained from <a href="../interactions-and-items/">washing</a>.</td>
-</tr>
-<tr>
-<td><code>washrequirestable</code></td>
-<td>true/false</td>
-<td>Require a nearby table to wash. Off also shows the option on the wheel everywhere.</td>
-</tr>
-<tr>
-<td><code>washcooldown</code></td>
-<td>seconds</td>
-<td>Wait between washes, <strong>per Pokémon</strong> (default <code>3</code>).</td>
-</tr>
-<tr>
-<td><code>slimeballfriendship</code></td>
-<td>int</td>
-<td>Friendship gained from <a href="../interactions-and-items/">playing</a>.</td>
-</tr>
-<tr>
-<td><code>slimeballbreakchance</code></td>
-<td>0..1</td>
-<td>Chance the slime ball breaks when playing. A <a href="../interactions-and-items/#fetchball">Fetchball</a> ignores this.</td>
-</tr>
-<tr>
-<td><code>slimeballrequirestable</code></td>
-<td>true/false</td>
-<td>Require a nearby table to play. Off also shows the option on the wheel everywhere.</td>
-</tr>
-<tr>
-<td><code>playcooldown</code></td>
-<td>seconds</td>
-<td>Wait between plays, <strong>per Pokémon</strong> (default <code>3</code>).</td>
-</tr>
-<tr>
-<td><code>flyingspawnlift</code></td>
-<td>blocks</td>
-<td>How high re-rolled fliers are lifted off the ground (default <code>12</code>, <code>0</code> grounds them). Never changes <em>which</em> Pokémon spawn.</td>
-</tr>
-<tr>
-<td><code>spawnappropriatelvltrainer</code></td>
-<td>true/false</td>
-<td>Scale <a href="../interactions-and-items/#battle-seeker">Battle Seeker</a> trainers to your level.</td>
-</tr>
-<tr>
-<td><code>trainerlevelgap</code></td>
-<td>int</td>
-<td>Level offset for summoned trainers.</td>
-</tr>
-<tr>
-<td><code>protectshiny</code></td>
-<td>true/false</td>
-<td>Re-roll keeps <strong>shiny</strong> wild Pokémon instead of despawning them. <em>Default off.</em></td>
-</tr>
-<tr>
-<td><code>protectlegendary</code></td>
-<td>true/false</td>
-<td>Re-roll keeps <strong>legendary</strong> wild Pokémon. <em>Default off.</em></td>
-</tr>
-<tr>
-<td><code>protectmythical</code></td>
-<td>true/false</td>
-<td>Re-roll keeps <strong>mythical</strong> wild Pokémon. <em>Default off.</em></td>
-</tr>
-<tr>
-<td><code>protectultrabeast</code></td>
-<td>true/false</td>
-<td>Re-roll keeps <strong>Ultra Beast</strong> wild Pokémon. <em>Default off.</em></td>
-</tr>
-<tr>
-<td><code>disableseatedaggro</code></td>
+<td><code>peaceful</code></td>
+<td><code>enabled</code></td>
 <td>true/false</td>
 <td>While someone is seated, hostile mobs <strong>flee</strong> the table. <em>Default on.</em></td>
 </tr>
 <tr>
-<td><code>seatedrepelradius</code></td>
+<td></td>
+<td><code>radius</code></td>
 <td>0–128</td>
-<td>How far (blocks) the seated mob-repulsion reaches. <em>Default 30.</em></td>
+<td>How far that reaches, in blocks. <em>Default 30.</em></td>
+</tr>
+<tr>
+<td><code>wash</code></td>
+<td><code>enabled</code></td>
+<td>true/false</td>
+<td><a href="../interactions-and-items/">Washing</a>, from the wheel or with a Poke-sponge. <em>Default on.</em></td>
+</tr>
+<tr>
+<td></td>
+<td><code>friendship</code></td>
+<td>int</td>
+<td>Friendship gained from a wash.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>cooldown</code></td>
+<td>seconds</td>
+<td>Wait between washes, <strong>per Pokémon</strong>. <em>Default 3.</em></td>
+</tr>
+<tr>
+<td></td>
+<td><code>requirestable</code></td>
+<td>true/false</td>
+<td>Need a nearby table to wash. Off also shows the option on the wheel everywhere.</td>
+</tr>
+<tr>
+<td><code>play</code></td>
+<td><code>enabled</code></td>
+<td>true/false</td>
+<td><a href="../interactions-and-items/">Playing fetch</a>, from the wheel or with a thrown Fetchball. <em>Default on.</em></td>
+</tr>
+<tr>
+<td></td>
+<td><code>friendship</code></td>
+<td>int</td>
+<td>Friendship gained from a game.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>breakchance</code></td>
+<td>0..1</td>
+<td>Chance a slime ball splatters. A <a href="../interactions-and-items/#fetchball">Fetchball</a> ignores this.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>cooldown</code></td>
+<td>seconds</td>
+<td>Wait between games, <strong>per Pokémon</strong>. <em>Default 3.</em></td>
+</tr>
+<tr>
+<td></td>
+<td><code>requirestable</code></td>
+<td>true/false</td>
+<td>Need a nearby table to play. Off also shows the option on the wheel everywhere.</td>
+</tr>
+<tr>
+<td><code>battleseeker</code></td>
+<td><code>enabled</code></td>
+<td>true/false</td>
+<td>The <a href="../interactions-and-items/#battle-seeker">Battle Seeker</a>. Off locks its slot and summons nobody; chests stop holding one after the next <code>/reload</code>. <em>Default on.</em></td>
+</tr>
+<tr>
+<td></td>
+<td><code>matchlevel</code></td>
+<td>true/false</td>
+<td>Scale summoned trainers to your party's level.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>levelgap</code></td>
+<td>int</td>
+<td>Level offset for summoned trainers.</td>
+</tr>
+<tr>
+<td><code>hazards</code></td>
+<td><code>enabled</code></td>
+<td>true/false</td>
+<td>What a table carries between dimensions — <a href="../picnic-tables/#where-each-table-can-go">burning, scorching, flooding and drifting</a>. Off, every table is plain furniture. <em>Default on.</em></td>
+</tr>
+<tr>
+<td><code>table</code></td>
+<td><code>light</code></td>
+<td>0–15</td>
+<td>Light level emitted by the table. Re-place a table to relight it.</td>
+</tr>
+<tr>
+<td></td>
+<td><code>actiondistance</code></td>
+<td>number</td>
+<td>How close a table has to be for the table-gated actions.</td>
 </tr>
 </tbody>
 </table>
-<p>The four <code>protect…</code> toggles are <strong>opt-in</strong> and granular — turn on only the rarities you want the
-re-roll to spare. <code>disableseatedaggro</code> is <strong>on by default</strong>: sit at a table and hostile mobs within
-<code>seatedrepelradius</code> blocks lose their target and run away, like a creeper fleeing a cat.</p>
+<p>The four <code>protect…</code> settings are <strong>opt-in</strong> and granular: turn on only the rarities you want the
+re-roll to spare, on only the rungs you want. <code>peaceful</code> is <strong>on by default</strong>: sit at a table and
+hostile mobs within <code>radius</code> blocks lose their target and run away, like a creeper fleeing a cat.</p>
 <h2 id="picnic-stats"><code>/picnic stats</code><a class="headerlink" href="#picnic-stats" title="Permanent link">&para;</a></h2>
 <p>Available to <strong>everyone</strong>. Shows a summary of picnic activity:</p>
 <ul>
@@ -2432,14 +2509,16 @@ so a filter can look back further than the last <code>stats reset</code>.</p>
 <p>With <strong><a href="https://modrinth.com/mod/cloth-config">Cloth Config</a></strong> installed, the same values are editable
 in a GUI — on Fabric via <strong><a href="https://modrinth.com/mod/modmenu">Mod Menu</a> → Cobblemon Picnic → Settings</strong>,
 on NeoForge via the <strong>Config</strong> button in the mods list.</p>
-<p>⚠️ On a <strong>dedicated server</strong> that screen only edits <strong>your own</strong> client's file. Use the commands above
-to change the settings everyone plays under.</p>
+<p>⚠️ On a <strong>server</strong> that screen only edits <strong>your own</strong> game's file, and says so at the top. Use
+<code>/picnic config</code> to change the settings everyone plays under.</p>
 <h2 id="the-config-file">The config file<a class="headerlink" href="#the-config-file" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>config/cobblemon_picnic.json          # settings
 config/cobblemon_picnic_stats.json    # statistics aggregates
 config/cobblemon_picnic_events.jsonl  # granular per-re-roll log
 </code></pre></div>
-<p>Edit the first by hand if you like, then apply it with <code>/picnic reload</code> — no restart needed.</p>
+<p>Edit the first by hand if you like, then apply it with <code>/picnic reload</code> — no restart needed. If the
+file can't be read, <code>/picnic reload</code> says why and changes nothing, and the mod leaves the file alone
+until it is fixed: settings changed in the meantime last until the server stops.</p>
 <h2 id="defaults">Defaults<a class="headerlink" href="#defaults" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2500,7 +2579,8 @@ config/cobblemon_picnic_events.jsonl  # granular per-re-roll log
 (per-table <em>and</em> per-player), party TM cross-teach <strong>5%</strong>, full-table shiny multiplier <strong>×2</strong>, wash
 and play cooldowns <strong>3 s</strong> each (per Pokémon), party deploy <strong>4–7 blocks</strong>.</p>
 <h3 id="picnic-without-the-spawn-manipulation">Picnic without the spawn manipulation<a class="headerlink" href="#picnic-without-the-spawn-manipulation" title="Permanent link">&para;</a></h3>
-<p><code>/picnic reroll false</code> switches the re-roll off entirely — left-clicking a table then spawns and
+<p><code>/picnic config reroll enabled false</code> switches the re-roll off entirely — right-clicking a table then
+spawns and
 despawns nothing, and costs no bread. Seats, the <a href="../shiny-aura/">Shiny Aura</a>, baskets, the
 <a href="../interactions-and-items/#battle-seeker">Battle Seeker</a> and the
 <a href="../interactions-and-items/">care interactions</a> all keep working.</p>

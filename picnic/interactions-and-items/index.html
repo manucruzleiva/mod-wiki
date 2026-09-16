@@ -2305,13 +2305,13 @@ options:</p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Wash a Pokémon → <strong>+friendship</strong>. Carry either a <strong>wet sponge</strong>, which is used up, or a
-<a href="#poke-sponge"><strong>Poke-sponge</strong></a>, which never is. Friendship gained is set by <code>washfriendship</code>.</p>
+<a href="#poke-sponge"><strong>Poke-sponge</strong></a>, which never is. Friendship gained is set by <code>/picnic config wash friendship</code>.</p>
 </div>
 <div class="tabbed-block">
 <p>Play fetch → <strong>+friendship</strong>. Carry either a <strong>slime ball</strong>, which has a chance to splatter and
 be lost, or a <a href="#fetchball"><strong>Fetchball</strong></a>, which always comes back. The Pokémon <strong>sprints</strong> after
 the ball, tracking it as it bounces and rolls, then <strong>walks back at a normal pace</strong> with it.
-Tunables: <code>slimeballfriendship</code>, <code>slimeballbreakchance</code>.</p>
+Tunables: <code>friendship</code> and <code>breakchance</code>, under <code>/picnic config play</code>.</p>
 </div>
 </div>
 </div>
@@ -2321,11 +2321,16 @@ your bag.</p>
 wash it there and then; and the <strong>Fetchball</strong> can simply be <a href="#fetchball">thrown</a>, at nothing in
 particular. Both check exactly the same conditions the wheel does.</p>
 <h3 id="you-have-to-be-at-a-picnic">You have to be at a picnic<a class="headerlink" href="#you-have-to-be-at-a-picnic" title="Permanent link">&para;</a></h3>
-<p>Both options only appear on the wheel while a <strong>picnic table is in range</strong> (<code>actiondistance</code>, 25
-blocks by default) — the wheel never offers something that is about to be refused. Turn
-<code>washrequirestable</code> or <code>slimeballrequirestable</code> off and that option shows up anywhere.</p>
+<p>Both options only appear on the wheel while a <strong>picnic table is in range</strong>
+(<code>/picnic config table actiondistance</code>, 25 blocks by default) — the wheel never offers something that is about to be refused. Turn
+<code>requirestable</code> off under <code>/picnic config wash</code> or <code>/picnic config play</code> and that option shows up
+anywhere. On a server, the wheel follows the server's settings, not your own game's.</p>
+<p>Either one can be switched off outright with <code>/picnic config wash enabled false</code> or
+<code>/picnic config play enabled false</code>. The option leaves the wheel, and the Poke-sponge or the Fetchball
+does nothing either.</p>
 <h3 id="one-pokemon-at-a-time">One Pokémon at a time<a class="headerlink" href="#one-pokemon-at-a-time" title="Permanent link">&para;</a></h3>
-<p>Each option has a <strong>3-second cooldown, counted per Pokémon</strong> (<code>washcooldown</code>, <code>playcooldown</code>). Look
+<p>Each option has a <strong>3-second cooldown, counted per Pokémon</strong> (<code>cooldown</code>, under
+<code>/picnic config wash</code> and <code>/picnic config play</code>). Look
 after one and you can turn straight to the next; come back to the first and you wait. It's there so a
 single Pokémon can't be farmed for friendship, not to slow down caring for a whole team.</p>
 <h2 id="crafted-care-items">Crafted care items<a class="headerlink" href="#crafted-care-items" title="Permanent link">&para;</a></h2>
@@ -2344,7 +2349,7 @@ as an item on the ground that never despawns, and what happens next is up to who
   counts.</li>
 </ul>
 <p>It has to be <strong>your</strong> Pokémon, within 12 blocks of you, off cooldown — and near an Advanced table if
-<code>slimeballrequirestable</code> is on. <strong>Water is no obstacle</strong>: the ball floats and they go in after it.
+<code>play requirestable</code> is on. <strong>Water is no obstacle</strong>: the ball floats and they go in after it.
 <strong>Lava is</strong> — a Pokémon that would have to reach into it turns around and walks back to where it was
 standing, and the ball is gone.</p>
 <div class="cr-scroll">
@@ -2516,12 +2521,16 @@ for bread.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>spawnappropriatelvltrainer &lt;true\|false&gt;</code></td>
+<td><code>/picnic config battleseeker matchlevel &lt;true\|false&gt;</code></td>
 <td>Scale the trainer to your party's level.</td>
 </tr>
 <tr>
-<td><code>trainerlevelgap &lt;int&gt;</code></td>
+<td><code>/picnic config battleseeker levelgap &lt;int&gt;</code></td>
 <td>Level offset on top of the match, to make them tougher or softer.</td>
+</tr>
+<tr>
+<td><code>/picnic config battleseeker enabled &lt;true\|false&gt;</code></td>
+<td>Off locks the seeker slot and summons nobody; chests stop holding one after the next <code>/reload</code>.</td>
 </tr>
 </tbody>
 </table>

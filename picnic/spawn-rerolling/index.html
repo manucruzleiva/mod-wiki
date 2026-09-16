@@ -2201,7 +2201,8 @@ rather than reporting a silent zero. The bread is still spent: the area was clea
 that can't be undone.</p>
 <h2 id="pokemon-that-fly-spawn-flying">Pokémon that fly, spawn flying<a class="headerlink" href="#pokemon-that-fly-spawn-flying" title="Permanent link">&para;</a></h2>
 <p>A re-rolled Pokémon whose species can fly is lifted <strong>3 to 12 blocks</strong> off the ground it appeared on,
-as far as clear air allows. Set the ceiling with <code>flyingspawnlift</code> (0 keeps everything on the ground).</p>
+as far as clear air allows. Set the ceiling with <code>/picnic config reroll flyinglift</code> (0 keeps everything
+on the ground).</p>
 <p>And a flier that spawned on ground <strong>below you climbs to your own altitude</strong>. On a peak that's the
 difference between watching them circle your table and never seeing them at all, because the only
 ground for a hundred blocks was somewhere down the mountainside. Clear air still has the final say, so
@@ -2238,17 +2239,18 @@ it always did.</p>
 <strong>fuel slot</strong> or from a nearby placed
 <strong><a href="../interactions-and-items/#picnic-baskets">Picnic Basket</a></strong> — the table will pull from baskets
 automatically. Out of bread? The table tells you and the re-roll is cancelled. Each per-tier cost is
-configurable via <code>fuelcost &lt;tier&gt;</code> (see <strong><a href="../commands/">Commands &amp; Config</a></strong>).</p>
+configurable via <code>/picnic config reroll fuelcost &lt;tier&gt;</code> (see <strong><a href="../commands/">Commands &amp; Config</a></strong>).</p>
 <h2 id="cooldown">Cooldown<a class="headerlink" href="#cooldown" title="Permanent link">&para;</a></h2>
 <p>To stop a table being spammed, each re-roll starts a <strong>cooldown</strong> (default <strong>5 seconds</strong>). It's
 enforced <strong>both per-table and per-player</strong> — whichever is still counting down blocks the re-roll, so
 you can't dodge it by hopping between tables. A blocked attempt shows a short <strong>actionbar countdown</strong>
-and costs no bread. Change it with <code>rerollcooldown &lt;seconds&gt;</code> (0 disables the wait).</p>
+and costs no bread. Change it with <code>/picnic config reroll cooldown &lt;seconds&gt;</code> (0 disables the wait).</p>
 <h2 id="party-tm-teaching">Party TM teaching<a class="headerlink" href="#party-tm-teaching" title="Permanent link">&para;</a></h2>
 <p>Every re-roll has a small chance (<strong>5%</strong> by default) that one of <strong>your party Pokémon teaches another
 party member</strong> one of its moves — a little picnic bonding. A Pokémon only ever learns a move it is
 <strong>actually able to learn</strong> (its normal learnset / TM compatibility), so it never gains an illegal move;
-if all four slots are full, one move is swapped out. Tune or disable it with <code>tmteachchance &lt;0..1&gt;</code>.</p>
+if all four slots are full, one move is swapped out. Tune it with <code>/picnic config tmteach chance &lt;0..1&gt;</code>,
+or switch it off with <code>/picnic config tmteach enabled false</code>.</p>
 <h2 id="snack-bias">Snack bias<a class="headerlink" href="#snack-bias" title="Permanent link">&para;</a></h2>
 <p>If a <strong>seasoned <code>poke_snack</code></strong> is nearby when you re-roll, the spawn <strong>respects that snack's spawn
 influence</strong> (so you can bias toward what the snack attracts) and <strong>consumes one bite</strong> of the closest
