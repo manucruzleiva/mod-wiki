@@ -20,14 +20,15 @@ flowchart LR
 | `/nuzlocke status [player]` | 👤 / 🛡️ | Zone records + party deaths (`[player]` is op-only). |
 | `/nuzlocke log` · key **I** | 👤 | The run's log — the Soul Link log while you are in a link. |
 | `/nuzlocke map` | 👤 | Dump your capture zones as map waypoints. |
-| `/nuzlocke reset [player]` | 🛡️ | Clear a player's zone records and lift their game-over. |
+| `/nuzlocke reset [player]` | 🛡️ | Clear a player's zone records, lift their game-over and ask for a new Gym Leader Challenge type. They keep their team. |
 | `/nuzlocke revive [player]` | 🛡️ | Revive a party's dead Pokémon. The mercy switch. |
 | `/nuzlocke enable` · `disable` | 🛡️ | Master switch for this world, saved per world. |
 | `/nuzlocke config list` | 👤 | Every setting for this world with its current value, by section. |
 | `/nuzlocke config get <setting>` | 👤 | Read one setting back. |
 | `/nuzlocke config set <setting> <value>` | 🛡️ | Change one, live. Offers the names and refuses a value out of range. |
 | `/nuzlocke config reset <setting>` | 🛡️ | Put one back to its default. |
-| `/nuzlocke config reload` | 🛡️ | Re-read the settings file from disk. |
+| `/nuzlocke config reload` | 🛡️ | Re-read `config/cobblemon_nuzlocke.json`, no restart needed. A world with its own settings keeps them. |
+| `/nuzlocke config unoverride` | 🛡️ | Drop this world's own settings, so it follows the config files again. |
 | `/nuzlocke set <option> <value>` | 🛡️ | The older spelling of `config set`, kept working. |
 | `/nuzlocke debug exp` | 🛡️ | Log what the level cap decides for each EXP gain. |
 | `/nuzlocke soullink …` | 👤 | The co-op suite — see [Soul Link](soul-link.md). |
