@@ -27,8 +27,8 @@ flowchart TD
 | 🔁 **Duplicates clause** | A Pokémon whose line you already own cannot be caught, and does not spend the zone — that encounter waits for something new. What you own includes your starter, gifts, trades and everything you have evolved. |
 | 🥚 **Egg clause** | A hatchling is tied to where it **hatches**, like a wild catch. Eggs can also be banned outright, or exempted. |
 | 😴 **Defeated Catch** | A wild you beat lies on the ground for a while, asleep at 1 HP and catchable — a second chance at the encounter, KO experience included. |
-| 🏥 **Whiteout** | Losing a battle sends you to the **nearest city**. Running out of usable Pokémon anywhere is a Game Over. |
-| 📈 **Level cap** | Follows your trainer card. Catches above it go straight to the PC, and nothing above it will pick a fight with you. |
+| 🏥 **Whiteout** | Losing a battle sends you back to your **respawn point**: the last Pokémon Center you used, or your bed, or the world spawn without one. Running out of usable Pokémon anywhere is a Game Over. |
+| 📈 **Level cap** | Follows your trainer card. Catches above it go straight to the PC, and no wild Pokémon above it turns a hit into a battle. |
 | 🎒 **No bag in battle** | The battle bag is closed. A second mode blocks **only healing**, leaving X items legal — Poké Balls are never blocked. |
 
 ### Zones
@@ -101,29 +101,26 @@ a battle while **every Pokémon on your team** carries it.
 -   ### 🏆 The Elite Four on a road
 
     One league per world, standing out on a route between settlements as a place of its own, with
-    its own marker on the map.
+    its own marker on the map. It has its own switch, apart from the gyms.
 
 -   ### 🧗 The Escape Rope
 
-    A one-tap trip back to the nearest known town — and it will not fire mid-battle.
+    A one-tap trip back to your respawn point — and it will not fire mid-battle.
 
 </div>
 
 ## 🧗 Escape Rope
 
-Use it and you are whisked to the **nearest known town** on
-[Routes'](../routes/index.md) network — and because every activated waystone registers as a town, it
-works whether or not you run the Waystones mod.
+Use it and you are whisked back to your **respawn point**, the same place a whiteout sends you.
 
 | | |
 | --- | --- |
-| **Where it sends you** | the closest discovered town, on a safe dry column |
+| **Where it sends you** | the last Pokémon Center you used, or your bed or respawn anchor; the world spawn if you have none |
 | **Restrictions** | Overworld only, never mid-battle, 10-second cooldown |
 | **Cost** | one rope per use, free in creative |
 
-No known town yet? The rope refuses and says so — go find a village or activate a waystone first.
-And on a Nuzlocke run, refusing to fire mid-battle is the whole point: a fight you started is a fight
-you finish.
+On a Nuzlocke run, refusing to fire mid-battle is the whole point: a fight you started is a fight you
+finish.
 
 ### 🪢 Crafting
 

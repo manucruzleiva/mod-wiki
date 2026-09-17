@@ -70,7 +70,7 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | First-encounter lock | on | only the first wild per zone is catchable |
 | Site encounters | on | structures grant one encounter per **kind** of site; off = none at all |
 | Mandatory nicknames | on | the naming prompt |
-| Whiteout | To Nearest City | what losing a battle does — city, Game Over, or nothing |
+| Whiteout | To Respawn Point | what losing a battle does — back to your respawn point, Game Over, or nothing |
 | Healing sources | ALL | ALL / MACHINES_ONLY / ITEMS_ONLY / NONE |
 | No bag in battle | on | closes the battle bag |
 | Battle bag blocks | Everything | Everything, or **Healing only** — X items stay legal either way |
@@ -88,7 +88,6 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | Dupes match · Dupes count | evolution line · ever caught | the two halves of the duplicates clause |
 | Mega / Tera OK | on | under a Gym Leader Challenge, a Mega or Tera of your type still counts |
 | Allow Mega · Gigantamax · Z-Moves · Tera | on | switch off any battle gimmick for a stricter run |
-| EXP per KO | on | EXP awarded mid-battle rather than only at the end |
 | Duplicates clause | evolution line | what counts as "already owned" |
 | Egg clause | Encounter | the hatchling takes the zone it hatches in — or ban eggs, or exempt them |
 | Defeated-catch window | 60 s | how long a beaten wild stays catchable — or off |
@@ -129,9 +128,10 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | Trainers challenge on sight | on | off = they stay on the roads and never start a fight; you still battle them by right-clicking |
 | Trainers holding post | 70% | share that stay put instead of wandering, 0–100 |
 | Water crossing trainers | — | name fragments used to pick who stands on a water crossing |
-| Fair-fight guard | on | a trainer far above your level never picks the fight |
-| Max trainer level gap | 5 | 0–50 |
+| Fair-fight guard | on | a trainer too far above your strongest Pokémon never picks the fight |
+| Max trainer level gap | 5 | how many levels above your strongest Pokémon a trainer may be and still challenge you, 0–50 |
 | Gyms beside towns | on | needs a gym pack |
+| Elite Four | on | one league building per world, beside a road; needs a league pack |
 | Gyms on the surface | on | lifts a gym whose own definition would bury it |
 
 ### Route Pokémon
@@ -144,6 +144,9 @@ that stage is about to evolve, about one of the next stage for every three, five
   under a water crossing. A source on a bridge deck leans toward Flying types instead.
 - **Each source keeps its own number of Pokémon out**, picked once from a range.
 - **Now and then a source spawns an alpha**, which counts as the zone's encounter like any other.
+- **Now and then a source spawns an aggressive Pokémon**, which comes after you on sight; its first
+  hit starts a battle.
+- **A route too short for the spacing still gets one source**, halfway along.
 
 Needs Cobblemon 1.8.
 
@@ -151,13 +154,14 @@ Needs Cobblemon 1.8.
 | --- | :---: | --- |
 | Route encounters | On | Off leaves roads with the ordinary spawns |
 | Distance between sources | 128 | blocks of road from one source to the next, 32–512 |
-| Source looks like | `minecraft:diamond_block` | the block a source is disguised as; set it to the road's own surface to hide them |
+| Source looks like | *(empty)* | empty: each source looks like the block it was set into; a block id (e.g. `minecraft:diamond_block`) makes every source that block |
 | Fewest Pokémon out per source | 2 | the bottom of the range each source picks its number from, 1–64 |
 | Most Pokémon out per source | 10 | the top of that range: how many of its own a source can have out at once |
 | Source spawn chance per tick | 100% | 100 refills a source at once, 1 is about one Pokémon every five seconds |
 | Wild spawns held back around a source | 16 | blocks around a source where only its own Pokémon appear; 0 = ordinary spawns there too |
 | Typical source level | 32 | each source has its own five-level band, drawn from a bell curve centred here |
 | Source level spread | 14 | how widely sources spread: most sit between 25 and 40, level 1–5 is rare and 75+ rarer still |
+| Aggressive chance at a source | 10% | chance that a Pokémon a source spawns is aggressive; 0 = never |
 | Sources native to their biome | 60% | share of sources that offer a Pokémon native to where they stand (Flying types on a bridge); 0 = any species |
 | Alpha chance at a source | 2% | chance that a Pokémon a source spawns is an alpha; 0 = never |
 | Allow Legendaries · Ultra Beasts · Paradox Pokémon | off | |
