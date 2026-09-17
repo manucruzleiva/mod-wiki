@@ -533,6 +533,8 @@
       
         
       
+        
+      
     
     
     
@@ -631,6 +633,34 @@
     
   
     Dynamic Routes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../which-structures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Which Structures Get Roads
   
 
     
@@ -1060,6 +1090,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        remove — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#settlement-add-name" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1075,6 +1116,17 @@
     <span class="md-ellipsis">
       
         settlement remove — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settlement-restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        settlement restore — 🛡️
       
     </span>
   </a>
@@ -1108,6 +1160,17 @@
     <span class="md-ellipsis">
       
         settlement disconnect &lt;x&gt; &lt;z&gt; — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settlement-reconnect-x-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        settlement reconnect [&lt;x&gt; &lt;z&gt;] — 🛡️
       
     </span>
   </a>
@@ -1177,6 +1240,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routesmap-how-your-map-looks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎨 /routesmap — how your map looks
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2776,6 +2850,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        remove — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#settlement-add-name" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2791,6 +2876,17 @@
     <span class="md-ellipsis">
       
         settlement remove — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settlement-restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        settlement restore — 🛡️
       
     </span>
   </a>
@@ -2824,6 +2920,17 @@
     <span class="md-ellipsis">
       
         settlement disconnect &lt;x&gt; &lt;z&gt; — 🛡️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settlement-reconnect-x-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        settlement reconnect [&lt;x&gt; &lt;z&gt;] — 🛡️
       
     </span>
   </a>
@@ -2897,6 +3004,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#routesmap-how-your-map-looks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎨 /routesmap — how your map looks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#debug-measure-it-instead-of-guessing" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2925,7 +3043,8 @@
 
 
 <h1 id="commands">⌨️ Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h1>
-<p>The complete manual for every <strong><code>/routes</code></strong> command — the road network.</p>
+<p>The complete manual for every <strong><code>/routes</code></strong> command — the road network — and for <strong><code>/routesmap</code></strong>,
+which changes how the map looks to you.</p>
 <div class="mermaid-static">
 <svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="flowchart" style="max-width: 439.484px; background-color: transparent;" viewBox="0 0 439.484375 878" role="graphics-document document" aria-roledescription="flowchart-v2"><style>#my-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:#552222;}#my-svg .error-text{fill:#552222;stroke:#552222;}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#333333;stroke:#333333;}#my-svg .marker.cross{stroke:#333333;}#my-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#my-svg p{margin:0;}#my-svg .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#my-svg .cluster-label text{fill:#333;}#my-svg .cluster-label span{color:#333;}#my-svg .cluster-label span p{background-color:transparent;}#my-svg .label text,#my-svg span{fill:#333;color:#333;}#my-svg .node rect,#my-svg .node circle,#my-svg .node ellipse,#my-svg .node polygon,#my-svg .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#my-svg .rough-node .label text,#my-svg .node .label text,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-anchor:middle;}#my-svg .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#my-svg .rough-node .label,#my-svg .node .label,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-align:center;}#my-svg .node.clickable{cursor:pointer;}#my-svg .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#my-svg .arrowheadPath{fill:#333333;}#my-svg .edgePaths .path{stroke:#333333;stroke-width:1px;}#my-svg .flowchart-link{stroke:#333333;fill:none;}#my-svg .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#my-svg .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#my-svg .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#my-svg .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#my-svg .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#my-svg .cluster text{fill:#333;}#my-svg .cluster span{color:#333;}#my-svg .node .collapsed-indicator{fill:#aaaa33;stroke:none;opacity:0.6;}#my-svg .node .collapsed-separator{stroke:#aaaa33;stroke-width:0.75px;}#my-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#my-svg .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#my-svg rect.text{fill:none;stroke-width:0;}#my-svg .icon-shape,#my-svg .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#my-svg .icon-shape p,#my-svg .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#my-svg .icon-shape .label rect,#my-svg .image-shape .label rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#my-svg .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#my-svg .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#my-svg .node .neo-node{stroke:#9370DB;}#my-svg [data-look="neo"].node rect,#my-svg [data-look="neo"].cluster rect,#my-svg [data-look="neo"].node polygon{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].swimlane.cluster rect{filter:none;}#my-svg [data-look="neo"].node path{stroke:#9370DB;stroke-width:1px;}#my-svg [data-look="neo"].node .outer-path{filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node .neo-line path{stroke:#9370DB;filter:none;}#my-svg [data-look="neo"].node circle{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].node circle .state-start{fill:#000000;}#my-svg [data-look="neo"].icon-shape .icon{fill:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg [data-look="neo"].icon-shape .icon-neo path{stroke:#9370DB;filter:drop-shadow(1px 2px 2px rgba(185, 185, 185, 1));}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><marker id="my-svg_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointEnd-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="11.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="10.5" markerHeight="14" orient="auto"><path d="M 0 0 L 11.5 7 L 0 14 z" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5" markerHeight="14" orient="auto"><polygon points="0,7 11.5,14 11.5,0" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refY="5" refX="12.25" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-2" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="17.7" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5;"/></marker><marker id="my-svg_flowchart-v2-crossStart-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="-3.5" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5; stroke-dasharray: 1, 0;"/></marker><g class="root"><g class="clusters"/><g class="edgePaths"><path d="M70.372,412L83.058,351.167C95.743,290.333,121.114,168.667,139.269,107.833C157.424,47,168.365,47,173.835,47L179.305,47" id="my-svg-L_R_RP_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R_RP_0" data-points="W3sieCI6NzAuMzcyMzg5MTkwMDUxMDIsInkiOjQxMn0seyJ4IjoxNDYuNDg0Mzc1LCJ5Ijo0N30seyJ4IjoxODMuMzA0Njg3NSwieSI6NDd9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M73.938,412L86.029,376.5C98.12,341,122.302,270,137.893,234.5C153.484,199,160.484,199,163.984,199L167.484,199" id="my-svg-L_R_RO_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R_RO_0" data-points="W3sieCI6NzMuOTM4MTgzNTkzNzUsInkiOjQxMn0seyJ4IjoxNDYuNDg0Mzc1LCJ5IjoxOTl9LHsieCI6MTcxLjQ4NDM3NSwieSI6MTk5fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M93.782,412L102.566,403.833C111.35,395.667,128.917,379.333,141.201,371.167C153.484,363,160.484,363,163.984,363L167.484,363" id="my-svg-L_R_RZ_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R_RZ_0" data-points="W3sieCI6OTMuNzgyMTc1MTY0NDczNjgsInkiOjQxMn0seyJ4IjoxNDYuNDg0Mzc1LCJ5IjozNjN9LHsieCI6MTcxLjQ4NDM3NSwieSI6MzYzfV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M93.782,466L102.566,474.167C111.35,482.333,128.917,498.667,141.201,506.833C153.484,515,160.484,515,163.984,515L167.484,515" id="my-svg-L_R_RS_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R_RS_0" data-points="W3sieCI6OTMuNzgyMTc1MTY0NDczNjgsInkiOjQ2Nn0seyJ4IjoxNDYuNDg0Mzc1LCJ5Ijo1MTV9LHsieCI6MTcxLjQ4NDM3NSwieSI6NTE1fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M74.96,466L86.881,497.5C98.801,529,122.643,592,142.111,623.5C161.578,655,176.672,655,184.219,655L191.766,655" id="my-svg-L_R_RC_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R_RC_0" data-points="W3sieCI6NzQuOTU5OTYwOTM3NSwieSI6NDY2fSx7IngiOjE0Ni40ODQzNzUsInkiOjY1NX0seyJ4IjoxOTUuNzY1NjI1LCJ5Ijo2NTV9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M70.74,466L83.364,522.833C95.988,579.667,121.236,693.333,137.36,750.167C153.484,807,160.484,807,163.984,807L167.484,807" id="my-svg-L_R_RD_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R_RD_0" data-points="W3sieCI6NzAuNzM5NTc2MjU2NzkzNDgsInkiOjQ2Nn0seyJ4IjoxNDYuNDg0Mzc1LCJ5Ijo4MDd9LHsieCI6MTcxLjQ4NDM3NSwieSI6ODA3fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" data-id="L_R_RP_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_R_RO_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_R_RZ_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_R_RS_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_R_RC_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_R_RD_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="my-svg-flowchart-R-0" data-look="classic" transform="translate(64.7421875, 439)"><rect class="basic label-container" style="" x="-56.7421875" y="-27" width="113.484375" height="54"/><g class="label" style="" transform="translate(-26.7421875, -12)"><rect/><foreignObject width="53.484375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>/routes</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-RP-1" data-look="classic" transform="translate(301.484375, 47)"><rect class="basic label-container" style="" x="-118.1796875" y="-39" width="236.359375" height="78"/><g class="label" style="" transform="translate(-88.1796875, -24)"><rect/><foreignObject width="176.359375" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>👤 status · list · nearest<br />zone · config list/get</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-RO-3" data-look="classic" transform="translate(301.484375, 199)"><rect class="basic label-container" style="" x="-130" y="-63" width="260" height="126"/><g class="label" style="" transform="translate(-100, -48)"><rect/><foreignObject width="200" height="96"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>🛡️ scan · connect · structures<br />addcity · rename · tp<br />weave · repaint · reset</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-RZ-5" data-look="classic" transform="translate(301.484375, 363)"><rect class="basic label-container" style="" x="-130" y="-51" width="260" height="102"/><g class="label" style="" transform="translate(-100, -36)"><rect/><foreignObject width="200" height="72"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>🛡️ zone override / clear / info<br />zones you author</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-RS-7" data-look="classic" transform="translate(301.484375, 515)"><rect class="basic label-container" style="" x="-130" y="-51" width="260" height="102"/><g class="label" style="" transform="translate(-100, -36)"><rect/><foreignObject width="200" height="72"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>🛡️ settlement add / remove / list<br />connect / disconnect</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-RC-9" data-look="classic" transform="translate(301.484375, 655)"><rect class="basic label-container" style="" x="-105.71875" y="-39" width="211.4375" height="78"/><g class="label" style="" transform="translate(-75.71875, -24)"><rect/><foreignObject width="151.4375" height="48"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="nodeLabel"><p>🛡️ config set / reset<br />every world setting</p></span></div></foreignObject></g></g><g class="node default" id="my-svg-flowchart-RD-11" data-look="classic" transform="translate(301.484375, 807)"><rect class="basic label-container" style="" x="-130" y="-63" width="260" height="126"/><g class="label" style="" transform="translate(-100, -48)"><rect/><foreignObject width="200" height="96"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="nodeLabel"><p>🛡️ debug — 13 read-only reports<br />gaps · bridge · settlements · …</p></span></div></foreignObject></g></g></g></g></g><defs><filter id="my-svg-drop-shadow" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><defs><filter id="my-svg-drop-shadow-small" height="150%" width="150%"><feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><style>
 .node rect, .node circle, .node ellipse, .node polygon, .node path {
@@ -2982,7 +3101,7 @@
 <tr>
 <td><code>/routes structures</code></td>
 <td style="text-align: center;">🛡️</td>
-<td>Dump the structure-registry match report.</td>
+<td>Write every structure to a file, grouped into settlements, landmarks and the rest.</td>
 </tr>
 <tr>
 <td><code>/routes addcity [name]</code></td>
@@ -3069,6 +3188,11 @@
 <td style="text-align: center;">🛡️</td>
 <td>Thirteen read-only reports, for pasting into a bug report.</td>
 </tr>
+<tr>
+<td><code>/routesmap …</code></td>
+<td style="text-align: center;">👤</td>
+<td>How the chunk paint looks on your own map. Never reaches the server.</td>
+</tr>
 </tbody>
 </table>
 <hr />
@@ -3093,8 +3217,10 @@ don't want to wait for the automatic discovery.</p>
 <p>Locates the nearest connectable cities from your position (seed-based — no chunk loading) and
 queues a road between them. The road then builds incrementally.</p>
 <h3 id="structures"><code>structures</code> — 🛡️<a class="headerlink" href="#structures" title="Permanent link">&para;</a></h3>
-<p>Prints the structure-registry match report: which structure tags/ids from <strong>Cities include</strong> exist
-in this world and what matched. The first stop when a structure type isn't being connected.</p>
+<p>Writes every structure of this world to <code>routes_structures.txt</code> in three groups — <strong>settlements</strong>
+(roads are planned to them), <strong>landmarks</strong> and <strong>neither</strong> — each with its tags, and says how many of
+each there are. The first stop when a structure type isn't being connected; see
+<a href="../which-structures/">Which structures get roads</a> for how each one is decided.</p>
 <h3 id="addcity-name"><code>addcity [name]</code> — 🛡️<a class="headerlink" href="#addcity-name" title="Permanent link">&para;</a></h3>
 <p>Registers <strong>where you are standing</strong> as a city node (default name <code>Gym</code>) and queues its road
 connections. The escape hatch for places without a structure tag — player builds, modded
@@ -3246,13 +3372,24 @@ move a capture zone out from under a catch already made.</p>
 <p>A separate subtree from <code>addcity</code> and <code>connect</code>, and the distinction matters: those two feed the
 classic route network, while these feed <strong>gen2's settlement graph</strong> — the one that draws roads during
 worldgen. The two are not the same network.</p>
-<p>Declared settlements and connections are remembered with the world and survive a restart.</p>
+<p>Declared settlements and connections, and everything removed or withdrawn, are remembered with the
+world and survive a restart. Every removal here only affects <strong>chunks generated from now on</strong>: ground
+already generated keeps what was built on it.</p>
+<h3 id="remove"><code>remove</code> — 🛡️<a class="headerlink" href="#remove" title="Permanent link">&para;</a></h3>
+<p>Removes <strong>whatever you are standing on</strong>. In a town it removes the town, exactly as
+<code>settlement remove</code> does. On a road it withdraws <strong>that road</strong>, and names it — <em>Route 7: Ashvale ↔
+Mirefield</em>. The road is the one actually drawn through your chunk, so standing in the middle of a route
+is enough, with neither of its towns in sight. If two roads run through the chunk, it lists them and
+removes nothing; walk to where only one does. Right after loading, the roads nearby may still be
+planning; it says so, and asking again a moment later works. <code>settlement reconnect</code> puts a road back.</p>
 <h3 id="settlement-add-name"><code>settlement add [name]</code> — 🛡️<a class="headerlink" href="#settlement-add-name" title="Permanent link">&para;</a></h3>
 <p>Registers <strong>where you are standing</strong> as a settlement in the gen2 graph, optionally named. Roads plan
 to it as if the world had generated a town there.</p>
 <h3 id="settlement-remove"><code>settlement remove</code> — 🛡️<a class="headerlink" href="#settlement-remove" title="Permanent link">&para;</a></h3>
-<p>Removes the declared settlement nearest to you. Only your own: a settlement the world generated is not
-yours to delete.</p>
+<p>Removes the settlement nearest to you. One you declared is deleted. One the world generated is taken out
+of the network, along with every road it carried.</p>
+<h3 id="settlement-restore"><code>settlement restore</code> — 🛡️<a class="headerlink" href="#settlement-restore" title="Permanent link">&para;</a></h3>
+<p>Puts back the nearest generated town you removed, exactly as it was: its name and its roads.</p>
 <h3 id="settlement-list"><code>settlement list</code> — 🛡️<a class="headerlink" href="#settlement-list" title="Permanent link">&para;</a></h3>
 <p>Every settlement and connection you have declared in this world, with coordinates.</p>
 <h3 id="settlement-connect-x-z"><code>settlement connect &lt;x&gt; &lt;z&gt;</code> — 🛡️<a class="headerlink" href="#settlement-connect-x-z" title="Permanent link">&para;</a></h3>
@@ -3260,8 +3397,12 @@ yours to delete.</p>
 connection is the one edge nothing is allowed to re-route: it exists because you said those two places
 are joined.</p>
 <h3 id="settlement-disconnect-x-z"><code>settlement disconnect &lt;x&gt; &lt;z&gt;</code> — 🛡️<a class="headerlink" href="#settlement-disconnect-x-z" title="Permanent link">&para;</a></h3>
-<p>Removes that declaration. The two places may still end up connected by the ordinary rules — this only
-withdraws your instruction.</p>
+<p>Takes the road between the town you stand at and the one nearest <code>x, z</code> out of the network. A road you
+declared is deleted. A road the world generated is withdrawn, and both towns keep their other roads.</p>
+<h3 id="settlement-reconnect-x-z"><code>settlement reconnect [&lt;x&gt; &lt;z&gt;]</code> — 🛡️<a class="headerlink" href="#settlement-reconnect-x-z" title="Permanent link">&para;</a></h3>
+<p>Puts a withdrawn road back. With no position, it restores the road withdrawn most recently, which is
+the only way to bring back a branch that starts at a fork. With a position, it restores the road between
+the town you stand at and the one nearest <code>x, z</code>.</p>
 <hr />
 <h2 id="config-read-and-change-this-worlds-settings">⚙️ <code>config</code> — read and change this world's settings<a class="headerlink" href="#config-read-and-change-this-worlds-settings" title="Permanent link">&para;</a></h2>
 <p>The whole tree is generated from the same option catalog the world-creation tabs are built from, so
@@ -3286,6 +3427,50 @@ how steep, how wide — decides what gets <strong>built</strong>. Changing it do
 there. See the note on each option in <a href="../configuration/">Configuration</a>.</p>
 </div>
 <hr />
+<h2 id="routesmap-how-your-map-looks">🎨 <code>/routesmap</code> — how your map looks<a class="headerlink" href="#routesmap-how-your-map-looks" title="Permanent link">&para;</a></h2>
+<p>A separate command from <code>/routes</code>, because it answers a different question: not what the world is,
+but how the <a href="../map-integration/">chunk paint</a> looks on <strong>your</strong> map. It runs entirely in your own
+game — it never reaches the server — so every player can use it, with no operator rights, on any
+server, including one that has never heard of Routes.</p>
+<p>Changes show on the minimap and the world map the moment you press Enter, and are still yours after
+rejoining.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/routesmap</code></td>
+<td>opens a small screen with every setting below — changes apply as you make them, with the map still in view</td>
+</tr>
+<tr>
+<td><code>/routesmap list</code></td>
+<td>prints every setting at once</td>
+</tr>
+<tr>
+<td><code>/routesmap paint on\|off</code></td>
+<td>the chunk paint on both maps</td>
+</tr>
+<tr>
+<td><code>/routesmap opacity city\|route\|area &lt;0-100&gt;</code></td>
+<td>how strong that category's tint is; <strong>0 hides it</strong></td>
+</tr>
+<tr>
+<td><code>/routesmap colour city\|route\|area &lt;colour&gt;</code></td>
+<td>that category's colour: <code>magenta</code>, <code>orange</code>, <code>teal</code>, <code>red</code>, <code>green</code>, <code>blue</code>, <code>yellow</code> or <code>white</code></td>
+</tr>
+<tr>
+<td><code>/routesmap waypoints per_category\|all_in_one</code></td>
+<td>one waypoint set per category, so each can be hidden on its own — or one set for the whole mod, so a single switch hides them all</td>
+</tr>
+</tbody>
+</table>
+<p>A colour drives the tint and the matching waypoints together, so the map and its markers always agree;
+the waypoints take it on your next join. A new grouping re-files each waypoint as you rediscover it.</p>
+<hr />
 <h2 id="debug-measure-it-instead-of-guessing">🔬 <code>debug</code> — measure it instead of guessing<a class="headerlink" href="#debug-measure-it-instead-of-guessing" title="Permanent link">&para;</a></h2>
 <p>Operator tooling, and it prints raw English rather than translated text: it exists to be pasted into a
 bug report. Every one of these is <strong>read-only</strong> — none of them changes the world.</p>
@@ -3303,7 +3488,7 @@ usually what you want.</p>
 <tr>
 <td><code>debug structures</code></td>
 <td style="text-align: center;">—</td>
-<td>which structure tags and ids from <strong>Cities include</strong> exist in this world, and what matched. The first stop when a structure type is not being connected</td>
+<td>every structure of this world, written to <code>routes_structures.txt</code> in three groups — settlements, landmarks, neither — with its tags. The first stop when a structure type is not being connected</td>
 </tr>
 <tr>
 <td><code>debug towns [r]</code></td>

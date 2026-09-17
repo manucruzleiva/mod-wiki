@@ -533,6 +533,8 @@
       
         
       
+        
+      
     
     
     
@@ -631,6 +633,34 @@
     
   
     Dynamic Routes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../which-structures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Which Structures Get Roads
   
 
     
@@ -2281,7 +2311,7 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 <tr>
 <td>Routes per city</td>
 <td>4</td>
-<td>a <strong>ceiling</strong>, not a count: each town rolls its own between 1 and this, so the network has hamlets and crossroads</td>
+<td>a <strong>ceiling</strong>, not a count: each town rolls its own up to this, inside the band its size puts it in — a village low, a city high — so the network has hamlets and crossroads</td>
 </tr>
 <tr>
 <td>Longest road</td>
@@ -2306,9 +2336,9 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 </thead>
 <tbody>
 <tr>
-<td>Cities include</td>
-<td>Villages + BCA Villages</td>
-<td>16-entry checklist: fossils, ruins, outposts, pyramids…</td>
+<td>Towns &amp; landmarks</td>
+<td>automatic</td>
+<td>every structure your world has, each set to Settlement, Landmark or Ignored — see <a href="../which-structures/">Which structures get roads</a></td>
 </tr>
 <tr>
 <td>Settlement allowlist (advanced)</td>
@@ -2324,6 +2354,41 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 <td>Confirm towns exist</td>
 <td>on</td>
 <td>check the jigsaw really assembles before the network treats a candidate as a town — no towns on the map with an empty field under them</td>
+</tr>
+<tr>
+<td>Bigger towns, more roads</td>
+<td>on</td>
+<td>settlements come as village, town or city by their real footprint, and a bigger one carries more roads. Needs <strong>Confirm towns exist</strong></td>
+</tr>
+<tr>
+<td>Town size</td>
+<td>64</td>
+<td>blocks across from which a settlement is a town rather than a village</td>
+</tr>
+<tr>
+<td>City size</td>
+<td>128</td>
+<td>blocks across from which it is a city. <code>/routes debug settlements</code> shows how your world's towns fall into the three</td>
+</tr>
+<tr>
+<td>Roads go around landmarks</td>
+<td>on</td>
+<td>a road steers around a landmark's real footprint instead of cutting through it; where one fills the only way through, the road is still built</td>
+</tr>
+<tr>
+<td>Landmark pull</td>
+<td>3</td>
+<td>0–10: how strongly a road bends to pass beside the one landmark it visits — a few blocks, never a detour. 0 = off</td>
+</tr>
+<tr>
+<td>Landmark reach</td>
+<td>96</td>
+<td>how far off a road's straight line, in blocks, a landmark can be and still pull it</td>
+</tr>
+<tr>
+<td>Landmark signs</td>
+<td>on</td>
+<td>a signpost beside the road names the landmark it passes</td>
 </tr>
 </tbody>
 </table>
@@ -2353,6 +2418,11 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 <td>0 = ruler-straight, 10 = maximum seeded wander</td>
 </tr>
 <tr>
+<td>Straight bridges</td>
+<td>on</td>
+<td>a bridge over water runs straight from bank to bank however much the roads wander; off, the crossing weaves with the road. A bridge over a dry gap weaves either way</td>
+</tr>
+<tr>
 <td>Steepest climb</td>
 <td>8</td>
 <td>tenths of a block per block, before a road cuts or bores instead of hugging the ground</td>
@@ -2361,6 +2431,16 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 <td>Dig tunnels</td>
 <td>on</td>
 <td>off, a planned tunnel is built as a steep surface road over the top</td>
+</tr>
+<tr>
+<td>Tunnel width</td>
+<td>9</td>
+<td>a tunnel's own width, twice the road's — only the bore, the ramp down to it stays road-width. Odd numbers, like the road</td>
+</tr>
+<tr>
+<td>Tunnel height</td>
+<td>8</td>
+<td>floor to ceiling. Taller tunnels leave a thinner roof in low hills</td>
 </tr>
 <tr>
 <td>Build bridges</td>
@@ -2407,7 +2487,7 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 <tr>
 <td>Underwater lighting</td>
 <td>Random</td>
-<td>sea lanterns along aquatic crossings</td>
+<td>a sea lantern in the pillar under each water-crossing marker — Random decides per route</td>
 </tr>
 </tbody>
 </table>
@@ -2460,8 +2540,8 @@ trainers</strong>, the <strong>gyms next to towns</strong> and the <strong>leagu
 <a href="../../nuzlocke/commands/">NUZLOCKE tab</a>. Routes on its own builds the towns and the roads
 between them.</p>
 <p>The map <strong>tint intensity</strong> and <strong>colours</strong> (City / Route / Area) are not world-creation choices —
-adjust them live from the panel on <a href="../map-integration/">Xaero's world map</a>, where you can see what
-you are changing.</p>
+set them in play with <a href="../map-integration/#changing-how-it-looks-routesmap"><code>/routesmap</code></a>, with the map
+in front of you.</p>
 <div class="admonition info">
 <p class="admonition-title">Saved per world</p>
 <p>Choices made in these tabs are stored <strong>per world</strong> and only applied to a brand-new world —
@@ -2470,8 +2550,8 @@ creation auto-enables the full <a href="../../nuzlocke/commands/">Nuzlocke rule 
 </div>
 <h2 id="global-defaults">Global defaults<a class="headerlink" href="#global-defaults" title="Permanent link">&para;</a></h2>
 <p>The global defaults live in <code>config/routes.json</code> (English &amp; Spanish labels) and are used
-when a world wasn't configured through the tabs. The map-paint intensity also has live sliders on
-<a href="../map-integration/">Xaero's world map</a>.</p>
+when a world wasn't configured through the tabs. The map-paint intensity and colours are changed in
+play with <a href="../map-integration/#changing-how-it-looks-routesmap"><code>/routesmap</code></a>.</p>
 <h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
 <p>The root is <code>/routes</code>; <code>/cobblemonroutes …</code> is accepted as an alias. The full manual — every
 command, argument, permission and behaviour — lives on <a href="../commands/">the Commands page</a>.</p>

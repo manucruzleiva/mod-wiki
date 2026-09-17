@@ -531,6 +531,8 @@
       
         
       
+        
+      
     
     
     
@@ -626,6 +628,34 @@
     
   
     Dynamic Routes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../routes/which-structures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Which Structures Get Roads
   
 
     
@@ -2395,7 +2425,7 @@ the <strong>NUZLOCKE</strong> tab at world creation, and every one of them can b
 </tr>
 <tr>
 <td>🔁 <strong>Duplicates clause</strong></td>
-<td>A Pokémon whose line you already own cannot be caught, and does not spend the zone — that encounter waits for something new.</td>
+<td>A Pokémon whose line you already own cannot be caught, and does not spend the zone — that encounter waits for something new. What you own includes your starter, gifts, trades and everything you have evolved.</td>
 </tr>
 <tr>
 <td>🥚 <strong>Egg clause</strong></td>
@@ -2407,11 +2437,11 @@ the <strong>NUZLOCKE</strong> tab at world creation, and every one of them can b
 </tr>
 <tr>
 <td>🏥 <strong>Whiteout</strong></td>
-<td>Losing a battle sends you to the <strong>nearest city</strong>. Running out of usable Pokémon anywhere is a Game Over.</td>
+<td>Losing a battle sends you back to your <strong>respawn point</strong>: the last Pokémon Center you used, or your bed, or the world spawn without one. Running out of usable Pokémon anywhere is a Game Over.</td>
 </tr>
 <tr>
 <td>📈 <strong>Level cap</strong></td>
-<td>Follows your trainer card. Catches above it go straight to the PC, and nothing above it will pick a fight with you.</td>
+<td>Follows your trainer card. Catches above it go straight to the PC, and no wild Pokémon above it turns a hit into a battle.</td>
 </tr>
 <tr>
 <td>🎒 <strong>No bag in battle</strong></td>
@@ -2432,7 +2462,7 @@ creation, under <strong>Capture zones are</strong>:</p>
 <tbody>
 <tr>
 <td><strong>Geography</strong></td>
-<td>The world Routes draws: every <strong>numbered Area</strong>, every <strong>named route</strong> and every <strong>town</strong> is its own zone. Everything not enclosed in an Area is one shared <strong>Wild</strong> zone — it is in your log from the first minute, and early on it is most of where you can catch, so growing the road network is what earns you new zones beside it.</td>
+<td>The world Routes draws: every <strong>numbered Area</strong>, every <strong>named route</strong> and every <strong>town</strong> is its own zone. A route's zone reaches one chunk past the road, so a Pokémon caught just off it counts for the route; where that strip touches two routes, the lower route number takes it. Everything not enclosed in an Area is one shared <strong>Wild</strong> zone — it is in your log from the first minute, and early on it is most of where you can catch, so growing the road network is what earns you new zones beside it.</td>
 </tr>
 <tr>
 <td><strong>Biome</strong></td>
@@ -2471,7 +2501,6 @@ a battle while <strong>every Pokémon on your team</strong> carries it.</p>
 <ul>
 <li><strong>Each player is asked at character creation</strong>, and answers for themselves. Declining is one click.
   Server owners can switch the offer off for everyone.</li>
-<li><strong>Your type spawns more often</strong> while the challenge runs — a thumb on the scale, not a filter.</li>
 <li><strong>An off-type catch still spends the zone.</strong> The challenge decides what you may <em>use</em>, not how many
   tries you get. Off-type Pokémon go to the PC.</li>
 </ul>
@@ -2494,18 +2523,16 @@ be challenged</strong> — you walk in and ask. Lt. Surge is the exception.</p>
 <li>
 <h3 id="the-elite-four-on-a-road">🏆 The Elite Four on a road<a class="headerlink" href="#the-elite-four-on-a-road" title="Permanent link">&para;</a></h3>
 <p>One league per world, standing out on a route between settlements as a place of its own, with
-its own marker on the map.</p>
+its own marker on the map. It has its own switch, apart from the gyms.</p>
 </li>
 <li>
 <h3 id="the-escape-rope">🧗 The Escape Rope<a class="headerlink" href="#the-escape-rope" title="Permanent link">&para;</a></h3>
-<p>A one-tap trip back to the nearest known town — and it will not fire mid-battle.</p>
+<p>A one-tap trip back to your respawn point — and it will not fire mid-battle.</p>
 </li>
 </ul>
 </div>
 <h2 id="escape-rope">🧗 Escape Rope<a class="headerlink" href="#escape-rope" title="Permanent link">&para;</a></h2>
-<p>Use it and you are whisked to the <strong>nearest known town</strong> on
-<a href="../../routes/">Routes'</a> network — and because every activated waystone registers as a town, it
-works whether or not you run the Waystones mod.</p>
+<p>Use it and you are whisked back to your <strong>respawn point</strong>, the same place a whiteout sends you.</p>
 <table>
 <thead>
 <tr>
@@ -2516,7 +2543,7 @@ works whether or not you run the Waystones mod.</p>
 <tbody>
 <tr>
 <td><strong>Where it sends you</strong></td>
-<td>the closest discovered town, on a safe dry column</td>
+<td>the last Pokémon Center you used, or your bed or respawn anchor; the world spawn if you have none</td>
 </tr>
 <tr>
 <td><strong>Restrictions</strong></td>
@@ -2528,9 +2555,8 @@ works whether or not you run the Waystones mod.</p>
 </tr>
 </tbody>
 </table>
-<p>No known town yet? The rope refuses and says so — go find a village or activate a waystone first.
-And on a Nuzlocke run, refusing to fire mid-battle is the whole point: a fight you started is a fight
-you finish.</p>
+<p>On a Nuzlocke run, refusing to fire mid-battle is the whole point: a fight you started is a fight you
+finish.</p>
 <h3 id="crafting">🪢 Crafting<a class="headerlink" href="#crafting" title="Permanent link">&para;</a></h3>
 <p>A <strong>shapeless</strong> recipe — the arrangement in the grid does not matter, the ingredients just have to be
 in the table together. One craft makes <strong>two</strong>.</p>

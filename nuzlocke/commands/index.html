@@ -531,6 +531,8 @@
       
         
       
+        
+      
     
     
     
@@ -626,6 +628,34 @@
     
   
     Dynamic Routes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../routes/which-structures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Which Structures Get Roads
   
 
     
@@ -1064,6 +1094,17 @@
     <span class="md-ellipsis">
       
         Roads, towns and trainers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#route-pokemon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Route Pokémon
       
     </span>
   </a>
@@ -2174,6 +2215,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#route-pokemon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Route Pokémon
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2240,7 +2292,7 @@ live under <a href="../../routes/commands/"><code>/routes</code></a> — the two
 <tr>
 <td><code>/nuzlocke reset [player]</code></td>
 <td style="text-align: center;">🛡️</td>
-<td>Clear a player's zone records and lift their game-over.</td>
+<td>Clear a player's zone records, lift their game-over and ask for a new Gym Leader Challenge type. They keep their team.</td>
 </tr>
 <tr>
 <td><code>/nuzlocke revive [player]</code></td>
@@ -2275,7 +2327,12 @@ live under <a href="../../routes/commands/"><code>/routes</code></a> — the two
 <tr>
 <td><code>/nuzlocke config reload</code></td>
 <td style="text-align: center;">🛡️</td>
-<td>Re-read the settings file from disk.</td>
+<td>Re-read <code>config/cobblemon_nuzlocke.json</code>, no restart needed. A world with its own settings keeps them.</td>
+</tr>
+<tr>
+<td><code>/nuzlocke config unoverride</code></td>
+<td style="text-align: center;">🛡️</td>
+<td>Drop this world's own settings, so it follows the config files again.</td>
 </tr>
 <tr>
 <td><code>/nuzlocke set &lt;option&gt; &lt;value&gt;</code></td>
@@ -2382,8 +2439,8 @@ has its rules overwritten. Picking <strong>Hardcore</strong> at world creation t
 </tr>
 <tr>
 <td>Whiteout</td>
-<td style="text-align: center;">To Nearest City</td>
-<td>what losing a battle does — city, Game Over, or nothing</td>
+<td style="text-align: center;">To Respawn Point</td>
+<td>what losing a battle does — back to your respawn point, Game Over, or nothing</td>
 </tr>
 <tr>
 <td>Healing sources</td>
@@ -2469,11 +2526,6 @@ has its rules overwritten. Picking <strong>Hardcore</strong> at world creation t
 <td>Allow Mega · Gigantamax · Z-Moves · Tera</td>
 <td style="text-align: center;">on</td>
 <td>switch off any battle gimmick for a stricter run</td>
-</tr>
-<tr>
-<td>EXP per KO</td>
-<td style="text-align: center;">on</td>
-<td>EXP awarded mid-battle rather than only at the end</td>
 </tr>
 <tr>
 <td>Duplicates clause</td>
@@ -2639,12 +2691,12 @@ has its rules overwritten. Picking <strong>Hardcore</strong> at world creation t
 <tr>
 <td>Fair-fight guard</td>
 <td style="text-align: center;">on</td>
-<td>a trainer far above your level never picks the fight</td>
+<td>a trainer too far above your strongest Pokémon never picks the fight</td>
 </tr>
 <tr>
 <td>Max trainer level gap</td>
 <td style="text-align: center;">5</td>
-<td>0–50</td>
+<td>how many levels above your strongest Pokémon a trainer may be and still challenge you, 0–50</td>
 </tr>
 <tr>
 <td>Gyms beside towns</td>
@@ -2652,9 +2704,109 @@ has its rules overwritten. Picking <strong>Hardcore</strong> at world creation t
 <td>needs a gym pack</td>
 </tr>
 <tr>
+<td>Elite Four</td>
+<td style="text-align: center;">on</td>
+<td>one league building per world, beside a road; needs a league pack</td>
+</tr>
+<tr>
 <td>Gyms on the surface</td>
 <td style="text-align: center;">on</td>
 <td>lifts a gym whose own definition would bury it</td>
+</tr>
+</tbody>
+</table>
+<h3 id="route-pokemon">Route Pokémon<a class="headerlink" href="#route-pokemon" title="Permanent link">&para;</a></h3>
+<p>Every generated road carries encounter sources, disguised Cobblemon habitat blocks set into the
+paving. Each one offers <strong>one family of its own</strong>: the evolution stage that fits its level, and, when
+that stage is about to evolve, about one of the next stage for every three, five levels higher.</p>
+<ul>
+<li><strong>Most sources offer something native to where they stand</strong>: the biome on land, the sea or river
+  under a water crossing. A source on a bridge deck leans toward Flying types instead.</li>
+<li><strong>Each source keeps its own number of Pokémon out</strong>, picked once from a range.</li>
+<li><strong>Now and then a source spawns an alpha</strong>, which counts as the zone's encounter like any other.</li>
+<li><strong>Now and then a source spawns an aggressive Pokémon</strong>, which comes after you on sight; its first
+  hit starts a battle.</li>
+<li><strong>A route too short for the spacing still gets one source</strong>, halfway along.</li>
+</ul>
+<p>Needs Cobblemon 1.8.</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th style="text-align: center;">Default</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Route encounters</td>
+<td style="text-align: center;">On</td>
+<td>Off leaves roads with the ordinary spawns</td>
+</tr>
+<tr>
+<td>Distance between sources</td>
+<td style="text-align: center;">128</td>
+<td>blocks of road from one source to the next, 32–512</td>
+</tr>
+<tr>
+<td>Source looks like</td>
+<td style="text-align: center;"><em>(empty)</em></td>
+<td>empty: each source looks like the block it was set into; a block id (e.g. <code>minecraft:diamond_block</code>) makes every source that block</td>
+</tr>
+<tr>
+<td>Fewest Pokémon out per source</td>
+<td style="text-align: center;">2</td>
+<td>the bottom of the range each source picks its number from, 1–64</td>
+</tr>
+<tr>
+<td>Most Pokémon out per source</td>
+<td style="text-align: center;">10</td>
+<td>the top of that range: how many of its own a source can have out at once</td>
+</tr>
+<tr>
+<td>Source spawn chance per tick</td>
+<td style="text-align: center;">100%</td>
+<td>100 refills a source at once, 1 is about one Pokémon every five seconds</td>
+</tr>
+<tr>
+<td>Wild spawns held back around a source</td>
+<td style="text-align: center;">16</td>
+<td>blocks around a source where only its own Pokémon appear; 0 = ordinary spawns there too</td>
+</tr>
+<tr>
+<td>Typical source level</td>
+<td style="text-align: center;">32</td>
+<td>each source has its own five-level band, drawn from a bell curve centred here</td>
+</tr>
+<tr>
+<td>Source level spread</td>
+<td style="text-align: center;">14</td>
+<td>how widely sources spread: most sit between 25 and 40, level 1–5 is rare and 75+ rarer still</td>
+</tr>
+<tr>
+<td>Aggressive chance at a source</td>
+<td style="text-align: center;">10%</td>
+<td>chance that a Pokémon a source spawns is aggressive; 0 = never</td>
+</tr>
+<tr>
+<td>Sources native to their biome</td>
+<td style="text-align: center;">60%</td>
+<td>share of sources that offer a Pokémon native to where they stand (Flying types on a bridge); 0 = any species</td>
+</tr>
+<tr>
+<td>Alpha chance at a source</td>
+<td style="text-align: center;">2%</td>
+<td>chance that a Pokémon a source spawns is an alpha; 0 = never</td>
+</tr>
+<tr>
+<td>Allow Legendaries · Ultra Beasts · Paradox Pokémon</td>
+<td style="text-align: center;">off</td>
+<td></td>
+</tr>
+<tr>
+<td>Allow starters</td>
+<td style="text-align: center;">off</td>
+<td>every family in the starter picker stays off the roads</td>
 </tr>
 </tbody>
 </table>

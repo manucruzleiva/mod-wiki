@@ -533,6 +533,8 @@
       
         
       
+        
+      
     
     
     
@@ -631,6 +633,34 @@
     
   
     Dynamic Routes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../which-structures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Which Structures Get Roads
   
 
     
@@ -883,10 +913,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-the-world-map-panel-load-chunks" class="md-nav__link">
+  <a href="#8-routesmap-how-your-map-looks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. The world-map panel — Load chunks
+        8. /routesmap — how your map looks
       
     </span>
   </a>
@@ -2244,10 +2274,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-the-world-map-panel-load-chunks" class="md-nav__link">
+  <a href="#8-routesmap-how-your-map-looks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. The world-map panel — Load chunks
+        8. /routesmap — how your map looks
       
     </span>
   </a>
@@ -2420,9 +2450,9 @@ Tunnels are lit or honestly dark, and they come out the other side. Bridges have
 it is a bridge. Say whether the world was made with tunnels and bridges <strong>on or off</strong>.</p>
 <hr />
 <h2 id="3-water-crossings-and-the-shoreline">3. Water crossings and the shoreline<a class="headerlink" href="#3-water-crossings-and-the-shoreline" title="Permanent link">&para;</a></h2>
-<p><strong>What it is</strong> — where a route meets water it does not stop: it lays an open lane you can swim
-through, with the seabed paved and lit beneath you. Frozen lakes are crossed <strong>under</strong> the ice, never
-paved over it.</p>
+<p><strong>What it is</strong> — where a route meets water it does not stop: the road runs to the shore, and an open
+lane marked by stones on both sides carries on across the water. Frozen lakes are crossed <strong>under</strong>
+the ice, never paved over it.</p>
 <p><strong>How to test</strong></p>
 <ol>
 <li>Find a road that reaches a river, a lake or a strait — <code>/routes debug gaps 128</code> points at the
@@ -2430,12 +2460,13 @@ paved over it.</p>
 <li><strong>Stand in the water and look back at the shore.</strong></li>
 <li>Swim the crossing to the far side and come out.</li>
 </ol>
-<p><strong>Expected</strong> — the shore comes down to the waterline. There is <strong>no mound or bank</strong> built up either
-side of the crossing that the road then has to climb back down. The lane is marked, the seabed under
-it is paved and lit, and you can surface anywhere along it.</p>
-<p><strong>Then check the other half</strong> — find a <strong>bridge</strong> and walk onto it from land. The approach must still
-rise to meet the deck in a single step. Both halves matter: the mound and the bridge approach are the
-same piece of code seen from two sides.</p>
+<p><strong>Expected</strong> — the road runs at the ground's own height right up to the shore: <strong>nothing is cut into
+the bank or built up on it</strong>. Where the bank stands above the water there is a step down into the
+lane. The lane is marked on both sides and you can surface anywhere along it. Over open water each
+marker stone stands on a short pillar, and on a lit crossing the block under the stone is a sea
+lantern, so at night the lane reads as pairs of lights.</p>
+<p><strong>Then check a bridge</strong> — walk onto one from land. The approach must rise to meet the deck in a single
+step.</p>
 <p><strong>If it looks wrong</strong> — say which one it was (open water crossing or bridge), give coordinates, and a
 screenshot taken <strong>from the water looking at the land</strong>.</p>
 <hr />
@@ -2513,36 +2544,35 @@ map by category and drops a waypoint the first time you reach a town, a route or
    untinted.</li>
 <li>Walk into a town you have not visited, then onto a road you have not visited.</li>
 <li>Quit to title and rejoin, then reopen the map.</li>
-<li>In the panel on the map, drag the intensity sliders and change a colour.</li>
 </ol>
 <p><strong>Expected</strong> — step 3 drops one waypoint each, once. Step 4 shows them still there and <strong>not
-duplicated</strong>. Step 5 re-tints the map live, and 0 % hides that category entirely.</p>
+duplicated</strong>.</p>
 <p><strong>Also worth checking</strong> — the paint shows on the full-screen world map regardless of your Y level and
 of the minimap's Cave Mode.</p>
 <p><strong>If it looks wrong</strong> — which Xaero mods you have and their versions, whether it was the minimap or
 the world map, and a screenshot of the map itself.</p>
 <hr />
-<h2 id="8-the-world-map-panel-load-chunks">8. The world-map panel — Load chunks<a class="headerlink" href="#8-the-world-map-panel-load-chunks" title="Permanent link">&para;</a></h2>
-<p><strong>What it is</strong> — the map can generate the ground around you so the map fills in without you walking
-it. You choose how many chunks; it tells you the cost before anything starts.</p>
+<h2 id="8-routesmap-how-your-map-looks">8. <code>/routesmap</code> — how your map looks<a class="headerlink" href="#8-routesmap-how-your-map-looks" title="Permanent link">&para;</a></h2>
+<p><strong>What it is</strong> — every choice about how the chunk paint looks on <strong>your</strong> map, in a small screen and
+as <a href="../map-integration/#changing-how-it-looks-routesmap">commands any player can use</a>. None of it
+reaches the server.</p>
 <p><strong>How to test</strong></p>
 <ol>
-<li>Open the world map with <strong>M</strong> and find Routes' panel down the left edge.</li>
-<li>Set the chunk count with the slider and press <strong>Load chunks</strong>.</li>
-<li>Read the confirmation, then confirm.</li>
-<li>Watch the map and the action bar.</li>
-<li><strong>Press Cancel while it is still running.</strong> This is the step most likely to find a bug.</li>
-<li>Close the map and reopen it.</li>
-<li>Collapse the panel with its handle, then bring it back.</li>
+<li>In a world with Xaero's installed and some roads already on the map, type <code>/routesmap</code>.</li>
+<li>In the screen, drag <strong>Route intensity</strong> down to 0 while watching the minimap, then back up.</li>
+<li>Change <strong>Route colour</strong>, turn <strong>Chunk paint</strong> off and on again, then press <strong>Done</strong>.</li>
+<li>Run <code>/routesmap list</code>, then <code>/routesmap opacity route 0</code> and open the world map with <strong>M</strong>.</li>
+<li>Quit to title, rejoin, and run <code>/routesmap list</code> again.</li>
+<li>On a server, as a player <strong>without</strong> operator rights, repeat steps 1 and 2.</li>
 </ol>
-<p><strong>Expected</strong> — step 3 says how many chunks and roughly how long, <strong>before</strong> anything is generated.
-Step 4 fills the map in as it goes, with a counter, and the button now reads Cancel. Step 5 stops it
-and leaves the map <strong>consistent, not half-painted</strong>. Step 6 remembers the number you chose. Step 7
-hides the controls and nothing else — the paint and the waypoints keep working.</p>
-<p><strong>On a server</strong> — as a non-operator, the button must refuse with a message rather than doing nothing.
-In your own single-player world it should work without cheats being on.</p>
-<p><strong>If it looks wrong</strong> — how many chunks you asked for, whether you cancelled, and whether it was
-single-player or a server (and your permission level there).</p>
+<p><strong>Expected</strong> — step 1 closes the chat and opens a small screen over the world, which stays in view and
+keeps running behind it. Step 2 fades the roads' tint on the minimap as the slider moves and brings it
+back. Step 3 recolours both maps straight away, and the paint toggle clears and restores them
+instantly. Step 4 lists the paint, the three opacities, the three colours and the waypoint grouping,
+then hides the roads' tint with no relog. Step 5 prints what you set, not the defaults. Step 6 behaves
+exactly like single-player — no permission message.</p>
+<p><strong>If it looks wrong</strong> — the exact command you typed, the line it printed back, and whether the
+minimap and the world map disagreed with each other.</p>
 <hr />
 <h2 id="9-the-routes-tab-at-world-creation">9. The ROUTES tab at world creation<a class="headerlink" href="#9-the-routes-tab-at-world-creation" title="Permanent link">&para;</a></h2>
 <p><strong>What it is</strong> — every rule is chosen up front, on a <strong>ROUTES</strong> tab beside GAME / WORLD / MORE, and
@@ -2573,8 +2603,9 @@ quietly builds some ground around spawn in the background so the map is not empt
 <li>Make another world with <strong>Pregenerate around spawn</strong> set to 0.</li>
 </ol>
 <p><strong>Expected</strong> — step 1 puts you on dry, solid ground in or beside a town, never in water. Step 2
-already shows some towns and roads. Step 4 shows an empty map at first, which is correct — that is
-what 0 means.</p>
+already shows some towns and roads, and while the ground is still being built a counter on the action
+bar says how far it has got, then how many chunks it generated. Step 4 shows an empty map at first,
+and no counter, which is correct — that is what 0 means.</p>
 <p><strong>If it looks wrong</strong> — the seed, the coordinates you landed on, and the output of
 <code>/routes debug spawn</code>.</p>
 <hr />
