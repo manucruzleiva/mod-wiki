@@ -96,6 +96,17 @@ thing worth getting right.
         The mod only sees dens in chunks your client has already been sent. A map that is not covered
         in markers after teleporting somewhere new is working correctly, not failing.
 
+=== "Champions Training"
+
+    - The output of **`/champions sp <slot>`** for the Pokémon involved. It shows whether the Pokémon
+      is in training, its stat points, effort values and IVs, and its final stats.
+    - **What you pressed** — Save, Train, Load, Store or Delete — and on which page of the summary.
+    - Whether the server changed any settings: **`/champions config`** lists them all.
+
+    !!! tip "Stats look wrong?"
+        A stat point is +1 to the stat at any level, applied before the nature. Compare with the
+        numbers on [Stat Points](champions/stat-points.md) before reporting a formula bug.
+
 ## What happens next
 
 Your post becomes an issue labelled from its tag, and the bot replies in the thread so you know it
@@ -104,4 +115,5 @@ without a change**, because those are not the same thing and you deserve to know
 
 Everyone who reports gets thanked on the mod's community credits page:
 [Routes](routes/credits.md) · [Nuzlocke](nuzlocke/credits.md) · [Picnic](picnic/credits.md) ·
-[Ditto HMs](ditto-hms/credits.md) · [Raid Icons](raid-icons/credits.md). 💚
+[Ditto HMs](ditto-hms/credits.md) · [Raid Icons](raid-icons/credits.md) ·
+[Champions Training](champions/credits.md). 💚

@@ -8,9 +8,9 @@ hide:
 
 # Cobblemon mods by shiero
 
-Five mods that turn a Cobblemon world into an adventure: roads and towns worth exploring, a
+Six mods that turn a Cobblemon world into an adventure: roads and towns worth exploring, a
 Nuzlocke that enforces itself, a picnic table that bends the spawns, every HM in your own hands,
-and every raid den on your map. Documentation for all of them lives here.
+every raid den on your map, and a team you train yourself. Documentation for all of them lives here.
 
 <div class="hero-actions" markdown>
 [Browse the mods](#the-mods){ .md-button }
@@ -81,6 +81,17 @@ and every raid den on your map. Documentation for all of them lives here.
 
     <span class="badge badge--primary">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">Client-side</span>
 
+-   [![Cobblemon Champions Training](champions/assets/logo.png){ .mod-logo }](champions/index.md)
+
+    ### [Cobblemon Champions Training](champions/index.md)
+
+    Effort values step aside for **stat points**, the Pokémon Champions way: spent from the summary
+    screen, paid for with your own experience, with nature, ability and moves retrained alongside.
+
+    [Getting started →](champions/getting-started.md)
+
+    <span class="badge badge--primary">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
+
 </div>
 
 ## Start here
@@ -92,8 +103,9 @@ and every raid den on your map. Documentation for all of them lives here.
     Every mod needs **Minecraft 1.21.1** on either **Fabric** or **NeoForge**. Drop the jar for your
     loader into `mods/` — never both jars at once.
 
-    The Cobblemon mods also need **Cobblemon 1.7.3**. **Routes does not** — it is a worldgen road
-    mod, and it builds the same roads in a world with no Pokémon in it.
+    The Cobblemon mods also need **Cobblemon**; each one's *Getting Started* page names the version.
+    **Routes does not** — it is a worldgen road mod, and it builds the same roads in a world with no
+    Pokémon in it.
 
     Each mod's *Getting Started* page lists its own dependencies.
 
