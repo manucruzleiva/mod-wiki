@@ -186,6 +186,11 @@ nav:
   - Tree Carve:
       - tree-carve/index.md
       - Getting Started: tree-carve/getting-started.md
+  - Cobblemon Mid-Battle EXP:
+      - mid-battle-exp/index.md
+      - Getting Started: mid-battle-exp/getting-started.md
+      - How it works: mid-battle-exp/how-it-works.md
+      - Community Credits: mid-battle-exp/credits.md
   - 💛 Sponsor shiero: https://github.com/sponsors/manucruzleiva
 
 hooks:
