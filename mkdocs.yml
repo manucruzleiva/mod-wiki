@@ -1,7 +1,7 @@
 site_name: Modding Wiki
 site_description: >-
   The single wiki for every Cobblemon mod by shiero — Routes, Nuzlocke & Soul Link, Picnic, Ditto HMs,
-  Raid Icons and Champions Training.
+  Raid Icons, Champions Training and Mid-Battle EXP.
 site_url: https://manucruzleiva.github.io/mod-wiki/
 # Sin `repo_url` a proposito: Material lo dibuja en el header con el contador de estrellas y forks,
 # que no le dice nada a quien viene a leer como se instala un mod. El repo no se enlaza en ningun

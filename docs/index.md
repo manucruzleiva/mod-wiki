@@ -8,9 +8,10 @@ hide:
 
 # Cobblemon mods by shiero
 
-Six mods that turn a Cobblemon world into an adventure: roads and towns worth exploring, a
+Seven mods that turn a Cobblemon world into an adventure: roads and towns worth exploring, a
 Nuzlocke that enforces itself, a picnic table that bends the spawns, every HM in your own hands,
-every raid den on your map, and a team you train yourself. Documentation for all of them lives here.
+every raid den on your map, a team you train yourself, and one that grows in the middle of the
+fight. Documentation for all of them lives here.
 
 <div class="hero-actions" markdown>
 [Browse the mods](#the-mods){ .md-button }
@@ -92,6 +93,17 @@ every raid den on your map, and a team you train yourself. Documentation for all
 
     <span class="badge badge--primary">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
 
+-   [![Cobblemon Mid-Battle EXP](mid-battle-exp/assets/logo.png){ .mod-logo }](mid-battle-exp/index.md)
+
+    ### [Cobblemon Mid-Battle EXP](mid-battle-exp/index.md)
+
+    Experience at **every knockout**, the way the main series pays it. A level gained mid-battle
+    counts in that same battle — new stats, more HP — and a new move is yours before the next turn.
+
+    [How it works →](mid-battle-exp/how-it-works.md)
+
+    <span class="badge badge--primary">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">No config</span>
+
 </div>
 
 ## Start here
@@ -113,7 +125,7 @@ every raid den on your map, and a team you train yourself. Documentation for all
 
     Routes and Nuzlocke are set up on the **world-creation screen** and stored with that world.
     Picnic and Ditto HMs use in-game config: a command, or the settings screen via Mod Menu. Raid
-    Icons reads a settings file in your `config/` folder.
+    Icons reads a settings file in your `config/` folder. Mid-Battle EXP has nothing to configure.
 
     See each mod's *Configuration* page.
 
