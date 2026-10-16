@@ -77,7 +77,7 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | Option | Default | Notes |
 | --- | --- | --- |
 | Spawn in city | on | move a new world's spawn into the nearest town; off leaves the vanilla wilderness spawn |
-| Pregenerate around spawn | 1024 | chunks built in the background the first time you enter, so the map already shows towns and routes. 0 = off |
+| Pregenerate around spawn | 512 | chunks built in the background the first time you enter, so the roads and towns around spawn are already built when you walk out — the default reaches the spawn town and its first road, about 200 blocks. 0 = off |
 
 ### Map & Notifications
 
