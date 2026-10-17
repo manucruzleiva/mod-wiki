@@ -4,10 +4,9 @@ Found a bug, or have an idea? Post it in **[the Discord](https://discord.gg/Swcw
 the whole process. **You do not need a GitHub account.** A bot turns your post into a tracked issue,
 replies in your thread with what it needs from you, and posts back there when it is closed.
 
-One page for all four mods: the process is identical, and the mod-specific detail is in the tabs
-below.
+One page for every mod: the process is identical, and the mod-specific detail is in the tabs below.
 
-1. **You** open a post in the mod's tickets thread and pick a tag.
+1. **You** open a post in **#tickets** and pick two tags: the **mod** and the **type**.
 2. **The bot** reads it within ~10 minutes and files a tracked issue, labelled from your tag.
 3. **The bot replies in your thread** saying what it still needs from you, if anything.
 4. **shiero** fixes it in a release.
@@ -15,8 +14,8 @@ below.
 
 ## Pick the right tag
 
-The tag you choose decides how the report is handled — and what the bot asks you for. It is the one
-thing worth getting right.
+The mod tag sends the report to the right place. The type tag decides how it is handled — and what
+the bot asks you for. It is the one thing worth getting right.
 
 | Tag | Use it when | What the bot does |
 |---|---|---|
@@ -36,6 +35,24 @@ thing worth getting right.
 !!! example "A report that gets fixed fast"
     > Placing a picnic table underwater near coral crashes the client. MC 1.21.1, Cobblemon 1.7.3,
     > Picnic 1.26.0, Fabric. Happens every time; crash report attached.
+
+## Where to find your logs
+
+Both live in your game folder — the instance folder if you use a launcher with profiles:
+
+- `logs/latest.log` — the log of the last session. It is overwritten every launch, so grab it
+  before starting the game again.
+- `crash-reports/crash-<date>.txt` — one file per crash, written only when the game crashes.
+
+| Launcher | How to open the folder |
+|---|---|
+| **Modrinth App** | open the profile, then the **⋮** menu → **Open folder** |
+| **CurseForge** | right-click the profile → **Open Folder** |
+| **Prism Launcher** | select the instance → **Folder** |
+| **Vanilla launcher** | `%appdata%\.minecraft` on Windows, `~/Library/Application Support/minecraft` on macOS |
+
+Attach the file to your post. If it is too big, paste it on [mclo.gs](https://mclo.gs) and share the
+link.
 
 ## Extra detail, per mod
 
@@ -116,4 +133,4 @@ without a change**, because those are not the same thing and you deserve to know
 Everyone who reports gets thanked on the mod's community credits page:
 [Routes](routes/credits.md) · [Nuzlocke](nuzlocke/credits.md) · [Picnic](picnic/credits.md) ·
 [Ditto HMs](ditto-hms/credits.md) · [Raid Icons](raid-icons/credits.md) ·
-[Champions Training](champions/credits.md). 💚
+[Champions Training](champions/credits.md) · [Mid-Battle EXP](mid-battle-exp/credits.md). 💚
