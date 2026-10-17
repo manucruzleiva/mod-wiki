@@ -3082,18 +3082,20 @@ key. If a setting did not take effect, say which one and what you saw instead.</
 <hr />
 <h2 id="10-where-a-new-world-starts">10. Where a new world starts<a class="headerlink" href="#10-where-a-new-world-starts" title="Permanent link">&para;</a></h2>
 <p><strong>What it is</strong> — a new world puts you next to the nearest town instead of in the wilderness, and
-quietly builds some ground around spawn in the background so the map is not empty on your first look.</p>
+quietly builds the ground around spawn in the background, so the spawn town's first road is already there when
+you walk out.</p>
 <p><strong>How to test</strong></p>
 <ol>
 <li>New world with <strong>Spawn in city</strong> on. Look around the moment you land.</li>
-<li>Open the map straight away, before exploring.</li>
+<li>Walk out of town along its road.</li>
 <li><code>/routes debug spawn</code> prints what the spawn finder decided.</li>
 <li>Make another world with <strong>Pregenerate around spawn</strong> set to 0.</li>
 </ol>
-<p><strong>Expected</strong> — step 1 puts you on dry, solid ground in or beside a town, never in water. Step 2
-already shows some towns and roads, and while the ground is still being built a counter on the action
-bar says how far it has got, then how many chunks it generated. Step 4 shows an empty map at first,
-and no counter, which is correct — that is what 0 means.</p>
+<p><strong>Expected</strong> — step 1 puts you on dry, solid ground in or beside a town, never in water. While the
+ground is still being built a counter on the action bar says how far it has got, then how many chunks
+it generated. In step 2 the road is already built as far as the next town's edge; your map shows only
+what you have walked past. Step 4 shows no counter, and the ground is generated only as you reach it,
+which is correct — that is what 0 means.</p>
 <p><strong>If it looks wrong</strong> — the seed, the coordinates you landed on, and the output of
 <code>/routes debug spawn</code>.</p>
 <hr />
