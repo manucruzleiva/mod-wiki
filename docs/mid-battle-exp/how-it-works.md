@@ -96,9 +96,9 @@ own slot, and the moveset never loses a slot.
   included, so pressing Done straight away learns nothing.
 - **Esc does not close it.** The send-out key (**R** by default) minimises it along with the battle,
   and it comes back exactly as you left it.
-- Each card shows the move's type, its category, power, accuracy (`—` for a move that cannot miss),
-  its effect chances and its PP. A `▲N` badge counts its PP Ups. Hover a card for the move's
-  description, or the badge for what a PP Up is.
+- Each card is Cobblemon's own move card: the move's type and category, then icons for its power,
+  accuracy (`—` for a move that cannot miss) and effect chance, and its PP. A `▲N` badge counts its
+  PP Ups. Hover a card for the move's description, or the badge for what a PP Up is.
 - **A forgotten move goes to the move pool and keeps its PP Ups**, so learning it back later costs
   nothing.
 - **A new move enters with full PP.** If it was already in the move pool, it brings that entry's PP
