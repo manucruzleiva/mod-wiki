@@ -78,22 +78,22 @@ No screen opens.
 
 **With four moves**, the move screen opens once the turn has played out.
 
-![The move screen: the moveset, the new moves and the move pool side by side](assets/move-screen.png)
+![The move screen: the moveset and the move pool side by side](assets/move-screen.png)
 
 The header names the Pokémon: `Sparky (Pikachu) ♂ Lv. 8`, or `Pikachu ♂ Lv. 8` without a nickname.
-The cards are in three columns:
+The cards are in two columns:
 
 | Column | What it holds |
 |---|---|
 | **Moveset** | the four moves the Pokémon knows, in their slots |
-| **New moves** | every move this level-up unlocked |
-| **To Move Pool** | what will not stay in the moveset |
+| **Move Pool** | every move this level-up unlocked, with a gold outline, and every move a new one replaced |
 
-**Drag a new move onto a moveset slot** to learn it. The move it replaces drops into **To Move Pool**.
-Drag a new move into **To Move Pool** to leave it unlearned. Everything is reversible until you press
-**Done**: a replaced move can go back into its own slot, and the moveset never loses a slot.
+**Drag a move from Move Pool onto a moveset slot** to learn it. The move it replaces drops into
+**Move Pool**. Everything is reversible until you press **Done**: a replaced move can go back into its
+own slot, and the moveset never loses a slot.
 
-- **Done** stays grey until **New moves** is empty: every new move has to go somewhere.
+- **Done** is always available. Whatever is still in **Move Pool** goes to the move pool, new moves
+  included, so pressing Done straight away learns nothing.
 - **Esc does not close it.** The send-out key (**R** by default) minimises it along with the battle,
   and it comes back exactly as you left it.
 - Each card shows the move's type, its category, power, accuracy (`—` for a move that cannot miss),
