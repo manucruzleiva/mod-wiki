@@ -32,7 +32,10 @@ revenue share. The only ask: **credit the mod and link an official page** in you
 | [Cobblemon Nuzlocke & Soul Link](nuzlocke/index.md) | [Modrinth](https://modrinth.com/mod/cobblemon-nuzlocke-soullink) | [CurseForge](https://www.curseforge.com/projects/1630816) |
 | [Cobblemon Picnic](picnic/index.md) | [Modrinth](https://modrinth.com/mod/cobblemon-picnic) | [CurseForge](https://www.curseforge.com/projects/1581251) |
 | [Cobblemon Ditto HMs](ditto-hms/index.md) | [Modrinth](https://modrinth.com/mod/cobblemon-ditto-hms) | [CurseForge](https://www.curseforge.com/projects/1587850) |
-| [Cobblemon Champions Training](champions/index.md) | [Modrinth](https://modrinth.com/mod/cobblemon-champions-training) | [CurseForge](https://www.curseforge.com/projects/1676756) |
+| [Cobblemon Champions Training](champions/index.md) | — | [CurseForge](https://www.curseforge.com/projects/1676756) |
+| [Cobblemon Raid Icons](raid-icons/index.md) | — | [CurseForge](https://www.curseforge.com/projects/1669611) |
+| [Tree Carve](tree-carve/index.md) | — | [CurseForge](https://www.curseforge.com/projects/1676740) |
+| [Cobblemon Mid-Battle EXP](mid-battle-exp/index.md) | — | [CurseForge](https://www.curseforge.com/projects/1701359) |
 
 Ask in the Discord if you want branding art for thumbnails — go make it look good. 💛
 
