@@ -23,8 +23,8 @@ to lose a message is to lose the log it is on.
 
 <div class="grid cards" markdown>
 
-- :material-sword: **[Carve with a sword](getting-started.md#carving)** — left-click any log, of any
-  wood, vanilla or modded. Four lines of twenty characters.
+- :material-sword: **[Carve with a sword](getting-started.md#carving)** — sneak + right-click any
+  log, of any wood, vanilla or modded. Four lines of twenty characters.
 - :material-heart: **[Wrap it in a symbol](getting-started.md#symbols)** — a heart, an umbrella or a
   skull, so a carving can be a declaration, a shelter marker or a warning.
 - :material-format-color-fill: **Carved, not painted** — the log keeps its own bark. Only the

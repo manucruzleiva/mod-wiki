@@ -5,21 +5,23 @@ config file to edit.
 
 ## Carving
 
-**Left-click a log with a sword.** Any sword, including one from another mod, and any log, including
-one from another mod. The carving screen opens on the face you clicked.
+**Sneak + right-click a log with a sword.** Any sword, including one from another mod, and any log,
+including one from another mod. The carving screen opens on the face you clicked.
 
 Type up to **four lines of twenty characters**, and confirm. The message is cut into that face.
 
-!!! tip "The sword still chops"
-    **Sneak + left-click** breaks the log exactly as it always did. Carving is what a plain click
-    does; sneaking is the way back to ordinary behaviour.
+A plain left-click with the sword chops the log exactly as it always did; only the sneaking
+right-click carves.
+
+Out of the box, a log that is already stripped cannot be carved — an axe could not take the message
+off it again.
 
 Nothing is spent when the screen opens — no durability, no item. Open one by accident, close it, and
 nothing has happened.
 
 ## Editing
 
-Left-click a face that already carries a message and the screen opens **with that message in it**,
+Sneak + right-click a face that already carries a message and the screen opens **with that message in it**,
 ready to change. Clearing every line and confirming removes the carving.
 
 ## Symbols
