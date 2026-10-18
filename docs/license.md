@@ -1,8 +1,7 @@
 # 📜 License
 
-**Every mod shiero publishes ships under the same license** — Routes, Cobblemon Nuzlocke & Soul Link,
-Cobblemon Picnic and Cobblemon Ditto HMs all carry the identical `LICENSE` file, word for word, and it
-ships **inside the jar** so you always have a copy. The short version: *if you make money, shiero makes
+**Every mod shiero publishes ships under the same license** — every mod documented in this wiki carries
+the identical `LICENSE` file, word for word, and it ships **inside the jar** so you always have a copy. The short version: *if you make money, shiero makes
 money.* That file is the binding document; this page is the friendly summary.
 
 | What you are doing | Where you stand |
