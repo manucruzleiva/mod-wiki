@@ -1,0 +1,9 @@
+/* Los discos de HM son pixel-art de 64px. Escalarlos con el suavizado del navegador los
+   convierte en una mancha, asi que se piden nearest-neighbour explicitamente. */
+img.hm-disc {
+  width: 40px;
+  height: 40px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  vertical-align: middle;
+}
