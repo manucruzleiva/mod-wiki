@@ -7,11 +7,13 @@ name: Wiki
 #   ├── index.html, reporting/, license/, 404.html, …   the landing (mkdocs.landing.yml), unversioned
 #   └── <mod>/                                        one mike prefix per mkdocs.<mod>.yml
 #       ├── versions.json, index.html                 mike's; index.html redirects to latest/
-#       ├── <minor>/   latest -> <minor>              one snapshot per minor of the mod
+#       ├── <minor>/   latest -> highest <minor>      one snapshot per minor of the mod
 #       └── assets/                                   the mod's logo, which the landing draws
 #
 # The version is the minor of `extra.mod_versions.<mod>.version` in mkdocs.base.yml (1.2.119 -> 1.2),
-# the number that is bumped when the mod is published. A patch overwrites its own minor.
+# the number that is bumped when the mod is published. A patch overwrites its own minor, and latest
+# moves only to a minor at least as high as every one already deployed, so documenting an older
+# minor never pulls it back.
 #
 # A push deploys only the mods whose pages it touched; anything shared (base config, overrides,
 # hooks, docs/assets, docs/stylesheets, this file) redeploys them all. Nothing replaces the branch
@@ -112,11 +114,20 @@ jobs:
             v=$(python -c "import sys; from mkdocs.config import load_config; \
               print('.'.join(load_config(sys.argv[1])['extra']['mod_versions'][sys.argv[2]]['version'].split('.')[:2]))" \
               "mkdocs.$m.yml" "$m")
-            echo "$m -> $m/$v (latest)"
-            mike deploy -F "mkdocs.$m.yml" --deploy-prefix "$m" --update-aliases \
-              -m "deploy $m $v from $GITHUB_SHA" "$v" latest
-            mike set-default -F "mkdocs.$m.yml" --deploy-prefix "$m" \
-              -m "default $m to latest" latest
+            # latest only moves forward: documenting an older minor redeploys it alone.
+            deployed=$(git show "gh-pages:$m/versions.json" 2>/dev/null | jq -r '.[].version' || true)
+            top=$(printf '%s\n' $deployed "$v" | sort -V | tail -1)
+            if [ "$v" = "$top" ]; then
+              echo "$m -> $m/$v (latest)"
+              mike deploy -F "mkdocs.$m.yml" --deploy-prefix "$m" --update-aliases \
+                -m "deploy $m $v from $GITHUB_SHA" "$v" latest
+              mike set-default -F "mkdocs.$m.yml" --deploy-prefix "$m" \
+                -m "default $m to latest" latest
+            else
+              echo "$m -> $m/$v (latest stays on $top)"
+              mike deploy -F "mkdocs.$m.yml" --deploy-prefix "$m" \
+                -m "deploy $m $v from $GITHUB_SHA" "$v"
+            fi
           done
 
       - name: Publish the landing at the root and prune what no version owns
