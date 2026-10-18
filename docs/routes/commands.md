@@ -141,7 +141,8 @@ corners are ordinary coordinates and accept `~ ~`, so the usual way to draw one 
 corner and type `~ ~`, walk to the opposite corner, and type `~ ~` again.
 
 Leave the name out and it gets a generic one — `Z1`, `Z2`, … — which you can change later with
-`zone rename`.
+`zone rename`. `force` comes after the name, so a zone you want to force needs one:
+`/routes zone create road ~ ~ ~20 ~20 Pass force`.
 
 The box is capped at **1024 chunks** (32 × 32). A box over the cap does **nothing at all** rather
 than half of it; build bigger zones in pieces with `zone expand`.
@@ -288,8 +289,11 @@ the town you stand at and the one nearest `x, z`.
 ## ⚙️ `config` — read and change this world's settings
 
 The whole tree is generated from the same option catalog the world-creation tabs are built from, so
-every setting on the **ROUTES** tab is reachable here under the same name, and neither surface can
-drift from the other. See [World Creation & Config](configuration.md) for what each one does.
+every setting on the **ROUTES** tab is reachable here, and neither surface can drift from the other.
+See [World Creation & Config](configuration.md) for what each one does.
+
+An option is named by its **key**, not by its label on the tab: **Road width** is `route_width`.
+`config list` prints every key next to its value, and tab-completion offers them.
 
 A change is written **twice**: onto the settings the game is reading right now, and into the rules
 stored with the world — so it takes effect immediately *and* survives the next load.

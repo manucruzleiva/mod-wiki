@@ -35,6 +35,19 @@ flowchart TD
   lakes are crossed *under* the ice, never paved over it.
 - **Signs everywhere** — directional signs at each end and at junctions, with plaza-paved crossings
   that stand out from the road.
+- **Junctions built for the spot** — where two roads cross, the crossing is either a ringed
+  **roundabout** around a lit pillar or an open **signed crossing** with fingerposts naming all four
+  destinations. Roads that meet at different heights are an **overpass**: the upper one simply bridges
+  over. A fork that lands inside a hill opens into a **chamber** where its tunnels meet.
+- **Rest stops** — every few hundred blocks, a small camp just off the road: a campfire with log
+  seats, a lantern post and a sign. Now and then one keeps a **supply chest** from the last traveller —
+  rarely, so finding one still means something. With [Cobblemon Picnic](../picnic/index.md) installed,
+  about a third of the stops are one of its picnic tables instead.
+- **Landmarks along the way** — a road passing a pyramid, a tower or a ruin bends a little to go by
+  it, keeps off its footprint, and puts up a signpost with its name. No road is planned *to* a
+  landmark — see [Which structures get roads](which-structures.md).
+- **Villages, towns and cities** — a settlement's real size decides how many roads leave it, so the
+  network has quiet hamlets and busy hubs.
 - **Spawn in a city** — new worlds start next to the nearest city, never in the water.
 
 !!! tip "Tune it per world"

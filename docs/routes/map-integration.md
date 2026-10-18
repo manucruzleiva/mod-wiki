@@ -17,6 +17,10 @@ flowchart LR
 Activating a waystone registers it as a **named city** on the route network — your fast-travel
 points become real places that roads connect to.
 
+**Wraith Waystones** (Fabric only — that mod has no NeoForge version) is supported too. A waystone
+takes the name of the Routes town it stands in the moment you discover it, and shares that town's
+map marker, so the waystone, the town and the pin are one place under one name.
+
 ## Xaero's Minimap
 
 - **Auto waypoints** — the first time you reach a **named town**, a **route** or an enclosed

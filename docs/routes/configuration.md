@@ -26,7 +26,7 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | --- | --- | --- |
 | Generate routes | on | master switch |
 | Native route generation | on | roads are drawn as chunks generate — no walking needed. Off falls back to the classic generator that builds as you explore |
-| Connect all structures | off | also connect surface structures that are not towns |
+| Connect all structures | off | also connect surface structures that are not towns — never one whose id names a ruin, an ancient thing or a mineshaft |
 | Routes per city | 4 | a **ceiling**, not a count: each town rolls its own up to this, inside the band its size puts it in — a village low, a city high — so the network has hamlets and crossroads |
 | Longest road | 1600 | the farthest two towns can be and still get a direct road |
 | Ring roads | on | keep closing loops between nearby towns — loops are what enclose named **areas** |
