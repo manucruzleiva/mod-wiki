@@ -151,8 +151,8 @@ you picked with **Zone notifications**.
 1. New world. Walk out of a town onto a road and keep going.
 2. Watch for the pop-up as you cross from one to the next.
 3. `/routes zone` at each step — it must agree with what the pop-up said.
-4. `/routes weave 4` forces ring roads to close now. Every loop that completes encloses a new named
-   area; walk into one.
+4. Follow the roads until two of them close a loop around a patch of land. The ground inside is a
+   named area; walk into it.
 5. Change **Zone notifications** to Chat, then to Announcement, then Off, and cross a boundary each
    time.
 
@@ -161,7 +161,8 @@ area reads *A3-Frostpine* or similar. Each setting changes **how** the announcem
 silences it completely without silencing anything else.
 
 **If it looks wrong** — the exact text you saw, the output of `/routes zone` at the same spot, and
-`/routes debug areas 16` if it is an area.
+`/routes debug areas 16` if it is an area — it marks every area chunk nearby with a sponge, so run it on
+a test world.
 
 ---
 
@@ -280,7 +281,8 @@ you walk out.
 
 1. New world with **Spawn in city** on. Look around the moment you land.
 2. Walk out of town along its road.
-3. `/routes debug spawn` prints what the spawn finder decided.
+3. `/routes debug spawn` runs the spawn finder again, moves the world spawn to the town it picks, and
+   prints what it decided.
 4. Make another world with **Pregenerate around spawn** set to 0.
 
 **Expected** — step 1 puts you on dry, solid ground in or beside a town, never in water. While the
