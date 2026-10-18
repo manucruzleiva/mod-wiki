@@ -156,7 +156,8 @@ example.
 The result is drawn as **exactly the items you built it from**: the cloth and the wood of the table
 you used, and **a separate bench per seat** — two benches of different woods come out as two
 different seats. All of it with the mod's **own models and textures**, so no other furniture mod is
-required. The basket, pot and campfire are consumed but don't change how the table looks.
+required. The basket stands beside the table in the colour you crafted it with; the pot and campfire
+are consumed but don't change how the table looks.
 
 Hold **Shift** over a picnic table in your inventory to read back everything it is made of.
 
@@ -277,6 +278,25 @@ hand over is the bench that seat is made of**. A table can end up with four seat
     | <img class="cr-inline" src="../../assets/items/expert_picnic_table.png" alt=""> Expert Picnic Table | 1 |
     | <img class="cr-inline" src="../../assets/items/ender_eye.png" alt=""> Eye of Ender | 1 |
     | **→ <img class="cr-inline" src="../../assets/items/strange_picnic_table.png" alt=""> Strange Picnic Table** | **1** |
+
+## Dyeing
+
+A table that is already placed can be **recoloured without picking it up**. Hold a dye and
+**sneak + right-click**:
+
+- **The top of a table** repaints its cloth, in any of the **16 dye colours**. A picnic table is
+  **two tables side by side**, and only the one you clicked changes — the two can wear different
+  colours.
+- **The table's basket** repaints the basket, in any of the **7 basket colours**: white, black,
+  blue, green, pink, red and yellow. Any other dye does nothing to it.
+
+**The wood never takes a dye.** The benches and the frame keep the woods the table was crafted
+with, and clicking them with a dye does nothing.
+
+Each repaint uses up **one dye**, and none is spent on something that is already that colour.
+Sneaking is what makes it a dye: without it, the click does what it always does.
+
+A loose [Picnic Basket](interactions-and-items.md#picnic-baskets) can be dyed the same way.
 
 ## Where each table can go
 

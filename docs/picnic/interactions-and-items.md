@@ -160,6 +160,9 @@ The apricorn and the basket cycle together: **whichever colour you put in is the
 - **Store bread** inside it.
 - A nearby **table pulls bread from baskets** to fuel its re-rolls — so you can keep a basket
   stocked next to your setup instead of refilling the fuel slot.
+- **Dye** a placed basket with **sneak + right-click**, holding a dye in one of the seven basket
+  colours. The bread inside stays where it is. A table's own basket takes a dye too — see
+  [Dyeing](picnic-tables.md#dyeing).
 
 ## `poke_snack` bias
 
