@@ -2858,9 +2858,9 @@ Pokémon's new level, HP and moves.</p>
 <p><strong>With a free slot</strong>, the move is learned at once, with full PP, and you can use it on the next turn.
 No screen opens.</p>
 <p><strong>With four moves</strong>, the move screen opens once the turn has played out.</p>
-<p><img alt="The move screen: the moveset, the new moves and the move pool side by side" src="../assets/move-screen.png" /></p>
+<p><img alt="The move screen: the moveset and the move pool side by side" src="../assets/move-screen.png" /></p>
 <p>The header names the Pokémon: <code>Sparky (Pikachu) ♂ Lv. 8</code>, or <code>Pikachu ♂ Lv. 8</code> without a nickname.
-The cards are in three columns:</p>
+The cards are in two columns:</p>
 <table>
 <thead>
 <tr>
@@ -2874,25 +2874,22 @@ The cards are in three columns:</p>
 <td>the four moves the Pokémon knows, in their slots</td>
 </tr>
 <tr>
-<td><strong>New moves</strong></td>
-<td>every move this level-up unlocked</td>
-</tr>
-<tr>
-<td><strong>To Move Pool</strong></td>
-<td>what will not stay in the moveset</td>
+<td><strong>Move Pool</strong></td>
+<td>every move this level-up unlocked, with a gold outline, and every move a new one replaced</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Drag a new move onto a moveset slot</strong> to learn it. The move it replaces drops into <strong>To Move Pool</strong>.
-Drag a new move into <strong>To Move Pool</strong> to leave it unlearned. Everything is reversible until you press
-<strong>Done</strong>: a replaced move can go back into its own slot, and the moveset never loses a slot.</p>
+<p><strong>Drag a move from Move Pool onto a moveset slot</strong> to learn it. The move it replaces drops into
+<strong>Move Pool</strong>. Everything is reversible until you press <strong>Done</strong>: a replaced move can go back into its
+own slot, and the moveset never loses a slot.</p>
 <ul>
-<li><strong>Done</strong> stays grey until <strong>New moves</strong> is empty: every new move has to go somewhere.</li>
+<li><strong>Done</strong> is always available. Whatever is still in <strong>Move Pool</strong> goes to the move pool, new moves
+  included, so pressing Done straight away learns nothing.</li>
 <li><strong>Esc does not close it.</strong> The send-out key (<strong>R</strong> by default) minimises it along with the battle,
   and it comes back exactly as you left it.</li>
-<li>Each card shows the move's type, its category, power, accuracy (<code>—</code> for a move that cannot miss),
-  its effect chances and its PP. A <code>▲N</code> badge counts its PP Ups. Hover a card for the move's
-  description, or the badge for what a PP Up is.</li>
+<li>Each card is Cobblemon's own move card: the move's type and category, then icons for its power,
+  accuracy (<code>—</code> for a move that cannot miss) and effect chance, and its PP. A <code>▲N</code> badge counts its
+  PP Ups. Hover a card for the move's description, or the badge for what a PP Up is.</li>
 <li><strong>A forgotten move goes to the move pool and keeps its PP Ups</strong>, so learning it back later costs
   nothing.</li>
 <li><strong>A new move enters with full PP.</strong> If it was already in the move pool, it brings that entry's PP
