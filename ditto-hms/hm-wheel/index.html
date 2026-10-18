@@ -216,9 +216,13 @@
   
     
       
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
+<details class="wiki-sections" data-md-component="tabs">
+  <summary class="wiki-sections__toggle md-header__button md-icon" title="Tabs" aria-label="Tabs">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+  </summary>
+  <nav class="wiki-sections__panel" aria-label="Tabs">
+    <ul class="wiki-sections__list">
       
         
   
@@ -456,8 +460,8 @@
 
       
     </ul>
-  </div>
-</nav>
+  </nav>
+</details>
     
   
 </header>
@@ -2832,6 +2836,8 @@
               
               <article class="md-content__inner md-typeset">
                 
+    <p class="wiki-mod-version">Documented against Cobblemon Ditto HMs 3.0.0</p>
+  
                   
 
 
@@ -3097,6 +3103,7 @@ scale and how many HMs you happen to know, none of which a server can see.</p>
 
 
                 
+
               </article>
             </div>
           
@@ -3205,6 +3212,15 @@ scale and how many HMs you happen to know, none of which a server can see.</p>
       }
       paint();
       if (typeof document$ !== 'undefined') { document$.subscribe(paint); }
+    })();
+  </script><script>
+    (function () {
+      function close(except) {
+        var menu = document.querySelector('.wiki-sections[open]');
+        if (menu && !menu.contains(except)) { menu.removeAttribute('open'); }
+      }
+      document.addEventListener('click', function (e) { close(e.target); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { close(null); } });
     })();
   </script><script>
     (function () {

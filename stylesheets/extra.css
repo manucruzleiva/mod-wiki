@@ -431,10 +431,101 @@ body {
   border-radius: 5px;
 }
 
-/* The tab bar sits directly on the header colour; a hairline keeps it from
-   bleeding into the content on scroll. */
-.md-tabs {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+/* ── Section menu ──────────────────────────────────────────────────────────
+   The sections live behind a hamburger instead of a second header row (see
+   overrides/partials/tabs.html). It only exists on desktop: below 76.25em
+   Material's own drawer already lists them, and stays untouched. */
+
+.wiki-sections {
+  display: none;
+}
+
+@media screen and (min-width: 76.25em) {
+  /* Laid over the header row, on the same grid as its contents. The overlay
+     itself lets clicks through; only the button and the panel catch them. */
+  .wiki-sections {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 61rem;
+    margin: 0 auto;
+    padding: 0 0.2rem;
+    pointer-events: none;
+  }
+
+  .wiki-sections__toggle,
+  .wiki-sections__panel {
+    pointer-events: auto;
+  }
+
+  /* Room for the button, ahead of the logo. */
+  .md-header__inner {
+    padding-left: 2.6rem;
+  }
+
+  .wiki-sections__toggle {
+    display: inline-block;
+    list-style: none;
+  }
+
+  .wiki-sections__toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .wiki-sections__panel {
+    position: absolute;
+    top: 2.4rem;
+    left: 0.2rem;
+    min-width: 13rem;
+    padding: 0.3rem 0;
+    border: 1px solid var(--wiki-border);
+    border-radius: var(--wiki-radius-sm);
+    background: var(--wiki-surface);
+    box-shadow: var(--wiki-shadow-lift);
+    color: var(--md-default-fg-color);
+  }
+
+  .wiki-sections__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .wiki-sections .md-tabs__item {
+    display: block;
+    height: auto;
+    padding: 0;
+  }
+
+  .wiki-sections .md-tabs__link {
+    margin: 0;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.7rem;
+    opacity: 1;
+    transition: background-color 0.15s;
+  }
+
+  .wiki-sections .md-tabs__link:hover,
+  .wiki-sections .md-tabs__link:focus-visible {
+    background: var(--wiki-surface-sunken);
+  }
+
+  .wiki-sections .md-tabs__item--active .md-tabs__link {
+    color: var(--md-accent-fg-color);
+    font-weight: 700;
+  }
+
+  /* `navigation.tabs.sticky` lifts the header to two rows, and Material pins
+     the sidebars and anchor targets below both. There is one row now. */
+  .md-header--lifted ~ .md-container .md-sidebar {
+    top: 2.4rem;
+  }
+
+  .md-header--lifted ~ .md-container .md-typeset :target {
+    --md-scroll-margin: 3.6rem;
+  }
 }
 
 /* ── Ad / sponsor slots ────────────────────────────────────────────────────
@@ -672,4 +763,15 @@ DOM node and one request per family rather than one per frame.
   .cr-cycle {
     animation: none;
   }
+}
+
+/* "Documented against <mod> <version>": a quiet line above the page title,
+   rendered by overrides/main.html from extra.mod_versions. Its margin stays
+   positive: a section index opens on the hero, not on an h1, and a negative
+   one slid the hero over the line. */
+.md-typeset .wiki-mod-version {
+  margin: 0 0 0.4em;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  color: var(--md-default-fg-color--light);
 }
