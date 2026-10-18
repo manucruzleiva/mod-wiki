@@ -51,7 +51,7 @@ die as one.
 
 It is an **add-on for [Routes](../routes/index.md)**: the zones it locks onto *are* the routes,
 areas and towns Routes generates, so you need both. Get it from
-[**Modrinth**](https://modrinth.com/mod/cobblemon-nuzlocke-soullink) or
+[**Modrinth**](https://modrinth.com/mod/cobblemon-nuzlocke-soul-link) or
 [**CurseForge**](https://www.curseforge.com/projects/1630816), for **Fabric** or **NeoForge** on
 Minecraft **1.21.1**.
 

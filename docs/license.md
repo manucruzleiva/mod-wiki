@@ -29,7 +29,7 @@ revenue share. The only ask: **credit the mod and link an official page** in you
 | Mod | Modrinth | CurseForge |
 |---|---|---|
 | [Routes](routes/index.md) | [Modrinth](https://modrinth.com/mod/routes) | [CurseForge](https://www.curseforge.com/projects/1584243) |
-| [Cobblemon Nuzlocke & Soul Link](nuzlocke/index.md) | [Modrinth](https://modrinth.com/mod/cobblemon-nuzlocke-soullink) | [CurseForge](https://www.curseforge.com/projects/1630816) |
+| [Cobblemon Nuzlocke & Soul Link](nuzlocke/index.md) | [Modrinth](https://modrinth.com/mod/cobblemon-nuzlocke-soul-link) | [CurseForge](https://www.curseforge.com/projects/1630816) |
 | [Cobblemon Picnic](picnic/index.md) | [Modrinth](https://modrinth.com/mod/cobblemon-picnic) | [CurseForge](https://www.curseforge.com/projects/1581251) |
 | [Cobblemon Ditto HMs](ditto-hms/index.md) | [Modrinth](https://modrinth.com/mod/cobblemon-ditto-hms) | [CurseForge](https://www.curseforge.com/projects/1587850) |
 | [Cobblemon Champions Training](champions/index.md) | — | [CurseForge](https://www.curseforge.com/projects/1676756) |
