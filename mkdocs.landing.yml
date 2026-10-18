@@ -7,6 +7,8 @@ site_url: https://manucruzleiva.github.io/mod-wiki/
 
 extra:
   wiki_site: landing
+  # Sin selector de versiones: la landing no versiona.
+  version: null
 
 # La landing no versiona: Home, Report a bug y License, mas los logos de cada mod que dibuja la
 # portada. Ninguna pagina de un mod entra; los links a ellas los reescribe hooks/cross_site_links.py.

@@ -13,7 +13,7 @@
   En los sitios separados (un config con `extra.wiki_site`) el nav solo tiene las paginas de ese
   sitio, asi que el menu no sale del nav sino de `extra.wiki.menu`, con un mod por entrada de
   `extra.mod_versions` donde dice `mods`, cada uno al sitio que lo publica. El sitio propio va relativo,
-  para no saltar de la version que se esta leyendo a `latest`. El combinado sigue usando el nav.
+  para no saltar de la version que se esta leyendo a `latest`. Un config sin `wiki_site` usa el nav.
 -#}
 {% import "partials/tabs-item.html" as item with context %}
 <details class="wiki-sections" data-md-component="tabs">

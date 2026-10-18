@@ -1,15 +1,26 @@
 name: Wiki
 
-# Builds the WHOLE wiki — every mod's docs live in this repo now — and publishes it to gh-pages.
+# Publishes the wiki to gh-pages: every mod as its own versioned site, with mike, plus the landing at
+# the root.
 #
-# Before this, each mod repo built its own MkDocs site and deposited it into a subdirectory of this
-# repo's gh-pages branch, using a deploy key per mod and peaceiris' destination_dir. That whole
-# arrangement is gone: the docs moved here, so there is one build, one source of truth, and no
-# cross-repo credentials at all.
+#   gh-pages/
+#   ├── index.html, reporting/, license/, 404.html, …   the landing (mkdocs.landing.yml), unversioned
+#   └── <mod>/                                        one mike prefix per mkdocs.<mod>.yml
+#       ├── versions.json, index.html                 mike's; index.html redirects to latest/
+#       ├── <minor>/   latest -> <minor>              one snapshot per minor of the mod
+#       └── assets/                                   the mod's logo, which the landing draws
 #
-# Consequently `keep_files` is NOT set any more. It existed only to stop the landing-page deploy from
-# deleting the subdirectories the other repos had pushed. With one build producing the entire site, a
-# clean replace is what we want — it is also what removes a page when it is deleted from docs/.
+# The version is the minor of `extra.mod_versions.<mod>.version` in mkdocs.base.yml (1.2.119 -> 1.2),
+# the number that is bumped when the mod is published. A patch overwrites its own minor.
+#
+# A push deploys only the mods whose pages it touched; anything shared (base config, overrides,
+# hooks, docs/assets, docs/stylesheets, this file) redeploys them all. Nothing replaces the branch
+# wholesale any more — the old peaceiris clean replace would wipe every other mod's versions — so the
+# landing step does the cleaning by hand: at the root only the landing and the mod prefixes survive,
+# and inside a prefix only what its versions.json lists.
+#
+# The docs live in this repo and nowhere else, so there are no cross-repo credentials: a mod's
+# publish.yml cannot trigger this, by design.
 #
 # Setup (already done): Settings -> Pages -> Source = "Deploy from a branch" -> gh-pages / (root).
 
@@ -27,26 +38,112 @@ on:
 permissions:
   contents: write
 
+# Queued, never cancelled: each run deploys only the mods its push touched, so cancelling one for
+# the next would lose the first one's mods.
 concurrency:
   group: wiki
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The diff against the previous push picks the mods, and mike commits on top of gh-pages.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-      - run: pip install mkdocs-material
-      # --strict so a dangling internal link fails the build instead of shipping a broken page.
-      - run: mkdocs build --strict
+      - run: pip install mkdocs-material "mike>=2.2,<3"
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages:gh-pages
 
-      - name: Publish to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          publish_branch: gh-pages
-          commit_message: "deploy wiki from ${{ github.sha }}"
+      # Every site, every time, before gh-pages is touched: --strict so a dangling internal link fails
+      # the run instead of shipping a broken page. mike's own build is not strict.
+      - name: Build every site (--strict)
+        run: |
+          for f in mkdocs.*.yml; do
+            [ "$f" = mkdocs.base.yml ] && continue
+            mkdocs build --strict -q -f "$f" -d "$RUNNER_TEMP/site/$f"
+          done
+
+      - name: Pick the mods to deploy
+        id: pick
+        env:
+          EVENT: ${{ github.event_name }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          mods=$(ls mkdocs.*.yml | sed -E 's/^mkdocs\.(.*)\.yml$/\1/' | grep -vxE 'base|landing' | tr '\n' ' ')
+          is_mod() { [[ " $mods " == *" $1 "* ]]; }
+          all=0 picked=""
+          # A manual run, or a push whose previous commit is gone (first push, force push): all.
+          if [ "$EVENT" != push ] || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            all=1
+          else
+            while read -r f; do
+              case "$f" in
+                mkdocs.landing.yml) ;;
+                mkdocs.base.yml) all=1 ;;
+                mkdocs.*.yml) m=${f#mkdocs.}; picked="$picked ${m%.yml}" ;;
+                docs/*/*) m=${f#docs/}; m=${m%%/*}
+                  if is_mod "$m"; then picked="$picked $m"; else all=1; fi ;;
+                # Pages at the root of docs/ are the landing's, which is published on every run.
+                docs/*) ;;
+                overrides/*|hooks/*|.github/workflows/deploy.yml) all=1 ;;
+              esac
+            done < <(git diff --name-only "$BEFORE" "$GITHUB_SHA")
+          fi
+          [ $all = 1 ] && picked="$mods"
+          # A deleted mod's config still shows up in the diff: only mods that exist are deployed.
+          list=$(for m in $picked; do is_mod "$m" && echo "$m"; done | sort -u | tr '\n' ' ')
+          echo "mods=$mods" >> "$GITHUB_OUTPUT"
+          echo "deploy=$list" >> "$GITHUB_OUTPUT"
+          echo "Deploying: ${list:-nothing but the landing}"
+
+      - name: Deploy each picked mod under its own prefix
+        env:
+          DEPLOY: ${{ steps.pick.outputs.deploy }}
+        run: |
+          for m in $DEPLOY; do
+            # load_config, not a YAML read: it resolves INHERIT and the base's !!python tags.
+            v=$(python -c "import sys; from mkdocs.config import load_config; \
+              print('.'.join(load_config(sys.argv[1])['extra']['mod_versions'][sys.argv[2]]['version'].split('.')[:2]))" \
+              "mkdocs.$m.yml" "$m")
+            echo "$m -> $m/$v (latest)"
+            mike deploy -F "mkdocs.$m.yml" --deploy-prefix "$m" --update-aliases \
+              -m "deploy $m $v from $GITHUB_SHA" "$v" latest
+            mike set-default -F "mkdocs.$m.yml" --deploy-prefix "$m" \
+              -m "default $m to latest" latest
+          done
+
+      - name: Publish the landing at the root and prune what no version owns
+        env:
+          MODS: ${{ steps.pick.outputs.mods }}
+        run: |
+          pages="$RUNNER_TEMP/pages"
+          git worktree add -q "$pages" gh-pages
+          cd "$pages"
+          shopt -s dotglob nullglob
+          for e in *; do
+            case "$e" in .git|.nojekyll) continue ;; esac
+            if [[ " $MODS " == *" $e "* ]]; then
+              # A prefix mike never deployed keeps what it has, so its URL is not left empty.
+              [ -f "$e/versions.json" ] || continue
+              keep=$(jq -r '.[] | .version, .aliases[]' "$e/versions.json"; printf 'versions.json\nindex.html\n')
+              for x in "$e"/*; do
+                grep -qxF "${x#"$e"/}" <<<"$keep" || git rm -rq "$x"
+              done
+            else
+              git rm -rq "$e"
+            fi
+          done
+          # After the pruning: the landing also writes each mod's logo into <mod>/assets/.
+          cp -r "$RUNNER_TEMP/site/mkdocs.landing.yml/." .
+          touch .nojekyll
+          git add -A .
+          git diff --cached --quiet || git commit -qm "deploy landing from $GITHUB_SHA"
+
+      - run: git push origin gh-pages

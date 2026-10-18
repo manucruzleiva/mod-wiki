@@ -12,8 +12,8 @@ build — into the absolute URL of the site that does publish it:
     <wiki.url><mod>/<wiki.alias>/<page>     a page or file under a mod's folder
     <wiki.url><page>                        anything else, which is the landing site
 
-Authors keep writing `[x](../nuzlocke/commands.md)`, the combined build (mkdocs.yml, which has no
-`wiki_site`) is left untouched, and the URL layout lives in `extra.wiki` and nowhere else.
+Authors keep writing `[x](../nuzlocke/commands.md)`, a config without `extra.wiki_site` is left
+untouched, and the URL layout lives in `extra.wiki` and nowhere else.
 
 A mod site also gets an `index.html` at its root: docs/index.md belongs to the landing, so without it
 `<mod>/<version>/` itself would be a 404 and the mod's home sits one folder down at `<mod>/`.

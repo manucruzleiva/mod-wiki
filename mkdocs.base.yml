@@ -1,6 +1,19 @@
-# Lo que comparten TODOS los sitios de la wiki: el de cada mod (mkdocs.<mod>.yml), la landing
-# (mkdocs.landing.yml) y el combinado (mkdocs.yml). Cada uno lo trae con `INHERIT` y agrega su
-# site_name, site_url, nav y exclude_docs. No se buildea solo: no tiene nav.
+# Lo que comparten TODOS los sitios de la wiki: el de cada mod (mkdocs.<mod>.yml) y la landing
+# (mkdocs.landing.yml). Cada uno lo trae con `INHERIT` y agrega su site_name, site_url, nav y
+# exclude_docs. No se buildea solo: no tiene nav. Cada mod se publica versionado con mike bajo su
+# propia carpeta, y la landing sin version en la raiz (.github/workflows/deploy.yml).
+#
+# Every mod's nav follows the SAME spine, in this order:
+#
+#   index → Getting Started → (feature pages, mod-specific) → Commands → Configuration
+#         → Community Credits
+#
+# Only the feature-page block differs between mods, and the labels are fixed too, so the sections
+# read as one wiki and not as unrelated sites. Keep a new mod's nav to this shape. Sin Roadmap: las
+# paginas de "lo que viene" envejecian solas y contradecian al mod; eso se pide por el bot de tickets.
+# La licencia y "Report a bug" NO van por mod: son una sola pagina cada una, en la landing, porque
+# las copias por mod terminaron divergiendo. Lo especifico de cada mod va en pestañas dentro de
+# reporting.md.
 #
 # Las rutas relativas de este archivo (custom_dir, hooks) se resuelven desde el config HIJO, no
 # desde este: por eso todos los configs viven en la raiz del repo y no en una carpeta.
@@ -89,9 +102,9 @@ extra:
     tree-carve:     { name: Tree Carve,                     version: 1.0.0 }
     mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.0.0 }
   # Como se encuentran los sitios separados entre si. Cada config de mod o de landing declara
-  # `wiki_site` (la carpeta del mod, o `landing`); el combinado no lo declara y se comporta como
-  # siempre. Lo leen hooks/cross_site_links.py, que reescribe los links que salen del sitio, y
-  # overrides/partials/tabs.html, que arma el menu de secciones.
+  # `wiki_site` (la carpeta del mod, o `landing`). Lo leen hooks/cross_site_links.py, que reescribe
+  # los links que salen del sitio, overrides/partials/tabs.html, que arma el menu de secciones, y
+  # overrides/404.html, que manda una URL de antes de las versiones a `latest`.
   #   url    la raiz de la wiki publicada; la landing vive ahi y cada mod en <url><mod>/.
   #   alias  la version de un mod a la que apunta un link desde otro sitio (el alias de mike, #39).
   #   menu   el menu de secciones: `path` es una pagina de la landing, `url` un link externo, y
@@ -104,6 +117,10 @@ extra:
       - { title: Report a bug, path: reporting/ }
       - mods
       - { title: 💛 Sponsor shiero, url: https://github.com/sponsors/manucruzleiva }
+  # El selector de versiones de Material. Lee `<mod>/versions.json`, el de mike para ese prefijo,
+  # asi que cada mod lista solo sus versiones. La landing no versiona y lo apaga.
+  version:
+    provider: mike
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/SwcwXcCN4k
@@ -157,3 +174,8 @@ plugins:
   # lo descarga en tiempo de build y lo sirve desde el propio sitio: mismo origen, cacheable, y de
   # paso ningun lector pasa por un CDN ajeno.
   - privacy
+  # Solo actua bajo `mike deploy`. El site_url de cada mod no lleva version (`…/<mod>/`), asi que sin
+  # esto el canonical de cada pagina caeria en la version desplegada y no en `latest`, que es a donde
+  # apuntan tambien los links entre sitios (extra.wiki.alias).
+  - mike:
+      canonical_version: latest

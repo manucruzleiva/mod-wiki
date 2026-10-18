@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+
+{#-
+  GitHub Pages sirve el 404.html de la RAIZ para cualquier ruta que no existe, y la raiz es la
+  landing: por eso el script va solo en el 404 de la landing.
+
+  Antes de las versiones (#39) una pagina de un mod vivia en /<mod>/<pagina>/; ahora vive en
+  /<mod>/<version>/<mod>/<pagina>/. Un link viejo (Discord, un foro, un marcador) llega aca, y se lo
+  manda a la misma pagina en `latest`. Una URL que ya trae una version (o `latest`) y no existe se
+  queda en el 404, asi nunca hay un loop.
+-#}
+{% block extrahead %}
+  {{ super() }}
+  {%- if config.extra.wiki_site == "landing" %}
+  <script>
+    (function () {
+      var mods = {{ config.extra.mod_versions.keys() | list | tojson }};
+      var alias = {{ config.extra.wiki.alias | tojson }};
+      var root = new URL({{ config.extra.wiki.url | tojson }}).pathname;
+      var path = window.location.pathname;
+      if (path.indexOf(root) !== 0) { return; }
+      var rest = path.slice(root.length).split('/');
+      if (mods.indexOf(rest[0]) === -1 || rest[1] === alias || /^\d+\.\d+$/.test(rest[1])) { return; }
+      // /<mod>/<mod>/<pagina>/ es el mismo link con la carpeta del mod ya puesta.
+      var page = rest[1] === rest[0] ? rest.slice(1) : rest;
+      window.location.replace(root + rest[0] + '/' + alias + '/' + page.join('/')
+        + window.location.search + window.location.hash);
+    })();
+  </script>
+  {%- endif %}
+{% endblock %}
+
+{% block content %}
+  <h1>404 - Not found</h1>
+{% endblock %}
