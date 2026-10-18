@@ -32,6 +32,8 @@ to lose a message is to lose the log it is on.
   oak carving and a warped stem carving look like their own trees.
 - :material-axe: **[An axe takes it off](getting-started.md#removing-a-carving)** — stripping a
   carved log strips it exactly as vanilla does, and the message goes with the bark.
+- :material-puzzle: **[Bring your own symbols](symbols-and-fonts.md)** — a datapack adds symbols
+  and typefaces to the pickers, and a resource pack can bring artwork that takes the tone of every wood.
 
 </div>
 

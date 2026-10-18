@@ -202,6 +202,7 @@ nav:
   - Tree Carve:
       - tree-carve/index.md
       - Getting Started: tree-carve/getting-started.md
+      - Custom Symbols & Fonts: tree-carve/symbols-and-fonts.md
   - Cobblemon Mid-Battle EXP:
       - mid-battle-exp/index.md
       - Getting Started: mid-battle-exp/getting-started.md
