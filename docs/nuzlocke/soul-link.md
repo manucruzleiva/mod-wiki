@@ -29,7 +29,8 @@ something on Route 3, and those two Pokémon are soulmates for the rest of the r
 Every Pokémon in a linked run must be bound; *pending* is the only legitimate exception. An unbound
 Pokémon is one whose death would cost the group nothing, which is the one thing a Soul Link is.
 
-Your **starter** counts as its own shared zone, so starters bind to starters.
+Your **starter** counts as its own shared zone, so starters bind to starters. Gifts, trades and
+anything else you did not catch in the world share that same zone.
 
 ## Signing
 
@@ -54,10 +55,13 @@ because somebody else signed.
 - **Shared death** — a linked Pokémon dies and every soulmate dies with it, even if its owner is
   offline. They meet the news on their next login.
 - **No lone combat** — a bound Pokémon stays in its ball unless its partners are in their owners'
-  active parties.
+  active parties, and those owners are online.
 - **One last chance** — being wiped out by *your partner's* loss is not instantly a Game Over. With
   zones still left to catch in, you may travel and try one more encounter. Land it and the run
   continues; fail it and it ends.
+- **Starting over** — [`/pokemonrestart`](commands.md#quick-reference) takes you out of the
+  contract. Your Pokémon leave every bind they were in and the others keep theirs; a bind left with
+  only one member dissolves, so its Pokémon is free rather than pending.
 
 ## The Soul Link log
 
@@ -79,7 +83,7 @@ Partners who are offline still appear, showing the last state the run recorded.
 | --- | :---: | --- |
 | `enable_soul_link` | on | master toggle for the whole system |
 | `soul_link_max_players` | 4 | how many players one contract may hold (2–4) |
-| `soul_link_request_seconds` | 120 | how long an offer stays open |
+| `soul_link_request_seconds` | 120 | how long an offer stays open, 15–600 seconds |
 | `prevent_lone_combat` | on | a bound Pokémon needs its partners active to be sent out |
 
 Soul Link sits on top of the [Hardcore Nuzlocke](nuzlocke.md) rules — set both up from the same

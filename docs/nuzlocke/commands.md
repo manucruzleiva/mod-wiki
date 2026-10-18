@@ -8,7 +8,7 @@ flowchart LR
     N["/nuzlocke"] --> NP[👤 status · log · map]
     N --> NO[🛡️ status player · reset · revive<br/>enable · disable · set]
     N --> S[soul link]
-    S --> SP[👤 link · accept · decline · unlink<br/>status · summary]
+    S --> SP[👤 link · accept · decline · unlink<br/>status · summary · parties]
 ```
 
 👤 = every player · 🛡️ = operator (permission level 2)
@@ -21,7 +21,7 @@ flowchart LR
 | `/nuzlocke log` · key **I** | 👤 | The run's log — the Soul Link log while you are in a link. |
 | `/nuzlocke map` | 👤 | Dump your capture zones as map waypoints. |
 | `/nuzlocke reset [player]` | 🛡️ | Clear a player's zone records, lift their game-over and ask for a new Gym Leader Challenge type. They keep their team. |
-| `/nuzlocke revive [player]` | 🛡️ | Revive a party's dead Pokémon. The mercy switch. |
+| `/nuzlocke revive [player] [zone <zone>]` | 🛡️ | Revive a party's dead Pokémon — all of them, or only the one caught in that zone (by the name the log shows). The mercy switch: it also lifts a game-over, and under [Soul Link](soul-link.md) it revives each one's soulmates with it. |
 | `/nuzlocke enable` · `disable` | 🛡️ | Master switch for this world, saved per world. |
 | `/nuzlocke config list` | 👤 | Every setting for this world with its current value, by section. |
 | `/nuzlocke config get <setting>` | 👤 | Read one setting back. |
@@ -32,7 +32,7 @@ flowchart LR
 | `/nuzlocke set <option> <value>` | 🛡️ | The older spelling of `config set`, kept working. |
 | `/nuzlocke debug exp` | 🛡️ | Log what the level cap decides for each EXP gain. |
 | `/nuzlocke soullink …` | 👤 | The co-op suite — see [Soul Link](soul-link.md). |
-| `/pokemonrestart` | 👤 | Wipe your own run and start over. Its own command, not a `/nuzlocke` one — it belongs to the player whose run it is. Type it twice to confirm. |
+| `/pokemonrestart` | 👤 | Wipe your own run and start over. Its own command, not a `/nuzlocke` one — it belongs to the player whose run it is. Type it twice to confirm. It also takes you out of any Soul Link, forgets a trainer battle you walked away from, and offers the Gym Leader Challenge again when you pick your new starter. |
 
 ### `/nuzlocke soullink`
 
@@ -43,6 +43,7 @@ flowchart LR
 | `unlink` | Dissolves **your** binds. |
 | `status` | Lists your binds in chat, with ✝ marking the dead. |
 | `summary` | The linked-teams screen: every member's full party, soulmates marked ⇄. |
+| `parties` | The same members, one party per player, offline members included. |
 
 Offering a link does not need the command — right-click a player and pick **Soul Link** from
 Cobblemon's interaction wheel.
@@ -74,7 +75,7 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | Healing sources | ALL | ALL / MACHINES_ONLY / ITEMS_ONLY / NONE |
 | No bag in battle | on | closes the battle bag |
 | Battle bag blocks | Everything | Everything, or **Healing only** — X items stay legal either way |
-| Above level cap → PC | on | over-cap catches are boxed (the cap itself comes from RCT) |
+| Over cap to PC | on | over-cap catches are boxed (the cap itself comes from RCT) |
 | File the dead to the PC | on | a Pokémon that dies is moved out of your party. Your last one always stays |
 | Capture zones are | Geography | what counts as one place — the world Routes draws, the **biome** underfoot, or **both** as a pair |
 | Require nicknames | on | the naming prompt after every acquisition |
@@ -94,7 +95,7 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | Aggressive wilds | on | some species start a battle instead of meleeing you |
 | Shared EXP | on | whole team gains EXP |
 | EXP boost | x1 | x1 … x50, applies to the shared EXP too |
-| PC only at the PC block | on | no remote PC access |
+| PC at block only | on | no remote PC access |
 
 ### Starters
 
@@ -120,7 +121,7 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | Trainer entity ID | `rctmod:trainer` | which NPC to place |
 | Trainer density | Medium | Low / Medium / High / Brutal — scales with route length |
 | Trainer sight range | 15 | 0–64 blocks |
-| Trainer field of view | 180° | the cone you must stand in to be challenged; 360 = they see behind them |
+| Trainer field of view | 180° | the cone you must stand in to be challenged, 30–360; 360 = they see behind them |
 | One challenge gate | on | every challenge goes through this mod's guards; off = the trainer mod also challenges on its own, ignoring them |
 | Always-aggressive trainers | `ltsurge` | ids that challenge on sight even though leaders normally wait |
 | Challenge delay | 20 | ticks of "!" wind-up before the battle |
@@ -129,26 +130,15 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | Trainers holding post | 70% | share that stay put instead of wandering, 0–100 |
 | Water crossing trainers | — | name fragments used to pick who stands on a water crossing |
 | Fair-fight guard | on | a trainer too far above your strongest Pokémon never picks the fight |
-| Max trainer level gap | 5 | how many levels above your strongest Pokémon a trainer may be and still challenge you, 0–50 |
-| Gyms beside towns | on | needs a gym pack |
+| Max level gap | 5 | how many levels above your strongest Pokémon a trainer may be and still challenge you, 0–50 |
+| Gyms by towns | on | needs a gym pack |
 | Elite Four | on | one league building per world, beside a road; needs a league pack |
 | Gyms on the surface | on | lifts a gym whose own definition would bury it |
 
 ### Route Pokémon
 
-Every generated road carries encounter sources, disguised Cobblemon habitat blocks set into the
-paving. Each one offers **one family of its own**: the evolution stage that fits its level, and, when
-that stage is about to evolve, about one of the next stage for every three, five levels higher.
-
-- **Most sources offer something native to where they stand**: the biome on land, the sea or river
-  under a water crossing. A source on a bridge deck leans toward Flying types instead.
-- **Each source keeps its own number of Pokémon out**, picked once from a range.
-- **Now and then a source spawns an alpha**, which counts as the zone's encounter like any other.
-- **Now and then a source spawns an aggressive Pokémon**, which comes after you on sight; its first
-  hit starts a battle.
-- **A route too short for the spacing still gets one source**, halfway along.
-
-Needs Cobblemon 1.8.
+The encounter sources set into every road — what they offer is on the
+[ruleset page](nuzlocke.md#route-pokemon). Needs Cobblemon 1.8.
 
 | Option | Default | Notes |
 | --- | :---: | --- |
@@ -158,7 +148,7 @@ Needs Cobblemon 1.8.
 | Fewest Pokémon out per source | 2 | the bottom of the range each source picks its number from, 1–64 |
 | Most Pokémon out per source | 10 | the top of that range: how many of its own a source can have out at once |
 | Source spawn chance per tick | 100% | 100 refills a source at once, 1 is about one Pokémon every five seconds |
-| Wild spawns held back around a source | 16 | blocks around a source where only its own Pokémon appear; 0 = ordinary spawns there too |
+| Wild spawns held back around a source | 16 | blocks around a source where only its own Pokémon appear, 0–64; 0 = ordinary spawns there too |
 | Typical source level | 32 | each source has its own five-level band, drawn from a bell curve centred here |
 | Source level spread | 14 | how widely sources spread: most sit between 25 and 40, level 1–5 is rare and 75+ rarer still |
 | Aggressive chance at a source | 10% | chance that a Pokémon a source spawns is aggressive; 0 = never |

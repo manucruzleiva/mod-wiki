@@ -2,7 +2,8 @@
 
 The classic ruleset, enforced by the game instead of by your honour. Every rule below is a switch on
 the **NUZLOCKE** tab at world creation, and every one of them can be changed later — see
-[Commands & Config](commands.md).
+[Commands & Config](commands.md). The one thing that is not a switch is the difficulty: while the
+ruleset is on, the world is set to **Hard** every time it starts.
 
 ```mermaid
 flowchart TD
@@ -22,11 +23,12 @@ flowchart TD
 | --- | --- |
 | 🎯 **One catch per zone** | Only the first wild you meet in a zone is catchable. A spent zone bounces Poké Balls, in battle and out. Fleeing or knocking the encounter out spends it just the same. |
 | 💀 **Permadeath** | A fainted Pokémon is dead: no healing of any kind, no battling, no trading. The PC or release, nothing else. |
-| ✍️ **Mandatory nicknames** | A blocking screen on every Pokémon you obtain, showing its sprite, gender, ability and moves — so you name it knowing what it is. |
+| ✍️ **Mandatory nicknames** | A blocking screen on every Pokémon you obtain, showing its sprite, gender, ability and moves — so you name it knowing what it is. Leaving the game with the screen open brings it back on your next login, and you keep the Pokémon. Your starter is the exception: leave before naming it and the pick is undone, so you choose again from the same three. |
 | ✨ **Shiny clause** | A wild shiny is always catchable and never spends the zone. |
 | 🔁 **Duplicates clause** | A Pokémon whose line you already own cannot be caught, and does not spend the zone — that encounter waits for something new. What you own includes your starter, gifts, trades and everything you have evolved. |
-| 🥚 **Egg clause** | A hatchling is tied to where it **hatches**, like a wild catch. Eggs can also be banned outright, or exempted. |
-| 😴 **Defeated Catch** | A wild you beat lies on the ground for a while, asleep at 1 HP and catchable — a second chance at the encounter, KO experience included. |
+| 🥚 **Egg clause** | A hatchling is tied to where it **hatches**, like a wild catch: it takes that zone's encounter, so an egg will not hatch in a zone you have already spent — it waits until you carry it somewhere new. This holds even with the first-encounter lock off, and a shiny hatchling spends the zone like any other. Eggs can also be banned outright, or exempted. |
+| 😴 **Defeated Catch** | A wild you beat lies on the ground for a while, asleep at 1 HP and catchable — a second chance at the encounter, KO experience included. While it lies there it can only be caught, never battled again. |
+| 😠 **Aggressive wilds** | About one species in five comes after you instead of meleeing you, and its first hit starts a battle. A wild above your level cap never does. |
 | 🏥 **Whiteout** | Losing a battle sends you back to your **respawn point**: the last Pokémon Center you used, or your bed, or the world spawn without one. Running out of usable Pokémon anywhere is a Game Over. |
 | 📈 **Level cap** | Follows your trainer card. Catches above it go straight to the PC, and no wild Pokémon above it turns a hit into a battle. |
 | 🎒 **No bag in battle** | The battle bag is closed. A second mode blocks **only healing**, leaving X items legal — Poké Balls are never blocked. |
@@ -38,7 +40,7 @@ creation, under **Capture zones are**:
 
 | Mode | A zone is |
 |---|---|
-| **Geography** | The world Routes draws: every **numbered Area**, every **named route** and every **town** is its own zone. A route's zone reaches one chunk past the road, so a Pokémon caught just off it counts for the route; where that strip touches two routes, the lower route number takes it. Everything not enclosed in an Area is one shared **Wild** zone — it is in your log from the first minute, and early on it is most of where you can catch, so growing the road network is what earns you new zones beside it. |
+| **Geography** | The world Routes draws: every **numbered Area**, every **named route** and every **town** is its own zone. A route's zone reaches one chunk past the road, so a Pokémon caught just off it counts for the route; where that strip touches two routes, the lower route number takes it. Everything not enclosed in an Area is one shared **Wild** zone, one per dimension — it is in your log from the first minute, and early on it is most of where you can catch, so growing the road network is what earns you new zones beside it. |
 | **Biome** | The biome you are standing in. This is the classic tabletop rule, and the one that works from the first minute — it does not wait for a road network to exist. |
 | **Both** | The **pair**. A route that crosses taiga and then swamp is two zones and gives you two encounters, listed as *Route 3 — Taiga* and *Route 3 — Swamp*. |
 
@@ -49,6 +51,9 @@ surrounds it.
 
 Changing the mode part-way through a run re-reads every catch you have already made, which can re-open
 or merge zones you had spent. The setting says so where you pick it.
+
+Crossing into a new zone puts its name on screen as a title, with its state beside it: ○ free,
+● an encounter in progress, ✔ caught, ✘ lost. The title can be switched off.
 
 #### Zones a map maker drew
 
@@ -87,9 +92,11 @@ a battle while **every Pokémon on your team** carries it.
 
     They challenge you on sight and duel each other between fights — but only when it is fair: you
     are not already battling, they are off cooldown, the levels are close, and **you are in front of
-    them**. Nothing challenges you from behind.
+    them**. Nothing challenges you from behind. Crouching holds them off, so you can walk up and
+    use the trainer's own menu, and so does riding over a drop with no ground to land on.
 
-    A trainer in a battle cannot be killed, so the fight always resolves.
+    A trainer in a battle cannot be killed, so the fight always resolves. A trainer who has ended
+    a run carries a ☠ tally of them in its name — and so does every other trainer of that name.
 
 -   ### 🏛️ A gym beside every town
 
@@ -103,11 +110,33 @@ a battle while **every Pokémon on your team** carries it.
     One league per world, standing out on a route between settlements as a place of its own, with
     its own marker on the map. It has its own switch, apart from the gyms.
 
+-   ### 🌿 Pokémon on the roads
+
+    Every road carries its own encounters: hidden sources set into the paving, each offering one
+    family at its own level. See [Route Pokémon](#route-pokemon).
+
 -   ### 🧗 The Escape Rope
 
     A one-tap trip back to your respawn point — and it will not fire mid-battle.
 
 </div>
+
+## 🌿 Route Pokémon
+
+Every generated road carries encounter sources, disguised Cobblemon habitat blocks set into the
+paving. Each one offers **one family of its own**: the evolution stage that fits its level, and, when
+that stage is about to evolve, about one of the next stage for every three, five levels higher.
+
+- **Most sources offer something native to where they stand**: the biome on land, the sea or river
+  under a water crossing. A source on a bridge deck leans toward Flying types instead.
+- **Each source keeps its own number of Pokémon out**, picked once from a range.
+- **Now and then a source spawns an alpha**, which counts as the zone's encounter like any other.
+- **Now and then a source spawns an aggressive Pokémon**, which comes after you on sight; its first
+  hit starts a battle.
+- **A route too short for the spacing still gets one source**, halfway along.
+
+Needs Cobblemon 1.8. Spacing, levels and odds are all settings — see
+[Route Pokémon settings](commands.md#route-pokemon).
 
 ## 🧗 Escape Rope
 
