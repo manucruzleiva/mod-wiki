@@ -45,6 +45,12 @@ difference between watching them circle your table and never seeing them at all,
 ground for a hundred blocks was somewhere down the mountainside. Clear air still has the final say, so
 none of them end up inside the mountain.
 
+**They stay around the table.** For 30 seconds after a re-roll, a flier that leaves the table's re-roll
+radius turns back toward the table, at your height. Inside the radius it flies wherever it likes, and
+once the time is up it is fully wild again. Over open sea this is what keeps a re-roll from flying out
+of sight before you get a look at it. Set the time with `/picnic config reroll flierleash` (0 lets them
+roam at once).
+
 **It doesn't change your odds.** Lifting happens *after* the spawn is decided. Which Pokémon appear,
 and how often, is Cobblemon's call alone — its spawn pool, the biome, the light, and any `poke_snack`
 influence in range. Nothing is added, removed or re-rolled, so a shiny hunt runs at exactly the rate

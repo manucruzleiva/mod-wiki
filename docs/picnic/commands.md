@@ -47,6 +47,7 @@ and `expert`; the Diving, Hot and Strange tables count as `expert`.
 | | `spawncap <tier>` | int | Max Pokémon per re-roll for that tier. |
 | | `fuelcost <tier>` | int | Bread per re-roll for that tier (7 Basic, 5 Advanced, 3 above). `0` makes it free. |
 | | `flyinglift` | 0–64 | How high re-rolled fliers are lifted off the ground (default `12`, `0` grounds them). Never changes *which* Pokémon spawn. |
+| | `flierleash` | 0–600 | Seconds a re-rolled flier is kept within the table's re-roll radius (default `30`, `0` lets it roam at once). |
 | | `protectshiny <rung>` | true/false | The re-roll keeps **shiny** wild Pokémon instead of despawning them. *Default off.* |
 | | `protectlegendary <rung>` | true/false | Keeps **legendary** wild Pokémon. *Default off.* |
 | | `protectmythical <rung>` | true/false | Keeps **mythical** wild Pokémon. *Default off.* |
