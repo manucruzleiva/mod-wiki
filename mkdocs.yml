@@ -51,7 +51,9 @@ theme:
   font: false
   features:
     # Four mods in one sidebar read as one endless list. Tabs give each mod its own top-level
-    # entry, and the sidebar then only ever shows the section you are actually in.
+    # entry, and the sidebar then only ever shows the section you are actually in. `sticky` es lo
+    # que mete overrides/partials/tabs.html dentro del header: ahi las secciones no son una fila,
+    # son el menu hamburguesa de desktop.
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.instant

@@ -1,0 +1,26 @@
+{#-
+  Las secciones van detras de un hamburguesa en vez de ocupar una segunda fila del header.
+
+  Con `navigation.tabs.sticky`, Material incluye este partial DENTRO del <header>, y la navegacion
+  instantanea reemplaza `[data-md-component=tabs]` en cada cambio de pagina: el panel llega cerrado
+  y con la seccion activa al dia sin una linea de JS. Por eso conserva ese atributo.
+
+  El hamburguesa propio de Material (`for=__drawer`) no sirve en desktop: el drawer solo existe por
+  debajo de 76.25em. Este se dibuja solo por encima de ese ancho (ver stylesheets/extra.css), asi que
+  el drawer movil queda intacto. Los links salen del macro de Material para no duplicar como resuelve
+  la URL de una seccion.
+-#}
+{% import "partials/tabs-item.html" as item with context %}
+<details class="wiki-sections" data-md-component="tabs">
+  <summary class="wiki-sections__toggle md-header__button md-icon" title="{{ lang.t('tabs') }}" aria-label="{{ lang.t('tabs') }}">
+    {% set icon = config.theme.icon.menu or "material/menu" %}
+    {% include ".icons/" ~ icon ~ ".svg" %}
+  </summary>
+  <nav class="wiki-sections__panel" aria-label="{{ lang.t('tabs') }}">
+    <ul class="wiki-sections__list">
+      {% for nav_item in nav.items %}
+        {{ item.render(nav_item) }}
+      {% endfor %}
+    </ul>
+  </nav>
+</details>

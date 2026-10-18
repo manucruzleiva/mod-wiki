@@ -67,6 +67,19 @@
       if (typeof document$ !== 'undefined') { document$.subscribe(paint); }
     })();
   </script>
+  {#- El menu de secciones (partials/tabs.html) es un <details>: se cierra solo al navegar, porque la
+      navegacion instantanea lo reemplaza, pero no con un click afuera ni con Esc. Delegado en
+      `document` para sobrevivir a ese reemplazo. -#}
+  <script>
+    (function () {
+      function close(except) {
+        var menu = document.querySelector('.wiki-sections[open]');
+        if (menu && !menu.contains(except)) { menu.removeAttribute('open'); }
+      }
+      document.addEventListener('click', function (e) { close(e.target); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { close(null); } });
+    })();
+  </script>
   {#- Las imagenes de contenido se cargan diferidas. Material no marca las del markdown, asi que en
       una pagina larga el navegador se baja cada captura antes de pintar nada. Se salta la primera
       del articulo: en los index es el logo del hero, arriba de todo, y diferirla solo agrega un
