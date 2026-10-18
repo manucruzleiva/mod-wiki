@@ -75,6 +75,20 @@ extra:
   # Quita el "Made with Material for MkDocs" del footer. Lo unico que queda abajo es la linea de
   # licencia, que es la que el lector puede necesitar.
   generator: false
+  # La version de cada mod que documenta su seccion. La clave es la carpeta bajo docs/; una pagina
+  # cuya carpeta no esta aca (Home, Report a bug, License) no muestra ninguna. El numero es el del
+  # ultimo GitHub Release del mod — el unico jar que un jugador puede tener — y se pone al dia en el
+  # mismo commit en que se publica ese mod. Uno por seccion, nunca por pagina: una seccion describe
+  # una sola version. Lo dibuja overrides/main.html arriba del titulo.
+  mod_versions:
+    routes:         { name: Routes,                         version: 1.2.119 }
+    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.38 }
+    picnic:         { name: Cobblemon Picnic,               version: 4.0.0 }
+    ditto-hms:      { name: Cobblemon Ditto HMs,            version: 3.0.0 }
+    raid-icons:     { name: Cobblemon Raid Icons,           version: 2.5.4 }
+    champions:      { name: Cobblemon Champions Training,   version: 1.0.0 }
+    tree-carve:     { name: Tree Carve,                     version: 1.0.0 }
+    mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.0.0 }
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/SwcwXcCN4k

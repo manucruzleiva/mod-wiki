@@ -764,3 +764,14 @@ DOM node and one request per family rather than one per frame.
     animation: none;
   }
 }
+
+/* "Documented against <mod> <version>": a quiet line above the page title,
+   rendered by overrides/main.html from extra.mod_versions. Its margin stays
+   positive: a section index opens on the hero, not on an h1, and a negative
+   one slid the hero over the line. */
+.md-typeset .wiki-mod-version {
+  margin: 0 0 0.4em;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  color: var(--md-default-fg-color--light);
+}
