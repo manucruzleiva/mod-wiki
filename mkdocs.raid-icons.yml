@@ -1,0 +1,23 @@
+INHERIT: mkdocs.base.yml
+site_name: Cobblemon Raid Icons
+site_url: https://manucruzleiva.github.io/mod-wiki/raid-icons/
+
+extra:
+  wiki_site: raid-icons
+
+# Todo lo que no es de este mod queda afuera, salvo lo compartido. Los links a paginas de otro sitio
+# los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*
+  !/raid-icons/
+  !/assets/
+  !/stylesheets/
+
+nav:
+  - Cobblemon Raid Icons:
+      - raid-icons/index.md
+      - Getting Started: raid-icons/getting-started.md
+      - The Icons: raid-icons/map-icons.md
+      - Commands: raid-icons/commands.md
+      - Configuration: raid-icons/configuration.md
+      - Community Credits: raid-icons/credits.md

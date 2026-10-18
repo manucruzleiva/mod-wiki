@@ -1,0 +1,25 @@
+INHERIT: mkdocs.base.yml
+site_name: Cobblemon Champions Training
+site_url: https://manucruzleiva.github.io/mod-wiki/champions/
+
+extra:
+  wiki_site: champions
+
+# Todo lo que no es de este mod queda afuera, salvo lo compartido. Los links a paginas de otro sitio
+# los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*
+  !/champions/
+  !/assets/
+  !/stylesheets/
+
+nav:
+  - Cobblemon Champions Training:
+      - champions/index.md
+      - Getting Started: champions/getting-started.md
+      - Stat Points: champions/stat-points.md
+      - Nature, Ability & Moves: champions/nature-ability-moves.md
+      - Saved Sets: champions/sets.md
+      - Training Costs: champions/training-costs.md
+      - Commands & Config: champions/commands.md
+      - Community Credits: champions/credits.md

@@ -1,0 +1,159 @@
+# Lo que comparten TODOS los sitios de la wiki: el de cada mod (mkdocs.<mod>.yml), la landing
+# (mkdocs.landing.yml) y el combinado (mkdocs.yml). Cada uno lo trae con `INHERIT` y agrega su
+# site_name, site_url, nav y exclude_docs. No se buildea solo: no tiene nav.
+#
+# Las rutas relativas de este archivo (custom_dir, hooks) se resuelven desde el config HIJO, no
+# desde este: por eso todos los configs viven en la raiz del repo y no en una carpeta.
+#
+# The docs live here, in a PUBLIC repo, while every mod repo is private: the documentation stays
+# openly readable without exposing any code. Each mod is its own sub-site so it can be versioned
+# on its own; they all keep `docs_dir: docs` so the ~300 relative links to docs/assets/ resolve
+# unchanged, and drop what is not theirs with `exclude_docs`.
+
+# Sin `repo_url` a proposito: Material lo dibuja en el header con el contador de estrellas y forks,
+# que no le dice nada a quien viene a leer como se instala un mod. El repo no se enlaza en ningun
+# lado: la wiki NO invita a mandar PRs, las correcciones entran por Discord.
+docs_dir: docs
+# The footer's only line, and the one place the license is linked from every page. It carries HTML on
+# purpose: each mod used to repeat the same license page, four near-identical copies that drifted
+# apart. There is now ONE at /license/, and this is how a reader reaches it from anywhere.
+copyright: 'Mods by shiero — <a href="/mod-wiki/license/">"If you make money, I make money" license</a>'
+
+# The palette is `custom` on purpose: the colours are defined as CSS variables in
+# stylesheets/extra.css, so light and dark are tuned as one system instead of being picked from
+# Material's fixed swatches. Green/teal out of the box read like an untouched default.
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  icon:
+    logo: material/map-marker-path
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  # Sin Google Fonts: `font: text/code` hace que Material pida un CSS a fonts.googleapis.com que
+  # BLOQUEA el render, mas los woff2 de fonts.gstatic.com — Inter pedia ocho pesos. La pila del
+  # sistema se ve bien, llega en cero requests, y de paso no manda a cada lector a Google.
+  font: false
+  features:
+    # Four mods in one sidebar read as one endless list. Tabs give each mod its own top-level
+    # entry, and the sidebar then only ever shows the section you are actually in. `sticky` es lo
+    # que mete overrides/partials/tabs.html dentro del header: ahi las secciones no son una fila,
+    # son el menu hamburguesa de desktop.
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    # Sin navigation.footer: los botones Anterior/Siguiente encadenan paginas que no se leen en
+    # orden — de "License" a "Hardcore Nuzlocke" no hay ninguna continuidad. El indice de la
+    # izquierda y el buscador ya cubren el moverse.
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tooltips
+
+extra:
+  # Quita el "Made with Material for MkDocs" del footer. Lo unico que queda abajo es la linea de
+  # licencia, que es la que el lector puede necesitar.
+  generator: false
+  # La version de cada mod que documenta su seccion. La clave es la carpeta bajo docs/; una pagina
+  # cuya carpeta no esta aca (Home, Report a bug, License) no muestra ninguna. El numero es el del
+  # ultimo GitHub Release del mod — el unico jar que un jugador puede tener — y se pone al dia en el
+  # mismo commit en que se publica ese mod. Uno por seccion, nunca por pagina: una seccion describe
+  # una sola version. Lo dibuja overrides/main.html arriba del titulo. El `name` es tambien la
+  # entrada del mod en el menu de secciones de los sitios separados (overrides/partials/tabs.html).
+  mod_versions:
+    routes:         { name: Routes,                         version: 1.2.119 }
+    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.38 }
+    picnic:         { name: Cobblemon Picnic,               version: 4.0.0 }
+    ditto-hms:      { name: Cobblemon Ditto HMs,            version: 3.0.0 }
+    raid-icons:     { name: Cobblemon Raid Icons,           version: 2.5.4 }
+    champions:      { name: Cobblemon Champions Training,   version: 1.0.0 }
+    tree-carve:     { name: Tree Carve,                     version: 1.0.0 }
+    mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.0.0 }
+  # Como se encuentran los sitios separados entre si. Cada config de mod o de landing declara
+  # `wiki_site` (la carpeta del mod, o `landing`); el combinado no lo declara y se comporta como
+  # siempre. Lo leen hooks/cross_site_links.py, que reescribe los links que salen del sitio, y
+  # overrides/partials/tabs.html, que arma el menu de secciones.
+  #   url    la raiz de la wiki publicada; la landing vive ahi y cada mod en <url><mod>/.
+  #   alias  la version de un mod a la que apunta un link desde otro sitio (el alias de mike, #39).
+  #   menu   el menu de secciones: `path` es una pagina de la landing, `url` un link externo, y
+  #          `mods` es donde va un mod por entrada de mod_versions.
+  wiki:
+    url: https://manucruzleiva.github.io/mod-wiki/
+    alias: latest
+    menu:
+      - { title: Home,         path: "" }
+      - { title: Report a bug, path: reporting/ }
+      - mods
+      - { title: 💛 Sponsor shiero, url: https://github.com/sponsors/manucruzleiva }
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/SwcwXcCN4k
+      name: Discord — support and bug reports
+    - icon: simple/modrinth
+      link: https://modrinth.com/user/shiero
+      name: Modrinth
+    - icon: simple/curseforge
+      link: https://www.curseforge.com/members/shiero/projects
+      name: CurseForge
+    - icon: fontawesome/solid/heart
+      link: https://github.com/sponsors/manucruzleiva
+      name: Sponsor shiero
+
+extra_css:
+  - assets/discs.css
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+hooks:
+  # Reemplaza cada ```mermaid por su SVG ya renderizado, para no mandarle a cada lector 3,4 MB de
+  # Mermaid.js. Si un diagrama todavia no tiene SVG, deja el fence y el navegador lo dibuja como
+  # siempre: nunca rompe el build, solo avisa cual falta.
+  - hooks/prerender_mermaid.py
+  # Un link a una pagina de otro sitio (otro mod, o la landing) apunta a ese sitio publicado en vez
+  # de quedar roto, y cada sitio de mod recibe un index.html en su raiz. Ver el docstring.
+  - hooks/cross_site_links.py
+
+plugins:
+  - search
+  # Material se baja mermaid de unpkg.com en CADA pagina con diagrama — casi todas aca — y son ~1 MB
+  # desde un tercero, sin version fija, o sea sin cache larga y a merced de que unpkg ande. `privacy`
+  # lo descarga en tiempo de build y lo sirve desde el propio sitio: mismo origen, cacheable, y de
+  # paso ningun lector pasa por un CDN ajeno.
+  - privacy

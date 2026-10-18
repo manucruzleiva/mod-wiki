@@ -1,0 +1,22 @@
+INHERIT: mkdocs.base.yml
+site_name: Cobblemon Nuzlocke & Soul Link
+site_url: https://manucruzleiva.github.io/mod-wiki/nuzlocke/
+
+extra:
+  wiki_site: nuzlocke
+
+# Todo lo que no es de este mod queda afuera, salvo lo compartido. Los links a paginas de otro sitio
+# los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*
+  !/nuzlocke/
+  !/assets/
+  !/stylesheets/
+
+nav:
+  - Cobblemon Nuzlocke & Soul Link:
+      - nuzlocke/index.md
+      - Hardcore Nuzlocke: nuzlocke/nuzlocke.md
+      - Soul Link (co-op): nuzlocke/soul-link.md
+      - Commands & Config: nuzlocke/commands.md
+      - Community Credits: nuzlocke/credits.md

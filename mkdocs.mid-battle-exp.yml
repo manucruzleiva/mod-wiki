@@ -1,0 +1,21 @@
+INHERIT: mkdocs.base.yml
+site_name: Cobblemon Mid-Battle EXP
+site_url: https://manucruzleiva.github.io/mod-wiki/mid-battle-exp/
+
+extra:
+  wiki_site: mid-battle-exp
+
+# Todo lo que no es de este mod queda afuera, salvo lo compartido. Los links a paginas de otro sitio
+# los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*
+  !/mid-battle-exp/
+  !/assets/
+  !/stylesheets/
+
+nav:
+  - Cobblemon Mid-Battle EXP:
+      - mid-battle-exp/index.md
+      - Getting Started: mid-battle-exp/getting-started.md
+      - How it works: mid-battle-exp/how-it-works.md
+      - Community Credits: mid-battle-exp/credits.md

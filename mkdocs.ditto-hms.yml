@@ -1,0 +1,26 @@
+INHERIT: mkdocs.base.yml
+site_name: Cobblemon Ditto HMs
+site_url: https://manucruzleiva.github.io/mod-wiki/ditto-hms/
+
+extra:
+  wiki_site: ditto-hms
+
+# Todo lo que no es de este mod queda afuera, salvo lo compartido. Los links a paginas de otro sitio
+# los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*
+  !/ditto-hms/
+  !/assets/
+  !/stylesheets/
+
+nav:
+  - Cobblemon Ditto HMs:
+      - ditto-hms/index.md
+      - Getting Started: ditto-hms/getting-started.md
+      - Active HMs: ditto-hms/abilities/active.md
+      - Toggle HMs: ditto-hms/abilities/toggles.md
+      - HM Wheel: ditto-hms/hm-wheel.md
+      - Commands: ditto-hms/commands.md
+      - Configuration: ditto-hms/configuration.md
+      - Changelog: ditto-hms/changelog.md
+      - Community Credits: ditto-hms/credits.md

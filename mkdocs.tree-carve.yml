@@ -1,0 +1,20 @@
+INHERIT: mkdocs.base.yml
+site_name: Tree Carve
+site_url: https://manucruzleiva.github.io/mod-wiki/tree-carve/
+
+extra:
+  wiki_site: tree-carve
+
+# Todo lo que no es de este mod queda afuera, salvo lo compartido. Los links a paginas de otro sitio
+# los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*
+  !/tree-carve/
+  !/assets/
+  !/stylesheets/
+
+nav:
+  - Tree Carve:
+      - tree-carve/index.md
+      - Getting Started: tree-carve/getting-started.md
+      - Custom Symbols & Fonts: tree-carve/symbols-and-fonts.md

@@ -46,7 +46,7 @@
 {% endblock %}
 
 {% block content %}
-  {#- Que version del mod describe esta pagina (extra.mod_versions en mkdocs.yml). Se resuelve en
+  {#- Que version del mod describe esta pagina (extra.mod_versions en mkdocs.base.yml). Se resuelve en
       build por la carpeta de la pagina, no por la URL en el navegador: la navegacion instantanea
       reemplaza el articulo entero, asi que la linea viaja con el. -#}
   {%- set mod = config.extra.mod_versions[page.file.src_uri.split('/')[0]] if page and page.file else none -%}

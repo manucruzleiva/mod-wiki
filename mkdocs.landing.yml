@@ -1,0 +1,21 @@
+INHERIT: mkdocs.base.yml
+site_name: Modding Wiki
+site_description: >-
+  The single wiki for every Cobblemon mod by shiero — Routes, Nuzlocke & Soul Link, Picnic, Ditto HMs,
+  Raid Icons, Champions Training and Mid-Battle EXP.
+site_url: https://manucruzleiva.github.io/mod-wiki/
+
+extra:
+  wiki_site: landing
+
+# La landing no versiona: Home, Report a bug y License, mas los logos de cada mod que dibuja la
+# portada. Ninguna pagina de un mod entra; los links a ellas los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*/**
+  !/*/assets/**
+  !/assets/**
+  !/stylesheets/**
+
+nav:
+  - Home: index.md
+  - Report a bug: reporting.md

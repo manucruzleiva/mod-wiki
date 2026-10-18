@@ -1,0 +1,25 @@
+INHERIT: mkdocs.base.yml
+site_name: Cobblemon Picnic
+site_url: https://manucruzleiva.github.io/mod-wiki/picnic/
+
+extra:
+  wiki_site: picnic
+
+# Todo lo que no es de este mod queda afuera, salvo lo compartido. Los links a paginas de otro sitio
+# los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*
+  !/picnic/
+  !/assets/
+  !/stylesheets/
+
+nav:
+  - Cobblemon Picnic:
+      - picnic/index.md
+      - Getting Started: picnic/getting-started.md
+      - Picnic Tables: picnic/picnic-tables.md
+      - Spawn Re-rolling: picnic/spawn-rerolling.md
+      - Shiny Aura: picnic/shiny-aura.md
+      - Items & Care: picnic/interactions-and-items.md
+      - Commands & Config: picnic/commands.md
+      - Community Credits: picnic/credits.md

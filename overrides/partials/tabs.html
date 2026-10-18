@@ -9,6 +9,11 @@
   debajo de 76.25em. Este se dibuja solo por encima de ese ancho (ver stylesheets/extra.css), asi que
   el drawer movil queda intacto. Los links salen del macro de Material para no duplicar como resuelve
   la URL de una seccion.
+
+  En los sitios separados (un config con `extra.wiki_site`) el nav solo tiene las paginas de ese
+  sitio, asi que el menu no sale del nav sino de `extra.wiki.menu`, con un mod por entrada de
+  `extra.mod_versions` donde dice `mods`, cada uno al sitio que lo publica. El sitio propio va relativo,
+  para no saltar de la version que se esta leyendo a `latest`. El combinado sigue usando el nav.
 -#}
 {% import "partials/tabs-item.html" as item with context %}
 <details class="wiki-sections" data-md-component="tabs">
@@ -18,9 +23,30 @@
   </summary>
   <nav class="wiki-sections__panel" aria-label="{{ lang.t('tabs') }}">
     <ul class="wiki-sections__list">
-      {% for nav_item in nav.items %}
-        {{ item.render(nav_item) }}
-      {% endfor %}
+      {% set site = config.extra.wiki_site %}
+      {% if site %}
+        {% set wiki = config.extra.wiki %}
+        {% set landing = site == "landing" %}
+        {% for entry in wiki.menu %}
+          {% if entry == "mods" %}
+            {% for key, mod in config.extra.mod_versions.items() %}
+              <li class="md-tabs__item{% if key == site %} md-tabs__item--active{% endif %}">
+                <a href="{{ ((key ~ '/') | url) if key == site else wiki.url ~ key ~ '/' }}" class="md-tabs__link">{{ mod.name }}</a>
+              </li>
+            {% endfor %}
+          {% elif entry.url %}
+            <li class="md-tabs__item"><a href="{{ entry.url }}" class="md-tabs__link">{{ entry.title }}</a></li>
+          {% else %}
+            <li class="md-tabs__item{% if landing and page and page.url == entry.path %} md-tabs__item--active{% endif %}">
+              <a href="{{ (entry.path | url) if landing else wiki.url ~ entry.path }}" class="md-tabs__link">{{ entry.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% for nav_item in nav.items %}
+          {{ item.render(nav_item) }}
+        {% endfor %}
+      {% endif %}
     </ul>
   </nav>
 </details>
