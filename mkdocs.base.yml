@@ -97,7 +97,7 @@ extra:
     nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.38 }
     picnic:         { name: Cobblemon Picnic,               version: 4.0.0 }
     ditto-hms:      { name: Cobblemon Ditto HMs,            version: 3.0.0 }
-    raid-icons:     { name: Cobblemon Raid Icons,           version: 2.5.4 }
+    raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0 }
     champions:      { name: Cobblemon Champions Training,   version: 1.0.0 }
     tree-carve:     { name: Tree Carve,                     version: 1.0.0 }
     mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.0.0 }
