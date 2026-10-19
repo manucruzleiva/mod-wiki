@@ -52,8 +52,7 @@ rather type it. Your choices are still there after rejoining.
 
 To hide and show the paint with one key, bind **Show / hide chunk paint** under **Routes** in
 Options → Controls → Key Binds. It ships unbound, so it never fights Xaero's own keys. Every argument is on
-[the Commands page](commands.md#routesmap-how-your-map-looks); see
-[how to test it](testing.md#8-routesmap-how-your-map-looks).
+[the Commands page](commands.md#routesmap-how-your-map-looks).
 
 !!! note
     Get the map mods from [the Xaero's Minimap page](https://modrinth.com/mod/xaeros-minimap) and
