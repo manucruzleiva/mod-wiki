@@ -2,7 +2,7 @@
 
 Everything is decided **when you create the world** — a dedicated **ROUTES** tab sits next to
 **GAME / WORLD / MORE** on the create-world screen. Outside world creation there's a global config
-screen for defaults.
+screen for defaults, opened from the mod list (Mod Menu on Fabric, the **Config** button on NeoForge).
 
 !!! tip "Looking for the NUZLOCKE tab?"
     The Nuzlocke ruleset, its starter options and the Soul Link toggles belong to
@@ -12,7 +12,7 @@ screen for defaults.
 ```mermaid
 flowchart LR
     T[🆕 ROUTES tab<br/>at world creation] -->|saved per world| W[🌍 Your world's rules<br/>never clobbered later]
-    K[⚙️ Global config — key K<br/>config/routes.json] -->|defaults when a world<br/>wasn't configured| W
+    K[⚙️ Global config — mod list<br/>config/routes.json] -->|defaults when a world<br/>wasn't configured| W
 ```
 
 ## ROUTES tab
