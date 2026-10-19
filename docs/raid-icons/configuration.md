@@ -21,12 +21,14 @@ These decide which dens get an icon. They are the settings worth touching.
 
 ### `minTier`
 
-The lowest star tier that gets a marker. `0` marks everything.
+The lowest star tier that gets a marker, from `0` to `7`. `0` marks everything; a value outside that
+range is clamped to it.
 
 | Value | Effect |
 |---|---|
 | `0` | Every den, whatever its tier. The default. |
 | `5` | Only 5-star dens and above — the endgame view. |
+| `7` | Only 7-star dens. Every [feature den](map-icons.md#feature-dens) is 7-star, but so are many plain ones, so this does not single them out. |
 
 A den whose tier the mod could not read is always drawn, at any setting. It might be the one you
 want, and hiding it on a technicality is worse than one extra icon.
@@ -46,6 +48,10 @@ The names are the eighteen types plus `stellar`, lower-case:
 `flying` · `psychic` · `bug` · `rock` · `ghost` · `dragon` · `dark` · `steel` · `fairy` · `stellar`
 
 An unrecognised name is dropped from the list rather than silently matching nothing.
+
+A [feature den](map-icons.md#feature-dens) is never hidden by this filter. Its marker shows the
+feature, not the tera type, so filtering it out by type would hide it for a reason the map does not
+show.
 
 ### `onlyActiveDens`
 
