@@ -775,3 +775,26 @@ DOM node and one request per family rather than one per frame.
   letter-spacing: 0.02em;
   color: var(--md-default-fg-color--light);
 }
+
+/* Raid Icons: a den's map icon at the size the world map draws it, and the
+   gallery that lays the tera icons out as a wrapping grid with the name below. */
+.md-typeset img.den-icon {
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+
+.md-typeset .den-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
+  gap: 0.6rem;
+}
+
+.md-typeset .den-icon-grid figure {
+  margin: 0;
+}
+
+.md-typeset .den-icon-grid figcaption {
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
+}
