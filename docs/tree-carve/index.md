@@ -10,7 +10,7 @@ heart — and it stays there, cut into the bark, for anyone who walks past.
 It registers no items and adds no recipes. The tool is the sword you already carry, and the only way
 to lose a message is to lose the log it is on.
 
-<span class="badge">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
+<span class="badge">MC 1.21.1</span> <span class="badge">MC 26.1 – 26.3</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
 
 <div class="hero-actions" markdown>
 [Get started](getting-started.md){ .md-button }
@@ -47,7 +47,7 @@ written on, which is why a carving is worth walking to.
 
 | | |
 |---|---|
-| **Needs** | Minecraft 1.21.1 on Fabric or NeoForge |
+| **Needs** | Minecraft 1.21.1, 26.1, 26.2 or 26.3 on Fabric or NeoForge, with the jar made for that version |
 | **Works with** | any mod that adds logs — the mod goes by the block tag, not by a list of woods it knows |
 | **Does not need** | Cobblemon. This one is plain Minecraft. |
 
