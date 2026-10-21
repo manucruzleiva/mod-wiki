@@ -1,15 +1,42 @@
 # Champions Trainer
 
-From version **1.0.14**, everything this mod sells is bought from a **Champions Trainer**, an NPC
-that stands somewhere in the world. That covers stat points, loading a saved set, the nature, the
-ability and the moves of a Pokémon in training. The summary screen still shows all of it anywhere
-you open it. It just doesn't sell anything on its own.
+From version **1.0.14**, everything this mod sells can be tied to a **Champions Trainer**, an NPC
+that stands in the world. That covers stat points, loading a saved set, the nature, the ability and
+the moves of a Pokémon in training. Where a trainer is required, the summary screen still shows all
+of it anywhere you open it. It just doesn't sell anything on its own.
 
 Prices are the same as before. [Training Costs](training-costs.md) lists them.
 
+## When a trainer is required
+
+It depends on [PokeTowns](../poketowns/index.md):
+
+| | Where changes are bought |
+|---|---|
+| **PokeTowns installed** | At a Champions Trainer. One stands in every Pokémon Center. |
+| **No PokeTowns** | From the summary, anywhere, as before 1.0.14. A trainer still works if an operator places one. |
+
+An operator can override this either way with a command, which is saved to the config file:
+
+```
+/champions config trainer required on      always at a trainer
+/champions config trainer required off     always from the summary
+/champions config trainer required auto    back to the default above
+```
+
+## Where to find one
+
+With PokeTowns, every [Pokémon Center](../poketowns/center-and-mart.md) has a Champions Trainer
+standing beside the counter, three blocks along from Nurse Joy. It appears the first time the
+Center loads, so Centers in a world generated before this update get one too.
+
+If an operator removes a Center's trainer, it does not come back. To stop placing them at all, use
+`/champions config trainer inCenters false`. Trainers already placed stay.
+
 ## Placing a trainer
 
-The trainer is a regular Cobblemon NPC, so an operator places it with Cobblemon's own command:
+The trainer is a regular Cobblemon NPC, so an operator can place one anywhere with Cobblemon's own
+command:
 
 ```
 /spawnnpc cobblemon_champions_training:champions_trainer
@@ -17,7 +44,7 @@ The trainer is a regular Cobblemon NPC, so an operator places it with Cobblemon'
 
 It does not despawn, cannot be hurt, and stays where it was placed across restarts. Cobblemon's NPC
 tools (`/npcedit`, `/npcdelete`, the NPC editor item in creative) work on it like on any other NPC.
-On a server, put one wherever players should go to train, such as a Pokémon Center or a gym.
+On a server, put one wherever players should go to train, such as a gym.
 
 ## Training at the trainer
 
@@ -32,7 +59,7 @@ If you have no Pokémon with you, the trainer says to come back when you do.
 
 ## Away from a trainer
 
-Open the summary anywhere else (with the summary key, or from the PC) and you can still read
+Where a trainer is required, open the summary anywhere else (with the summary key, or from the PC) and you can still read
 everything, but you can't change it:
 
 - On **SP**, the **+**, **−**, **++**, **Save** and **Reset** buttons are greyed out and the footer
