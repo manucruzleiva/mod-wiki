@@ -1,11 +1,33 @@
 # Configuration
 
-The settings live in **`config/cobblemon_raid_icons.properties`**, inside your game folder — the
-same `config/` your other mods write to. The file is created with the defaults the first time you
-load a world, so start it once and then edit it.
+There are three ways to change a setting, and they all edit the same values:
 
-An unreadable or misspelled value never stops the mod: it falls back to its default and says so in
-the log.
+- **The settings screen**, through `/raidicons`, a key you bind, Mod Menu on Fabric or the mod list
+  on NeoForge. It needs [Cloth Config](https://modrinth.com/mod/cloth-config).
+- **[`/raidicons config`](commands.md#raidicons-config)** in chat, with or without Cloth Config.
+- **The settings file**, `config/cobblemon_raid_icons.properties` in your game folder.
+
+A change made on the screen or by command is saved to the file and shows on the map straight away,
+with no restart.
+
+## The settings screen
+
+Run `/raidicons`, or bind **Options → Controls → Cobblemon Raid Icons → Open settings**. On Fabric,
+Mod Menu's config button opens it too; on NeoForge, the mod list's **Config** button does. Without
+Cloth Config the button is not there and the command points you to `/raidicons config` instead.
+
+The screen has three tabs:
+
+| Tab | Settings |
+|---|---|
+| **Filters** | Only active dens, Lowest star tier, one switch per tera type |
+| **Icons** | Minimap icon size, World map icon size |
+| **Advanced** | Scan radius (chunks), Chunks scanned per tick |
+
+## The settings file
+
+The file is created with the defaults the first time you load a world. An unreadable or misspelled
+value never stops the mod: it falls back to its default and says so in the log.
 
 ```properties
 scanRadius=12
@@ -13,6 +35,8 @@ chunksPerTick=12
 onlyActiveDens=false
 minTier=0
 teraTypes=
+minimapIconScale=100
+worldMapIconScale=100
 ```
 
 ## The filters
@@ -47,7 +71,10 @@ The names are the eighteen types plus `stellar`, lower-case:
 `normal` · `fire` · `water` · `electric` · `grass` · `ice` · `fighting` · `poison` · `ground` ·
 `flying` · `psychic` · `bug` · `rock` · `ghost` · `dragon` · `dark` · `steel` · `fairy` · `stellar`
 
-An unrecognised name is dropped from the list rather than silently matching nothing.
+An unrecognised name is dropped from the list rather than silently matching nothing. From chat,
+`/raidicons config teraTypes add <type>` and `remove <type>` change one type at a time, and
+`/raidicons config teraTypes all` clears the filter. On the screen, each type has its own switch;
+turning every switch off shows every type again, because a filter cannot hide all of them.
 
 A [feature den](map-icons.md#feature-dens) is never hidden by this filter. Its marker shows the
 feature, not the tera type, so filtering it out by type would hide it for a reason the map does not
@@ -57,6 +84,15 @@ show.
 
 `true` hides dens that are not currently live. Default `false`, which draws every den whether it is
 ready to fight or resetting.
+
+## Icon size
+
+### `minimapIconScale` and `worldMapIconScale`
+
+The size of the den icons on each map, as a percentage of that map's normal size. Default `100`,
+from `50` to `200`. At `100` an icon is 36×36 pixels on the minimap and 48×48 on the world map.
+
+They are separate so you can shrink a crowded minimap without making the world map harder to read.
 
 ## The scan
 
@@ -80,5 +116,6 @@ free to check, so there is little to gain by lowering it.
 
 ## Checking a change took effect
 
-Run [`/raidicons`](commands.md). The `scan` line shows the ground actually being covered, and the
-`nearest den` line shows what survived your filters.
+Run [`/raidicons config`](commands.md#raidicons-config) to see every value the mod is using. For the
+scan itself, [`/raidicons report`](commands.md#raidicons-report) shows the ground actually being
+covered on its `scan` line, and what survived your filters on its `nearest den` line.

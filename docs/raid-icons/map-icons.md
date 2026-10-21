@@ -57,8 +57,9 @@ are many plain ones, so the mod reads the feature from the boss itself.
 
 ## On the minimap
 
-The icon sits over the minimap at 36×36 pixels — big enough to read at a glance in the corner of the
-screen, small enough that a cluster of dens does not bury the terrain.
+The icon sits over the minimap at 36×36 pixels by default: big enough to read at a glance in the
+corner of the screen, small enough that a cluster of dens does not bury the terrain. The
+[icon size](configuration.md#icon-size) setting scales it from half to twice that.
 
 A den that is outside the minimap's view is **not drawn at all**. Xaero pins an off-view marker to
 the rim of the minimap, which is the right behaviour for a waypoint you chose to watch and the wrong
@@ -66,26 +67,48 @@ one for every den in the world: the border would fill up with icons for dens hun
 
 ## On the world map
 
-The same icon, at 48×48 — the world map is a whole screen, and an icon sized for the minimap reads
-as a speck on it.
+The same icon, at 48×48 by default. The world map is a whole screen, and an icon sized for the
+minimap reads as a speck on it. It has its own [icon size](configuration.md#icon-size) setting, so
+shrinking the minimap's icons leaves these alone.
+
+Every marker is drawn at the same size: a Stellar den beside a Fire den, or a Mega den beside
+either, reads as an equal marker.
 
 ### The tooltip
 
-Hover a den on the world map and it names itself in two lines:
+Hover a den on the world map and it names itself:
 
 ```
 Klinklang
 ★★★★★ Fighting
+New raid in ~12m
+Open: every reset rolls a new raid here.
 ```
 
 The Pokémon waiting in the den comes first, because that is what you are deciding on. Below it, the
-star tier and the tera type, written in that type's own colour.
+star tier and the tera type, written in that type's own colour. Then [the den clock](#the-den-clock),
+and a line or two on what the clock means for this den.
 
-A [feature den](#feature-dens) names its feature in that line instead, in the feature's colour:
+A beaten den says so, and reminds you which filter hides it:
+
+```
+Klinklang
+★★★★★ Fighting
+Back in ~4m
+Beaten: back with a new raid at the next reset.
+"Only active dens" hides beaten dens.
+```
+
+A [feature den](#feature-dens) names its feature in place of the stars and type, in the feature's
+colour, and says why the tera filter never hides it:
 
 ```
 Alcremie
 Gigantamax
+New raid in ~31m
+Open: every reset rolls a new raid here.
+Featured raid: shows its feature, not a tera type.
+The tera type filter never hides it.
 ```
 
 The feature replaces both the stars and the type rather than joining them: the type is not what the
@@ -94,6 +117,22 @@ raid is about, and every featured den is 7-star anyway.
 If your client has not yet received the den's contents, the species line is **left out** rather than
 filled with a placeholder. A tooltip that said "Unknown" would be claiming the den has no boss, which
 is a different fact from not knowing yet.
+
+### The den clock
+
+A den never closes. When its timer runs out it **rolls a new raid in the same spot**, and a den that
+was beaten comes back at that same moment. The clock line counts down to that reset. How sure it can
+be depends on where you play:
+
+| Clock line | When you see it |
+|---|---|
+| `New raid in 12m` / `Back in 4m` | **Exact.** In singleplayer, or as the host of a LAN game, the mod reads the den's real timer. No `~`. |
+| `Open for 3m` / `Down for 3m` | **On a server, early on.** The mod cannot read the server's timer, so it says how long it has seen the den in this state. |
+| `New raid in ~12m` / `Back in ~4m` | **On a server, once measured.** After watching a few dens roll a new raid, the mod knows how long a cycle lasts and estimates. The `~` marks the estimate. |
+| `New raid due (~40m on this one)` / `Due (~40m down)` | **On a server, overdue.** The estimate has run out and the den has not reset yet. |
+
+A den the mod has not watched long enough to say anything about has no clock line at all, rather than
+a guess.
 
 ### The right-click menu
 
@@ -107,7 +146,7 @@ Everything the scan finds, until you say otherwise. Three [filters](configuratio
 - **Star tier** — hide everything below the tier you are hunting.
 - **Tera type** — list the types you care about and the rest stop being drawn. A feature den is
   never hidden by it, because its marker does not show a type.
-- **Active only** — hide the dens that are not currently live.
+- **Active only** — hide the dens that have been beaten and are waiting for their next reset.
 
 A den whose tera type the mod does not recognise still gets a marker. A den you cannot classify is
 worth more on the map than no den at all.
@@ -120,3 +159,8 @@ concerned, so the map fills in behind you as you explore rather than all at once
 
 That also means a den someone else builds far away appears the next time you are near it, and the
 scan re-checks what it knows continuously, so a den that changes is never remembered wrong.
+
+A den you walk away from **stays on the map** as it was last seen. Its timer may run out while you
+are gone, but that only rolls a new raid in the same spot, so the marker is still right about where a
+den is. It is updated the next time its chunk reaches you, and a den only leaves the map when its
+crystal is gone.
