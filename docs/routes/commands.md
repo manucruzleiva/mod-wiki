@@ -276,6 +276,24 @@ An option is named by its **key**, not by its label on the tab: **Road width** i
 A change is written **twice**: onto the settings the game is reading right now, and into the rules
 stored with the world — so it takes effect immediately *and* survives the next load.
 
+
+### `road preview` — 🛡️
+Plans the road you declared last (with `settlement connect` or the Road Planner) and shows it: a trail of
+particles over its line near you, its length, the chunks it crosses, and how much of it crosses ground an
+add-on has claimed. Nothing is built yet.
+
+### `road commit` — 🛡️
+Draws the previewed road into the world, including chunks that were generated long ago, so two towns in land
+you have already explored get their road. Claimed ground (a gym, an add-on's building) is left untouched.
+Signposts and rest stops come with chunks generated from then on.
+
+### `road cancel` — 🛡️
+Drops the preview without building anything.
+
+### `road tool` — 🛡️
+Gives you the **Road Planner**. Right-click the ground at one town, then at the other: the road is declared
+and previewed, ready for `road commit`. Sneak + right-click clears the first end. Either end can be a town the
+world generated or one you declared.
 ### `config list` — 👤
 Every option and its current value, grouped under the same six headings the ROUTES tab uses.
 
