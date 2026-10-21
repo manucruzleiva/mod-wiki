@@ -42,7 +42,7 @@ die as one.
 -   ### 🎓 [Gym Leader Challenge](nuzlocke.md#gym-leader-challenge)
 
     One elemental type for the whole run — your starters are drawn from it, and your team may only
-    carry it. Offered to each player at character creation.
+    carry it. Offered to each player when they pick a starter.
 
 -   ### 🗺️ [Trainers and Pokémon on the roads](nuzlocke.md#what-it-builds-into-the-world)
 

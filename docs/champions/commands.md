@@ -3,6 +3,12 @@
 Every system this mod replaces can be switched off, and every price can be changed. Do it from the
 **config screen**, from **`/champions config`** in game, or in the settings file.
 
+## Placing a Champions Trainer
+
+`/spawnnpc cobblemon_champions_training:champions_trainer`, for an operator. This is Cobblemon's own
+command. With PokeTowns, every Pokémon Center already has one. See
+[Champions Trainer](champions-trainer.md).
+
 ## `/champions sp [slot]`
 
 A read-out of one party Pokémon, for anyone. `slot` is 1 to 6, counted the way your party screen
@@ -61,6 +67,8 @@ Typing a group name and pressing **Tab** suggests its settings.
 | `moves` | `xpPerEggMove` | 0 or more | `1500` | Experience per egg move, when moves are charged. |
 | `currency` | `order` | `XP_ONLY` / `XP_THEN_COBBLEDOLLARS` / `COBBLEDOLLARS_THEN_XP` / `COBBLEDOLLARS_ONLY` | `XP_ONLY` | What training is paid in. |
 | `currency` | `rate` | 1 or more | `10` | Experience per CobbleDollar, rounded up. |
+| `trainer` | `required` | `AUTO` / `ON` / `OFF` | `AUTO` | Whether changes are bought only at a [Champions Trainer](champions-trainer.md). `AUTO`: only with PokeTowns installed. |
+| `trainer` | `inCenters` | `true` / `false` | `true` | A trainer is placed in every PokeTowns Pokémon Center. Does nothing without PokeTowns. |
 
 For example, to charge for moves and make egg moves steeper:
 
@@ -105,7 +113,9 @@ mods list. Each setting has a tooltip.
   "xpPerMoveChange": 500,
   "xpPerEggMove": 1500,
   "costOrder": "XP_ONLY",
-  "xpPerCobbleDollar": 10
+  "xpPerCobbleDollar": 10,
+  "trainerRequired": "AUTO",
+  "trainerInCenters": true
 }
 ```
 

@@ -10,6 +10,7 @@ Every settlement has a Pokémon Center in its plaza. Every Town also has a Poké
 | PC | Cobblemon's PC, to reach your boxes |
 | Waystone | a Waystones waystone. The first time someone activates it, it gets a generated name; with [Routes](../routes/index.md) installed, it takes the settlement's name |
 | Nurse Joy | stands behind the counter between the healing machines. She can't be hurt, never despawns and has nothing to trade: she is there for the look |
+| Champions Trainer | with [Champions Training](../champions/champions-trainer.md) installed, a trainer stands beside the counter. Talk to it to change your Pokémon's stat points, nature, ability and moves |
 | Loot | the Center's chests, barrels and pots hold Poké Balls, apricorns, food and medicine |
 
 The Center sells nothing.

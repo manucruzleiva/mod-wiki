@@ -107,7 +107,7 @@ extra:
     picnic:         { name: Cobblemon Picnic,               version: 4.0.0, modrinth: sfptxo0H }
     ditto-hms:      { name: Cobblemon Ditto HMs,            version: 3.0.0, modrinth: JNfSyMuQ }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0, modrinth: S01tPZTk }
-    champions:      { name: Cobblemon Champions Training,   version: 1.0.0, modrinth: PlTQXswh }
+    champions:      { name: Cobblemon Champions Training,   version: 1.0.14, modrinth: PlTQXswh }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr }
     mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.0.0, modrinth: ShgrcSQY }
     poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.11, modrinth: MjGKcXBb }
@@ -135,6 +135,7 @@ extra:
     cloth-config:   { name: Cloth Config,                modrinth: cloth-config }
     modmenu:        { name: Mod Menu,                    modrinth: modmenu }
     routes:         { name: Routes,                      page: routes/index.md }
+    poketowns:      { name: Cobblemon PokeTowns,         page: poketowns/index.md }
     raiddens:       { name: Cobblemon Raid Dens,         modrinth: cobblemonraiddens }
     xaero-minimap:  { name: Xaero's Minimap,             modrinth: xaeros-minimap }
     xaero-worldmap: { name: Xaero's World Map,           modrinth: xaeros-world-map }
@@ -201,6 +202,7 @@ extra:
         - [playerxp, experience for the battles you win]
         - [cobbledollars, a second currency]
         - [cloth-config, "the settings screen (with Mod Menu on Fabric)"]
+        - [poketowns, puts a Champions Trainer in every Pokémon Center]
       curseforge: 1676756
     tree-carve:
       minecraft: "1.21.1 · 26.1–26.3"

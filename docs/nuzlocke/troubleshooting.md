@@ -26,8 +26,9 @@ you already own does not spend the zone. See [The rules](nuzlocke.md#the-rules).
 
 Two causes:
 
-- **Gym Leader Challenge.** You may only enter a battle while every Pokémon on your team carries your
-  type. See [Gym Leader Challenge](nuzlocke.md#gym-leader-challenge).
+- **Gym Leader Challenge.** Every living Pokémon in your party must carry your type, or the battle
+  does not start; the message names the ones to box first. See
+  [What the type changes](nuzlocke.md#what-the-type-changes).
 - **Soul Link.** A Pokémon you caught where your partner has not caught yet is *pending*, and cannot
   battle until they catch there too. A bound one stays in its ball unless its partners are in their
   owners' active parties, and those owners are online. See [Soul Link](soul-link.md#when-it-goes-wrong).

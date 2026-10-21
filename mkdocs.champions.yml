@@ -17,6 +17,7 @@ nav:
   - Cobblemon Champions Training:
       - champions/index.md
       - Getting Started: champions/getting-started.md
+      - Champions Trainer: champions/champions-trainer.md
       - Stat Points: champions/stat-points.md
       - Nature, Ability & Moves: champions/nature-ability-moves.md
       - Saved Sets: champions/sets.md

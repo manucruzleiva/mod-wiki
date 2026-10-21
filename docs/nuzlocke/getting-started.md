@@ -28,10 +28,11 @@ While the ruleset is on, the world is set to **Hard** every time it starts.
 
 ## Your first minutes
 
-1. **The [Gym Leader Challenge](nuzlocke.md#gym-leader-challenge)** is offered to you at character
-   creation: one type for the whole run, or decline it with one click.
+1. **Go to pick your starter.** First you are offered the
+   [Gym Leader Challenge](nuzlocke.md#gym-leader-challenge): lock in one type for the whole run, or
+   play without it in one click.
 2. **Pick your starter** from three. By default that is a Grass, a Fire and a Water from three
-   different generations.
+   different generations; under the challenge, three of your type.
 3. **Name it.** Every Pokémon you obtain gets a naming screen; for the starter, leaving before you
    name it undoes the pick, and you choose again from the same three.
 4. **Go find your first encounter.** Only the first wild Pokémon you meet in a zone is catchable.
