@@ -77,13 +77,46 @@ link's log.
 
 ## 🎓 Gym Leader Challenge
 
-One elemental type for the whole run. Your random starters are drawn from it, and you may only enter
-a battle while **every Pokémon on your team** carries it.
+A monotype run: **one elemental type for the whole run**. Your starters are drawn from it, and you may
+only enter a battle while every Pokémon on your team carries it. It sits on top of the Nuzlocke rules
+and is optional for each player.
 
-- **Each player is asked at character creation**, and answers for themselves. Declining is one click.
-  Server owners can switch the offer off for everyone.
-- **An off-type catch still spends the zone.** The challenge decides what you may *use*, not how many
-  tries you get. Off-type Pokémon go to the PC.
+### Picking your type
+
+1. **You are asked when you go to pick your starter**, not the moment you spawn. Each player answers
+   for themselves.
+2. **Every type on the server is a tile**, in that type's colour. Clicking one only marks it; the run
+   is decided by the **Lock in** button, so a misclick cannot choose for you.
+3. **Play without the challenge** declines it in one click: no type lock, normal starters, any team.
+   You are not asked again this run.
+4. **Escape backs out without answering.** The question comes back the next time you reach for a
+   starter, and you cannot get to the starter screen before you answer it.
+
+Once locked in, the type is yours until the run ends. Server owners can switch the offer off for
+everyone — see [Gym Leader Challenge settings](commands.md#gym-leader-challenge).
+
+### What the type changes
+
+| | |
+| --- | --- |
+| 🎁 **Starters** | Three random base-stage Pokémon of your type, whatever the starter mode says. The starter level, shiny and Legendary / Paradox / Ultra Beast filters still apply. If your type has fewer than three eligible species, you get the pack's normal starters. |
+| ⚔️ **Battles** | Every living Pokémon in your party must carry your type, or the battle does not start. The message names your type and every Pokémon you need to box first. Dead Pokémon in the party do not count. |
+| 💎 **Mega and Tera** | With **Mega / Tera OK** on (the default), a Pokémon also counts when its Tera type is yours, or when a Mega form of its species carries your type — a Gyarados belongs on a Dark run, because Mega Gyarados is Water/Dark. |
+| 🎯 **Catches** | An off-type catch goes straight to the PC, and **it still spends the zone**. The challenge decides what you may *use*, not how many tries you get, so you cannot keep throwing balls in one place until your type turns up. |
+| 📖 **The log** | Your type is shown at the top of [the log](#the-log). In a [Soul Link](soul-link.md) it also shows the type of every partner who is online. |
+
+!!! info "Gifts, trades and eggs"
+    Only wild catches are boxed for you, and only while the first-encounter lock is on. A gift, trade
+    or hatchling of another type stays in your party, and the battle rule stops you fighting until you box it.
+
+### Starting over
+
+- **`/pokemonrestart`** wipes your run and clears the type. You pick again when you choose your new
+  starter.
+- **`/nuzlocke reset`** (operators) clears a player's type and asks them again right away. They keep
+  their team, so they may need to box Pokémon that do not fit the new type.
+
+See [Commands & Config](commands.md).
 
 ## What it builds into the world
 
