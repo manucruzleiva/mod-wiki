@@ -62,7 +62,6 @@
       color: var(--md-accent-fg-color); }
     .cr-ad-label { display: block; font-size: .55rem; letter-spacing: .05em;
       text-transform: uppercase; opacity: .6; margin-bottom: .25rem; }
-    #cr-ad-side { margin: 1.2rem .8rem 0 .8rem; }
     .cr-ad-footbar { max-width: 61rem; margin: 0 auto; padding: .4rem .8rem 1rem; }
     .cr-ad-footbar .cr-ad-placeholder { text-align: center; }
   </style>
@@ -345,6 +344,8 @@
       
         
       
+        
+      
     
     
     
@@ -484,6 +485,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -563,7 +592,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Tree Carve 2.0.0</p>
+    <p class="wiki-mod-version" data-modrinth="qkkteeJr" data-version="2.0.0">Documented against Tree Carve 2.0.0</p>
   
                   
 
@@ -576,7 +605,7 @@
 heart — and it stays there, cut into the bark, for anyone who walks past.</p>
 <p>It registers no items and adds no recipes. The tool is the sword you already carry, and the only ways
 to lose a message are an axe and losing the log it is on.</p>
-<p><span class="badge">MC 1.21.1</span> <span class="badge">MC 26.1 – 26.3</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span></p>
+<p><span class="badge">MC 1.21.1</span> <span class="badge">MC 26.1–26.3</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">No Cobblemon</span></p>
 <div class="hero-actions">
 <p><a class="md-button" href="getting-started/">Get started</a></p>
 </div>
@@ -608,6 +637,7 @@ to lose a message are an axe and losing the log it is on.</p>
 something else on that spot and whatever was there is cleared. Nothing survives the block it was
 written on, which is why a carving is worth walking to.</p>
 <h2 id="get-it">Get it<a class="headerlink" href="#get-it" title="Permanent link">&para;</a></h2>
+<div class="mod-spec">
 <table>
 <thead>
 <tr>
@@ -617,16 +647,32 @@ written on, which is why a carving is worth walking to.</p>
 </thead>
 <tbody>
 <tr>
+<td><strong>Download</strong></td>
+<td><a href="https://modrinth.com/mod/qkkteeJr">Modrinth</a> · <a href="https://modrinth.com/mod/qkkteeJr/changelog">What changed</a></td>
+</tr>
+<tr>
+<td><strong>Version</strong></td>
+<td><strong>2.0.0</strong></td>
+</tr>
+<tr>
 <td><strong>Minecraft</strong></td>
-<td>1.21.1, 26.1, 26.2 or 26.3. Each has its own jar; the file name ends in its version, e.g. <code>tree-carve-fabric-2.0.0+26.3.jar</code></td>
+<td>1.21.1 · 26.1–26.3</td>
+</tr>
+<tr>
+<td><strong>Side</strong></td>
+<td>Server <strong>and</strong> every player's game</td>
+</tr>
+<tr>
+<td><strong>Cobblemon</strong></td>
+<td>Not needed</td>
 </tr>
 <tr>
 <td><strong>Fabric</strong></td>
-<td><a href="https://modrinth.com/mod/architectury-api">Architectury API</a> (<a href="https://www.curseforge.com/minecraft/mc-mods/architectury-api">CurseForge</a>) + <a href="https://modrinth.com/mod/fabric-language-kotlin">Fabric Language Kotlin</a> (<a href="https://www.curseforge.com/minecraft/mc-mods/fabric-language-kotlin">CurseForge</a>)</td>
+<td><a href="https://modrinth.com/mod/architectury-api">Architectury API</a>, <a href="https://modrinth.com/mod/fabric-language-kotlin">Fabric Language Kotlin</a></td>
 </tr>
 <tr>
 <td><strong>NeoForge</strong></td>
-<td><a href="https://modrinth.com/mod/architectury-api">Architectury API</a> (<a href="https://www.curseforge.com/minecraft/mc-mods/architectury-api">CurseForge</a>) + <a href="https://modrinth.com/mod/kotlin-for-forge">Kotlin for Forge</a> (<a href="https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge">CurseForge</a>)</td>
+<td><a href="https://modrinth.com/mod/architectury-api">Architectury API</a>, <a href="https://modrinth.com/mod/kotlin-for-forge">Kotlin for Forge</a></td>
 </tr>
 <tr>
 <td><strong>Java</strong></td>
@@ -634,19 +680,14 @@ written on, which is why a carving is worth walking to.</p>
 </tr>
 <tr>
 <td><strong>Works with</strong></td>
-<td>any mod that adds logs — the mod goes by the block tag, not by a list of woods it knows</td>
-</tr>
-<tr>
-<td><strong>Does not need</strong></td>
-<td>Cobblemon. This one is plain Minecraft.</td>
-</tr>
-<tr>
-<td><strong>Bugs &amp; ideas</strong></td>
-<td>Post in the <a href="https://discord.gg/SwcwXcCN4k">Discord</a> — it files the ticket for you</td>
+<td>any mod that adds logs — it goes by the block tag, not by a list of woods</td>
 </tr>
 </tbody>
 </table>
-<p>Drop the jar for your Minecraft version and loader into <code>mods/</code>, never both loaders at once.</p>
+</div>
+<p>Each Minecraft version has its own jar, and the file name ends in it (<code>tree-carve-fabric-2.0.0+26.3.jar</code>).
+Drop the one for your Minecraft version and loader into <code>mods/</code>, never both loaders at once. New
+here? Start with <strong><a href="getting-started/">Getting Started</a></strong>.</p>
 
 
 
@@ -864,24 +905,6 @@ written on, which is why a carving is worth walking to.</p>
       }
       defer();
       if (typeof document$ !== 'undefined') { document$.subscribe(defer); }
-    })();
-  </script><script>
-    (function () {
-      function mount() {
-        var rail = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
-        if (!rail || document.getElementById('cr-ad-side')) { return; }
-        var slot = document.createElement('div');
-        slot.id = 'cr-ad-side';
-        slot.className = 'cr-ad-slot';
-        slot.innerHTML = '<a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">'
-          + '<span class="cr-ad-label">Supports the project</span>'
-          + '💛 This space supports these mods directly — sponsor shiero.</a>';
-        rail.appendChild(slot);
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', mount);
-      } else { mount(); }
-      if (typeof document$ !== 'undefined') { document$.subscribe(mount); }
     })();
   </script>
 
