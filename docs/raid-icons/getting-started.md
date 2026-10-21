@@ -16,7 +16,6 @@ Drop **one** jar — the one for your loader, never both.
     | Required | [Fabric API](https://modrinth.com/mod/fabric-api) · [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) |
     | Required | [Cobblemon Raid Dens](https://modrinth.com/mod/cobblemonraiddens) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobblemonraiddens)) |
     | For the icons | [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap) and/or [Xaero's World Map](https://modrinth.com/mod/xaeros-world-map) |
-    | Optional | [Cloth Config](https://modrinth.com/mod/cloth-config) and [Mod Menu](https://modrinth.com/mod/modmenu) for the settings screen |
 
 === "NeoForge"
 
@@ -26,7 +25,11 @@ Drop **one** jar — the one for your loader, never both.
     | Required | [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) |
     | Required | [Cobblemon Raid Dens](https://modrinth.com/mod/cobblemonraiddens) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobblemonraiddens)) |
     | For the icons | [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap) and/or [Xaero's World Map](https://modrinth.com/mod/xaeros-world-map) |
-    | Optional | [Cloth Config](https://modrinth.com/mod/cloth-config) for the settings screen |
+
+Optional: [Cloth Config](https://modrinth.com/mod/cloth-config) adds a
+[settings screen](configuration.md#the-settings-screen), and on Fabric
+[Mod Menu](https://modrinth.com/mod/modmenu) puts its button in the mod list. Without them every
+setting still changes with [`/raidicons config`](commands.md#raidicons-config).
 
 Cobblemon Raid Dens brings [Cobblemon](https://modrinth.com/mod/cobblemon) and GeckoLib with it, so
 you do not install those separately for this mod's sake.
@@ -47,9 +50,10 @@ walk**. Teleporting across the map and expecting it to be covered in markers is 
 looks broken and is not: there is nothing loaded out there to find.
 
 Open the world map and hover a den to see [what is waiting in it](map-icons.md#the-tooltip) and
-[when its next raid comes](map-icons.md#the-den-clock).
+[when it next resets](map-icons.md#the-den-clock).
 
-To filter dens or resize the icons, run `/raidicons` for the [settings screen](configuration.md).
+To hide the dens you do not want, run [`/raidicons`](commands.md#raidicons) for the settings screen,
+or [`/raidicons config`](commands.md#raidicons-config) to change settings from chat.
 
 ## When nothing shows up
 

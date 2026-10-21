@@ -1,33 +1,32 @@
 # Configuration
 
-There are three ways to change a setting, and they all edit the same values:
+There are three ways to change a setting, and they all edit the same file:
 
-- **The settings screen**, through `/raidicons`, a key you bind, Mod Menu on Fabric or the mod list
-  on NeoForge. It needs [Cloth Config](https://modrinth.com/mod/cloth-config).
-- **[`/raidicons config`](commands.md#raidicons-config)** in chat, with or without Cloth Config.
-- **The settings file**, `config/cobblemon_raid_icons.properties` in your game folder.
+- **The [settings screen](#the-settings-screen)**, with Cloth Config installed.
+- **[`/raidicons config`](commands.md#raidicons-config)** from chat, with nothing else installed.
+- **The file itself**, described below.
 
-A change made on the screen or by command is saved to the file and shows on the map straight away,
-with no restart.
+A change made in game shows on the map as soon as it is saved, with no restart.
 
 ## The settings screen
 
-Run `/raidicons`, or bind **Options → Controls → Cobblemon Raid Icons → Open settings**. On Fabric,
-Mod Menu's config button opens it too; on NeoForge, the mod list's **Config** button does. Without
-Cloth Config the button is not there and the command points you to `/raidicons config` instead.
+With [Cloth Config](https://modrinth.com/mod/cloth-config) installed, the mod gets a settings screen.
+Open it with [`/raidicons`](commands.md#raidicons), with the **Open settings** key under Controls
+(unbound until you set it), or from the mod list: the config button in
+[Mod Menu](https://modrinth.com/mod/modmenu) on Fabric, and in NeoForge's own mod list.
 
-The screen has three tabs:
+It has three tabs: **Filters** (only active dens, lowest star tier, one switch per tera type),
+**Icons** (the two icon sizes) and **Advanced** (the scan). Without Cloth Config the button is simply
+not there, and the command and the file work as before.
 
-| Tab | Settings |
-|---|---|
-| **Filters** | Only active dens, Lowest star tier, one switch per tera type |
-| **Icons** | Minimap icon size, World map icon size |
-| **Advanced** | Scan radius (chunks), Chunks scanned per tick |
+## The file
 
-## The settings file
+The settings live in **`config/cobblemon_raid_icons.properties`**, inside your game folder — the
+same `config/` your other mods write to. The file is created with the defaults the first time you
+load a world, so start it once and then edit it.
 
-The file is created with the defaults the first time you load a world. An unreadable or misspelled
-value never stops the mod: it falls back to its default and says so in the log.
+An unreadable or misspelled value never stops the mod: it falls back to its default and says so in
+the log.
 
 ```properties
 scanRadius=12
@@ -71,10 +70,7 @@ The names are the eighteen types plus `stellar`, lower-case:
 `normal` · `fire` · `water` · `electric` · `grass` · `ice` · `fighting` · `poison` · `ground` ·
 `flying` · `psychic` · `bug` · `rock` · `ghost` · `dragon` · `dark` · `steel` · `fairy` · `stellar`
 
-An unrecognised name is dropped from the list rather than silently matching nothing. From chat,
-`/raidicons config teraTypes add <type>` and `remove <type>` change one type at a time, and
-`/raidicons config teraTypes all` clears the filter. On the screen, each type has its own switch;
-turning every switch off shows every type again, because a filter cannot hide all of them.
+An unrecognised name is dropped from the list rather than silently matching nothing.
 
 A [feature den](map-icons.md#feature-dens) is never hidden by this filter. Its marker shows the
 feature, not the tera type, so filtering it out by type would hide it for a reason the map does not
@@ -85,14 +81,15 @@ show.
 `true` hides dens that are not currently live. Default `false`, which draws every den whether it is
 ready to fight or resetting.
 
-## Icon size
+## The icon sizes
 
 ### `minimapIconScale` and `worldMapIconScale`
 
-The size of the den icons on each map, as a percentage of that map's normal size. Default `100`,
-from `50` to `200`. At `100` an icon is 36×36 pixels on the minimap and 48×48 on the world map.
+How big the den icons are, as a percentage of each map's normal size. Default `100`, clamped to
+`50`–`200` — from half to twice the size.
 
-They are separate so you can shrink a crowded minimap without making the world map harder to read.
+There is one per map so you can shrink a crowded minimap without making the world map harder to read.
+At `100` an icon is 36×36 pixels on the minimap and 48×48 on the world map.
 
 ## The scan
 
@@ -116,6 +113,5 @@ free to check, so there is little to gain by lowering it.
 
 ## Checking a change took effect
 
-Run [`/raidicons config`](commands.md#raidicons-config) to see every value the mod is using. For the
-scan itself, [`/raidicons report`](commands.md#raidicons-report) shows the ground actually being
-covered on its `scan` line, and what survived your filters on its `nearest den` line.
+Run [`/raidicons report`](commands.md#raidicons-report). The `scan` line shows the ground actually being covered, and the
+`nearest den` line shows what survived your filters.
