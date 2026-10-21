@@ -1,7 +1,9 @@
 # Saved Sets
 
 A **set** is a whole build: a Pokémon's stat points, nature, ability and four moves. Each Pokémon
-keeps four of them, on the **Sets** tab of its summary's **Stats** page, next to **SP**.
+keeps four of them, on the **Sets** tab of its summary's **Stats** page, next to **SP**. **Load**
+spends, so it only works at a [Champions Trainer](champions-trainer.md); storing, naming and
+deleting a set work anywhere.
 
 ## The four slots
 

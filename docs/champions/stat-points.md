@@ -65,7 +65,9 @@ Once it has switched:
 
 ## The SP tab
 
-Open the Pokémon's summary, go to **Stats**, and pick **SP**, where the EV tab used to be.
+Open the Pokémon's summary, go to **Stats**, and pick **SP**, where the EV tab used to be. The
+buttons only work in a summary opened by a [Champions Trainer](champions-trainer.md); anywhere else
+the tab shows the points with the buttons greyed out.
 
 | Control | What it does |
 |---|---|
