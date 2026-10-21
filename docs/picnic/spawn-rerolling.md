@@ -3,7 +3,8 @@
 The headline feature. **Left-click the center (table) cells** and the table will:
 
 1. **Despawn nearby wild Pokémon** within the tier's [radius](picnic-tables.md#tiers) — but **never
-   owned/tethered Pokémon** (yours and other players' stay safe).
+   owned/tethered Pokémon** (yours and other players' stay safe). *From the next release*, a wild
+   Pokémon that someone is battling, or that a Poké Ball is already flying at, is left alone too.
 2. **Force a fresh "maximized" natural respawn** around the table, using Cobblemon's own spawner at a
    boosted density so you get a full batch immediately.
 
@@ -26,6 +27,9 @@ It also **prefers ground near your own altitude**. Stand on a summit and the re-
 not the valley below it — it only settles for lower ground when there's nothing else within reach, so
 a bare peak still gets its Pokémon.
 
+Nothing spawns **on the table**, and nothing spawns within **2 blocks of you** (change it with
+`/picnic config reroll clearance`), so a whole group never lands on the food or on your head.
+
 Underground and underwater the search keeps your own altitude instead, so caves and Diving tables
 behave the way you'd expect.
 
@@ -33,6 +37,17 @@ A single unlucky spot doesn't end the attempt — the table keeps picking new on
 order or runs out of tries. If a place genuinely has nowhere to put a Pokémon, it says so plainly
 rather than reporting a silent zero. The bread is still spent: the area was cleared either way, and
 that can't be undone.
+
+## Built platforms
+
+Cobblemon only spawns most wild Pokémon on **natural ground**: grass, dirt, stone, sand. A table on a
+deck of planks, a quartz tower or a concrete floor has nowhere to put them, and the table says so,
+naming the ground that does work.
+
+Turn on `/picnic config platforms enabled true` and a re-roll spawns on **any floor**. Which Pokémon
+come is unchanged: the biome under you, the time of day, the light and the height still decide. Only
+the "natural ground" rule is lifted, and only for the table's own re-roll; Cobblemon's normal spawning
+keeps its rules. On natural ground the switch changes nothing. It is **off by default**.
 
 ## Pokémon that fly, spawn flying
 

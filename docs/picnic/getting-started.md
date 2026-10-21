@@ -7,12 +7,13 @@ Cobblemon Picnic runs on **Fabric** *and* **NeoForge** for Minecraft **1.21.1**.
 
 | | |
 |---|---|
-| **Always** | **Cobblemon Picnic** ([Modrinth](https://modrinth.com/mod/cobblemon-picnic) · [CurseForge](https://www.curseforge.com/projects/1581251)) + [Cobblemon](https://modrinth.com/mod/cobblemon) 1.8 |
+| **Always** | **Cobblemon Picnic** ([Modrinth](https://modrinth.com/mod/cobblemon-picnic) · [CurseForge](https://www.curseforge.com/projects/1581251)) + [Cobblemon](https://modrinth.com/mod/cobblemon) 1.8.0 or newer |
 | **Fabric** | [Architectury API](https://modrinth.com/mod/architectury-api) + [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) (Architectury brings [Fabric API](https://modrinth.com/mod/fabric-api) with it) |
 | **NeoForge** | [Architectury API](https://modrinth.com/mod/architectury-api) + [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) |
 | **Optional** | [Cloth Config](https://modrinth.com/mod/cloth-config) for the settings screen, plus [Mod Menu](https://modrinth.com/mod/modmenu) on Fabric |
 
-Cobblemon Picnic is built and tested against **Cobblemon 1.8**. Cobblemon 1.7 is no longer tested.
+Older Cobblemon (1.7.x) is not supported: the game stops at the loader's dependency screen and
+names Cobblemon, instead of crashing later.
 
 On a dedicated server, configure it with the [commands](commands.md) — the settings screen only
 edits your own client's file.
