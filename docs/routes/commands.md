@@ -264,18 +264,7 @@ the town you stand at and the one nearest `x, z`.
 
 ---
 
-## ⚙️ `config` — read and change this world's settings
-
-The whole tree is generated from the same option catalog the world-creation tabs are built from, so
-every setting on the **ROUTES** tab is reachable here, and neither surface can drift from the other.
-See [World Creation & Config](configuration.md) for what each one does.
-
-An option is named by its **key**, not by its label on the tab: **Road width** is `route_width`.
-`config list` prints every key next to its value, and tab-completion offers them.
-
-A change is written **twice**: onto the settings the game is reading right now, and into the rules
-stored with the world — so it takes effect immediately *and* survives the next load.
-
+## 🛤️ `road` — build a declared road into land that already exists
 
 ### `road preview` — 🛡️
 Plans the road you declared last (with `settlement connect` or the Road Planner) and shows it: a trail of
@@ -294,6 +283,21 @@ Drops the preview without building anything.
 Gives you the **Road Planner**. Right-click the ground at one town, then at the other: the road is declared
 and previewed, ready for `road commit`. Sneak + right-click clears the first end. Either end can be a town the
 world generated or one you declared.
+
+---
+
+## ⚙️ `config` — read and change this world's settings
+
+The whole tree is generated from the same option catalog the world-creation tabs are built from, so
+every setting on the **ROUTES** tab is reachable here, and neither surface can drift from the other.
+See [World Creation & Config](configuration.md) for what each one does.
+
+An option is named by its **key**, not by its label on the tab: **Road width** is `route_width`.
+`config list` prints every key next to its value, and tab-completion offers them.
+
+A change is written **twice**: onto the settings the game is reading right now, and into the rules
+stored with the world — so it takes effect immediately *and* survives the next load.
+
 ### `config list` — 👤
 Every option and its current value, grouped under the same six headings the ROUTES tab uses.
 
