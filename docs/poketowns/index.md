@@ -15,7 +15,7 @@ Center** in the plaza, Towns add a **Poké Mart** across the square, and some To
 behind the Center. They take the place of vanilla villages, and one switch brings vanilla villages
 back.
 
-<span class="badge">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
+<!-- mod-badges -->
 
 <div class="hero-actions" markdown>
 [Get started](getting-started.md){ .md-button }
@@ -43,11 +43,8 @@ back.
 - 🛣️ Works with **[Routes](../routes/index.md)**: Routes finds every PokeTowns settlement as a
   village and connects it to the road network.
 
-!!! tip "💛 Enjoying the mod?"
-    PokeTowns is made by **shiero** in their free time. If it made your world more fun,
-    consider [sponsoring shiero](https://github.com/sponsors/manucruzleiva).
+## Get it
 
-!!! note "License"
-    PokeTowns is **source-available with revenue share**: free for personal and non-commercial use
-    with attribution; any revenue-generating use requires sharing revenue with the author. In short:
-    *if you make money, shiero makes money.*
+<!-- mod-spec -->
+
+No public download yet. New here? Start with **[Getting Started](getting-started.md)**.

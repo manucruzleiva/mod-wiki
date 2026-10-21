@@ -15,7 +15,7 @@ and structures, named routes and areas, and map integration that ties it togethe
 bridged and tunnelled to the terrain they cross, and every settlement they reach is one the game
 really built.
 
-<span class="badge">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
+<!-- mod-badges -->
 
 <div class="hero-actions" markdown>
 [Get started](getting-started.md){ .md-button }
@@ -40,16 +40,6 @@ really built.
 
 ## Get it
 
-Download for **Fabric** or **NeoForge** from [Modrinth](https://modrinth.com/mod/routes) or
-[CurseForge](https://www.curseforge.com/projects/1584243), then see
-[Getting Started](getting-started.md). Questions or ideas? Join [the Discord](https://discord.gg/SwcwXcCN4k).
+<!-- mod-spec -->
 
-!!! tip "💛 Enjoying the mod?"
-    Routes is made by **shiero** in their free time. If it made your world more fun,
-    consider [sponsoring shiero](https://github.com/sponsors/manucruzleiva) — it keeps the routes
-    being built!
-
-!!! note "License"
-    Routes is **source-available with revenue share**: free for personal and
-    non-commercial use with attribution; any revenue-generating use requires sharing revenue with
-    the author. In short: *if you make money, shiero makes money.*
+New here? Start with **[Getting Started](getting-started.md)**.

@@ -22,4 +22,5 @@ nav:
       - Map Integration: routes/map-integration.md
       - Commands: routes/commands.md
       - Configuration: routes/configuration.md
+      - Troubleshooting: routes/troubleshooting.md
       - Community Credits: routes/credits.md

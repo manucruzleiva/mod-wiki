@@ -42,4 +42,4 @@ config, and they work exactly as they always have:
 
 From the next release the server has its own EXP multiplier, Exp. Share portion and global Exp.
 Share on top of these, set with `/midbattleexp`, and each Pokémon's Summary has a button that pauses
-its EXP: see [Commands & settings](commands.md).
+its EXP: see [Commands & Config](commands.md).

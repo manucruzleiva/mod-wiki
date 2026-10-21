@@ -16,7 +16,9 @@ exclude_docs: |
 nav:
   - Cobblemon Nuzlocke & Soul Link:
       - nuzlocke/index.md
+      - Getting Started: nuzlocke/getting-started.md
       - Hardcore Nuzlocke: nuzlocke/nuzlocke.md
       - Soul Link (co-op): nuzlocke/soul-link.md
       - Commands & Config: nuzlocke/commands.md
+      - Troubleshooting: nuzlocke/troubleshooting.md
       - Community Credits: nuzlocke/credits.md
