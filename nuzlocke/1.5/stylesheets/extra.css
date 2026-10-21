@@ -110,6 +110,61 @@ body[data-mod="nuzlocke"] {
   --wiki-hero-to: #4452b0;
 }
 
+/* Raid Icons — tera teal: the crystal on the map. */
+body[data-mod="raid-icons"] {
+  --md-primary-fg-color: #0e6f78;
+  --md-primary-fg-color--light: #2a9ea8;
+  --md-primary-fg-color--dark: #08454b;
+  --md-accent-fg-color: #b4700f;
+  --md-typeset-a-color: #0d6870;
+  --wiki-hero-from: #0a555c;
+  --wiki-hero-to: #138793;
+}
+
+/* Champions Training — trophy amber. */
+body[data-mod="champions"] {
+  --md-primary-fg-color: #8f5600;
+  --md-primary-fg-color--light: #c07a12;
+  --md-primary-fg-color--dark: #5c3700;
+  --md-accent-fg-color: #2f6fb0;
+  --md-typeset-a-color: #855000;
+  --wiki-hero-from: #6e4200;
+  --wiki-hero-to: #a86c0c;
+}
+
+/* Tree Carve — bark brown. */
+body[data-mod="tree-carve"] {
+  --md-primary-fg-color: #66462a;
+  --md-primary-fg-color--light: #92693f;
+  --md-primary-fg-color--dark: #3f2b19;
+  --md-accent-fg-color: #3d8a3a;
+  --md-typeset-a-color: #66462a;
+  --wiki-hero-from: #4d3420;
+  --wiki-hero-to: #7d5835;
+}
+
+/* Mid-Battle EXP — the experience bar's blue. */
+body[data-mod="mid-battle-exp"] {
+  --md-primary-fg-color: #1b65ab;
+  --md-primary-fg-color--light: #4a8fd1;
+  --md-primary-fg-color--dark: #103f6c;
+  --md-accent-fg-color: #b4700f;
+  --md-typeset-a-color: #1a5f9f;
+  --wiki-hero-from: #144d84;
+  --wiki-hero-to: #2479c4;
+}
+
+/* PokeTowns — Pokémon Center red-pink. */
+body[data-mod="poketowns"] {
+  --md-primary-fg-color: #b0174f;
+  --md-primary-fg-color--light: #d64579;
+  --md-primary-fg-color--dark: #700e32;
+  --md-accent-fg-color: #12776b;
+  --md-typeset-a-color: #a8164b;
+  --wiki-hero-from: #8c123f;
+  --wiki-hero-to: #c92a63;
+}
+
 /* In dark mode the same hues need lifting: the primaries above are tuned for a
    white page and go muddy on a dark one, and links have to clear the contrast
    floor against #10171a. */
@@ -143,6 +198,46 @@ body[data-md-color-scheme="slate"][data-mod="nuzlocke"] {
   --md-accent-fg-color: #ef7191;
   --wiki-hero-from: #1c2560;
   --wiki-hero-to: #37429c;
+}
+
+body[data-md-color-scheme="slate"][data-mod="raid-icons"] {
+  --md-primary-fg-color: #0b5960;
+  --md-typeset-a-color: #6fd3dc;
+  --md-accent-fg-color: #f3a83c;
+  --wiki-hero-from: #08444a;
+  --wiki-hero-to: #0f6d76;
+}
+
+body[data-md-color-scheme="slate"][data-mod="champions"] {
+  --md-primary-fg-color: #6e4300;
+  --md-typeset-a-color: #f2bd62;
+  --md-accent-fg-color: #8ab8ea;
+  --wiki-hero-from: #573400;
+  --wiki-hero-to: #8a5806;
+}
+
+body[data-md-color-scheme="slate"][data-mod="tree-carve"] {
+  --md-primary-fg-color: #4f3620;
+  --md-typeset-a-color: #d9b48a;
+  --md-accent-fg-color: #8fd18b;
+  --wiki-hero-from: #3d2a19;
+  --wiki-hero-to: #66482c;
+}
+
+body[data-md-color-scheme="slate"][data-mod="mid-battle-exp"] {
+  --md-primary-fg-color: #15528c;
+  --md-typeset-a-color: #8cc2f5;
+  --md-accent-fg-color: #f3a83c;
+  --wiki-hero-from: #103f6c;
+  --wiki-hero-to: #1d63a3;
+}
+
+body[data-md-color-scheme="slate"][data-mod="poketowns"] {
+  --md-primary-fg-color: #8c123f;
+  --md-typeset-a-color: #f38fb3;
+  --md-accent-fg-color: #4cc0b0;
+  --wiki-hero-from: #6e0e31;
+  --wiki-hero-to: #a81c50;
 }
 
 /* Inter's default numerals are proportional; tabular ones keep version tables
@@ -369,6 +464,301 @@ body {
   padding-top: 0.6rem;
 }
 
+/* ── Mod list (landing) ────────────────────────────────────────────────────
+   One compact row per mod: logo, name, one line of what it does, and the
+   chips that decide whether it fits your setup. On a phone the whole list
+   fits in about a screen, where the old cards showed one and a half mods.
+   The long description lives on each mod's own page. The row's colour stripe
+   is the mod's section colour, so the landing and the section agree. */
+
+.mod-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 0.9rem;
+}
+
+.mod-filter button {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--wiki-border);
+  border-radius: 999px;
+  background: var(--wiki-surface);
+  color: var(--md-default-fg-color--light);
+  font: inherit;
+  font-size: 0.66rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mod-filter button[aria-pressed="true"] {
+  border-color: transparent;
+  background: var(--md-primary-fg-color);
+  color: #fff;
+}
+
+.md-typeset .mod-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  gap: 0.45rem;
+}
+
+.md-typeset .mod-row {
+  --mod-c: var(--md-primary-fg-color);
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--wiki-border);
+  border-left: 4px solid var(--mod-c);
+  border-radius: var(--wiki-radius-sm);
+  background: var(--wiki-surface);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.md-typeset .mod-row:hover {
+  border-color: var(--mod-c);
+  box-shadow: var(--wiki-shadow);
+}
+
+.md-typeset .mod-row[hidden] {
+  display: none;
+}
+
+.md-typeset .mod-row > p {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.md-typeset .mod-row__logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  border-radius: 8px;
+  background: var(--wiki-surface-sunken);
+  object-fit: contain;
+}
+
+.md-typeset .mod-row__body {
+  min-width: 0;
+}
+
+.md-typeset .mod-row__body > p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  margin: 0;
+}
+
+.md-typeset .mod-row__name {
+  color: var(--md-default-fg-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+/* The name is the row's only link; this stretches it over the whole row. */
+.md-typeset .mod-row__name::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.md-typeset .mod-row__name:focus-visible {
+  outline: none;
+}
+
+.md-typeset .mod-row:focus-within {
+  outline: 2px solid var(--mod-c);
+  outline-offset: 2px;
+}
+
+.md-typeset .mod-row__what {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
+.md-typeset .mod-row__chips .badge {
+  margin-top: 0.15rem;
+  padding: 0.08rem 0.45rem;
+  font-size: 0.58rem;
+}
+
+.mod-row[data-mod-color="routes"] { --mod-c: #0e6a4b; }
+.mod-row[data-mod-color="picnic"] { --mod-c: #b1452c; }
+.mod-row[data-mod-color="ditto-hms"] { --mod-c: #7c3f97; }
+.mod-row[data-mod-color="nuzlocke"] { --mod-c: #33459b; }
+.mod-row[data-mod-color="raid-icons"] { --mod-c: #0e6f78; }
+.mod-row[data-mod-color="champions"] { --mod-c: #8f5600; }
+.mod-row[data-mod-color="tree-carve"] { --mod-c: #66462a; }
+.mod-row[data-mod-color="mid-battle-exp"] { --mod-c: #1b65ab; }
+.mod-row[data-mod-color="poketowns"] { --mod-c: #b0174f; }
+
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="routes"] { --mod-c: #17a06f; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="picnic"] { --mod-c: #d76a4d; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="ditto-hms"] { --mod-c: #a568bd; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="nuzlocke"] { --mod-c: #6172c9; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="raid-icons"] { --mod-c: #2a9ea8; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="champions"] { --mod-c: #c07a12; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="tree-carve"] { --mod-c: #92693f; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="mid-battle-exp"] { --mod-c: #4a8fd1; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="poketowns"] { --mod-c: #d64579; }
+
+/* ── Flow ──────────────────────────────────────────────────────────────────
+   A short sequence of steps, drawn as text instead of a Mermaid diagram: most
+   of the old diagrams were one action, two or three checks and a result, and
+   rendered at about 7px on a phone. Written as an ordered list inside
+   <div class="flow" markdown>, each item opening with a tag:
+
+     1. <span class="flow__tag">Do</span> Click with your activator
+     2. <span class="flow__tag flow__tag--check">Check</span> You learned it
+     3. <span class="flow__tag flow__tag--result">Result</span> It fires
+
+   A row of cards on a wide screen, a column on a phone. It is real text: it
+   searches, translates and copies, and costs nothing to load. Mermaid stays
+   only for diagrams that really branch. */
+
+.md-typeset .flow > ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.md-typeset .flow > ol > li {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 8rem;
+  margin: 0;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--wiki-border);
+  border-top: 3px solid var(--md-primary-fg-color);
+  border-radius: var(--wiki-radius-sm);
+  background: var(--wiki-surface);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+/* The arrow between two steps, in the gap. */
+.md-typeset .flow > ol > li + li::before {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  left: -1.15rem;
+  transform: translateY(-50%);
+  color: var(--md-default-fg-color--lighter);
+  font-size: 0.8rem;
+}
+
+.md-typeset .flow__tag {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--md-primary-fg-color);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.md-typeset .flow__tag--check {
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .flow__tag--or {
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .flow > ol > li:has(.flow__tag--check) {
+  border-top-color: var(--md-default-fg-color--lighter);
+}
+
+.md-typeset .flow > ol > li:has(.flow__tag--result) {
+  border-top-color: var(--md-accent-fg-color);
+  background: var(--wiki-surface-sunken);
+}
+
+.md-typeset .flow__tag--result {
+  color: var(--md-accent-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .flow__tag {
+  color: var(--md-typeset-a-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .flow__tag--check,
+[data-md-color-scheme="slate"] .md-typeset .flow__tag--or {
+  color: var(--md-default-fg-color--light);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .flow__tag--result {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset .flow__note {
+  margin-top: -0.3em;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .flow > ol {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .md-typeset .flow > ol > li {
+    flex: none;
+  }
+
+  .md-typeset .flow > ol > li + li::before {
+    content: "↓";
+    top: -0.9rem;
+    left: 1rem;
+    transform: none;
+    line-height: 0.9rem;
+  }
+}
+
+/* ── Diagrams ──────────────────────────────────────────────────────────────
+   The few Mermaid diagrams that really branch are pre-rendered to SVG
+   (tools/render-diagrams.mjs) with var(--md-mermaid-*) colours baked in, and
+   inlined by hooks/prerender_mermaid.py. These set those variables from the
+   section's own colour, so a Nuzlocke diagram is indigo and a Routes one
+   green, in both schemes. Vertical and capped in width, so on a phone the
+   text stays at reading size instead of shrinking with a wide diagram. */
+
+.md-typeset .mermaid-static {
+  --md-mermaid-node-bg-color: color-mix(in srgb, var(--md-primary-fg-color) 8%, var(--wiki-surface));
+  --md-mermaid-node-fg-color: var(--md-primary-fg-color);
+  --md-mermaid-edge-color: var(--md-default-fg-color--light);
+  --md-mermaid-label-fg-color: var(--md-default-fg-color);
+  --md-mermaid-label-bg-color: var(--md-default-bg-color);
+  max-width: 32rem;
+  margin: 1.4em auto;
+}
+
+/* Labels were measured at render time at 15px with no page styles; the
+   typeset's paragraph size, margins and tabular numerals would make the text
+   wider than its box and clip it. */
+.md-typeset .mermaid-static foreignObject * {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  font-feature-settings: normal;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .mermaid-static {
+  --md-mermaid-node-bg-color: color-mix(in srgb, var(--md-typeset-a-color) 10%, var(--wiki-surface));
+  --md-mermaid-node-fg-color: var(--md-typeset-a-color);
+}
+
 /* ── Badges ────────────────────────────────────────────────────────────────
    Small pills for versions and loaders: "MC 1.21.1", "Fabric", "NeoForge". */
 
@@ -561,6 +951,54 @@ body {
   .mod-logo {
     width: 88px;
     height: 88px;
+  }
+
+  /* A mod's hero: logo and title share the first row, and the text runs the
+     full width under them. Side by side, the 132px logo left the text a strip
+     of five words a line and pushed the hero past the bottom of the screen. */
+  .hero--mod {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    align-items: center;
+    column-gap: 0.8rem;
+    row-gap: 0;
+    padding: 1.2rem 1.1rem 1.3rem;
+  }
+
+  .hero--mod .hero-copy {
+    display: contents;
+  }
+
+  .hero--mod > p:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .hero--mod .hero-logo {
+    width: 56px;
+    height: 56px;
+    padding: 0.3rem;
+  }
+
+  .md-typeset .hero--mod h1 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-size: 1.35rem;
+  }
+
+  .hero--mod .hero-copy > *:not(h1) {
+    grid-column: 1 / -1;
+  }
+
+  .md-typeset .hero--mod .hero-copy > p {
+    margin-top: 0.8rem;
+    font-size: 0.74rem;
+    line-height: 1.55;
+  }
+
+  .hero--mod .hero-actions {
+    margin-top: 1rem;
   }
 
   .mod-logo--placeholder {
