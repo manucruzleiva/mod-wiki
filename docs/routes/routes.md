@@ -6,9 +6,9 @@ and every road is signposted and named.
 
 ```mermaid
 flowchart TD
-    S[🔍 Locate cities from the seed<br/>villages · modpack towns · gym entrances] --> P[🧠 Terrain-aware pathfinding<br/>prefers flat, inland ground]
+    S[🔍 Locate cities from the seed<br/>villages · modpack towns · gyms · towers] --> P[🧠 Terrain-aware pathfinding<br/>prefers flat, inland ground]
     P -->|steep mountain in the way| T[⛏️ Bore a mineshaft tunnel<br/>~⅓ are dark caves — bring a torch!]
-    P -->|water in the way| W[🌊 Water crossing<br/>bridge deck or open lane between rock markers]
+    P -->|water in the way| W[🌊 Aquatic channel<br/>open water + paved lit seabed]
     P --> B[🛤️ Build the road<br/>natural palette + lamp posts]
     T --> B
     W --> B
@@ -18,9 +18,8 @@ flowchart TD
 
 ## What you get
 
-- **Automatic road network** between cities — vanilla villages, modpack villages, the gym entrances
-  of the packs [Routes ships a list for](which-structures.md#the-list-routes-ships), and any structure
-  you list. Built incrementally and resumed after a restart.
+- **Automatic road network** between cities — vanilla villages, modpack villages, Gimmighoul
+  towers, gyms, and any structure you list. Built incrementally and resumed after a restart.
 - **Flat & inland paths** — the pathfinder strongly penalises slopes and keeps a buffer away from
   shorelines, while still crossing water when there's no alternative.
 - **Mineshaft tunnels** — when a climb is too steep (or there's no surface path at all), the route
@@ -31,9 +30,9 @@ flowchart TD
   it crosses (*Route 5: Coastal Road*, *Route 8: Marsh Crossing*), always the same for your seed.
 - **Clean tree clearing** — a road crossing a tree removes the whole trunk and canopy; no floating
   leaves, no item spam.
-- **Water crossings** — always on the surface. A river gets a plank bridge with its pillars dropped to
-  the riverbed; a longer stretch stays an open lane of water to swim or sail, marked on both edges by
-  natural rock markers, most of them lit. The seabed is never touched, and a frozen lake keeps its ice.
+- **Water crossings** — navigable lit channels with natural rock markers: the water stays open to swim
+  through while the seabed is paved and lit, so a submerged route runs beneath the surface one. Frozen
+  lakes are crossed *under* the ice, never paved over it.
 - **Signs everywhere** — directional signs at each end and at junctions, with plaza-paved crossings
   that stand out from the road.
 - **Junctions built for the spot** — where two roads cross, the crossing is either a ringed

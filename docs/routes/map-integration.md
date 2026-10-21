@@ -5,16 +5,17 @@ mod detects what's installed and stays inert otherwise.
 
 ```mermaid
 flowchart LR
-    CR[🗺️ Routes] -->|town names| WS[🪨 Waystones]
+    CR[🗺️ Routes] -->|named city nodes| WS[🪨 Waystones]
     CR -->|waypoints + toasts| XM[🧭 Xaero's Minimap]
+    CR -->|dotted golden trails| XM
     CR -->|chunk paint 🎨| XM
     CR -->|chunk paint 🎨| XW[🗾 Xaero's World Map — key M]
 ```
 
 ## Waystones
 
-Activating a waystone names it after the Routes town it stands in and counts as a visit to that
-town — your fast-travel points carry the same names as the places the roads connect.
+Activating a waystone registers it as a **named city** on the route network — your fast-travel
+points become real places that roads connect to.
 
 **Wraith Waystones** (Fabric only — that mod has no NeoForge version) is supported too. A waystone
 takes the name of the Routes town it stands in the moment you discover it, and shares that town's
