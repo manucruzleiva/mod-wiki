@@ -68,6 +68,7 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | Option | Default | Notes |
 | --- | --- | --- |
 | Road surface | Random (by biome) | Random paves each stretch from the palette of the biome it crosses; a material paves every road with that one block; several materials make a mix. See [Road materials](#road-materials) |
+| Road wear | 0% | the share of a road's flat blocks laid as a worn version of their material; stairs never wear. See [Road wear](#road-wear) |
 | Road lamp posts | Random | Random / On / Off — Random decides per route |
 | Tunnel lighting | Random | Random keeps some tunnels as dark caves |
 | Underwater lighting | Random | a sea lantern in the pillar under each water-crossing marker — Random decides per route |
@@ -127,6 +128,30 @@ across, so a road changes material where the land changes:
 Climbs are stepped in stairs of the same family (stone brick stairs on stone bricks, mud brick stairs on
 packed mud, andesite stairs on andesite). A material without a stair of its own (dirt path, gravel, coarse dirt)
 steps in cobblestone stairs.
+
+#### Road wear
+
+**Road wear** (`path_wear_percent`, 0 to 30) turns that percent of a road's flat blocks into a worn version
+of their material, scattered one block at a time. Stairs never wear, and a material not listed here does not
+wear either.
+
+| Material | Worn variants |
+| --- | --- |
+| Stone bricks | cracked stone bricks, mossy stone bricks, gravel |
+| Mossy stone bricks | cracked stone bricks, mossy cobblestone |
+| Cracked stone bricks | gravel, cobblestone |
+| Cobblestone | gravel, mossy cobblestone |
+| Mossy cobblestone | cobblestone, gravel |
+| Dirt path | grass block, coarse dirt |
+| Coarse dirt | gravel, dirt |
+| Gravel | coarse dirt, cobblestone |
+| Packed mud | mud, coarse dirt |
+| Mud bricks | packed mud, mud |
+| Andesite | gravel, cobblestone |
+| Polished andesite | andesite, gravel |
+| Sandstone | sand, smooth sandstone |
+| Cut sandstone | sandstone, sand |
+| Cut red sandstone | red sandstone, red sand |
 
 ### World Spawn
 
