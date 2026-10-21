@@ -62,7 +62,6 @@
       color: var(--md-accent-fg-color); }
     .cr-ad-label { display: block; font-size: .55rem; letter-spacing: .05em;
       text-transform: uppercase; opacity: .6; margin-bottom: .25rem; }
-    #cr-ad-side { margin: 1.2rem .8rem 0 .8rem; }
     .cr-ad-footbar { max-width: 61rem; margin: 0 auto; padding: .4rem .8rem 1rem; }
     .cr-ad-footbar .cr-ad-placeholder { text-align: center; }
   </style>
@@ -353,6 +352,8 @@
       
         
       
+        
+      
     
     
     
@@ -583,6 +584,34 @@
   
   
     <li class="md-nav__item">
+      <a href="troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="credits/" class="md-nav__link">
         
   
@@ -648,6 +677,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#get-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get it
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -661,7 +701,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeTowns 0.0.11</p>
+    <p class="wiki-mod-version" data-modrinth="MjGKcXBb" data-version="0.0.11">Documented against Cobblemon PokeTowns 0.0.11</p>
   
                   
 
@@ -675,7 +715,7 @@
 Center</strong> in the plaza, Towns add a <strong>Poké Mart</strong> across the square, and some Towns have a <strong>gym</strong>
 behind the Center. They take the place of vanilla villages, and one switch brings vanilla villages
 back.</p>
-<p><span class="badge">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span></p>
+<p><span class="badge">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">Not released yet</span> <span class="badge">Cobblemon 1.8+</span> <span class="badge">Needs CobbleDollars + Waystones</span></p>
 <div class="hero-actions">
 <p><a class="md-button" href="getting-started/">Get started</a>
 <a class="md-button" href="settlements/">Settlements</a></p>
@@ -701,17 +741,52 @@ back.</p>
 <li>🛣️ Works with <strong><a href="https://manucruzleiva.github.io/mod-wiki/routes/latest/routes/">Routes</a></strong>: Routes finds every PokeTowns settlement as a
   village and connects it to the road network.</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">💛 Enjoying the mod?</p>
-<p>PokeTowns is made by <strong>shiero</strong> in their free time. If it made your world more fun,
-consider <a href="https://github.com/sponsors/manucruzleiva">sponsoring shiero</a>.</p>
+<h2 id="get-it">Get it<a class="headerlink" href="#get-it" title="Permanent link">&para;</a></h2>
+<div class="mod-spec">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Version</strong></td>
+<td><strong>0.0.11</strong></td>
+</tr>
+<tr>
+<td><strong>Minecraft</strong></td>
+<td>1.21.1</td>
+</tr>
+<tr>
+<td><strong>Side</strong></td>
+<td>Server <strong>and</strong> every player's game</td>
+</tr>
+<tr>
+<td><strong>Cobblemon</strong></td>
+<td><strong>1.8+</strong></td>
+</tr>
+<tr>
+<td><strong>Also needs</strong></td>
+<td><a href="https://modrinth.com/mod/cobbledollars">CobbleDollars</a>, <a href="https://modrinth.com/mod/waystones">Waystones</a></td>
+</tr>
+<tr>
+<td><strong>Fabric</strong></td>
+<td><a href="https://modrinth.com/mod/fabric-api">Fabric API</a>, <a href="https://modrinth.com/mod/fabric-language-kotlin">Fabric Language Kotlin</a>, <a href="https://modrinth.com/mod/architectury-api">Architectury API</a></td>
+</tr>
+<tr>
+<td><strong>NeoForge</strong></td>
+<td><a href="https://modrinth.com/mod/kotlin-for-forge">Kotlin for Forge</a>, <a href="https://modrinth.com/mod/architectury-api">Architectury API</a></td>
+</tr>
+<tr>
+<td><strong>Optional</strong></td>
+<td><a href="https://manucruzleiva.github.io/mod-wiki/routes/latest/routes/">Routes</a>: connects every settlement to the road network</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="admonition note">
-<p class="admonition-title">License</p>
-<p>PokeTowns is <strong>source-available with revenue share</strong>: free for personal and non-commercial use
-with attribution; any revenue-generating use requires sharing revenue with the author. In short:
-<em>if you make money, shiero makes money.</em></p>
-</div>
+<p>No public download yet. New here? Start with <strong><a href="getting-started/">Getting Started</a></strong>.</p>
 
 
 
@@ -929,24 +1004,6 @@ with attribution; any revenue-generating use requires sharing revenue with the a
       }
       defer();
       if (typeof document$ !== 'undefined') { document$.subscribe(defer); }
-    })();
-  </script><script>
-    (function () {
-      function mount() {
-        var rail = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
-        if (!rail || document.getElementById('cr-ad-side')) { return; }
-        var slot = document.createElement('div');
-        slot.id = 'cr-ad-side';
-        slot.className = 'cr-ad-slot';
-        slot.innerHTML = '<a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">'
-          + '<span class="cr-ad-label">Supports the project</span>'
-          + '💛 This space supports these mods directly — sponsor shiero.</a>';
-        rail.appendChild(slot);
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', mount);
-      } else { mount(); }
-      if (typeof document$ !== 'undefined') { document$.subscribe(mount); }
     })();
   </script>
 
