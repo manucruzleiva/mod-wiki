@@ -16,13 +16,10 @@ belong to the Pokémon you ride since 4.0: see [Your Pokémon](../pokemon.md#mou
 
 ## Hunger cost
 
-```mermaid
-flowchart LR
-    A[🔄 Toggle ON] --> B[🍗 Blocks part of your\nmax food bar]
-    A --> C[🖼️ Own HM icon\nshows in the HUD]
-    A --> D[✨ Passive effect\nruns every tick]
-    E[🔄 Toggle OFF] --> F[Effects removed\nimmediately + hunger\ncap restored]
-```
+| | What happens |
+|---|---|
+| **Toggle on** | Part of your max food bar is blocked · its own HM icon shows in the HUD · the passive effect runs every tick |
+| **Toggle off** | The effects end at once and the food cap comes back |
 
 Each enabled toggle **blocks food points** from your maximum food bar. Most block 2; **Fly** and
 **Shadow Sneak** block 3, and **Magnet Rise** a full **15** — flight costs nearly the whole

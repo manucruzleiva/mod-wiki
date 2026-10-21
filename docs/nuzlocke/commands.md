@@ -3,14 +3,6 @@
 Everything under the **`/nuzlocke`** root, and every switch the ruleset has. Routes' road commands
 live under [`/routes`](../routes/commands.md) — the two never mix.
 
-```mermaid
-flowchart LR
-    N["/nuzlocke"] --> NP[👤 status · log · map]
-    N --> NO[🛡️ status player · reset · revive<br/>enable · disable · set]
-    N --> S[soul link]
-    S --> SP[👤 link · accept · decline · unlink<br/>status · summary · parties]
-```
-
 👤 = every player · 🛡️ = operator (permission level 2)
 
 ## Quick reference
@@ -54,11 +46,13 @@ The ruleset is decided **when you create the world**, on a **NUZLOCKE** tab that
 **GAME / WORLD / MORE**. Installing this add-on is what adds that tab; Routes' own generation options
 live beside it on its [ROUTES tab](../routes/configuration.md).
 
-```mermaid
-flowchart LR
-    T[🆕 NUZLOCKE tab<br/>at world creation] -->|saved per world| W[🌍 Your world's rules<br/>never clobbered later]
-    C[⚙️ /nuzlocke set option value] -->|live, same options| W
-```
+<div class="flow" markdown>
+
+1. <span class="flow__tag">Set</span> on the **NUZLOCKE** tab when you create the world
+2. <span class="flow__tag flow__tag--or">Or later</span> with `/nuzlocke set <option> <value>`, live, with the same options
+3. <span class="flow__tag flow__tag--result">Result</span> your world's rules, saved with that world and never overwritten later
+
+</div>
 
 Choices are stored **per world** and applied to new worlds only, so loading an existing world never
 has its rules overwritten. Picking **Hardcore** at world creation turns the full ruleset on.

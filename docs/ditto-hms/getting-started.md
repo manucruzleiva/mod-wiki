@@ -2,15 +2,6 @@
 
 ## Learning an HM
 
-```mermaid
-sequenceDiagram
-    actor You
-    participant P as Any Pokémon
-    You->>You: Hold the trigger item
-    You->>P: Sneak + right-click
-    P-->>You: 🧠 It teaches you the move (trigger item consumed)
-```
-
 Every ability is locked behind a **Pokémon interaction**. To learn one:
 
 1. Find one of the Pokémon that teaches it. **It does not have to be wild** — your own sent-out

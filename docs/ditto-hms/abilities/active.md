@@ -6,17 +6,17 @@ through the world and shaping it. The rest live on [your Pokémon](../pokemon.md
 [Cobblemon Action Combat](../upgrading-to-4.md#what-went-where). Each use costs **hunger or experience** — whichever the server asks for —
 and most start a cooldown.
 
-```mermaid
-flowchart LR
-    A[🖱️ Click with your\nchosen activator] --> B{Learned?}
-    B -- no --> X[✖ Nothing happens]
-    B -- yes --> L{Experience level\nhigh enough?}
-    L -- no --> X
-    L -- yes --> C{Off cooldown &\ncan you afford it?}
-    C -- no --> X
-    C -- yes --> D[✨ Ability fires]
-    D --> E[🍗 Hunger or XP spent\n⏳ Cooldown starts]
-```
+<div class="flow" markdown>
+
+1. <span class="flow__tag">Do</span> Click with your chosen activator
+2. <span class="flow__tag flow__tag--check">Check</span> You have learned the HM
+3. <span class="flow__tag flow__tag--check">Check</span> Your experience level is high enough
+4. <span class="flow__tag flow__tag--check">Check</span> It is off cooldown and you can pay for it
+5. <span class="flow__tag flow__tag--result">Result</span> The ability fires, hunger or XP is spent, and the cooldown starts
+
+</div>
+
+<p class="flow__note">If any check fails, nothing happens and nothing is spent.</p>
 
 ---
 

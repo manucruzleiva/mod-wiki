@@ -2,12 +2,14 @@
 
 Routes targets **Minecraft 1.21.1** on **Fabric** and **NeoForge**.
 
-```mermaid
-flowchart LR
-    A[⬇️ Download the jar<br/>for YOUR loader] --> B[📁 Drop into mods/]
-    B --> C[🚀 Launch the game]
-    C --> D[🆕 Create a new world<br/>ROUTES tab]
-```
+<div class="flow" markdown>
+
+1. <span class="flow__tag">1</span> Download the jar for **your** loader
+2. <span class="flow__tag">2</span> Drop it into `mods/`
+3. <span class="flow__tag">3</span> Launch the game
+4. <span class="flow__tag flow__tag--result">4</span> Create a new world and open the **ROUTES** tab
+
+</div>
 
 ## Requirements
 

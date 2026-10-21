@@ -5,6 +5,7 @@ walking the area first. Cities are found from the world seed, connected with ter
 and every road is signposted and named.
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "basis", "nodeSpacing": 28, "rankSpacing": 38, "padding": 16}, "themeVariables": {"fontSize": "15px"}}}%%
 flowchart TD
     S[🔍 Locate cities from the seed<br/>villages · modpack towns · gyms · towers] --> P[🧠 Terrain-aware pathfinding<br/>prefers flat, inland ground]
     P -->|steep mountain in the way| T[⛏️ Bore a mineshaft tunnel<br/>~⅓ are dark caves — bring a torch!]

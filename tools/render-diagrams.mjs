@@ -22,18 +22,27 @@ const tmp = join(root, ".diagram-tmp");
 const FENCE = /^```mermaid\n([\s\S]*?)^```/gm;
 
 /**
+ * The text is set in Inter, the site's own font, so the label boxes are measured at render time in the
+ * font the reader sees them in; measured in Mermaid's default font they clipped the last letter.
+ *
  * Mermaid is told to paint with Material's own CSS variables, which is what Material's runtime does
  * too. The SVG therefore carries `var(--md-mermaid-*)` rather than baked colours, so an inlined
  * diagram still follows the light/dark toggle instead of freezing on the theme it was rendered in.
  */
 const THEME_CSS = `
-.node rect, .node circle, .node ellipse, .node polygon, .node path {
-  fill: var(--md-mermaid-node-bg-color);
-  stroke: var(--md-mermaid-node-fg-color);
+#my-svg, #my-svg .label, #my-svg .nodeLabel, #my-svg .edgeLabel, #my-svg foreignObject * {
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
 }
-.edgePath .path, .flowchart-link { stroke: var(--md-mermaid-edge-color); }
-.edgeLabel, .label, .nodeLabel { color: var(--md-mermaid-label-fg-color); fill: var(--md-mermaid-label-fg-color); }
-.edgeLabel rect { fill: var(--md-mermaid-label-bg-color); }
+#my-svg .node rect, #my-svg .node circle, #my-svg .node ellipse, #my-svg .node polygon, #my-svg .node path {
+  fill: var(--md-mermaid-node-bg-color) !important;
+  stroke: var(--md-mermaid-node-fg-color) !important;
+  stroke-width: 1.5px !important;
+}
+#my-svg .node rect { rx: 9px; ry: 9px; }
+#my-svg .edgePath .path, #my-svg .flowchart-link { stroke: var(--md-mermaid-edge-color) !important; stroke-width: 1.6px; }
+#my-svg .marker, #my-svg marker path { fill: var(--md-mermaid-edge-color) !important; stroke: var(--md-mermaid-edge-color) !important; }
+#my-svg .edgeLabel, #my-svg .label, #my-svg .nodeLabel { color: var(--md-mermaid-label-fg-color) !important; fill: var(--md-mermaid-label-fg-color) !important; }
+#my-svg .edgeLabel rect, #my-svg .edgeLabel p, #my-svg .labelBkg { fill: var(--md-mermaid-label-bg-color) !important; background: var(--md-mermaid-label-bg-color) !important; }
 `;
 
 function walk(dir) {
@@ -52,6 +61,9 @@ function walk(dir) {
 mkdirSync(outDir, { recursive: true });
 mkdirSync(tmp, { recursive: true });
 writeFileSync(join(tmp, "theme.css"), THEME_CSS);
+// Mermaid sizes each label box by measuring the text in its configured font, not in the CSS above.
+const FONT = 'Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+writeFileSync(join(tmp, "config.json"), JSON.stringify({ fontFamily: FONT, themeVariables: { fontFamily: FONT } }));
 
 const wanted = new Set();
 let rendered = 0;
@@ -73,8 +85,11 @@ for (const file of walk(docs)) {
 		const input = join(tmp, `${digest}.mmd`);
 		writeFileSync(input, source + "\n");
 		console.log(`rendering ${digest}  <- ${relative(root, file)}`);
-		execFileSync("npx", ["--no-install", "mmdc", "-i", input, "-o", target,
-			"--cssFile", join(tmp, "theme.css"), "--backgroundColor", "transparent", "--quiet"],
+		// MMDC_PUPPETEER_CONFIG: a puppeteer config for mmdc's -p, e.g. to point it at an installed
+		// Chromium or run it without the sandbox in a container.
+		const puppeteer = process.env.MMDC_PUPPETEER_CONFIG ? ["-p", process.env.MMDC_PUPPETEER_CONFIG] : [];
+		execFileSync("npx", ["--no-install", "mmdc", "-i", input, "-o", target, ...puppeteer,
+			"--cssFile", join(tmp, "theme.css"), "--configFile", join(tmp, "config.json"), "--backgroundColor", "transparent", "--quiet"],
 			{ stdio: "inherit", shell: process.platform === "win32" });
 		rendered++;
 	}

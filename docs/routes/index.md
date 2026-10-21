@@ -1,3 +1,7 @@
+---
+title: "Routes"
+---
+
 <div class="hero hero--mod" markdown>
 
 ![Routes](assets/logo.png){ .hero-logo }
@@ -20,15 +24,6 @@ really built.
 
 </div>
 </div>
-
-```mermaid
-flowchart LR
-    W[🌍 Your world] --> R[🗺️ Dynamic Routes<br/>roads, bridges, tunnels, signs]
-    R --> M[🧭 Map Integration<br/>waypoints · trails · chunk paint]
-    R --> Z[📍 Named routes & areas<br/>towns, roads, regions]
-    M --> RPG[✨ A world you can travel]
-    Z --> RPG
-```
 
 ## Highlights
 

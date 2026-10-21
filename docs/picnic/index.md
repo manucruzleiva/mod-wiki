@@ -1,3 +1,7 @@
+---
+title: "Cobblemon Picnic"
+---
+
 <div class="hero hero--mod" markdown>
 
 ![Cobblemon Picnic](assets/logo.png){ .hero-logo }

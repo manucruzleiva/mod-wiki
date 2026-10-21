@@ -1,3 +1,7 @@
+---
+title: "Cobblemon Mid-Battle EXP"
+---
+
 <div class="hero hero--mod" markdown>
 
 <div class="hero-copy" markdown>

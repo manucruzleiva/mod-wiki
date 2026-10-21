@@ -2,17 +2,10 @@
 
 The command root is `/dittohm`.
 
-```mermaid
-flowchart TD
-    R[/dittohm/] --> P[🙂 Player]
-    R --> O[🛡️ Operator lvl 2]
-    P --> use[use]
-    P --> list[list]
-    P --> select[select]
-    O --> give[give]
-    O --> learn[learn_all / forget / forget_all]
-    O --> cfg[config ... / reset_all]
-```
+| Who | Commands |
+|---|---|
+| 🙂 Every player | `use` · `list` · `select` |
+| 🛡️ Operators (level 2) | `give` · `learn_all` · `forget` · `forget_all` · `config …` · `reset_all` |
 
 ## Player commands
 

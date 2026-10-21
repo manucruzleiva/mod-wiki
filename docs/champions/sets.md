@@ -18,7 +18,8 @@ Click a row to select it. The buttons under the list act on the selected slot:
 A saved set is never written over. To save a different build in its place, delete it first.
 
 ```mermaid
-flowchart LR
+%%{init: {"flowchart": {"curve": "basis", "nodeSpacing": 28, "rankSpacing": 38, "padding": 16}, "themeVariables": {"fontSize": "15px"}}}%%
+flowchart TD
     E[Empty slot] -- Store --> S[Saved set]
     S -- Load, then Sure? --> C{Server checks it\nand charges once}
     C -- paid --> A[Points, nature, ability\nand moves all applied]

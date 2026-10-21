@@ -3,6 +3,7 @@
 Every rule the mod follows, from the knockout to the end of the battle.
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "basis", "nodeSpacing": 28, "rankSpacing": 38, "padding": 16}, "themeVariables": {"fontSize": "15px"}}}%%
 flowchart TD
     K[An opponent faints] --> P[EXP and EVs paid to every Pokémon\nthat fought it, and to Exp. Share holders]
     P --> U[A new level, new stats and more HP\ncount in this same battle]

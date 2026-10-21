@@ -3,14 +3,11 @@
 Routes talks to the maps you already use. Everything on this page is **optional** — the
 mod detects what's installed and stays inert otherwise.
 
-```mermaid
-flowchart LR
-    CR[🗺️ Routes] -->|named city nodes| WS[🪨 Waystones]
-    CR -->|waypoints + toasts| XM[🧭 Xaero's Minimap]
-    CR -->|dotted golden trails| XM
-    CR -->|chunk paint 🎨| XM
-    CR -->|chunk paint 🎨| XW[🗾 Xaero's World Map — key M]
-```
+| Map mod | What Routes adds |
+|---|---|
+| 🪨 Waystones | Each waystone becomes a named city node on the network |
+| 🧭 Xaero's Minimap | Waypoints and toasts, dotted golden trails, chunk paint |
+| 🗾 Xaero's World Map (key **M**) | Chunk paint |
 
 ## Waystones
 
