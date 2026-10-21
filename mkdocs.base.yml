@@ -103,7 +103,7 @@ extra:
     picnic:         { name: Cobblemon Picnic,               version: 4.0.0,   modrinth: cobblemon-picnic }
     ditto-hms:      { name: Cobblemon Ditto HMs,            version: 3.0.0,   modrinth: cobblemon-ditto-hms }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0 }
-    champions:      { name: Cobblemon Champions Training,   version: 1.0.14,  modrinth: cobblemon-champions-training }
+    champions:      { name: Cobblemon Champions Training,   version: 2.0.0,   modrinth: cobblemon-champions-training }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0 }
     mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.0.0 }
     poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.11 }

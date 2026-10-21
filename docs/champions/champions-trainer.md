@@ -1,6 +1,6 @@
 # Champions Trainer
 
-From version **1.0.14**, everything this mod sells can be tied to a **Champions Trainer**, an NPC
+From version **2.0.0**, everything this mod sells can be tied to a **Champions Trainer**, an NPC
 that stands in the world. That covers stat points, loading a saved set, the nature, the ability and
 the moves of a Pokémon in training. Where a trainer is required, the summary screen still shows all
 of it anywhere you open it. It just doesn't sell anything on its own.
@@ -14,7 +14,7 @@ It depends on [PokeTowns](../poketowns/index.md):
 | | Where changes are bought |
 |---|---|
 | **PokeTowns installed** | At a Champions Trainer. One stands in every Pokémon Center. |
-| **No PokeTowns** | From the summary, anywhere, as before 1.0.14. A trainer still works if an operator places one. |
+| **No PokeTowns** | From the summary, anywhere, as before 2.0.0. A trainer still works if an operator places one. |
 
 An operator can override this either way with a command, which is saved to the config file:
 
