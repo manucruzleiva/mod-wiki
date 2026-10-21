@@ -1004,7 +1004,7 @@ so its shop cannot be opened from the Mart yet.</p>
       
     <script>
     (function () {
-      var MODS = ['routes', 'nuzlocke', 'picnic', 'ditto-hms'];
+      var MODS = ["routes", "nuzlocke", "picnic", "ditto-hms", "raid-icons", "champions", "tree-carve", "mid-battle-exp", "poketowns"];
       function paint() {
         var path = window.location.pathname;
         var found = '';
@@ -1064,6 +1064,29 @@ so its shop cannot be opened from the Mart yet.</p>
       }
       check();
       if (typeof document$ !== 'undefined') { document$.subscribe(check); }
+    })();
+  </script><script>
+    (function () {
+      function wire() {
+        var bar = document.querySelector('.mod-filter');
+        if (!bar || bar.dataset.wired) { return; }
+        bar.dataset.wired = '1';
+        bar.hidden = false;
+        bar.addEventListener('click', function (e) {
+          var btn = e.target.closest('button[data-filter]');
+          if (!btn) { return; }
+          var want = btn.getAttribute('data-filter');
+          bar.querySelectorAll('button').forEach(function (b) {
+            b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+          });
+          document.querySelectorAll('.mod-row').forEach(function (row) {
+            var tags = (row.getAttribute('data-tags') || '').split(' ');
+            row.hidden = !!want && tags.indexOf(want) === -1;
+          });
+        });
+      }
+      wire();
+      if (typeof document$ !== 'undefined') { document$.subscribe(wire); }
     })();
   </script><script>
     (function () {
