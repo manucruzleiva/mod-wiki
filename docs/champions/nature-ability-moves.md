@@ -1,7 +1,8 @@
 # Nature, Ability & Moves
 
 Stat points are half of a build. The other half is changed where you already read it: the nature and
-the ability on the summary's **Info** page, and the moves on Cobblemon's own move screen.
+the ability on the summary's **Info** page, and the moves on Cobblemon's own move screen. All three
+are changed in a summary opened by a [Champions Trainer](champions-trainer.md).
 
 ## The Info page
 
@@ -10,6 +11,7 @@ edge. Click the row to open its picker.
 
 A row only has the marker when it really opens:
 
+- the summary was opened by a [Champions Trainer](champions-trainer.md);
 - the Pokémon is in training (31 in every IV);
 - the server lets training change that thing (see [the settings](commands.md#the-settings));
 - for the ability, the Pokémon's form has more than one ability to choose from.
@@ -64,6 +66,9 @@ appears; nothing new to learn.
 | **Every legal move, free** (default) | the whole learnset | nothing |
 | **Every legal move, charged** | the whole learnset | the move's price; egg moves cost more |
 | **Cobblemon's list, free** | only the moves it already learned | nothing, as in plain Cobblemon |
+
+Under the first two settings, the move screen of a Pokémon in training only opens at a
+[Champions Trainer](champions-trainer.md). Under *Cobblemon's list, free* it works anywhere.
 
 Putting the same moves in a different order is never charged. Levelling up still teaches moves as
 usual, whatever the setting.

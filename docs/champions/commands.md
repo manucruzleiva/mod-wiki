@@ -3,6 +3,11 @@
 Every system this mod replaces can be switched off, and every price can be changed. Do it from the
 **config screen**, from **`/champions config`** in game, or in the settings file.
 
+## Placing a Champions Trainer
+
+`/spawnnpc cobblemon_champions_training:champions_trainer`, for an operator. This is Cobblemon's own
+command. See [Champions Trainer](champions-trainer.md).
+
 ## `/champions sp [slot]`
 
 A read-out of one party Pokémon, for anyone. `slot` is 1 to 6, counted the way your party screen

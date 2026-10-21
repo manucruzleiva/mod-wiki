@@ -39,8 +39,8 @@ values and its summary screen are exactly the game's own.
 
 The moment a Pokémon crosses that line, it switches over once and for good, and you see:
 
-> This Pokémon trains with stat points now — open its summary to spend them. Effort values no
-> longer do anything for it.
+> This Pokémon trains with stat points now — visit a Champions Trainer to spend them. Effort values
+> no longer do anything for it.
 
 Whatever effort values it had become its first stat points, so a Pokémon you trained before is not
 set back. [Stat Points](stat-points.md#converting-from-effort-values) explains the exchange.
@@ -50,7 +50,9 @@ A server can loosen or tighten this rule, or turn the stat points off entirely; 
 
 ## Where everything is
 
-Open the Pokémon's summary. There is no new screen and no new item.
+Everything is on the Pokémon's summary. There is no new screen and no new item. Since version
+1.0.14 the summary only **sells** at a [Champions Trainer](champions-trainer.md): talk to one and
+its summary opens with every control live. Opened anywhere else, it shows the same pages read-only.
 
 | Summary page | What changes | Details |
 |---|---|---|
@@ -63,7 +65,8 @@ goes through. [Training Costs](training-costs.md) lists the prices.
 
 ## Your first build
 
-1. Open a Pokémon with 31 in every IV and go to **Stats → SP**.
+1. Talk to a [Champions Trainer](champions-trainer.md). Pick a Pokémon with 31 in every IV and go
+   to **Stats → SP**.
 2. Use **+** and **−** to spread up to 66 points, 32 at most in one stat. **++** fills a stat as far
    as it can go.
 3. Read the price under the buttons, then press **Save**.
