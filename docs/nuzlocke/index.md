@@ -1,3 +1,7 @@
+---
+title: "Cobblemon Nuzlocke & Soul Link"
+---
+
 <div class="hero hero--mod" markdown>
 
 ![Cobblemon Nuzlocke & Soul Link](assets/logo.png){ .hero-logo }

@@ -64,7 +64,7 @@
       a build-time class would stay stuck on whichever page was opened first. -#}
   <script>
     (function () {
-      var MODS = ['routes', 'nuzlocke', 'picnic', 'ditto-hms'];
+      var MODS = {{ config.extra.mod_versions.keys() | list | tojson }};
       function paint() {
         var path = window.location.pathname;
         var found = '';
@@ -129,6 +129,33 @@
       }
       check();
       if (typeof document$ !== 'undefined') { document$.subscribe(check); }
+    })();
+  </script>
+  {#- Filtros de la lista de mods de la portada: leen `data-tags` de cada fila, asi que un filtro nunca
+      dice algo distinto de lo que dice la fila. Sin JS, los botones quedan ocultos y se ve la lista
+      entera. -#}
+  <script>
+    (function () {
+      function wire() {
+        var bar = document.querySelector('.mod-filter');
+        if (!bar || bar.dataset.wired) { return; }
+        bar.dataset.wired = '1';
+        bar.hidden = false;
+        bar.addEventListener('click', function (e) {
+          var btn = e.target.closest('button[data-filter]');
+          if (!btn) { return; }
+          var want = btn.getAttribute('data-filter');
+          bar.querySelectorAll('button').forEach(function (b) {
+            b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+          });
+          document.querySelectorAll('.mod-row').forEach(function (row) {
+            var tags = (row.getAttribute('data-tags') || '').split(' ');
+            row.hidden = !!want && tags.indexOf(want) === -1;
+          });
+        });
+      }
+      wire();
+      if (typeof document$ !== 'undefined') { document$.subscribe(wire); }
     })();
   </script>
   {#- El menu de secciones (partials/tabs.html) es un <details>: se cierra solo al navegar, porque la

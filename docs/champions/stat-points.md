@@ -36,6 +36,7 @@ A classic 252 / 252 / 6 spread becomes 32 / 32 / 1: 65 points, one under the bud
 brings more than 66 points' worth, the biggest stats are kept first and the smallest are trimmed.
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "basis", "nodeSpacing": 28, "rankSpacing": 38, "padding": 16}, "themeVariables": {"fontSize": "15px"}}}%%
 flowchart TD
     A[A Pokémon is caught, hatched,\ntraded, given or Bottle Capped] --> B{31 in every IV?}
     B -- no --> C[Plain Cobblemon:\nearns and uses effort values]

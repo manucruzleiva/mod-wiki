@@ -9,11 +9,13 @@ screen for defaults.
     **[Cobblemon Nuzlocke & Soul Link](../nuzlocke/commands.md)** — install that add-on and its
     tab appears next to this one.
 
-```mermaid
-flowchart LR
-    T[🆕 ROUTES tab<br/>at world creation] -->|saved per world| W[🌍 Your world's rules<br/>never clobbered later]
-    K[⚙️ Global config — key K<br/>config/routes.json] -->|defaults when a world<br/>wasn't configured| W
-```
+<div class="flow" markdown>
+
+1. <span class="flow__tag">Set</span> on the **ROUTES** tab when you create the world
+2. <span class="flow__tag flow__tag--or">Defaults</span> from the global config (key **K**, `config/routes.json`) for a world that was not configured
+3. <span class="flow__tag flow__tag--result">Result</span> your world's rules, saved with that world and never overwritten later
+
+</div>
 
 ## ROUTES tab
 

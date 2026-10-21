@@ -6,6 +6,7 @@ the **NUZLOCKE** tab at world creation, and every one of them can be changed lat
 ruleset is on, the world is set to **Hard** every time it starts.
 
 ```mermaid
+%%{init: {"flowchart": {"curve": "basis", "nodeSpacing": 28, "rankSpacing": 38, "padding": 16}, "themeVariables": {"fontSize": "15px"}}}%%
 flowchart TD
     E[🐾 Wild Pokémon appears] --> F{First encounter<br/>in this zone?}
     F -->|Yes| C[🎯 You may catch it]

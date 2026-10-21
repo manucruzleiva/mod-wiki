@@ -9,13 +9,6 @@ your Pokémon, and everything that fights lives in **Cobblemon Action Combat**.
 
 Nothing to do, and nothing you paid for is lost. The first time each player joins after the update:
 
-```mermaid
-flowchart LR
-    A[An HM you had learned] --> B{What happened to it?}
-    B -- merged --> C[🧬 You learn the HM\nit became]
-    B -- your Pokémon / CAC / cut --> D[🎁 Its trigger item\ngoes back in your inventory]
-```
-
 - An HM **merged** into another one teaches you the one it became. If you had **Glide** switched
   on, **Fly** comes on in its place (unless Magnet Rise is running — the two do not mix).
 - Any other HM that is no longer yours is forgotten, and **its trigger item is handed back** — or

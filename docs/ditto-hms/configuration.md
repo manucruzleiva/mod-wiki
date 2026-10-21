@@ -1,13 +1,13 @@
 # Configuration
 
-```mermaid
-flowchart LR
-    A[Built-in defaults] --> B[(config/\ncobblemon_ditto_hms.json)]
-    B --> C[⚙️ Cloth Config GUI\nvia Mod Menu]
-    B --> D[⌨️ /dittohm config\ncommands]
-    C --> E[Per-ability values\nused in game]
-    D --> E
-```
+<div class="flow" markdown>
+
+1. <span class="flow__tag">Starts as</span> the built-in defaults
+2. <span class="flow__tag">Saved in</span> `config/cobblemon_ditto_hms.json`
+3. <span class="flow__tag">Changed with</span> the Cloth Config screen (through Mod Menu) or `/dittohm config`
+4. <span class="flow__tag flow__tag--result">Result</span> the per-ability values the game uses
+
+</div>
 
 ## Activation
 
@@ -145,7 +145,6 @@ what the config takes.
 | Stockpile | 1 | 1s | lava self-damage — **7** |
 | Charge | 2 | 3s | ticks between sparks — **10** |
 | Tail Whip | 2 | 2s | 1 |
-
 
 ## Default values — Toggle HMs
 

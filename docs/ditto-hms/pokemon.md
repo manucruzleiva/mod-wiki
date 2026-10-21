@@ -11,13 +11,13 @@ Send out one of your Pokémon, open Cobblemon's **interaction wheel** on it, and
 A Pokémon can do a field move when **it knows the move**, or when **its species is one of the ones
 listed below** (the species that used to teach the HM). It has to be yours and within 16 blocks.
 
-```mermaid
-flowchart LR
-    A[🐾 Interaction wheel\non your Pokémon] --> B[🎡 Field moves]
-    B --> C{Click a move}
-    C --> D[✨ Your Pokémon\ndoes it]
-    D --> E[⏳ That Pokémon\nrests a while]
-```
+<div class="flow" markdown>
+
+1. <span class="flow__tag">Open</span> Cobblemon's interaction wheel on your Pokémon
+2. <span class="flow__tag">Pick</span> **Field moves**, then a move
+3. <span class="flow__tag flow__tag--result">Result</span> your Pokémon does it, then rests a while
+
+</div>
 
 Each move has a **cooldown per Pokémon**: two Pokémon that both know Rain Dance can call it back to
 back. They cost you no hunger.

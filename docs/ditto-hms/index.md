@@ -1,3 +1,7 @@
+---
+title: "Cobblemon Ditto HMs"
+---
+
 <div class="hero hero--mod" markdown>
 
 ![Cobblemon Ditto HMs](assets/logo.png){ .hero-logo }
@@ -20,13 +24,6 @@ teaching them to a Pokémon, paid for in hunger rather than a party slot.
 </div>
 
 ## How it works
-
-```mermaid
-flowchart LR
-    A[🔍 Find the right\nPokémon] --> B[🤝 Sneak + right-click\nholding the trigger item]
-    B --> C[🧠 It teaches you\nthe move, for good]
-    C --> D[🎡 Pick it from the\nHM wheel]
-```
 
 1. **Find the right Pokémon** in the wild — each ability is tied to one or more species.
 2. **Sneak + right-click** that Pokémon while holding the required trigger item.

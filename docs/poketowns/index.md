@@ -1,3 +1,7 @@
+---
+title: "Cobblemon PokeTowns"
+---
+
 <div class="hero hero--mod" markdown>
 
 ![Cobblemon PokeTowns](assets/logo.png){ .hero-logo }

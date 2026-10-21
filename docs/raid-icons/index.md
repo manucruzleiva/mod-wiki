@@ -1,3 +1,7 @@
+---
+title: "Cobblemon Raid Icons"
+---
+
 <div class="hero hero--mod" markdown>
 
 ![Cobblemon Raid Icons](assets/logo.png){ .hero-logo }

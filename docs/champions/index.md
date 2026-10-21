@@ -1,3 +1,7 @@
+---
+title: "Cobblemon Champions Training"
+---
+
 <div class="hero hero--mod" markdown>
 
 ![Cobblemon Champions Training](assets/logo.png){ .hero-logo }
