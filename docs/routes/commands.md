@@ -249,7 +249,9 @@ Every settlement and connection you have declared in this world, with coordinate
 ### `settlement connect <x> <z>` — 🛡️
 Declares a road between the settlement nearest to you and the one nearest to `x, z`. A declared
 connection is the one edge nothing is allowed to re-route: it exists because you said those two places
-are joined.
+are joined. Either end can be a settlement you declared or a town the world generated: where
+nothing is declared near an end, the generated town nearest it is used. The road appears in chunks generated
+from then on.
 
 ### `settlement disconnect <x> <z>` — 🛡️
 Takes the road between the town you stand at and the one nearest `x, z` out of the network. A road you
