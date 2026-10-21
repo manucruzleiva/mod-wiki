@@ -69,6 +69,8 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | --- | --- | --- |
 | Road surface | Random (by biome) | Random paves each stretch from the palette of the biome it crosses; a material paves every road with that one block; several materials make a mix. See [Road materials](#road-materials) |
 | Road wear | 0% | the share of a road's flat blocks laid as a worn version of their material; stairs never wear. See [Road wear](#road-wear) |
+| Bridge deck | Random (by biome) | each bridge is decked in the timber of its biome, or in one material of your mix. See [Bridge deck and handrail](#bridge-deck-and-handrail) |
+| Handrail | Random (per route) | each route rolls one of twelve fences and walls, or one material of your mix |
 | Road lamp posts | Random | Random / On / Off — Random decides per route |
 | Tunnel lighting | Random | Random keeps some tunnels as dark caves |
 | Underwater lighting | Random | a sea lantern in the pillar under each water-crossing marker — Random decides per route |
@@ -152,6 +154,23 @@ wear either.
 | Sandstone | sand, smooth sandstone |
 | Cut sandstone | sandstone, sand |
 | Cut red sandstone | red sandstone, red sand |
+
+#### Bridge deck and handrail
+
+**Bridge deck** (`bridge_deck_material`) and **Handrail** (`handrail_material`) are built like the road surface:
+a dropdown per row, a *Share* slider, **+ Add material** and **- Remove last**. The difference is that they are
+never mixed within one piece: a bridge takes one deck material for its whole span, and a route takes one handrail
+for its whole length. So the shares are shares of bridges and of routes: Spruce Planks at 70 and Oak Planks at 30
+deck about 7 bridges in 10 in spruce. *Random* keeps the default rule (the biome's timber, the route's own fence)
+and can be one row of a mix.
+
+| Component | Choices |
+| --- | --- |
+| Bridge deck | Random (by biome), oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, bamboo, crimson and warped planks |
+| Handrail | Random (per route), oak, spruce, birch, jungle, acacia, dark oak, mangrove and cherry fences; cobblestone, mossy cobblestone, stone brick, mossy stone brick, andesite and diorite walls |
+
+In `config/routes.json` the deck takes any planks id and the handrail any fence or wall id; other blocks are
+dropped from the mix. Neither wears (see [Road wear](#road-wear)).
 
 ### World Spawn
 
