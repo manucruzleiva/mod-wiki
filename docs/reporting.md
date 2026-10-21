@@ -103,8 +103,9 @@ link.
 
 === "Raid Icons"
 
-    - The output of **`/raidicons`** while aiming at the den that is misbehaving. It carries almost
-      everything a report on this mod needs, and it goes to `logs/latest.log` too.
+    - The output of **`/raidicons report`** while aiming at the den that is misbehaving. It carries
+      almost everything a report on this mod needs, and it goes to `logs/latest.log` too. (Plain
+      `/raidicons` opens the settings screen.)
     - Which **Xaero** mods you have — the minimap, the world map, or both — and their versions.
     - Your **Cobblemon Raid Dens** version. The mod reads that mod's blocks by name, so a den it
       stops recognising is usually a Raid Dens update.
@@ -123,6 +124,31 @@ link.
     !!! tip "Stats look wrong?"
         A stat point is +1 to the stat at any level, applied before the nature. Compare with the
         numbers on [Stat Points](champions/stat-points.md) before reporting a formula bug.
+
+=== "Tree Carve"
+
+    - Your **Minecraft version** (1.21.1, or which 26.x) and loader: the mod ships a jar for each.
+    - **What you carved and where**: the block, the text or symbols, the font and the dye. For a face
+      that looks wrong, the output of **`/treecarve who`** while looking at it (it needs operator
+      level 2).
+    - Whether the server changed any settings: **`/treecarve config`** lists them all.
+
+    !!! tip "Carvings gone after an update?"
+        A world moved from Minecraft 1.21.1 to 26.x loses its carvings. That is a
+        [known limitation](tree-carve/server-admin.md#known-limitations), not something to report.
+
+=== "Mid-Battle EXP"
+
+    - **The battle**: wild, trainer or another player, single or double, and which Pokémon fought.
+    - **The battle log lines** around the knockout: they show what each Pokémon was paid.
+    - For the move screen: whether it opened, what you dragged, and whether the battle ended while it
+      was open.
+    - Your **Cobblemon version** (1.7 or 1.8) and any EXP setting changed in Cobblemon's config.
+
+    !!! tip "The amounts are Cobblemon's"
+        The mod pays at each knockout what Cobblemon would pay at the end. If the *amount* looks off,
+        check the settings on [Getting Started](mid-battle-exp/getting-started.md#the-settings-that-matter)
+        first: a Lucky Egg, Exp. Share or a modpack multiplier changes it here too.
 
 === "PokeTowns"
 

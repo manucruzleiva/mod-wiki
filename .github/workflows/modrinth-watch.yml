@@ -1,0 +1,55 @@
+name: Modrinth watch
+
+# Once a day: does every section still describe the newest release on Modrinth? For each mod that
+# does not, one open issue titled "Wiki desfasada: <mod>", kept up to date with the numbers; when the
+# pages catch up (or the release is pulled), the issue is closed. Mods without a `modrinth` slug in
+# mkdocs.base.yml are not watched. See tools/check_mod_versions.py.
+
+on:
+  schedule:
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: modrinth-watch
+  cancel-in-progress: true
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare with Modrinth
+        run: python3 -I tools/check_mod_versions.py modrinth > status.tsv
+      - name: One issue per stale mod
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create wiki-desfasada --color D93F0B \
+            --description "Una seccion describe otra version que la publicada" 2>/dev/null || true
+          open=$(gh issue list --label wiki-desfasada --state open --limit 100 --json number,title)
+          while IFS=$'\t' read -r state mod name documented latest slug; do
+            title="Wiki desfasada: $name"
+            n=$(jq -r --arg t "$title" '.[] | select(.title == $t) | .number' <<<"$open" | head -1)
+            if [ "$state" = current ]; then
+              # The pages caught up: an issue still open for this mod is done.
+              [ -n "$n" ] && gh issue close "$n" --reason completed \
+                --comment "La sección ya describe el release más nuevo de Modrinth."
+              continue
+            fi
+            body=$(printf '%s\n' \
+              "La sección [\`docs/$mod/\`](../tree/main/docs/$mod) describe **$documented**, y el release más nuevo en [Modrinth](https://modrinth.com/mod/$slug) es **$latest**." \
+              "" \
+              "Para cerrarlo: reescribir las páginas para $latest y subir \`extra.mod_versions.$mod.version\` en \`mkdocs.base.yml\` **en el mismo cambio**. Este issue se cierra solo cuando coinciden." \
+              "" \
+              "_Abierto por modrinth-watch.yml._")
+            if [ -n "$n" ]; then
+              gh issue edit "$n" --body "$body"
+            else
+              gh issue create --title "$title" --label wiki-desfasada --body "$body"
+            fi
+          done < status.tsv

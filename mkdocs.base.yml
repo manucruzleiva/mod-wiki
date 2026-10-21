@@ -92,13 +92,18 @@ extra:
   # mismo commit en que se publica ese mod. Uno por seccion, nunca por pagina: una seccion describe
   # una sola version. Lo dibuja overrides/main.html arriba del titulo. El `name` es tambien la
   # entrada del mod en el menu de secciones de los sitios separados (overrides/partials/tabs.html).
+  # `modrinth` es el slug del proyecto: con el, modrinth-watch.yml abre un issue cuando Modrinth tiene
+  # un release que la seccion no describe, y la linea "Documented against" avisa al lector. Un mod sin
+  # slug no se vigila. Subir `version` sin tocar docs/<mod>/ falla en checks.yml
+  # (tools/check_mod_versions.py): el numero se sube en el mismo cambio que reescribe las paginas.
+  # Una entrada por linea, como estan: el script las lee con una regex.
   mod_versions:
-    routes:         { name: Routes,                         version: 1.2.119 }
-    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.38 }
-    picnic:         { name: Cobblemon Picnic,               version: 4.0.0 }
-    ditto-hms:      { name: Cobblemon Ditto HMs,            version: 3.0.0 }
+    routes:         { name: Routes,                         version: 1.2.119, modrinth: routes }
+    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.38,  modrinth: cobblemon-nuzlocke-soul-link }
+    picnic:         { name: Cobblemon Picnic,               version: 4.0.0,   modrinth: cobblemon-picnic }
+    ditto-hms:      { name: Cobblemon Ditto HMs,            version: 3.0.0,   modrinth: cobblemon-ditto-hms }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0 }
-    champions:      { name: Cobblemon Champions Training,   version: 1.0.0 }
+    champions:      { name: Cobblemon Champions Training,   version: 1.0.0,   modrinth: cobblemon-champions-training }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0 }
     mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.0.0 }
     poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.11 }

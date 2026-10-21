@@ -11,7 +11,7 @@ nicknames, level caps — so you play the run instead of policing yourself. And 
 friends, **Soul Link** ties your catches together: the Pokémon you caught in the same place live and
 die as one.
 
-<span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.7.x</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">Requires Routes</span>
+<span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.8</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">Requires Routes</span>
 
 <div class="hero-actions" markdown>
 [The ruleset](nuzlocke.md){ .md-button }
@@ -49,14 +49,14 @@ die as one.
 ## Installing
 
 It is an **add-on for [Routes](../routes/index.md)**: the zones it locks onto *are* the routes,
-areas and towns Routes generates, so you need both. Get it from
+areas and towns Routes generates, so you need both, and Routes has to be **1.2.119 or newer**. Get it from
 [**Modrinth**](https://modrinth.com/mod/cobblemon-nuzlocke-soul-link) or
 [**CurseForge**](https://www.curseforge.com/projects/1630816), for **Fabric** or **NeoForge** on
 Minecraft **1.21.1**.
 
 | Also needs | |
 | --- | --- |
-| [Cobblemon](https://modrinth.com/mod/cobblemon) 1.7.x ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobblemon)) | the Pokémon |
+| [Cobblemon](https://modrinth.com/mod/cobblemon) 1.8 ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobblemon)) | the Pokémon. Built for 1.8; it still runs on 1.7.3, but [route Pokémon](nuzlocke.md#route-pokemon) need 1.8 |
 | [Architectury API](https://modrinth.com/mod/architectury-api) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/architectury-api)) | both loaders |
 | [Cloth Config](https://modrinth.com/mod/cloth-config) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/cloth-config)) | the settings screen |
 | [Fabric API](https://modrinth.com/mod/fabric-api) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/fabric-api)) | Fabric only |

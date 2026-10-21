@@ -24,7 +24,7 @@ really built.
 ```mermaid
 flowchart LR
     W[🌍 Your world] --> R[🗺️ Dynamic Routes<br/>roads, bridges, tunnels, signs]
-    R --> M[🧭 Map Integration<br/>waypoints · chunk paint]
+    R --> M[🧭 Map Integration<br/>waypoints · trails · chunk paint]
     R --> Z[📍 Named routes & areas<br/>towns, roads, regions]
     M --> RPG[✨ A world you can travel]
     Z --> RPG
@@ -36,7 +36,7 @@ flowchart LR
   graded to the land, bridge the water, bore through what they cannot climb, share a trunk where they
   run together, and get names like *Route 3: Steep Forest Pass*.
 - 🧭 **[Map integration](map-integration.md)** (optional): Waystones town nodes plus Xaero's
-  waypoints and chunk painting.
+  waypoints, route trails and chunk painting.
 - 🧩 **[World-creation tab](configuration.md)**: a dedicated **ROUTES** tab on the create-world
   screen — every rule set up-front, saved per world.
 - 🎮 Playing a Pokémon world? **[Cobblemon Nuzlocke & Soul Link](../nuzlocke/index.md)** is a separate

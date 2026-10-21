@@ -17,4 +17,5 @@ nav:
   - Tree Carve:
       - tree-carve/index.md
       - Getting Started: tree-carve/getting-started.md
+      - Server Admin: tree-carve/server-admin.md
       - Custom Symbols & Fonts: tree-carve/symbols-and-fonts.md

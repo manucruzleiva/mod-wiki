@@ -46,7 +46,7 @@ battles.
 |---|---|
 | **Download** | [Modrinth](https://modrinth.com/mod/cobblemon-picnic) · [CurseForge](https://www.curseforge.com/projects/1581251) |
 | **Needs** | Minecraft 1.21.1 · [Cobblemon](https://modrinth.com/mod/cobblemon) 1.8.0 or newer |
-| **Fabric** | [Fabric API](https://modrinth.com/mod/fabric-api) + [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) |
+| **Fabric** | [Architectury API](https://modrinth.com/mod/architectury-api) + [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) (Architectury brings [Fabric API](https://modrinth.com/mod/fabric-api) with it) |
 | **NeoForge** | [Architectury API](https://modrinth.com/mod/architectury-api) + [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) |
 | **Optional** | [Cloth Config](https://modrinth.com/mod/cloth-config) (+ [Mod Menu](https://modrinth.com/mod/modmenu) on Fabric) for the settings screen |
 | **Bugs & ideas** | Post in the [Discord](https://discord.gg/SwcwXcCN4k) — it files the ticket for you |

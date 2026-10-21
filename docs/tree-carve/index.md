@@ -7,8 +7,8 @@
 Cut a message into a tree. Hit a log with a sword and type what you want on it — a name, a warning, a
 heart — and it stays there, cut into the bark, for anyone who walks past.
 
-It registers no items and adds no recipes. The tool is the sword you already carry, and the only way
-to lose a message is to lose the log it is on.
+It registers no items and adds no recipes. The tool is the sword you already carry, and the only ways
+to lose a message are an axe and losing the log it is on.
 
 <span class="badge">MC 1.21.1</span> <span class="badge">MC 26.1 – 26.3</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
 
@@ -24,14 +24,19 @@ to lose a message is to lose the log it is on.
 <div class="grid cards" markdown>
 
 - :material-sword: **[Carve with a sword](getting-started.md#carving)** — sneak + right-click any
-  log, of any wood, vanilla or modded. Four lines of twenty characters.
-- :material-heart: **[Wrap it in a symbol](getting-started.md#symbols)** — a heart, an umbrella or a
-  skull, so a carving can be a declaration, a shelter marker or a warning.
-- :material-format-color-fill: **Carved, not painted** — the log keeps its own bark. Only the
-  lettering reads as fresh-cut timber, in a shade taken from that species' own stripped wood, so an
-  oak carving and a warped stem carving look like their own trees.
+  log, of any wood, vanilla or modded. The face is a canvas: text and symbols you move, size and
+  turn.
+- :material-heart: **[Seventeen symbols, five typefaces](getting-started.md#symbols)** — hearts,
+  stars, an aiaigasa, a skull and more, each a piece of its own. The Pokeball turns up when
+  Cobblemon is installed.
+- :material-format-color-fill: **[In colour](getting-started.md#colour)** — the dyes you are carrying
+  tint the cut. The log keeps its own bark, and the lettering takes the shade of that species' own
+  stripped wood.
 - :material-axe: **[An axe takes it off](getting-started.md#removing-a-carving)** — stripping a
   carved log strips it exactly as vanilla does, and the message goes with the bark.
+- :material-shield-account: **[Built for servers](server-admin.md)** — only the author or an
+  operator can rewrite a carving, `@` mentions, a blocked-words list, and commands to find and remove
+  any player's carvings.
 - :material-puzzle: **[Bring your own symbols](symbols-and-fonts.md)** — a datapack adds symbols
   and typefaces to the pickers, and a resource pack can bring artwork that takes the tone of every wood.
 
@@ -47,8 +52,12 @@ written on, which is why a carving is worth walking to.
 
 | | |
 |---|---|
-| **Needs** | Minecraft 1.21.1, 26.1, 26.2 or 26.3 on Fabric or NeoForge, with the jar made for that version |
+| **Minecraft** | 1.21.1, 26.1, 26.2 or 26.3. Each has its own jar; the file name ends in its version, e.g. `tree-carve-fabric-2.0.0+26.3.jar` |
+| **Fabric** | [Architectury API](https://modrinth.com/mod/architectury-api) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/architectury-api)) + [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/fabric-language-kotlin)) |
+| **NeoForge** | [Architectury API](https://modrinth.com/mod/architectury-api) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/architectury-api)) + [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge)) |
+| **Java** | 21 for Minecraft 1.21.1, 25 for 26.x |
 | **Works with** | any mod that adds logs — the mod goes by the block tag, not by a list of woods it knows |
 | **Does not need** | Cobblemon. This one is plain Minecraft. |
+| **Bugs & ideas** | Post in the [Discord](https://discord.gg/SwcwXcCN4k) — it files the ticket for you |
 
-Drop the jar for your loader into `mods/`, never both at once.
+Drop the jar for your Minecraft version and loader into `mods/`, never both loaders at once.
