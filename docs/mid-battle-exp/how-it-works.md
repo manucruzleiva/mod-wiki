@@ -129,6 +129,9 @@ needs the mod on your client only.
   or onto an empty slot to learn it there. The pool stays open, so you can keep going.
 - **Forget a move by dragging Forget onto it.** Forget is not offered while the Pokémon knows a
   single move.
+- **Free a slot by dragging a move out.** Drop one of your moves on the open move pool, or on an
+  empty slot, and it goes to the move pool and leaves its slot free. The other moves move up, so the
+  free slot is always the last one. It is not possible while the Pokémon knows a single move.
 - A plain click on a move in the pool shows its description on the Moves page. Dropping anywhere
   else, or dropping a move the Pokémon already knows, puts it back.
 
