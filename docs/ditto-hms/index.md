@@ -9,7 +9,7 @@
 Become the HM slave you always made suffer. Pokopia-inspired abilities that *you* learn instead of
 teaching them to a Pokémon, paid for in hunger rather than a party slot.
 
-<span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.7.3</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
+<span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.8+</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
 
 <div class="hero-actions" markdown>
 [Get started](getting-started.md){ .md-button }
@@ -38,8 +38,9 @@ flowchart LR
     never went and found the Pokémon. Everyone earns their own.
 
 !!! tip "Discovery is part of the game"
-    The game itself never tells you which Pokémon teaches an HM or what item to hold —
-    that's a secret. **This wiki is the only place** the acquisition tables are written down.
+    The game tells you little about which Pokémon teaches an HM or what item to hold. A
+    [Trainer Ditto](getting-started.md#the-trainer-ditto) will name one species for you, and nothing
+    more. **This wiki is the only place** the full acquisition tables are written down.
 
 ---
 
@@ -70,6 +71,9 @@ it keeps new HMs coming.
 ---
 
 ## Requirements
+
+Every loader needs [Cobblemon](https://modrinth.com/mod/cobblemon) **1.8.0 or newer**. The mod
+refuses to load on Cobblemon 1.7.x, with a dependency error rather than a crash mid-session.
 
 | Loader | Dependencies |
 |---|---|

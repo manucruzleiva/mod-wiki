@@ -55,9 +55,11 @@ Teaches the ability outright, with no disc involved.
 
 ```
 /dittohm trader spawn [player]
+/dittohm trader spawn shiny [player]
 /dittohm trader forget [player]
 ```
-Summons a Trainer Ditto on demand, or undoes a catch so it will visit that player again.
+Summons a Trainer Ditto on demand (`shiny` forces the rare shiny one), or undoes a catch so traders
+will visit that player again.
 
 ```
 /dittohm learn_all [player]
@@ -75,9 +77,15 @@ Unlearns one or all HMs.
 /dittohm config <ability> cooldown <0–24000>
 /dittohm config <ability> power <0–512>
 /dittohm config <ability> hungerblock <0–20>   (toggles only)
+/dittohm config <ability> weight <0–100>
+/dittohm config <ability> minlevel <0–100>
 /dittohm config <ability> reset
 /dittohm config reset_all
+/dittohm config activator item <empty_hand|hm_case|either>
+/dittohm config activator button <left|right|either>
+/dittohm config samemove <true|false>
 ```
+See [Configuration](configuration.md) for what each one does.
 
 !!! tip "After updating the mod"
     If ability ordinals changed between versions, run `/dittohm config reset_all` and
@@ -136,6 +144,12 @@ Unlearns one or all HMs.
 | `blizzard` | Blizzard |
 | `boomerang` | Boomerang |
 | `decorate` | Decorate |
+| `obstruct` | Obstruct |
+| `confusion` | Confusion |
+| `growth` | Growth |
+| `minimize` | Minimize |
+| `outrage` | Outrage |
+| `calm_mind` | Calm Mind |
 
 ### Toggle
 
@@ -165,5 +179,3 @@ Unlearns one or all HMs.
 | `acid_armor` | Acid Armor |
 | `powder_snow` | Powder Snow |
 | `shadow_sneak` | Shadow Sneak |
-| `obstruct` | Obstruct |
-| `confusion` | Confusion |

@@ -114,6 +114,18 @@ Operator-only (`permission level 2`):
 /dittohm config reset_all
 /dittohm config activator item <empty_hand|hm_case|either>
 /dittohm config activator button <left|right|either>
+/dittohm config samemove <true|false>
+```
+
+---
+
+## Same-move teachers
+
+Off by default. Turned on, any Pokémon that **already knows an HM's namesake move** can teach that
+HM, on top of the species in the acquisition tables.
+
+```
+/dittohm config samemove true
 ```
 
 ---
@@ -130,9 +142,6 @@ You can edit it directly — changes take effect on next server start.
 ---
 
 ## Default values — Active HMs
-
-Durations in the **Power** column are in **ticks** (20 ticks = 1 second), because that is
-what the config takes.
 
 Durations in the **Power** column are in **ticks** (20 ticks = 1 second), because that is
 what the config takes.
@@ -188,6 +197,10 @@ what the config takes.
 \* Rest does not require hunger.
 | Confusion | 3 | 10s | how long it lasts — **200** |
 | Obstruct | 3 | 1 min | how long the seal holds — **6000** |
+| Growth | 3 | 1 min | how long *you* stay big — **6000** |
+| Minimize | 3 | 1 min | how long *you* stay small — **6000** |
+| Outrage | 5 | 5 min | — |
+| Calm Mind | 3 | 2 min | — |
 
 ## Default values — Toggle HMs
 

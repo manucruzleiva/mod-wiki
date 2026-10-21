@@ -28,6 +28,7 @@ Any one of the listed Pokémon can teach the HM. Hold the trigger item and **sne
 | <img class="hm-disc" src="../../../assets/items/hm_blizzard.png" alt=""> | Blizzard | Abomasnow, Glalie, Froslass | Snowball |
 | <img class="hm-disc" src="../../../assets/items/hm_boomerang.png" alt=""> | Boomerang | Cubone, Marowak, Houndoom | Bone |
 | <img class="hm-disc" src="../../../assets/items/hm_bullet_seed.png" alt=""> | Bullet Seed | Seedot, Nuzleaf, Cacnea | Wheat Seeds |
+| <img class="hm-disc" src="../../../assets/items/hm_calm_mind.png" alt=""> | Calm Mind | Alakazam, Espeon, Gardevoir | Lapis Lazuli |
 | <img class="hm-disc" src="../../../assets/items/hm_camouflage.png" alt=""> | Camouflage | Zorua, Kecleon, Ditto | Ink Sac |
 | <img class="hm-disc" src="../../../assets/items/hm_celebrate.png" alt=""> | Celebrate | Jigglypuff, Ludicolo, Alcremie | Firework Rocket |
 | <img class="hm-disc" src="../../../assets/items/hm_charge.png" alt=""> | Charge | Elekid, Electabuzz, Electivire | Redstone Dust |
@@ -45,10 +46,13 @@ Any one of the listed Pokémon can teach the HM. Hold the trigger item and **sne
 | <img class="hm-disc" src="../../../assets/items/hm_eruption.png" alt=""> | Eruption | Camerupt, Magcargo, Heatran | Magma Block |
 | <img class="hm-disc" src="../../../assets/items/hm_explosion.png" alt=""> | Explosion | Voltorb, Electrode | TNT |
 | <img class="hm-disc" src="../../../assets/items/hm_fly.png" alt=""> | Fly | Pidgeot, Charizard, Dragonite | Phantom Membrane |
+| <img class="hm-disc" src="../../../assets/items/hm_growth.png" alt=""> | Growth | Sunkern, Sunflora, Petilil | Bone Meal |
 | <img class="hm-disc" src="../../../assets/items/hm_headbutt.png" alt=""> | Headbutt | Cranidos, Rampardos, Cubone | Iron Helmet |
 | <img class="hm-disc" src="../../../assets/items/hm_leafage.png" alt=""> | Leafage | Bulbasaur, Chikorita, Treecko, Snivy | Dandelion |
+| <img class="hm-disc" src="../../../assets/items/hm_minimize.png" alt=""> | Minimize | Ditto, Chansey, Barboach | Shulker Shell |
 | <img class="hm-disc" src="../../../assets/items/hm_miracle_eye.png" alt=""> | Miracle Eye | Xatu, Sigilyph, Unown | Eye of Ender |
 | <img class="hm-disc" src="../../../assets/items/hm_obstruct.png" alt=""> | Obstruct | Obstagoon, Perrserker, Bisharp | Iron Bars |
+| <img class="hm-disc" src="../../../assets/items/hm_outrage.png" alt=""> | Outrage | Dragonite, Salamence, Haxorus | Dragon Breath |
 | <img class="hm-disc" src="../../../assets/items/hm_present.png" alt=""> | Present | Delibird, Stantler, Spinda | Paper |
 | <img class="hm-disc" src="../../../assets/items/hm_protect.png" alt=""> | Protect | Shuckle, Wobbuffet, Cloyster | Turtle Shell |
 | <img class="hm-disc" src="../../../assets/items/hm_rain_dance.png" alt=""> | Rain Dance | Politoed, Kyogre, Golduck | Prismarine Crystals |
@@ -119,6 +123,18 @@ the walk over to fetch it.
 Fires a rapid barrage of seed projectiles, consuming any `"seed"` items from your inventory. They
 render as the seed you fired, fly flat and fast, and hurt what they land on — **power** sets both how
 many go out and how hard each one lands.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_calm_mind.png" alt=""> Calm Mind
+**Hunger:** 3 · **Cooldown:** 2 min
+
+**Aim at an Alpha to settle it back into the ordinary Pokémon it was.** It sticks the same way
+[Outrage](#outrage) does: through a recall and a relog.
+
+It is the way back out of Outrage, which would otherwise be a one-way door. It asks nothing about
+size, only that the Pokémon actually is an Alpha, and says so plainly when it is not. It costs less
+and recharges faster than Outrage, because undoing a mistake should not cost more than making one.
 
 ---
 
@@ -312,6 +328,25 @@ air for a firework-style boost.
 
 ---
 
+### <img class="hm-disc" src="../../../assets/items/hm_growth.png" alt=""> Growth
+**Hunger:** 3 · **Cooldown:** 1 min · **Power:** 6000t (**5 minutes**, your own growth)
+
+What you aim at decides what grows.
+
+- **At a Pokémon:** it grows one step, about a quarter bigger, **for good**. The size belongs to the
+  Pokémon: recall it, send it out, log back in tomorrow, and it stays grown. Steps add up, up to
+  four times its normal size; past that the HM refuses and charges nothing.
+- **At anything else**, a block or open sky: **you** grow to twice your size, hitbox and all, for
+  five minutes.
+
+!!! warning "Being big is your problem"
+    Nothing checks whether there is room. Grow in a one-block gap and you suffocate exactly as
+    anything else would.
+
+[Minimize](#minimize) cancels it, and it cancels Minimize.
+
+---
+
 ### <img class="hm-disc" src="../../../assets/items/hm_headbutt.png" alt=""> Headbutt
 **Hunger:** 2 · **Cooldown:** 2s · **Power:** drives the hop, the damage and the recoil
 
@@ -349,6 +384,20 @@ tall flowers are planted whole rather than as a half that topples.
 
 ---
 
+### <img class="hm-disc" src="../../../assets/items/hm_minimize.png" alt=""> Minimize
+**Hunger:** 3 · **Cooldown:** 1 min · **Power:** 6000t (**5 minutes**, your own shrink)
+
+[Growth](#growth) in reverse.
+
+- **At a Pokémon:** it shrinks one step **for good**, down to a quarter of its normal size at most.
+- **At anything else:** **you** shrink to half your size, hitbox included, for five minutes.
+
+A Minimize that runs out while you are somewhere only a half-size player fits pushes you out of it,
+the way Minecraft treats anything that stops fitting where it is. Growth cancels it, and it cancels
+Growth.
+
+---
+
 ### <img class="hm-disc" src="../../../assets/items/hm_miracle_eye.png" alt=""> Miracle Eye
 **Hunger:** 5 · **Cooldown:** 30s · **Power:** search radius in chunks (default 100)
 
@@ -374,6 +423,18 @@ That second half is what makes it a seal rather than a lock. A chest with a hopp
 chest with a hole in the bottom, so stopping the lid and leaving the hopper draining would look like
 protection without being any. A hopper pointing at a sealed container simply idles, the same way one
 pointing at nothing does, and picks up again when the seal expires.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_outrage.png" alt=""> Outrage
+**Hunger:** 5 · **Cooldown:** 5 min
+
+**Aim at an XL Pokémon to turn it into an Alpha.** The Alpha variant is kept by Cobblemon itself, so
+it sticks through a recall and a relog.
+
+It **only answers to XL**. Anything smaller is turned down out loud, with the reason, and nothing is
+spent. An XL is already an uncommon roll, so Outrage rewards a find instead of upgrading whatever you
+happen to be carrying. [Calm Mind](#calm-mind) takes the Alpha back off.
 
 ---
 

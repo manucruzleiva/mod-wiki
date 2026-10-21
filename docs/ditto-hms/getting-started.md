@@ -29,16 +29,33 @@ stays there across deaths and world reloads.
     anybody had to earn. **HM Discs still exist**, but only as an operator's tool — the creative
     tab and `/dittohm give <ability_id> <player>`. Nothing in survival hands one out.
 
-!!! tip "A shortcut you may stumble into"
-    A rare wandering **Trainer Ditto** turns up now and then with five HMs laid out, each costing
-    only that HM's own trigger item — it skips the hunt for the right Pokémon entirely. If you have
-    not learned a single HM yet, the first one it teaches you is **free**.
+## The Trainer Ditto
 
-    It is a Ditto in a coat. Throw a Poké Ball and you catch it like any other — but every trader
-    after that keeps its distance and **will not open its stall for you again**, so weigh the shop
-    against the Ditto. How good that Ditto is is the server's call, and **out of the box it rolls
-    its IVs like any other**: guaranteed perfect stats are an option an operator turns on, not
-    something the trader comes with.
+A rare wandering **Trainer Ditto** turns up now and then with five HMs laid out, each costing only
+that HM's own trigger item. It skips the hunt for the right Pokémon entirely. If you have not
+learned a single HM yet, the first one it teaches you is **free**.
+
+**It points you somewhere.** Opening its stall also names **one species** that teaches an HM you
+have not learned and that is not on its counter. You get the species and nothing else: the move that
+species knows and the item it wants are still yours to find. The same trader always names the same
+one, so reopening the stall does not reveal more, and a trader whose counter already holds every HM
+you are missing says nothing.
+
+**It is a Ditto in a coat.** Throw a Poké Ball and you catch it like any other, but every trader
+after that keeps its distance and **will not open its stall for you again**, so weigh the shop
+against the Ditto. How good that Ditto is is the server's call, and **out of the box it rolls its
+IVs like any other**: guaranteed perfect stats are an option an operator turns on, not something the
+trader comes with. See [Configuration](configuration.md#trainer-ditto).
+
+**One in 8192 is shiny**, at Cobblemon's own odds, and wears a shiny costume. Once caught it is an
+**ordinary, non-shiny Ditto**: the shine was the costume, not the prize.
+
+Each trader wears a random player skin, and keeps it for as long as it stands there.
+
+??? note "For resource pack makers: adding faces"
+    Every PNG under `assets/cobblemon_ditto_hms/textures/entity/trainer_ditto/` is in the pool, so a
+    resource pack adds a face by dropping a file in. A file whose name contains `shiny` is kept for
+    the shiny trader.
 
 ---
 
