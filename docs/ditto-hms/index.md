@@ -13,7 +13,7 @@ title: "Cobblemon Ditto HMs"
 Become the HM slave you always made suffer. Pokopia-inspired abilities that *you* learn instead of
 teaching them to a Pokémon, paid for in hunger rather than a party slot.
 
-<span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.8+</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
+<!-- mod-badges -->
 
 <div class="hero-actions" markdown>
 [Get started](getting-started.md){ .md-button }
@@ -48,18 +48,6 @@ teaching them to a Pokémon, paid for in hunger rather than a party slot.
 
 ---
 
-## Downloads
-
-Grab the file matching your loader — one version per loader, always:
-
-- ⬇️ **[Modrinth](https://modrinth.com/mod/cobblemon-ditto-hms)**
-- ⬇️ **[CurseForge](https://www.curseforge.com/projects/1587850)**
-
-💛 Enjoying the mod? Consider [sponsoring shiero](https://github.com/sponsors/manucruzleiva) —
-it keeps new HMs coming.
-
----
-
 ## Quick links
 
 | | |
@@ -76,12 +64,8 @@ it keeps new HMs coming.
 
 ---
 
-## Requirements
+## Get it
 
-Every loader needs [Cobblemon](https://modrinth.com/mod/cobblemon) **1.8.0 or newer**. The mod
-refuses to load on Cobblemon 1.7.x, with a dependency error rather than a crash mid-session.
+<!-- mod-spec -->
 
-| Loader | Dependencies |
-|---|---|
-| **Fabric** | [Fabric Loader](https://fabricmc.net/) ≥ 0.16.5, [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin), [Cobblemon](https://modrinth.com/mod/cobblemon), [Cloth Config](https://modrinth.com/mod/cloth-config) |
-| **NeoForge** | [NeoForge](https://neoforged.net/) 21.1+, [Kotlin for Forge](https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge) 5+, [Cobblemon](https://modrinth.com/mod/cobblemon) |
+One jar per loader. New here? Start with **[Getting Started](getting-started.md)**.

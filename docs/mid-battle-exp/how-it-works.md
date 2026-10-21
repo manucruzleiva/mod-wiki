@@ -25,7 +25,7 @@ When a Pokémon faints, the other side is paid **right then**:
 
 From the next release, operators can change that share, give it to the whole team (a global Exp.
 Share) and multiply all battle EXP, and a player can pause one Pokémon's EXP from its Summary: see
-[Commands & settings](commands.md).
+[Commands & Config](commands.md).
 
 The amount is **Cobblemon's own calculation**, so everything that changes it still does: a **Lucky
 Egg**, a Pokémon from **another trainer**, one **ready to evolve**, **high friendship**, and

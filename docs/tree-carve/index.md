@@ -14,7 +14,7 @@ heart — and it stays there, cut into the bark, for anyone who walks past.
 It registers no items and adds no recipes. The tool is the sword you already carry, and the only ways
 to lose a message are an axe and losing the log it is on.
 
-<span class="badge">MC 1.21.1</span> <span class="badge">MC 26.1 – 26.3</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
+<!-- mod-badges -->
 
 <div class="hero-actions" markdown>
 [Get started](getting-started.md){ .md-button }
@@ -54,14 +54,8 @@ written on, which is why a carving is worth walking to.
 
 ## Get it
 
-| | |
-|---|---|
-| **Minecraft** | 1.21.1, 26.1, 26.2 or 26.3. Each has its own jar; the file name ends in its version, e.g. `tree-carve-fabric-2.0.0+26.3.jar` |
-| **Fabric** | [Architectury API](https://modrinth.com/mod/architectury-api) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/architectury-api)) + [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/fabric-language-kotlin)) |
-| **NeoForge** | [Architectury API](https://modrinth.com/mod/architectury-api) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/architectury-api)) + [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge)) |
-| **Java** | 21 for Minecraft 1.21.1, 25 for 26.x |
-| **Works with** | any mod that adds logs — the mod goes by the block tag, not by a list of woods it knows |
-| **Does not need** | Cobblemon. This one is plain Minecraft. |
-| **Bugs & ideas** | Post in the [Discord](https://discord.gg/SwcwXcCN4k) — it files the ticket for you |
+<!-- mod-spec -->
 
-Drop the jar for your Minecraft version and loader into `mods/`, never both loaders at once.
+Each Minecraft version has its own jar, and the file name ends in it (`tree-carve-fabric-2.0.0+26.3.jar`).
+Drop the one for your Minecraft version and loader into `mods/`, never both loaders at once. New
+here? Start with **[Getting Started](getting-started.md)**.

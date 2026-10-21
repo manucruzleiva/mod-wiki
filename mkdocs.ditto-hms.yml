@@ -21,8 +21,8 @@ nav:
       - Toggle HMs: ditto-hms/abilities/toggles.md
       - Your Pokémon: ditto-hms/pokemon.md
       - HM Wheel: ditto-hms/hm-wheel.md
+      - Upgrading to 4.0: ditto-hms/upgrading-to-4.md
       - Commands: ditto-hms/commands.md
       - Configuration: ditto-hms/configuration.md
-      - Upgrading to 4.0: ditto-hms/upgrading-to-4.md
-      - Changelog: ditto-hms/changelog.md
+      - Troubleshooting: ditto-hms/troubleshooting.md
       - Community Credits: ditto-hms/credits.md

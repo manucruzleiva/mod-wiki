@@ -1,4 +1,4 @@
-# Commands & settings
+# Commands & Config
 
 !!! note "Next release"
 

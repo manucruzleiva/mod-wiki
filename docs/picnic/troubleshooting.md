@@ -5,8 +5,7 @@ Common surprises, what causes them, and what to do. If yours isn't here, post it
 
 ## The game won't start and names Cobblemon
 
-Picnic needs **Cobblemon 1.8.0 or newer**. With Cobblemon missing, or on 1.7.x, the loader stops at
-its dependency screen and says so. Update Cobblemon; nothing else needs changing.
+Picnic needs **Cobblemon 1.8.0 or newer**. Install or update Cobblemon; nothing else needs changing.
 
 ## A re-roll cleared the area but spawned nothing
 

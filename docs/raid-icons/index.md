@@ -16,7 +16,7 @@ is one glance away, and the six you don't want stay out of the way.
 
 It runs entirely on your client. The server never needs to know you have it.
 
-<span class="badge">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">Client-side</span>
+<!-- mod-badges -->
 
 <div class="hero-actions" markdown>
 [Get started](getting-started.md){ .md-button }
@@ -45,16 +45,6 @@ It runs entirely on your client. The server never needs to know you have it.
 
 ## Get it
 
-| | |
-|---|---|
-| **Needs** | Minecraft 1.21.1 · [Cobblemon Raid Dens](https://modrinth.com/mod/cobblemonraiddens) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobblemonraiddens)) |
-| **For the icons** | [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap)) and/or [Xaero's World Map](https://modrinth.com/mod/xaeros-world-map) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map)) |
-| **Fabric** | [Fabric API](https://modrinth.com/mod/fabric-api) + [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) |
-| **NeoForge** | [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) |
-| **Optional** | [Cloth Config](https://modrinth.com/mod/cloth-config) for the settings screen · [Mod Menu](https://modrinth.com/mod/modmenu) on Fabric for its button |
-| **Bugs & ideas** | Post in the [Discord](https://discord.gg/SwcwXcCN4k) — it files the ticket for you |
+<!-- mod-spec -->
 
 New here? Start with **[Getting Started](getting-started.md)**.
-
-**License** — custom, *"If you make money, I make money."* Free to use and share for free; commercial
-use needs a revenue-share agreement. [Full text](../license.md).
