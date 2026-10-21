@@ -14,7 +14,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../symbols-and-fonts/">
+        <link rel="next" href="../server-admin/">
       
       
         
@@ -345,6 +345,8 @@
       
         
       
+        
+      
     
     
     
@@ -478,21 +480,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#editing" class="md-nav__link">
+  <a href="#the-carving-screen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Editing
+        The carving screen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The carving screen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#symbols" class="md-nav__link">
     <span class="md-ellipsis">
       
         Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colour
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-and-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing and ownership
       
     </span>
   </a>
@@ -532,10 +573,49 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#known-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server-admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Server Admin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -614,21 +694,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#editing" class="md-nav__link">
+  <a href="#the-carving-screen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Editing
+        The carving screen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The carving screen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#symbols" class="md-nav__link">
     <span class="md-ellipsis">
       
         Symbols
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colour
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-and-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing and ownership
       
     </span>
   </a>
@@ -668,6 +787,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#known-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known limitations
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -688,54 +818,92 @@
 
 
 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<p>Install the jar for your loader and you are done. There is nothing to craft, nothing to unlock and no
-config file to edit.</p>
+<p>Install the jar for your Minecraft version and loader, along with its
+<a href="../#get-it">dependencies</a>. There is nothing to craft and nothing to unlock: the tool is the
+sword you already carry.</p>
 <h2 id="carving">Carving<a class="headerlink" href="#carving" title="Permanent link">&para;</a></h2>
 <p><strong>Sneak + right-click a log with a sword.</strong> Any sword, including one from another mod, and any log,
 including one from another mod. The carving screen opens on the face you clicked.</p>
-<p>Type up to <strong>four lines of twenty characters</strong>, and confirm. The message is cut into that face.</p>
 <p>A plain left-click with the sword chops the log exactly as it always did; only the sneaking
 right-click carves.</p>
-<p>Out of the box, a log that is already stripped cannot be carved — an axe could not take the message
-off it again.</p>
-<p>Nothing is spent when the screen opens — no durability, no item. Open one by accident, close it, and
-nothing has happened.</p>
-<h2 id="editing">Editing<a class="headerlink" href="#editing" title="Permanent link">&para;</a></h2>
-<p>Sneak + right-click a face that already carries a message and the screen opens <strong>with that message in it</strong>,
-ready to change. Clearing every line and confirming removes the carving.</p>
-<h2 id="symbols">Symbols<a class="headerlink" href="#symbols" title="Permanent link">&para;</a></h2>
-<p>The screen has a symbol picker. A message can be wrapped in:</p>
+<p>Out of the box, a log that is already stripped cannot be carved: an axe could not take the message
+off it again. A server can change which blocks take a carving.</p>
+<p>Opening the screen is free. Writing a message costs <strong>1 durability</strong> from the sword and plays a
+carving sound; close the screen without changing anything and nothing is spent. A server may change
+the cost.</p>
+<h2 id="the-carving-screen">The carving screen<a class="headerlink" href="#the-carving-screen" title="Permanent link">&para;</a></h2>
+<p>The face is a <strong>canvas</strong>. You build a carving out of pieces, text and symbols, and arrange them on
+it however you like.</p>
 <table>
 <thead>
 <tr>
-<th>Symbol</th>
-<th>Reads as</th>
+<th>To</th>
+<th>Do</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>♥ Heart</td>
-<td>a declaration</td>
+<td>Add a piece</td>
+<td><strong>Add text</strong> or <strong>Add symbol</strong></td>
 </tr>
 <tr>
-<td>☂ Umbrella</td>
-<td>shelter, a camp, somewhere to come back to</td>
+<td>Move a piece</td>
+<td>Drag it</td>
 </tr>
 <tr>
-<td>☠ Skull</td>
-<td>a warning — a drop, a spawner, a place you died</td>
+<td>Resize it</td>
+<td>Drag its corner handle</td>
+</tr>
+<tr>
+<td>Rotate it</td>
+<td>Drag the arm above it; hold <strong>Shift</strong> to snap to 15° steps. Or use <strong>↺</strong>, <strong>0°</strong> and <strong>↻</strong></td>
+</tr>
+<tr>
+<td>Remove it</td>
+<td>Select it and press <strong>Delete</strong>, or the <strong>Delete</strong> button</td>
+</tr>
+<tr>
+<td>Finish</td>
+<td><strong>Enter</strong> (when you are not typing in a text box), or the screen's confirm button</td>
 </tr>
 </tbody>
 </table>
-<p>A symbol is optional; a carving with none is just the words.</p>
+<p>One face holds up to <strong>16 pieces</strong> and <strong>240 characters</strong> of text across all of them. A server may
+change both limits.</p>
+<h3 id="text">Text<a class="headerlink" href="#text" title="Permanent link">&para;</a></h3>
+<p>Each text piece has its own style and font:</p>
+<ul>
+<li><strong>B</strong>, <strong>I</strong>, <strong>U</strong> and <strong>S</strong> turn on bold, italic, underline and strikethrough, in any
+  combination.</li>
+<li>The <strong>Font</strong> picker offers <em>Carved</em>, the default, and four more: <em>Plain</em>, <em>Unifont</em>, <em>Galactic</em>
+  and <em>Illager runes</em>. A datapack can add more; see <a href="../symbols-and-fonts/">Custom Symbols &amp; Fonts</a>.</li>
+</ul>
+<p>Type <code>@</code> at the start of a word to pick a name from everyone who has ever joined the server.</p>
+<h3 id="symbols">Symbols<a class="headerlink" href="#symbols" title="Permanent link">&para;</a></h3>
+<p>A symbol is a piece of its own, placed, sized and turned like text. Seventeen ship with the mod:</p>
+<p>Heart · Hollow heart · Umbrella · Aiaigasa · Skull · Star · Hollow star · Flower · Music note · Sun
+· Cloud · Snowflake · Anchor · Crown · Arrow · Cross · Pokeball</p>
+<p>The Pokeball appears only when Cobblemon is installed. Text laid over a symbol is cut <strong>into</strong> it.</p>
+<h3 id="colour">Colour<a class="headerlink" href="#colour" title="Permanent link">&para;</a></h3>
+<p>The <strong>Colour</strong> picker offers the dyes <strong>you are carrying</strong>, any of the sixteen. The dye tints the
+wood rather than painting over it, so a red carving in oak still reads as oak. The dye is spent
+when you confirm. Re-saving a carving whose colours have not changed costs no dye.</p>
+<h2 id="editing-and-ownership">Editing and ownership<a class="headerlink" href="#editing-and-ownership" title="Permanent link">&para;</a></h2>
+<p>Sneak + right-click a face that already carries a message and the screen opens <strong>with that carving
+in it</strong>, ready to change. Removing every piece and confirming deletes the carving.</p>
+<p>Only the person who cut a carving, or an operator, can rewrite it. Anyone else sees <em>"Somebody else
+carved this. An axe takes it off."</em> A server can let anyone edit; see
+<a href="../server-admin/">Server Admin</a>.</p>
 <h2 id="what-it-looks-like">What it looks like<a class="headerlink" href="#what-it-looks-like" title="Permanent link">&para;</a></h2>
-<p>The bark is <strong>not</strong> repainted. A carved log looks like the log it is, and only the lettering reads as
-fresh-cut timber — in a shade taken from that species' own stripped wood. An oak carving and a warped
-stem carving look like their own trees rather than the same paint on two backgrounds.</p>
+<p>The bark is <strong>not</strong> repainted. A carved log looks like the log it is, and the lettering reads as
+fresh-cut timber, in a shade taken from that species' own stripped wood, with a shadowed groove under
+every cut. An oak carving and a warped stem carving look like their own trees rather than the same
+paint on two backgrounds. Carvings are drawn from up to 48 blocks away.</p>
 <h2 id="removing-a-carving">Removing a carving<a class="headerlink" href="#removing-a-carving" title="Permanent link">&para;</a></h2>
-<p><strong>Strip the log with an axe.</strong> It strips exactly as vanilla does and the message goes with the bark.</p>
+<p><strong>Strip the log with an axe.</strong> It strips exactly as vanilla does and the message goes with the bark.
+This works on anyone's carving, not only your own.</p>
 <p>Stripping converts the <strong>whole block</strong>, not the face you were pointing at, so every message on that
-log is gone — not only the one in front of you. An axe on a log with nothing carved on it behaves as
+log is gone, not only the one in front of you. An axe on a log with nothing carved on it behaves as
 it always has.</p>
 <h2 id="what-a-carving-does-not-survive">What a carving does not survive<a class="headerlink" href="#what-a-carving-does-not-survive" title="Permanent link">&para;</a></h2>
 <ul>
@@ -743,6 +911,12 @@ it always has.</p>
 <li><strong>Building over the spot.</strong> Whatever was there is cleared with the block.</li>
 </ul>
 <p>There is no way to move a carving, and nothing keeps one alive past the block it was cut into.</p>
+<h2 id="known-limitations">Known limitations<a class="headerlink" href="#known-limitations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>A world moved from Minecraft 1.21.1 to 26.x does not bring its carvings along.</strong> 26.x keeps them
+  in a file with a different name and does not read the old one. A world started on 26.x keeps its
+  carvings like any other.</li>
+</ul>
 
 
 
@@ -865,6 +1039,54 @@ it always has.</p>
       }
       paint();
       if (typeof document$ !== 'undefined') { document$.subscribe(paint); }
+    })();
+  </script><script>
+    (function () {
+      function parts(v) { return v.split('.').map(Number); }
+      function newer(a, b) {
+        var x = parts(a), y = parts(b);
+        for (var i = 0; i < 3; i++) { if (x[i] !== y[i]) { return x[i] > y[i]; } }
+        return false;
+      }
+      function latest(slug) {
+        var key = 'wiki-modrinth-' + slug, hit = null;
+        try { hit = sessionStorage.getItem(key); } catch (e) {}
+        if (hit !== null) { return Promise.resolve(hit); }
+        return fetch('https://api.modrinth.com/v2/project/' + slug + '/version')
+          .then(function (r) { return r.ok ? r.json() : []; })
+          .then(function (list) {
+            var best = null;
+            list.forEach(function (v) {
+              if (v.version_type !== 'release') { return; }
+              if (!best || v.date_published > best.date_published) { best = v; }
+            });
+            var found = '';
+            if (best) {
+              var games = best.game_versions || [];
+              var nums = best.version_number.match(/\d+\.\d+\.\d+/g) || [];
+              for (var i = 0; i < nums.length; i++) {
+                if (games.indexOf(nums[i]) === -1) { found = nums[i]; break; }
+              }
+            }
+            try { sessionStorage.setItem(key, found); } catch (e) {}
+            return found;
+          });
+      }
+      function check() {
+        var line = document.querySelector('.wiki-mod-version[data-modrinth]');
+        if (!line || line.querySelector('.wiki-stale')) { return; }
+        var mine = line.getAttribute('data-version');
+        if (mine.indexOf('-') !== -1) { return; }
+        latest(line.getAttribute('data-modrinth')).then(function (v) {
+          if (!v || !newer(v, mine) || line.querySelector('.wiki-stale')) { return; }
+          var note = document.createElement('span');
+          note.className = 'wiki-stale';
+          note.textContent = ' · ' + v + ' is out: parts of this page may be behind';
+          line.appendChild(note);
+        }).catch(function () {});
+      }
+      check();
+      if (typeof document$ !== 'undefined') { document$.subscribe(check); }
     })();
   </script><script>
     (function () {
