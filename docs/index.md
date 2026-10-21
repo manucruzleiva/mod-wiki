@@ -8,10 +8,10 @@ hide:
 
 # Cobblemon mods by shiero
 
-Seven mods that turn a Cobblemon world into an adventure: roads and towns worth exploring, a
-Nuzlocke that enforces itself, a picnic table that bends the spawns, every HM in your own hands,
-every raid den on your map, a team you train yourself, and one that grows in the middle of the
-fight. Documentation for all of them lives here.
+Mods that turn a Cobblemon world into an adventure: roads and towns worth exploring, a Nuzlocke
+that enforces itself, a picnic table that bends the spawns, every HM in your own hands, every raid
+den on your map, a team you train yourself, one that grows in the middle of the fight, and messages
+cut into the trees. Documentation for all of them lives here.
 
 <div class="hero-actions" markdown>
 [Browse the mods](#the-mods){ .md-button }
@@ -104,6 +104,17 @@ fight. Documentation for all of them lives here.
 
     <span class="badge badge--primary">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">No config</span>
 
+-   [![Tree Carve](tree-carve/assets/logo.png){ .mod-logo }](tree-carve/index.md)
+
+    ### [Tree Carve](tree-carve/index.md)
+
+    Sneak and right-click a log with a sword to cut a message into the bark: text, symbols and
+    colour, arranged on the face like a canvas. Plain Minecraft, no Cobblemon needed.
+
+    [Getting started →](tree-carve/getting-started.md)
+
+    <span class="badge badge--primary">MC 1.21.1</span> <span class="badge">MC 26.1 – 26.3</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
+
 </div>
 
 ## Start here
@@ -112,20 +123,20 @@ fight. Documentation for all of them lives here.
 
 -   ### :material-download: Installing
 
-    Every mod needs **Minecraft 1.21.1** on either **Fabric** or **NeoForge**. Drop the jar for your
+    Every mod runs on **Minecraft 1.21.1** on either **Fabric** or **NeoForge**. Drop the jar for your
     loader into `mods/` — never both jars at once.
 
     The Cobblemon mods also need **Cobblemon**; each one's *Getting Started* page names the version.
-    **Routes does not** — it is a worldgen road mod, and it builds the same roads in a world with no
-    Pokémon in it.
+    **Routes and Tree Carve do not.** Tree Carve also runs on Minecraft 26.1 to 26.3, with a jar for
+    each version.
 
     Each mod's *Getting Started* page lists its own dependencies.
 
 -   ### :material-tune: Configuring
 
     Routes and Nuzlocke are set up on the **world-creation screen** and stored with that world.
-    Picnic and Ditto HMs use in-game config: a command, or the settings screen via Mod Menu. Raid
-    Icons reads a settings file in your `config/` folder. Mid-Battle EXP has nothing to configure.
+    Picnic, Ditto HMs and Raid Icons use in-game config: a command, or a settings screen. Tree Carve
+    is set by operators with `/treecarve config`. Mid-Battle EXP has nothing to configure.
 
     See each mod's *Configuration* page.
 
