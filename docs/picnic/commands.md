@@ -46,12 +46,16 @@ and `expert`; the Diving, Hot and Strange tables count as `expert`.
 | | `cooldown` | 0–3600 | Seconds between re-rolls, per table **and** per player. *Default 5. 0 disables.* |
 | | `spawncap <tier>` | int | Max Pokémon per re-roll for that tier. |
 | | `fuelcost <tier>` | int | Bread per re-roll for that tier (7 Basic, 5 Advanced, 3 above). `0` makes it free. |
+| | `radius <tier>` | blocks | How far that tier's re-roll reaches, both the area it clears and the area it fills. *Default 32 Basic, 48 Advanced, 64 above.* |
+| | `clearance` | 0–16 | Blocks around **you** where nothing spawns, so a group never lands on top of you. *Default 2.* Picnic blocks are always off-limits. |
 | | `flyinglift` | 0–64 | How high re-rolled fliers are lifted off the ground (default `12`, `0` grounds them). Never changes *which* Pokémon spawn. |
 | | `flierleash` | 0–600 | Seconds a re-rolled flier is kept within the table's re-roll radius (default `30`, `0` lets it roam at once). |
+| | `log` | true/false | Writes every re-roll to `latest.log`: what it cleared and spawned, one line per Pokémon. *Default on.* |
 | | `protectshiny <rung>` | true/false | The re-roll keeps **shiny** wild Pokémon instead of despawning them. *Default off.* |
 | | `protectlegendary <rung>` | true/false | Keeps **legendary** wild Pokémon. *Default off.* |
 | | `protectmythical <rung>` | true/false | Keeps **mythical** wild Pokémon. *Default off.* |
 | | `protectultrabeast <rung>` | true/false | Keeps **Ultra Beast** wild Pokémon. *Default off.* |
+| `platforms` | `enabled` | true/false | A re-roll may spawn on [any floor you built](spawn-rerolling.md#built-platforms) (planks, quartz, concrete…), not only natural ground. *Default off.* |
 | `snackbias` | `enabled` | true/false | A re-roll borrows the spawn influences of a nearby seasoned poke-snack. *Default off.* |
 | `tmteach` | `enabled` | true/false | [Party TM teaching](spawn-rerolling.md#party-tm-teaching) on a re-roll. *Default on.* |
 | | `chance` | 0..1 | Chance per re-roll. *Default 0.05.* |
