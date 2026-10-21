@@ -33,6 +33,9 @@ operators can [tune the server's EXP](commands.md) if they want to.)
 - :material-cursor-move: **[A move screen, mid-battle](how-it-works.md#the-move-screen)** — when a
   Pokémon that knows four moves unlocks a new one, drag it into the moveset or send it to the move
   pool.
+- :material-drag: **[Drag and drop on the Summary](how-it-works.md#drag-and-drop-on-the-summary)**
+  *(next release)* — reorder moves by dragging one onto another, and change one by dragging it out
+  of the move pool.
 - :material-text-box-outline: **[Everything in the battle log](how-it-works.md#battle-log)** — EXP,
   levels, stats and moves, said to the Pokémon's owner and nobody else.
 - :material-tune-variant: **[Commands & settings](commands.md)** *(next release)* — an EXP
