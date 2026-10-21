@@ -14,7 +14,7 @@
         <link rel="prev" href="../interactions-and-items/">
       
       
-        <link rel="next" href="../credits/">
+        <link rel="next" href="../troubleshooting/">
       
       
         
@@ -339,6 +339,8 @@
       
         
           
+        
+      
         
       
         
@@ -738,6 +740,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../credits/" class="md-nav__link">
         
   
@@ -983,6 +1013,18 @@ and <code>expert</code>; the Diving, Hot and Strange tables count as <code>exper
 </tr>
 <tr>
 <td></td>
+<td><code>radius &lt;tier&gt;</code></td>
+<td>blocks</td>
+<td>How far that tier's re-roll reaches, both the area it clears and the area it fills. <em>Default 32 Basic, 48 Advanced, 64 above.</em></td>
+</tr>
+<tr>
+<td></td>
+<td><code>clearance</code></td>
+<td>0–16</td>
+<td>Blocks around <strong>you</strong> where nothing spawns, so a group never lands on top of you. <em>Default 2.</em> Picnic blocks are always off-limits.</td>
+</tr>
+<tr>
+<td></td>
 <td><code>flyinglift</code></td>
 <td>0–64</td>
 <td>How high re-rolled fliers are lifted off the ground (default <code>12</code>, <code>0</code> grounds them). Never changes <em>which</em> Pokémon spawn.</td>
@@ -992,6 +1034,12 @@ and <code>expert</code>; the Diving, Hot and Strange tables count as <code>exper
 <td><code>flierleash</code></td>
 <td>0–600</td>
 <td>Seconds a re-rolled flier is kept within the table's re-roll radius (default <code>30</code>, <code>0</code> lets it roam at once).</td>
+</tr>
+<tr>
+<td></td>
+<td><code>log</code></td>
+<td>true/false</td>
+<td>Writes every re-roll to <code>latest.log</code>: what it cleared and spawned, one line per Pokémon. <em>Default on.</em></td>
 </tr>
 <tr>
 <td></td>
@@ -1016,6 +1064,12 @@ and <code>expert</code>; the Diving, Hot and Strange tables count as <code>exper
 <td><code>protectultrabeast &lt;rung&gt;</code></td>
 <td>true/false</td>
 <td>Keeps <strong>Ultra Beast</strong> wild Pokémon. <em>Default off.</em></td>
+</tr>
+<tr>
+<td><code>platforms</code></td>
+<td><code>enabled</code></td>
+<td>true/false</td>
+<td>A re-roll may spawn on <a href="../spawn-rerolling/#built-platforms">any floor you built</a> (planks, quartz, concrete…), not only natural ground. <em>Default off.</em></td>
 </tr>
 <tr>
 <td><code>snackbias</code></td>

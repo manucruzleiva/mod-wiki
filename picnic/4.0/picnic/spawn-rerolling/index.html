@@ -355,6 +355,8 @@
       
         
       
+        
+      
     
     
     
@@ -555,6 +557,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#built-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built platforms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pokemon-that-fly-spawn-flying" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -709,6 +722,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../credits/" class="md-nav__link">
         
   
@@ -779,6 +820,17 @@
     <span class="md-ellipsis">
       
         Where they appear
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Built platforms
       
     </span>
   </a>
@@ -863,7 +915,8 @@
 <p>The headline feature. <strong>Left-click the center (table) cells</strong> and the table will:</p>
 <ol>
 <li><strong>Despawn nearby wild Pokémon</strong> within the tier's <a href="../picnic-tables/#tiers">radius</a> — but <strong>never
-   owned/tethered Pokémon</strong> (yours and other players' stay safe).</li>
+   owned/tethered Pokémon</strong> (yours and other players' stay safe). <em>From the next release</em>, a wild
+   Pokémon that someone is battling, or that a Poké Ball is already flying at, is left alone too.</li>
 <li><strong>Force a fresh "maximized" natural respawn</strong> around the table, using Cobblemon's own spawner at a
    boosted density so you get a full batch immediately.</li>
 </ol>
@@ -880,12 +933,22 @@ top, a ledge or a slope, where the terrain a few blocks away sits well below you
 <p>It also <strong>prefers ground near your own altitude</strong>. Stand on a summit and the re-roll fills the summit,
 not the valley below it — it only settles for lower ground when there's nothing else within reach, so
 a bare peak still gets its Pokémon.</p>
+<p>Nothing spawns <strong>on the table</strong>, and nothing spawns within <strong>2 blocks of you</strong> (change it with
+<code>/picnic config reroll clearance</code>), so a whole group never lands on the food or on your head.</p>
 <p>Underground and underwater the search keeps your own altitude instead, so caves and Diving tables
 behave the way you'd expect.</p>
 <p>A single unlucky spot doesn't end the attempt — the table keeps picking new ones until it fills your
 order or runs out of tries. If a place genuinely has nowhere to put a Pokémon, it says so plainly
 rather than reporting a silent zero. The bread is still spent: the area was cleared either way, and
 that can't be undone.</p>
+<h2 id="built-platforms">Built platforms<a class="headerlink" href="#built-platforms" title="Permanent link">&para;</a></h2>
+<p>Cobblemon only spawns most wild Pokémon on <strong>natural ground</strong>: grass, dirt, stone, sand. A table on a
+deck of planks, a quartz tower or a concrete floor has nowhere to put them, and the table says so,
+naming the ground that does work.</p>
+<p>Turn on <code>/picnic config platforms enabled true</code> and a re-roll spawns on <strong>any floor</strong>. Which Pokémon
+come is unchanged: the biome under you, the time of day, the light and the height still decide. Only
+the "natural ground" rule is lifted, and only for the table's own re-roll; Cobblemon's normal spawning
+keeps its rules. On natural ground the switch changes nothing. It is <strong>off by default</strong>.</p>
 <h2 id="pokemon-that-fly-spawn-flying">Pokémon that fly, spawn flying<a class="headerlink" href="#pokemon-that-fly-spawn-flying" title="Permanent link">&para;</a></h2>
 <p>A re-rolled Pokémon whose species can fly is lifted <strong>3 to 12 blocks</strong> off the ground it appeared on,
 as far as clear air allows. Set the ceiling with <code>/picnic config reroll flyinglift</code> (0 keeps everything
