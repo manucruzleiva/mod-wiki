@@ -1,0 +1,31 @@
+name: Checks
+
+# A mod's version in mkdocs.base.yml is the promise "these pages describe that release". Raising it
+# without touching docs/<mod>/ is how Raid Icons ended up saying 3.0.0 over 2.5.4 pages, so it fails
+# here, on the pull request, before anything is deployed. See tools/check_mod_versions.py.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  version-bumps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: A version bump comes with its pages
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          # A first push or a force push has no previous commit to compare with.
+          if ! git cat-file -e "$BASE^{commit}" 2>/dev/null; then
+            echo "No base commit to compare with; nothing to check."; exit 0
+          fi
+          python3 -I tools/check_mod_versions.py bumps "$BASE" "$HEAD"
