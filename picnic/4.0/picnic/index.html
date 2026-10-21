@@ -62,7 +62,6 @@
       color: var(--md-accent-fg-color); }
     .cr-ad-label { display: block; font-size: .55rem; letter-spacing: .05em;
       text-transform: uppercase; opacity: .6; margin-bottom: .25rem; }
-    #cr-ad-side { margin: 1.2rem .8rem 0 .8rem; }
     .cr-ad-footbar { max-width: 61rem; margin: 0 auto; padding: .4rem .8rem 1rem; }
     .cr-ad-footbar .cr-ad-placeholder { text-align: center; }
   </style>
@@ -702,7 +701,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="cobblemon-picnic" data-version="4.0.0">Documented against Cobblemon Picnic 4.0.0</p>
+    <p class="wiki-mod-version" data-modrinth="sfptxo0H" data-version="4.0.0">Documented against Cobblemon Picnic 4.0.0</p>
   
                   
 
@@ -716,7 +715,7 @@
 are despawned and re-rolled into a fresh maximised spawn — hunt a shiny or a specific species
 without walking the map raw. It doubles as a social station: shiny aura, Pokémon care and trainer
 battles.</p>
-<p><span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.8+</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span></p>
+<p><span class="badge">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">Cobblemon 1.8+</span></p>
 <div class="hero-actions">
 <p><a class="md-button" href="getting-started/">Get started</a>
 <a class="md-button" href="picnic-tables/">Picnic tables</a></p>
@@ -741,6 +740,7 @@ battles.</p>
 </ul>
 </div>
 <h2 id="get-it">Get it<a class="headerlink" href="#get-it" title="Permanent link">&para;</a></h2>
+<div class="mod-spec">
 <table>
 <thead>
 <tr>
@@ -751,33 +751,40 @@ battles.</p>
 <tbody>
 <tr>
 <td><strong>Download</strong></td>
-<td><a href="https://modrinth.com/mod/cobblemon-picnic">Modrinth</a> · <a href="https://www.curseforge.com/projects/1581251">CurseForge</a></td>
+<td><a href="https://modrinth.com/mod/sfptxo0H">Modrinth</a> · <a href="https://www.curseforge.com/projects/1581251">CurseForge</a> · <a href="https://modrinth.com/mod/sfptxo0H/changelog">What changed</a></td>
 </tr>
 <tr>
-<td><strong>Needs</strong></td>
-<td>Minecraft 1.21.1 · <a href="https://modrinth.com/mod/cobblemon">Cobblemon</a> 1.8.0 or newer</td>
+<td><strong>Version</strong></td>
+<td><strong>4.0.0</strong></td>
+</tr>
+<tr>
+<td><strong>Minecraft</strong></td>
+<td>1.21.1</td>
+</tr>
+<tr>
+<td><strong>Side</strong></td>
+<td>Server <strong>and</strong> every player's game</td>
+</tr>
+<tr>
+<td><strong>Cobblemon</strong></td>
+<td><strong>1.8+</strong></td>
 </tr>
 <tr>
 <td><strong>Fabric</strong></td>
-<td><a href="https://modrinth.com/mod/architectury-api">Architectury API</a> + <a href="https://modrinth.com/mod/fabric-language-kotlin">Fabric Language Kotlin</a> (Architectury brings <a href="https://modrinth.com/mod/fabric-api">Fabric API</a> with it)</td>
+<td><a href="https://modrinth.com/mod/architectury-api">Architectury API</a>, <a href="https://modrinth.com/mod/fabric-language-kotlin">Fabric Language Kotlin</a></td>
 </tr>
 <tr>
 <td><strong>NeoForge</strong></td>
-<td><a href="https://modrinth.com/mod/architectury-api">Architectury API</a> + <a href="https://modrinth.com/mod/kotlin-for-forge">Kotlin for Forge</a></td>
+<td><a href="https://modrinth.com/mod/architectury-api">Architectury API</a>, <a href="https://modrinth.com/mod/kotlin-for-forge">Kotlin for Forge</a></td>
 </tr>
 <tr>
 <td><strong>Optional</strong></td>
-<td><a href="https://modrinth.com/mod/cloth-config">Cloth Config</a> (+ <a href="https://modrinth.com/mod/modmenu">Mod Menu</a> on Fabric) for the settings screen</td>
-</tr>
-<tr>
-<td><strong>Bugs &amp; ideas</strong></td>
-<td>Post in the <a href="https://discord.gg/SwcwXcCN4k">Discord</a> — it files the ticket for you</td>
+<td><a href="https://modrinth.com/mod/cloth-config">Cloth Config</a>: the settings screen (with Mod Menu on Fabric)</td>
 </tr>
 </tbody>
 </table>
+</div>
 <p>New here? Start with <strong><a href="getting-started/">Getting Started</a></strong>.</p>
-<p><strong>License</strong> — custom, <em>"If you make money, I make money."</em> Free to use and share for free; commercial
-use needs a revenue-share agreement. <a href="https://manucruzleiva.github.io/mod-wiki/license/">Full text</a>.</p>
 
 
 
@@ -995,24 +1002,6 @@ use needs a revenue-share agreement. <a href="https://manucruzleiva.github.io/mo
       }
       defer();
       if (typeof document$ !== 'undefined') { document$.subscribe(defer); }
-    })();
-  </script><script>
-    (function () {
-      function mount() {
-        var rail = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
-        if (!rail || document.getElementById('cr-ad-side')) { return; }
-        var slot = document.createElement('div');
-        slot.id = 'cr-ad-side';
-        slot.className = 'cr-ad-slot';
-        slot.innerHTML = '<a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">'
-          + '<span class="cr-ad-label">Supports the project</span>'
-          + '💛 This space supports these mods directly — sponsor shiero.</a>';
-        rail.appendChild(slot);
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', mount);
-      } else { mount(); }
-      if (typeof document$ !== 'undefined') { document$.subscribe(mount); }
     })();
   </script>
 

@@ -64,7 +64,6 @@
       color: var(--md-accent-fg-color); }
     .cr-ad-label { display: block; font-size: .55rem; letter-spacing: .05em;
       text-transform: uppercase; opacity: .6; margin-bottom: .25rem; }
-    #cr-ad-side { margin: 1.2rem .8rem 0 .8rem; }
     .cr-ad-footbar { max-width: 61rem; margin: 0 auto; padding: .4rem .8rem 1rem; }
     .cr-ad-footbar .cr-ad-placeholder { text-align: center; }
   </style>
@@ -927,7 +926,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="cobblemon-picnic" data-version="4.0.0">Documented against Cobblemon Picnic 4.0.0</p>
+    <p class="wiki-mod-version" data-modrinth="sfptxo0H" data-version="4.0.0">Documented against Cobblemon Picnic 4.0.0</p>
   
                   
 
@@ -937,8 +936,7 @@
 <p>Common surprises, what causes them, and what to do. If yours isn't here, post it in the
 <a href="https://discord.gg/SwcwXcCN4k">Discord</a> — it files the ticket for you.</p>
 <h2 id="the-game-wont-start-and-names-cobblemon">The game won't start and names Cobblemon<a class="headerlink" href="#the-game-wont-start-and-names-cobblemon" title="Permanent link">&para;</a></h2>
-<p>Picnic needs <strong>Cobblemon 1.8.0 or newer</strong>. With Cobblemon missing, or on 1.7.x, the loader stops at
-its dependency screen and says so. Update Cobblemon; nothing else needs changing.</p>
+<p>Picnic needs <strong>Cobblemon 1.8.0 or newer</strong>. Install or update Cobblemon; nothing else needs changing.</p>
 <h2 id="a-re-roll-cleared-the-area-but-spawned-nothing">A re-roll cleared the area but spawned nothing<a class="headerlink" href="#a-re-roll-cleared-the-area-but-spawned-nothing" title="Permanent link">&para;</a></h2>
 <p>The table tells you which of two things went wrong:</p>
 <ul>
@@ -1196,24 +1194,6 @@ and it already says what happened.</p>
       }
       defer();
       if (typeof document$ !== 'undefined') { document$.subscribe(defer); }
-    })();
-  </script><script>
-    (function () {
-      function mount() {
-        var rail = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
-        if (!rail || document.getElementById('cr-ad-side')) { return; }
-        var slot = document.createElement('div');
-        slot.id = 'cr-ad-side';
-        slot.className = 'cr-ad-slot';
-        slot.innerHTML = '<a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">'
-          + '<span class="cr-ad-label">Supports the project</span>'
-          + '💛 This space supports these mods directly — sponsor shiero.</a>';
-        rail.appendChild(slot);
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', mount);
-      } else { mount(); }
-      if (typeof document$ !== 'undefined') { document$.subscribe(mount); }
     })();
   </script>
 
