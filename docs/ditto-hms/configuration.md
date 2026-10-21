@@ -134,86 +134,69 @@ You can edit it directly — changes take effect on next server start.
 Durations in the **Power** column are in **ticks** (20 ticks = 1 second), because that is
 what the config takes.
 
-Durations in the **Power** column are in **ticks** (20 ticks = 1 second), because that is
-what the config takes.
-
 | Ability | Hunger | Cooldown | Power |
 |---|---|---|---|
-| Water Gun | 1 | 2s | 3 |
 | Leafage | 1 | 2s | 5 |
 | Cut | 2 | none | 128 |
 | Rock Smash | 2 | none | 32 |
-| Rototiller | 1 | none | 1 |
 | Camouflage | 3 | 15 min | duration — **18000** |
 | Strength | 2 | none | 1 |
-| Waterfall | 2 | 6s | 40 |
-| Ember | 1 | 1s | 5 |
-| Bullet Seed | 2 | 1s | 5 |
-| Teleport | 5 | 5s | 30 |
-| Fly | 3 | 1s | 1200 |
-| Rain Dance | 5 | 10s | 6000 |
-| Sunny Day | 5 | 10s | 6000 |
-| Rest | 0 | 10 min | — |
-| Dig | 2 | none | 1 |
-| Explosion | 15 | 10s | 4 |
-| Thunder | 3 | 5s | 3 |
-| String Shot | 1 | 2s | 1 |
-| Defog | 2 | 5s | 10 |
-| Crabhammer | 3 | 2s | 1 |
-| Revival Blessing | 1 | 20 min | — |
-| Charm | 2 | 3s | follow duration in ticks — **2400** |
+| Teleport | 6 | 30s | 30 |
 | Stockpile | 1 | 1s | lava self-damage — **7** |
-| Substitute | 4 | 20s | decoy lifetime in ticks — **400** |
-| Thief | 2 | 5s | 1 |
 | Charge | 2 | 3s | ticks between sparks — **10** |
-| Destiny Bond | 4 | 30s | how long the bond holds — **200** |
-| Sweet Scent | 6 | 90s | how many turn up — **5** |
-| Headbutt | 2 | 2s | 14 |
-| Egg Bomb | 2 | 3s | tenths of blast strength — **10** |
-| Eruption | 5 | 10s | how many blocks away it can be aimed — **5** |
-| Miracle Eye | 5 | 30s | search radius in CHUNKS, as /locate counts — **100** |
-| Protect | 1 | 10s | ticks of immunity — **20** |
-| Celebrate | 1 | 10 min | how many rockets — **8** |
 | Tail Whip | 2 | 2s | 1 |
-| Whirlwind | 2 | 5s | percent of the full gust — **100** |
-| Barrier | 3 | 15s | how long the wall stands — **600** |
-| X-Scissor | 2 | 3s | radius — **5** |
-| Earthquake | 4 | 10s | radius — **5** |
-| Rock Throw | 1 | 1s | tenths of a half-heart — **40** |
-| Present | 12 | 20 min | — |
-| Blizzard | 6 | 30s | radius — **180** |
-| Boomerang | 1 | 1.5s | tenths of a half-heart — **50** |
-| Decorate | 4 | 1 min | percent chance of a shiny — **5** |
 
-\* Rest does not require hunger.
-| Confusion | 3 | 10s | how long it lasts — **200** |
-| Obstruct | 3 | 1 min | how long the seal holds — **6000** |
 
 ## Default values — Toggle HMs
 
 | Ability | HungerBlock | Power |
 |---|---|---|
 | Magnet Rise | 15 | 25 |
+| Fly | 3 | — · each mid-air take-off costs **3** hunger, cooldown **1s** |
 | Jump | 2 | Jump Boost level — **4** |
-| Surf | 2 | tenths of the mount's swim-speed multiplier — **15** |
-| Agility | 2 | — |
 | Dive | 2 | — |
 | Flash | 2 | — |
 | Rock Climb | 2 | — |
-| Mean Look | 2 | repel radius — **30** |
-| Harden | 3 | — |
-| Glide | 2 | — |
-| Burning Bulwark | 4 | thorns damage — **2** |
 | Lava Plume | 2 | tenths of the lava-stride multiplier — **17** |
-| U-turn | 2 | tenths of the mount's turn multiplier — **18** |
-| Bounce | 2 | — |
 | Snowscape | 2 | trail radius — **3** |
-| Vine Whip | 2 | extra blocks of reach — **3** |
 | Absorb | 2 | magnet radius — **6** |
-| Helping Hand | 2 | tenths of the stamina SPEND — **2** |
-| Tailwind | 2 | tenths of the mount's flight-speed multiplier — **15** |
-| Swift | 2 | tenths of the mount's acceleration multiplier — **20** |
 | Lucky Chant | 2 | Luck amplifier — **1** |
-| Acid Armor | 3 | poison ticks — **900** |
-| Powder Snow | 3 | radius of the cold — **5** |
 | Shadow Sneak | 3 | percent of your speed you keep — **55** |
+
+## Default values — Your Pokémon
+
+[Field moves](pokemon.md#field-moves) never cost you hunger: **Hunger** is ignored, and **Cooldown**
+is counted **per Pokémon**. Turning a move's `enabled` off in the file hides it from every wheel.
+
+| Ability | Hunger | Cooldown | Power |
+|---|---|---|---|
+| Rain Dance | 5 | 10s | 6000 |
+| Sunny Day | 5 | 10s | 6000 |
+| Thief | 2 | 5s | 1 |
+| Sweet Scent | 6 | 90s | how many turn up — **5** |
+| Headbutt | 2 | 2s | 14 |
+| Miracle Eye | 5 | 30s | search radius in CHUNKS, as /locate counts — **100** |
+| Celebrate | 1 | 10 min | how many rockets — **8** |
+| Present | 12 | 20 min | — |
+| Blizzard | 6 | 30s | radius — **180** |
+| Decorate | 4 | 1 min | percent chance of a shiny — **5** |
+| Growth | 3 | 1 min | — |
+| Minimize | 3 | 1 min | — |
+| Outrage | 5 | 5 min | — |
+| Calm Mind | 3 | 2 min | — |
+
+[Mount toggles](pokemon.md#mount-toggles) block none of your hunger — they belong to the Pokémon.
+
+| Ability | Power |
+|---|---|
+| Surf | tenths of the mount's swim-speed multiplier — **15** |
+| Agility | tenths of the mount's land-speed multiplier — **15** |
+| U-turn | tenths of the mount's turn multiplier — **18** |
+| Helping Hand | tenths of the stamina SPEND — **2** |
+| Tailwind | tenths of the mount's flight-speed multiplier — **15** |
+| Swift | tenths of the mount's acceleration multiplier — **20** |
+
+!!! note "Old config files"
+    A config written before 4.0 is brought up to date on load, and only where the meaning of a value
+    changed: Fly's glide price, Teleport's price (only if you had left it at the old default) and
+    Agility's new mount scale. Retired HMs drop out of the file.

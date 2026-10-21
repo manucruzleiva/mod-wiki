@@ -6,6 +6,75 @@
 All notable changes are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) + SemVer.
 
+## [4.0.0] - 2026-10-21
+
+**Ditto HMs gets its identity back.** It started as "you are a Ditto: copy what you need to move
+through the world and shape it", and over 75 HMs it turned into a little of everything — including a
+combat mod nobody asked it to be. 4.0 cuts it back to **20 HMs that are yours**, hands the moves that
+belong to a Pokémon back to your Pokémon, and moves everything that fights to **Cobblemon Action
+Combat**.
+
+> ⚠️ **Your save is migrated on join, and nothing you paid for is lost.** An HM that was merged into
+> another one teaches you the one it became. Any other HM that is no longer yours is forgotten and
+> **its trigger item is put back in your inventory**. A chat message lists exactly what happened.
+
+### 🧬 Your HMs (20)
+- **Actives:** Cut · Rock Smash · Stockpile · Leafage · Strength · Teleport · Camouflage · Charge ·
+  Tail Whip.
+- **Toggles:** Fly · Magnet Rise · Rock Climb · Dive · Jump · Flash · Lava Plume · Absorb ·
+  Lucky Chant · Shadow Sneak · Snowscape.
+
+### 🔀 Merged
+- **Cut absorbs X-Scissor.** With no tree or plant to cut, Cut clears the weeds around you (and,
+  with no weeds left, what was planted). It no longer strips grass to dirt — as a fallback that would
+  have gone off every time you missed a tree.
+- **Rock Smash absorbs Dig.** Dirt, sand, gravel and anything else a shovel takes come out in one
+  hit, free, with a shovel's drops.
+- **Leafage absorbs Rototiller.** Crouch while using Leafage to till the ground you aim at.
+- **Stockpile absorbs Water Gun and Eruption.** Aim at water or lava to drink it; aim anywhere else to
+  spit it back out — as often as you like, until you drink the other one. Lava still burns going
+  down, water still boils away in the Nether, and claims are respected exactly like a bucket.
+- **Fly absorbs Glide.** See below.
+
+### 🪽 Fly is a toggle
+- **Switch Fly on and you glide** after any jump or fall, as Glide did.
+- **Jump again in mid-air to take off.** That press is the old Fly launch, with its own hunger cost
+  and cooldown.
+- **Fly and Magnet Rise cannot run together.** Switching one on switches the other off. Magnet Rise
+  stays as what it is meant to be: a slow hover for building, not a way to travel.
+
+### 🐾 Your Pokémon does it now
+- **A new slice on Cobblemon's own interaction wheel: _Field moves_.** Open the wheel on one of your
+  sent-out Pokémon and it lists what that Pokémon can do — because it knows the move, or because its
+  species is one that used to teach the HM.
+- **Field moves**, done by the Pokémon itself with its own cooldown and no hunger from you: Rain
+  Dance, Sunny Day, Blizzard (centred on it), Sweet Scent (around it), Headbutt (it shakes the nearest
+  tree — no more hitting trees with your face), Thief (from the nearest creature holding something,
+  never from a player), Present (into the nearest empty container), Miracle Eye, Celebrate, Growth and
+  Minimize (on itself), Outrage and Calm Mind (on itself), and Decorate (a shot at going shiny).
+- **Mount toggles are per Pokémon:** Surf, Tailwind, Swift, U-turn, Helping Hand and **Agility** (now
+  land speed for a mount). Switch them on from that Pokémon's wheel and they help it whenever it is
+  ridden.
+- **Rock Climb works on a mount.** Ride into a wall holding forward and your Pokémon climbs it.
+
+### ⚔️ Combat moved to Cobblemon Action Combat
+- **Bullet Seed, Explosion, Thunder, String Shot, Crabhammer, Mean Look, Harden, Burning Bulwark,
+  Substitute, Destiny Bond, Egg Bomb, Protect, Whirlwind, Barrier, Acid Armor, Rock Throw, Boomerang,
+  Powder Snow and Confusion** are no longer HMs. They are real moves in CAC, where fighting belongs.
+
+### ✂️ Cut
+- **Rest, Defog, Revival Blessing, Charm, Bounce, Obstruct, Ember, Earthquake, Vine Whip and
+  Waterfall** are gone.
+
+### 🔧 Changed
+- **Teleport is dearer and slower to come back:** 6 hunger and 30 seconds (was 5 and 5).
+- **Lava Plume keeps you from burning on its own.** It used to need Burning Bulwark, which went to
+  CAC.
+- Old configs move to the new defaults on load — only the values whose meaning changed (Fly's glide
+  price, Teleport's price unless you had already changed it, and Agility's new mount scale).
+  Retired HMs drop out of the config file, the config screen, the commands and the creative tab.
+- Fixed the comment that still said the mod had room for "sixty-four HMs and not one more". (#93)
+
 ## [2.2.1] - 2026-08-21
 
 A hotfix. Two of these follow you out of the session they happened in, which is why it is not
