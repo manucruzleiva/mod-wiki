@@ -14,7 +14,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../stat-points/">
+        <link rel="next" href="../champions-trainer/">
       
       
         
@@ -355,6 +355,8 @@
       
         
       
+        
+      
     
     
     
@@ -524,6 +526,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../champions-trainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Champions Trainer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -787,7 +817,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="cobblemon-champions-training" data-version="1.0.0">Documented against Cobblemon Champions Training 1.0.0</p>
+    <p class="wiki-mod-version" data-modrinth="cobblemon-champions-training" data-version="1.0.14">Documented against Cobblemon Champions Training 1.0.14</p>
   
                   
 
@@ -873,12 +903,18 @@ values and its summary screen are exactly the game's own.</p>
 <p>This Pokémon trains with stat points now — open its summary to spend them. Effort values no
 longer do anything for it.</p>
 </blockquote>
+<p>Where a <a href="../champions-trainer/">Champions Trainer</a> is required, it says <em>visit a Champions Trainer</em>
+instead.</p>
 <p>Whatever effort values it had become its first stat points, so a Pokémon you trained before is not
 set back. <a href="../stat-points/#converting-from-effort-values">Stat Points</a> explains the exchange.</p>
 <p>A server can loosen or tighten this rule, or turn the stat points off entirely; see
 <a href="../commands/">Commands &amp; Config</a>.</p>
 <h2 id="where-everything-is">Where everything is<a class="headerlink" href="#where-everything-is" title="Permanent link">&para;</a></h2>
-<p>Open the Pokémon's summary. There is no new screen and no new item.</p>
+<p>Everything is on the Pokémon's summary. There is no new screen and no new item. Since version
+1.0.14, with PokeTowns installed, the summary only <strong>sells</strong> at a
+<a href="../champions-trainer/">Champions Trainer</a>, who stands in every Pokémon Center: talk to one and its
+summary opens with every control live. Opened anywhere else, it shows the same pages read-only.
+Without PokeTowns, the summary sells anywhere unless the server asks for a trainer.</p>
 <table>
 <thead>
 <tr>
@@ -909,7 +945,9 @@ set back. <a href="../stat-points/#converting-from-effort-values">Stat Points</a
 goes through. <a href="../training-costs/">Training Costs</a> lists the prices.</p>
 <h2 id="your-first-build">Your first build<a class="headerlink" href="#your-first-build" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Open a Pokémon with 31 in every IV and go to <strong>Stats → SP</strong>.</li>
+<li>Open the summary, or talk to a <a href="../champions-trainer/">Champions Trainer</a> if your server asks for
+   one. Pick a Pokémon with 31 in every IV and go
+   to <strong>Stats → SP</strong>.</li>
 <li>Use <strong>+</strong> and <strong>−</strong> to spread up to 66 points, 32 at most in one stat. <strong>++</strong> fills a stat as far
    as it can go.</li>
 <li>Read the price under the buttons, then press <strong>Save</strong>.</li>

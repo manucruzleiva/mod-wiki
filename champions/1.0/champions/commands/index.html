@@ -355,6 +355,8 @@
       
         
       
+        
+      
     
     
     
@@ -425,6 +427,34 @@
     
   
     Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../champions-trainer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Champions Trainer
   
 
     
@@ -617,6 +647,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#placing-a-champions-trainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placing a Champions Trainer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#champions-sp-slot" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -742,6 +783,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#placing-a-champions-trainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placing a Champions Trainer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#champions-sp-slot" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -809,7 +861,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="cobblemon-champions-training" data-version="1.0.0">Documented against Cobblemon Champions Training 1.0.0</p>
+    <p class="wiki-mod-version" data-modrinth="cobblemon-champions-training" data-version="1.0.14">Documented against Cobblemon Champions Training 1.0.14</p>
   
                   
 
@@ -818,6 +870,10 @@
 <h1 id="commands-config">Commands &amp; Config<a class="headerlink" href="#commands-config" title="Permanent link">&para;</a></h1>
 <p>Every system this mod replaces can be switched off, and every price can be changed. Do it from the
 <strong>config screen</strong>, from <strong><code>/champions config</code></strong> in game, or in the settings file.</p>
+<h2 id="placing-a-champions-trainer">Placing a Champions Trainer<a class="headerlink" href="#placing-a-champions-trainer" title="Permanent link">&para;</a></h2>
+<p><code>/spawnnpc cobblemon_champions_training:champions_trainer</code>, for an operator. This is Cobblemon's own
+command. With PokeTowns, every Pokémon Center already has one. See
+<a href="../champions-trainer/">Champions Trainer</a>.</p>
 <h2 id="champions-sp-slot"><code>/champions sp [slot]</code><a class="headerlink" href="#champions-sp-slot" title="Permanent link">&para;</a></h2>
 <p>A read-out of one party Pokémon, for anyone. <code>slot</code> is 1 to 6, counted the way your party screen
 counts, and defaults to 1.</p>
@@ -974,6 +1030,20 @@ Typing a group name and pressing <strong>Tab</strong> suggests its settings.</p>
 <td><code>10</code></td>
 <td>Experience per CobbleDollar, rounded up.</td>
 </tr>
+<tr>
+<td><code>trainer</code></td>
+<td><code>required</code></td>
+<td><code>AUTO</code> / <code>ON</code> / <code>OFF</code></td>
+<td><code>AUTO</code></td>
+<td>Whether changes are bought only at a <a href="../champions-trainer/">Champions Trainer</a>. <code>AUTO</code>: only with PokeTowns installed.</td>
+</tr>
+<tr>
+<td><code>trainer</code></td>
+<td><code>inCenters</code></td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>true</code></td>
+<td>A trainer is placed in every PokeTowns Pokémon Center. Does nothing without PokeTowns.</td>
+</tr>
 </tbody>
 </table>
 <p>For example, to charge for moves and make egg moves steeper:</p>
@@ -1010,7 +1080,9 @@ host.</p>
 <span class="w">  </span><span class="nt">"xpPerMoveChange"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"xpPerEggMove"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"costOrder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XP_ONLY"</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"xpPerCobbleDollar"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+<span class="w">  </span><span class="nt">"xpPerCobbleDollar"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"trainerRequired"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AUTO"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"trainerInCenters"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>A missing key takes its default, and a misspelled value falls back to the default with a line in the
