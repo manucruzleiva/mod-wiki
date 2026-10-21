@@ -67,7 +67,7 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 
 | Option | Default | Notes |
 | --- | --- | --- |
-| Road surface | Random (by biome) | Random paves each stretch from the palette of the biome it crosses; a material paves every road with that one block. See [Road materials](#road-materials) |
+| Road surface | Random (by biome) | Random paves each stretch from the palette of the biome it crosses; a material paves every road with that one block; several materials make a mix. See [Road materials](#road-materials) |
 | Road lamp posts | Random | Random / On / Off — Random decides per route |
 | Tunnel lighting | Random | Random keeps some tunnels as dark caves |
 | Underwater lighting | Random | a sea lantern in the pillar under each water-crossing marker — Random decides per route |
@@ -88,9 +88,27 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | Polished Andesite | `minecraft:polished_andesite` | polished andesite everywhere |
 | Packed Mud | `minecraft:packed_mud` | packed mud everywhere |
 | Coarse Dirt | `minecraft:coarse_dirt` | coarse dirt everywhere |
+| Mossy Stone Bricks | `minecraft:mossy_stone_bricks` | mossy stone bricks everywhere |
+| Cracked Stone Bricks | `minecraft:cracked_stone_bricks` | cracked stone bricks everywhere |
+| Andesite | `minecraft:andesite` | andesite everywhere |
+| Sandstone | `minecraft:sandstone` | sandstone everywhere |
+| Cut Sandstone | `minecraft:cut_sandstone` | cut sandstone everywhere |
+| Cut Red Sandstone | `minecraft:cut_red_sandstone` | cut red sandstone everywhere |
+| Mud Bricks | `minecraft:mud_bricks` | mud bricks everywhere |
 
 Any other block id typed into `config/routes.json` works too, and shows on the tab under its id. An id the game
-does not know falls back to Random.
+does not know is dropped; if nothing else is left, the road falls back to Random.
+
+**Mixing materials.** Press **+ Add material** under *Road surface* to add a row. Each row is a dropdown of
+the choices above and a *Share* slider; the shares are compared with each other, so 70 and 30 pave about 70% and
+30% of the road. The materials are laid in organic patches a few blocks across, not block by block. *Random (by
+biome)* can be one row of a mix and stands for the biome's own palette. **- Remove last** drops the last row;
+with one row left the slider hides, because one material is the whole road. Up to six materials fit in a mix.
+
+Example: Cobblestone at 60, Gravel at 25 and Random (by biome) at 15 paves most of every road in cobblestone
+with gravel patches, and lets about one patch in seven follow the land. In `config/routes.json`, or with
+`/routes config set path_block_material`, the same mix is written
+`minecraft:cobblestone=60,minecraft:gravel=25,random=15`.
 
 **What Random lays.** Each stretch takes its block from the biome it crosses, in patches a few blocks
 across, so a road changes material where the land changes:
@@ -107,7 +125,8 @@ across, so a road changes material where the land changes:
 | Warm | dirt path, packed mud, sandstone, gravel |
 
 Climbs are stepped in stairs of the same family (stone brick stairs on stone bricks, mud brick stairs on
-packed mud). A material without a stair of its own steps in cobblestone stairs.
+packed mud, andesite stairs on andesite). A material without a stair of its own (dirt path, gravel, coarse dirt)
+steps in cobblestone stairs.
 
 ### World Spawn
 
