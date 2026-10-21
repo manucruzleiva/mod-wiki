@@ -127,9 +127,10 @@ across, so a road changes material where the land changes:
 | Temperate | dirt path, cobblestone, mossy cobblestone, stone bricks, gravel |
 | Warm | dirt path, packed mud, sandstone, gravel |
 
-Climbs are stepped in stairs of the same family (stone brick stairs on stone bricks, mud brick stairs on
-packed mud, andesite stairs on andesite). A material without a stair of its own (dirt path, gravel, coarse dirt)
-steps in cobblestone stairs.
+Climbs are walked in slabs of the same family: a rise of one block, or two in a row, steps up in half blocks
+(slab, full block, slab), so you climb without jumping. A climb of three or more rises in a row keeps stairs of the
+same family (stone brick stairs on stone bricks, mud brick stairs on packed mud, andesite stairs on andesite).
+A material without a slab or stair of its own (dirt path, gravel, coarse dirt) steps in cobblestone.
 
 #### Road wear
 
