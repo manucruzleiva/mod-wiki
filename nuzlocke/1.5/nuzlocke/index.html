@@ -643,7 +643,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon Nuzlocke & Soul Link 1.5.38</p>
+    <p class="wiki-mod-version" data-modrinth="cobblemon-nuzlocke-soul-link" data-version="1.5.38">Documented against Cobblemon Nuzlocke & Soul Link 1.5.38</p>
   
                   
 
@@ -657,7 +657,7 @@
 nicknames, level caps — so you play the run instead of policing yourself. And if you play with
 friends, <strong>Soul Link</strong> ties your catches together: the Pokémon you caught in the same place live and
 die as one.</p>
-<p><span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.7.x</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">Requires Routes</span></p>
+<p><span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.8</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">Requires Routes</span></p>
 <div class="hero-actions">
 <p><a class="md-button" href="nuzlocke/">The ruleset</a>
 <a class="md-button" href="soul-link/">Soul Link</a></p>
@@ -690,7 +690,7 @@ carry it. Offered to each player at character creation.</p>
 </div>
 <h2 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">&para;</a></h2>
 <p>It is an <strong>add-on for <a href="https://manucruzleiva.github.io/mod-wiki/routes/latest/routes/">Routes</a></strong>: the zones it locks onto <em>are</em> the routes,
-areas and towns Routes generates, so you need both. Get it from
+areas and towns Routes generates, so you need both, and Routes has to be <strong>1.2.119 or newer</strong>. Get it from
 <a href="https://modrinth.com/mod/cobblemon-nuzlocke-soul-link"><strong>Modrinth</strong></a> or
 <a href="https://www.curseforge.com/projects/1630816"><strong>CurseForge</strong></a>, for <strong>Fabric</strong> or <strong>NeoForge</strong> on
 Minecraft <strong>1.21.1</strong>.</p>
@@ -703,8 +703,8 @@ Minecraft <strong>1.21.1</strong>.</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="https://modrinth.com/mod/cobblemon">Cobblemon</a> 1.7.x (<a href="https://www.curseforge.com/minecraft/mc-mods/cobblemon">CurseForge</a>)</td>
-<td>the Pokémon</td>
+<td><a href="https://modrinth.com/mod/cobblemon">Cobblemon</a> 1.8 (<a href="https://www.curseforge.com/minecraft/mc-mods/cobblemon">CurseForge</a>)</td>
+<td>the Pokémon. Built for 1.8; it still runs on 1.7.3, but <a href="nuzlocke/#route-pokemon">route Pokémon</a> need 1.8</td>
 </tr>
 <tr>
 <td><a href="https://modrinth.com/mod/architectury-api">Architectury API</a> (<a href="https://www.curseforge.com/minecraft/mc-mods/architectury-api">CurseForge</a>)</td>
@@ -856,6 +856,54 @@ with a similar name. This is a different project — a <strong>mod</strong> — 
       }
       paint();
       if (typeof document$ !== 'undefined') { document$.subscribe(paint); }
+    })();
+  </script><script>
+    (function () {
+      function parts(v) { return v.split('.').map(Number); }
+      function newer(a, b) {
+        var x = parts(a), y = parts(b);
+        for (var i = 0; i < 3; i++) { if (x[i] !== y[i]) { return x[i] > y[i]; } }
+        return false;
+      }
+      function latest(slug) {
+        var key = 'wiki-modrinth-' + slug, hit = null;
+        try { hit = sessionStorage.getItem(key); } catch (e) {}
+        if (hit !== null) { return Promise.resolve(hit); }
+        return fetch('https://api.modrinth.com/v2/project/' + slug + '/version')
+          .then(function (r) { return r.ok ? r.json() : []; })
+          .then(function (list) {
+            var best = null;
+            list.forEach(function (v) {
+              if (v.version_type !== 'release') { return; }
+              if (!best || v.date_published > best.date_published) { best = v; }
+            });
+            var found = '';
+            if (best) {
+              var games = best.game_versions || [];
+              var nums = best.version_number.match(/\d+\.\d+\.\d+/g) || [];
+              for (var i = 0; i < nums.length; i++) {
+                if (games.indexOf(nums[i]) === -1) { found = nums[i]; break; }
+              }
+            }
+            try { sessionStorage.setItem(key, found); } catch (e) {}
+            return found;
+          });
+      }
+      function check() {
+        var line = document.querySelector('.wiki-mod-version[data-modrinth]');
+        if (!line || line.querySelector('.wiki-stale')) { return; }
+        var mine = line.getAttribute('data-version');
+        if (mine.indexOf('-') !== -1) { return; }
+        latest(line.getAttribute('data-modrinth')).then(function (v) {
+          if (!v || !newer(v, mine) || line.querySelector('.wiki-stale')) { return; }
+          var note = document.createElement('span');
+          note.className = 'wiki-stale';
+          note.textContent = ' · ' + v + ' is out: parts of this page may be behind';
+          line.appendChild(note);
+        }).catch(function () {});
+      }
+      check();
+      if (typeof document$ !== 'undefined') { document$.subscribe(check); }
     })();
   </script><script>
     (function () {
