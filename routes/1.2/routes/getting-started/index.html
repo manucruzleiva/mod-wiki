@@ -64,7 +64,6 @@
       color: var(--md-accent-fg-color); }
     .cr-ad-label { display: block; font-size: .55rem; letter-spacing: .05em;
       text-transform: uppercase; opacity: .6; margin-bottom: .25rem; }
-    #cr-ad-side { margin: 1.2rem .8rem 0 .8rem; }
     .cr-ad-footbar { max-width: 61rem; margin: 0 auto; padding: .4rem .8rem 1rem; }
     .cr-ad-footbar .cr-ad-placeholder { text-align: center; }
   </style>
@@ -339,6 +338,8 @@
       
         
           
+        
+      
         
       
         
@@ -654,6 +655,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../credits/" class="md-nav__link">
         
   
@@ -743,7 +772,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="routes" data-version="1.2.119">Documented against Routes 1.2.119</p>
+    <p class="wiki-mod-version" data-modrinth="PfmV1XPQ" data-version="1.2.119">Documented against Routes 1.2.119</p>
   
                   
 
@@ -1021,24 +1050,6 @@ as the world generates. Starting a fresh world gives you the intended experience
       }
       defer();
       if (typeof document$ !== 'undefined') { document$.subscribe(defer); }
-    })();
-  </script><script>
-    (function () {
-      function mount() {
-        var rail = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
-        if (!rail || document.getElementById('cr-ad-side')) { return; }
-        var slot = document.createElement('div');
-        slot.id = 'cr-ad-side';
-        slot.className = 'cr-ad-slot';
-        slot.innerHTML = '<a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">'
-          + '<span class="cr-ad-label">Supports the project</span>'
-          + '💛 This space supports these mods directly — sponsor shiero.</a>';
-        rail.appendChild(slot);
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', mount);
-      } else { mount(); }
-      if (typeof document$ !== 'undefined') { document$.subscribe(mount); }
     })();
   </script>
 
