@@ -8,7 +8,8 @@ Earn experience the way the main series pays it: **at every knockout**, not in o
 battle ends. A level gained mid-battle counts in that same battle — new stats, more HP — and a move
 it unlocks is yours to take before the next turn.
 
-There is nothing to configure and no command to learn. Install it and fight.
+There is nothing to configure and no command to learn. Install it and fight. (From the next release,
+operators can [tune the server's EXP](commands.md) if they want to.)
 
 <span class="badge">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">Cobblemon 1.7 & 1.8</span>
 
@@ -34,6 +35,9 @@ There is nothing to configure and no command to learn. Install it and fight.
   pool.
 - :material-text-box-outline: **[Everything in the battle log](how-it-works.md#battle-log)** — EXP,
   levels, stats and moves, said to the Pokémon's owner and nobody else.
+- :material-tune-variant: **[Commands & settings](commands.md)** *(next release)* — an EXP
+  multiplier, a stronger or global Exp. Share, and an *EXP: On / Off* button on the Summary to pause
+  one Pokémon's EXP.
 
 </div>
 
@@ -48,7 +52,7 @@ same opponent. The total is what Cobblemon would have given you; it simply arriv
 |---|---|
 | **Needs** | Minecraft 1.21.1 on Fabric or NeoForge, [Cobblemon](https://modrinth.com/mod/cobblemon) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobblemon)) 1.7 or 1.8, Architectury API, and Kotlin for your loader |
 | **Works with** | any mod that changes how much EXP or how many EVs a battle gives — its numbers are the ones paid |
-| **Does not need** | a config file, a command or a permission |
+| **Does not need** | a config file, a command or a permission — they are there only to change the defaults |
 
 One jar per loader, and the same jar runs on Cobblemon 1.7 and 1.8. Drop the one for your loader into
 `mods/`, never both at once.

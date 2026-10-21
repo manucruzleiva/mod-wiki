@@ -22,6 +22,10 @@ When a Pokémon faints, the other side is paid **right then**:
   `experienceShareMultiplier`. It can be on the bench.
 - Anyone else gets nothing.
 
+From the next release, operators can change that share, give it to the whole team (a global Exp.
+Share) and multiply all battle EXP, and a player can pause one Pokémon's EXP from its Summary: see
+[Commands & settings](commands.md).
+
 The amount is **Cobblemon's own calculation**, so everything that changes it still does: a **Lucky
 Egg**, a Pokémon from **another trainer**, one **ready to evolve**, **high friendship**, and
 Cobblemon's `experienceMultiplier`. A mod that changes how much EXP a battle gives, or caps a level,
@@ -48,6 +52,8 @@ A knockout that happens after the battle is already over pays nothing at all.
   fainted Pokémon never earns.
 - **Against another player**, nothing is paid unless Cobblemon's `allowExperienceFromPvP` allows it.
 - **Catching** a Pokémon pays no EXP, as in Cobblemon.
+- **A Pokémon whose EXP is paused** (next release, [from its Summary](commands.md#pausing-a-pokemons-exp))
+  gets no EXP, but still gets its EVs.
 
 What a knockout paid is **yours to keep**, even if you go on to lose the battle.
 
