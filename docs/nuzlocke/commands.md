@@ -78,7 +78,6 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | Revival Blessing | off | whether that move may revive mid-battle |
 | Healers set your respawn | on | the last healer you used is where you come back |
 | Dupes match · Dupes count | evolution line · ever caught | the two halves of the duplicates clause |
-| Mega / Tera OK | on | under a Gym Leader Challenge, a Mega or Tera of your type still counts |
 | Allow Mega · Gigantamax · Z-Moves · Tera | on | switch off any battle gimmick for a stricter run |
 | Duplicates clause | evolution line | what counts as "already owned" |
 | Egg clause | Encounter | the hatchling takes the zone it hatches in — or ban eggs, or exempt them |
@@ -102,7 +101,10 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 
 | Option | Default | Notes |
 | --- | :---: | --- |
-| Gym Leader Challenge | on | offer every player a monotype run at character creation; off = never offered |
+| Gym Leader Challenge | on | offer every player a monotype run when they go to pick a starter; off = never offered |
+| Mega / Tera OK | on | a Pokémon also counts as your type when its Tera type or a Mega form of its species carries it |
+
+How the challenge plays is on the [ruleset page](nuzlocke.md#gym-leader-challenge).
 
 ### Roads, towns and trainers
 
