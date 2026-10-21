@@ -11,7 +11,7 @@ are despawned and re-rolled into a fresh maximised spawn — hunt a shiny or a s
 without walking the map raw. It doubles as a social station: shiny aura, Pokémon care and trainer
 battles.
 
-<span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.7.x</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
+<span class="badge">MC 1.21.1</span> <span class="badge">Cobblemon 1.8</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span>
 
 <div class="hero-actions" markdown>
 [Get started](getting-started.md){ .md-button }
@@ -43,8 +43,8 @@ battles.
 | | |
 |---|---|
 | **Download** | [Modrinth](https://modrinth.com/mod/cobblemon-picnic) · [CurseForge](https://www.curseforge.com/projects/1581251) |
-| **Needs** | Minecraft 1.21.1 · [Cobblemon](https://modrinth.com/mod/cobblemon) 1.7.x |
-| **Fabric** | [Fabric API](https://modrinth.com/mod/fabric-api) + [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) |
+| **Needs** | Minecraft 1.21.1 · [Cobblemon](https://modrinth.com/mod/cobblemon) 1.8 |
+| **Fabric** | [Architectury API](https://modrinth.com/mod/architectury-api) + [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) |
 | **NeoForge** | [Architectury API](https://modrinth.com/mod/architectury-api) + [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) |
 | **Optional** | [Cloth Config](https://modrinth.com/mod/cloth-config) (+ [Mod Menu](https://modrinth.com/mod/modmenu) on Fabric) for the settings screen |
 | **Bugs & ideas** | Post in the [Discord](https://discord.gg/SwcwXcCN4k) — it files the ticket for you |
