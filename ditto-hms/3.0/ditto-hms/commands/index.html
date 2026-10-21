@@ -357,6 +357,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -483,6 +487,34 @@
     
   
     Toggle HMs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pokemon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your Pokémon
   
 
     
@@ -675,6 +707,34 @@
     
   
     Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrading-to-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrading to 4.0
   
 
     
@@ -903,7 +963,7 @@ Teaches the ability outright, with no disc involved.</p>
 Summons a Trainer Ditto on demand, or undoes a catch so it will visit that player again.</p>
 <p><div class="highlight"><pre><span></span><code>/dittohm learn_all [player]
 </code></pre></div>
-Instantly learns <strong>every HM</strong> for a player (does <strong>not</strong> auto-enable toggles).</p>
+Instantly learns <strong>every HM</strong> (the 20 that are still the player's) for a player (does <strong>not</strong> auto-enable toggles).</p>
 <p><div class="highlight"><pre><span></span><code>/dittohm forget &lt;ability&gt; [player]
 /dittohm forget_all [player]
 </code></pre></div>
@@ -916,9 +976,9 @@ Unlearns one or all HMs.</p>
 /dittohm config reset_all
 </code></pre></div>
 <div class="admonition tip">
-<p class="admonition-title">After updating the mod</p>
-<p>If ability ordinals changed between versions, run <code>/dittohm config reset_all</code> and
-re-learn (<code>/dittohm forget_all</code> then <code>/dittohm learn_all</code>) to clear stale save data.</p>
+<p class="admonition-title">After updating to 4.0</p>
+<p>There is nothing to reset. Every save is migrated the first time each player joins — see
+<a href="../upgrading-to-4/">Upgrading to 4.0</a>. Retired HMs no longer answer any command.</p>
 </div>
 <hr />
 <h2 id="ability-ids">Ability IDs<a class="headerlink" href="#ability-ids" title="Permanent link">&para;</a></h2>
@@ -932,10 +992,6 @@ re-learn (<code>/dittohm forget_all</code> then <code>/dittohm learn_all</code>)
 </thead>
 <tbody>
 <tr>
-<td><code>water_gun</code></td>
-<td>Water Gun</td>
-</tr>
-<tr>
 <td><code>leafage</code></td>
 <td>Leafage</td>
 </tr>
@@ -948,10 +1004,6 @@ re-learn (<code>/dittohm forget_all</code> then <code>/dittohm learn_all</code>)
 <td>Rock Smash</td>
 </tr>
 <tr>
-<td><code>rototiller</code></td>
-<td>Rototiller</td>
-</tr>
-<tr>
 <td><code>camouflage</code></td>
 <td>Camouflage</td>
 </tr>
@@ -960,156 +1012,20 @@ re-learn (<code>/dittohm forget_all</code> then <code>/dittohm learn_all</code>)
 <td>Strength</td>
 </tr>
 <tr>
-<td><code>waterfall</code></td>
-<td>Waterfall</td>
-</tr>
-<tr>
-<td><code>ember</code></td>
-<td>Ember</td>
-</tr>
-<tr>
-<td><code>bullet_seed</code></td>
-<td>Bullet Seed</td>
-</tr>
-<tr>
 <td><code>teleport</code></td>
 <td>Teleport</td>
-</tr>
-<tr>
-<td><code>fly</code></td>
-<td>Fly</td>
-</tr>
-<tr>
-<td><code>rain_dance</code></td>
-<td>Rain Dance</td>
-</tr>
-<tr>
-<td><code>sunny_day</code></td>
-<td>Sunny Day</td>
-</tr>
-<tr>
-<td><code>rest</code></td>
-<td>Rest</td>
-</tr>
-<tr>
-<td><code>dig</code></td>
-<td>Dig</td>
-</tr>
-<tr>
-<td><code>explosion</code></td>
-<td>Explosion</td>
-</tr>
-<tr>
-<td><code>thunder</code></td>
-<td>Thunder</td>
-</tr>
-<tr>
-<td><code>string_shot</code></td>
-<td>String Shot</td>
-</tr>
-<tr>
-<td><code>defog</code></td>
-<td>Defog</td>
-</tr>
-<tr>
-<td><code>crab_hammer</code></td>
-<td>Crabhammer</td>
-</tr>
-<tr>
-<td><code>revival_blessing</code></td>
-<td>Revival Blessing</td>
-</tr>
-<tr>
-<td><code>charm</code></td>
-<td>Charm</td>
 </tr>
 <tr>
 <td><code>stockpile</code></td>
 <td>Stockpile</td>
 </tr>
 <tr>
-<td><code>substitute</code></td>
-<td>Substitute</td>
-</tr>
-<tr>
-<td><code>thief</code></td>
-<td>Thief</td>
-</tr>
-<tr>
 <td><code>charge</code></td>
 <td>Charge</td>
 </tr>
 <tr>
-<td><code>destiny_bond</code></td>
-<td>Destiny Bond</td>
-</tr>
-<tr>
-<td><code>sweet_scent</code></td>
-<td>Sweet Scent</td>
-</tr>
-<tr>
-<td><code>headbutt</code></td>
-<td>Headbutt</td>
-</tr>
-<tr>
-<td><code>egg_bomb</code></td>
-<td>Egg Bomb</td>
-</tr>
-<tr>
-<td><code>eruption</code></td>
-<td>Eruption</td>
-</tr>
-<tr>
-<td><code>miracle_eye</code></td>
-<td>Miracle Eye</td>
-</tr>
-<tr>
-<td><code>protect</code></td>
-<td>Protect</td>
-</tr>
-<tr>
-<td><code>celebrate</code></td>
-<td>Celebrate</td>
-</tr>
-<tr>
 <td><code>tail_whip</code></td>
 <td>Tail Whip</td>
-</tr>
-<tr>
-<td><code>whirlwind</code></td>
-<td>Whirlwind</td>
-</tr>
-<tr>
-<td><code>barrier</code></td>
-<td>Barrier</td>
-</tr>
-<tr>
-<td><code>x_scissor</code></td>
-<td>X-Scissor</td>
-</tr>
-<tr>
-<td><code>earthquake</code></td>
-<td>Earthquake</td>
-</tr>
-<tr>
-<td><code>rock_throw</code></td>
-<td>Rock Throw</td>
-</tr>
-<tr>
-<td><code>present</code></td>
-<td>Present</td>
-</tr>
-<tr>
-<td><code>blizzard</code></td>
-<td>Blizzard</td>
-</tr>
-<tr>
-<td><code>boomerang</code></td>
-<td>Boomerang</td>
-</tr>
-<tr>
-<td><code>decorate</code></td>
-<td>Decorate</td>
 </tr>
 </tbody>
 </table>
@@ -1127,16 +1043,12 @@ re-learn (<code>/dittohm forget_all</code> then <code>/dittohm learn_all</code>)
 <td>Magnet Rise</td>
 </tr>
 <tr>
+<td><code>fly</code></td>
+<td>Fly</td>
+</tr>
+<tr>
 <td><code>jump</code></td>
 <td>Jump</td>
-</tr>
-<tr>
-<td><code>surf</code></td>
-<td>Surf</td>
-</tr>
-<tr>
-<td><code>agility</code></td>
-<td>Agility</td>
 </tr>
 <tr>
 <td><code>dive</code></td>
@@ -1151,80 +1063,24 @@ re-learn (<code>/dittohm forget_all</code> then <code>/dittohm learn_all</code>)
 <td>Rock Climb</td>
 </tr>
 <tr>
-<td><code>mean_look</code></td>
-<td>Mean Look</td>
-</tr>
-<tr>
-<td><code>harden</code></td>
-<td>Harden</td>
-</tr>
-<tr>
-<td><code>glide</code></td>
-<td>Glide</td>
-</tr>
-<tr>
-<td><code>burning_bulwark</code></td>
-<td>Burning Bulwark</td>
-</tr>
-<tr>
 <td><code>lava_plume</code></td>
 <td>Lava Plume</td>
-</tr>
-<tr>
-<td><code>u_turn</code></td>
-<td>U-turn</td>
-</tr>
-<tr>
-<td><code>bounce</code></td>
-<td>Bounce</td>
 </tr>
 <tr>
 <td><code>snowscape</code></td>
 <td>Snowscape</td>
 </tr>
 <tr>
-<td><code>vine_whip</code></td>
-<td>Vine Whip</td>
-</tr>
-<tr>
 <td><code>absorb</code></td>
 <td>Absorb</td>
-</tr>
-<tr>
-<td><code>helping_hand</code></td>
-<td>Helping Hand</td>
-</tr>
-<tr>
-<td><code>tailwind</code></td>
-<td>Tailwind</td>
-</tr>
-<tr>
-<td><code>swift</code></td>
-<td>Swift</td>
 </tr>
 <tr>
 <td><code>lucky_chant</code></td>
 <td>Lucky Chant</td>
 </tr>
 <tr>
-<td><code>acid_armor</code></td>
-<td>Acid Armor</td>
-</tr>
-<tr>
-<td><code>powder_snow</code></td>
-<td>Powder Snow</td>
-</tr>
-<tr>
 <td><code>shadow_sneak</code></td>
 <td>Shadow Sneak</td>
-</tr>
-<tr>
-<td><code>obstruct</code></td>
-<td>Obstruct</td>
-</tr>
-<tr>
-<td><code>confusion</code></td>
-<td>Confusion</td>
 </tr>
 </tbody>
 </table>
