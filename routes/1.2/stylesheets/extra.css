@@ -776,6 +776,16 @@ DOM node and one request per family rather than one per frame.
   color: var(--md-default-fg-color--light);
 }
 
+/* Added by overrides/main.html when Modrinth has a newer release than the one documented. */
+.md-typeset .wiki-stale {
+  color: #c43e00;
+  font-weight: 600;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .wiki-stale {
+  color: #ffab70;
+}
+
 /* Raid Icons: a den's map icon at the size the world map draws it, and the
    gallery that lays the tera icons out as a wrapping grid with the name below. */
 .md-typeset img.den-icon {
