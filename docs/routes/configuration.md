@@ -67,10 +67,47 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 
 | Option | Default | Notes |
 | --- | --- | --- |
-| Road surface | Random (per route) | each route picks its own material, or fix one for every road |
+| Road surface | Random (by biome) | Random paves each stretch from the palette of the biome it crosses; a material paves every road with that one block. See [Road materials](#road-materials) |
 | Road lamp posts | Random | Random / On / Off — Random decides per route |
 | Tunnel lighting | Random | Random keeps some tunnels as dark caves |
 | Underwater lighting | Random | a sea lantern in the pillar under each water-crossing marker — Random decides per route |
+
+#### Road materials
+
+**Road surface** offers these choices on the ROUTES tab, and the same values in `config/routes.json` and
+`/routes config set path_block_material`:
+
+| Choice | Value | What the road is paved with |
+| --- | --- | --- |
+| Random (by biome) | `random` | the palette of the biome below (the default) |
+| Dirt Path | `minecraft:dirt_path` | dirt path everywhere |
+| Cobblestone | `minecraft:cobblestone` | cobblestone everywhere |
+| Mossy Cobblestone | `minecraft:mossy_cobblestone` | mossy cobblestone everywhere |
+| Gravel | `minecraft:gravel` | gravel everywhere |
+| Stone Bricks | `minecraft:stone_bricks` | stone bricks everywhere |
+| Polished Andesite | `minecraft:polished_andesite` | polished andesite everywhere |
+| Packed Mud | `minecraft:packed_mud` | packed mud everywhere |
+| Coarse Dirt | `minecraft:coarse_dirt` | coarse dirt everywhere |
+
+Any other block id typed into `config/routes.json` works too, and shows on the tab under its id. An id the game
+does not know falls back to Random.
+
+**What Random lays.** Each stretch takes its block from the biome it crosses, in patches a few blocks
+across, so a road changes material where the land changes:
+
+| Biome | Blocks, most common first |
+| --- | --- |
+| Badlands | cobblestone, cut red sandstone, gravel, stone bricks |
+| Swamp, mangrove swamp | packed mud, mud bricks, mossy cobblestone, coarse dirt |
+| Jungle | mossy cobblestone, mossy stone bricks, dirt path, gravel |
+| Desert, beach, very hot biomes | cobblestone, cut sandstone, gravel, stone bricks |
+| Frozen | stone bricks, cobblestone, cracked stone bricks, gravel |
+| Cold | cobblestone, stone bricks, andesite, gravel |
+| Temperate | dirt path, cobblestone, mossy cobblestone, stone bricks, gravel |
+| Warm | dirt path, packed mud, sandstone, gravel |
+
+Climbs are stepped in stairs of the same family (stone brick stairs on stone bricks, mud brick stairs on
+packed mud). A material without a stair of its own steps in cobblestone stairs.
 
 ### World Spawn
 
