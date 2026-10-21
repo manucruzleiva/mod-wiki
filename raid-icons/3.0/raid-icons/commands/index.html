@@ -539,6 +539,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#raidicons-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /raidicons config
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raidicons-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /raidicons report
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-log-shows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the log shows
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -648,6 +681,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#raidicons-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /raidicons config
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raidicons-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /raidicons report
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-log-shows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the log shows
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -669,15 +735,80 @@
 
 <h1 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h1>
 <p>One command, and it runs entirely on your client — it is never sent to the server, so it works
-everywhere, including on servers where you have no permissions at all.</p>
+everywhere, including on servers where you have no permissions at all. It works the same on Fabric
+and NeoForge.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/raidicons</code></td>
+<td>Opens the <a href="../configuration/#the-settings-screen">settings screen</a>.</td>
+</tr>
+<tr>
+<td><code>/raidicons report</code></td>
+<td>Prints what the mod can currently see — the first thing to run when a den is not showing up.</td>
+</tr>
+<tr>
+<td><code>/raidicons config</code></td>
+<td>Lists every setting with its current value.</td>
+</tr>
+<tr>
+<td><code>/raidicons config &lt;setting&gt;</code></td>
+<td>Shows one setting, with its range and its default.</td>
+</tr>
+<tr>
+<td><code>/raidicons config &lt;setting&gt; &lt;value&gt;</code></td>
+<td>Changes a setting.</td>
+</tr>
+<tr>
+<td><code>/raidicons config reset [&lt;setting&gt;]</code></td>
+<td>Restores one setting to its default, or all of them.</td>
+</tr>
+<tr>
+<td><code>/raidicons config teraTypes add &lt;type&gt;</code> · <code>remove &lt;type&gt;</code></td>
+<td>Shows or hides one tera type without retyping the whole list.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="raidicons"><code>/raidicons</code><a class="headerlink" href="#raidicons" title="Permanent link">&para;</a></h2>
+<p>Opens the settings screen, in any world, with no trip back to the mod list. The screen needs
+<a href="https://modrinth.com/mod/cloth-config">Cloth Config</a>: without it the command says so and points
+you to <code>/raidicons config</code>, which changes every setting from chat.</p>
+<p>The same screen has a key. Under <strong>Controls</strong>, the <em>Cobblemon Raid Icons</em> heading has an <strong>Open
+settings</strong> key. It starts unbound, so it never collides with Xaero's keys; bind it once and it opens
+the screen from anywhere in game.</p>
+<h2 id="raidicons-config"><code>/raidicons config</code><a class="headerlink" href="#raidicons-config" title="Permanent link">&para;</a></h2>
+<p>Every setting in <a href="../configuration/">Configuration</a> can be read and changed from chat, with no Cloth
+Config needed. A change is saved to the file and shows on the map straight away, with no restart.</p>
+<div class="highlight"><pre><span></span><code>/raidicons config                      → lists every setting and its value
+/raidicons config minTier              → minTier = 0 (0-7, default 0)
+/raidicons config minTier 5            → minTier = 5
+/raidicons config reset minTier        → minTier = 0
+/raidicons config reset                → every setting restored to its default
+</code></pre></div>
+<p>The tera filter takes the whole list at once, or one type at a time — and the command suggests the
+type names as you type:</p>
+<div class="highlight"><pre><span></span><code>/raidicons config teraTypes fire,dragon
+/raidicons config teraTypes add water
+/raidicons config teraTypes remove fire
+/raidicons config teraTypes all
+</code></pre></div>
+<p><code>all</code> clears the filter, so every type is shown again. The filter can never hide every type: removing
+the last one left is refused.</p>
+<h2 id="raidicons-report"><code>/raidicons report</code><a class="headerlink" href="#raidicons-report" title="Permanent link">&para;</a></h2>
 <p>Reports what the mod can currently see. Run it <strong>while aiming at a raid den crystal</strong>: the most
 useful line it prints is what the game says that block actually is.</p>
 <div class="highlight"><pre><span></span><code>Raid Icons
   den block: cobblemonraiddens:raid_crystal_block
   layers: minimap=true worldmap=true
   scan: 4096 chunks examined, 3 den(s) known
-  nearest den: fighting tier 5 at 214, 71, -388 (36m) boss=klinklang_terafighting
+  clock: 0 den(s) reading exactly, 2 reset span(s) measured
+  nearest den: fighting tier 5 at 214, 71, -388 (36m) boss=klinklang_terafighting feature=NONE
   looking at: cobblemonraiddens:raid_crystal_block [raid_type=fighting, raid_tier=tier_five,
     is_active=true] - MATCHES the den block
 </code></pre></div>
@@ -704,8 +835,12 @@ one cause:</p>
 <td>How much ground has been covered and how many dens are known. <code>0 chunks examined</code> means the scan is not running.</td>
 </tr>
 <tr>
+<td><code>clock</code></td>
+<td>Where the <a href="../map-icons/#the-den-clock">den clock</a> gets its numbers. In your own world, the dens reading their exact timer; on a server, how many resets the mod has timed so far — it needs two before it shows a countdown.</td>
+</tr>
+<tr>
 <td><code>nearest den</code></td>
-<td>The closest den the mod knows, with its type, tier, distance and boss.</td>
+<td>The closest den the mod knows, with its type, tier, distance, boss and <a href="../map-icons/#feature-dens">feature</a> (<code>NONE</code> for an ordinary den).</td>
 </tr>
 <tr>
 <td><code>looking at</code></td>
@@ -721,6 +856,35 @@ a <a href="https://manucruzleiva.github.io/mod-wiki/reporting/">bug report</a> w
 and the properties it expects. <code>looking at</code> confirms or destroys that assumption in one step. If
 it says <code>is NOT the den block</code> while you are aiming at a den, that is the whole bug report.</p>
 </div>
+<h2 id="what-the-log-shows">What the log shows<a class="headerlink" href="#what-the-log-shows" title="Permanent link">&para;</a></h2>
+<p>Without running anything, the mod writes three kinds of line to <code>logs/latest.log</code>, all starting with
+<code>[Raid Icons]</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>When</th>
+<th>What it rules out</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scan: N chunks examined, N den(s) known, player at …</code></td>
+<td>Every 10 seconds, <strong>only while no den is known</strong>.</td>
+<td>If the chunk count grows, the scan is running and simply has not met a den yet.</td>
+</tr>
+<tr>
+<td><code>den at … - &lt;type&gt; tier N active=… boss=… feature=…</code></td>
+<td>Once per den, the first time it is found.</td>
+<td>That den was found and read — if it is not on the map, a <a href="../configuration/#the-filters">filter</a> is hiding it.</td>
+</tr>
+<tr>
+<td><code>first draw: &lt;layer&gt; (N den(s) known)</code></td>
+<td>The first time each Xaero map asks the mod to draw.</td>
+<td>The layer is hooked into that map. No line for a map means Xaero never asked.</td>
+</tr>
+</tbody>
+</table>
 
 
 

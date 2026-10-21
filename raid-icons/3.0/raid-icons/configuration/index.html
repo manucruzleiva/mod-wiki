@@ -557,6 +557,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#the-settings-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The settings screen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The file
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-filters" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -595,6 +617,34 @@
     <span class="md-ellipsis">
       
         onlyActiveDens
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-icon-sizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The icon sizes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The icon sizes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimapiconscale-and-worldmapiconscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        minimapIconScale and worldMapIconScale
       
     </span>
   </a>
@@ -727,6 +777,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#the-settings-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The settings screen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The file
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-filters" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -765,6 +837,34 @@
     <span class="md-ellipsis">
       
         onlyActiveDens
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-icon-sizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The icon sizes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The icon sizes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#minimapiconscale-and-worldmapiconscale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        minimapIconScale and worldMapIconScale
       
     </span>
   </a>
@@ -846,6 +946,22 @@
 
 
 <h1 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h1>
+<p>There are three ways to change a setting, and they all edit the same file:</p>
+<ul>
+<li><strong>The <a href="#the-settings-screen">settings screen</a></strong>, with Cloth Config installed.</li>
+<li><strong><a href="../commands/#raidicons-config"><code>/raidicons config</code></a></strong> from chat, with nothing else installed.</li>
+<li><strong>The file itself</strong>, described below.</li>
+</ul>
+<p>A change made in game shows on the map as soon as it is saved, with no restart.</p>
+<h2 id="the-settings-screen">The settings screen<a class="headerlink" href="#the-settings-screen" title="Permanent link">&para;</a></h2>
+<p>With <a href="https://modrinth.com/mod/cloth-config">Cloth Config</a> installed, the mod gets a settings screen.
+Open it with <a href="../commands/#raidicons"><code>/raidicons</code></a>, with the <strong>Open settings</strong> key under Controls
+(unbound until you set it), or from the mod list: the config button in
+<a href="https://modrinth.com/mod/modmenu">Mod Menu</a> on Fabric, and in NeoForge's own mod list.</p>
+<p>It has three tabs: <strong>Filters</strong> (only active dens, lowest star tier, one switch per tera type),
+<strong>Icons</strong> (the two icon sizes) and <strong>Advanced</strong> (the scan). Without Cloth Config the button is simply
+not there, and the command and the file work as before.</p>
+<h2 id="the-file">The file<a class="headerlink" href="#the-file" title="Permanent link">&para;</a></h2>
 <p>The settings live in <strong><code>config/cobblemon_raid_icons.properties</code></strong>, inside your game folder — the
 same <code>config/</code> your other mods write to. The file is created with the defaults the first time you
 load a world, so start it once and then edit it.</p>
@@ -856,6 +972,8 @@ the log.</p>
 <span class="na">onlyActiveDens</span><span class="o">=</span><span class="s">false</span>
 <span class="na">minTier</span><span class="o">=</span><span class="s">0</span>
 <span class="na">teraTypes</span><span class="o">=</span>
+<span class="na">minimapIconScale</span><span class="o">=</span><span class="s">100</span>
+<span class="na">worldMapIconScale</span><span class="o">=</span><span class="s">100</span>
 </code></pre></div>
 <h2 id="the-filters">The filters<a class="headerlink" href="#the-filters" title="Permanent link">&para;</a></h2>
 <p>These decide which dens get an icon. They are the settings worth touching.</p>
@@ -901,6 +1019,12 @@ show.</p>
 <h3 id="onlyactivedens"><code>onlyActiveDens</code><a class="headerlink" href="#onlyactivedens" title="Permanent link">&para;</a></h3>
 <p><code>true</code> hides dens that are not currently live. Default <code>false</code>, which draws every den whether it is
 ready to fight or resetting.</p>
+<h2 id="the-icon-sizes">The icon sizes<a class="headerlink" href="#the-icon-sizes" title="Permanent link">&para;</a></h2>
+<h3 id="minimapiconscale-and-worldmapiconscale"><code>minimapIconScale</code> and <code>worldMapIconScale</code><a class="headerlink" href="#minimapiconscale-and-worldmapiconscale" title="Permanent link">&para;</a></h3>
+<p>How big the den icons are, as a percentage of each map's normal size. Default <code>100</code>, clamped to
+<code>50</code>–<code>200</code> — from half to twice the size.</p>
+<p>There is one per map so you can shrink a crowded minimap without making the world map harder to read.
+At <code>100</code> an icon is 36×36 pixels on the minimap and 48×48 on the world map.</p>
 <h2 id="the-scan">The scan<a class="headerlink" href="#the-scan" title="Permanent link">&para;</a></h2>
 <p>The two remaining settings control how the mod looks for dens. The defaults are good; change them
 only if you have a reason.</p>
@@ -914,7 +1038,7 @@ far as this mod is concerned.</p>
 appears — at the default, the full radius comes round in under three seconds. Each chunk is nearly
 free to check, so there is little to gain by lowering it.</p>
 <h2 id="checking-a-change-took-effect">Checking a change took effect<a class="headerlink" href="#checking-a-change-took-effect" title="Permanent link">&para;</a></h2>
-<p>Run <a href="../commands/"><code>/raidicons</code></a>. The <code>scan</code> line shows the ground actually being covered, and the
+<p>Run <a href="../commands/#raidicons-report"><code>/raidicons report</code></a>. The <code>scan</code> line shows the ground actually being covered, and the
 <code>nearest den</code> line shows what survived your filters.</p>
 
 
