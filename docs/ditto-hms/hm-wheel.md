@@ -15,15 +15,15 @@ familiar HM is easy to find by colour before you can read the label.
 
 ```
    ▓                ╭──── outer ring: ACTIVE HMs ────╮
-   ▓ f           Cut     Fly     Dig    Ember   Teleport   ...
+   ▓ f           Cut   Rock Smash  Stockpile  Leafage   ...
    ▓ o        ╲     ╲      ╲      │      ╱      ╱     ╱
    ▓ o          ╲    ╭───────────────────────╮    ╱
    ░ d            ╲  │  inner ring: TOGGLES  │  ╱
-   ░              ──┤   Jump  Surf  Dive ●   ├──
+   ░              ──┤   Fly  Jump  Dive ●    ├──
    ░ b            ╱  │                       │  ╲
    █ a          ╱    ╰───────────────────────╯    ╲
    █ r        ╱     ╱      ╱      │      ╲      ╲     ╲
-   █             Rest   Charm  Strength  Waterfall   ...
+   █           Teleport  Strength  Camouflage  Charge   ...
    █                  ( ✖ cancel · 🧹 clear all )
 ```
 
