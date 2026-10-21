@@ -15,6 +15,14 @@ name: Wiki
 # moves only to a minor at least as high as every one already deployed, so documenting an older
 # minor never pulls it back.
 #
+# A pre-release (2.0.0-beta.2) goes to its own snapshot, `<minor>-<tag>` (2.0-beta), and never takes
+# latest or the default: a reader who opens a mod lands on what they can actually download.
+#
+# A manual run can deploy one mod from an older commit, for a version that main no longer describes:
+# `mod` + `ref` (+ `version` when the label at that commit is not the one to show). That is how the
+# Routes 2.0-beta pages, which main reverted to 1.2.119, are published: mod=routes, ref=754181d,
+# version=2.0.0-beta.2. Only that mod is deployed; the landing always comes from main.
+#
 # A push deploys only the mods whose pages it touched; anything shared (base config, overrides,
 # hooks, docs/assets, docs/stylesheets, this file) redeploys them all. Nothing replaces the branch
 # wholesale any more — the old peaceiris clean replace would wipe every other mod's versions — so the
@@ -36,6 +44,16 @@ on:
       - "hooks/**"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
+    inputs:
+      mod:
+        description: "Only this mod (the folder under docs/). Empty: every mod."
+        required: false
+      ref:
+        description: "Build that mod from this commit, tag or branch instead of main. Needs `mod`."
+        required: false
+      version:
+        description: "Version to label it with, e.g. 2.0.0-beta.2. Empty: the one in mkdocs.base.yml."
+        required: false
 
 permissions:
   contents: write
@@ -77,9 +95,21 @@ jobs:
         env:
           EVENT: ${{ github.event_name }}
           BEFORE: ${{ github.event.before }}
+          ONLY: ${{ inputs.mod }}
+          REF: ${{ inputs.ref }}
         run: |
           mods=$(ls mkdocs.*.yml | sed -E 's/^mkdocs\.(.*)\.yml$/\1/' | grep -vxE 'base|landing' | tr '\n' ' ')
           is_mod() { [[ " $mods " == *" $1 "* ]]; }
+          if [ -n "$REF" ] && [ -z "$ONLY" ]; then
+            echo "::error::ref needs mod: an old commit is deployed for one mod at a time"; exit 1
+          fi
+          if [ -n "$ONLY" ]; then
+            is_mod "$ONLY" || { echo "::error::no mkdocs.$ONLY.yml"; exit 1; }
+            echo "mods=$mods" >> "$GITHUB_OUTPUT"
+            echo "deploy=$ONLY" >> "$GITHUB_OUTPUT"
+            echo "Deploying: $ONLY${REF:+ from $REF}"
+            exit 0
+          fi
           all=0 picked=""
           # A manual run, or a push whose previous commit is gone (first push, force push): all.
           if [ "$EVENT" != push ] || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
@@ -108,25 +138,51 @@ jobs:
       - name: Deploy each picked mod under its own prefix
         env:
           DEPLOY: ${{ steps.pick.outputs.deploy }}
+          REF: ${{ inputs.ref }}
+          VERSION: ${{ inputs.version }}
         run: |
+          src=$PWD
+          if [ -n "$REF" ]; then
+            # The old pages, with today's mike: a worktree of that commit, built --strict like the rest.
+            src="$RUNNER_TEMP/src"
+            git worktree add -q --detach "$src" "$REF"
+          fi
+          cd "$src"
           for m in $DEPLOY; do
+            cfg="mkdocs.$m.yml"
+            if [ -n "$VERSION" ]; then
+              # INHERIT merges dicts deeply: only this mod's version changes, its name stays.
+              cfg=".deploy-$m.yml"
+              printf 'INHERIT: mkdocs.%s.yml\nextra:\n  mod_versions:\n    %s:\n      version: "%s"\n' \
+                "$m" "$m" "$VERSION" > "$cfg"
+            fi
+            [ -n "$REF" ] && mkdocs build --strict -q -f "$cfg" -d "$RUNNER_TEMP/ref-site"
             # load_config, not a YAML read: it resolves INHERIT and the base's !!python tags.
-            v=$(python -c "import sys; from mkdocs.config import load_config; \
-              print('.'.join(load_config(sys.argv[1])['extra']['mod_versions'][sys.argv[2]]['version'].split('.')[:2]))" \
-              "mkdocs.$m.yml" "$m")
-            # latest only moves forward: documenting an older minor redeploys it alone.
-            deployed=$(git show "gh-pages:$m/versions.json" 2>/dev/null | jq -r '.[].version' || true)
+            full=$(python -c "import sys; from mkdocs.config import load_config; \
+              print(load_config(sys.argv[1])['extra']['mod_versions'][sys.argv[2]]['version'])" "$cfg" "$m")
+            core=${full%%-*}
+            v=$(cut -d. -f1-2 <<<"$core")
+            if [ "$core" != "$full" ]; then
+              # 2.0.0-beta.2 -> 2.0-beta: one snapshot per pre-release line, never latest.
+              tag=${full#*-}; v="$v-${tag%%.*}"
+              echo "$m -> $m/$v (pre-release, latest stays where it is)"
+              mike deploy -F "$cfg" --deploy-prefix "$m" -m "deploy $m $full from ${REF:-$GITHUB_SHA}" "$v"
+              continue
+            fi
+            # latest only moves forward, and only among releases: documenting an older minor, or a
+            # beta, redeploys it alone.
+            deployed=$(git show "gh-pages:$m/versions.json" 2>/dev/null | jq -r '.[].version' | grep -v -- - || true)
             top=$(printf '%s\n' $deployed "$v" | sort -V | tail -1)
             if [ "$v" = "$top" ]; then
               echo "$m -> $m/$v (latest)"
-              mike deploy -F "mkdocs.$m.yml" --deploy-prefix "$m" --update-aliases \
-                -m "deploy $m $v from $GITHUB_SHA" "$v" latest
-              mike set-default -F "mkdocs.$m.yml" --deploy-prefix "$m" \
+              mike deploy -F "$cfg" --deploy-prefix "$m" --update-aliases \
+                -m "deploy $m $v from ${REF:-$GITHUB_SHA}" "$v" latest
+              mike set-default -F "$cfg" --deploy-prefix "$m" \
                 -m "default $m to latest" latest
             else
               echo "$m -> $m/$v (latest stays on $top)"
-              mike deploy -F "mkdocs.$m.yml" --deploy-prefix "$m" \
-                -m "deploy $m $v from $GITHUB_SHA" "$v"
+              mike deploy -F "$cfg" --deploy-prefix "$m" \
+                -m "deploy $m $v from ${REF:-$GITHUB_SHA}" "$v"
             fi
           done
 
