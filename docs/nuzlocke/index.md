@@ -40,10 +40,9 @@ die as one.
     One elemental type for the whole run — your starters are drawn from it, and your team may only
     carry it. Offered to each player at character creation.
 
--   ### 🗺️ [Trainers, gyms and a league](nuzlocke.md#what-it-builds-into-the-world)
+-   ### 🗺️ [Trainers and Pokémon on the roads](nuzlocke.md#what-it-builds-into-the-world)
 
-    Trainers along the roads, a gym beside every town, and the Elite Four out on a road as a place
-    of its own.
+    Trainers along the roads, and wild Pokémon of each road's own.
 
 </div>
 

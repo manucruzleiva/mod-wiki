@@ -82,10 +82,7 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | No trading | on | trades are refused |
 | No forfeit | on | battles cannot be surrendered |
 | Revival Blessing | off | whether that move may revive mid-battle |
-| Healers heal the trainer | on | a healing machine fills your health and hunger too |
 | Healers set your respawn | on | the last healer you used is where you come back |
-| Storm riding risk | 4% | chance per second that lightning finds you riding in the open, 0–100 |
-| Mimic chests | 5% | share of roadside chests that are not chests, 0–100 |
 | Dupes match · Dupes count | evolution line · ever caught | the two halves of the duplicates clause |
 | Mega / Tera OK | on | under a Gym Leader Challenge, a Mega or Tera of your type still counts |
 | Allow Mega · Gigantamax · Z-Moves · Tera | on | switch off any battle gimmick for a stricter run |
@@ -131,9 +128,6 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | Water crossing trainers | — | name fragments used to pick who stands on a water crossing |
 | Fair-fight guard | on | a trainer too far above your strongest Pokémon never picks the fight |
 | Max level gap | 5 | how many levels above your strongest Pokémon a trainer may be and still challenge you, 0–50 |
-| Gyms by towns | on | needs a gym pack |
-| Elite Four | on | one league building per world, beside a road; needs a league pack |
-| Gyms on the surface | on | lifts a gym whose own definition would bury it |
 
 ### Route Pokémon
 

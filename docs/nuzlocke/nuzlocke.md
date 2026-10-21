@@ -98,18 +98,6 @@ a battle while **every Pokémon on your team** carries it.
     A trainer in a battle cannot be killed, so the fight always resolves. A trainer who has ended
     a run carries a ☠ tally of them in its name — and so does every other trainer of that name.
 
--   ### 🏛️ A gym beside every town
-
-    Every town you discover gets its Gym Leader's gym next door, named after them. **Leaders wait to
-    be challenged** — you walk in and ask. Lt. Surge is the exception.
-
-    Needs a pack that provides gym structures, such as COBBLEVERSE.
-
--   ### 🏆 The Elite Four on a road
-
-    One league per world, standing out on a route between settlements as a place of its own, with
-    its own marker on the map. It has its own switch, apart from the gyms.
-
 -   ### 🌿 Pokémon on the roads
 
     Every road carries its own encounters: hidden sources set into the paving, each offering one
@@ -120,6 +108,11 @@ a battle while **every Pokémon on your team** carries it.
     A one-tap trip back to your respawn point — and it will not fire mid-battle.
 
 </div>
+
+!!! note "Gyms and the Elite Four"
+    Since 1.5.58 this mod no longer builds gyms beside towns or an Elite Four on a road: that is the
+    job of PokeGyms and PokeTowns. Gyms already built in an older world stay standing. Wherever a Gym
+    Leader stands, **leaders wait to be challenged** — you walk in and ask. Lt. Surge is the exception.
 
 ## 🌿 Route Pokémon
 
