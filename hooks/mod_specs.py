@@ -70,10 +70,13 @@ def _badges(mod: str, config) -> str:
 
 def _card(mod: str, config, page) -> str:
     spec, version = _spec(mod, config)
-    download = f"[Modrinth]({MODRINTH}{version['modrinth']})"
-    if spec.get("curseforge"):
-        download += f" · [CurseForge]({CURSEFORGE}{spec['curseforge']})"
-    download += f" · [What changed]({MODRINTH}{version['modrinth']}/changelog)"
+    # A mod with no Modrinth project yet is unreleased, and its card has no "Download" row anyway.
+    download = ""
+    if version.get("modrinth"):
+        download = f"[Modrinth]({MODRINTH}{version['modrinth']})"
+        if spec.get("curseforge"):
+            download += f" · [CurseForge]({CURSEFORGE}{spec['curseforge']})"
+        download += f" · [What changed]({MODRINTH}{version['modrinth']}/changelog)"
     side = ("**Client only.** It goes in your own `mods/` folder; a server does not need it"
             if spec.get("side") == "client"
             else "Server **and** every player's game")

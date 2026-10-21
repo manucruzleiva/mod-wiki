@@ -111,6 +111,15 @@ here.
 </div>
 </div>
 
+<div class="mod-row" data-mod-color="action-combat" data-tags="<!-- mod-tags:action-combat -->" markdown>
+![](action-combat/assets/logo.png){ .mod-row__logo }
+<div class="mod-row__body" markdown>
+[Cobblemon Action Combat](action-combat/index.md){ .mod-row__name }
+<span class="mod-row__what">Cobblemon battles in real time: you drive your Pokémon.</span>
+<span class="mod-row__chips"><!-- mod-chips:action-combat --></span>
+</div>
+</div>
+
 </div>
 
 ## Compatibility
