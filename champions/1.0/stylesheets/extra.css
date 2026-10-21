@@ -1246,3 +1246,51 @@ DOM node and one request per family rather than one per frame.
   margin-top: 0.2rem;
   font-size: 0.7rem;
 }
+
+/* ── Spec card and compatibility table (hooks/mod_specs.py) ───────────────
+   Both are generated from extra.mod_specs. The compatibility table has to fit
+   a phone without its own sideways scroll, so it runs tighter than a normal
+   table and lets the mod name wrap under its version. */
+
+.md-typeset .mod-compat .md-typeset__table {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.md-typeset .mod-compat table:not([class]) {
+  display: table;
+  width: 100%;
+  font-size: 0.72rem;
+}
+
+.md-typeset .mod-compat table:not([class]) th,
+.md-typeset .mod-compat table:not([class]) td {
+  min-width: 0;
+  padding: 0.55em 0.6em;
+}
+
+.md-typeset .mod-compat small {
+  display: block;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .mod-spec thead {
+  display: none;
+}
+
+.md-typeset .mod-spec table:not([class]) th:first-child,
+.md-typeset .mod-spec table:not([class]) td:first-child {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .mod-compat table:not([class]) {
+    font-size: 0.66rem;
+  }
+
+  .md-typeset .mod-compat table:not([class]) th,
+  .md-typeset .mod-compat table:not([class]) td {
+    padding: 0.5em 0.4em;
+  }
+}
