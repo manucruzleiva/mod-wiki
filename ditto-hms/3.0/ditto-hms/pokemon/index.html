@@ -64,7 +64,6 @@
       color: var(--md-accent-fg-color); }
     .cr-ad-label { display: block; font-size: .55rem; letter-spacing: .05em;
       text-transform: uppercase; opacity: .6; margin-bottom: .25rem; }
-    #cr-ad-side { margin: 1.2rem .8rem 0 .8rem; }
     .cr-ad-footbar { max-width: 61rem; margin: 0 auto; padding: .4rem .8rem 1rem; }
     .cr-ad-footbar .cr-ad-placeholder { text-align: center; }
   </style>
@@ -632,6 +631,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../upgrading-to-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrading to 4.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../commands/" class="md-nav__link">
         
   
@@ -688,42 +715,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrading-to-4/" class="md-nav__link">
+      <a href="../troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Upgrading to 4.0
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Changelog
+    Troubleshooting
   
 
     
@@ -833,7 +832,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="cobblemon-ditto-hms" data-version="3.0.0">Documented against Cobblemon Ditto HMs 3.0.0</p>
+    <p class="wiki-mod-version" data-modrinth="JNfSyMuQ" data-version="3.0.0">Documented against Cobblemon Ditto HMs 3.0.0</p>
   
                   
 
@@ -1220,24 +1219,6 @@ and both carry over to whatever you are riding.</p>
       }
       defer();
       if (typeof document$ !== 'undefined') { document$.subscribe(defer); }
-    })();
-  </script><script>
-    (function () {
-      function mount() {
-        var rail = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
-        if (!rail || document.getElementById('cr-ad-side')) { return; }
-        var slot = document.createElement('div');
-        slot.id = 'cr-ad-side';
-        slot.className = 'cr-ad-slot';
-        slot.innerHTML = '<a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">'
-          + '<span class="cr-ad-label">Supports the project</span>'
-          + '💛 This space supports these mods directly — sponsor shiero.</a>';
-        rail.appendChild(slot);
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', mount);
-      } else { mount(); }
-      if (typeof document$ !== 'undefined') { document$.subscribe(mount); }
     })();
   </script>
 
