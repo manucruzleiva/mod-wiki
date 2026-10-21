@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The single wiki for every Cobblemon mod by shiero — Routes, Nuzlocke & Soul Link, Picnic, Ditto HMs, Raid Icons, Champions Training and Mid-Battle EXP.">
+        <meta name="description" content="The single wiki for every Cobblemon mod by shiero — Routes, Nuzlocke & Soul Link, Picnic, Ditto HMs, Raid Icons, Champions Training, Mid-Battle EXP and Tree Carve.">
       
       
       
@@ -674,7 +674,7 @@ Picnic 1.26.0, Fabric. Happens every time; crash report attached.</p>
 <p>Attach the file to your post. If it is too big, paste it on <a href="https://mclo.gs">mclo.gs</a> and share the
 link.</p>
 <h2 id="extra-detail-per-mod">Extra detail, per mod<a class="headerlink" href="#extra-detail-per-mod" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:7"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Routes</label><label for="__tabbed_1_2">Nuzlocke &amp; Soul Link</label><label for="__tabbed_1_3">Picnic</label><label for="__tabbed_1_4">Ditto HMs</label><label for="__tabbed_1_5">Raid Icons</label><label for="__tabbed_1_6">Champions Training</label><label for="__tabbed_1_7">PokeTowns</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:9"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><input id="__tabbed_1_9" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Routes</label><label for="__tabbed_1_2">Nuzlocke &amp; Soul Link</label><label for="__tabbed_1_3">Picnic</label><label for="__tabbed_1_4">Ditto HMs</label><label for="__tabbed_1_5">Raid Icons</label><label for="__tabbed_1_6">Champions Training</label><label for="__tabbed_1_7">Tree Carve</label><label for="__tabbed_1_8">Mid-Battle EXP</label><label for="__tabbed_1_9">PokeTowns</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -731,8 +731,9 @@ started that way. The ones that get built fastest describe: the
 </div>
 <div class="tabbed-block">
 <ul>
-<li>The output of <strong><code>/raidicons</code></strong> while aiming at the den that is misbehaving. It carries almost
-  everything a report on this mod needs, and it goes to <code>logs/latest.log</code> too.</li>
+<li>The output of <strong><code>/raidicons report</code></strong> while aiming at the den that is misbehaving. It carries
+  almost everything a report on this mod needs, and it goes to <code>logs/latest.log</code> too. (Plain
+  <code>/raidicons</code> opens the settings screen.)</li>
 <li>Which <strong>Xaero</strong> mods you have — the minimap, the world map, or both — and their versions.</li>
 <li>Your <strong>Cobblemon Raid Dens</strong> version. The mod reads that mod's blocks by name, so a den it
   stops recognising is usually a Raid Dens update.</li>
@@ -754,6 +755,35 @@ in markers after teleporting somewhere new is working correctly, not failing.</p
 <p class="admonition-title">Stats look wrong?</p>
 <p>A stat point is +1 to the stat at any level, applied before the nature. Compare with the
 numbers on <a href="https://manucruzleiva.github.io/mod-wiki/champions/latest/champions/stat-points/">Stat Points</a> before reporting a formula bug.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Your <strong>Minecraft version</strong> (1.21.1, or which 26.x) and loader: the mod ships a jar for each.</li>
+<li><strong>What you carved and where</strong>: the block, the text or symbols, the font and the dye. For a face
+  that looks wrong, the output of <strong><code>/treecarve who</code></strong> while looking at it (it needs operator
+  level 2).</li>
+<li>Whether the server changed any settings: <strong><code>/treecarve config</code></strong> lists them all.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Carvings gone after an update?</p>
+<p>A world moved from Minecraft 1.21.1 to 26.x loses its carvings. That is a
+<a href="https://manucruzleiva.github.io/mod-wiki/tree-carve/latest/tree-carve/server-admin/#known-limitations">known limitation</a>, not something to report.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>The battle</strong>: wild, trainer or another player, single or double, and which Pokémon fought.</li>
+<li><strong>The battle log lines</strong> around the knockout: they show what each Pokémon was paid.</li>
+<li>For the move screen: whether it opened, what you dragged, and whether the battle ended while it
+  was open.</li>
+<li>Your <strong>Cobblemon version</strong> (1.7 or 1.8) and any EXP setting changed in Cobblemon's config.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">The amounts are Cobblemon's</p>
+<p>The mod pays at each knockout what Cobblemon would pay at the end. If the <em>amount</em> looks off,
+check the settings on <a href="https://manucruzleiva.github.io/mod-wiki/mid-battle-exp/latest/mid-battle-exp/getting-started/#the-settings-that-matter">Getting Started</a>
+first: a Lucky Egg, Exp. Share or a modpack multiplier changes it here too.</p>
 </div>
 </div>
 <div class="tabbed-block">
@@ -898,6 +928,54 @@ without a change</strong>, because those are not the same thing and you deserve 
       }
       paint();
       if (typeof document$ !== 'undefined') { document$.subscribe(paint); }
+    })();
+  </script><script>
+    (function () {
+      function parts(v) { return v.split('.').map(Number); }
+      function newer(a, b) {
+        var x = parts(a), y = parts(b);
+        for (var i = 0; i < 3; i++) { if (x[i] !== y[i]) { return x[i] > y[i]; } }
+        return false;
+      }
+      function latest(slug) {
+        var key = 'wiki-modrinth-' + slug, hit = null;
+        try { hit = sessionStorage.getItem(key); } catch (e) {}
+        if (hit !== null) { return Promise.resolve(hit); }
+        return fetch('https://api.modrinth.com/v2/project/' + slug + '/version')
+          .then(function (r) { return r.ok ? r.json() : []; })
+          .then(function (list) {
+            var best = null;
+            list.forEach(function (v) {
+              if (v.version_type !== 'release') { return; }
+              if (!best || v.date_published > best.date_published) { best = v; }
+            });
+            var found = '';
+            if (best) {
+              var games = best.game_versions || [];
+              var nums = best.version_number.match(/\d+\.\d+\.\d+/g) || [];
+              for (var i = 0; i < nums.length; i++) {
+                if (games.indexOf(nums[i]) === -1) { found = nums[i]; break; }
+              }
+            }
+            try { sessionStorage.setItem(key, found); } catch (e) {}
+            return found;
+          });
+      }
+      function check() {
+        var line = document.querySelector('.wiki-mod-version[data-modrinth]');
+        if (!line || line.querySelector('.wiki-stale')) { return; }
+        var mine = line.getAttribute('data-version');
+        if (mine.indexOf('-') !== -1) { return; }
+        latest(line.getAttribute('data-modrinth')).then(function (v) {
+          if (!v || !newer(v, mine) || line.querySelector('.wiki-stale')) { return; }
+          var note = document.createElement('span');
+          note.className = 'wiki-stale';
+          note.textContent = ' · ' + v + ' is out: parts of this page may be behind';
+          line.appendChild(note);
+        }).catch(function () {});
+      }
+      check();
+      if (typeof document$ !== 'undefined') { document$.subscribe(check); }
     })();
   </script><script>
     (function () {
