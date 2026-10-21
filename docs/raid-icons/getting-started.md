@@ -26,6 +26,11 @@ Drop **one** jar — the one for your loader, never both.
     | Required | [Cobblemon Raid Dens](https://modrinth.com/mod/cobblemonraiddens) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobblemonraiddens)) |
     | For the icons | [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap) and/or [Xaero's World Map](https://modrinth.com/mod/xaeros-world-map) |
 
+Optional: [Cloth Config](https://modrinth.com/mod/cloth-config) adds a
+[settings screen](configuration.md#the-settings-screen), and on Fabric
+[Mod Menu](https://modrinth.com/mod/modmenu) puts its button in the mod list. Without them every
+setting still changes with [`/raidicons config`](commands.md#raidicons-config).
+
 Cobblemon Raid Dens brings [Cobblemon](https://modrinth.com/mod/cobblemon) and GeckoLib with it, so
 you do not install those separately for this mod's sake.
 
@@ -44,10 +49,14 @@ The mod only knows about dens in chunks the game has already sent you, so **icon
 walk**. Teleporting across the map and expecting it to be covered in markers is the one thing that
 looks broken and is not: there is nothing loaded out there to find.
 
-Open the world map and hover a den to see [what is waiting in it](map-icons.md#the-tooltip).
+Open the world map and hover a den to see [what is waiting in it](map-icons.md#the-tooltip) and
+[when it next resets](map-icons.md#the-den-clock).
+
+To hide the dens you do not want, run [`/raidicons`](commands.md#raidicons) for the settings screen,
+or [`/raidicons config`](commands.md#raidicons-config) to change settings from chat.
 
 ## When nothing shows up
 
-Run [`/raidicons`](commands.md) while aiming at a den crystal. In one screen it tells you whether
+Run [`/raidicons report`](commands.md#raidicons-report) while aiming at a den crystal. In one screen it tells you whether
 the den block is in the registry, whether Xaero's layers were found, how much the scan has covered,
 and what the game says the block in front of you actually is.
