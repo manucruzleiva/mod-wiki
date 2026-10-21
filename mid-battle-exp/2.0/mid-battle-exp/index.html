@@ -62,7 +62,6 @@
       color: var(--md-accent-fg-color); }
     .cr-ad-label { display: block; font-size: .55rem; letter-spacing: .05em;
       text-transform: uppercase; opacity: .6; margin-bottom: .25rem; }
-    #cr-ad-side { margin: 1.2rem .8rem 0 .8rem; }
     .cr-ad-footbar { max-width: 61rem; margin: 0 auto; padding: .4rem .8rem 1rem; }
     .cr-ad-footbar .cr-ad-placeholder { text-align: center; }
   </style>
@@ -347,6 +346,8 @@
       
         
       
+        
+      
     
     
     
@@ -472,7 +473,35 @@
   <span class="md-ellipsis">
     
   
-    Commands & settings
+    Commands & Config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
   
 
     
@@ -593,7 +622,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon Mid-Battle EXP 2.0.0</p>
+    <p class="wiki-mod-version" data-modrinth="ShgrcSQY" data-version="2.0.0">Documented against Cobblemon Mid-Battle EXP 2.0.0</p>
   
                   
 
@@ -607,7 +636,7 @@ battle ends. A level gained mid-battle counts in that same battle — new stats,
 it unlocks is yours to take before the next turn.</p>
 <p>There is nothing to configure and no command to learn. Install it and fight. (From the next release,
 operators can <a href="commands/">tune the server's EXP</a> if they want to.)</p>
-<p><span class="badge">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">Cobblemon 1.7 &amp; 1.8</span></p>
+<p><span class="badge">MC 1.21.1</span> <span class="badge">Fabric</span> <span class="badge">NeoForge</span> <span class="badge">Cobblemon 1.7–1.8</span></p>
 <div class="hero-actions">
 <p><a class="md-button" href="getting-started/">Get started</a>
 <a class="md-button" href="how-it-works/">How it works</a></p>
@@ -630,7 +659,7 @@ operators can <a href="commands/">tune the server's EXP</a> if they want to.)</p
   of the move pool.</li>
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 2h14v14H5zm2 2v2h10V7zm0 4v2h10v-2zm0 4v2h7v-2z"/></svg></span> <strong><a href="how-it-works/#battle-log">Everything in the battle log</a></strong> — EXP,
   levels, stats and moves, said to the Pokémon's owner and nobody else.</li>
-<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 13c-1.86 0-3.41 1.28-3.86 3H2v2h2.14c.45 1.72 2 3 3.86 3s3.41-1.28 3.86-3H22v-2H11.86c-.45-1.72-2-3-3.86-3m0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2M19.86 6c-.45-1.72-2-3-3.86-3s-3.41 1.28-3.86 3H2v2h10.14c.45 1.72 2 3 3.86 3s3.41-1.28 3.86-3H22V6zM16 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2"/></svg></span> <strong><a href="commands/">Commands &amp; settings</a></strong> <em>(next release)</em> — an EXP
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 13c-1.86 0-3.41 1.28-3.86 3H2v2h2.14c.45 1.72 2 3 3.86 3s3.41-1.28 3.86-3H22v-2H11.86c-.45-1.72-2-3-3.86-3m0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2M19.86 6c-.45-1.72-2-3-3.86-3s-3.41 1.28-3.86 3H2v2h10.14c.45 1.72 2 3 3.86 3s3.41-1.28 3.86-3H22V6zM16 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2"/></svg></span> <strong><a href="commands/">Commands &amp; Config</a></strong> <em>(next release)</em> — an EXP
   multiplier, a stronger or global Exp. Share, and an <em>EXP: On / Off</em> button on the Summary to pause
   one Pokémon's EXP.</li>
 </ul>
@@ -639,6 +668,7 @@ operators can <a href="commands/">tune the server's EXP</a> if they want to.)</p
 <p><strong>A knockout pays once.</strong> Whatever a knockout paid, the end of the battle does not pay again for the
 same opponent. The total is what Cobblemon would have given you; it simply arrives as you earn it.</p>
 <h2 id="get-it">Get it<a class="headerlink" href="#get-it" title="Permanent link">&para;</a></h2>
+<div class="mod-spec">
 <table>
 <thead>
 <tr>
@@ -648,21 +678,43 @@ same opponent. The total is what Cobblemon would have given you; it simply arriv
 </thead>
 <tbody>
 <tr>
-<td><strong>Needs</strong></td>
-<td>Minecraft 1.21.1 on Fabric or NeoForge, <a href="https://modrinth.com/mod/cobblemon">Cobblemon</a> (<a href="https://www.curseforge.com/minecraft/mc-mods/cobblemon">CurseForge</a>) 1.7 or 1.8, Architectury API, and Kotlin for your loader</td>
+<td><strong>Download</strong></td>
+<td><a href="https://modrinth.com/mod/ShgrcSQY">Modrinth</a> · <a href="https://modrinth.com/mod/ShgrcSQY/changelog">What changed</a></td>
+</tr>
+<tr>
+<td><strong>Version</strong></td>
+<td><strong>2.0.0</strong></td>
+</tr>
+<tr>
+<td><strong>Minecraft</strong></td>
+<td>1.21.1</td>
+</tr>
+<tr>
+<td><strong>Side</strong></td>
+<td>Server <strong>and</strong> every player's game</td>
+</tr>
+<tr>
+<td><strong>Cobblemon</strong></td>
+<td><strong>1.7–1.8</strong> — the same jar runs on both</td>
+</tr>
+<tr>
+<td><strong>Fabric</strong></td>
+<td><a href="https://modrinth.com/mod/architectury-api">Architectury API</a>, <a href="https://modrinth.com/mod/fabric-language-kotlin">Fabric Language Kotlin</a></td>
+</tr>
+<tr>
+<td><strong>NeoForge</strong></td>
+<td><a href="https://modrinth.com/mod/architectury-api">Architectury API</a>, <a href="https://modrinth.com/mod/kotlin-for-forge">Kotlin for Forge</a></td>
 </tr>
 <tr>
 <td><strong>Works with</strong></td>
 <td>any mod that changes how much EXP or how many EVs a battle gives — its numbers are the ones paid</td>
 </tr>
-<tr>
-<td><strong>Does not need</strong></td>
-<td>a config file, a command or a permission — they are there only to change the defaults</td>
-</tr>
 </tbody>
 </table>
+</div>
 <p>One jar per loader, and the same jar runs on Cobblemon 1.7 and 1.8. Drop the one for your loader into
-<code>mods/</code>, never both at once.</p>
+<code>mods/</code>, never both at once. It needs no config file, command or permission: those are there only to
+change the defaults. New here? Start with <strong><a href="getting-started/">Getting Started</a></strong>.</p>
 
 
 
@@ -880,24 +932,6 @@ same opponent. The total is what Cobblemon would have given you; it simply arriv
       }
       defer();
       if (typeof document$ !== 'undefined') { document$.subscribe(defer); }
-    })();
-  </script><script>
-    (function () {
-      function mount() {
-        var rail = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
-        if (!rail || document.getElementById('cr-ad-side')) { return; }
-        var slot = document.createElement('div');
-        slot.id = 'cr-ad-side';
-        slot.className = 'cr-ad-slot';
-        slot.innerHTML = '<a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">'
-          + '<span class="cr-ad-label">Supports the project</span>'
-          + '💛 This space supports these mods directly — sponsor shiero.</a>';
-        rail.appendChild(slot);
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', mount);
-      } else { mount(); }
-      if (typeof document$ !== 'undefined') { document$.subscribe(mount); }
     })();
   </script>
 

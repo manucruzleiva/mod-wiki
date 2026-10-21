@@ -14,7 +14,7 @@
         <link rel="prev" href="../how-it-works/">
       
       
-        <link rel="next" href="../credits/">
+        <link rel="next" href="../troubleshooting/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Commands & settings - Cobblemon Mid-Battle EXP</title>
+        <title>Commands & Config - Cobblemon Mid-Battle EXP</title>
       
     
     
@@ -64,7 +64,6 @@
       color: var(--md-accent-fg-color); }
     .cr-ad-label { display: block; font-size: .55rem; letter-spacing: .05em;
       text-transform: uppercase; opacity: .6; margin-bottom: .25rem; }
-    #cr-ad-side { margin: 1.2rem .8rem 0 .8rem; }
     .cr-ad-footbar { max-width: 61rem; margin: 0 auto; padding: .4rem .8rem 1rem; }
     .cr-ad-footbar .cr-ad-placeholder { text-align: center; }
   </style>
@@ -88,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#commands-settings" class="md-skip">
+        <a href="#commands-config" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Commands & settings
+              Commands & Config
             
           </span>
         </div>
@@ -349,6 +348,8 @@
       
         
       
+        
+      
     
     
     
@@ -483,7 +484,7 @@
   <span class="md-ellipsis">
     
   
-    Commands & settings
+    Commands & Config
   
 
     
@@ -501,7 +502,7 @@
   <span class="md-ellipsis">
     
   
-    Commands & settings
+    Commands & Config
   
 
     
@@ -580,6 +581,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -709,13 +738,13 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon Mid-Battle EXP 2.0.0</p>
+    <p class="wiki-mod-version" data-modrinth="ShgrcSQY" data-version="2.0.0">Documented against Cobblemon Mid-Battle EXP 2.0.0</p>
   
                   
 
 
 
-<h1 id="commands-settings">Commands &amp; settings<a class="headerlink" href="#commands-settings" title="Permanent link">&para;</a></h1>
+<h1 id="commands-config">Commands &amp; Config<a class="headerlink" href="#commands-config" title="Permanent link">&para;</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Next release</p>
 <p>Everything on this page arrives in the version after 2.0.0. In 2.0.0 the mod has no command, no
@@ -1023,24 +1052,6 @@ shows no button.</p>
       }
       defer();
       if (typeof document$ !== 'undefined') { document$.subscribe(defer); }
-    })();
-  </script><script>
-    (function () {
-      function mount() {
-        var rail = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
-        if (!rail || document.getElementById('cr-ad-side')) { return; }
-        var slot = document.createElement('div');
-        slot.id = 'cr-ad-side';
-        slot.className = 'cr-ad-slot';
-        slot.innerHTML = '<a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">'
-          + '<span class="cr-ad-label">Supports the project</span>'
-          + '💛 This space supports these mods directly — sponsor shiero.</a>';
-        rail.appendChild(slot);
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', mount);
-      } else { mount(); }
-      if (typeof document$ !== 'undefined') { document$.subscribe(mount); }
     })();
   </script>
 
