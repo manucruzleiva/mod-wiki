@@ -30,10 +30,12 @@ It runs entirely on your client. The server never needs to know you have it.
   Xaero's minimap and on the world map.
 - :material-tooltip-text: **[A tooltip that names the den](map-icons.md#the-tooltip)** — hover a den
   on the world map for the Pokémon waiting in it, its star tier and its tera type.
-- :material-filter: **[Filters](configuration.md)** — hide the tiers you have outgrown, the types you
-  are not hunting, and the dens that are not active.
-- :material-console: **[`/raidicons`](commands.md)** — one command that says what the mod can see,
-  for when a den is not showing up.
+- :material-timer-sand: **[A den clock](map-icons.md#the-den-clock)** — how long until the den rolls
+  a new raid or comes back, exact in your own world and estimated on a server.
+- :material-filter: **[Filters and icon sizes](configuration.md)** — hide the tiers you have outgrown,
+  the types you are not hunting, and the dens that are not active, and size the icons per map.
+- :material-console: **[`/raidicons`](commands.md)** — the settings screen, every setting from chat,
+  and a report that says what the mod can see when a den is not showing up.
 
 </div>
 
@@ -45,6 +47,7 @@ It runs entirely on your client. The server never needs to know you have it.
 | **For the icons** | [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap)) and/or [Xaero's World Map](https://modrinth.com/mod/xaeros-world-map) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map)) |
 | **Fabric** | [Fabric API](https://modrinth.com/mod/fabric-api) + [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) |
 | **NeoForge** | [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge) |
+| **Optional** | [Cloth Config](https://modrinth.com/mod/cloth-config) for the settings screen · [Mod Menu](https://modrinth.com/mod/modmenu) on Fabric for its button |
 | **Bugs & ideas** | Post in the [Discord](https://discord.gg/SwcwXcCN4k) — it files the ticket for you |
 
 New here? Start with **[Getting Started](getting-started.md)**.
