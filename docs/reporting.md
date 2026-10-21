@@ -124,6 +124,15 @@ link.
         A stat point is +1 to the stat at any level, applied before the nature. Compare with the
         numbers on [Stat Points](champions/stat-points.md) before reporting a formula bug.
 
+=== "PokeTowns"
+
+    - **Which settlement**: Village, Town or gym Town, and its coordinates (`/locate` gives them).
+    - Whether the world was **generated with this version** of PokeTowns, since settlements are
+      built as chunks generate.
+    - Whether **PokeTowns: Replace Vanilla Villages** is on, and the spacing chosen on the PokeTowns
+      tab.
+    - For gym problems: whether the **COBBLEVERSE** datapack is installed, and its version.
+
 ## What happens next
 
 Your post becomes an issue labelled from its tag, and the bot replies in the thread so you know it

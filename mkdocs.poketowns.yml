@@ -1,0 +1,25 @@
+INHERIT: mkdocs.base.yml
+site_name: Cobblemon PokeTowns
+site_url: https://manucruzleiva.github.io/mod-wiki/poketowns/
+
+extra:
+  wiki_site: poketowns
+
+# Todo lo que no es de este mod queda afuera, salvo lo compartido. Los links a paginas de otro sitio
+# los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*
+  !/poketowns/
+  !/assets/
+  !/stylesheets/
+
+nav:
+  - Cobblemon PokeTowns:
+      - poketowns/index.md
+      - Getting Started: poketowns/getting-started.md
+      - Settlements: poketowns/settlements.md
+      - Pokémon Center & Poké Mart: poketowns/center-and-mart.md
+      - Gyms: poketowns/gyms.md
+      - For Pack Authors: poketowns/pack-authors.md
+      - Configuration: poketowns/configuration.md
+      - Community Credits: poketowns/credits.md
