@@ -911,7 +911,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon Ditto HMs 3.0.0</p>
+    <p class="wiki-mod-version" data-modrinth="cobblemon-ditto-hms" data-version="3.0.0">Documented against Cobblemon Ditto HMs 3.0.0</p>
   
                   
 
@@ -1206,6 +1206,54 @@ Unlearns one or all HMs.</p>
       }
       paint();
       if (typeof document$ !== 'undefined') { document$.subscribe(paint); }
+    })();
+  </script><script>
+    (function () {
+      function parts(v) { return v.split('.').map(Number); }
+      function newer(a, b) {
+        var x = parts(a), y = parts(b);
+        for (var i = 0; i < 3; i++) { if (x[i] !== y[i]) { return x[i] > y[i]; } }
+        return false;
+      }
+      function latest(slug) {
+        var key = 'wiki-modrinth-' + slug, hit = null;
+        try { hit = sessionStorage.getItem(key); } catch (e) {}
+        if (hit !== null) { return Promise.resolve(hit); }
+        return fetch('https://api.modrinth.com/v2/project/' + slug + '/version')
+          .then(function (r) { return r.ok ? r.json() : []; })
+          .then(function (list) {
+            var best = null;
+            list.forEach(function (v) {
+              if (v.version_type !== 'release') { return; }
+              if (!best || v.date_published > best.date_published) { best = v; }
+            });
+            var found = '';
+            if (best) {
+              var games = best.game_versions || [];
+              var nums = best.version_number.match(/\d+\.\d+\.\d+/g) || [];
+              for (var i = 0; i < nums.length; i++) {
+                if (games.indexOf(nums[i]) === -1) { found = nums[i]; break; }
+              }
+            }
+            try { sessionStorage.setItem(key, found); } catch (e) {}
+            return found;
+          });
+      }
+      function check() {
+        var line = document.querySelector('.wiki-mod-version[data-modrinth]');
+        if (!line || line.querySelector('.wiki-stale')) { return; }
+        var mine = line.getAttribute('data-version');
+        if (mine.indexOf('-') !== -1) { return; }
+        latest(line.getAttribute('data-modrinth')).then(function (v) {
+          if (!v || !newer(v, mine) || line.querySelector('.wiki-stale')) { return; }
+          var note = document.createElement('span');
+          note.className = 'wiki-stale';
+          note.textContent = ' · ' + v + ' is out: parts of this page may be behind';
+          line.appendChild(note);
+        }).catch(function () {});
+      }
+      check();
+      if (typeof document$ !== 'undefined') { document$.subscribe(check); }
     })();
   </script><script>
     (function () {
