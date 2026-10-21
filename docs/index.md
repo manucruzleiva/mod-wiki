@@ -53,8 +53,8 @@ cut into the trees. Documentation for all of them lives here.
 
     ### [Cobblemon Ditto HMs](ditto-hms/index.md)
 
-    Become the HM slave you always made suffer: **75 Pokopia-inspired abilities** you learn
-    yourself — Cut, Fly, Surf, Teleport and more — powered by hunger instead of a party slot.
+    Become the HM slave you always made suffer: **20 Pokopia-inspired HMs** you learn
+    yourself — Cut, Fly, Dive, Teleport and more — powered by hunger instead of a party slot.
 
     [Getting started →](ditto-hms/getting-started.md)
 

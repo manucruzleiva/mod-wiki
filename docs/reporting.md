@@ -150,6 +150,15 @@ link.
         check the settings on [Getting Started](mid-battle-exp/getting-started.md#the-settings-that-matter)
         first: a Lucky Egg, Exp. Share or a modpack multiplier changes it here too.
 
+=== "PokeTowns"
+
+    - **Which settlement**: Village, Town or gym Town, and its coordinates (`/locate` gives them).
+    - Whether the world was **generated with this version** of PokeTowns, since settlements are
+      built as chunks generate.
+    - Whether **PokeTowns: Replace Vanilla Villages** is on, and the spacing chosen on the PokeTowns
+      tab.
+    - For gym problems: whether the **COBBLEVERSE** datapack is installed, and its version.
+
 ## What happens next
 
 Your post becomes an issue labelled from its tag, and the bot replies in the thread so you know it

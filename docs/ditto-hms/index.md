@@ -32,6 +32,13 @@ flowchart LR
 2. **Sneak + right-click** that Pokémon while holding the required trigger item.
 3. It **teaches you the move**, permanently. The trigger item is what you pay.
 4. Press **H** for the **HM wheel** — every HM you know, nothing to craft and nothing to carry.
+5. What belongs to a Pokémon stays with it: open Cobblemon's interaction wheel on your own Pokémon
+   for its [field moves and mount toggles](pokemon.md).
+
+!!! abstract "4.0: twenty HMs, all about the world"
+    Ditto HMs is about copying what you need to **move through the world and shape it**. 4.0 cuts
+    the mod back to 20 HMs that are yours, hands the rest to your Pokémon, and leaves fighting to
+    Cobblemon Action Combat. [What changed](upgrading-to-4.md).
 
 !!! info "What you know cannot be handed over"
     Nothing changes hands: there is no disc to drop in a chest and no HM to post to a friend who
@@ -63,6 +70,8 @@ it keeps new HMs coming.
 | [Getting Started](getting-started.md) | First steps and the HM wheel |
 | [Active HMs](abilities/active.md) | Everything you fire on demand |
 | [Toggle HMs](abilities/toggles.md) | The passives that run continuously |
+| [Your Pokémon](pokemon.md) | Field moves and mount toggles your Pokémon does for you |
+| [Upgrading to 4.0](upgrading-to-4.md) | What changed, and what happened to your save |
 | [HM Wheel](hm-wheel.md) | Pick any HM you know from one radial menu |
 | [Configuration](configuration.md) | Per-ability hunger / cooldown / power sliders |
 | [Commands](commands.md) | Admin and player commands |

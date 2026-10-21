@@ -6,103 +6,74 @@
 All notable changes are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) + SemVer.
 
-## [3.0.0] - 2026-09-18
+## [4.0.0] - 2026-10-21
 
-**Everything since 2.2.1, in one release.** The mod moves to **Cobblemon 1.8** and four new HMs arrive
-with it, NeoForge stops crashing before the main menu, and the Trainer Ditto finally tells you
-something useful.
+**Ditto HMs gets its identity back.** It started as "you are a Ditto: copy what you need to move
+through the world and shape it", and over 75 HMs it turned into a little of everything — including a
+combat mod nobody asked it to be. 4.0 cuts it back to **20 HMs that are yours**, hands the moves that
+belong to a Pokémon back to your Pokémon, and moves everything that fights to **Cobblemon Action
+Combat**.
 
-> ⚠️ **This version needs Cobblemon 1.8.0 or newer.** It will not load against 1.7.x, on purpose: a
-> dependency error you can read beats a crash halfway through a session.
+> ⚠️ **Your save is migrated on join, and nothing you paid for is lost.** An HM that was merged into
+> another one teaches you the one it became. Any other HM that is no longer yours is forgotten and
+> **its trigger item is put back in your inventory**. A chat message lists exactly what happened.
 
-### 🧬 Cobblemon 1.8
-- **The mod runs on Cobblemon 1.8.** It was built against 1.7.3, which is what four features had been
-  waiting on. Every one of the mod's calls into Cobblemon was checked against the 1.8 jar one by one,
-  including the reflective lookup that Surf and Tailwind use to speed a mount up: all of them are
-  still there, unchanged. (#84)
+### 🧬 Your HMs (20)
+- **Actives:** Cut · Rock Smash · Stockpile · Leafage · Strength · Teleport · Camouflage · Charge ·
+  Tail Whip.
+- **Toggles:** Fly · Magnet Rise · Rock Climb · Dive · Jump · Flash · Lava Plume · Absorb ·
+  Lucky Chant · Shadow Sneak · Snowscape.
 
-### 🌱 New HM — Growth
-- **Grow a Pokémon for good, or yourself for a while.** Aimed at a Pokémon it takes a permanent step
-  up in size, and the new size belongs to the Pokémon rather than to the body standing in front of
-  you — recall it, send it out, log back in tomorrow, it stays grown. Aimed at anything else it makes
-  **you** twice the size for five minutes, hitbox and all.
-- ⚠️ **Being big is your problem.** Nothing checks whether there is room. Grow in a one-block gap and
-  you will suffocate exactly as anything else would, and a Minimize that runs out while you are
-  somewhere only a half-size player fits will push you out of it. That is deliberate: the mod treats
-  you the way Minecraft treats anything that stops fitting where it is. (#71)
+### 🔀 Merged
+- **Cut absorbs X-Scissor.** With no tree or plant to cut, Cut clears the weeds around you (and,
+  with no weeds left, what was planted). It no longer strips grass to dirt — as a fallback that would
+  have gone off every time you missed a tree.
+- **Rock Smash absorbs Dig.** Dirt, sand, gravel and anything else a shovel takes come out in one
+  hit, free, with a shovel's drops.
+- **Leafage absorbs Rototiller.** Crouch while using Leafage to till the ground you aim at.
+- **Stockpile absorbs Water Gun and Eruption.** Aim at water or lava to drink it; aim anywhere else to
+  spit it back out — as often as you like, until you drink the other one. Lava still burns going
+  down, water still boils away in the Nether, and claims are respected exactly like a bucket.
+- **Fly absorbs Glide.** See below.
 
-### 🫧 New HM — Minimize
-- **Shrink a Pokémon for good, or yourself for a while.** Aimed at a Pokémon it takes a permanent step
-  down in size. Aimed at anything else — a block, or nothing at all — it halves **you**, hitbox
-  included, for five minutes. Growth cancels it and it cancels Growth. (#72)
+### 🪽 Fly is a toggle
+- **Switch Fly on and you glide** after any jump or fall, as Glide did.
+- **Jump again in mid-air to take off.** That press is the old Fly launch, with its own hunger cost
+  and cooldown.
+- **Fly and Magnet Rise cannot run together.** Switching one on switches the other off. Magnet Rise
+  stays as what it is meant to be: a slow hover for building, not a way to travel.
 
-### 😡 New HM — Outrage
-- **An XL Pokémon becomes an Alpha.** Point Outrage at one and it roars into the Alpha variant, kept
-  by Cobblemon itself so it sticks through a recall and a relog. It **only answers to XL** — anything
-  smaller is turned down out loud, with the reason. That condition is the whole point: an XL is
-  already an uncommon roll, so Outrage rewards a find instead of manufacturing one, and it never
-  becomes a button that upgrades whatever you happen to be carrying. (#73)
+### 🐾 Your Pokémon does it now
+- **A new slice on Cobblemon's own interaction wheel: _Field moves_.** Open the wheel on one of your
+  sent-out Pokémon and it lists what that Pokémon can do — because it knows the move, or because its
+  species is one that used to teach the HM.
+- **Field moves**, done by the Pokémon itself with its own cooldown and no hunger from you: Rain
+  Dance, Sunny Day, Blizzard (centred on it), Sweet Scent (around it), Headbutt (it shakes the nearest
+  tree — no more hitting trees with your face), Thief (from the nearest creature holding something,
+  never from a player), Present (into the nearest empty container), Miracle Eye, Celebrate, Growth and
+  Minimize (on itself), Outrage and Calm Mind (on itself), and Decorate (a shot at going shiny).
+- **Mount toggles are per Pokémon:** Surf, Tailwind, Swift, U-turn, Helping Hand and **Agility** (now
+  land speed for a mount). Switch them on from that Pokémon's wheel and they help it whenever it is
+  ridden.
+- **Rock Climb works on a mount.** Ride into a wall holding forward and your Pokémon climbs it.
 
-### 🧘 New HM — Calm Mind
-- **Take the Alpha back off.** Outrage would otherwise be a one-way door: once a Pokémon was an
-  Alpha, nothing put it back, so using it on the wrong XL was permanent. Calm Mind settles an Alpha
-  into the ordinary Pokémon it was, and it sticks the same way. Unlike Outrage it asks nothing about
-  size — it only wants a Pokémon that is actually an Alpha, and says so plainly when it is not. It
-  costs less and recharges quicker, because undoing a mistake should not cost more than making
-  one. (#91)
+### ⚔️ Combat moved to Cobblemon Action Combat
+- **Bullet Seed, Explosion, Thunder, String Shot, Crabhammer, Mean Look, Harden, Burning Bulwark,
+  Substitute, Destiny Bond, Egg Bomb, Protect, Whirlwind, Barrier, Acid Armor, Rock Throw, Boomerang,
+  Powder Snow and Confusion** are no longer HMs. They are real moves in CAC, where fighting belongs.
 
-### 🐛 Fixed
-- **The mod starts on NeoForge again — two startup crashes, one behind the other.** Every version
-  since 2.2.0 crashed there before the main menu, and nothing you could do in the launcher helped:
-  the NeoForge build was shipping the Fabric build's name table, so every one of the mod's sixteen
-  engine hooks pointed at names that do not exist on that loader. Behind that sat a second one: the
-  renderer for Bullet Seed's projectile asked for its entity type while the game was still starting
-  up, before the mod had handed it over. Both are fixed. Fabric was never affected. (#83) (#86)
-- **Mean Look actually keeps things off you.** It only ever sent them running — anything already
-  standing on you got its swing in on the way out, and anything that came back hit you normally.
-  A hostile mob or a Pokémon inside Mean Look's radius can no longer land a blow on you at all.
-  Players are still never affected: Mean Look is not a PvP shield. (#79)
-- **A Substitute decoy breaks when it is hit.** It was taking punishment it never registered, so the
-  only thing that ever ended one was its own timer. Blows count now, and a decoy soaks up about as
-  much as the player it is standing in for before it bursts. (#80)
+### ✂️ Cut
+- **Rest, Defog, Revival Blessing, Charm, Bounce, Obstruct, Ember, Earthquake, Vine Whip and
+  Waterfall** are gone.
 
-### ✨ Added
-- **Destiny Bond can be aimed at another player.** Tie yourself to someone and you take them with
-  you, exactly as with any other creature. They are told it happened, so it is something they can
-  play around rather than a death out of nowhere — and on a server with PvP switched off it simply
-  refuses: that setting means what it says. (#82)
-
-### 👤 The Trainer Ditto
-- **It tells you where to go next.** Which Pokémon teaches which HM was a wiki-only secret with no
-  way into it from the game — you either read the table or tried sneak + right-click on every species
-  you met with every item you had. Open a Trainer Ditto's stall now and it names **one species** that
-  teaches something you have not learned and that is not on its counter. It gives up the species and
-  nothing else: the move that species knows, and the item it wants for it, are still yours to find.
-  The same trader always names the same one, so there is no reading the table by opening the stall
-  over and over, and a trader whose counter already holds everything you are missing keeps quiet. (#87)
-
-### ⌨️ Commands
-- **Same-move teachers can be switched on from chat.** The setting that lets any Pokémon which
-  already knows an HM's namesake move teach that HM was reachable only from the Fabric settings
-  screen, so a NeoForge server — or anyone running a dedicated server on either loader — had no way
-  to turn it on at all. It is now `/dittohm config samemove <true|false>`, operator-only like the
-  rest of the config tree. (#90)
-
-### ⚖️ Balance
-- **A Substitute decoy lasts twenty seconds, not two minutes.** It is a way out of a fight, not a
-  second player standing in the field. Twenty seconds is the same as the ability's own cooldown, so
-  there is never more than one of you at a time. (#80)
-
-### 🔧 Also
-- **The store page lists what you actually need to install.** It named Cobblemon and nothing else, so
-  anyone who installed on that basis got a mod that would not load: Fabric also needs Fabric Language
-  Kotlin and Cloth Config, and NeoForge needs Kotlin for Forge. All of them are listed now, each
-  linked on both Modrinth and CurseForge, along with Cobblemon: PlayerXP as the optional one that
-  makes paying in experience worth choosing. (#85)
-- **The README describes the mod that exists.** It still counted 47 abilities and said you learn them
-  from HM Discs that Pokémon hand over — both left over from an older design. There are **75**
-  abilities now (51 active and 24 toggles), the Pokémon teaches its HM to you directly, and a disc is
-  an operator's tool rather than something survival hands out. (#88)
+### 🔧 Changed
+- **Teleport is dearer and slower to come back:** 6 hunger and 30 seconds (was 5 and 5).
+- **Lava Plume keeps you from burning on its own.** It used to need Burning Bulwark, which went to
+  CAC.
+- Old configs move to the new defaults on load — only the values whose meaning changed (Fly's glide
+  price, Teleport's price unless you had already changed it, and Agility's new mount scale).
+  Retired HMs drop out of the config file, the config screen, the commands and the creative tab.
+- Fixed the comment that still said the mod had room for "sixty-four HMs and not one more". (#93)
 
 ## [2.2.1] - 2026-08-21
 

@@ -55,16 +55,14 @@ Teaches the ability outright, with no disc involved.
 
 ```
 /dittohm trader spawn [player]
-/dittohm trader spawn shiny [player]
 /dittohm trader forget [player]
 ```
-Summons a Trainer Ditto on demand (`shiny` forces the rare shiny one), or undoes a catch so traders
-will visit that player again.
+Summons a Trainer Ditto on demand, or undoes a catch so it will visit that player again.
 
 ```
 /dittohm learn_all [player]
 ```
-Instantly learns **every HM** for a player (does **not** auto-enable toggles).
+Instantly learns **every HM** (the 20 that are still the player's) for a player (does **not** auto-enable toggles).
 
 ```
 /dittohm forget <ability> [player]
@@ -77,19 +75,13 @@ Unlearns one or all HMs.
 /dittohm config <ability> cooldown <0–24000>
 /dittohm config <ability> power <0–512>
 /dittohm config <ability> hungerblock <0–20>   (toggles only)
-/dittohm config <ability> weight <0–100>
-/dittohm config <ability> minlevel <0–100>
 /dittohm config <ability> reset
 /dittohm config reset_all
-/dittohm config activator item <empty_hand|hm_case|either>
-/dittohm config activator button <left|right|either>
-/dittohm config samemove <true|false>
 ```
-See [Configuration](configuration.md) for what each one does.
 
-!!! tip "After updating the mod"
-    If ability ordinals changed between versions, run `/dittohm config reset_all` and
-    re-learn (`/dittohm forget_all` then `/dittohm learn_all`) to clear stale save data.
+!!! tip "After updating to 4.0"
+    There is nothing to reset. Every save is migrated the first time each player joins — see
+    [Upgrading to 4.0](upgrading-to-4.md). Retired HMs no longer answer any command.
 
 ---
 
@@ -99,83 +91,28 @@ See [Configuration](configuration.md) for what each one does.
 
 | ID | Display name |
 |---|---|
-| `water_gun` | Water Gun |
 | `leafage` | Leafage |
 | `cut` | Cut |
 | `rock_smash` | Rock Smash |
-| `rototiller` | Rototiller |
 | `camouflage` | Camouflage |
 | `strength` | Strength |
-| `waterfall` | Waterfall |
-| `ember` | Ember |
-| `bullet_seed` | Bullet Seed |
 | `teleport` | Teleport |
-| `fly` | Fly |
-| `rain_dance` | Rain Dance |
-| `sunny_day` | Sunny Day |
-| `rest` | Rest |
-| `dig` | Dig |
-| `explosion` | Explosion |
-| `thunder` | Thunder |
-| `string_shot` | String Shot |
-| `defog` | Defog |
-| `crab_hammer` | Crabhammer |
-| `revival_blessing` | Revival Blessing |
-| `charm` | Charm |
 | `stockpile` | Stockpile |
-| `substitute` | Substitute |
-| `thief` | Thief |
 | `charge` | Charge |
-| `destiny_bond` | Destiny Bond |
-| `sweet_scent` | Sweet Scent |
-| `headbutt` | Headbutt |
-| `egg_bomb` | Egg Bomb |
-| `eruption` | Eruption |
-| `miracle_eye` | Miracle Eye |
-| `protect` | Protect |
-| `celebrate` | Celebrate |
 | `tail_whip` | Tail Whip |
-| `whirlwind` | Whirlwind |
-| `barrier` | Barrier |
-| `x_scissor` | X-Scissor |
-| `earthquake` | Earthquake |
-| `rock_throw` | Rock Throw |
-| `present` | Present |
-| `blizzard` | Blizzard |
-| `boomerang` | Boomerang |
-| `decorate` | Decorate |
-| `obstruct` | Obstruct |
-| `confusion` | Confusion |
-| `growth` | Growth |
-| `minimize` | Minimize |
-| `outrage` | Outrage |
-| `calm_mind` | Calm Mind |
 
 ### Toggle
 
 | ID | Display name |
 |---|---|
 | `magnet_rise` | Magnet Rise |
+| `fly` | Fly |
 | `jump` | Jump |
-| `surf` | Surf |
-| `agility` | Agility |
 | `dive` | Dive |
 | `flash` | Flash |
 | `rock_climb` | Rock Climb |
-| `mean_look` | Mean Look |
-| `harden` | Harden |
-| `glide` | Glide |
-| `burning_bulwark` | Burning Bulwark |
 | `lava_plume` | Lava Plume |
-| `u_turn` | U-turn |
-| `bounce` | Bounce |
 | `snowscape` | Snowscape |
-| `vine_whip` | Vine Whip |
 | `absorb` | Absorb |
-| `helping_hand` | Helping Hand |
-| `tailwind` | Tailwind |
-| `swift` | Swift |
 | `lucky_chant` | Lucky Chant |
-| `acid_armor` | Acid Armor |
-| `powder_snow` | Powder Snow |
 | `shadow_sneak` | Shadow Sneak |

@@ -22,6 +22,10 @@ When a Pokémon faints, the other side is paid **right then**:
   `experienceShareMultiplier`. It can be on the bench.
 - Anyone else gets nothing.
 
+From the next release, operators can change that share, give it to the whole team (a global Exp.
+Share) and multiply all battle EXP, and a player can pause one Pokémon's EXP from its Summary: see
+[Commands & settings](commands.md).
+
 The amount is **Cobblemon's own calculation**, so everything that changes it still does: a **Lucky
 Egg**, a Pokémon from **another trainer**, one **ready to evolve**, **high friendship**, and
 Cobblemon's `experienceMultiplier`. A mod that changes how much EXP a battle gives, or caps a level,
@@ -48,6 +52,8 @@ A knockout that happens after the battle is already over pays nothing at all.
   fainted Pokémon never earns.
 - **Against another player**, nothing is paid unless Cobblemon's `allowExperienceFromPvP` allows it.
 - **Catching** a Pokémon pays no EXP, as in Cobblemon.
+- **A Pokémon whose EXP is paused** (next release, [from its Summary](commands.md#pausing-a-pokemons-exp))
+  gets no EXP, but still gets its EVs.
 
 What a knockout paid is **yours to keep**, even if you go on to lose the battle.
 
@@ -109,6 +115,26 @@ own slot, and the moveset never loses a slot.
   can teach them from the summary as always.
 - If the battle ends some other way while the screen is open (forfeit, disconnect), the screen
   closes, nothing is learned and the new moves stay in the move pool.
+
+## Drag and drop on the Summary
+
+*From the next release.* Out of battle, the Summary's **Moves** page takes drag and drop too. It
+needs the mod on your client only.
+
+- **Reorder your moves by dragging one onto another.** Pick a move up and drop it on another to swap
+  the two. Cobblemon's up and down arrows are gone. A plain click still shows the move's description,
+  and dropping anywhere else puts the move back.
+- **Change a move by dragging it out of the move pool.** The page has a single arrow, beside the
+  moves, that opens and closes the move pool. Drag a move from it onto the move it should replace,
+  or onto an empty slot to learn it there. The pool stays open, so you can keep going.
+- **Forget a move by dragging Forget onto it.** Forget is not offered while the Pokémon knows a
+  single move.
+- A plain click on a move in the pool shows its description on the Moves page. Dropping anywhere
+  else, or dropping a move the Pokémon already knows, puts it back.
+
+The move pool is Cobblemon's own: the moves on offer, and what the server accepts, are exactly what
+Cobblemon allows from its move screen. Another mod that charges for a move change, such as
+[Champions Training](../champions/index.md), still charges for a drop.
 
 ## Battle log
 

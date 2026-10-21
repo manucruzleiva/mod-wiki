@@ -106,6 +106,7 @@ extra:
     champions:      { name: Cobblemon Champions Training,   version: 1.0.0,   modrinth: cobblemon-champions-training }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0 }
     mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.0.0 }
+    poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.11 }
   # Como se encuentran los sitios separados entre si. Cada config de mod o de landing declara
   # `wiki_site` (la carpeta del mod, o `landing`). Lo leen hooks/cross_site_links.py, que reescribe
   # los links que salen del sitio, overrides/partials/tabs.html, que arma el menu de secciones, y
