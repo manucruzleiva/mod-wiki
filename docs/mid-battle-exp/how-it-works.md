@@ -116,6 +116,26 @@ own slot, and the moveset never loses a slot.
 - If the battle ends some other way while the screen is open (forfeit, disconnect), the screen
   closes, nothing is learned and the new moves stay in the move pool.
 
+## Drag and drop on the Summary
+
+*From the next release.* Out of battle, the Summary's **Moves** page takes drag and drop too. It
+needs the mod on your client only.
+
+- **Reorder your moves by dragging one onto another.** Pick a move up and drop it on another to swap
+  the two. Cobblemon's up and down arrows are gone. A plain click still shows the move's description,
+  and dropping anywhere else puts the move back.
+- **Change a move by dragging it out of the move pool.** The page has a single arrow, beside the
+  moves, that opens and closes the move pool. Drag a move from it onto the move it should replace,
+  or onto an empty slot to learn it there. The pool stays open, so you can keep going.
+- **Forget a move by dragging Forget onto it.** Forget is not offered while the Pokémon knows a
+  single move.
+- A plain click on a move in the pool shows its description on the Moves page. Dropping anywhere
+  else, or dropping a move the Pokémon already knows, puts it back.
+
+The move pool is Cobblemon's own: the moves on offer, and what the server accepts, are exactly what
+Cobblemon allows from its move screen. Another mod that charges for a move change, such as
+[Champions Training](../champions/index.md), still charges for a drop.
+
 ## Battle log
 
 Everything the mod changes is written into the battle log, **only for the Pokémon's owner**. Your
