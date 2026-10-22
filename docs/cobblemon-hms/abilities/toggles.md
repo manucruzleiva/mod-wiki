@@ -216,8 +216,10 @@ Weather aura, with a clear sky. Sand is your ground while it blows:
 **Power:** blocks away a hunter loses you (**8**)
 
 Weather aura, with a clear sky. A fog rolls in around you and you can only see about 20 blocks. Anything hunting you
-**loses track of you** once you are more than 8 blocks away, and goes back to wandering. Up close it
-still sees you, so Fog is for slipping away, not for standing in the open.
+**loses track of you** once you are more than 8 blocks away, and goes back to wandering. Beyond those
+8 blocks no mob can find you either, so it will not pick you up again until it wanders close. Up
+close it still sees you, so Fog is for slipping away, not for standing in the open. It only hides
+you: a friend standing next to you without Fog is still hunted.
 
 ---
 
