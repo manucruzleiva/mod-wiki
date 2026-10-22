@@ -8,8 +8,9 @@ nothing to learn and nothing to pay in hunger: if your Pokémon can do it, it do
 Send out one of your Pokémon, open Cobblemon's **interaction wheel** on it, and pick
 **Field moves**. You get a second wheel with everything that Pokémon can do in the field.
 
-A Pokémon can do a field move when **it knows the move**, or when **its species is one of the ones
-listed below** (the species that used to teach the HM). It has to be yours and within 16 blocks.
+A Pokémon can do a field move when **the move is in its movepool** (anything it can learn: by
+level, egg, tutor, TM, evolution or form change; it does not need to be one of its four moves), or
+when **its species is one of the ones listed below** (the species that used to teach the HM). It has to be yours and within 16 blocks.
 
 <div class="flow" markdown>
 
