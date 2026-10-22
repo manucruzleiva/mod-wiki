@@ -86,15 +86,15 @@ link.
     - What was around the table: biome, other spawners, and whether a modpack tuned the spawn rules.
     - For furniture or model issues, which other furniture mods are installed.
 
-=== "Ditto HMs"
+=== "Cobblemon HMs"
 
-    - **Which HM**, and whether it was used as an **active** ability or a **toggle**.
-    - Whether you had learned it from a disc or via `/dittohm learn_all`.
+    - **Which HM**, whether it was a **partner HM**, an **aura** or a **mount toggle**, and which
+      Pokémon was lending it.
 
-    !!! tip "Hunger and cooldowns are configurable"
-        Before reporting "this HM costs too much", check
-        [Configuration](ditto-hms/configuration.md) — every ability's hunger cost, cooldown and
-        power is a server-side slider, so a modpack may have tuned it away from the defaults.
+    !!! tip "Cooldowns are configurable"
+        Before reporting "this HM is too slow", check
+        [Configuration](cobblemon-hms/configuration.md) — every HM's cooldown and power is a
+        server-side setting, so a modpack may have tuned it away from the defaults.
 
     **Suggesting a new HM?** Those are the most common request, and plenty of the ones that shipped
     started that way. The ones that get built fastest describe: the
@@ -167,5 +167,5 @@ without a change**, because those are not the same thing and you deserve to know
 
 Everyone who reports gets thanked on the mod's community credits page:
 [Routes](routes/credits.md) · [Nuzlocke](nuzlocke/credits.md) · [Picnic](picnic/credits.md) ·
-[Ditto HMs](ditto-hms/credits.md) · [Raid Icons](raid-icons/credits.md) ·
+[Cobblemon HMs](cobblemon-hms/credits.md) · [Raid Icons](raid-icons/credits.md) ·
 [Champions Training](champions/credits.md) · [Mid-Battle EXP](mid-battle-exp/credits.md). 💚

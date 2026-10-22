@@ -4,6 +4,19 @@
 Pokémon lend them to you.** A Pokémon that has a move in its movepool can share it while it is out
 and near you. Everything that fights lives in **Cobblemon Action Combat**.
 
+## The new name
+
+Up to 3.x the mod was **Ditto HMs**. 4.0 renames everything, including the mod id
+(`cobblemon_ditto_hms` is now `cobblemon_hms`):
+
+- The jars are `cobblemon-hms-fabric-…` and `cobblemon-hms-neoforge-…`. **Delete the old
+  `cobblemon-ditto-hms-…` jar** from `mods/` when you update: the loader sees two different mods
+  and would load both.
+- Your world carries over. HM Cases and discs in chests and inventories, everyone's HM save and the
+  config file are read under the old name and saved under the new one.
+- The command is **`/hms`** (it was `/dittohm`).
+- The key binding for the HM wheel goes back to its default once.
+
 ## Your save
 
 Nothing to do, and nothing you paid for is lost. The first time each player joins after the update:

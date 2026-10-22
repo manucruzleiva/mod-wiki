@@ -1,7 +1,7 @@
 INHERIT: mkdocs.base.yml
 site_name: Modding Wiki
 site_description: >-
-  The single wiki for every Cobblemon mod by shiero — Routes, Nuzlocke & Soul Link, Picnic, Ditto HMs,
+  The single wiki for every Cobblemon mod by shiero — Routes, Nuzlocke & Soul Link, Picnic, Cobblemon HMs,
   Raid Icons, Champions Training, Mid-Battle EXP and Tree Carve.
 site_url: https://manucruzleiva.github.io/mod-wiki/
 

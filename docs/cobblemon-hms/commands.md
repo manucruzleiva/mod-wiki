@@ -1,6 +1,6 @@
 # Commands
 
-The command root is `/dittohm`.
+The command root is `/hms`.
 
 | Who | Commands |
 |---|---|
@@ -13,12 +13,12 @@ Cobblemon's interaction wheel (see [Your Pokémon](pokemon.md)).
 ## Player commands
 
 ```
-/dittohm list
+/hms list
 ```
 Shows what your Pokémon are lending you right now: the HM on your fist and the auras in effect.
 
 ```
-/dittohm mount
+/hms mount
 ```
 Reports what the mount boosts can see on the Pokémon you are riding. Useful for telling a broken
 boost apart from riding something you did not expect.
@@ -30,34 +30,34 @@ boost apart from riding something you did not expect.
 Require **permission level 2**.
 
 ```
-/dittohm list <player>
+/hms list <player>
 ```
 The same report, for another player.
 
 ```
-/dittohm trader spawn [player]
-/dittohm trader spawn shiny [player]
-/dittohm trader forget [player]
+/hms trader spawn [player]
+/hms trader spawn shiny [player]
+/hms trader forget [player]
 ```
 Summons a Trainer Ditto on demand, or undoes a catch so it will visit that player again.
 
 ```
-/dittohm config <ability> cooldown <0–24000>
-/dittohm config <ability> power <0–512>
-/dittohm config <ability> minlevel <0–100>
-/dittohm config <ability> enabled <true|false>
-/dittohm config <ability> reset
-/dittohm config reset_all
+/hms config <ability> cooldown <0–24000>
+/hms config <ability> power <0–512>
+/hms config <ability> minlevel <0–100>
+/hms config <ability> enabled <true|false>
+/hms config <ability> reset
+/hms config reset_all
 ```
 
 ```
-/dittohm config activator button <left|right|either>
-/dittohm config trader enabled <true|false>
-/dittohm config trader every <ticks>
-/dittohm config trader stay <ticks>
-/dittohm config trader ivs <0–6>
-/dittohm config trader levels <min> <max>
-/dittohm config trader coins <min> <max>
+/hms config activator button <left|right|either>
+/hms config trader enabled <true|false>
+/hms config trader every <ticks>
+/hms config trader stay <ticks>
+/hms config trader ivs <0–6>
+/hms config trader levels <min> <max>
+/hms config trader coins <min> <max>
 ```
 
 !!! tip "After updating to 4.0"
