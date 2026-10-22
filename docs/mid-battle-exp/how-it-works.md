@@ -126,13 +126,15 @@ needs the mod on your client only.
   the two. Cobblemon's up and down arrows are gone. A plain click still shows the move's description,
   and dropping anywhere else puts the move back.
 - **Change a move by dragging it out of the move pool.** The page has a single arrow, beside the
-  moves, that opens and closes the move pool. Drag a move from it onto the move it should replace,
-  or onto an empty slot to learn it there. The pool stays open, so you can keep going.
+  moves, that opens the move pool. While the pool is open the arrow turns into an **X** that closes
+  it. Drag a move from the pool onto the move it should replace, or onto an empty slot to learn it
+  there. The pool stays open after every drop, so you can keep going.
 - **Forget a move by dragging Forget onto it.** Forget is not offered while the Pokémon knows a
   single move.
 - **Free a slot by dragging a move out.** Drop one of your moves on the open move pool, or on an
   empty slot, and it goes to the move pool and leaves its slot free. The other moves move up, so the
-  free slot is always the last one. It is not possible while the Pokémon knows a single move.
+  free slot is always the last one. The pool stays open. It is not possible while the Pokémon knows
+  a single move.
 - A plain click on a move in the pool shows its description on the Moves page. Dropping anywhere
   else, or dropping a move the Pokémon already knows, puts it back.
 
