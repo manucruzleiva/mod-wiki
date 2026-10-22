@@ -117,8 +117,17 @@ It only ever plants on **bare ground**. A spot that already has something growin
 exactly as it stands, so casting twice in the same meadow thickens it instead of disturbing it, and
 tall flowers are planted whole rather than as a half that topples.
 
+Only crops, saplings and berry trees are grown. Grass blades, ferns, moss, nylium, glow lichen and
+seagrass are left alone, so a burst never smothers the meadow it planted or creeps moss over the
+stone nearby.
+
 **Crouch while you use it to till instead** (this is what Rototiller used to do): the dirt-type
-block you aim at — Dirt, Grass Block, Coarse Dirt, Dirt Path — turns into Farmland.
+block you aim at, within your normal reach — Dirt, Grass Block, Coarse Dirt, Dirt Path — turns into
+Farmland. A flower or grass on it drops as an item. Tilling has **no cooldown** and does not use up
+the burst's.
+
+It changes the world, so it needs the right to build: it does nothing in adventure or spectator
+mode, and skips spawn protection and claimed land. The radius (`power`) is capped at 16.
 
 ---
 
