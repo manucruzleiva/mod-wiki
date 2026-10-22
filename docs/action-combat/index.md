@@ -26,7 +26,7 @@ opponent, while your Trainer stays behind and backs you up with Poké Balls and 
 
 !!! warning "Not released yet"
     Action Combat has no public download yet. These pages describe the current development build,
-    **0.1.40**, which has every feature planned for 1.0.0 and is being play-tested. Anything not
+    **0.1.41**, which has every feature planned for 1.0.0 and is being play-tested. Anything not
     described here is not in the mod yet.
 
 ## Highlights
