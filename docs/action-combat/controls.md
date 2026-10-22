@@ -7,7 +7,8 @@ in **Options → Controls → Cobblemon Action Combat**, except the ones that re
 | --- | --- |
 | **W A S D**, mouse | move and turn, at the Pokémon's own Speed |
 | **Space** | jump; a double tap takes off with a species that flies, then Space climbs and sprint dives |
-| **1 2 3 4** (the hotbar keys) | cast the Pokémon's four moves |
+| **1 2 3 4** (the hotbar keys) | cast the Pokémon's four moves; a close-range move is only readied |
+| **Left click** (attack) | land the readied close-range move on an opponent in reach |
 | **Shift** (sneak) | dodge: a 4-block dash, with a moment where nothing hits you |
 | **Right click** (use) | Protect: a bubble that blocks every hit for a second and a half |
 | **Z** | lock onto an opponent; **Tab** moves the lock to the next one; Z again lets go |
