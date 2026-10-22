@@ -41,6 +41,7 @@ merged into it, so a Pokémon with Dig can lend Rock Smash — or when its speci
 | <img class="hm-disc" src="../../../assets/items/hm_minimize.png" alt=""> | Minimize | Ditto, Chansey, Barboach |
 | <img class="hm-disc" src="../../../assets/items/hm_outrage.png" alt=""> | Outrage | Dragonite, Salamence, Haxorus |
 | <img class="hm-disc" src="../../../assets/items/hm_calm_mind.png" alt=""> | Calm Mind | Alakazam, Espeon, Gardevoir |
+| <img class="hm-disc" src="../../../assets/items/hm_celebrate.png" alt=""> | Celebrate | Jigglypuff, Ludicolo, Alcremie |
 
 ---
 
@@ -208,3 +209,12 @@ Aim at an **XL** Pokémon to turn it into an **Alpha**. Anything smaller, it ref
 **Cooldown:** 2 min
 
 Aim at an **Alpha** to settle it back into the ordinary Pokémon it was. The way back out of Outrage.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_celebrate.png" alt=""> Celebrate
+**Cooldown:** 10 min · **Power:** how many rockets (**8**)
+
+Punch with an empty hand and a firework show goes up over your head, for no reason at all. The
+rockets are made for you, not taken from your inventory, and burst well above head height, so they
+hurt nobody.

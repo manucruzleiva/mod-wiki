@@ -12,7 +12,6 @@ that opens lists everything that Pokémon can do for you, and nothing it cannot:
 |---|---|---|
 | **Partner HM** | That Pokémon lends the move to your **empty fist** | [Partner HMs](abilities/active.md) |
 | **Aura** | Switches a passive effect on you, on or off | [Auras](abilities/toggles.md) |
-| **Field move** | The Pokémon does it itself, once | [Your Pokémon](pokemon.md#field-moves) |
 | **Mount toggle** | Helps that Pokémon when you ride it | [Your Pokémon](pokemon.md#mount-toggles) |
 
 A Pokémon can share a move when the move is **in its movepool** (equipped or not), or when its

@@ -44,7 +44,7 @@ with your bare fist, or gives you auras like Flash, Dive and Rock Climb while it
 | [Getting Started](getting-started.md) | First steps and the Trainer Ditto |
 | [Partner HMs](abilities/active.md) | What your Pokémon lends your empty fist |
 | [Auras](abilities/toggles.md) | The passives your Pokémon give you |
-| [Your Pokémon](pokemon.md) | Field moves and mount toggles your Pokémon does for you |
+| [Your Pokémon](pokemon.md) | Mount toggles that help the Pokémon you ride |
 | [Upgrading to 4.0](upgrading-to-4.md) | What changed, and what happened to your save |
 | [HM Case](tm-bag.md) | A bag for every TM you own |
 | [Configuration](configuration.md) | Per-ability cooldown / power sliders |

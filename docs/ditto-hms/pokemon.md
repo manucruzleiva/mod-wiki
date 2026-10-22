@@ -6,37 +6,14 @@ can do for you:
 
 - **Partner HMs** it can lend your empty fist — see [Partner HMs](abilities/active.md).
 - **Auras** it can give you while it is out and near you — see [Auras](abilities/toggles.md).
-- **Field moves** it does itself, once — below.
 - **Mount toggles** that help it when you ride it — below.
 
 A Pokémon can do any of these when the move is **in its movepool** (equipped or not), or when its
 species is one listed on these pages.
 
-## Field moves
-
-Send out one of your Pokémon, open Cobblemon's **interaction wheel** on it, and pick
-**Field moves**. You get a second wheel with everything that Pokémon can do in the field.
-
-A Pokémon can do a field move when the move is **in its movepool**, or when **its species is one of
-the ones listed below**. It has to be yours and within 16 blocks.
-
-<div class="flow" markdown>
-
-1. <span class="flow__tag">Open</span> Cobblemon's interaction wheel on your Pokémon
-2. <span class="flow__tag">Pick</span> **Field moves**, then a move
-3. <span class="flow__tag flow__tag--result">Result</span> your Pokémon does it, then rests a while
-
-</div>
-
-Each move has a **cooldown per Pokémon**: two Pokémon that both know Celebrate can call it back to
-back. They cost you nothing.
-
-| Disc | Move | Pokémon (any of) | What it does |
-|---|---|---|---|
-| <img class="hm-disc" src="../../assets/items/hm_celebrate.png" alt=""> | Celebrate | Jigglypuff, Ludicolo, Alcremie | A firework show over its head, for no reason at all. |
-
-Rain Dance, Sunny Day and Blizzard are not field moves any more: they are [weather auras](abilities/toggles.md#rain-dance),
-switched on and off like any other aura.
+!!! note "No field moves any more"
+    Celebrate is a [partner HM](abilities/active.md#celebrate) now, and Rain Dance, Sunny Day and
+    Blizzard are [weather auras](abilities/toggles.md#rain-dance).
 
 ## Mount toggles
 

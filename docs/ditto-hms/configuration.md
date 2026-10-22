@@ -135,6 +135,7 @@ what the config takes.
 | Minimize | 1 min | how long you stay small — **6000** |
 | Outrage | 5 min | — |
 | Calm Mind | 2 min | — |
+| Celebrate | 10 min | how many rockets — **8** |
 
 ## Default values — Auras
 
@@ -158,13 +159,6 @@ what the config takes.
 | Blizzard | radius of the snowfall around you — **24** |
 
 ## Default values — Your Pokémon
-
-[Field moves](pokemon.md#field-moves): **Cooldown** is counted **per Pokémon**. Turning a move's
-`enabled` off hides it from every wheel.
-
-| Ability | Cooldown | Power |
-|---|---|---|
-| Celebrate | 10 min | how many rockets — **8** |
 
 [Mount toggles](pokemon.md#mount-toggles) belong to the Pokémon you ride.
 
