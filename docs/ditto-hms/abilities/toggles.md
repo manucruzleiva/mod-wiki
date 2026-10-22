@@ -11,14 +11,16 @@ You can run as many auras as you like, from one Pokémon or several. They cost n
 them back: switch them on again from its wheel. Walking away from it only pauses them.
 
 !!! info "Weather auras"
-    **Rain Dance, Sunny Day, Sandstorm, Fog and Snowscape** are weather. Only **one** runs at a time:
+    **Rain Dance, Sunny Day, Blizzard, Sandstorm, Fog and Snowscape** are weather. Only **one** runs at a time:
     switching one on, on any of your Pokémon, switches the others off, so the last one you switched
     on is the one in effect. Between players close together, too, the weather switched on last wins.
     Like any aura, a weather only works while its Pokémon is out and near you, and **putting the
     Pokémon back in its ball switches it off**.
 
-    Rain Dance and Sunny Day use **Minecraft's own weather**: while one is on, the sky stays raining
-    or clear. Switch it off, or recall the Pokémon, and the game decides the weather again.
+    Every weather takes over **Minecraft's own sky** while it is on: Rain Dance makes it rain, and
+    all the others keep it clear, so no rain falls through your sandstorm, fog or blizzard while
+    their own effects run. Switch it off, or recall the Pokémon, and the game decides the weather
+    again.
 
 !!! tip "What is on right now"
     Open Cobblemon's interaction wheel on any Pokémon: its **top-left corner lists every HM in
@@ -42,6 +44,7 @@ species is one of these:
 | Disc | Aura | Pokémon (any of) |
 |---|---|---|
 | <img class="hm-disc" src="../../../assets/items/hm_absorb.png" alt=""> | Absorb | Gulpin, Swalot, Victreebel |
+| <img class="hm-disc" src="../../../assets/items/hm_blizzard.png" alt=""> | Blizzard *(weather)* | Abomasnow, Glalie, Froslass |
 | <img class="hm-disc" src="../../../assets/items/hm_dive.png" alt=""> | Dive | Vaporeon, Lapras, Wailord |
 | <img class="hm-disc" src="../../../assets/items/hm_flash.png" alt=""> | Flash | Ampharos, Jolteon, Lanturn |
 | <img class="hm-disc" src="../../../assets/items/hm_jump.png" alt=""> | Jump | Magikarp, Buneary, Spoink |
@@ -201,7 +204,7 @@ like several seasonings in one snack. The item is not used up.
 ### <img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> Sandstorm
 **Power:** how many times faster loose ground breaks (**4**)
 
-Weather aura. Sand is your ground while it blows:
+Weather aura, with a clear sky. Sand is your ground while it blows:
 
 - **Soul sand, soul soil and honey never slow you down.**
 - **Sand, gravel, soul sand, soul soil, clay and concrete powder break 4× as fast** while you are
@@ -212,7 +215,7 @@ Weather aura. Sand is your ground while it blows:
 ### <img class="hm-disc" src="../../../assets/items/hm_fog.png" alt=""> Fog
 **Power:** blocks away a hunter loses you (**8**)
 
-Weather aura. A fog rolls in around you and you can only see about 20 blocks. Anything hunting you
+Weather aura, with a clear sky. A fog rolls in around you and you can only see about 20 blocks. Anything hunting you
 **loses track of you** once you are more than 8 blocks away, and goes back to wandering. Up close it
 still sees you, so Fog is for slipping away, not for standing in the open.
 
@@ -229,3 +232,12 @@ Switch it off or recall the Pokémon and Minecraft takes the weather back.
 
 Weather aura. **The sky stays clear**, with no rain and no storms, for as long as Sunny Day is on and
 its Pokémon is out. Switch it off or recall the Pokémon and Minecraft takes the weather back.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_blizzard.png" alt=""> Blizzard
+**Power:** radius of the snowfall around you (**24**)
+
+Weather aura. **Snow falls and settles all around you**, whatever the biome, for as long as Blizzard is
+on and its Pokémon is out. The sky stays clear of vanilla rain meanwhile. The snow is real snow: it
+piles up to three layers and melts on its own, the way any snowfall does in a warm place.

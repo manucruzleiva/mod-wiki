@@ -155,6 +155,7 @@ what the config takes.
 | Fog | blocks away a hunter loses you — **8** |
 | Rain Dance | — |
 | Sunny Day | — |
+| Blizzard | radius of the snowfall around you — **24** |
 
 ## Default values — Your Pokémon
 
@@ -164,7 +165,6 @@ what the config takes.
 | Ability | Cooldown | Power |
 |---|---|---|
 | Celebrate | 10 min | how many rockets — **8** |
-| Blizzard | 30s | radius — **180** |
 
 [Mount toggles](pokemon.md#mount-toggles) belong to the Pokémon you ride.
 

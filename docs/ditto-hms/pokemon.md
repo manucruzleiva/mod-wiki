@@ -28,15 +28,14 @@ the ones listed below**. It has to be yours and within 16 blocks.
 
 </div>
 
-Each move has a **cooldown per Pokémon**: two Pokémon that both know Blizzard can call it back to
+Each move has a **cooldown per Pokémon**: two Pokémon that both know Celebrate can call it back to
 back. They cost you nothing.
 
 | Disc | Move | Pokémon (any of) | What it does |
 |---|---|---|---|
-| <img class="hm-disc" src="../../assets/items/hm_blizzard.png" alt=""> | Blizzard | Abomasnow, Glalie, Froslass | Snow falls and settles **around the Pokémon**, whatever the biome, and melts on its own. |
 | <img class="hm-disc" src="../../assets/items/hm_celebrate.png" alt=""> | Celebrate | Jigglypuff, Ludicolo, Alcremie | A firework show over its head, for no reason at all. |
 
-Rain Dance and Sunny Day are not field moves any more: they are [weather auras](abilities/toggles.md#rain-dance),
+Rain Dance, Sunny Day and Blizzard are not field moves any more: they are [weather auras](abilities/toggles.md#rain-dance),
 switched on and off like any other aura.
 
 ## Mount toggles
