@@ -8,8 +8,9 @@ can do for you:
 - **Auras** it can give you while it is out and near you — see [Auras](abilities/toggles.md).
 - **Mount toggles** that help it when you ride it — below.
 
-A Pokémon can do any of these when the move is **in its movepool** (equipped or not), or when its
-species is one listed on these pages.
+A Pokémon can do any of these when **the move is in its movepool** (anything it can learn: by
+level, egg, tutor, TM, evolution or form change; it does not need to be one of its four moves), or
+when **its species is one listed on these pages** (the species that used to teach the HM).
 
 !!! note "No field moves any more"
     Celebrate is a [partner HM](abilities/active.md#celebrate) now, and Rain Dance, Sunny Day and
