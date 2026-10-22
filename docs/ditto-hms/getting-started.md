@@ -23,7 +23,9 @@ species is one listed on those pages. It has to be yours, sent out, and within 2
 Once a Pokémon is lending you an HM, **click with an empty hand** to fire it. Anything else in your
 hand keeps its normal click, so tools, weapons and blocks behave exactly as they always did.
 
-One Pokémon lends one HM at a time. Recall it or walk away and your fist is your own again.
+One Pokémon lends one HM at a time. Walk away from it and the HM pauses until you are back. **Put it
+back in its ball and it stops lending**, and its auras switch off too (weather auras excepted): send
+it out and switch them on again.
 
 !!! tip "Getting your fist back"
     While an HM is lent, a bare-handed click fires it instead of punching. Open the Pokémon's wheel

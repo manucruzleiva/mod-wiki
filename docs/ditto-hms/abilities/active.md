@@ -37,6 +37,10 @@ merged into it, so a Pokémon with Dig can lend Rock Smash — or when its speci
 | <img class="hm-disc" src="../../../assets/items/hm_strength.png" alt=""> | Strength | Machoke, Machamp, Conkeldurr |
 | <img class="hm-disc" src="../../../assets/items/hm_tail_whip.png" alt=""> | Tail Whip | Rattata, Sentret, Buneary |
 | <img class="hm-disc" src="../../../assets/items/hm_teleport.png" alt=""> | Teleport | Abra, Kadabra, Alakazam, Ralts |
+| <img class="hm-disc" src="../../../assets/items/hm_growth.png" alt=""> | Growth | Sunkern, Sunflora, Petilil |
+| <img class="hm-disc" src="../../../assets/items/hm_minimize.png" alt=""> | Minimize | Ditto, Chansey, Barboach |
+| <img class="hm-disc" src="../../../assets/items/hm_outrage.png" alt=""> | Outrage | Dragonite, Salamence, Haxorus |
+| <img class="hm-disc" src="../../../assets/items/hm_calm_mind.png" alt=""> | Calm Mind | Alakazam, Espeon, Gardevoir |
 
 ---
 
@@ -61,12 +65,13 @@ to hit, nothing in your way, and nothing that can be killed off you.
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_charge.png" alt=""> Charge
-**Cooldown:** 3s · **Power:** 200t (**10 seconds**)
+**Cooldown:** 3s · **Power:** ticks between sparks (**10**)
 
 Turns the block you aim at into a redstone power source — enough to throw a door, a piston or a
-lamp from across a room. **It does not run out.** The charge ends when you charge something else or
-leave, and never on a timer: a power source that switches itself off after a minute is not a power
-source, it is a fault to go and find.
+lamp from across a room. **The charge is permanent.** It is saved with the world, so it stays when
+you log off and when the server restarts, and charging another block does not take it back: charge
+as many as you like. Aim Charge at a charged block again to discharge it. Breaking the block ends
+its charge too.
 
 The block is never replaced — it stays exactly what it is and simply *answers* as a power source —
 so you can charge a chest, a furnace, a statue or a wall without losing anything. While it is live
@@ -173,3 +178,33 @@ It is the strongest way to travel the mod has, so it is priced like it: dearer t
 you fire, and slow to come back.
 
 ---
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_growth.png" alt=""> Growth
+**Cooldown:** 1 min · **Power:** how long you stay big (**5 minutes**)
+
+Aim at one of your **Pokémon** and it grows one size, for good. Aim at anything else, or at nothing,
+and it is **you** who grows, to twice your size, for a while.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_minimize.png" alt=""> Minimize
+**Cooldown:** 1 min · **Power:** how long you stay small (**5 minutes**)
+
+Growth's opposite. Aim at a **Pokémon** and it shrinks one size, for good. Aim anywhere else and you
+go half-size for a while.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_outrage.png" alt=""> Outrage
+**Cooldown:** 5 min
+
+Aim at an **XL** Pokémon to turn it into an **Alpha**. Anything smaller, it refuses.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_calm_mind.png" alt=""> Calm Mind
+**Cooldown:** 2 min
+
+Aim at an **Alpha** to settle it back into the ordinary Pokémon it was. The way back out of Outrage.

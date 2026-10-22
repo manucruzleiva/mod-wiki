@@ -7,6 +7,15 @@ it comes back when the Pokémon does.
 
 You can run as many auras as you like, from one Pokémon or several. They cost nothing.
 
+**Put the Pokémon back in its ball and its auras switch off.** Sending it out again does not bring
+them back: switch them on again from its wheel. Walking away from it only pauses them.
+
+!!! info "Weather auras"
+    **Sandstorm, Fog and Snowscape** are weather. Only **one** runs at a time: switching one on, on
+    any of your Pokémon, switches the others off, so the last one you switched on is the one in
+    effect. They also **stay on when the Pokémon goes back in its ball**, until you switch them off
+    from its wheel. They still only work while that Pokémon is out and near you.
+
 The toggles that make **a mount** better — Surf, Tailwind, Swift, U-turn, Helping Hand and Agility —
 belong to the Pokémon you ride: see [Your Pokémon](../pokemon.md#mount-toggles).
 
@@ -32,8 +41,10 @@ species is one of these:
 | <img class="hm-disc" src="../../../assets/items/hm_magnet_rise.png" alt=""> | Magnet Rise | Magnemite, Magneton, Magnezone |
 | <img class="hm-disc" src="../../../assets/items/hm_rock_climb.png" alt=""> | Rock Climb | Rhydon, Rhyperior, Sneasel |
 | <img class="hm-disc" src="../../../assets/items/hm_shadow_sneak.png" alt=""> | Shadow Sneak | Gengar, Banette, Spiritomb |
-| <img class="hm-disc" src="../../../assets/items/hm_snowscape.png" alt=""> | Snowscape | Froslass, Mamoswine |
+| <img class="hm-disc" src="../../../assets/items/hm_snowscape.png" alt=""> | Snowscape *(weather)* | Froslass, Mamoswine |
 | <img class="hm-disc" src="../../../assets/items/hm_sweet_scent.png" alt=""> | Sweet Scent | Gloom, Bellossom, Vileplume, Aromatisse |
+| <img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> | Sandstorm *(weather)* | Hippopotas, Hippowdon, Tyranitar, Gigalith, Sandaconda |
+| <img class="hm-disc" src="../../../assets/items/hm_fog.png" alt=""> | Fog *(weather)* | Gastly, Haunter, Koffing, Weezing, Misdreavus — or any Pokémon with Haze, Mist or Smokescreen |
 
 ---
 
@@ -159,11 +170,34 @@ you cross it. Flowing water is left alone, so a river keeps running instead of b
 
 ---
 
----
-
 ### <img class="hm-disc" src="../../../assets/items/hm_sweet_scent.png" alt=""> Sweet Scent
 **Cooldown:** 60s between arrivals
 
 Works like a **Poké Snack you carry around**. While it is on, a wild Pokémon from the area turns up
 near you about once a minute. It uses Cobblemon's own spawner with the Poké Snack's rules, so what
 arrives is what lives there, and it never brings a herd.
+
+**The held item is the seasoning.** Whatever the Pokémon giving off the scent is holding works the
+way that item would as a Poké Snack seasoning: a berry that leans a snack toward a type, a nature or
+a shiny leans the scent the same way. Several Pokémon with Sweet Scent on add their items together,
+like several seasonings in one snack. The item is not used up.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> Sandstorm
+**Power:** how many times faster loose ground breaks (**4**)
+
+Weather aura. Sand is your ground while it blows:
+
+- **Soul sand, soul soil and honey never slow you down.**
+- **Sand, gravel, soul sand, soul soil, clay and concrete powder break 4× as fast** while you are
+  looking at them. Everything else breaks at its normal speed.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_fog.png" alt=""> Fog
+**Power:** blocks away a hunter loses you (**8**)
+
+Weather aura. A fog rolls in around you and you can only see about 20 blocks. Anything hunting you
+**loses track of you** once you are more than 8 blocks away, and goes back to wandering. Up close it
+still sees you, so Fog is for slipping away, not for standing in the open.

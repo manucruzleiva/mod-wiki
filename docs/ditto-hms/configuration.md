@@ -131,6 +131,10 @@ what the config takes.
 | Stockpile | 1s | lava self-damage — **7** |
 | Charge | 3s | ticks between sparks — **10** |
 | Tail Whip | 2s | 1 |
+| Growth | 1 min | how long you stay big — **6000** |
+| Minimize | 1 min | how long you stay small — **6000** |
+| Outrage | 5 min | — |
+| Calm Mind | 2 min | — |
 
 ## Default values — Auras
 
@@ -147,6 +151,8 @@ what the config takes.
 | Lucky Chant | Luck amplifier — **1** |
 | Shadow Sneak | percent of your speed you keep — **55** |
 | Sweet Scent | — · cooldown **60s** between arrivals |
+| Sandstorm | how many times faster loose ground breaks — **4** |
+| Fog | blocks away a hunter loses you — **8** |
 
 ## Default values — Your Pokémon
 
@@ -157,15 +163,8 @@ what the config takes.
 |---|---|---|
 | Rain Dance | 10s | 6000 |
 | Sunny Day | 10s | 6000 |
-| Miracle Eye | 30s | search radius in CHUNKS, as /locate counts — **100** |
 | Celebrate | 10 min | how many rockets — **8** |
-| Present | 20 min | — |
 | Blizzard | 30s | radius — **180** |
-| Decorate | 1 min | percent chance of a shiny — **5** |
-| Growth | 1 min | — |
-| Minimize | 1 min | — |
-| Outrage | 5 min | — |
-| Calm Mind | 2 min | — |
 
 [Mount toggles](pokemon.md#mount-toggles) belong to the Pokémon you ride.
 

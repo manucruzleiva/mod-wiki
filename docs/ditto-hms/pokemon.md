@@ -36,14 +36,7 @@ back. They cost you nothing.
 | <img class="hm-disc" src="../../assets/items/hm_rain_dance.png" alt=""> | Rain Dance | Politoed, Kyogre, Golduck | Rain over the whole world for a good while. |
 | <img class="hm-disc" src="../../assets/items/hm_sunny_day.png" alt=""> | Sunny Day | Torkoal, Sunkern, Volcarona | Clears the weather for a good while. |
 | <img class="hm-disc" src="../../assets/items/hm_blizzard.png" alt=""> | Blizzard | Abomasnow, Glalie, Froslass | Snow falls and settles **around the Pokémon**, whatever the biome, and melts on its own. |
-| <img class="hm-disc" src="../../assets/items/hm_present.png" alt=""> | Present | Delibird, Stantler, Spinda | Fills the **nearest empty container** with the sort of thing you find rather than buy. |
-| <img class="hm-disc" src="../../assets/items/hm_miracle_eye.png" alt=""> | Miracle Eye | Xatu, Sigilyph, Unown | Throws an eye towards the nearest legendary monument. Follow it. |
 | <img class="hm-disc" src="../../assets/items/hm_celebrate.png" alt=""> | Celebrate | Jigglypuff, Ludicolo, Alcremie | A firework show over its head, for no reason at all. |
-| <img class="hm-disc" src="../../assets/items/hm_growth.png" alt=""> | Growth | Sunkern, Sunflora, Petilil | Makes **this Pokémon** bigger, for good. |
-| <img class="hm-disc" src="../../assets/items/hm_minimize.png" alt=""> | Minimize | Ditto, Chansey, Barboach | Shrinks **this Pokémon**, for good. |
-| <img class="hm-disc" src="../../assets/items/hm_outrage.png" alt=""> | Outrage | Dragonite, Salamence, Haxorus | Turns **this Pokémon**, if it is XL, into an Alpha. |
-| <img class="hm-disc" src="../../assets/items/hm_calm_mind.png" alt=""> | Calm Mind | Alakazam, Espeon, Gardevoir | Settles **this Pokémon**, if it is an Alpha, back into what it was. |
-| <img class="hm-disc" src="../../assets/items/hm_decorate.png" alt=""> | Decorate | Sylveon, Milcery, Togekiss | A shot at making **this Pokémon** shiny. |
 
 ## Mount toggles
 

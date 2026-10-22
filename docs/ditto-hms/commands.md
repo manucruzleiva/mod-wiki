@@ -81,6 +81,10 @@ Summons a Trainer Ditto on demand, or undoes a catch so it will visit that playe
 | `stockpile` | Stockpile |
 | `charge` | Charge |
 | `tail_whip` | Tail Whip |
+| `growth` | Growth |
+| `minimize` | Minimize |
+| `outrage` | Outrage |
+| `calm_mind` | Calm Mind |
 
 ### Auras
 
@@ -97,3 +101,5 @@ Summons a Trainer Ditto on demand, or undoes a catch so it will visit that playe
 | `lucky_chant` | Lucky Chant |
 | `shadow_sneak` | Shadow Sneak |
 | `sweet_scent` | Sweet Scent |
+| `sandstorm` | Sandstorm |
+| `fog` | Fog |
