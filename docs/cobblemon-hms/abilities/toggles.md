@@ -197,7 +197,13 @@ arrives is what lives there, and it never brings a herd.
 **The held item is the seasoning.** Whatever the Pokémon giving off the scent is holding works the
 way that item would as a Poké Snack seasoning: a berry that leans a snack toward a type, a nature or
 a shiny leans the scent the same way. Several Pokémon with Sweet Scent on add their items together,
-like several seasonings in one snack. The item is not used up.
+like several seasonings in one snack. The item is not used up. A seasoning that makes a snack bite
+sooner (a bite-time effect) makes the next arrival come sooner too, with the same chance it has in a
+snack.
+
+Arrivals follow the snack's limits: no more than Cobblemon's Poké Snack cap of wild Pokémon per
+chunk around you, nothing arrives while you are dead or spectating, and the interval never drops
+below 5 seconds whatever the config says.
 
 ---
 
