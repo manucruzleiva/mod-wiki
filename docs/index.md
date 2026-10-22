@@ -162,7 +162,7 @@ full list for your loader.
 
 ## Found a bug, or have an idea?
 
-Post in the mod's **tickets thread on [Discord](https://discord.gg/SwcwXcCN4k)** and tag it —
+Post in **#mod-tickets** on [Discord](https://discord.gg/SwcwXcCN4k) and tag it —
 **Bug**, **Crash**, **Idea** or **Feedback**. A bot files it as an issue, replies in your thread
 with what it needs from you, and posts back there when it is closed. **You do not need a GitHub
 account.**
