@@ -165,6 +165,17 @@ body[data-mod="poketowns"] {
   --wiki-hero-to: #c92a63;
 }
 
+/* Action Combat — battle orange. */
+body[data-mod="action-combat"] {
+  --md-primary-fg-color: #b4410f;
+  --md-primary-fg-color--light: #e0662f;
+  --md-primary-fg-color--dark: #742a09;
+  --md-accent-fg-color: #1b65ab;
+  --md-typeset-a-color: #a63c0e;
+  --wiki-hero-from: #8f340c;
+  --wiki-hero-to: #d25520;
+}
+
 /* In dark mode the same hues need lifting: the primaries above are tuned for a
    white page and go muddy on a dark one, and links have to clear the contrast
    floor against #10171a. */
@@ -238,6 +249,14 @@ body[data-md-color-scheme="slate"][data-mod="poketowns"] {
   --md-accent-fg-color: #4cc0b0;
   --wiki-hero-from: #6e0e31;
   --wiki-hero-to: #a81c50;
+}
+
+body[data-md-color-scheme="slate"][data-mod="action-combat"] {
+  --md-primary-fg-color: #8f340c;
+  --md-typeset-a-color: #f5a37c;
+  --md-accent-fg-color: #8cc2f5;
+  --wiki-hero-from: #6e2809;
+  --wiki-hero-to: #a8441a;
 }
 
 /* Inter's default numerals are proportional; tabular ones keep version tables
@@ -596,6 +615,7 @@ body {
 .mod-row[data-mod-color="tree-carve"] { --mod-c: #66462a; }
 .mod-row[data-mod-color="mid-battle-exp"] { --mod-c: #1b65ab; }
 .mod-row[data-mod-color="poketowns"] { --mod-c: #b0174f; }
+.mod-row[data-mod-color="action-combat"] { --mod-c: #b4410f; }
 
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="routes"] { --mod-c: #17a06f; }
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="picnic"] { --mod-c: #d76a4d; }
@@ -606,6 +626,7 @@ body {
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="tree-carve"] { --mod-c: #92693f; }
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="mid-battle-exp"] { --mod-c: #4a8fd1; }
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="poketowns"] { --mod-c: #d64579; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="action-combat"] { --mod-c: #e0662f; }
 
 /* ── Flow ──────────────────────────────────────────────────────────────────
    A short sequence of steps, drawn as text instead of a Mermaid diagram: most
