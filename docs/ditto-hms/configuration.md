@@ -11,20 +11,14 @@
 
 ## Activation
 
-How an HM fires is two settings, because no single answer suits everyone:
+A partner HM fires from your **empty hand**: there is nothing to hold and nothing to select. The one
+choice left is the button:
 
 | Setting | Options | Notes |
 |---|---|---|
-| **Activator item** | Empty hand · HM Case · either *(default)* | The empty hand costs you punching and hand-mining while an HM is selected; the Case costs a hotbar slot |
-| **Activator button** | **Left-click** *(default)* · Right-click · either | Left never opens chests or doors; right is answered by interactable blocks first |
-
-There is also **HM wheel disc size** (50%–400%) in the same section, for when the discs read too
-big or too small at your GUI scale.
-
-Both activator settings live at the top of the config screen, and as commands:
+| **Activator button** | Left-click · Right-click · **either** *(default)* | Left never opens chests or doors; right is answered by interactable blocks first |
 
 ```
-/dittohm config activator item empty_hand|hm_case|either
 /dittohm config activator button left|right|either
 ```
 
@@ -39,6 +33,7 @@ Both activator settings live at the top of the config screen, and as commands:
 | **Stays for** | 6000 ticks (5 min) | How long it waits before wandering off |
 | **Guaranteed perfect IVs** | 0 | Rolled like any wild Ditto · 1 gives it one best stat · 6 is flawless |
 | **Level** | 15–45 | The band its level is rolled from, inclusive |
+| **TM price** | 4–32 relic coins | The cheapest and dearest a TM can cost |
 
 ```
 /dittohm config trader enabled <true|false>
@@ -46,14 +41,16 @@ Both activator settings live at the top of the config screen, and as commands:
 /dittohm config trader stay <200-72000>
 /dittohm config trader ivs <0-6>
 /dittohm config trader levels <min> <max>
+/dittohm config trader coins <min> <max>
 ```
 
 One appearance is **one trader for the whole server**, not one per player, and everybody is told in
 chat when it arrives and when it leaves. The clock runs while the server is empty and survives a
 restart; an appearance that lands with nobody eligible is missed rather than saved up.
 
-It always offers **five** discs, rolled once and kept for as long as that trader is standing there.
-Which five is weighted per HM — see [Trader weight](#trader-weight) below.
+It offers **three random Cobblemon TMs**, rolled once and kept for as long as that trader is
+standing there, one of each. A TM's price follows the power of its move: a status move costs the
+minimum, and the strongest moves cost the maximum.
 
 It stops visiting a player for good once they catch it, and it keeps its distance from anyone who
 has caught one **or beaten one in battle**, so bring a friend who has done neither.
@@ -62,39 +59,30 @@ has caught one **or beaten one in battle**, so bring a friend who has done neith
 
 ## Per-ability values
 
-Every ability has these tunable values:
+Every HM has these tunable values:
 
 | Parameter | Description |
 |---|---|
-| **Hunger** | Food levels required and consumed per use (0 = free) |
-| **Cooldown** | Ticks between uses (20 ticks = 1 second; 0 = no cooldown) |
+| **Cooldown** | Ticks between uses (20 ticks = 1 second; 0 = no cooldown), counted **per Pokémon** |
 | **Power** | Ability-specific: radius, duration, damage, count, level, etc. |
-| **HungerBlock** | *(toggles only)* food points blocked from your max while enabled |
-| **Trader weight** | How often the Trainer Ditto offers this disc, against the others |
 | **Required level** | Experience level needed before the HM will fire (every HM ships at 0) |
+| **Enabled** | Off hides the HM from every Pokémon |
+
+Nothing costs hunger any more. The cooldown belongs to the Pokémon that lent the move, so a second
+Pokémon with the same move is ready straight away.
 
 ### Required level
 
 A **requirement, not a price**: nothing is deducted when the HM fires, you simply cannot reach for
 it until you have got there. Every HM ships at **0**, so nothing is gated unless a pack says so.
-
-An HM you have not qualified for is greyed out in the wheel and says which level it wants, and it
-comes back to life the moment you level up. Switching a toggle **off** is never gated, so raising a
-requirement can never strand someone inside an effect they cannot end.
-
-### Trader weight
-
-A weight, not a percentage: what an HM's share works out to depends on which ones you still have
-left to learn. **10** is the common default, **6** covers the ones that reshape how you mine or
-fight, and **3** is reserved for flight, blinking, a free heal and a suit of armour. **0** keeps an
-HM out of the stall entirely — unless everything you have left is at 0, in which case the roll
-falls back to even odds rather than leaving the stall empty.
+Switching an aura **off** is never gated, so raising a requirement can never strand someone inside
+an effect they cannot end.
 
 ---
 
 ## Cloth Config GUI (Fabric)
 
-Open **Mod Menu → Cobblemon Ditto HMs → ⚙** to see sliders for every ability's values.  
+Open **Mod Menu → Cobblemon HMs → ⚙** to see sliders for every ability's values.  
 Changes save automatically.
 
 ---
@@ -104,15 +92,12 @@ Changes save automatically.
 Operator-only (`permission level 2`):
 
 ```
-/dittohm config <ability> hunger <0–20>
 /dittohm config <ability> cooldown <0–24000>
 /dittohm config <ability> power <0–512>
-/dittohm config <ability> hungerblock <0–20>   (toggles only)
-/dittohm config <ability> weight <0–100>
 /dittohm config <ability> minlevel <0–100>
+/dittohm config <ability> enabled <true|false>
 /dittohm config <ability> reset
 /dittohm config reset_all
-/dittohm config activator item <empty_hand|hm_case|either>
 /dittohm config activator button <left|right|either>
 ```
 
@@ -125,66 +110,64 @@ The file is saved at:
 - **Fabric:** `config/cobblemon_ditto_hms.json`
 - **NeoForge:** `config/cobblemon_ditto_hms.json`
 
-You can edit it directly — changes take effect on next server start.
+You can edit it directly — changes take effect on next server start. Settings from before 4.0 that
+no longer do anything (hunger, trader weight, activator item) are left in the file and ignored.
 
 ---
 
-## Default values — Active HMs
+## Default values — Partner HMs
 
 Durations in the **Power** column are in **ticks** (20 ticks = 1 second), because that is
 what the config takes.
 
-| Ability | Hunger | Cooldown | Power |
-|---|---|---|---|
-| Leafage | 1 | 2s | 5 |
-| Cut | 2 | none | 128 |
-| Rock Smash | 2 | none | 32 |
-| Camouflage | 3 | 15 min | duration — **18000** |
-| Strength | 2 | none | 1 |
-| Teleport | 6 | 30s | 30 |
-| Stockpile | 1 | 1s | lava self-damage — **7** |
-| Charge | 2 | 3s | ticks between sparks — **10** |
-| Tail Whip | 2 | 2s | 1 |
-
-## Default values — Toggle HMs
-
-| Ability | HungerBlock | Power |
+| Ability | Cooldown | Power |
 |---|---|---|
-| Magnet Rise | 15 | 25 |
-| Fly | 3 | — · each mid-air take-off costs **3** hunger, cooldown **1s** |
-| Jump | 2 | Jump Boost level — **4** |
-| Dive | 2 | — |
-| Flash | 2 | — |
-| Rock Climb | 2 | — |
-| Lava Plume | 2 | tenths of the lava-stride multiplier — **17** |
-| Snowscape | 2 | trail radius — **3** |
-| Absorb | 2 | magnet radius — **6** |
-| Lucky Chant | 2 | Luck amplifier — **1** |
-| Shadow Sneak | 3 | percent of your speed you keep — **55** |
+| Leafage | 2s | 5 |
+| Cut | none | 128 |
+| Rock Smash | none | 32 |
+| Camouflage | 15 min | duration — **18000** |
+| Strength | none | 1 |
+| Teleport | 30s | 30 |
+| Stockpile | 1s | lava self-damage — **7** |
+| Charge | 3s | ticks between sparks — **10** |
+| Tail Whip | 2s | 1 |
+
+## Default values — Auras
+
+| Ability | Power |
+|---|---|
+| Magnet Rise | 25 |
+| Jump | Jump Boost level — **4** |
+| Dive | — |
+| Flash | — |
+| Rock Climb | — |
+| Lava Plume | tenths of the lava-stride multiplier — **17** |
+| Snowscape | trail radius — **3** |
+| Absorb | magnet radius — **6** |
+| Lucky Chant | Luck amplifier — **1** |
+| Shadow Sneak | percent of your speed you keep — **55** |
+| Sweet Scent | — · cooldown **60s** between arrivals |
 
 ## Default values — Your Pokémon
 
-[Field moves](pokemon.md#field-moves) never cost you hunger: **Hunger** is ignored, and **Cooldown**
-is counted **per Pokémon**. Turning a move's `enabled` off in the file hides it from every wheel.
+[Field moves](pokemon.md#field-moves): **Cooldown** is counted **per Pokémon**. Turning a move's
+`enabled` off hides it from every wheel.
 
-| Ability | Hunger | Cooldown | Power |
-|---|---|---|---|
-| Rain Dance | 5 | 10s | 6000 |
-| Sunny Day | 5 | 10s | 6000 |
-| Thief | 2 | 5s | 1 |
-| Sweet Scent | 6 | 90s | how many turn up — **5** |
-| Headbutt | 2 | 2s | 14 |
-| Miracle Eye | 5 | 30s | search radius in CHUNKS, as /locate counts — **100** |
-| Celebrate | 1 | 10 min | how many rockets — **8** |
-| Present | 12 | 20 min | — |
-| Blizzard | 6 | 30s | radius — **180** |
-| Decorate | 4 | 1 min | percent chance of a shiny — **5** |
-| Growth | 3 | 1 min | — |
-| Minimize | 3 | 1 min | — |
-| Outrage | 5 | 5 min | — |
-| Calm Mind | 3 | 2 min | — |
+| Ability | Cooldown | Power |
+|---|---|---|
+| Rain Dance | 10s | 6000 |
+| Sunny Day | 10s | 6000 |
+| Miracle Eye | 30s | search radius in CHUNKS, as /locate counts — **100** |
+| Celebrate | 10 min | how many rockets — **8** |
+| Present | 20 min | — |
+| Blizzard | 30s | radius — **180** |
+| Decorate | 1 min | percent chance of a shiny — **5** |
+| Growth | 1 min | — |
+| Minimize | 1 min | — |
+| Outrage | 5 min | — |
+| Calm Mind | 2 min | — |
 
-[Mount toggles](pokemon.md#mount-toggles) block none of your hunger — they belong to the Pokémon.
+[Mount toggles](pokemon.md#mount-toggles) belong to the Pokémon you ride.
 
 | Ability | Power |
 |---|---|
@@ -197,5 +180,4 @@ is counted **per Pokémon**. Turning a move's `enabled` off in the file hides it
 
 !!! note "Old config files"
     A config written before 4.0 is brought up to date on load, and only where the meaning of a value
-    changed: Fly's glide price, Teleport's price (only if you had left it at the old default) and
-    Agility's new mount scale. Retired HMs drop out of the file.
+    changed. Retired HMs (Fly, Glide, Headbutt, Thief and the combat HMs) drop out of the file.

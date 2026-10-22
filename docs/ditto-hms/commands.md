@@ -4,72 +4,60 @@ The command root is `/dittohm`.
 
 | Who | Commands |
 |---|---|
-| 🙂 Every player | `use` · `list` · `select` |
-| 🛡️ Operators (level 2) | `give` · `learn_all` · `forget` · `forget_all` · `config …` · `reset_all` |
+| 🙂 Every player | `list` · `mount` |
+| 🛡️ Operators (level 2) | `list <player>` · `config …` · `trader …` |
+
+There are no commands to learn, select or use an HM any more: your Pokémon lend them, from
+Cobblemon's interaction wheel (see [Your Pokémon](pokemon.md)).
 
 ## Player commands
 
 ```
-/dittohm use <ability>
-```
-Activates an ability you have learned (or toggles a passive on/off).
-
-```
 /dittohm list
 ```
-Shows every ability with your learn status, toggle state, and configured hunger/cooldown.
+Shows what your Pokémon are lending you right now: the HM on your fist and the auras in effect.
 
 ```
-/dittohm select <ability>
-/dittohm select none
+/dittohm mount
 ```
-Selects an active HM without opening the [HM wheel](hm-wheel.md), or clears the selection.
+Reports what the mount boosts can see on the Pokémon you are riding. Useful for telling a broken
+boost apart from riding something you did not expect.
 
 ---
 
 ## Operator commands
 
-Require **permission level 2**:
-
-!!! note "Every command takes an optional player"
-    `give`, `learn`, `select`, `forget`, `forget_all` and both `trader` actions accept a trailing
-    `[player]`. Leave it off and the command applies to you.
+Require **permission level 2**.
 
 ```
-/dittohm give <ability> [player]
+/dittohm list <player>
 ```
-Gives the HM Disc for the specified ability — the operator's way in. Right-clicking the
-disc teaches the HM, the same as one earned in survival.
-
-```
-/dittohm learn <ability> [player]
-```
-Teaches the ability outright, with no disc involved.
+The same report, for another player.
 
 ```
 /dittohm trader spawn [player]
+/dittohm trader spawn shiny [player]
 /dittohm trader forget [player]
 ```
 Summons a Trainer Ditto on demand, or undoes a catch so it will visit that player again.
 
 ```
-/dittohm learn_all [player]
-```
-Instantly learns **every HM** (the 20 that are still the player's) for a player (does **not** auto-enable toggles).
-
-```
-/dittohm forget <ability> [player]
-/dittohm forget_all [player]
-```
-Unlearns one or all HMs.
-
-```
-/dittohm config <ability> hunger <0–20>
 /dittohm config <ability> cooldown <0–24000>
 /dittohm config <ability> power <0–512>
-/dittohm config <ability> hungerblock <0–20>   (toggles only)
+/dittohm config <ability> minlevel <0–100>
+/dittohm config <ability> enabled <true|false>
 /dittohm config <ability> reset
 /dittohm config reset_all
+```
+
+```
+/dittohm config activator button <left|right|either>
+/dittohm config trader enabled <true|false>
+/dittohm config trader every <ticks>
+/dittohm config trader stay <ticks>
+/dittohm config trader ivs <0–6>
+/dittohm config trader levels <min> <max>
+/dittohm config trader coins <min> <max>
 ```
 
 !!! tip "After updating to 4.0"
@@ -80,7 +68,7 @@ Unlearns one or all HMs.
 
 ## Ability IDs
 
-### Active
+### Partner HMs
 
 | ID | Display name |
 |---|---|
@@ -94,12 +82,11 @@ Unlearns one or all HMs.
 | `charge` | Charge |
 | `tail_whip` | Tail Whip |
 
-### Toggle
+### Auras
 
 | ID | Display name |
 |---|---|
 | `magnet_rise` | Magnet Rise |
-| `fly` | Fly |
 | `jump` | Jump |
 | `dive` | Dive |
 | `flash` | Flash |
@@ -109,3 +96,4 @@ Unlearns one or all HMs.
 | `absorb` | Absorb |
 | `lucky_chant` | Lucky Chant |
 | `shadow_sneak` | Shadow Sneak |
+| `sweet_scent` | Sweet Scent |

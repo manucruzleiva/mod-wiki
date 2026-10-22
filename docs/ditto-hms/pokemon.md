@@ -1,15 +1,24 @@
 # Your Pokémon
 
-Since **4.0** a lot of what used to be an HM is done **by your Pokémon**, not by you. There is
-nothing to learn and nothing to pay in hunger: if your Pokémon can do it, it does it.
+Everything in Cobblemon HMs comes from **your Pokémon**. Send one out, open Cobblemon's
+**interaction wheel** on it and pick **Field moves**. The second wheel lists everything that Pokémon
+can do for you:
+
+- **Partner HMs** it can lend your empty fist — see [Partner HMs](abilities/active.md).
+- **Auras** it can give you while it is out and near you — see [Auras](abilities/toggles.md).
+- **Field moves** it does itself, once — below.
+- **Mount toggles** that help it when you ride it — below.
+
+A Pokémon can do any of these when the move is **in its movepool** (equipped or not), or when its
+species is one listed on these pages.
 
 ## Field moves
 
 Send out one of your Pokémon, open Cobblemon's **interaction wheel** on it, and pick
 **Field moves**. You get a second wheel with everything that Pokémon can do in the field.
 
-A Pokémon can do a field move when **it knows the move**, or when **its species is one of the ones
-listed below** (the species that used to teach the HM). It has to be yours and within 16 blocks.
+A Pokémon can do a field move when the move is **in its movepool**, or when **its species is one of
+the ones listed below**. It has to be yours and within 16 blocks.
 
 <div class="flow" markdown>
 
@@ -20,16 +29,13 @@ listed below** (the species that used to teach the HM). It has to be yours and w
 </div>
 
 Each move has a **cooldown per Pokémon**: two Pokémon that both know Rain Dance can call it back to
-back. They cost you no hunger.
+back. They cost you nothing.
 
 | Disc | Move | Pokémon (any of) | What it does |
 |---|---|---|---|
 | <img class="hm-disc" src="../../assets/items/hm_rain_dance.png" alt=""> | Rain Dance | Politoed, Kyogre, Golduck | Rain over the whole world for a good while. |
 | <img class="hm-disc" src="../../assets/items/hm_sunny_day.png" alt=""> | Sunny Day | Torkoal, Sunkern, Volcarona | Clears the weather for a good while. |
 | <img class="hm-disc" src="../../assets/items/hm_blizzard.png" alt=""> | Blizzard | Abomasnow, Glalie, Froslass | Snow falls and settles **around the Pokémon**, whatever the biome, and melts on its own. |
-| <img class="hm-disc" src="../../assets/items/hm_sweet_scent.png" alt=""> | Sweet Scent | Gloom, Bellossom, Vileplume, Aromatisse | Draws a crowd of wild Pokémon out of hiding **around it**. |
-| <img class="hm-disc" src="../../assets/items/hm_headbutt.png" alt=""> | Headbutt | Cranidos, Rampardos, Cubone | Shakes the **nearest tree** loose — no more hitting trees with your face. |
-| <img class="hm-disc" src="../../assets/items/hm_thief.png" alt=""> | Thief | Meowth, Purrloin, Sableye | Takes what the **nearest creature** is holding and hands it to you. Never from a player. |
 | <img class="hm-disc" src="../../assets/items/hm_present.png" alt=""> | Present | Delibird, Stantler, Spinda | Fills the **nearest empty container** with the sort of thing you find rather than buy. |
 | <img class="hm-disc" src="../../assets/items/hm_miracle_eye.png" alt=""> | Miracle Eye | Xatu, Sigilyph, Unown | Throws an eye towards the nearest legendary monument. Follow it. |
 | <img class="hm-disc" src="../../assets/items/hm_celebrate.png" alt=""> | Celebrate | Jigglypuff, Ludicolo, Alcremie | A firework show over its head, for no reason at all. |
@@ -54,5 +60,5 @@ Pokémon — not for you, and not for your other mounts — and help it whenever
 | <img class="hm-disc" src="../../assets/items/hm_helping_hand.png" alt=""> | Helping Hand | Plusle, Minun, Audino | It spends half the stamina on everything it does. |
 | <img class="hm-disc" src="../../assets/items/hm_agility.png" alt=""> | Agility | Alakazam, Jolteon, Aerodactyl | It runs faster on land. |
 
-[Jump](abilities/toggles.md#jump) and [Rock Climb](abilities/toggles.md#rock-climb) are still yours,
-and both carry over to whatever you are riding.
+The [Jump](abilities/toggles.md#jump) and [Rock Climb](abilities/toggles.md#rock-climb) auras also
+carry over to whatever you are riding.
