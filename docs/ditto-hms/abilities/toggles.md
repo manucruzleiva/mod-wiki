@@ -11,10 +11,19 @@ You can run as many auras as you like, from one Pokémon or several. They cost n
 them back: switch them on again from its wheel. Walking away from it only pauses them.
 
 !!! info "Weather auras"
-    **Sandstorm, Fog and Snowscape** are weather. Only **one** runs at a time: switching one on, on
-    any of your Pokémon, switches the others off, so the last one you switched on is the one in
-    effect. They also **stay on when the Pokémon goes back in its ball**, until you switch them off
-    from its wheel. They still only work while that Pokémon is out and near you.
+    **Rain Dance, Sunny Day, Sandstorm, Fog and Snowscape** are weather. Only **one** runs at a time:
+    switching one on, on any of your Pokémon, switches the others off, so the last one you switched
+    on is the one in effect. Between players close together, too, the weather switched on last wins.
+    Like any aura, a weather only works while its Pokémon is out and near you, and **putting the
+    Pokémon back in its ball switches it off**.
+
+    Rain Dance and Sunny Day use **Minecraft's own weather**: while one is on, the sky stays raining
+    or clear. Switch it off, or recall the Pokémon, and the game decides the weather again.
+
+!!! tip "What is on right now"
+    Open Cobblemon's interaction wheel on any Pokémon: its **top-left corner lists every HM in
+    effect**, each with the Pokémon doing it in brackets, by its nickname if it has one — for
+    example *Sandstorm (Dunes)*.
 
 The toggles that make **a mount** better — Surf, Tailwind, Swift, U-turn, Helping Hand and Agility —
 belong to the Pokémon you ride: see [Your Pokémon](../pokemon.md#mount-toggles).
@@ -39,9 +48,11 @@ species is one of these:
 | <img class="hm-disc" src="../../../assets/items/hm_lava_plume.png" alt=""> | Lava Plume | Magcargo, Slugma, Turtonator |
 | <img class="hm-disc" src="../../../assets/items/hm_lucky_chant.png" alt=""> | Lucky Chant | Clefairy, Chimecho, Togetic |
 | <img class="hm-disc" src="../../../assets/items/hm_magnet_rise.png" alt=""> | Magnet Rise | Magnemite, Magneton, Magnezone |
+| <img class="hm-disc" src="../../../assets/items/hm_rain_dance.png" alt=""> | Rain Dance *(weather)* | Politoed, Kyogre, Golduck |
 | <img class="hm-disc" src="../../../assets/items/hm_rock_climb.png" alt=""> | Rock Climb | Rhydon, Rhyperior, Sneasel |
 | <img class="hm-disc" src="../../../assets/items/hm_shadow_sneak.png" alt=""> | Shadow Sneak | Gengar, Banette, Spiritomb |
 | <img class="hm-disc" src="../../../assets/items/hm_snowscape.png" alt=""> | Snowscape *(weather)* | Froslass, Mamoswine |
+| <img class="hm-disc" src="../../../assets/items/hm_sunny_day.png" alt=""> | Sunny Day *(weather)* | Torkoal, Sunkern, Volcarona |
 | <img class="hm-disc" src="../../../assets/items/hm_sweet_scent.png" alt=""> | Sweet Scent | Gloom, Bellossom, Vileplume, Aromatisse |
 | <img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> | Sandstorm *(weather)* | Hippopotas, Hippowdon, Tyranitar, Gigalith, Sandaconda |
 | <img class="hm-disc" src="../../../assets/items/hm_fog.png" alt=""> | Fog *(weather)* | Gastly, Haunter, Koffing, Weezing, Misdreavus — or any Pokémon with Haze, Mist or Smokescreen |
@@ -152,7 +163,10 @@ Total stealth on foot. No footstep sounds, no name over your head, and **nothing
 you** — not pressure plates, not tripwires, not a sculk sensor.
 
 You move slower than a walk for it, though faster than a crouch, so it is something you can actually
-travel in rather than a stationary hiding trick.
+travel in rather than a stationary hiding trick. **You cannot sprint on land** while it runs, and
+climbing a ladder or vine makes no sound either.
+
+It only works **on land**: in water or lava you swim at your normal speed, sprint-swimming included.
 
 !!! note "If you are already on a scoreboard team"
     The hidden nametag is done with a vanilla team, so a player who already belongs to one keeps
@@ -201,3 +215,17 @@ Weather aura. Sand is your ground while it blows:
 Weather aura. A fog rolls in around you and you can only see about 20 blocks. Anything hunting you
 **loses track of you** once you are more than 8 blocks away, and goes back to wandering. Up close it
 still sees you, so Fog is for slipping away, not for standing in the open.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_rain_dance.png" alt=""> Rain Dance
+
+Weather aura. **It rains**, the game's own rain, for as long as Rain Dance is on and its Pokémon is out.
+Switch it off or recall the Pokémon and Minecraft takes the weather back.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_sunny_day.png" alt=""> Sunny Day
+
+Weather aura. **The sky stays clear**, with no rain and no storms, for as long as Sunny Day is on and
+its Pokémon is out. Switch it off or recall the Pokémon and Minecraft takes the weather back.

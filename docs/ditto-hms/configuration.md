@@ -153,6 +153,8 @@ what the config takes.
 | Sweet Scent | — · cooldown **60s** between arrivals |
 | Sandstorm | how many times faster loose ground breaks — **4** |
 | Fog | blocks away a hunter loses you — **8** |
+| Rain Dance | — |
+| Sunny Day | — |
 
 ## Default values — Your Pokémon
 
@@ -161,8 +163,6 @@ what the config takes.
 
 | Ability | Cooldown | Power |
 |---|---|---|
-| Rain Dance | 10s | 6000 |
-| Sunny Day | 10s | 6000 |
 | Celebrate | 10 min | how many rockets — **8** |
 | Blizzard | 30s | radius — **180** |
 
