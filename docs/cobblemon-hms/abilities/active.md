@@ -193,8 +193,18 @@ and it is **you** who grows, to twice your size, for a while.
 ### <img class="hm-disc" src="../../../assets/items/hm_minimize.png" alt=""> Minimize
 **Cooldown:** 1 min · **Power:** how long you stay small (**5 minutes**)
 
-Growth's opposite. Aim at a **Pokémon** and it shrinks one size, for good. Aim anywhere else and you
-go half-size for a while.
+Growth's opposite. Aim at one of your **Pokémon**, or a wild one, and it shrinks by a fifth, for good.
+Aim at anything else, or at nothing, and it is **you** who goes half-size for a while.
+
+- Each use shrinks the Pokémon a little more, down to a quarter of its size. Growth undoes it.
+- Even one use takes a Pokémon below Cobblemon's smallest natural size, so it shows as **XS**.
+- Two uses take it below the size Cobblemon lets you ride (0.75×). Grow it back to ride it again.
+- It refuses another player's or an NPC trainer's Pokémon, a Pokémon in a battle, and an **Alpha**
+  (an Alpha keeps its own size; settle it with Calm Mind first). A refusal costs no cooldown.
+- Your own shrink lasts 5 minutes, and the action bar tells you when it ends. Using Growth on
+  yourself replaces it. Dying or logging out ends it early.
+- Nothing checks for room: if you grow back inside a tight space, the game pushes you out, as it
+  does with anything that no longer fits.
 
 ---
 
