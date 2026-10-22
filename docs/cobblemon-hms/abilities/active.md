@@ -201,7 +201,9 @@ go half-size for a while.
 ### <img class="hm-disc" src="../../../assets/items/hm_outrage.png" alt=""> Outrage
 **Cooldown:** 5 min
 
-Aim at an **XL** Pokémon to turn it into an **Alpha**. Anything smaller, it refuses.
+Aim at one of **your own XL** Pokémon to turn it into an **Alpha**. Anything smaller, it refuses.
+It also refuses wild Pokémon, other trainers' Pokémon, and a Pokémon that is battling, fainted or
+evolving. The Alpha stays through recalls and relogs, and [Calm Mind](#calm-mind) is the way back.
 
 ---
 
