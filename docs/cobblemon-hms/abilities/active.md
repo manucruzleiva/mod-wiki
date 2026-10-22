@@ -72,7 +72,12 @@ Turns the block you aim at into a redstone power source — enough to throw a do
 lamp from across a room. **The charge is permanent.** It is saved with the world, so it stays when
 you log off and when the server restarts, and charging another block does not take it back: charge
 as many as you like. Aim Charge at a charged block again to discharge it. Breaking the block ends
-its charge too.
+its charge on the spot, and so does anything else that replaces it: an explosion, a piston, flowing
+water. A block placed in the same spot afterwards starts uncharged. A charge belongs to its own
+dimension, so it never powers the same coordinates in the Nether or the End.
+
+Charging needs the right to build where you aim, the same as placing a redstone block: it does not
+work in adventure or spectator mode, inside spawn protection, or in a claim that keeps you out.
 
 The block is never replaced — it stays exactly what it is and simply *answers* as a power source —
 so you can charge a chest, a furnace, a statue or a wall without losing anything. While it is live
