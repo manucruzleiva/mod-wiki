@@ -169,7 +169,7 @@ vanilla, but it is the same gesture on the same kind of thing, so it gives up it
 
 - It reaches as far as your hand does, and the find pops out of the face you swept, as from a brush.
 - It only works where a brush would: not in adventure mode or spectator, and not inside spawn
-  protection unless you are an operator.
+  protection (unless you are an operator) or a claim you may not build in.
 
 ---
 
