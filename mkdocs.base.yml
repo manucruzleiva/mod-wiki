@@ -105,7 +105,7 @@ extra:
     routes:         { name: Routes,                         version: 1.2.119, modrinth: PfmV1XPQ }
     nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.38, modrinth: wHlszYZN }
     picnic:         { name: Cobblemon Picnic,               version: 4.0.0, modrinth: sfptxo0H }
-    ditto-hms:      { name: Cobblemon HMs,                  version: 3.0.0, modrinth: JNfSyMuQ }
+    cobblemon-hms:  { name: Cobblemon HMs,                  version: 3.0.0, modrinth: JNfSyMuQ }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0, modrinth: S01tPZTk }
     champions:      { name: Cobblemon Champions Training,   version: 1.0.14, modrinth: PlTQXswh }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr }
@@ -174,7 +174,7 @@ extra:
       optional:
         - [cloth-config, "the settings screen (with Mod Menu on Fabric)"]
       curseforge: 1581251
-    ditto-hms:
+    cobblemon-hms:
       minecraft: "1.21.1"
       cobblemon: "1.8+"
       cobblemon_note: on 1.7.x it refuses to load with a dependency error, not a crash mid-session
@@ -252,6 +252,9 @@ extra:
   wiki:
     url: https://manucruzleiva.github.io/mod-wiki/
     alias: latest
+    # Carpetas de mods que cambiaron de nombre: overrides/404.html manda los links viejos a la nueva.
+    moved:
+      ditto-hms: cobblemon-hms
     menu:
       - { title: Home,         path: "" }
       - { title: Report a bug, path: reporting/ }

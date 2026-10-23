@@ -57,12 +57,12 @@ here.
 </div>
 </div>
 
-<div class="mod-row" data-mod-color="ditto-hms" data-tags="<!-- mod-tags:ditto-hms -->" markdown>
-![](ditto-hms/assets/logo.png){ .mod-row__logo }
+<div class="mod-row" data-mod-color="cobblemon-hms" data-tags="<!-- mod-tags:cobblemon-hms -->" markdown>
+![](cobblemon-hms/assets/logo.png){ .mod-row__logo }
 <div class="mod-row__body" markdown>
-[Cobblemon HMs](ditto-hms/index.md){ .mod-row__name }
+[Cobblemon HMs](cobblemon-hms/index.md){ .mod-row__name }
 <span class="mod-row__what">Your Pokémon lend you their moves: HMs on your fist, auras on you.</span>
-<span class="mod-row__chips"><!-- mod-chips:ditto-hms --></span>
+<span class="mod-row__chips"><!-- mod-chips:cobblemon-hms --></span>
 </div>
 </div>
 
@@ -146,7 +146,7 @@ full list for your loader.
 -   ### :material-tune: Configuring
 
     Routes and Nuzlocke are set up on the **world-creation screen** and stored with that world.
-    Picnic, Ditto HMs and Raid Icons use in-game config: a command, or a settings screen. Tree Carve
+    Picnic, Cobblemon HMs and Raid Icons use in-game config: a command, or a settings screen. Tree Carve
     is set by operators with `/treecarve config`. Mid-Battle EXP has nothing to configure.
 
     See each mod's *Configuration* page.

@@ -117,6 +117,17 @@ through lava and walk its floor without the fluid dragging on every step, and yo
 are under. Swimming out is exactly as it always was — like Dive, it takes a penalty away rather than
 handing out a bonus.
 
+- **Fire:** you do not burn while it is on, in lava or out of it.
+- **Seeing:** with your head under the lava you can see about 24 blocks instead of one, and the
+  floor around you is lit. Wading with your head above the surface leaves the sky as it is.
+- **Moving:** walking through lava is as quick as walking on land. Sprint and you swim, a little
+  faster, but never faster than you sprint on land.
+- **Breathing:** your air never runs out while you are under.
+
+Like every aura it only works while its Pokémon is out and within 24 blocks. If it wanders off, goes
+back in its ball or you switch the aura off, the fire protection lasts **5 more seconds** and you get
+a warning if you are in lava, enough to climb out.
+
 It used to need Burning Bulwark for the fire protection. Burning Bulwark went to Cobblemon Action
 Combat, so Lava Plume now covers that on its own.
 
@@ -131,13 +142,22 @@ Fortune leans your way while it lasts: what you break and what you fish give up 
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_magnet_rise.png" alt=""> Magnet Rise
+**Power:** percent of creative flight speed you get (default **25**)
 
 <img class="hm-disc" src="../../../assets/items/hud_magnet_rise.png" alt=""> — how it shows in your status bar while it runs.
 
-**Flight.** Switch it on and you are off the ground for as long as you like, drifting at half your
-walking pace with no dash.
+**Flight.** Switch it on and **double-tap jump** to lift off, as in creative mode. You stay up for as
+long as you like, drifting at a little over half your walking pace, and sprinting gives no dash.
+While it is on you take no fall damage.
 
 It is a **building** tool, not a way to travel: for that, ride one of your flying Pokémon.
+
+- **It ends when the aura does:** recall the Pokémon, switch it off, or get more than 24 blocks from
+  it (flying straight up counts). If that happens in the air, you **float down on Slow Falling**
+  until you land instead of dropping.
+- Logging out while flying is safe: you come back floating down, and switch it on again once your
+  Pokémon is out.
+- It never touches a flight you have from somewhere else (creative mode, another mod, `/fly`).
 
 ---
 
@@ -183,7 +203,16 @@ It only works **on land**: in water or lava you swim at your normal speed, sprin
 <img class="hm-disc" src="../../../assets/items/hud_snowscape.png" alt=""> — how it shows in your status bar while it runs.
 
 Winter follows you on foot: snow settles around you as you walk, and **still water freezes over** as
-you cross it. Flowing water is left alone, so a river keeps running instead of being paved.
+you cross it, the way Frost Walker does. Flowing water is left alone, so a river keeps running
+instead of being paved, and the ice melts back once you have passed. Where it is too warm to snow
+(a desert, a jungle, a plain), the snow melts away again shortly behind you; in a cold biome it stays.
+
+- It works **only on foot**: not while you ride, swim or fall, so it never freezes the sea under a
+  Pokémon you are surfing on.
+- Only open water freezes. Kelp, seagrass and waterlogged blocks are left as they are, and no ice
+  forms around a creature standing in the water.
+- It changes only what you could change by hand: nothing in adventure mode, in spectator mode or
+  inside spawn protection, and nothing on land a claim mod protects from you.
 
 ---
 
@@ -197,18 +226,29 @@ arrives is what lives there, and it never brings a herd.
 **The held item is the seasoning.** Whatever the Pokémon giving off the scent is holding works the
 way that item would as a Poké Snack seasoning: a berry that leans a snack toward a type, a nature or
 a shiny leans the scent the same way. Several Pokémon with Sweet Scent on add their items together,
-like several seasonings in one snack. The item is not used up.
+like several seasonings in one snack. The item is not used up. A seasoning that makes a snack bite
+sooner (a bite-time effect) makes the next arrival come sooner too, with the same chance it has in a
+snack.
+
+Arrivals follow the snack's limits: no more than Cobblemon's Poké Snack cap of wild Pokémon per
+chunk around you, nothing arrives while you are dead or spectating, and the interval never drops
+below 5 seconds whatever the config says.
 
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> Sandstorm
 **Power:** how many times faster loose ground breaks (**4**)
 
+<img class="hm-disc" src="../../../assets/items/hud_sandstorm.png" alt=""> — how it shows in your status bar while it runs.
+
 Weather aura, with a clear sky. Sand is your ground while it blows:
 
-- **Soul sand, soul soil and honey never slow you down.**
-- **Sand, gravel, soul sand, soul soil, clay and concrete powder break 4× as fast** while you are
-  looking at them. Everything else breaks at its normal speed.
+- **Soul sand and honey never slow you down**: you walk on them as fast as on stone. It works in the
+  Nether too, so a soul sand valley is open ground.
+- **Sand, gravel, soul sand, soul soil, clay and concrete powder break 4× as fast**, whatever you
+  dig them with. Everything else breaks at its normal speed, so it never makes your pickaxe faster.
+- Another player's weather switched on later, close to you, replaces your sandstorm until you move
+  apart or theirs ends.
 
 ---
 

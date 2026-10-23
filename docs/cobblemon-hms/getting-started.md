@@ -57,6 +57,6 @@ trader comes with. See [Configuration](configuration.md#trainer-ditto).
 Each trader wears a random player skin, and keeps it for as long as it stands there.
 
 ??? note "For resource pack makers: adding faces"
-    Every PNG under `assets/cobblemon_ditto_hms/textures/entity/trainer_ditto/` is in the pool, so a
+    Every PNG under `assets/cobblemon_hms/textures/entity/trainer_ditto/` is in the pool, so a
     resource pack adds a face by dropping a file in. A file whose name contains `shiny` is kept for
     the shiny trader.

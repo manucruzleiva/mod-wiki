@@ -3,8 +3,8 @@
 <div class="flow" markdown>
 
 1. <span class="flow__tag">Starts as</span> the built-in defaults
-2. <span class="flow__tag">Saved in</span> `config/cobblemon_ditto_hms.json`
-3. <span class="flow__tag">Changed with</span> the Cloth Config screen (through Mod Menu) or `/dittohm config`
+2. <span class="flow__tag">Saved in</span> `config/cobblemon_hms.json`
+3. <span class="flow__tag">Changed with</span> the Cloth Config screen (through Mod Menu) or `/hms config`
 4. <span class="flow__tag flow__tag--result">Result</span> the per-ability values the game uses
 
 </div>
@@ -19,7 +19,7 @@ choice left is the button:
 | **Activator button** | Left-click · Right-click · **either** *(default)* | Left never opens chests or doors; right is answered by interactable blocks first |
 
 ```
-/dittohm config activator button left|right|either
+/hms config activator button left|right|either
 ```
 
 ---
@@ -36,12 +36,12 @@ choice left is the button:
 | **TM price** | 4–32 relic coins | The cheapest and dearest a TM can cost |
 
 ```
-/dittohm config trader enabled <true|false>
-/dittohm config trader every <1200-1728000>
-/dittohm config trader stay <200-72000>
-/dittohm config trader ivs <0-6>
-/dittohm config trader levels <min> <max>
-/dittohm config trader coins <min> <max>
+/hms config trader enabled <true|false>
+/hms config trader every <1200-1728000>
+/hms config trader stay <200-72000>
+/hms config trader ivs <0-6>
+/hms config trader levels <min> <max>
+/hms config trader coins <min> <max>
 ```
 
 One appearance is **one trader for the whole server**, not one per player, and everybody is told in
@@ -92,13 +92,13 @@ Changes save automatically.
 Operator-only (`permission level 2`):
 
 ```
-/dittohm config <ability> cooldown <0–24000>
-/dittohm config <ability> power <0–512>
-/dittohm config <ability> minlevel <0–100>
-/dittohm config <ability> enabled <true|false>
-/dittohm config <ability> reset
-/dittohm config reset_all
-/dittohm config activator button <left|right|either>
+/hms config <ability> cooldown <0–24000>
+/hms config <ability> power <0–512>
+/hms config <ability> minlevel <0–100>
+/hms config <ability> enabled <true|false>
+/hms config <ability> reset
+/hms config reset_all
+/hms config activator button <left|right|either>
 ```
 
 ---
@@ -107,8 +107,8 @@ Operator-only (`permission level 2`):
 
 The file is saved at:
 
-- **Fabric:** `config/cobblemon_ditto_hms.json`
-- **NeoForge:** `config/cobblemon_ditto_hms.json`
+- **Fabric:** `config/cobblemon_hms.json`
+- **NeoForge:** `config/cobblemon_hms.json`
 
 You can edit it directly — changes take effect on next server start. Settings from before 4.0 that
 no longer do anything (hunger, trader weight, activator item) are left in the file and ignored.
@@ -151,7 +151,7 @@ what the config takes.
 | Absorb | magnet radius — **6** |
 | Lucky Chant | Luck amplifier — **1** |
 | Shadow Sneak | percent of your speed you keep — **55** |
-| Sweet Scent | — · cooldown **60s** between arrivals |
+| Sweet Scent | — · cooldown **60s** between arrivals (minimum 5s) |
 | Sandstorm | how many times faster loose ground breaks — **4** |
 | Fog | blocks away a hunter loses you — **8** |
 | Rain Dance | — |
