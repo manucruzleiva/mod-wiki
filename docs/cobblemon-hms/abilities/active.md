@@ -176,6 +176,10 @@ Sweeps a **suspicious sand or gravel** block clean in a single motion instead of
 and finds exactly what a brush would have found. **Rooted dirt** counts too: it is not brushable in
 vanilla, but it is the same gesture on the same kind of thing, so it gives up its hanging roots.
 
+- It reaches as far as your hand does, and the find pops out of the face you swept, as from a brush.
+- It only works where a brush would: not in adventure mode or spectator, and not inside spawn
+  protection (unless you are an operator) or a claim you may not build in.
+
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_teleport.png" alt=""> Teleport

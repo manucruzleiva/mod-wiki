@@ -134,7 +134,7 @@ what the config takes.
 | Teleport | 30s | 30 |
 | Stockpile | 1s | lava self-damage — **7** |
 | Charge | 3s | ticks between sparks — **10** |
-| Tail Whip | 2s | 1 |
+| Tail Whip | 2s | — |
 | Growth | 1 min | how long you stay big — **6000** |
 | Minimize | 1 min | how long you stay small — **6000** |
 | Outrage | 5 min | — |
