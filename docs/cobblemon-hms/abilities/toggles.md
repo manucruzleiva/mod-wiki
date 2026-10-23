@@ -148,9 +148,12 @@ It is a **building** tool, not a way to travel: for that, ride one of your flyin
 Every vertical surface behaves like a ladder, and it is steered by the **movement keys**: **W**
 climbs, **S** descends, and holding nothing holds your place on the wall.
 
-Your horizontal movement is left alone, so you can travel along a face and step off it whenever you
-like — a wall is something to climb, not something to be stuck to. On the ground it only takes over
-when you are actually asking to go up, so walking and jumping near a wall work normally.
+While you are on a wall you **hold on to it**: moving sideways travels along the face, but S takes
+you down rather than off. To let go, turn away from the wall, move sideways past its edge, or reach
+the ground. On the ground it only takes over when you hold **W** against a real wall, so slabs,
+stairs, paths and carpets are walked over as usual. In the air, facing a wall catches you on it, so
+a jump or a fall next to one ends with you holding on. It never fights your elytra, and a long climb
+down is not counted as a fall.
 
 **It works on your mount too.** Riding a Pokémon, run into a wall holding **W** and your Pokémon
 climbs it with you.
