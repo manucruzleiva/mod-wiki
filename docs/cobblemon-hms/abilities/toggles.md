@@ -204,11 +204,16 @@ like several seasonings in one snack. The item is not used up.
 ### <img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> Sandstorm
 **Power:** how many times faster loose ground breaks (**4**)
 
+<img class="hm-disc" src="../../../assets/items/hud_sandstorm.png" alt=""> — how it shows in your status bar while it runs.
+
 Weather aura, with a clear sky. Sand is your ground while it blows:
 
-- **Soul sand, soul soil and honey never slow you down.**
-- **Sand, gravel, soul sand, soul soil, clay and concrete powder break 4× as fast** while you are
-  looking at them. Everything else breaks at its normal speed.
+- **Soul sand and honey never slow you down**: you walk on them as fast as on stone. It works in the
+  Nether too, so a soul sand valley is open ground.
+- **Sand, gravel, soul sand, soul soil, clay and concrete powder break 4× as fast**, whatever you
+  dig them with. Everything else breaks at its normal speed, so it never makes your pickaxe faster.
+- Another player's weather switched on later, close to you, replaces your sandstorm until you move
+  apart or theirs ends.
 
 ---
 
