@@ -1,6 +1,6 @@
 # Community Credits
 
-Cobblemon Ditto HMs is shaped by the people who play it. Everyone below opened a ticket in our
+Cobblemon HMs is shaped by the people who play it. Everyone below opened a ticket in our
 [Discord](https://discord.gg/SwcwXcCN4k) — thank you! 💜
 
 ## Reporters

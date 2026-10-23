@@ -60,8 +60,8 @@ here.
 <div class="mod-row" data-mod-color="ditto-hms" data-tags="<!-- mod-tags:ditto-hms -->" markdown>
 ![](ditto-hms/assets/logo.png){ .mod-row__logo }
 <div class="mod-row__body" markdown>
-[Cobblemon Ditto HMs](ditto-hms/index.md){ .mod-row__name }
-<span class="mod-row__what">20 HMs you learn yourself, paid for in hunger.</span>
+[Cobblemon HMs](ditto-hms/index.md){ .mod-row__name }
+<span class="mod-row__what">Your Pokémon lend you their moves: HMs on your fist, auras on you.</span>
 <span class="mod-row__chips"><!-- mod-chips:ditto-hms --></span>
 </div>
 </div>

@@ -1,5 +1,5 @@
 INHERIT: mkdocs.base.yml
-site_name: Cobblemon Ditto HMs
+site_name: Cobblemon HMs
 site_url: https://manucruzleiva.github.io/mod-wiki/ditto-hms/
 
 extra:
@@ -14,13 +14,13 @@ exclude_docs: |
   !/stylesheets/
 
 nav:
-  - Cobblemon Ditto HMs:
+  - Cobblemon HMs:
       - ditto-hms/index.md
       - Getting Started: ditto-hms/getting-started.md
-      - Active HMs: ditto-hms/abilities/active.md
-      - Toggle HMs: ditto-hms/abilities/toggles.md
+      - Partner HMs: ditto-hms/abilities/active.md
+      - Auras: ditto-hms/abilities/toggles.md
       - Your Pokémon: ditto-hms/pokemon.md
-      - HM Wheel: ditto-hms/hm-wheel.md
+      - HM Case: ditto-hms/tm-bag.md
       - Upgrading to 4.0: ditto-hms/upgrading-to-4.md
       - Commands: ditto-hms/commands.md
       - Configuration: ditto-hms/configuration.md

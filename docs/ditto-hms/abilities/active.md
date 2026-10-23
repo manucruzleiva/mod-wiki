@@ -1,47 +1,54 @@
-# Active HMs
+# Partner HMs
 
-Active HMs are fired on demand: pick one in the [HM wheel](../hm-wheel.md), then click with an
-empty hand or the HM Case. Since **4.0** there are nine of them — the ones that are about moving
-through the world and shaping it. The rest live on [your Pokémon](../pokemon.md) now, or went to
-[Cobblemon Action Combat](../upgrading-to-4.md#what-went-where). Each use costs **hunger or experience** — whichever the server asks for —
-and most start a cooldown.
+Partner HMs are the ones your **empty fist** fires. One of your sent-out Pokémon **lends** you one:
+open Cobblemon's interaction wheel on it, pick **Field moves**, then **"Lend me …"**. While that
+Pokémon is out and within 24 blocks, a click with an empty hand fires the HM. One Pokémon lends one
+HM at a time: picking another replaces it.
+
+The only cost is a **cooldown, kept per Pokémon**: two Pokémon that both know Cut each have their own.
 
 <div class="flow" markdown>
 
-1. <span class="flow__tag">Do</span> Click with your chosen activator
-2. <span class="flow__tag flow__tag--check">Check</span> You have learned the HM
-3. <span class="flow__tag flow__tag--check">Check</span> Your experience level is high enough
-4. <span class="flow__tag flow__tag--check">Check</span> It is off cooldown and you can pay for it
-5. <span class="flow__tag flow__tag--result">Result</span> The ability fires, hunger or XP is spent, and the cooldown starts
+1. <span class="flow__tag">Do</span> Click with an empty hand
+2. <span class="flow__tag flow__tag--check">Check</span> A Pokémon of yours, out and near you, is lending the HM
+3. <span class="flow__tag flow__tag--check">Check</span> Your experience level is high enough (if the server sets one)
+4. <span class="flow__tag flow__tag--check">Check</span> That Pokémon's cooldown has run out
+5. <span class="flow__tag flow__tag--result">Result</span> The HM fires and that Pokémon's cooldown starts
 
 </div>
 
-<p class="flow__note">If any check fails, nothing happens and nothing is spent.</p>
+<p class="flow__note">If any check fails, nothing happens.</p>
 
 ---
 
-## Acquisition table
+## Who can lend it
 
-Any one of the listed Pokémon can teach the HM — including the species that taught an HM merged into it. Hold the trigger item and **sneak + right-click** the Pokémon.
+A Pokémon can lend an HM when the move is **in its movepool** (equipped or not) — including a move
+merged into it, so a Pokémon with Dig can lend Rock Smash — or when its species is one of these:
 
-| Disc | HM | Pokémon (any of) | Trigger item |
-|---|---|---|---|
-| <img class="hm-disc" src="../../../assets/items/hm_camouflage.png" alt=""> | Camouflage | Zorua, Kecleon, Ditto | Ink Sac |
-| <img class="hm-disc" src="../../../assets/items/hm_charge.png" alt=""> | Charge | Elekid, Electabuzz, Electivire | Redstone Dust |
-| <img class="hm-disc" src="../../../assets/items/hm_cut.png" alt=""> | Cut | Scyther, Scizor, Kartana, Kleavor, Vikavolt | Stick |
-| <img class="hm-disc" src="../../../assets/items/hm_leafage.png" alt=""> | Leafage | Bulbasaur, Chikorita, Treecko, Snivy, Drilbur, Excadrill | Dandelion |
-| <img class="hm-disc" src="../../../assets/items/hm_rock_smash.png" alt=""> | Rock Smash | Hitmonchan, Machop, Geodude, Diglett, Dugtrio, Trapinch | Flint |
-| <img class="hm-disc" src="../../../assets/items/hm_stockpile.png" alt=""> | Stockpile | Gulpin, Swalot, Squirtle, Totodile, Mudkip, Camerupt, Magcargo, Heatran | Sponge |
-| <img class="hm-disc" src="../../../assets/items/hm_strength.png" alt=""> | Strength | Machoke, Machamp, Conkeldurr | Iron Ingot |
-| <img class="hm-disc" src="../../../assets/items/hm_tail_whip.png" alt=""> | Tail Whip | Rattata, Sentret, Buneary | Brush |
-| <img class="hm-disc" src="../../../assets/items/hm_teleport.png" alt=""> | Teleport | Abra, Kadabra, Alakazam, Ralts | Ender Pearl |
+| Disc | HM | Pokémon (any of) |
+|---|---|---|
+| <img class="hm-disc" src="../../../assets/items/hm_camouflage.png" alt=""> | Camouflage | Zorua, Kecleon, Ditto |
+| <img class="hm-disc" src="../../../assets/items/hm_charge.png" alt=""> | Charge | Elekid, Electabuzz, Electivire |
+| <img class="hm-disc" src="../../../assets/items/hm_cut.png" alt=""> | Cut | Scyther, Scizor, Kartana, Kleavor, Vikavolt |
+| <img class="hm-disc" src="../../../assets/items/hm_leafage.png" alt=""> | Leafage | Bulbasaur, Chikorita, Treecko, Snivy, Drilbur, Excadrill |
+| <img class="hm-disc" src="../../../assets/items/hm_rock_smash.png" alt=""> | Rock Smash | Hitmonchan, Machop, Geodude, Diglett, Dugtrio, Trapinch |
+| <img class="hm-disc" src="../../../assets/items/hm_stockpile.png" alt=""> | Stockpile | Gulpin, Swalot, Squirtle, Totodile, Mudkip, Camerupt, Magcargo, Heatran |
+| <img class="hm-disc" src="../../../assets/items/hm_strength.png" alt=""> | Strength | Machoke, Machamp, Conkeldurr |
+| <img class="hm-disc" src="../../../assets/items/hm_tail_whip.png" alt=""> | Tail Whip | Rattata, Sentret, Buneary |
+| <img class="hm-disc" src="../../../assets/items/hm_teleport.png" alt=""> | Teleport | Abra, Kadabra, Alakazam, Ralts |
+| <img class="hm-disc" src="../../../assets/items/hm_growth.png" alt=""> | Growth | Sunkern, Sunflora, Petilil |
+| <img class="hm-disc" src="../../../assets/items/hm_minimize.png" alt=""> | Minimize | Ditto, Chansey, Barboach |
+| <img class="hm-disc" src="../../../assets/items/hm_outrage.png" alt=""> | Outrage | Dragonite, Salamence, Haxorus |
+| <img class="hm-disc" src="../../../assets/items/hm_calm_mind.png" alt=""> | Calm Mind | Alakazam, Espeon, Gardevoir |
+| <img class="hm-disc" src="../../../assets/items/hm_celebrate.png" alt=""> | Celebrate | Jigglypuff, Ludicolo, Alcremie |
 
 ---
 
 ## Ability details
 
 ### <img class="hm-disc" src="../../../assets/items/hm_camouflage.png" alt=""> Camouflage
-**Hunger:** 3 · **Cooldown:** 15 min · **Power:** 18000t (**15 minutes**)
+**Cooldown:** 15 min · **Power:** 18000t (**15 minutes**)
 
 Become the **living creature** you're looking at. Your model is replaced by theirs — species, form,
 variant, gear and its nametag — for everyone who can see you.
@@ -59,12 +66,13 @@ to hit, nothing in your way, and nothing that can be killed off you.
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_charge.png" alt=""> Charge
-**Hunger:** 2 · **Cooldown:** 3s · **Power:** 200t (**10 seconds**)
+**Cooldown:** 3s · **Power:** ticks between sparks (**10**)
 
 Turns the block you aim at into a redstone power source — enough to throw a door, a piston or a
-lamp from across a room. **It does not run out.** The charge ends when you charge something else or
-leave, and never on a timer: a power source that switches itself off after a minute is not a power
-source, it is a fault to go and find.
+lamp from across a room. **The charge is permanent.** It is saved with the world, so it stays when
+you log off and when the server restarts, and charging another block does not take it back: charge
+as many as you like. Aim Charge at a charged block again to discharge it. Breaking the block ends
+its charge too.
 
 The block is never replaced — it stays exactly what it is and simply *answers* as a power source —
 so you can charge a chest, a furnace, a statue or a wall without losing anything. While it is live
@@ -73,7 +81,7 @@ it throws off **electric sparks**, so a charged block is one you can find again.
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_cut.png" alt=""> Cut
-**Hunger:** 2 · **Cooldown:** none · **Power:** max 128 blocks
+**Power:** max 128 blocks
 
 Aim at a **log** and the whole tree comes down — every connected log, with the leaves and vines
 tangled in it. Aim at a **leaf** or a **vine** and just that tangle goes.
@@ -92,13 +100,10 @@ used to do), in two passes of decreasing politeness:
 
 It never strips grass down to dirt: as a fallback, that would go off every time you missed a tree.
 
-Felling a tree and cutting a plant both cost hunger. A single isolated log, and shearing a sheep,
-are free.
-
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_leafage.png" alt=""> Leafage
-**Hunger:** 1 · **Cooldown:** 2s · **Power:** radius 5
+**Cooldown:** 2s · **Power:** radius 5
 
 Instantly grows **every crop around you** to full maturity — handy for fast harvests — and does
 the same for saplings and berry trees.
@@ -118,7 +123,7 @@ block you aim at — Dirt, Grass Block, Coarse Dirt, Dirt Path — turns into Fa
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_rock_smash.png" alt=""> Rock Smash
-**Hunger:** 2 · **Cooldown:** none · **Power:** max 32 ores
+**Power:** max 32 ores
 
 Instantly breaks the block you aim at. If it's an **ore**, vein-mines all connected ore of that
 type; otherwise breaks the single pickaxe-minable block (Netherite Pickaxe drops).
@@ -129,7 +134,7 @@ come out in one hit, free, with a Netherite Shovel's drops.
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_stockpile.png" alt=""> Stockpile
-**Hunger:** 1 · **Cooldown:** 1s · **Power:** lava self-damage 7 (3.5 hearts)
+**Cooldown:** 1s · **Power:** lava self-damage 7 (3.5 hearts)
 
 Stockpile is a mouthful you keep. It took over **Water Gun** and **Eruption**.
 
@@ -147,7 +152,7 @@ from a bucket.
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_strength.png" alt=""> Strength
-**Hunger:** 2 · **Cooldown:** none
+
 
 Pushes the aimed block one block in whichever of the six directions you're looking — up and down
 included. Containers travel with their contents, and a **double chest moves as one unit**: both
@@ -156,7 +161,7 @@ halves go together, or the push fails if either has nowhere to go. Won't move fl
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_tail_whip.png" alt=""> Tail Whip
-**Hunger:** 2 · **Cooldown:** 2s
+**Cooldown:** 2s
 
 Sweeps a **suspicious sand or gravel** block clean in a single motion instead of a dozen slow ones,
 and finds exactly what a brush would have found. **Rooted dirt** counts too: it is not brushable in
@@ -165,7 +170,7 @@ vanilla, but it is the same gesture on the same kind of thing, so it gives up it
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_teleport.png" alt=""> Teleport
-**Hunger:** 6 · **Cooldown:** 30s · **Power:** max 30 blocks
+**Cooldown:** 30s · **Power:** max 30 blocks
 
 Blinks you to the block you're looking at (≤ 30 blocks), finding the nearest safe landing. Plays
 the Enderman teleport sound.
@@ -174,3 +179,42 @@ It is the strongest way to travel the mod has, so it is priced like it: dearer t
 you fire, and slow to come back.
 
 ---
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_growth.png" alt=""> Growth
+**Cooldown:** 1 min · **Power:** how long you stay big (**5 minutes**)
+
+Aim at one of your **Pokémon** and it grows one size, for good. Aim at anything else, or at nothing,
+and it is **you** who grows, to twice your size, for a while.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_minimize.png" alt=""> Minimize
+**Cooldown:** 1 min · **Power:** how long you stay small (**5 minutes**)
+
+Growth's opposite. Aim at a **Pokémon** and it shrinks one size, for good. Aim anywhere else and you
+go half-size for a while.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_outrage.png" alt=""> Outrage
+**Cooldown:** 5 min
+
+Aim at an **XL** Pokémon to turn it into an **Alpha**. Anything smaller, it refuses.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_calm_mind.png" alt=""> Calm Mind
+**Cooldown:** 2 min
+
+Aim at an **Alpha** to settle it back into the ordinary Pokémon it was. The way back out of Outrage.
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_celebrate.png" alt=""> Celebrate
+**Cooldown:** 10 min · **Power:** how many rockets (**8**)
+
+Punch with an empty hand and a firework show goes up over your head, for no reason at all. The
+rockets are made for you, not taken from your inventory, and burst well above head height, so they
+hurt nobody.
