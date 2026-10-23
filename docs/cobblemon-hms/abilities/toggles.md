@@ -184,7 +184,8 @@ It only works **on land**: in water or lava you swim at your normal speed, sprin
 
 Winter follows you on foot: snow settles around you as you walk, and **still water freezes over** as
 you cross it, the way Frost Walker does. Flowing water is left alone, so a river keeps running
-instead of being paved, and the ice melts back once you have passed.
+instead of being paved, and the ice melts back once you have passed. Where it is too warm to snow
+(a desert, a jungle, a plain), the snow melts away again shortly behind you; in a cold biome it stays.
 
 - It works **only on foot**: not while you ride, swim or fall, so it never freezes the sea under a
   Pokémon you are surfing on.
