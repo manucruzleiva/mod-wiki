@@ -22,10 +22,15 @@ The toggles that make a ride better belong to the **Pokémon you ride**. Open th
 wheel on it and switch them on there; a toggle that is on shows **green**. They stay on for that
 Pokémon — not for you, and not for your other mounts — and help it whenever it is ridden.
 
+A mount toggle only shows up on a Pokémon you can **ride the way it helps**: Tailwind on one you can
+fly on, Surf on one you can swim on, Agility on one you can run on. Swift, U-turn and Helping Hand
+need a Pokémon you can ride at all. A Pokémon that learns Tailwind but cannot carry you through the
+air does not offer it.
+
 | Disc | Toggle | Pokémon (any of) | While it is on |
 |---|---|---|---|
-| <img class="hm-disc" src="../../assets/items/hm_surf.png" alt=""> | Surf | Lapras, Kyogre, Suicune | It cuts through water much faster. |
-| <img class="hm-disc" src="../../assets/items/hm_tailwind.png" alt=""> | Tailwind | Talonflame, Noivern, Staraptor | It moves noticeably faster through the air. |
+| <img class="hm-disc" src="../../assets/items/hm_surf.png" alt=""> | Surf | Lapras, Gyarados, Milotic | It cuts through water much faster. |
+| <img class="hm-disc" src="../../assets/items/hm_tailwind.png" alt=""> | Tailwind | Pidgeot, Noivern, Staraptor | It moves noticeably faster through the air. |
 | <img class="hm-disc" src="../../assets/items/hm_swift.png" alt=""> | Swift | Ninjask, Accelgor, Electrode | It gets up to speed twice as quickly. |
 | <img class="hm-disc" src="../../assets/items/hm_u_turn.png" alt=""> | U-turn | Yanma, Ninjask, Venipede | It turns far more sharply — on land, in water and in the air. |
 | <img class="hm-disc" src="../../assets/items/hm_helping_hand.png" alt=""> | Helping Hand | Plusle, Minun, Audino | It spends half the stamina on everything it does. |
