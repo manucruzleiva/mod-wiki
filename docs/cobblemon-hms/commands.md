@@ -39,7 +39,8 @@ The same report, for another player.
 /hms trader spawn shiny [player]
 /hms trader forget [player]
 ```
-Summons a Trainer Ditto on demand, or undoes a catch so it will visit that player again.
+Summons a Trainer Ditto on demand, or wipes the slate for a player: it forgets that they caught one
+**and** that they beat one, so traders visit them, stop running and open their stall again.
 
 ```
 /hms config <ability> cooldown <0–24000>
