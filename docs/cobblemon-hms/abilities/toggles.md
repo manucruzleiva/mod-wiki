@@ -123,10 +123,19 @@ Combat, so Lava Plume now covers that on its own.
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_lucky_chant.png" alt=""> Lucky Chant
+**Power:** points of Luck and levels of Fortune (default **1**)
 
 <img class="hm-disc" src="../../../assets/items/hud_lucky_chant.png" alt=""> — how it shows in your status bar while it runs.
 
 Fortune leans your way while it lasts: what you break and what you fish give up a little more.
+
+- **What you break:** anything Fortune already improves (ores, crops, glowstone, melons…) drops as
+  if your tool had **one more level of Fortune**, so a Fortune III pickaxe mines like Fortune IV and
+  an empty hand like Fortune I. Blocks Fortune does not touch drop as usual, and Silk Touch still
+  gives the block itself.
+- **What you fish:** you get **+1 Luck**, the same as a Potion of Luck, which makes a fishing rod
+  pull up a little more treasure and a little less junk. It adds to a potion you drank rather than
+  replacing it.
 
 ---
 
