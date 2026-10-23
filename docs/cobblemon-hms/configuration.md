@@ -151,7 +151,7 @@ what the config takes.
 | Absorb | magnet radius — **6** |
 | Lucky Chant | Luck amplifier — **1** |
 | Shadow Sneak | percent of your speed you keep — **55** |
-| Sweet Scent | — · cooldown **60s** between arrivals |
+| Sweet Scent | — · cooldown **60s** between arrivals (minimum 5s) |
 | Sandstorm | how many times faster loose ground breaks — **4** |
 | Fog | blocks away a hunter loses you — **8** |
 | Rain Dance | — |
