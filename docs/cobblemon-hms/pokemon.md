@@ -29,7 +29,7 @@ air does not offer it.
 
 | Disc | Toggle | Pokémon (any of) | While it is on |
 |---|---|---|---|
-| <img class="hm-disc" src="../../assets/items/hm_surf.png" alt=""> | Surf | Lapras, Kyogre, Suicune | It cuts through water much faster. |
+| <img class="hm-disc" src="../../assets/items/hm_surf.png" alt=""> | Surf | Lapras, Gyarados, Milotic | It cuts through water much faster. |
 | <img class="hm-disc" src="../../assets/items/hm_tailwind.png" alt=""> | Tailwind | Pidgeot, Noivern, Staraptor | It moves noticeably faster through the air. |
 | <img class="hm-disc" src="../../assets/items/hm_swift.png" alt=""> | Swift | Ninjask, Accelgor, Electrode | It gets up to speed twice as quickly. |
 | <img class="hm-disc" src="../../assets/items/hm_u_turn.png" alt=""> | U-turn | Yanma, Ninjask, Venipede | It turns far more sharply — on land, in water and in the air. |
