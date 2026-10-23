@@ -149,7 +149,7 @@ what the config takes.
 | Lava Plume | tenths of the lava-stride multiplier — **17** |
 | Snowscape | trail radius — **3** |
 | Absorb | magnet radius — **6** |
-| Lucky Chant | Luck amplifier — **1** |
+| Lucky Chant | points of Luck and levels of Fortune it adds (0–5) — **1** |
 | Shadow Sneak | percent of your speed you keep — **55** |
 | Sweet Scent | — · cooldown **60s** between arrivals |
 | Sandstorm | how many times faster loose ground breaks — **4** |
