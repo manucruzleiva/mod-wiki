@@ -26,10 +26,17 @@ Pokémon — not for you, and not for your other mounts — and help it whenever
 |---|---|---|---|
 | <img class="hm-disc" src="../../assets/items/hm_surf.png" alt=""> | Surf | Lapras, Kyogre, Suicune | It cuts through water much faster. |
 | <img class="hm-disc" src="../../assets/items/hm_tailwind.png" alt=""> | Tailwind | Talonflame, Noivern, Staraptor | It moves noticeably faster through the air. |
-| <img class="hm-disc" src="../../assets/items/hm_swift.png" alt=""> | Swift | Ninjask, Accelgor, Electrode | It gets up to speed twice as quickly. |
+| <img class="hm-disc" src="../../assets/items/hm_swift.png" alt=""> | Swift | Ninjask, Accelgor, Electrode | It gets up to speed in about half the time. |
 | <img class="hm-disc" src="../../assets/items/hm_u_turn.png" alt=""> | U-turn | Yanma, Ninjask, Venipede | It turns far more sharply — on land, in water and in the air. |
 | <img class="hm-disc" src="../../assets/items/hm_helping_hand.png" alt=""> | Helping Hand | Plusle, Minun, Audino | It spends half the stamina on everything it does. |
 | <img class="hm-disc" src="../../assets/items/hm_agility.png" alt=""> | Agility | Alakazam, Jolteon, Aerodactyl | It runs faster on land. |
+
+!!! note "Swift"
+    Swift shortens the time a mount takes to reach its top speed: half the time for most walking
+    and swimming mounts, a little less than that for flyers and divers. It never goes past the top
+    of Cobblemon's ride-stat scale, and it keeps the mount's ride boosts from snacks and cooking. A walking
+    mount only feels it **while sprinting**, since Cobblemon gets it up to walking pace at a fixed
+    rate, and gliders have no acceleration stat for it to change.
 
 The [Jump](abilities/toggles.md#jump) and [Rock Climb](abilities/toggles.md#rock-climb) auras also
 carry over to whatever you are riding.
