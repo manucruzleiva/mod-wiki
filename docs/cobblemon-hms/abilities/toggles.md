@@ -131,13 +131,22 @@ Fortune leans your way while it lasts: what you break and what you fish give up 
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_magnet_rise.png" alt=""> Magnet Rise
+**Power:** percent of creative flight speed you get (default **25**)
 
 <img class="hm-disc" src="../../../assets/items/hud_magnet_rise.png" alt=""> — how it shows in your status bar while it runs.
 
-**Flight.** Switch it on and you are off the ground for as long as you like, drifting at half your
-walking pace with no dash.
+**Flight.** Switch it on and **double-tap jump** to lift off, as in creative mode. You stay up for as
+long as you like, drifting at a little over half your walking pace, and sprinting gives no dash.
+While it is on you take no fall damage.
 
 It is a **building** tool, not a way to travel: for that, ride one of your flying Pokémon.
+
+- **It ends when the aura does:** recall the Pokémon, switch it off, or get more than 24 blocks from
+  it (flying straight up counts). If that happens in the air, you **float down on Slow Falling**
+  until you land instead of dropping.
+- Logging out while flying is safe: you come back floating down, and switch it on again once your
+  Pokémon is out.
+- It never touches a flight you have from somewhere else (creative mode, another mod, `/fly`).
 
 ---
 
