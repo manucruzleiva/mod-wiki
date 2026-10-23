@@ -28,9 +28,9 @@ choice left is the button:
 
 | Setting | Default | What it does |
 |---|---|---|
-| **Visits** | on | Whether the trader appears at all |
+| **Visits** | on | Whether new traders appear. Switching it off leaves any trader already out to finish its visit |
 | **Appears every** | 36000 ticks (30 min) | How long the whole server waits between appearances |
-| **Stays for** | 6000 ticks (5 min) | How long it waits before wandering off |
+| **Stays for** | 6000 ticks (5 min) | How long it waits before wandering off. It is never despawned earlier, and never in the middle of a battle or a catch |
 | **Guaranteed perfect IVs** | 0 | Rolled like any wild Ditto · 1 gives it one best stat · 6 is flawless |
 | **Level** | 15–45 | The band its level is rolled from, inclusive |
 | **TM price** | 4–32 relic coins | The cheapest and dearest a TM can cost |
@@ -46,7 +46,10 @@ choice left is the button:
 
 One appearance is **one trader for the whole server**, not one per player, and everybody is told in
 chat when it arrives and when it leaves. The clock runs while the server is empty and survives a
-restart; an appearance that lands with nobody eligible is missed rather than saved up.
+restart; an appearance that lands with nobody eligible is missed rather than saved up. It turns up
+24 to 48 blocks from a player who has never caught one, on solid ground, in whatever dimension that
+player is in (under the Nether's roof, near the player's own height). A trader left in a chunk that
+nobody visits leaves quietly the next time someone comes close.
 
 It offers **three random Cobblemon TMs**, rolled once and kept for as long as that trader is
 standing there, one of each. A TM's price follows the power of its move: a status move costs the
@@ -111,7 +114,8 @@ The file is saved at:
 - **NeoForge:** `config/cobblemon_hms.json`
 
 You can edit it directly — changes take effect on next server start. Settings from before 4.0 that
-no longer do anything (hunger, trader weight, activator item) are left in the file and ignored.
+no longer do anything (hunger, activator item) are left in the file and ignored; the old trader
+weight is dropped from it.
 
 ---
 
