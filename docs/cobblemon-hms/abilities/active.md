@@ -149,8 +149,9 @@ Stockpile is a mouthful you keep. It took over **Water Gun** and **Eruption**.
 - What you carry is yours, not the Pokémon's: it stays through a recall, a change of partner and
   a restart.
 
-Drinking and spitting both pass the check a bucket does: nothing happens in **adventure** or
-**spectator** mode, under **spawn protection** or past the **world border**. Lava is never placed
+Drinking counts as breaking the block and spitting as placing one, so nothing happens in
+**adventure** or **spectator** mode, under **spawn protection**, past the **world border** or inside a
+**claim** you can't build in. Lava is never placed
 where you stand, and water boils away in the Nether, as it would from a bucket.
 
 ---
