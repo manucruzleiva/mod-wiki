@@ -171,7 +171,26 @@ from a bucket.
 
 Pushes the aimed block one block in whichever of the six directions you're looking — up and down
 included. Containers travel with their contents, and a **double chest moves as one unit**: both
-halves go together, or the push fails if either has nowhere to go. Won't move fluids.
+halves go together, or the push fails if either has nowhere to go. A waterlogged block leaves its
+water behind, and fences, walls and stairs join up with their new neighbours.
+
+The spot it lands in has to be free: air, grass, water or anything else you could place a block
+into, with no player or Pokémon standing there. A torch, flower or rail won't be pushed somewhere
+it couldn't stay.
+
+**What won't budge:**
+
+- Water and lava themselves.
+- Anything you can't break: bedrock, barriers, end portal frames, command blocks.
+- Spawners, trial spawners and vaults. Packs can add more blocks to the
+  `#cobblemon_hms:strength_immovable` block tag.
+- One half of a two-block thing: doors, beds, tall flowers, an extended piston, Cobblemon's PC and
+  pasture.
+- Machines their mod marks as never to be moved, such as Cobblemon's healing machine, restoration
+  tank, fossil analyzer and campfire pot.
+
+A push is breaking a block in one spot and placing it in another, so both spots go through the same
+permission check: spawn protection, the world border and adventure mode all stop it.
 
 ---
 
