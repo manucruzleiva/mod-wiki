@@ -192,7 +192,7 @@ instead of being paved, and the ice melts back once you have passed. Where it is
 - Only open water freezes. Kelp, seagrass and waterlogged blocks are left as they are, and no ice
   forms around a creature standing in the water.
 - It changes only what you could change by hand: nothing in adventure mode, in spectator mode or
-  inside spawn protection.
+  inside spawn protection, and nothing on land a claim mod protects from you.
 
 ---
 
