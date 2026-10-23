@@ -169,7 +169,7 @@ what the config takes.
 | U-turn | tenths of the mount's turn multiplier — **18** |
 | Helping Hand | tenths of the stamina SPEND — **2** |
 | Tailwind | tenths of the mount's flight-speed multiplier — **15** |
-| Swift | tenths of the mount's acceleration multiplier — **20** |
+| Swift | tenths of how much quicker the mount gets up to speed — **20** (half the time) |
 
 !!! note "Old config files"
     A config written before 4.0 is brought up to date on load, and only where the meaning of a value
