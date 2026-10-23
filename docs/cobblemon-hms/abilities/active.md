@@ -185,8 +185,28 @@ you fire, and slow to come back.
 ### <img class="hm-disc" src="../../../assets/items/hm_growth.png" alt=""> Growth
 **Cooldown:** 1 min · **Power:** how long you stay big (**5 minutes**)
 
-Aim at one of your **Pokémon** and it grows one size, for good. Aim at anything else, or at nothing,
-and it is **you** who grows, to twice your size, for a while.
+Aim at one of your **Pokémon**, or a wild one, and it grows one size, for good. Aim at anything
+else, or at nothing, and it is **you** who grows, to twice your size, for a while.
+
+**On a Pokémon**
+
+- Each use makes it a quarter bigger (×1.25), up to **4×** its normal size. The size is saved on
+  the Pokémon itself, so it stays through a recall, a trade, the PC and a server restart.
+  [Minimize](#minimize) takes it back down a step.
+- You aim up to 20 blocks away, and only at what you can see: a block in between stops the aim.
+- It refuses, and nothing goes on cooldown, when the Pokémon is already as big as it gets, belongs
+  to another player or to an NPC trainer, is in a battle, or is an **Alpha** (an Alpha's size is
+  fixed by Cobblemon).
+
+**On you**
+
+- You grow to twice your size for 5 minutes (the power value, in ticks). Your hitbox grows with
+  you, so everyone sees it and a low ceiling will suffocate you, as it would anything that no longer
+  fits.
+- Using it again restarts the timer. Minimize on yourself replaces it at once.
+- Other players are ignored by the aim: pointing at one grows you.
+- It wears off on its own, and the action bar tells you when. Dying, logging out or a server
+  restart also bring you back to your normal size. Recalling the partner does not cut it short.
 
 ---
 
