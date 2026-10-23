@@ -28,7 +28,7 @@ Pokémon — not for you, and not for your other mounts — and help it whenever
 | <img class="hm-disc" src="../../assets/items/hm_tailwind.png" alt=""> | Tailwind | Talonflame, Noivern, Staraptor | It moves noticeably faster through the air. |
 | <img class="hm-disc" src="../../assets/items/hm_swift.png" alt=""> | Swift | Ninjask, Accelgor, Electrode | It gets up to speed twice as quickly. |
 | <img class="hm-disc" src="../../assets/items/hm_u_turn.png" alt=""> | U-turn | Yanma, Ninjask, Venipede | It turns far more sharply — on land, in water and in the air. |
-| <img class="hm-disc" src="../../assets/items/hm_helping_hand.png" alt=""> | Helping Hand | Plusle, Minun, Audino | It spends half the stamina on everything it does. |
+| <img class="hm-disc" src="../../assets/items/hm_helping_hand.png" alt=""> | Helping Hand | Plusle, Minun, Audino | It spends a fifth of its stamina, so it runs about five times as far. Resting refills it at the normal pace. |
 | <img class="hm-disc" src="../../assets/items/hm_agility.png" alt=""> | Agility | Alakazam, Jolteon, Aerodactyl | It runs faster on land. |
 
 The [Jump](abilities/toggles.md#jump) and [Rock Climb](abilities/toggles.md#rock-climb) auras also
