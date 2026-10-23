@@ -55,10 +55,16 @@ variant, gear and its nametag — for everyone who can see you.
 
 - Aim at a **creature** in clear view → you look exactly like it for 15 minutes.
 - **Fire it again while you are wearing one** → the costume comes off and the HM is ready
-  immediately, so changing disguise is two presses.
+  immediately, so changing disguise is two presses. This works with any Pokémon lending
+  Camouflage, not only the one that put the costume on.
 - A block, a wall between you and it, or empty air → nothing happens. You can only copy something
   you can actually see.
-- Other **players** can't be copied.
+- Only **living creatures** can be copied: not other **players**, armour stands, boats, minecarts
+  or item frames, and not something already wearing a costume of its own.
+- Your hitbox becomes the creature's, so a large disguise can get stuck where a small one fits.
+- The costume comes off on its own when it runs out, when you die, log out or switch to spectator,
+  or when an operator switches Camouflage off. Putting your Pokémon back in its ball does not take
+  it off.
 
 The disguise is a costume, not a creature: nothing extra exists in the world, so there is nothing
 to hit, nothing in your way, and nothing that can be killed off you.
