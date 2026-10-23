@@ -235,5 +235,9 @@ Aim at an **Alpha** to settle it back into the ordinary Pokémon it was. The way
 **Cooldown:** 10 min · **Power:** how many rockets (**8**)
 
 Punch with an empty hand and a firework show goes up over your head, for no reason at all. The
-rockets are made for you, not taken from your inventory, and burst well above head height, so they
-hurt nobody.
+rockets are made for you, not taken from your inventory, and they **hurt nobody**: not you, not your
+Pokémon, not the player next to you, even if one bursts early against a branch.
+
+- It needs **open air above you**, about 8 blocks. Under a roof, a tree or a cave ceiling it
+  refuses, and the cooldown is not spent.
+- The Power setting is how many rockets go up, from 1 to 32.
