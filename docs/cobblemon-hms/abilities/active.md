@@ -172,11 +172,18 @@ vanilla, but it is the same gesture on the same kind of thing, so it gives up it
 ### <img class="hm-disc" src="../../../assets/items/hm_teleport.png" alt=""> Teleport
 **Cooldown:** 30s · **Power:** max 30 blocks
 
-Blinks you to the block you're looking at (≤ 30 blocks), finding the nearest safe landing. Plays
-the Enderman teleport sound.
+Blinks you to the block you're looking at (≤ 30 blocks), with the Enderman teleport sound. The
+Pokémon lending it **comes with you** and lands at your side, so it keeps lending Teleport.
 
-It is the strongest way to travel the mod has, so it is priced like it: dearer than anything else
-you fire, and slow to come back.
+- You land **on the face you aimed at**: on top of a floor, in front of a wall, under a ceiling. A
+  wall, a floor or a roof is never something you come out on the other side of.
+- Aimed at open sky, or at a block further than 30 blocks → nothing happens.
+- No room for you there (Growth counts: a giant needs a giant's room), lava, fire, magma, outside
+  the world border → nothing happens.
+- Not while you are riding: get off your mount first.
+- Any fall you were in the middle of ends when you arrive.
+
+It is the strongest way to travel the mod has, so it is slow to come back.
 
 ---
 
