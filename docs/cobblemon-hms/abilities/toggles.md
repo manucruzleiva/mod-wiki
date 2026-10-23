@@ -117,6 +117,17 @@ through lava and walk its floor without the fluid dragging on every step, and yo
 are under. Swimming out is exactly as it always was — like Dive, it takes a penalty away rather than
 handing out a bonus.
 
+- **Fire:** you do not burn while it is on, in lava or out of it.
+- **Seeing:** with your head under the lava you can see about 24 blocks instead of one, and the
+  floor around you is lit. Wading with your head above the surface leaves the sky as it is.
+- **Moving:** walking through lava is as quick as walking on land. Sprint and you swim, a little
+  faster, but never faster than you sprint on land.
+- **Breathing:** your air never runs out while you are under.
+
+Like every aura it only works while its Pokémon is out and within 24 blocks. If it wanders off, goes
+back in its ball or you switch the aura off, the fire protection lasts **5 more seconds** and you get
+a warning if you are in lava, enough to climb out.
+
 It used to need Burning Bulwark for the fire protection. Burning Bulwark went to Cobblemon Action
 Combat, so Lava Plume now covers that on its own.
 
