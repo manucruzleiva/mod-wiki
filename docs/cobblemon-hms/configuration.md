@@ -168,7 +168,7 @@ what the config takes.
 | Agility | tenths of the mount's land-speed multiplier — **15** |
 | U-turn | tenths of the mount's turn multiplier — **18** |
 | Helping Hand | tenths of the stamina SPEND — **2** |
-| Tailwind | tenths of the mount's flight-speed multiplier — **15** |
+| Tailwind | tenths of the multiplier on the mount's flight-speed stat — **15** |
 | Swift | tenths of the mount's acceleration multiplier — **20** |
 
 !!! note "Old config files"
