@@ -23,6 +23,8 @@ to lose a message are an axe and losing the log it is on.
 </div>
 </div>
 
+![A birch at the edge of a village house, carved with "WE WERE HERE" and a heart](assets/cover.jpg)
+
 ## What can it do?
 
 <div class="grid cards" markdown>
