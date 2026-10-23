@@ -131,6 +131,13 @@ type; otherwise breaks the single pickaxe-minable block (Netherite Pickaxe drops
 It **digs** too (this is what Dig used to do): dirt, sand, gravel and anything else a shovel takes
 come out in one hit, free, with a Netherite Shovel's drops.
 
+- A vein that runs from stone into deepslate comes out whole: iron ore and deepslate iron ore count
+  as the same ore.
+- Every block breaks as if you had mined it yourself, so claims, spawn protection and adventure
+  mode all hold, and containers keep what's inside them (a shulker box drops with its contents).
+- Unbreakable blocks such as bedrock never break. If nothing could be broken, the HM says so and
+  does nothing.
+
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_stockpile.png" alt=""> Stockpile
