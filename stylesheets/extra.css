@@ -88,8 +88,8 @@ body[data-mod="picnic"] {
   --wiki-hero-to: #cc6141;
 }
 
-/* Ditto HMs — Ditto's violet-pink. */
-body[data-mod="ditto-hms"] {
+/* Cobblemon HMs — Ditto's violet-pink. */
+body[data-mod="cobblemon-hms"] {
   --md-primary-fg-color: #7c3f97;
   --md-primary-fg-color--light: #a568bd;
   --md-primary-fg-color--dark: #52276a;
@@ -195,7 +195,7 @@ body[data-md-color-scheme="slate"][data-mod="picnic"] {
   --wiki-hero-to: #a44329;
 }
 
-body[data-md-color-scheme="slate"][data-mod="ditto-hms"] {
+body[data-md-color-scheme="slate"][data-mod="cobblemon-hms"] {
   --md-primary-fg-color: #5f2f76;
   --md-typeset-a-color: #d3a2e6;
   --md-accent-fg-color: #f3a83c;
@@ -608,7 +608,7 @@ body {
 
 .mod-row[data-mod-color="routes"] { --mod-c: #0e6a4b; }
 .mod-row[data-mod-color="picnic"] { --mod-c: #b1452c; }
-.mod-row[data-mod-color="ditto-hms"] { --mod-c: #7c3f97; }
+.mod-row[data-mod-color="cobblemon-hms"] { --mod-c: #7c3f97; }
 .mod-row[data-mod-color="nuzlocke"] { --mod-c: #33459b; }
 .mod-row[data-mod-color="raid-icons"] { --mod-c: #0e6f78; }
 .mod-row[data-mod-color="champions"] { --mod-c: #8f5600; }
@@ -619,7 +619,7 @@ body {
 
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="routes"] { --mod-c: #17a06f; }
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="picnic"] { --mod-c: #d76a4d; }
-[data-md-color-scheme="slate"] .mod-row[data-mod-color="ditto-hms"] { --mod-c: #a568bd; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="cobblemon-hms"] { --mod-c: #a568bd; }
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="nuzlocke"] { --mod-c: #6172c9; }
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="raid-icons"] { --mod-c: #2a9ea8; }
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="champions"] { --mod-c: #c07a12; }

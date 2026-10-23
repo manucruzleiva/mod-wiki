@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The single wiki for every Cobblemon mod by shiero — Routes, Nuzlocke & Soul Link, Picnic, Ditto HMs, Raid Icons, Champions Training, Mid-Battle EXP and Tree Carve.">
+        <meta name="description" content="The single wiki for every Cobblemon mod by shiero — Routes, Nuzlocke & Soul Link, Picnic, Cobblemon HMs, Raid Icons, Champions Training, Mid-Battle EXP and Tree Carve.">
       
       
       
@@ -67,12 +67,25 @@
 
   <script>
     (function () {
-      var mods = ["routes", "nuzlocke", "picnic", "ditto-hms", "raid-icons", "champions", "tree-carve", "mid-battle-exp", "poketowns", "action-combat"];
+      var mods = ["routes", "nuzlocke", "picnic", "cobblemon-hms", "raid-icons", "champions", "tree-carve", "mid-battle-exp", "poketowns", "action-combat"];
       var alias = "latest";
       var root = new URL("https://manucruzleiva.github.io/mod-wiki/").pathname;
+      var moved = {"ditto-hms": "cobblemon-hms"};
       var path = window.location.pathname;
       if (path.indexOf(root) !== 0) { return; }
       var rest = path.slice(root.length).split('/');
+      // Un mod que cambio de carpeta (ditto-hms -> cobblemon-hms): la misma pagina en su carpeta nueva,
+      // en `latest`, venga o no con version. Las paginas adentro tambien llevan la carpeta del mod.
+      if (moved[rest[0]]) {
+        var to = moved[rest[0]];
+        var tail = rest.slice(1);
+        if (tail[0] === alias || /^\d+\.\d+/.test(tail[0])) { tail = tail.slice(1); }
+        if (tail[0] === rest[0]) { tail[0] = to; }
+        else if (tail.length && tail[0] !== '') { tail.unshift(to); }
+        window.location.replace(root + to + '/' + alias + '/' + tail.join('/')
+          + window.location.search + window.location.hash);
+        return;
+      }
       if (mods.indexOf(rest[0]) === -1 || rest[1] === alias || /^\d+\.\d+$/.test(rest[1])) { return; }
       // /<mod>/<mod>/<pagina>/ es el mismo link con la carpeta del mod ya puesta.
       var page = rest[1] === rest[0] ? rest.slice(1) : rest;
@@ -260,7 +273,7 @@
               </li>
             
               <li class="md-tabs__item">
-                <a href="https://manucruzleiva.github.io/mod-wiki/ditto-hms/" class="md-tabs__link">Cobblemon HMs</a>
+                <a href="https://manucruzleiva.github.io/mod-wiki/cobblemon-hms/" class="md-tabs__link">Cobblemon HMs</a>
               </li>
             
               <li class="md-tabs__item">
@@ -514,7 +527,7 @@
       
     <script>
     (function () {
-      var MODS = ["routes", "nuzlocke", "picnic", "ditto-hms", "raid-icons", "champions", "tree-carve", "mid-battle-exp", "poketowns", "action-combat"];
+      var MODS = ["routes", "nuzlocke", "picnic", "cobblemon-hms", "raid-icons", "champions", "tree-carve", "mid-battle-exp", "poketowns", "action-combat"];
       function paint() {
         var path = window.location.pathname;
         var found = '';
