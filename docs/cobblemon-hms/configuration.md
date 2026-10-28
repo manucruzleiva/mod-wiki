@@ -139,7 +139,7 @@ what the config takes.
 | Minimize | 1 min | how long you stay small — **6000** |
 | Outrage | 5 min | — |
 | Calm Mind | 2 min | — |
-| Celebrate | 10 min | how many rockets — **8** |
+| Celebrate | 1s | how many rockets, 1 to 32 — **8** |
 
 ## Default values — Auras
 
