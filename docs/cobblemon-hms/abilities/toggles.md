@@ -69,14 +69,12 @@ species is one of these:
 ### <img class="hm-disc" src="../../../assets/items/hm_absorb.png" alt=""> Absorb
 **Power:** magnet radius 6
 
-
 Loose items on the ground drift toward you while it is on, so a scattered drop or a mined vein
 gathers itself. Items are nudged rather than yanked, so they keep their normal pickup delay.
 
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_dive.png" alt=""> Dive
-
 
 Lets you **live and work underwater**. Water stops getting in your way:
 
@@ -92,7 +90,6 @@ the speed you always did — if you want to be *fast* in the water, ride a Poké
 
 ### <img class="hm-disc" src="../../../assets/items/hm_flash.png" alt=""> Flash
 
-
 Lets you **see clearly in the dark**, even in caves and at night. Toggle off to remove instantly.
 
 ---
@@ -100,14 +97,12 @@ Lets you **see clearly in the dark**, even in caves and at night. Toggle off to 
 ### <img class="hm-disc" src="../../../assets/items/hm_jump.png" alt=""> Jump
 **Power:** Jump Boost level (default **IV**)
 
-
 Applies continuous **Jump Boost**. The `power` value equals the buff level, so `power = 4` gives Jump Boost IV.
 
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_lava_plume.png" alt=""> Lava Plume
 **Power:** tenths of the movement multiplier (default 17)
-
 
 Dive's twin for lava. It lets you **live and work down there**: you **do not burn**, you move
 through lava and walk its floor without the fluid dragging on every step, and you breathe while you
@@ -132,14 +127,12 @@ Combat, so Lava Plume now covers that on its own.
 
 ### <img class="hm-disc" src="../../../assets/items/hm_lucky_chant.png" alt=""> Lucky Chant
 
-
 Fortune leans your way while it lasts: what you break and what you fish give up a little more.
 
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_magnet_rise.png" alt=""> Magnet Rise
 **Power:** percent of creative flight speed you get (default **25**)
-
 
 **Flight.** Switch it on and **double-tap jump** to lift off, as in creative mode. You stay up for as
 long as you like, drifting at a little over half your walking pace, and sprinting gives no dash.
@@ -158,7 +151,6 @@ It is a **building** tool, not a way to travel: for that, ride one of your flyin
 
 ### <img class="hm-disc" src="../../../assets/items/hm_rock_climb.png" alt=""> Rock Climb
 
-
 Every vertical surface behaves like a ladder, and it is steered by the **movement keys**: **W**
 climbs, **S** descends, and holding nothing holds your place on the wall.
 
@@ -173,7 +165,6 @@ climbs it with you.
 
 ### <img class="hm-disc" src="../../../assets/items/hm_shadow_sneak.png" alt=""> Shadow Sneak
 **Power:** percent of your speed you keep (default **55**)
-
 
 Total stealth on foot. No footstep sounds, no name over your head, and **nothing underfoot notices
 you** — not pressure plates, not tripwires, not a sculk sensor.
@@ -192,7 +183,6 @@ It only works **on land**: in water or lava you swim at your normal speed, sprin
 
 ### <img class="hm-disc" src="../../../assets/items/hm_snowscape.png" alt=""> Snowscape
 **Power:** trail radius 3
-
 
 Winter follows you on foot: snow settles around you as you walk, and **still water freezes over** as
 you cross it, the way Frost Walker does. Flowing water is left alone, so a river keeps running
@@ -230,7 +220,6 @@ below 5 seconds whatever the config says.
 
 ### <img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> Sandstorm
 **Power:** how many times faster loose ground breaks (**4**)
-
 
 Weather aura, with a clear sky. Sand is your ground while it blows:
 
