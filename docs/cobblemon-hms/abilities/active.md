@@ -160,14 +160,19 @@ Stockpile is a mouthful you keep. It took over **Water Gun** and **Eruption**.
 
 - **Aim at water or lava** (source or flowing) and you **drink it**. The pool is drained, and that
   fluid is now what you carry. Water is free; **lava is spicy** and burns going down.
+  A waterlogged block gives up its water and keeps its shape; kelp and seagrass break, drops and all.
 - **Aim anywhere else** and you **spit it back out** on the face you are aiming at — the same square
-  a bucket would fill. You can spit **as often as you like**: what you carry only changes when you
-  drink the other fluid.
+  a bucket would fill. Water spat at a slab, stairs or a fence **waterlogs** it, as a bucket does.
+  Grass, flowers or snow in the way are washed off and drop. You can spit **as often as you like**:
+  what you carry only changes when you drink the other fluid.
 - Spitting water at a **sponge** soaks it.
+- What you carry is yours, not the Pokémon's: it stays through a recall, a change of partner and
+  a restart.
 
-It passes the same permission check a bucket does, so claims, spawn protection and the world border
-all hold. Lava is never placed at your own feet, and water boils away in the Nether, as it would
-from a bucket.
+Drinking counts as breaking the block and spitting as placing one, so nothing happens in
+**adventure** or **spectator** mode, under **spawn protection**, past the **world border** or inside a
+**claim** you can't build in. Lava is never placed
+where you stand, and water boils away in the Nether, as it would from a bucket.
 
 ---
 
