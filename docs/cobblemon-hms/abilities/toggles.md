@@ -24,15 +24,17 @@ them back: switch them on again from its wheel. Walking away from it only pauses
 
 !!! tip "What is on right now"
     Open Cobblemon's interaction wheel on any Pokémon: its **top-left corner lists every HM in
-    effect**, each with the Pokémon doing it in brackets, by its nickname if it has one — for
+    effect**, grouped by kind and with its icon, each with the Pokémon doing it in brackets, by its nickname if it has one — for
     example *Sandstorm (Dunes)*.
 
 The toggles that make **a mount** better — Surf, Tailwind, Swift, U-turn, Helping Hand and Agility —
 belong to the Pokémon you ride: see [Your Pokémon](../pokemon.md#mount-toggles).
 
-!!! tip "HUD icons"
-    Every aura in effect shows its **own HM status-effect icon** in your HUD (top-right), so it's
-    obvious at a glance which ones are on.
+!!! tip "Active HMs on your HUD"
+    The **top-left corner of your HUD lists every HM in effect**, grouped by kind — **Companion**
+    (the HM lent to your fist), **Aura**, **Weather** and **Mount** — each with its own icon. Auras
+    no longer show as status effects. Hide the list with *Show active HMs on the HUD* in the config
+    screen (Mod Menu), or `/hms config hud false` in singleplayer.
 
 ---
 
@@ -67,7 +69,6 @@ species is one of these:
 ### <img class="hm-disc" src="../../../assets/items/hm_absorb.png" alt=""> Absorb
 **Power:** magnet radius 6
 
-<img class="hm-disc" src="../../../assets/items/hud_absorb.png" alt=""> — how it shows in your status bar while it runs.
 
 Loose items on the ground drift toward you while it is on, so a scattered drop or a mined vein
 gathers itself. Items are nudged rather than yanked, so they keep their normal pickup delay.
@@ -76,7 +77,6 @@ gathers itself. Items are nudged rather than yanked, so they keep their normal p
 
 ### <img class="hm-disc" src="../../../assets/items/hm_dive.png" alt=""> Dive
 
-<img class="hm-disc" src="../../../assets/items/hud_dive.png" alt=""> — how it shows in your status bar while it runs.
 
 Lets you **live and work underwater**. Water stops getting in your way:
 
@@ -92,7 +92,6 @@ the speed you always did — if you want to be *fast* in the water, ride a Poké
 
 ### <img class="hm-disc" src="../../../assets/items/hm_flash.png" alt=""> Flash
 
-<img class="hm-disc" src="../../../assets/items/hud_flash.png" alt=""> — how it shows in your status bar while it runs.
 
 Lets you **see clearly in the dark**, even in caves and at night. Toggle off to remove instantly.
 
@@ -101,16 +100,14 @@ Lets you **see clearly in the dark**, even in caves and at night. Toggle off to 
 ### <img class="hm-disc" src="../../../assets/items/hm_jump.png" alt=""> Jump
 **Power:** Jump Boost level (default **IV**)
 
-<img class="hm-disc" src="../../../assets/items/hud_jump.png" alt=""> — how it shows in your status bar while it runs.
 
-Applies continuous **Jump Boost**. The `power` value equals the buff level, so `power = 4` gives Jump Boost IV. Shows in your HUD.
+Applies continuous **Jump Boost**. The `power` value equals the buff level, so `power = 4` gives Jump Boost IV.
 
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_lava_plume.png" alt=""> Lava Plume
 **Power:** tenths of the movement multiplier (default 17)
 
-<img class="hm-disc" src="../../../assets/items/hud_lava_plume.png" alt=""> — how it shows in your status bar while it runs.
 
 Dive's twin for lava. It lets you **live and work down there**: you **do not burn**, you move
 through lava and walk its floor without the fluid dragging on every step, and you breathe while you
@@ -135,7 +132,6 @@ Combat, so Lava Plume now covers that on its own.
 
 ### <img class="hm-disc" src="../../../assets/items/hm_lucky_chant.png" alt=""> Lucky Chant
 
-<img class="hm-disc" src="../../../assets/items/hud_lucky_chant.png" alt=""> — how it shows in your status bar while it runs.
 
 Fortune leans your way while it lasts: what you break and what you fish give up a little more.
 
@@ -144,7 +140,6 @@ Fortune leans your way while it lasts: what you break and what you fish give up 
 ### <img class="hm-disc" src="../../../assets/items/hm_magnet_rise.png" alt=""> Magnet Rise
 **Power:** percent of creative flight speed you get (default **25**)
 
-<img class="hm-disc" src="../../../assets/items/hud_magnet_rise.png" alt=""> — how it shows in your status bar while it runs.
 
 **Flight.** Switch it on and **double-tap jump** to lift off, as in creative mode. You stay up for as
 long as you like, drifting at a little over half your walking pace, and sprinting gives no dash.
@@ -163,7 +158,6 @@ It is a **building** tool, not a way to travel: for that, ride one of your flyin
 
 ### <img class="hm-disc" src="../../../assets/items/hm_rock_climb.png" alt=""> Rock Climb
 
-<img class="hm-disc" src="../../../assets/items/hud_rock_climb.png" alt=""> — how it shows in your status bar while it runs.
 
 Every vertical surface behaves like a ladder, and it is steered by the **movement keys**: **W**
 climbs, **S** descends, and holding nothing holds your place on the wall.
@@ -180,7 +174,6 @@ climbs it with you.
 ### <img class="hm-disc" src="../../../assets/items/hm_shadow_sneak.png" alt=""> Shadow Sneak
 **Power:** percent of your speed you keep (default **55**)
 
-<img class="hm-disc" src="../../../assets/items/hud_shadow_sneak.png" alt=""> — how it shows in your status bar while it runs.
 
 Total stealth on foot. No footstep sounds, no name over your head, and **nothing underfoot notices
 you** — not pressure plates, not tripwires, not a sculk sensor.
@@ -200,7 +193,6 @@ It only works **on land**: in water or lava you swim at your normal speed, sprin
 ### <img class="hm-disc" src="../../../assets/items/hm_snowscape.png" alt=""> Snowscape
 **Power:** trail radius 3
 
-<img class="hm-disc" src="../../../assets/items/hud_snowscape.png" alt=""> — how it shows in your status bar while it runs.
 
 Winter follows you on foot: snow settles around you as you walk, and **still water freezes over** as
 you cross it, the way Frost Walker does. Flowing water is left alone, so a river keeps running
@@ -239,7 +231,6 @@ below 5 seconds whatever the config says.
 ### <img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> Sandstorm
 **Power:** how many times faster loose ground breaks (**4**)
 
-<img class="hm-disc" src="../../../assets/items/hud_sandstorm.png" alt=""> — how it shows in your status bar while it runs.
 
 Weather aura, with a clear sky. Sand is your ground while it blows:
 
