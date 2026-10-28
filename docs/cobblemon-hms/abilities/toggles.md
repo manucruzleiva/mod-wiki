@@ -280,4 +280,12 @@ its Pokémon is out. Switch it off or recall the Pokémon and Minecraft takes th
 
 Weather aura. **Snow falls and settles all around you**, whatever the biome, for as long as Blizzard is
 on and its Pokémon is out. The sky stays clear of vanilla rain meanwhile. The snow is real snow: it
-piles up to three layers and melts on its own, the way any snowfall does in a warm place.
+piles up to three layers and settles where a real snowfall would, on open ground, never on top of
+flowers or grass and not right next to a torch.
+
+**Where it is too warm to snow**, the snow melts on its own a few minutes after the storm has moved
+on or been switched off, even across a server restart. Where the biome is cold enough to snow, it is
+ordinary snow and stays.
+
+It does not snow in the Nether (there is no sky there, only a roof), and it stops while you are in
+spectator mode.
