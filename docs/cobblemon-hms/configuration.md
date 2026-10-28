@@ -167,7 +167,7 @@ what the config takes.
 | Surf | tenths of the mount's swim-speed multiplier — **15** |
 | Agility | tenths of the mount's land-speed multiplier — **15** |
 | U-turn | tenths of the mount's turn (handling) multiplier, never past the stat's maximum of 100 — **18** |
-| Helping Hand | tenths of the stamina SPEND — **2** |
+| Helping Hand | tenths of the stamina SPEND, from 1 (a tenth) to 10 (no help) — **2** |
 | Tailwind | tenths of the mount's flight-speed multiplier — **15** |
 | Swift | tenths of the mount's acceleration multiplier — **20** |
 
