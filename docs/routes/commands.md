@@ -263,7 +263,9 @@ Every settlement and connection you have declared in this world, with coordinate
 ### `settlement connect <x> <z>` — 🛡️
 Declares a road between the settlement nearest to you and the one nearest to `x, z`. A declared
 connection is the one edge nothing is allowed to re-route: it exists because you said those two places
-are joined.
+are joined. Either end can be a settlement you declared or a town the world generated: where
+nothing is declared near an end, the generated town nearest it is used. The road appears in chunks generated
+from then on.
 
 ### `settlement disconnect <x> <z>` — 🛡️
 Takes the road between the town you stand at and the one nearest `x, z` out of the network. A road you
@@ -273,6 +275,28 @@ declared is deleted. A road the world generated is withdrawn, and both towns kee
 Puts a withdrawn road back. With no position, it restores the road withdrawn most recently, which is
 the only way to bring back a branch that starts at a fork. With a position, it restores the road between
 the town you stand at and the one nearest `x, z`.
+
+---
+
+## 🛤️ `road` — build a declared road into land that already exists
+
+### `road preview` — 🛡️
+Plans the road you declared last (with `settlement connect` or the Road Planner) and shows it: a trail of
+particles over its line near you, its length, the chunks it crosses, and how much of it crosses ground an
+add-on has claimed. Nothing is built yet.
+
+### `road commit` — 🛡️
+Draws the previewed road into the world, including chunks that were generated long ago, so two towns in land
+you have already explored get their road. Claimed ground (a gym, an add-on's building) is left untouched.
+Signposts and rest stops come with chunks generated from then on.
+
+### `road cancel` — 🛡️
+Drops the preview without building anything.
+
+### `road tool` — 🛡️
+Gives you the **Road Planner**. Right-click the ground at one town, then at the other: the road is declared
+and previewed, ready for `road commit`. Sneak + right-click clears the first end. Either end can be a town the
+world generated or one you declared.
 
 ---
 
