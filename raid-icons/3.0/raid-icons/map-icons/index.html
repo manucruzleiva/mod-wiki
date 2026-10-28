@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -29,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -976,8 +976,9 @@ New raid in 12m
 Open: every reset rolls a new raid here.
 </code></pre></div>
 <p>The Pokémon waiting in the den comes first, because that is what you are deciding on. Below it, the
-star tier and the tera type, written in that type's own colour. Then, in grey, the
-<a href="#the-den-clock">den clock</a> and a line on the den's life cycle.</p>
+star tier and the tera type, written in that type's own colour. Then the
+<a href="#the-den-clock">den clock</a>, coloured by how long is left, and, in grey, a line on the den's life
+cycle.</p>
 <p>A <a href="#feature-dens">feature den</a> names its feature in the second line instead, in the feature's colour,
 and keeps its clock like any other den:</p>
 <div class="highlight"><pre><span></span><code>Alcremie
@@ -1035,6 +1036,12 @@ reads <code>New raid in</code> for an open den and <code>Back in</code> for a be
 raid boss and nothing else. So the mod measures the cycle by watching dens turn over while you are
 near them. A den you walk away from and come back to an hour later teaches it nothing, because it
 cannot tell when the change happened while you were gone.</p>
+<p>The countdown is coloured by how long is left: <strong>green</strong> with more than an hour to go, <strong>yellow</strong>
+under an hour and <strong>red</strong> under thirty minutes, or once an estimate is overdue. Both thresholds are
+<a href="../configuration/#the-clock-colours">settings</a>. Exact and estimated countdowns are coloured the same
+way; only the <code>~</code> tells them apart. <code>Open for</code> and <code>Down for</code> are not countdowns, so they stay grey.</p>
+<p>Every line of the tooltip fits inside its backdrop, however long the species name or the
+explanation lines are.</p>
 <p>The clock never decides what is drawn. A den whose time runs out is not gone — it rolls a new raid in
 the same place — so it stays on the map.</p>
 <h3 id="the-right-click-menu">The right-click menu<a class="headerlink" href="#the-right-click-menu" title="Permanent link">&para;</a></h3>
@@ -1161,11 +1168,11 @@ updated the next time you come near it, and it leaves the map only when its crys
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
   
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     <script>
     (function () {

@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -29,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -662,6 +662,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-clock-colours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The clock colours
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The clock colours">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clockwarnminutes-and-clockurgentminutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clockWarnMinutes and clockUrgentMinutes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-scan" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -910,6 +938,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-clock-colours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The clock colours
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The clock colours">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clockwarnminutes-and-clockurgentminutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        clockWarnMinutes and clockUrgentMinutes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-scan" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -991,8 +1047,9 @@
 Open it with <a href="../commands/#raidicons"><code>/raidicons</code></a>, with the <strong>Open settings</strong> key under Controls
 (unbound until you set it), or from the mod list: the config button in
 <a href="https://modrinth.com/mod/modmenu">Mod Menu</a> on Fabric, and in NeoForge's own mod list.</p>
-<p>It has three tabs: <strong>Filters</strong> (only active dens, lowest star tier, one switch per tera type),
-<strong>Icons</strong> (the two icon sizes) and <strong>Advanced</strong> (the scan). Without Cloth Config the button is simply
+<p>It has four tabs: <strong>Filters</strong> (only active dens, lowest star tier, one switch per tera type),
+<strong>Icons</strong> (the two icon sizes), <strong>Clock</strong> (when the den clock turns yellow and red) and
+<strong>Advanced</strong> (the scan). Without Cloth Config the button is simply
 not there, and the command and the file work as before.</p>
 <h2 id="the-file">The file<a class="headerlink" href="#the-file" title="Permanent link">&para;</a></h2>
 <p>The settings live in <strong><code>config/cobblemon_raid_icons.properties</code></strong>, inside your game folder — the
@@ -1007,6 +1064,8 @@ the log.</p>
 <span class="na">teraTypes</span><span class="o">=</span>
 <span class="na">minimapIconScale</span><span class="o">=</span><span class="s">100</span>
 <span class="na">worldMapIconScale</span><span class="o">=</span><span class="s">100</span>
+<span class="na">clockWarnMinutes</span><span class="o">=</span><span class="s">60</span>
+<span class="na">clockUrgentMinutes</span><span class="o">=</span><span class="s">30</span>
 </code></pre></div>
 <h2 id="the-filters">The filters<a class="headerlink" href="#the-filters" title="Permanent link">&para;</a></h2>
 <p>These decide which dens get an icon. They are the settings worth touching.</p>
@@ -1058,6 +1117,17 @@ ready to fight or resetting.</p>
 <code>50</code>–<code>200</code> — from half to twice the size.</p>
 <p>There is one per map so you can shrink a crowded minimap without making the world map harder to read.
 At <code>100</code> an icon is 36×36 pixels on the minimap and 48×48 on the world map.</p>
+<h2 id="the-clock-colours">The clock colours<a class="headerlink" href="#the-clock-colours" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Arrives in the release after 3.0.0.</p>
+</blockquote>
+<p>The <a href="../map-icons/#the-den-clock">den clock</a> in the tooltip is green while there is time to spare,
+turns yellow, then red, as the reset gets close.</p>
+<h3 id="clockwarnminutes-and-clockurgentminutes"><code>clockWarnMinutes</code> and <code>clockUrgentMinutes</code><a class="headerlink" href="#clockwarnminutes-and-clockurgentminutes" title="Permanent link">&para;</a></h3>
+<p>Minutes left under which the clock turns <strong>yellow</strong> (<code>clockWarnMinutes</code>, default <code>60</code>) and <strong>red</strong>
+(<code>clockUrgentMinutes</code>, default <code>30</code>). Both are clamped to <code>0</code>–<code>240</code>, and <code>0</code> switches that colour
+off.</p>
+<p>If the red threshold is set above the yellow one, red wins: the clock goes straight from green to red.</p>
 <h2 id="the-scan">The scan<a class="headerlink" href="#the-scan" title="Permanent link">&para;</a></h2>
 <p>The two remaining settings control how the mod looks for dens. The defaults are good; change them
 only if you have a reason.</p>
@@ -1175,11 +1245,11 @@ free to check, so there is little to gain by lowering it.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
   
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
     <script>
     (function () {
