@@ -103,7 +103,17 @@ Lets you **see clearly in the dark**, even in caves and at night. Toggle off to 
 
 <img class="hm-disc" src="../../../assets/items/hud_jump.png" alt=""> — how it shows in your status bar while it runs.
 
-Applies continuous **Jump Boost**. The `power` value equals the buff level, so `power = 4` gives Jump Boost IV. Shows in your HUD.
+You jump exactly as high as **Jump Boost** would make you, and you land as safely: each level adds
+one block before a fall starts to hurt, so at the default level IV a jump peaks a little over four
+blocks up and coming back down never costs you health. The `power` value is the Jump Boost level, so
+`power = 4` behaves like Jump Boost IV. Only the HM's own icon shows in your HUD; there is no
+potion entry in your inventory.
+
+If the aura stops in the middle of a jump (you recall the Pokémon or walk out of its range), the
+safe landing lasts until you touch the ground, so that jump does not hurt you either.
+
+**It works on your mount too.** While you ride a Pokémon, Jump doubles your mount's jump stat,
+whatever the `power` value says.
 
 ---
 
