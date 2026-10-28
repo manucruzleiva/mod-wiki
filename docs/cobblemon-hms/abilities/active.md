@@ -55,10 +55,16 @@ variant, gear and its nametag — for everyone who can see you.
 
 - Aim at a **creature** in clear view → you look exactly like it for 15 minutes.
 - **Fire it again while you are wearing one** → the costume comes off and the HM is ready
-  immediately, so changing disguise is two presses.
+  immediately, so changing disguise is two presses. This works with any Pokémon lending
+  Camouflage, not only the one that put the costume on.
 - A block, a wall between you and it, or empty air → nothing happens. You can only copy something
   you can actually see.
-- Other **players** can't be copied.
+- Only **living creatures** can be copied: not other **players**, armour stands, boats, minecarts
+  or item frames, and not something already wearing a costume of its own.
+- Your hitbox becomes the creature's, so a large disguise can get stuck where a small one fits.
+- The costume comes off on its own when it runs out, when you die, log out or switch to spectator,
+  or when an operator switches Camouflage off. Putting your Pokémon back in its ball does not take
+  it off.
 
 The disguise is a costume, not a creature: nothing extra exists in the world, so there is nothing
 to hit, nothing in your way, and nothing that can be killed off you.
@@ -72,7 +78,12 @@ Turns the block you aim at into a redstone power source — enough to throw a do
 lamp from across a room. **The charge is permanent.** It is saved with the world, so it stays when
 you log off and when the server restarts, and charging another block does not take it back: charge
 as many as you like. Aim Charge at a charged block again to discharge it. Breaking the block ends
-its charge too.
+its charge on the spot, and so does anything else that replaces it: an explosion, a piston, flowing
+water. A block placed in the same spot afterwards starts uncharged. A charge belongs to its own
+dimension, so it never powers the same coordinates in the Nether or the End.
+
+Charging needs the right to build where you aim, the same as placing a redstone block: it does not
+work in adventure or spectator mode, inside spawn protection, or in a claim that keeps you out.
 
 The block is never replaced — it stays exactly what it is and simply *answers* as a power source —
 so you can charge a chest, a furnace, a statue or a wall without losing anything. While it is live
@@ -117,8 +128,17 @@ It only ever plants on **bare ground**. A spot that already has something growin
 exactly as it stands, so casting twice in the same meadow thickens it instead of disturbing it, and
 tall flowers are planted whole rather than as a half that topples.
 
+Only crops, saplings and berry trees are grown. Grass blades, ferns, moss, nylium, glow lichen and
+seagrass are left alone, so a burst never smothers the meadow it planted or creeps moss over the
+stone nearby.
+
 **Crouch while you use it to till instead** (this is what Rototiller used to do): the dirt-type
-block you aim at — Dirt, Grass Block, Coarse Dirt, Dirt Path — turns into Farmland.
+block you aim at, within your normal reach — Dirt, Grass Block, Coarse Dirt, Dirt Path — turns into
+Farmland. A flower or grass on it drops as an item. Tilling has **no cooldown** and does not use up
+the burst's.
+
+It changes the world, so it needs the right to build: it does nothing in adventure or spectator
+mode, and skips spawn protection and claimed land. The radius (`power`) is capped at 16.
 
 ---
 
@@ -167,6 +187,10 @@ Sweeps a **suspicious sand or gravel** block clean in a single motion instead of
 and finds exactly what a brush would have found. **Rooted dirt** counts too: it is not brushable in
 vanilla, but it is the same gesture on the same kind of thing, so it gives up its hanging roots.
 
+- It reaches as far as your hand does, and the find pops out of the face you swept, as from a brush.
+- It only works where a brush would: not in adventure mode or spectator, and not inside spawn
+  protection (unless you are an operator) or a claim you may not build in.
+
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_teleport.png" alt=""> Teleport
@@ -185,8 +209,28 @@ you fire, and slow to come back.
 ### <img class="hm-disc" src="../../../assets/items/hm_growth.png" alt=""> Growth
 **Cooldown:** 1 min · **Power:** how long you stay big (**5 minutes**)
 
-Aim at one of your **Pokémon** and it grows one size, for good. Aim at anything else, or at nothing,
-and it is **you** who grows, to twice your size, for a while.
+Aim at one of your **Pokémon**, or a wild one, and it grows one size, for good. Aim at anything
+else, or at nothing, and it is **you** who grows, to twice your size, for a while.
+
+**On a Pokémon**
+
+- Each use makes it a quarter bigger (×1.25), up to **4×** its normal size. The size is saved on
+  the Pokémon itself, so it stays through a recall, a trade, the PC and a server restart.
+  [Minimize](#minimize) takes it back down a step.
+- You aim up to 20 blocks away, and only at what you can see: a block in between stops the aim.
+- It refuses, and nothing goes on cooldown, when the Pokémon is already as big as it gets, belongs
+  to another player or to an NPC trainer, is in a battle, or is an **Alpha** (an Alpha's size is
+  fixed by Cobblemon).
+
+**On you**
+
+- You grow to twice your size for 5 minutes (the power value, in ticks). Your hitbox grows with
+  you, so everyone sees it and a low ceiling will suffocate you, as it would anything that no longer
+  fits.
+- Using it again restarts the timer. Minimize on yourself replaces it at once.
+- Other players are ignored by the aim: pointing at one grows you.
+- It wears off on its own, and the action bar tells you when. Dying, logging out or a server
+  restart also bring you back to your normal size. Recalling the partner does not cut it short.
 
 ---
 

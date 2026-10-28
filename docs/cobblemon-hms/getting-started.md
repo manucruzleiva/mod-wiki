@@ -41,13 +41,14 @@ second Pokémon with the same move is ready straight away. Auras cost nothing at
 
 A rare wandering **Trainer Ditto** turns up now and then and **sells three random Cobblemon TMs**
 for **relic coins**. Right-click it to open its stall. Prices follow the power of the move, from 4
-coins for a status move up to 32 for the strongest ones. Each TM is sold once per visit.
+coins for a status move up to 32 for the strongest ones. Each TM is sold once per visit, and every
+player gets their own three. A trader in the middle of a battle or a catch won't open its stall.
 
 Keep what you buy in the [HM Case](tm-bag.md), which holds any number of TMs.
 
 **It is a Ditto in a coat.** Throw a Poké Ball and you catch it like any other, but every trader
 after that keeps its distance and **will not open its stall for you again**, so weigh the shop
-against the Ditto. How good that Ditto is is the server's call, and **out of the box it rolls its
+against the Ditto. **Beating one in battle** has the same effect. How good that Ditto is is the server's call, and **out of the box it rolls its
 IVs like any other**: guaranteed perfect stats are an option an operator turns on, not something the
 trader comes with. See [Configuration](configuration.md#trainer-ditto).
 
