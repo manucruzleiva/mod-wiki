@@ -7,11 +7,14 @@ a datapack can change any of it. `/cac move <move>` shows one move's numbers.
 
 | Kind | Examples | What it does |
 | --- | --- | --- |
-| Close range | Tackle, Close Combat | hits the opponent under your crosshair when its windup ends |
+| Close range | Tackle, Close Combat | its key readies it for 3 s; a left click on an opponent in reach lands it when its windup ends |
 | Projectile | Thunderbolt, Ember | flies from your Pokémon where you look; it can be outrun or sidestepped |
 | Zone | Thunder, Blizzard | falls on the spot you aim at a moment later, a ring marking where |
 | Area | Earthquake, Surf | hits everything around you |
 | Self and status | Swords Dance, Thunder Wave | cast for a moment first; a flinch or a heavy hit breaks the cast |
+
+A readied close-range move is outlined on the HUD. Its Stamina and cooldown are paid on the click, a
+click with nothing in reach keeps it readied, and its key again lets it go.
 
 Faster moves start sooner, so Quick Attack comes out well ahead of Tackle. A move that can miss in
 the games sometimes **fumbles** instead: the animation plays and nothing happens. Stamina cost and
