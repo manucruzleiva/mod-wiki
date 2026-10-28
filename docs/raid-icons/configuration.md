@@ -15,8 +15,9 @@ Open it with [`/raidicons`](commands.md#raidicons), with the **Open settings** k
 (unbound until you set it), or from the mod list: the config button in
 [Mod Menu](https://modrinth.com/mod/modmenu) on Fabric, and in NeoForge's own mod list.
 
-It has three tabs: **Filters** (only active dens, lowest star tier, one switch per tera type),
-**Icons** (the two icon sizes) and **Advanced** (the scan). Without Cloth Config the button is simply
+It has four tabs: **Filters** (only active dens, lowest star tier, one switch per tera type),
+**Icons** (the two icon sizes), **Clock** (when the den clock turns yellow and red) and
+**Advanced** (the scan). Without Cloth Config the button is simply
 not there, and the command and the file work as before.
 
 ## The file
@@ -36,6 +37,8 @@ minTier=0
 teraTypes=
 minimapIconScale=100
 worldMapIconScale=100
+clockWarnMinutes=60
+clockUrgentMinutes=30
 ```
 
 ## The filters
@@ -90,6 +93,21 @@ How big the den icons are, as a percentage of each map's normal size. Default `1
 
 There is one per map so you can shrink a crowded minimap without making the world map harder to read.
 At `100` an icon is 36×36 pixels on the minimap and 48×48 on the world map.
+
+## The clock colours
+
+> Arrives in the release after 3.0.0.
+
+The [den clock](map-icons.md#the-den-clock) in the tooltip is green while there is time to spare,
+turns yellow, then red, as the reset gets close.
+
+### `clockWarnMinutes` and `clockUrgentMinutes`
+
+Minutes left under which the clock turns **yellow** (`clockWarnMinutes`, default `60`) and **red**
+(`clockUrgentMinutes`, default `30`). Both are clamped to `0`–`240`, and `0` switches that colour
+off.
+
+If the red threshold is set above the yellow one, red wins: the clock goes straight from green to red.
 
 ## The scan
 
