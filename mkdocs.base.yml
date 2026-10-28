@@ -107,11 +107,11 @@ extra:
     picnic:         { name: Cobblemon Picnic,               version: 4.0.0, modrinth: sfptxo0H }
     cobblemon-hms:  { name: Cobblemon HMs,                  version: 3.0.0, modrinth: JNfSyMuQ }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0, modrinth: S01tPZTk }
-    champions:      { name: Cobblemon Champions Training,   version: 1.0.14, modrinth: PlTQXswh }
+    champions:      { name: Cobblemon Champions Training,   version: 2.0.0, modrinth: PlTQXswh }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr }
     mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.0.0, modrinth: ShgrcSQY }
     poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.11, modrinth: MjGKcXBb }
-    action-combat:  { name: Cobblemon Action Combat,        version: 0.1.40 }
+    action-combat:  { name: Cobblemon Action Combat,        version: 0.1.41 }
   # La ficha tecnica de cada mod: lo que dice su jar publicado (fabric.mod.json y neoforge.mods.toml
   # del tag del ultimo release), no lo que se recuerda. De aca salen, por hooks/mod_specs.py, las
   # insignias del hero de cada index, la tabla "Get it" de cada index, y en la portada los chips de

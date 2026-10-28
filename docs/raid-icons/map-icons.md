@@ -87,8 +87,9 @@ Open: every reset rolls a new raid here.
 ```
 
 The Pokémon waiting in the den comes first, because that is what you are deciding on. Below it, the
-star tier and the tera type, written in that type's own colour. Then, in grey, the
-[den clock](#the-den-clock) and a line on the den's life cycle.
+star tier and the tera type, written in that type's own colour. Then the
+[den clock](#the-den-clock), coloured by how long is left, and, in grey, a line on the den's life
+cycle.
 
 A [feature den](#feature-dens) names its feature in the second line instead, in the feature's colour,
 and keeps its clock like any other den:
@@ -139,6 +140,14 @@ On a server there is nobody to ask: Raid Dens keeps the timer to itself and send
 raid boss and nothing else. So the mod measures the cycle by watching dens turn over while you are
 near them. A den you walk away from and come back to an hour later teaches it nothing, because it
 cannot tell when the change happened while you were gone.
+
+The countdown is coloured by how long is left: **green** with more than an hour to go, **yellow**
+under an hour and **red** under thirty minutes, or once an estimate is overdue. Both thresholds are
+[settings](configuration.md#the-clock-colours). Exact and estimated countdowns are coloured the same
+way; only the `~` tells them apart. `Open for` and `Down for` are not countdowns, so they stay grey.
+
+Every line of the tooltip fits inside its backdrop, however long the species name or the
+explanation lines are.
 
 The clock never decides what is drawn. A den whose time runs out is not gone — it rolls a new raid in
 the same place — so it stays on the map.
