@@ -254,6 +254,13 @@ Aim at an **XL** Pokémon to turn it into an **Alpha**. Anything smaller, it ref
 
 Aim at an **Alpha** to settle it back into the ordinary Pokémon it was. The way back out of Outrage.
 
+- Only works on an **Alpha**. Anything else, it refuses and says why.
+- The Pokémon keeps the size it had under the Alpha, so an XL that went through Outrage comes back
+  XL and can be made an Alpha again.
+- If the Pokémon would come back **smaller than XL** (a wild-caught Alpha, for example), Outrage
+  could never undo it. The first use only warns you; use Calm Mind on the same Pokémon again within
+  **5 seconds** to settle it for good.
+
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_celebrate.png" alt=""> Celebrate
