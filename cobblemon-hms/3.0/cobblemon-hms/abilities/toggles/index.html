@@ -1229,15 +1229,17 @@ again.</p>
 <div class="admonition tip">
 <p class="admonition-title">What is on right now</p>
 <p>Open Cobblemon's interaction wheel on any Pokémon: its <strong>top-left corner lists every HM in
-effect</strong>, each with the Pokémon doing it in brackets, by its nickname if it has one — for
+effect</strong>, grouped by kind and with its icon, each with the Pokémon doing it in brackets, by its nickname if it has one — for
 example <em>Sandstorm (Dunes)</em>.</p>
 </div>
 <p>The toggles that make <strong>a mount</strong> better — Surf, Tailwind, Swift, U-turn, Helping Hand and Agility —
 belong to the Pokémon you ride: see <a href="../../pokemon/#mount-toggles">Your Pokémon</a>.</p>
 <div class="admonition tip">
-<p class="admonition-title">HUD icons</p>
-<p>Every aura in effect shows its <strong>own HM status-effect icon</strong> in your HUD (top-right), so it's
-obvious at a glance which ones are on.</p>
+<p class="admonition-title">Active HMs on your HUD</p>
+<p>The <strong>top-left corner of your HUD lists every HM in effect</strong>, grouped by kind — <strong>Companion</strong>
+(the HM lent to your fist), <strong>Aura</strong>, <strong>Weather</strong> and <strong>Mount</strong> — each with its own icon. Auras
+no longer show as status effects. Hide the list with <em>Show active HMs on the HUD</em> in the config
+screen (Mod Menu), or <code>/hms config hud false</code> in singleplayer.</p>
 </div>
 <hr />
 <h2 id="who-can-give-it">Who can give it<a class="headerlink" href="#who-can-give-it" title="Permanent link">&para;</a></h2>
@@ -1338,12 +1340,10 @@ species is one of these:</p>
 <h2 id="ability-details">Ability details<a class="headerlink" href="#ability-details" title="Permanent link">&para;</a></h2>
 <h3 id="absorb"><img class="hm-disc" src="../../../assets/items/hm_absorb.png" alt=""> Absorb<a class="headerlink" href="#absorb" title="Permanent link">&para;</a></h3>
 <p><strong>Power:</strong> magnet radius 6</p>
-<p><img class="hm-disc" src="../../../assets/items/hud_absorb.png" alt=""> — how it shows in your status bar while it runs.</p>
 <p>Loose items on the ground drift toward you while it is on, so a scattered drop or a mined vein
 gathers itself. Items are nudged rather than yanked, so they keep their normal pickup delay.</p>
 <hr />
 <h3 id="dive"><img class="hm-disc" src="../../../assets/items/hm_dive.png" alt=""> Dive<a class="headerlink" href="#dive" title="Permanent link">&para;</a></h3>
-<p><img class="hm-disc" src="../../../assets/items/hud_dive.png" alt=""> — how it shows in your status bar while it runs.</p>
 <p>Lets you <strong>live and work underwater</strong>. Water stops getting in your way:</p>
 <ul>
 <li><strong>Breathe underwater</strong> — never run out of air.</li>
@@ -1355,17 +1355,14 @@ gathers itself. Items are nudged rather than yanked, so they keep their normal p
 the speed you always did — if you want to be <em>fast</em> in the water, ride a Pokémon with <a href="../../pokemon/#mount-toggles">Surf</a> switched on.</p>
 <hr />
 <h3 id="flash"><img class="hm-disc" src="../../../assets/items/hm_flash.png" alt=""> Flash<a class="headerlink" href="#flash" title="Permanent link">&para;</a></h3>
-<p><img class="hm-disc" src="../../../assets/items/hud_flash.png" alt=""> — how it shows in your status bar while it runs.</p>
 <p>Lets you <strong>see clearly in the dark</strong>, even in caves and at night. Toggle off to remove instantly.</p>
 <hr />
 <h3 id="jump"><img class="hm-disc" src="../../../assets/items/hm_jump.png" alt=""> Jump<a class="headerlink" href="#jump" title="Permanent link">&para;</a></h3>
 <p><strong>Power:</strong> Jump Boost level (default <strong>IV</strong>)</p>
-<p><img class="hm-disc" src="../../../assets/items/hud_jump.png" alt=""> — how it shows in your status bar while it runs.</p>
-<p>Applies continuous <strong>Jump Boost</strong>. The <code>power</code> value equals the buff level, so <code>power = 4</code> gives Jump Boost IV. Shows in your HUD.</p>
+<p>Applies continuous <strong>Jump Boost</strong>. The <code>power</code> value equals the buff level, so <code>power = 4</code> gives Jump Boost IV.</p>
 <hr />
 <h3 id="lava-plume"><img class="hm-disc" src="../../../assets/items/hm_lava_plume.png" alt=""> Lava Plume<a class="headerlink" href="#lava-plume" title="Permanent link">&para;</a></h3>
 <p><strong>Power:</strong> tenths of the movement multiplier (default 17)</p>
-<p><img class="hm-disc" src="../../../assets/items/hud_lava_plume.png" alt=""> — how it shows in your status bar while it runs.</p>
 <p>Dive's twin for lava. It lets you <strong>live and work down there</strong>: you <strong>do not burn</strong>, you move
 through lava and walk its floor without the fluid dragging on every step, and you breathe while you
 are under. Swimming out is exactly as it always was — like Dive, it takes a penalty away rather than
@@ -1385,12 +1382,10 @@ a warning if you are in lava, enough to climb out.</p>
 Combat, so Lava Plume now covers that on its own.</p>
 <hr />
 <h3 id="lucky-chant"><img class="hm-disc" src="../../../assets/items/hm_lucky_chant.png" alt=""> Lucky Chant<a class="headerlink" href="#lucky-chant" title="Permanent link">&para;</a></h3>
-<p><img class="hm-disc" src="../../../assets/items/hud_lucky_chant.png" alt=""> — how it shows in your status bar while it runs.</p>
 <p>Fortune leans your way while it lasts: what you break and what you fish give up a little more.</p>
 <hr />
 <h3 id="magnet-rise"><img class="hm-disc" src="../../../assets/items/hm_magnet_rise.png" alt=""> Magnet Rise<a class="headerlink" href="#magnet-rise" title="Permanent link">&para;</a></h3>
 <p><strong>Power:</strong> percent of creative flight speed you get (default <strong>25</strong>)</p>
-<p><img class="hm-disc" src="../../../assets/items/hud_magnet_rise.png" alt=""> — how it shows in your status bar while it runs.</p>
 <p><strong>Flight.</strong> Switch it on and <strong>double-tap jump</strong> to lift off, as in creative mode. You stay up for as
 long as you like, drifting at a little over half your walking pace, and sprinting gives no dash.
 While it is on you take no fall damage.</p>
@@ -1405,7 +1400,6 @@ While it is on you take no fall damage.</p>
 </ul>
 <hr />
 <h3 id="rock-climb"><img class="hm-disc" src="../../../assets/items/hm_rock_climb.png" alt=""> Rock Climb<a class="headerlink" href="#rock-climb" title="Permanent link">&para;</a></h3>
-<p><img class="hm-disc" src="../../../assets/items/hud_rock_climb.png" alt=""> — how it shows in your status bar while it runs.</p>
 <p>Every vertical surface behaves like a ladder, and it is steered by the <strong>movement keys</strong>: <strong>W</strong>
 climbs, <strong>S</strong> descends, and holding nothing holds your place on the wall.</p>
 <p>Your horizontal movement is left alone, so you can travel along a face and step off it whenever you
@@ -1416,7 +1410,6 @@ climbs it with you.</p>
 <hr />
 <h3 id="shadow-sneak"><img class="hm-disc" src="../../../assets/items/hm_shadow_sneak.png" alt=""> Shadow Sneak<a class="headerlink" href="#shadow-sneak" title="Permanent link">&para;</a></h3>
 <p><strong>Power:</strong> percent of your speed you keep (default <strong>55</strong>)</p>
-<p><img class="hm-disc" src="../../../assets/items/hud_shadow_sneak.png" alt=""> — how it shows in your status bar while it runs.</p>
 <p>Total stealth on foot. No footstep sounds, no name over your head, and <strong>nothing underfoot notices
 you</strong> — not pressure plates, not tripwires, not a sculk sensor.</p>
 <p>You move slower than a walk for it, though faster than a crouch, so it is something you can actually
@@ -1431,7 +1424,6 @@ their team and simply does not get that part of the effect. Everything else stil
 <hr />
 <h3 id="snowscape"><img class="hm-disc" src="../../../assets/items/hm_snowscape.png" alt=""> Snowscape<a class="headerlink" href="#snowscape" title="Permanent link">&para;</a></h3>
 <p><strong>Power:</strong> trail radius 3</p>
-<p><img class="hm-disc" src="../../../assets/items/hud_snowscape.png" alt=""> — how it shows in your status bar while it runs.</p>
 <p>Winter follows you on foot: snow settles around you as you walk, and <strong>still water freezes over</strong> as
 you cross it, the way Frost Walker does. Flowing water is left alone, so a river keeps running
 instead of being paved, and the ice melts back once you have passed. Where it is too warm to snow
@@ -1462,7 +1454,6 @@ below 5 seconds whatever the config says.</p>
 <hr />
 <h3 id="sandstorm"><img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> Sandstorm<a class="headerlink" href="#sandstorm" title="Permanent link">&para;</a></h3>
 <p><strong>Power:</strong> how many times faster loose ground breaks (<strong>4</strong>)</p>
-<p><img class="hm-disc" src="../../../assets/items/hud_sandstorm.png" alt=""> — how it shows in your status bar while it runs.</p>
 <p>Weather aura, with a clear sky. Sand is your ground while it blows:</p>
 <ul>
 <li><strong>Soul sand and honey never slow you down</strong>: you walk on them as fast as on stone. It works in the
