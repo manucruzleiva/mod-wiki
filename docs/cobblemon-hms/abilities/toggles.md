@@ -72,6 +72,15 @@ species is one of these:
 Loose items on the ground drift toward you while it is on, so a scattered drop or a mined vein
 gathers itself. Items are nudged rather than yanked, so they keep their normal pickup delay.
 
+It leaves some items where they are:
+
+- **What you throw yourself**, so you can still drop rubbish or hand something to a friend.
+- **Items another player is closer to**, so it never steals a neighbour's drops, and two players
+  with Absorb don't fight over one stack.
+- **Items that won't fit in your inventory.** When your inventory is full, nothing is pulled.
+
+The radius is the HM's power (`/hms config absorb power <n>`), up to 24 blocks.
+
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_dive.png" alt=""> Dive
