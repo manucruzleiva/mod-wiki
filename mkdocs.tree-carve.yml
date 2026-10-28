@@ -19,3 +19,4 @@ nav:
       - Getting Started: tree-carve/getting-started.md
       - Server Admin: tree-carve/server-admin.md
       - Custom Symbols & Fonts: tree-carve/symbols-and-fonts.md
+      - Troubleshooting: tree-carve/troubleshooting.md

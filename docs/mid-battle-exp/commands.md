@@ -1,4 +1,4 @@
-# Commands & settings
+# Commands & Config
 
 !!! note "Next release"
 
@@ -58,8 +58,8 @@ so in the server log.
 
 ## Pausing a Pokémon's EXP
 
-Under the Summary's bottom-left corner there is a button, **EXP: On**. Click it and it turns to
-**EXP: Off**: that Pokémon gains **no battle EXP** until you click it again. It is the way to hold a
+Next to the level, at the Summary's top-left corner, there is a small **EXP** button with a green
+square: EXP is on. Click it and the square turns red, **EXP: Off**: that Pokémon gains **no battle EXP** until you click it again. It is the way to hold a
 Pokémon at a level cap, or to stop it evolving by level.
 
 - It works per Pokémon, and only on **your own** Pokémon, in the party or in the PC.
@@ -67,6 +67,8 @@ Pokémon at a level cap, or to stop it evolving by level.
 - A paused Pokémon **still gains EVs**, and still counts as having fought, for the rest of the team.
 - Only battle EXP stops. **Candies** and `/levelup` still work, so a candy is never wasted.
 - You can change it in the middle of a battle; the next knockout follows it.
+- Hover it to read whether EXP is on or off. While the Pokémon has a status (PAR, BRN, FNT…), the
+  button covers it.
 
 The button needs the mod **on your game and on the server**. Without it on either side, the Summary
 shows no button.

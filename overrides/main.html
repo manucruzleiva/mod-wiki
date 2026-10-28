@@ -2,13 +2,14 @@
 
 {#-
   ETHICAL AD SLOTS (standing directive 2026-07-11): monetization is allowed, reading is never
-  blocked. Exactly TWO slots exist — the sidebar rail (under the page TOC) and the slim pre-footer
-  bar — and ads may live ONLY here: never inline in content, no popups, no interstitials, no
-  autoplay, no sticky-over-content, no layout shift. Until a real ad unit fills a slot, it shows
-  the donation placeholder supporting the project directly.
+  blocked. ONE slot exists, the slim pre-footer bar, and ads may live ONLY there: never inline in
+  content, no popups, no interstitials, no autoplay, no sticky-over-content, no layout shift. Until
+  a real ad unit fills it, it shows the donation placeholder supporting the project directly.
+  There used to be a second one under the page TOC; it repeated the same ask on every page beside
+  the text, so the sponsor link now lives in the footer bar and the header's section menu only.
 
   To activate real ads: paste the AdSense publisher id below, uncomment, and replace the
-  .cr-ad-placeholder inner markup of a slot with the ad unit — keeping the slot's outer div and
+  .cr-ad-placeholder inner markup of the slot with the ad unit — keeping the slot's outer div and
   the rules above.
 -#}
 {% block extrahead %}
@@ -27,14 +28,13 @@
       color: var(--md-accent-fg-color); }
     .cr-ad-label { display: block; font-size: .55rem; letter-spacing: .05em;
       text-transform: uppercase; opacity: .6; margin-bottom: .25rem; }
-    #cr-ad-side { margin: 1.2rem .8rem 0 .8rem; }
     .cr-ad-footbar { max-width: 61rem; margin: 0 auto; padding: .4rem .8rem 1rem; }
     .cr-ad-footbar .cr-ad-placeholder { text-align: center; }
   </style>
 {% endblock %}
 
 {% block footer %}
-  {#- Slim pre-footer bar: the second (and last) allowed ad location. -#}
+  {#- Slim pre-footer bar: the one allowed ad location. -#}
   <div class="cr-ad-slot cr-ad-footbar">
     <a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">
       <span class="cr-ad-label">Supports the project</span>
@@ -186,27 +186,6 @@
       }
       defer();
       if (typeof document$ !== 'undefined') { document$.subscribe(defer); }
-    })();
-  </script>
-  {#- Sidebar rail slot: appended under the page TOC so it never displaces content; it simply
-      isn't there on narrow screens (the sidebar itself collapses). -#}
-  <script>
-    (function () {
-      function mount() {
-        var rail = document.querySelector('.md-sidebar--secondary .md-sidebar__scrollwrap');
-        if (!rail || document.getElementById('cr-ad-side')) { return; }
-        var slot = document.createElement('div');
-        slot.id = 'cr-ad-side';
-        slot.className = 'cr-ad-slot';
-        slot.innerHTML = '<a class="cr-ad-placeholder" href="https://github.com/sponsors/manucruzleiva">'
-          + '<span class="cr-ad-label">Supports the project</span>'
-          + '💛 This space supports these mods directly — sponsor shiero.</a>';
-        rail.appendChild(slot);
-      }
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', mount);
-      } else { mount(); }
-      if (typeof document$ !== 'undefined') { document$.subscribe(mount); }
     })();
   </script>
 {% endblock %}

@@ -1,0 +1,28 @@
+INHERIT: mkdocs.base.yml
+site_name: Cobblemon HMs
+site_url: https://manucruzleiva.github.io/mod-wiki/cobblemon-hms/
+
+extra:
+  wiki_site: cobblemon-hms
+
+# Todo lo que no es de este mod queda afuera, salvo lo compartido. Los links a paginas de otro sitio
+# los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*
+  !/cobblemon-hms/
+  !/assets/
+  !/stylesheets/
+
+nav:
+  - Cobblemon HMs:
+      - cobblemon-hms/index.md
+      - Getting Started: cobblemon-hms/getting-started.md
+      - Partner HMs: cobblemon-hms/abilities/active.md
+      - Auras: cobblemon-hms/abilities/toggles.md
+      - Your Pokémon: cobblemon-hms/pokemon.md
+      - HM Case: cobblemon-hms/tm-bag.md
+      - Upgrading to 4.0: cobblemon-hms/upgrading-to-4.md
+      - Commands: cobblemon-hms/commands.md
+      - Configuration: cobblemon-hms/configuration.md
+      - Troubleshooting: cobblemon-hms/troubleshooting.md
+      - Community Credits: cobblemon-hms/credits.md

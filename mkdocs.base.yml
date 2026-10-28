@@ -6,7 +6,11 @@
 # Every mod's nav follows the SAME spine, in this order:
 #
 #   index → Getting Started → (feature pages, mod-specific) → Commands → Configuration
-#         → Community Credits
+#         → Troubleshooting → Community Credits
+#
+# A mod whose commands and settings share one page calls it "Commands & Config". The index ends with
+# a "## Get it" section holding `<!-- mod-spec -->` (hooks/mod_specs.py), and its hero carries
+# `<!-- mod-badges -->`: neither is written by hand.
 #
 # Only the feature-page block differs between mods, and the labels are fixed too, so the sections
 # read as one wiki and not as unrelated sites. Keep a new mod's nav to this shape. Sin Roadmap: las
@@ -92,21 +96,151 @@ extra:
   # mismo commit en que se publica ese mod. Uno por seccion, nunca por pagina: una seccion describe
   # una sola version. Lo dibuja overrides/main.html arriba del titulo. El `name` es tambien la
   # entrada del mod en el menu de secciones de los sitios separados (overrides/partials/tabs.html).
-  # `modrinth` es el slug del proyecto: con el, modrinth-watch.yml abre un issue cuando Modrinth tiene
-  # un release que la seccion no describe, y la linea "Documented against" avisa al lector. Un mod sin
-  # slug no se vigila. Subir `version` sin tocar docs/<mod>/ falla en checks.yml
+  # `modrinth` es el id del proyecto en Modrinth, que no cambia si cambia el slug: con el,
+  # modrinth-watch.yml abre un issue cuando Modrinth tiene un release que la seccion no describe, y la
+  # linea "Documented against" avisa al lector. Un mod sin id no se vigila. Subir `version` sin tocar docs/<mod>/ falla en checks.yml
   # (tools/check_mod_versions.py): el numero se sube en el mismo cambio que reescribe las paginas.
   # Una entrada por linea, como estan: el script las lee con una regex.
   mod_versions:
-    routes:         { name: Routes,                         version: 1.2.119, modrinth: routes }
-    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.38,  modrinth: cobblemon-nuzlocke-soul-link }
-    picnic:         { name: Cobblemon Picnic,               version: 4.0.0,   modrinth: cobblemon-picnic }
-    ditto-hms:      { name: Cobblemon Ditto HMs,            version: 3.0.0,   modrinth: cobblemon-ditto-hms }
-    raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0 }
-    champions:      { name: Cobblemon Champions Training,   version: 2.0.0,   modrinth: cobblemon-champions-training }
-    tree-carve:     { name: Tree Carve,                     version: 2.0.0 }
-    mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.0.0 }
-    poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.11 }
+    routes:         { name: Routes,                         version: 1.2.119, modrinth: PfmV1XPQ }
+    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.38, modrinth: wHlszYZN }
+    picnic:         { name: Cobblemon Picnic,               version: 4.0.0, modrinth: sfptxo0H }
+    cobblemon-hms:  { name: Cobblemon HMs,                  version: 3.0.0, modrinth: JNfSyMuQ }
+    raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0, modrinth: S01tPZTk }
+    champions:      { name: Cobblemon Champions Training,   version: 2.0.0, modrinth: PlTQXswh }
+    tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr }
+    mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.0.0, modrinth: ShgrcSQY }
+    poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.11, modrinth: MjGKcXBb }
+    action-combat:  { name: Cobblemon Action Combat,        version: 0.1.40 }
+  # La ficha tecnica de cada mod: lo que dice su jar publicado (fabric.mod.json y neoforge.mods.toml
+  # del tag del ultimo release), no lo que se recuerda. De aca salen, por hooks/mod_specs.py, las
+  # insignias del hero de cada index, la tabla "Get it" de cada index, y en la portada los chips de
+  # cada fila y la tabla de compatibilidad. Ninguna de esas se escribe a mano: se cambia aca, en el
+  # mismo commit que sube `version` en mod_versions.
+  #   minecraft   las versiones de Minecraft con jar propio.
+  #   side        `client` si va solo en el cliente; sin la clave, va en el server y en cada cliente.
+  #   cobblemon   el rango que corre, corto ("1.8+", "1.7–1.8"); sin la clave, no lo necesita.
+  #   cobblemon_note  la aclaracion que va al lado en la ficha.
+  #   requires    otros mods sin los que no arranca o no sirve, ademas del loader y sus librerias.
+  #   fabric / neoforge   las librerias de cada loader.
+  #   optional    [mod, para que] — lo que suma si esta.
+  #   notes       filas extra de la tabla, {Titulo: texto}.
+  #   curseforge  el id del proyecto en CurseForge, si tiene.
+  #   unreleased  sin descarga publica todavia: la ficha no lleva fila "Download".
+  # Los mods de las listas se nombran por la clave de `deps`, que lleva su nombre y su slug de Modrinth.
+  deps:
+    fabric-api:     { name: Fabric API,                  modrinth: fabric-api }
+    flk:            { name: Fabric Language Kotlin,      modrinth: fabric-language-kotlin }
+    kff:            { name: Kotlin for Forge,            modrinth: kotlin-for-forge }
+    architectury:   { name: Architectury API,            modrinth: architectury-api }
+    cloth-config:   { name: Cloth Config,                modrinth: cloth-config }
+    modmenu:        { name: Mod Menu,                    modrinth: modmenu }
+    routes:         { name: Routes,                      page: routes/index.md }
+    poketowns:      { name: Cobblemon PokeTowns,         page: poketowns/index.md }
+    raiddens:       { name: Cobblemon Raid Dens,         modrinth: cobblemonraiddens }
+    xaero-minimap:  { name: Xaero's Minimap,             modrinth: xaeros-minimap }
+    xaero-worldmap: { name: Xaero's World Map,           modrinth: xaeros-world-map }
+    waystones:      { name: Waystones,                   modrinth: waystones }
+    playerxp:       { name: "Cobblemon: PlayerXP",       modrinth: cobblemon-playerxp }
+    cobbledollars:  { name: CobbleDollars,               modrinth: cobbledollars }
+    rct:            { name: Radical Cobblemon Trainers,  modrinth: radical-cobblemon-trainers }
+    mega-showdown:  { name: "Cobblemon: Mega Showdown",  modrinth: cobblemon-mega-showdown }
+    pokebelt:       { name: PokeBelt,                    modrinth: pokebelt-cobblemon }
+  mod_specs:
+    routes:
+      minecraft: "1.21.1"
+      fabric: [fabric-api, architectury, cloth-config]
+      neoforge: [architectury, cloth-config]
+      optional:
+        - [waystones, each waystone becomes a named town on the road network]
+        - [xaero-minimap, "waypoints, trails and chunk paint on the map"]
+      curseforge: 1584243
+    nuzlocke:
+      minecraft: "1.21.1"
+      cobblemon: "1.7–1.8"
+      cobblemon_note: "built for 1.8; it runs on 1.7.3, but [route Pokémon](nuzlocke.md#route-pokemon) need 1.8"
+      requires: [routes]
+      requires_note: 1.2.119 or newer
+      fabric: [fabric-api, architectury, cloth-config]
+      neoforge: [architectury, cloth-config]
+      optional:
+        - [rct, "trainers on the roads and level caps; without it those stand down"]
+      curseforge: 1630816
+    picnic:
+      minecraft: "1.21.1"
+      cobblemon: "1.8+"
+      fabric: [architectury, flk]
+      neoforge: [architectury, kff]
+      optional:
+        - [cloth-config, "the settings screen (with Mod Menu on Fabric)"]
+      curseforge: 1581251
+    cobblemon-hms:
+      minecraft: "1.21.1"
+      cobblemon: "1.8+"
+      cobblemon_note: on 1.7.x it refuses to load with a dependency error, not a crash mid-session
+      fabric: [flk, cloth-config]
+      neoforge: [kff]
+      optional:
+        - [playerxp, "experience from battles, for servers that charge HMs in experience"]
+        - [modmenu, "the settings screen, on Fabric"]
+      curseforge: 1587850
+    raid-icons:
+      minecraft: "1.21.1"
+      side: client
+      cobblemon_note: Cobblemon Raid Dens brings it with it
+      requires: [raiddens]
+      fabric: [fabric-api, flk]
+      neoforge: [kff]
+      optional:
+        - [xaero-minimap, the icons on the minimap]
+        - [xaero-worldmap, the icons on the world map]
+        - [cloth-config, "the settings screen (with Mod Menu on Fabric)"]
+    champions:
+      minecraft: "1.21.1"
+      cobblemon: "1.8"
+      cobblemon_note: 1.7.3 is not supported
+      fabric: [flk]
+      neoforge: [kff]
+      optional:
+        - [playerxp, experience for the battles you win]
+        - [cobbledollars, a second currency]
+        - [cloth-config, "the settings screen (with Mod Menu on Fabric)"]
+        - [poketowns, puts a Champions Trainer in every Pokémon Center]
+      curseforge: 1676756
+    tree-carve:
+      minecraft: "1.21.1 · 26.1–26.3"
+      fabric: [architectury, flk]
+      neoforge: [architectury, kff]
+      notes:
+        Java: 21 for Minecraft 1.21.1, 25 for 26.x
+        Works with: any mod that adds logs — it goes by the block tag, not by a list of woods
+    mid-battle-exp:
+      minecraft: "1.21.1"
+      cobblemon: "1.7–1.8"
+      cobblemon_note: the same jar runs on both
+      fabric: [architectury, flk]
+      neoforge: [architectury, kff]
+      notes:
+        Works with: any mod that changes how much EXP or how many EVs a battle gives — its numbers are the ones paid
+    poketowns:
+      unreleased: true
+      minecraft: "1.21.1"
+      cobblemon: "1.8+"
+      requires: [cobbledollars, waystones]
+      fabric: [fabric-api, flk, architectury]
+      neoforge: [kff, architectury]
+      optional:
+        - [routes, connects every settlement to the road network]
+    action-combat:
+      unreleased: true
+      minecraft: "1.21.1"
+      cobblemon: "1.8+"
+      fabric: [flk, architectury]
+      neoforge: [kff, architectury]
+      optional:
+        - [mega-showdown, "Mega Evolution, Tera, Dynamax and Z-Moves in a real-time fight"]
+        - [pokebelt, throwing Poké Balls mid-fight]
+        - [rct, "its trainers fight in real time, and a win still counts"]
   # Como se encuentran los sitios separados entre si. Cada config de mod o de landing declara
   # `wiki_site` (la carpeta del mod, o `landing`). Lo leen hooks/cross_site_links.py, que reescribe
   # los links que salen del sitio, overrides/partials/tabs.html, que arma el menu de secciones, y
@@ -118,6 +252,9 @@ extra:
   wiki:
     url: https://manucruzleiva.github.io/mod-wiki/
     alias: latest
+    # Carpetas de mods que cambiaron de nombre: overrides/404.html manda los links viejos a la nueva.
+    moved:
+      ditto-hms: cobblemon-hms
     menu:
       - { title: Home,         path: "" }
       - { title: Report a bug, path: reporting/ }
@@ -165,6 +302,9 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 hooks:
+  # Las insignias, la tabla "Get it" de cada mod y la tabla de compatibilidad de la portada salen de
+  # extra.mod_specs. Va antes de cross_site_links, que reescribe los links que deja.
+  - hooks/mod_specs.py
   # Reemplaza cada ```mermaid por su SVG ya renderizado, para no mandarle a cada lector 3,4 MB de
   # Mermaid.js. Si un diagrama todavia no tiene SVG, deja el fence y el navegador lo dibuja como
   # siempre: nunca rompe el build, solo avisa cual falta.

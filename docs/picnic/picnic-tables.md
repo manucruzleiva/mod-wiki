@@ -101,8 +101,8 @@ example.
     <div class="cr-scroll">
     <div class="cr-craft" title="2× Apricorn + 2× Apricorn Planks → 1× Picnic Basket in that colour">
       <div class="cr-grid">
-        <div class="cr-slot cr-cycle" style="--n:7; background-image:url(../../assets/items/strips/apricorn.png)" role="img" aria-label="Apricorn — any of the 7 colours"></div>
-        <div class="cr-slot cr-cycle" style="--n:7; background-image:url(../../assets/items/strips/apricorn.png)" role="img" aria-label="Apricorn — any of the 7 colours"></div>
+        <div class="cr-slot cr-cycle cr-cycle--7" style="background-image:url(../../assets/items/strips/apricorn.png)" role="img" aria-label="Apricorn — any of the 7 colours"></div>
+        <div class="cr-slot cr-cycle cr-cycle--7" style="background-image:url(../../assets/items/strips/apricorn.png)" role="img" aria-label="Apricorn — any of the 7 colours"></div>
         <div class="cr-slot"></div>
         <div class="cr-slot"><img src="../../assets/items/apricorn_planks.png" alt="Apricorn Planks"></div>
         <div class="cr-slot"><img src="../../assets/items/apricorn_planks.png" alt="Apricorn Planks"></div>
@@ -110,7 +110,7 @@ example.
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
       </div>
       <div class="cr-arrow">➜</div>
-      <div class="cr-result cr-cycle" style="--n:7; background-image:url(../../assets/items/strips/basket.png)" role="img" aria-label="Picnic Basket in the apricorn's colour"></div>
+      <div class="cr-result cr-cycle cr-cycle--7" style="background-image:url(../../assets/items/strips/basket.png)" role="img" aria-label="Picnic Basket in the apricorn's colour"></div>
     </div>
     </div>
 

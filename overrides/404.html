@@ -17,9 +17,22 @@
       var mods = {{ config.extra.mod_versions.keys() | list | tojson }};
       var alias = {{ config.extra.wiki.alias | tojson }};
       var root = new URL({{ config.extra.wiki.url | tojson }}).pathname;
+      var moved = {{ config.extra.wiki.moved | tojson }};
       var path = window.location.pathname;
       if (path.indexOf(root) !== 0) { return; }
       var rest = path.slice(root.length).split('/');
+      // Un mod que cambio de carpeta (ditto-hms -> cobblemon-hms): la misma pagina en su carpeta nueva,
+      // en `latest`, venga o no con version. Las paginas adentro tambien llevan la carpeta del mod.
+      if (moved[rest[0]]) {
+        var to = moved[rest[0]];
+        var tail = rest.slice(1);
+        if (tail[0] === alias || /^\d+\.\d+/.test(tail[0])) { tail = tail.slice(1); }
+        if (tail[0] === rest[0]) { tail[0] = to; }
+        else if (tail.length && tail[0] !== '') { tail.unshift(to); }
+        window.location.replace(root + to + '/' + alias + '/' + tail.join('/')
+          + window.location.search + window.location.hash);
+        return;
+      }
       if (mods.indexOf(rest[0]) === -1 || rest[1] === alias || /^\d+\.\d+$/.test(rest[1])) { return; }
       // /<mod>/<mod>/<pagina>/ es el mismo link con la carpeta del mod ya puesta.
       var page = rest[1] === rest[0] ? rest.slice(1) : rest;
