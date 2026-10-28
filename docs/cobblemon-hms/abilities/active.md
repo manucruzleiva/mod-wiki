@@ -92,24 +92,43 @@ it throws off **electric sparks**, so a charged block is one you can find again.
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_cut.png" alt=""> Cut
-**Power:** max 128 blocks
+**Power:** max 128 blocks (the config caps it at 256)
 
-Aim at a **log** and the whole tree comes down — every connected log, with the leaves and vines
-tangled in it. Aim at a **leaf** or a **vine** and just that tangle goes.
+Aim at a **tree** and the whole tree comes down: every connected log, with the leaves and vines
+tangled in it. It only counts as a tree when leaves the world grew are on it (or, for a huge
+nether fungus, its wart blocks and shroomlights). A **log cabin** has none, so aiming at its wall
+cuts the one log you aimed at and not the house. Leaves you placed yourself are never swept up
+with a tree, and a forest whose crowns touch loses one tree, not its neighbours.
+
+Aim at a **leaf** or a **vine** and just that tangle goes. A placed hedge goes one block at a time.
+
+Aim at **bamboo or any other wood block** (planks, fences, a crafting table, a chest) and that one
+block is cut, as an axe would. A chest drops what was in it.
 
 It also **cuts plants**: grass, ferns, crops, ground cover. Those come away as if you had used
-shears, so the drops are the careful ones — the grass itself rather than a couple of seeds — and
+shears, so the drops are the careful ones (the grass itself rather than a couple of seeds), and
 that holds for plants added by a datapack too, because it is the game's own loot tables answering.
+Tall plants and doors come away whole, whichever half you aim at.
+
+It **shears** whatever is ready in front of you, as shears would: sheep, a wild or your own
+Wooloo, a Mooshroom (which, as with shears, turns it into a cow). Other players' Pokémon are left
+alone.
 
 **With nothing to cut in front of you, it clears the ground around you** (this is what X-Scissor
 used to do), in two passes of decreasing politeness:
 
-1. **Weeds first** — grass, ferns, dead bushes. If there are any, that is all it touches.
-2. **Then what somebody planted** — flowers and crops, and *only* once there is not a single weed
+1. **Weeds first**: grass, ferns, dead bushes. If there are any, that is all it touches.
+2. **Then what somebody planted**: flowers and crops, and *only* once there is not a single weed
    left in range (radius 5). Casting by accident in your own wheat field costs you the weeds, not
-   the field.
+   the field. Cherry and azalea leaves are not flowers here: the crown of the tree above you stays.
 
 It never strips grass down to dirt: as a fallback, that would go off every time you missed a tree.
+
+**Where it won't cut.** Cut breaks blocks the way you would: not inside spawn protection, not in
+a claim you can't build in, not in adventure mode (unless the block allows it) and not as a
+spectator. A tree on a claim border loses only the half on your side. Aimed at something you may
+not cut, it says so and does not fall back to clearing the ground. In creative nothing drops,
+as with your own hand.
 
 ---
 
