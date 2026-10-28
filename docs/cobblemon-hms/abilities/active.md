@@ -213,7 +213,7 @@ Aim at an **Alpha** to settle it back into the ordinary Pokémon it was. The way
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_celebrate.png" alt=""> Celebrate
-**Cooldown:** 10 min · **Power:** how many rockets (**8**)
+**Cooldown:** 1s · **Power:** how many rockets (**8**)
 
 Punch with an empty hand and a firework show goes up over your head, for no reason at all. The
 rockets are made for you, not taken from your inventory, and they **hurt nobody**: not you, not your
