@@ -130,7 +130,7 @@ what the config takes.
 | Cut | none | 128 |
 | Rock Smash | none | 32 |
 | Camouflage | 15 min | duration — **18000** |
-| Strength | none | 1 |
+| Strength | none | — |
 | Teleport | 30s | 30 |
 | Stockpile | 1s | lava self-damage — **7** |
 | Charge | 3s | ticks between sparks — **10** |
