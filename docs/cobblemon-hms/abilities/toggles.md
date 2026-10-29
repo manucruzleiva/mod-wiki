@@ -34,7 +34,8 @@ belong to the Pokémon you ride: see [Your Pokémon](../pokemon.md#mount-toggles
     The **top-left corner of your HUD lists every HM in effect**, grouped by kind — **Companion**
     (the HM lent to your fist), **Aura**, **Weather** and **Mount** — each with its own icon. Auras
     no longer show as status effects. Hide the list with *Show active HMs on the HUD* in the config
-    screen (Mod Menu), or `/hms config hud false` in singleplayer.
+    screen (Mod Menu on Fabric, the mod list's Config button on NeoForge), or
+    `/hms config hud false` in singleplayer.
 
 ---
 
