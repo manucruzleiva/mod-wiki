@@ -2,47 +2,50 @@
 
 Auras are **passive HMs your Pokémon give you** while they are out and near you (24 blocks). Open
 Cobblemon's interaction wheel on one of your sent-out Pokémon, pick **Field moves**, and switch an
-aura on; it shows **✔** while it is on. Recall the Pokémon or walk away from it and the aura stops;
-it comes back when the Pokémon does.
+aura on; it shows **✔** while it is on. Walk away from the Pokémon and the aura pauses; it comes
+back when you do.
 
-You can run as many auras as you like, from one Pokémon or several. They cost nothing.
+You can run as many auras as you like, from one Pokémon or several. Each one costs the Pokémon
+giving it a little **fullness** for every minute it stays on (see
+[Keeping it fed](../pokemon.md#keeping-it-fed)).
 
 **Put the Pokémon back in its ball and its auras switch off.** Sending it out again does not bring
 them back: switch them on again from its wheel. Walking away from it only pauses them.
 
-!!! info "Weather auras"
-    **Rain Dance, Sunny Day, Blizzard, Sandstorm, Mist and Snowscape** are weather. Only **one** runs at a time:
+The toggles that make **a mount** better — Surf, Tailwind, Swift, U-turn, Endure and Agility —
+belong to the Pokémon you ride: see [Your Pokémon](../pokemon.md#mount-toggles).
+
+!!! tip "Active HMs on your HUD"
+    The **top-left corner of your HUD lists every HM in effect**, grouped by kind — **Companion**
+    (the HM lent to your fist), **Aura**, **Weather** and **Mount** — each with its own icon and the
+    Pokémon doing it in brackets, by its nickname if it has one: for example *Sandstorm (Dunes)*.
+    The interaction wheel shows the same list in its corner. Auras do not show as status effects.
+    Hide the list with *Show active HMs on the HUD* in the config screen (Mod Menu on Fabric, the
+    mod list's Config button on NeoForge), or `/hms config hud false` in singleplayer.
+
+## Weather auras
+
+!!! info "One weather at a time"
+    **Rain Dance, Thunder, Sunny Day, Blizzard, Sandstorm and Mist** are weather. Only **one** runs at a time:
     switching one on, on any of your Pokémon, switches the others off, so the last one you switched
     on is the one in effect. Between players close together, too, the weather switched on last wins.
     Like any aura, a weather only works while its Pokémon is out and near you, and **putting the
     Pokémon back in its ball switches it off**.
 
-    Every weather takes over **Minecraft's own sky** while it is on: Rain Dance makes it rain, and
-    all the others keep it clear, so no rain falls through your sandstorm, mist or blizzard while
-    their own effects run. Switch it off, or recall the Pokémon, and the game decides the weather
-    again.
+    Every weather takes over **Minecraft's own sky** while it is on: Rain Dance makes it rain,
+    Thunder brews a thunderstorm, and all the others keep it clear, so no rain falls through your
+    sandstorm, mist or blizzard while their own effects run. Switch it off, or recall the Pokémon,
+    and the game decides the weather again.
 
-!!! tip "What is on right now"
-    Open Cobblemon's interaction wheel on any Pokémon: its **top-left corner lists every HM in
-    effect**, grouped by kind and with its icon, each with the Pokémon doing it in brackets, by its nickname if it has one — for
-    example *Sandstorm (Dunes)*.
-
-The toggles that make **a mount** better — Surf, Tailwind, Swift, U-turn, Helping Hand and Agility —
-belong to the Pokémon you ride: see [Your Pokémon](../pokemon.md#mount-toggles).
-
-!!! tip "Active HMs on your HUD"
-    The **top-left corner of your HUD lists every HM in effect**, grouped by kind — **Companion**
-    (the HM lent to your fist), **Aura**, **Weather** and **Mount** — each with its own icon. Auras
-    no longer show as status effects. Hide the list with *Show active HMs on the HUD* in the config
-    screen (Mod Menu on Fabric, the mod list's Config button on NeoForge), or
-    `/hms config hud false` in singleplayer.
+    **Snowscape is not a weather**: it is a plain aura (snow underfoot, nothing in the sky), so it
+    runs alongside any of them.
 
 ---
 
 ## Who can give it
 
-A Pokémon can give an aura when the move is **in its movepool** (equipped or not), or when its
-species is one of these:
+A Pokémon can give an aura when it **has learned the move**, one of its four or one it swapped
+out. On a server that lets species count, these can always give it:
 
 | Disc | Aura | Pokémon (any of) |
 |---|---|---|
@@ -50,16 +53,17 @@ species is one of these:
 | <img class="hm-disc" src="../../../assets/items/hm_blizzard.png" alt=""> | Blizzard *(weather)* | Abomasnow, Glalie, Froslass |
 | <img class="hm-disc" src="../../../assets/items/hm_dive.png" alt=""> | Dive | Vaporeon, Lapras, Wailord |
 | <img class="hm-disc" src="../../../assets/items/hm_flash.png" alt=""> | Flash | Ampharos, Jolteon, Lanturn |
-| <img class="hm-disc" src="../../../assets/items/hm_jump.png" alt=""> | Jump | Magikarp, Buneary, Spoink |
+| <img class="hm-disc" src="../../../assets/items/hm_jump.png" alt=""> | Jump | Magikarp, Buneary, Spoink — or any Pokémon with **Splash** |
 | <img class="hm-disc" src="../../../assets/items/hm_lava_plume.png" alt=""> | Lava Plume | Magcargo, Slugma, Turtonator |
 | <img class="hm-disc" src="../../../assets/items/hm_lucky_chant.png" alt=""> | Lucky Chant | Clefairy, Chimecho, Togetic |
 | <img class="hm-disc" src="../../../assets/items/hm_magnet_rise.png" alt=""> | Magnet Rise | Magnemite, Magneton, Magnezone |
 | <img class="hm-disc" src="../../../assets/items/hm_rain_dance.png" alt=""> | Rain Dance *(weather)* | Politoed, Kyogre, Golduck |
 | <img class="hm-disc" src="../../../assets/items/hm_rock_climb.png" alt=""> | Rock Climb | Rhydon, Rhyperior, Sneasel |
 | <img class="hm-disc" src="../../../assets/items/hm_shadow_sneak.png" alt=""> | Shadow Sneak | Gengar, Banette, Spiritomb |
-| <img class="hm-disc" src="../../../assets/items/hm_snowscape.png" alt=""> | Snowscape *(weather)* | Froslass, Mamoswine |
+| <img class="hm-disc" src="../../../assets/items/hm_snowscape.png" alt=""> | Snowscape | Froslass, Mamoswine |
 | <img class="hm-disc" src="../../../assets/items/hm_sunny_day.png" alt=""> | Sunny Day *(weather)* | Torkoal, Sunkern, Volcarona |
 | <img class="hm-disc" src="../../../assets/items/hm_sweet_scent.png" alt=""> | Sweet Scent | Gloom, Bellossom, Vileplume, Aromatisse |
+| <img class="hm-disc" src="../../../assets/items/hm_thunder.png" alt=""> | Thunder *(weather)* | Pikachu, Raichu, Zapdos |
 | <img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> | Sandstorm *(weather)* | Hippopotas, Hippowdon, Tyranitar, Gigalith, Sandaconda |
 | <img class="hm-disc" src="../../../assets/items/hm_mist.png" alt=""> | Mist *(weather)* | Lapras, Lotad, Lombre, Ludicolo, Suicune — or any Pokémon with Mist |
 
@@ -87,18 +91,24 @@ Lets you **live and work underwater**. Water stops getting in your way:
 Dive takes penalties away; it never hands out a bonus. Push off the bottom and you swim at exactly
 the speed you always did — if you want to be *fast* in the water, ride a Pokémon with [Surf](../pokemon.md#mount-toggles) switched on.
 
+![Dive: living underwater](../assets/store/gif-dive.gif)
+
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_flash.png" alt=""> Flash
 
 Lets you **see clearly in the dark**, even in caves and at night. Toggle off to remove instantly.
+It works with **Iris shader packs** too: the world itself gets brighter, not just the screen.
+
+![Flash: lighting up the dark around you](../assets/store/gif-flash.gif)
 
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_jump.png" alt=""> Jump
 **Power:** Jump Boost level (default **IV**)
 
-Applies continuous **Jump Boost**. The `power` value equals the buff level, so `power = 4` gives Jump Boost IV.
+Comes from the move **Splash**, so any Pokémon that knows it can give it. Applies continuous
+**Jump Boost**. The `power` value equals the buff level, so `power = 4` gives Jump Boost IV.
 
 ---
 
@@ -110,7 +120,8 @@ through lava and walk its floor without the fluid dragging on every step, and yo
 are under. Swimming out is exactly as it always was — like Dive, it takes a penalty away rather than
 handing out a bonus.
 
-- **Fire:** you do not burn while it is on, in lava or out of it.
+- **Fire:** you are **fire immune**, like a Strider: no damage, and no flames on your screen or
+  on your body, in lava or out of it.
 - **Seeing:** with your head under the lava you can see about 24 blocks instead of one, and the
   floor around you is lit. Wading with your head above the surface leaves the sky as it is.
 - **Moving:** walking through lava is as quick as walking on land. Sprint and you swim, a little
@@ -141,6 +152,8 @@ While it is on you take no fall damage.
 
 It is a **building** tool, not a way to travel: for that, ride one of your flying Pokémon.
 
+![Magnet Rise: hovering over water to build a bridge](../assets/store/gif-magnet-rise.gif)
+
 - **It ends when the aura does:** recall the Pokémon, switch it off, or get more than 24 blocks from
   it (flying straight up counts). If that happens in the air, you **float down on Slow Falling**
   until you land instead of dropping.
@@ -161,6 +174,8 @@ when you are actually asking to go up, so walking and jumping near a wall work n
 
 **It works on your mount too.** Riding a Pokémon, run into a wall holding **W** and your Pokémon
 climbs it with you.
+
+![Rock Climb: climbing a wall](../assets/store/gif-rock-climb.gif)
 
 ---
 
@@ -197,13 +212,17 @@ instead of being paved, and the ice melts back once you have passed. Where it is
 - It changes only what you could change by hand: nothing in adventure mode, in spectator mode or
   inside spawn protection, and nothing on land a claim mod protects from you.
 
+It is a plain aura, not a weather, so it runs alongside whichever weather is on.
+
+![Snowscape: a trail of winter behind you](../assets/store/gif-snowscape.gif)
+
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_sweet_scent.png" alt=""> Sweet Scent
 **Cooldown:** 60s between arrivals
 
-Works like a **Poké Snack you carry around**. While it is on, a wild Pokémon from the area turns up
-near you about once a minute. It uses Cobblemon's own spawner with the Poké Snack's rules, so what
+Works like a **Poké Snack you carry around**. While it is on, the Pokémon giving off the scent
+gives off **pink dust**, and a wild Pokémon from the area turns up near it about once a minute. It uses Cobblemon's own spawner with the Poké Snack's rules, so what
 arrives is what lives there, and it never brings a herd.
 
 **The held item is the seasoning.** Whatever the Pokémon giving off the scent is holding works the
@@ -217,12 +236,15 @@ Arrivals follow the snack's limits: no more than Cobblemon's Poké Snack cap of 
 chunk around you, nothing arrives while you are dead or spectating, and the interval never drops
 below 5 seconds whatever the config says.
 
+![Sweet Scent: wild Pokémon drawn in like to a Poké Snack](../assets/store/gif-sweet-scent.gif)
+
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> Sandstorm
 **Power:** how many times faster loose ground breaks (**4**)
 
-Weather aura, with a clear sky. Sand is your ground while it blows:
+Weather aura. **A sandstorm you can see** blows around you, in any biome and any dimension, and
+every player nearby sees it too. The vanilla sky stays clear. Sand is your ground while it blows:
 
 - **Soul sand and honey never slow you down**: you walk on them as fast as on stone. It works in the
   Nether too, so a soul sand valley is open ground.
@@ -231,16 +253,20 @@ Weather aura, with a clear sky. Sand is your ground while it blows:
 - Another player's weather switched on later, close to you, replaces your sandstorm until you move
   apart or theirs ends.
 
+![Sandstorm: a sandstorm raised anywhere](../assets/store/gif-sandstorm.gif)
+
 ---
 
 ### <img class="hm-disc" src="../../../assets/items/hm_mist.png" alt=""> Mist
 **Power:** blocks away a hunter loses you (**8**)
 
-Weather aura, with a clear sky. A mist rolls in around you and you can only see about 20 blocks. Anything hunting you
+Weather aura, with a clear sky. A grey mist rolls in around you, the same everywhere, sky included,
+and you can only see about 20 blocks. Anything hunting you
 **loses track of you** once you are more than 8 blocks away, and goes back to wandering. Up close it
 still sees you, so Mist is for slipping away, not for standing in the open.
 
-In 4.0.0 this aura was called Fog and also came from Haze and Smokescreen. A config file that still says `fog` is read as Mist.
+Early in 4.0 this aura was called **Fog** and also came from Haze and Smokescreen; now it comes from
+the move Mist. A config file that still says `fog` is read as Mist.
 
 ---
 
@@ -248,6 +274,24 @@ In 4.0.0 this aura was called Fog and also came from Haze and Smokescreen. A con
 
 Weather aura. **It rains**, the game's own rain, for as long as Rain Dance is on and its Pokémon is out.
 Switch it off or recall the Pokémon and Minecraft takes the weather back.
+
+**It rains wherever you are**: deserts, snowy biomes, the Nether and the End included. Within 16
+blocks of you it is real rain for everything that asks: it puts out fires and burning mobs, lets
+Riptide work, fills cauldrons, and counts for Cobblemon's rain spawns and rain evolutions.
+
+![Rain Dance: holding the sky raining](../assets/store/gif-rain-dance.gif)
+
+---
+
+### <img class="hm-disc" src="../../../assets/items/hm_thunder.png" alt=""> Thunder
+
+Weather aura. **It brews a thunderstorm**, for as long as Thunder is on and its Pokémon is out. It
+rains wherever you are, exactly like [Rain Dance](#rain-dance), with thunder on top.
+
+The moment you switch it on, **a bolt comes down 6 to 12 blocks away**. That opening bolt is only for
+show: it flashes and booms but sets nothing alight and hurts nobody, so switching it on next to your
+own base is safe. The storm's own lightning after that is the game's, and does what vanilla
+lightning does.
 
 ---
 
@@ -272,3 +316,5 @@ ordinary snow and stays.
 
 It does not snow in the Nether (there is no sky there, only a roof), and it stops while you are in
 spectator mode.
+
+![Blizzard: snow in any biome](../assets/store/gif-blizzard.gif)

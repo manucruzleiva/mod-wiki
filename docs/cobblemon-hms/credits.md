@@ -14,7 +14,7 @@ _No reports yet — [be the first](https://discord.gg/SwcwXcCN4k)!_
 - [Fabric API](https://modrinth.com/mod/fabric-api) — Fabric platform hooks
 - [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin) — Kotlin on Fabric
 - [Kotlin for Forge](https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge) — Kotlin on NeoForge
-- [Cloth Config](https://modrinth.com/mod/cloth-config) — the config screen
+- [Cloth Config](https://modrinth.com/mod/cloth-config) — the config screen (optional on NeoForge)
 - [Mod Menu](https://modrinth.com/mod/modmenu) — config entry point on Fabric
 - [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) — this wiki
 

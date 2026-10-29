@@ -59,6 +59,23 @@ to do HMs until that goes back up. Feed it a berry to top it up.
 /hms config upkeep minfriendship <0-255>
 ```
 
+### Upkeep for each HM
+
+Every HM can have its own fullness cost and friendship loss. **`/hms config upkeep` on its own opens
+a table** of every HM with its two numbers, on Fabric and NeoForge alike; change what you like and
+save it in one go. An HM nobody tuned follows the world-wide numbers above.
+
+From the command line, one HM at a time:
+
+```
+/hms config <ability> fullness <0-700|default>     hundredths, per use or per minute kept on
+/hms config <ability> friendship <0-255|default>   lost per missing fullness point
+```
+
+Partner HMs pay per use; auras, weather and mount toggles pay per minute they stay on. The table is
+the server's config: only an operator can open it, and on a dedicated server it edits the server's
+file, not yours.
+
 ---
 
 ## Trainer Ditto
@@ -66,11 +83,11 @@ to do HMs until that goes back up. Feed it a berry to top it up.
 | Setting | Default | What it does |
 |---|---|---|
 | **Visits** | on | Whether the trader appears at all |
-| **Appears every** | 36000 ticks (30 min) | How long the whole server waits between appearances |
+| **Appears every** | 36000 ticks (30 min) | The **average** wait between appearances, for the whole server. Each wait is random, so there is no schedule to learn |
 | **Stays for** | 6000 ticks (5 min) | How long it waits before wandering off |
 | **Guaranteed perfect IVs** | 0 | Rolled like any wild Ditto · 1 gives it one best stat · 6 is flawless |
 | **Level** | 15–45 | The band its level is rolled from, inclusive |
-| **TM price** | 4–32 relic coins | The cheapest and dearest a TM can cost, used only when `trader_offers.json` is first written |
+| **TM price** | 4–32 relic coins | The coin band of the cheapest TMs, used only when `trader_offers.json` is first written |
 
 ```
 /hms config trader enabled <true|false>
@@ -82,16 +99,35 @@ to do HMs until that goes back up. Feed it a berry to top it up.
 /hms config trader reload
 ```
 
-The live prices are in `config/cobblemon_hms/trader_offers.json`. Edit it and run
-`/hms config trader reload` to apply it without a restart.
+One appearance is **one trader for the whole server**, not one per player. The player it turns up
+near **hears Ditto's cry** where it stands; nothing is said in chat when it arrives or leaves. The
+clock runs while the server is empty and survives a restart; an appearance that lands with nobody
+eligible is missed rather than saved up.
 
-One appearance is **one trader for the whole server**, not one per player, and everybody is told in
-chat when it arrives and when it leaves. The clock runs while the server is empty and survives a
-restart; an appearance that lands with nobody eligible is missed rather than saved up.
+The first time it meets a player it hands them an **HM Case**, which has no recipe.
 
-It offers **three random Cobblemon TMs**, rolled once and kept for as long as that trader is
-standing there, one of each. A TM's price follows the power of its move: a status move costs the
-minimum, and the strongest moves cost the maximum.
+### What it sells
+
+It lays out **six random Cobblemon TMs**, rolled once and kept for as long as that trader is
+standing there, one of each. Every price and how often each TM turns up are in
+**`config/cobblemon_hms/trader_offers.json`**. Edit it and run `/hms config trader reload` to apply
+it without a restart.
+
+The file is written the first time anyone trades, once Cobblemon has loaded its TMs. The shipped
+prices follow **the level Pokémon learn the move at** (the median across species), and the later a
+move comes, the dearer and rarer its TM:
+
+| Move learned at | Price | Weight |
+|---|---|---|
+| below level 30 | relic coins, from the *TM price* band (4 to 32) | 10 |
+| 30 to 39 | 1 relic coin pouch | 6 |
+| 40 to 49 | 2 relic coin pouches | 4 |
+| 50 to 59 | 1 relic coin sack | 2 |
+| 60 and up, or never by level-up (TM-only moves) | 1 sack + 2 pouches | 1 |
+
+A weight is relative, not a percentage: a coin TM is ten times as likely to be drawn as a TM-only
+one. Each entry takes one or two `{item, count}` costs (the two slots of a trade screen) by item id,
+so a pack can price in any item it likes. A TM missing from the file is never offered.
 
 It stops visiting a player for good once they catch it, and it keeps its distance from anyone who
 has caught one **or beaten one in battle**, so bring a friend who has done neither.
@@ -104,14 +140,15 @@ Each HM has only the values it actually reads:
 
 | Parameter | Which HMs | Description |
 |---|---|---|
-| **Enabled** | all | Off: no Pokémon lends it, it can't be learned and the Trainer Ditto won't sell it. Whoever already learned it keeps it |
+| **Enabled** | all | Off: no Pokémon offers it on its wheel |
 | **Required level** | all | Experience level needed before the HM works for you (every HM ships at 0) |
 | **Cooldown** | partner HMs, and Sweet Scent | Ticks between uses (20 ticks = 1 second; 0 = no cooldown), counted **per Pokémon**. For Sweet Scent it is the time between arrivals, at least 100 |
 | **Power** | the HMs in the tables below that list a range | What it means depends on the HM: a radius, a duration, a speed in tenths. The menu's tooltip and the command say which |
+| **Fullness** / **Friendship** | all | That HM's own upkeep; see [Upkeep for each HM](#upkeep-for-each-hm) |
 
-Auras and mount toggles have no cooldown: they are simply on. Nothing costs the player hunger. The
-cooldown belongs to the Pokémon that lent the move, so a second Pokémon with the same move is
-ready straight away.
+Auras and mount toggles have no cooldown: they are simply on. Nothing costs the player hunger: the
+Pokémon pays in fullness. The cooldown belongs to the Pokémon that lent the move, so a second
+Pokémon with the same move is ready straight away.
 
 ### Required level
 
@@ -129,7 +166,9 @@ The same Cloth Config screen on both loaders (it needs [Cloth Config](https://mo
 - **Fabric:** Mod Menu → Cobblemon HMs → ⚙
 - **NeoForge:** Mods → Cobblemon HMs → **Config**
 
-Categories: **Activation**, **Pokémon upkeep**, **Trainer Ditto**, then one per HM. Short ranges
+Categories: **Activation**, **Pokémon upkeep**, **Trainer Ditto**, then one per HM. On NeoForge it
+needs Cloth Config, which is optional there: without it there is no Config button, and
+`/hms config` does everything. Short ranges
 are sliders. Cooldowns, long durations and the Trainer Ditto's timers are typed in, with the same
 ranges as the command. Each reset arrow goes back to the shipped value. In singleplayer, saving
 applies at once.
@@ -165,8 +204,10 @@ tables below. The full list is in [Commands](commands.md).
 The file is saved at `config/cobblemon_hms.json` on both loaders.
 
 You can edit it directly. Changes take effect on next server start. It holds only the settings the
-mod reads. The ones from before 4.0 (hunger costs, trader weights, cost order, activator item,
-wheel icon scale) are dropped the next time it is saved.
+mod reads. The ones from before 4.0 (hunger costs, blocked hunger, trader weights, cost order,
+experience per hunger point, activator item, same-move teachers, wheel icon scale) are dropped the
+next time it is saved. The Trainer Ditto's prices live in their own file,
+`config/cobblemon_hms/trader_offers.json`.
 
 ---
 
@@ -213,6 +254,7 @@ Every cooldown takes 0–72000.
 | Sandstorm | how many times faster loose ground breaks — **4** | 1–32 |
 | Mist | blocks away a hunter loses you — **8** | 2–32 |
 | Rain Dance | — | |
+| Thunder | — | |
 | Sunny Day | — | |
 | Blizzard | radius of the snowfall around you — **24** | 2–256 |
 
@@ -225,10 +267,13 @@ Every cooldown takes 0–72000.
 | Surf | tenths of the mount's swim-speed multiplier — **15** | 10–50 |
 | Agility | tenths of the mount's land-speed multiplier — **15** | 10–50 |
 | U-turn | tenths of the mount's turn (handling) multiplier, never past the stat's maximum of 100 — **18** | 10–50 |
-| Helping Hand | tenths of the stamina SPEND, from 1 (a tenth) to 10 (no help) — **2** | 1–10 |
+| Endure | tenths of the mount's Stamina stat, never past 100 — **20** | 10–50 |
 | Tailwind | tenths of the mount's flight-speed multiplier — **15** | 10–50 |
 | Swift | tenths of the mount's acceleration multiplier — **20** | 10–50 |
 
 !!! note "Old config files"
     A config written before 4.0 is brought up to date on load, and only where the meaning of a value
-    changed. Retired HMs (Fly, Glide, Headbutt, Thief and the combat HMs) drop out of the file.
+    changed: Teleport's longer cooldown, Tail Whip and Celebrate without one, Decorate's hour,
+    Leafage's 7×7 burst, and Helping Hand's power, which reads backwards as Endure and goes to the
+    new default. A number you set on purpose stays. `fog` is read as Mist and `helping_hand` as
+    Endure. Retired HMs (Fly, Glide, Headbutt, Thief and the combat HMs) drop out of the file.

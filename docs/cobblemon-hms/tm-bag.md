@@ -3,7 +3,10 @@
 Since 4.0 the **HM Case** is a bag for **Cobblemon TMs**. It holds as many as you like, of as many
 moves as you like, in one slot.
 
-Right-click with the Case in hand to open it.
+**You get one from the [Trainer Ditto](getting-started.md#the-trainer-ditto)** the first time you
+meet one: it is no longer crafted. Right-click with the Case in hand to open it.
+
+![The HM Case open, with its search box and the Put TMs away button](assets/store/menu-hm-case.jpg)
 
 | Do | What happens |
 |---|---|
@@ -19,5 +22,5 @@ The contents are stored on the Case itself, so it keeps them when you put it in 
 to a friend.
 
 !!! tip "Where TMs come from"
-    The [Trainer Ditto](getting-started.md#the-trainer-ditto) sells three random TMs for relic coins
-    every time it visits.
+    The [Trainer Ditto](getting-started.md#the-trainer-ditto) sells six random TMs for relic coins,
+    pouches and sacks every time it visits.

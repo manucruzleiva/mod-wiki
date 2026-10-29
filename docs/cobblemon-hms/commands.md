@@ -49,6 +49,8 @@ Summons a Trainer Ditto on demand, or undoes a catch so it will visit that playe
 /hms config <ability> power <value>          only HMs that read it, in that HM's range
 /hms config <ability> minlevel <0–100>
 /hms config <ability> enabled <true|false>
+/hms config <ability> fullness <0–700|default>   that HM's upkeep, in hundredths of fullness
+/hms config <ability> friendship <0–255|default> friendship it costs per missing fullness point
 /hms config <ability> reset
 /hms config reset_all
 ```
@@ -60,6 +62,7 @@ Summons a Trainer Ditto on demand, or undoes a catch so it will visit that playe
 ```
 
 ```
+/hms config upkeep                           opens the per-HM upkeep table
 /hms config upkeep enabled <true|false>
 /hms config upkeep use <0–700>               fullness per use, in hundredths
 /hms config upkeep minute <0–700>            fullness per minute kept on, in hundredths
@@ -88,23 +91,29 @@ config screen on Fabric and NeoForge.
 
 ## Ability IDs
 
+The ID is what `/hms config <ability>` takes. `/hms config` on its own lists every HM with the move
+behind it.
+
 ### Partner HMs
 
 | ID | Display name |
 |---|---|
-| `leafage` | Leafage |
 | `cut` | Cut |
 | `rock_smash` | Rock Smash |
-| `camouflage` | Camouflage |
+| `dig` | Dig |
+| `leafage` | Leafage |
+| `stockpile` | Stockpile |
 | `strength` | Strength |
 | `teleport` | Teleport |
-| `stockpile` | Stockpile |
+| `camouflage` | Camouflage |
 | `charge` | Charge |
 | `tail_whip` | Tail Whip |
 | `growth` | Growth |
 | `minimize` | Minimize |
 | `outrage` | Outrage |
 | `calm_mind` | Calm Mind |
+| `celebrate` | Celebrate |
+| `decorate` | Decorate |
 
 ### Auras
 
@@ -116,10 +125,30 @@ config screen on Fabric and NeoForge.
 | `flash` | Flash |
 | `rock_climb` | Rock Climb |
 | `lava_plume` | Lava Plume |
-| `snowscape` | Snowscape |
 | `absorb` | Absorb |
 | `lucky_chant` | Lucky Chant |
 | `shadow_sneak` | Shadow Sneak |
 | `sweet_scent` | Sweet Scent |
+| `snowscape` | Snowscape |
+
+### Weather auras
+
+| ID | Display name |
+|---|---|
+| `rain_dance` | Rain Dance |
+| `thunder` | Thunder |
+| `sunny_day` | Sunny Day |
+| `blizzard` | Blizzard |
 | `sandstorm` | Sandstorm |
-| `mist` | Mist |
+| `mist` | Mist (was `fog` in old config files) |
+
+### Mount toggles
+
+| ID | Display name |
+|---|---|
+| `surf` | Surf |
+| `tailwind` | Tailwind |
+| `swift` | Swift |
+| `u_turn` | U-turn |
+| `endure` | Endure (was `helping_hand` in old config files) |
+| `agility` | Agility |

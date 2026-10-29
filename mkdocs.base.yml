@@ -105,7 +105,7 @@ extra:
     routes:         { name: Routes,                         version: 1.2.119, modrinth: PfmV1XPQ }
     nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.38, modrinth: wHlszYZN }
     picnic:         { name: Cobblemon Picnic,               version: 4.0.0, modrinth: sfptxo0H }
-    cobblemon-hms:  { name: Cobblemon HMs,                  version: 3.0.0, modrinth: JNfSyMuQ }
+    cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.0.0, modrinth: JNfSyMuQ }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0, modrinth: S01tPZTk }
     champions:      { name: Cobblemon Champions Training,   version: 2.0.0, modrinth: PlTQXswh }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr }
@@ -181,8 +181,8 @@ extra:
       fabric: [flk, cloth-config]
       neoforge: [kff]
       optional:
-        - [playerxp, "experience from battles, for servers that charge HMs in experience"]
         - [modmenu, "the settings screen, on Fabric"]
+        - [cloth-config, "the settings screen, on NeoForge"]
       curseforge: 1587850
     raid-icons:
       minecraft: "1.21.1"
