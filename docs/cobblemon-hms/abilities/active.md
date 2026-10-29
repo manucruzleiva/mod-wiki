@@ -30,30 +30,30 @@ A Pokémon can lend an HM when it **has learned the move**, one of its four or o
 A move merged into an HM counts for it too, so a Pokémon that knows X-Scissor can lend Cut. On a
 server that lets species count, these can always lend it:
 
-| Disc | HM | Pokémon (any of) |
+| Icon | HM | Pokémon (any of) |
 |---|---|---|
-| <img class="hm-disc" src="../../../assets/items/hm_camouflage.png" alt=""> | Camouflage | Zorua, Kecleon, Ditto |
-| <img class="hm-disc" src="../../../assets/items/hm_charge.png" alt=""> | Charge | Elekid, Electabuzz, Electivire |
-| <img class="hm-disc" src="../../../assets/items/hm_cut.png" alt=""> | Cut | Scyther, Scizor, Kartana, Kleavor, Vikavolt |
-| <img class="hm-disc" src="../../../assets/items/hm_decorate.png" alt=""> | Decorate | Sylveon, Milcery, Togekiss |
-| <img class="hm-disc" src="../../../assets/items/hm_dig.png" alt=""> | Dig | Diglett, Dugtrio, Trapinch |
-| <img class="hm-disc" src="../../../assets/items/hm_leafage.png" alt=""> | Leafage | Bulbasaur, Chikorita, Treecko, Snivy, Drilbur, Excadrill |
-| <img class="hm-disc" src="../../../assets/items/hm_rock_smash.png" alt=""> | Rock Smash | Hitmonchan, Machop, Geodude |
-| <img class="hm-disc" src="../../../assets/items/hm_stockpile.png" alt=""> | Stockpile | Gulpin, Swalot, Squirtle, Totodile, Mudkip, Camerupt, Magcargo, Heatran |
-| <img class="hm-disc" src="../../../assets/items/hm_strength.png" alt=""> | Strength | Machoke, Machamp, Conkeldurr |
-| <img class="hm-disc" src="../../../assets/items/hm_tail_whip.png" alt=""> | Tail Whip | Rattata, Sentret, Buneary |
-| <img class="hm-disc" src="../../../assets/items/hm_teleport.png" alt=""> | Teleport | Abra, Kadabra, Alakazam, Ralts |
-| <img class="hm-disc" src="../../../assets/items/hm_growth.png" alt=""> | Growth | Sunkern, Sunflora, Petilil |
-| <img class="hm-disc" src="../../../assets/items/hm_minimize.png" alt=""> | Minimize | Ditto, Chansey, Barboach |
-| <img class="hm-disc" src="../../../assets/items/hm_outrage.png" alt=""> | Outrage | Dragonite, Salamence, Haxorus |
-| <img class="hm-disc" src="../../../assets/items/hm_calm_mind.png" alt=""> | Calm Mind | Alakazam, Espeon, Gardevoir |
-| <img class="hm-disc" src="../../../assets/items/hm_celebrate.png" alt=""> | Celebrate | Jigglypuff, Ludicolo, Alcremie |
+| <img class="hm-icon" src="../../assets/icons/camouflage.png" alt=""> | Camouflage | Zorua, Kecleon, Ditto |
+| <img class="hm-icon" src="../../assets/icons/charge.png" alt=""> | Charge | Elekid, Electabuzz, Electivire |
+| <img class="hm-icon" src="../../assets/icons/cut.png" alt=""> | Cut | Scyther, Scizor, Kartana, Kleavor, Vikavolt |
+| <img class="hm-icon" src="../../assets/icons/decorate.png" alt=""> | Decorate | Sylveon, Milcery, Togekiss |
+| <img class="hm-icon" src="../../assets/icons/dig.png" alt=""> | Dig | Diglett, Dugtrio, Trapinch |
+| <img class="hm-icon" src="../../assets/icons/leafage.png" alt=""> | Leafage | Bulbasaur, Chikorita, Treecko, Snivy, Drilbur, Excadrill |
+| <img class="hm-icon" src="../../assets/icons/rock_smash.png" alt=""> | Rock Smash | Hitmonchan, Machop, Geodude |
+| <img class="hm-icon" src="../../assets/icons/stockpile.png" alt=""> | Stockpile | Gulpin, Swalot, Squirtle, Totodile, Mudkip, Camerupt, Magcargo, Heatran |
+| <img class="hm-icon" src="../../assets/icons/strength.png" alt=""> | Strength | Machoke, Machamp, Conkeldurr |
+| <img class="hm-icon" src="../../assets/icons/tail_whip.png" alt=""> | Tail Whip | Rattata, Sentret, Buneary |
+| <img class="hm-icon" src="../../assets/icons/teleport.png" alt=""> | Teleport | Abra, Kadabra, Alakazam, Ralts |
+| <img class="hm-icon" src="../../assets/icons/growth.png" alt=""> | Growth | Sunkern, Sunflora, Petilil |
+| <img class="hm-icon" src="../../assets/icons/minimize.png" alt=""> | Minimize | Ditto, Chansey, Barboach |
+| <img class="hm-icon" src="../../assets/icons/outrage.png" alt=""> | Outrage | Dragonite, Salamence, Haxorus |
+| <img class="hm-icon" src="../../assets/icons/calm_mind.png" alt=""> | Calm Mind | Alakazam, Espeon, Gardevoir |
+| <img class="hm-icon" src="../../assets/icons/celebrate.png" alt=""> | Celebrate | Jigglypuff, Ludicolo, Alcremie |
 
 ---
 
 ## Ability details
 
-### <img class="hm-disc" src="../../../assets/items/hm_camouflage.png" alt=""> Camouflage
+### <img class="hm-icon" src="../../assets/icons/camouflage.png" alt=""> Camouflage
 **Cooldown:** 15 min · **Power:** 18000t (**15 minutes**)
 
 Become the **living creature** you're looking at. Your model is replaced by theirs — species, form,
@@ -74,7 +74,7 @@ to hit, nothing in your way, and nothing that can be killed off you.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_charge.png" alt=""> Charge
+### <img class="hm-icon" src="../../assets/icons/charge.png" alt=""> Charge
 **Cooldown:** 3s · **Power:** ticks between sparks (**10**)
 
 Turns the block you aim at into a redstone power source — enough to throw a door, a piston or a
@@ -89,7 +89,7 @@ it glows with **redstone dust** on its faces, so a charged block is one you can 
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_cut.png" alt=""> Cut
+### <img class="hm-icon" src="../../assets/icons/cut.png" alt=""> Cut
 **Cooldown:** none · **Power:** max 128 blocks
 
 Aim at a **log** and the tree comes down — its logs, with the leaves and vines tangled in it. Only
@@ -115,7 +115,7 @@ It never strips grass down to dirt: as a fallback, that would go off every time 
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_leafage.png" alt=""> Leafage
+### <img class="hm-icon" src="../../assets/icons/leafage.png" alt=""> Leafage
 **Cooldown:** 2s · **Power:** radius 3 (a **7×7** patch)
 
 Instantly grows **every crop around you** to full maturity — handy for fast harvests — and does
@@ -146,7 +146,7 @@ mode, and skips spawn protection and claimed land. The radius (`power`) is cappe
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_rock_smash.png" alt=""> Rock Smash
+### <img class="hm-icon" src="../../assets/icons/rock_smash.png" alt=""> Rock Smash
 **Cooldown:** none · **Power:** max 32 ores
 
 Instantly breaks the block you aim at. If it's an **ore**, vein-mines all connected ore of that
@@ -157,7 +157,7 @@ the rest of what a shovel takes are [Dig](#dig)'s.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_dig.png" alt=""> Dig
+### <img class="hm-icon" src="../../assets/icons/dig.png" alt=""> Dig
 **Cooldown:** none
 
 What a shovel takes, **dirt, sand, gravel, clay and snow**, comes out in one hit, one block per
@@ -170,7 +170,7 @@ dug read as neither.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_stockpile.png" alt=""> Stockpile
+### <img class="hm-icon" src="../../assets/icons/stockpile.png" alt=""> Stockpile
 **Cooldown:** 1s · **Power:** lava self-damage 7 (3.5 hearts)
 
 Stockpile is a mouthful you keep. It took over **Water Gun** and **Eruption**.
@@ -190,7 +190,7 @@ from a bucket.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_strength.png" alt=""> Strength
+### <img class="hm-icon" src="../../assets/icons/strength.png" alt=""> Strength
 **Cooldown:** none
 
 Pushes the aimed block one block in whichever of the six directions you're looking — up and down
@@ -201,7 +201,7 @@ halves go together, or the push fails if either has nowhere to go. Won't move fl
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_tail_whip.png" alt=""> Tail Whip
+### <img class="hm-icon" src="../../assets/icons/tail_whip.png" alt=""> Tail Whip
 **Cooldown:** none
 
 Sweeps a **suspicious sand or gravel** block clean in a single motion instead of a dozen slow ones,
@@ -211,7 +211,7 @@ With no cooldown you can sweep a whole row of suspicious sand one click at a tim
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_teleport.png" alt=""> Teleport
+### <img class="hm-icon" src="../../assets/icons/teleport.png" alt=""> Teleport
 **Cooldown:** 30s · **Power:** max 30 blocks
 
 Blinks you to the block you're looking at (≤ 30 blocks), finding the nearest safe landing. Plays
@@ -223,7 +223,7 @@ It is the strongest way to travel the mod has, so it is priced like it: slow to 
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_growth.png" alt=""> Growth
+### <img class="hm-icon" src="../../assets/icons/growth.png" alt=""> Growth
 **Cooldown:** 1 min · **Power:** how long you stay big (**5 minutes**)
 
 Aim at one of your **Pokémon**, or a wild one, and it grows **one size**, for good, and you see it
@@ -232,7 +232,7 @@ size, for a while.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_minimize.png" alt=""> Minimize
+### <img class="hm-icon" src="../../assets/icons/minimize.png" alt=""> Minimize
 **Cooldown:** 1 min · **Power:** how long you stay small (**5 minutes**)
 
 Growth's opposite. Aim at a **Pokémon** and it shrinks **one size**, for good. Aim anywhere else and
@@ -240,21 +240,21 @@ you go half-size for a while.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_outrage.png" alt=""> Outrage
+### <img class="hm-icon" src="../../assets/icons/outrage.png" alt=""> Outrage
 **Cooldown:** 5 min
 
 Aim at an **XL** Pokémon to turn it into an **Alpha**. Anything smaller, it refuses.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_calm_mind.png" alt=""> Calm Mind
+### <img class="hm-icon" src="../../assets/icons/calm_mind.png" alt=""> Calm Mind
 **Cooldown:** 2 min
 
 Aim at an **Alpha** to settle it back into the ordinary Pokémon it was. The way back out of Outrage.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_celebrate.png" alt=""> Celebrate
+### <img class="hm-icon" src="../../assets/icons/celebrate.png" alt=""> Celebrate
 **Cooldown:** none · **Power:** how many rockets (**8**)
 
 Punch with an empty hand and a firework show goes up over your head, for no reason at all. The
@@ -263,7 +263,7 @@ against a ceiling. There is no cooldown: celebrate as often as you like.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_decorate.png" alt=""> Decorate
+### <img class="hm-icon" src="../../assets/icons/decorate.png" alt=""> Decorate
 **Cooldown:** 1 hour
 
 Aim at one of your **Pokémon**, or a wild one, for **one roll at making it shiny, for good**. The

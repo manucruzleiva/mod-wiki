@@ -47,31 +47,31 @@ belong to the Pokémon you ride: see [Your Pokémon](../pokemon.md#mount-toggles
 A Pokémon can give an aura when it **has learned the move**, one of its four or one it swapped
 out. On a server that lets species count, these can always give it:
 
-| Disc | Aura | Pokémon (any of) |
+| Icon | Aura | Pokémon (any of) |
 |---|---|---|
-| <img class="hm-disc" src="../../../assets/items/hm_absorb.png" alt=""> | Absorb | Gulpin, Swalot, Victreebel |
-| <img class="hm-disc" src="../../../assets/items/hm_blizzard.png" alt=""> | Blizzard *(weather)* | Abomasnow, Glalie, Froslass |
-| <img class="hm-disc" src="../../../assets/items/hm_dive.png" alt=""> | Dive | Vaporeon, Lapras, Wailord |
-| <img class="hm-disc" src="../../../assets/items/hm_flash.png" alt=""> | Flash | Ampharos, Jolteon, Lanturn |
-| <img class="hm-disc" src="../../../assets/items/hm_jump.png" alt=""> | Jump | Magikarp, Buneary, Spoink — or any Pokémon with **Splash** |
-| <img class="hm-disc" src="../../../assets/items/hm_lava_plume.png" alt=""> | Lava Plume | Magcargo, Slugma, Turtonator |
-| <img class="hm-disc" src="../../../assets/items/hm_lucky_chant.png" alt=""> | Lucky Chant | Clefairy, Chimecho, Togetic |
-| <img class="hm-disc" src="../../../assets/items/hm_magnet_rise.png" alt=""> | Magnet Rise | Magnemite, Magneton, Magnezone |
-| <img class="hm-disc" src="../../../assets/items/hm_rain_dance.png" alt=""> | Rain Dance *(weather)* | Politoed, Kyogre, Golduck |
-| <img class="hm-disc" src="../../../assets/items/hm_rock_climb.png" alt=""> | Rock Climb | Rhydon, Rhyperior, Sneasel |
-| <img class="hm-disc" src="../../../assets/items/hm_shadow_sneak.png" alt=""> | Shadow Sneak | Gengar, Banette, Spiritomb |
-| <img class="hm-disc" src="../../../assets/items/hm_snowscape.png" alt=""> | Snowscape | Froslass, Mamoswine |
-| <img class="hm-disc" src="../../../assets/items/hm_sunny_day.png" alt=""> | Sunny Day *(weather)* | Torkoal, Sunkern, Volcarona |
-| <img class="hm-disc" src="../../../assets/items/hm_sweet_scent.png" alt=""> | Sweet Scent | Gloom, Bellossom, Vileplume, Aromatisse |
-| <img class="hm-disc" src="../../../assets/items/hm_thunder.png" alt=""> | Thunder *(weather)* | Pikachu, Raichu, Zapdos |
-| <img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> | Sandstorm *(weather)* | Hippopotas, Hippowdon, Tyranitar, Gigalith, Sandaconda |
-| <img class="hm-disc" src="../../../assets/items/hm_mist.png" alt=""> | Mist *(weather)* | Lapras, Lotad, Lombre, Ludicolo, Suicune — or any Pokémon with Mist |
+| <img class="hm-icon" src="../../assets/icons/absorb.png" alt=""> | Absorb | Gulpin, Swalot, Victreebel |
+| <img class="hm-icon" src="../../assets/icons/blizzard.png" alt=""> | Blizzard *(weather)* | Abomasnow, Glalie, Froslass |
+| <img class="hm-icon" src="../../assets/icons/dive.png" alt=""> | Dive | Vaporeon, Lapras, Wailord |
+| <img class="hm-icon" src="../../assets/icons/flash.png" alt=""> | Flash | Ampharos, Jolteon, Lanturn |
+| <img class="hm-icon" src="../../assets/icons/jump.png" alt=""> | Jump | Magikarp, Buneary, Spoink — or any Pokémon with **Splash** |
+| <img class="hm-icon" src="../../assets/icons/lava_plume.png" alt=""> | Lava Plume | Magcargo, Slugma, Turtonator |
+| <img class="hm-icon" src="../../assets/icons/lucky_chant.png" alt=""> | Lucky Chant | Clefairy, Chimecho, Togetic |
+| <img class="hm-icon" src="../../assets/icons/magnet_rise.png" alt=""> | Magnet Rise | Magnemite, Magneton, Magnezone |
+| <img class="hm-icon" src="../../assets/icons/rain_dance.png" alt=""> | Rain Dance *(weather)* | Politoed, Kyogre, Golduck |
+| <img class="hm-icon" src="../../assets/icons/rock_climb.png" alt=""> | Rock Climb | Rhydon, Rhyperior, Sneasel |
+| <img class="hm-icon" src="../../assets/icons/shadow_sneak.png" alt=""> | Shadow Sneak | Gengar, Banette, Spiritomb |
+| <img class="hm-icon" src="../../assets/icons/snowscape.png" alt=""> | Snowscape | Froslass, Mamoswine |
+| <img class="hm-icon" src="../../assets/icons/sunny_day.png" alt=""> | Sunny Day *(weather)* | Torkoal, Sunkern, Volcarona |
+| <img class="hm-icon" src="../../assets/icons/sweet_scent.png" alt=""> | Sweet Scent | Gloom, Bellossom, Vileplume, Aromatisse |
+| <img class="hm-icon" src="../../assets/icons/thunder.png" alt=""> | Thunder *(weather)* | Pikachu, Raichu, Zapdos |
+| <img class="hm-icon" src="../../assets/icons/sandstorm.png" alt=""> | Sandstorm *(weather)* | Hippopotas, Hippowdon, Tyranitar, Gigalith, Sandaconda |
+| <img class="hm-icon" src="../../assets/icons/mist.png" alt=""> | Mist *(weather)* | Lapras, Lotad, Lombre, Ludicolo, Suicune — or any Pokémon with Mist |
 
 ---
 
 ## Ability details
 
-### <img class="hm-disc" src="../../../assets/items/hm_absorb.png" alt=""> Absorb
+### <img class="hm-icon" src="../../assets/icons/absorb.png" alt=""> Absorb
 **Power:** magnet radius 6
 
 Loose items on the ground drift toward you while it is on, so a scattered drop or a mined vein
@@ -79,7 +79,7 @@ gathers itself. Items are nudged rather than yanked, so they keep their normal p
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_dive.png" alt=""> Dive
+### <img class="hm-icon" src="../../assets/icons/dive.png" alt=""> Dive
 
 Lets you **live and work underwater**. Water stops getting in your way:
 
@@ -95,7 +95,7 @@ the speed you always did — if you want to be *fast* in the water, ride a Poké
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_flash.png" alt=""> Flash
+### <img class="hm-icon" src="../../assets/icons/flash.png" alt=""> Flash
 
 Lets you **see clearly in the dark**, even in caves and at night. Toggle off to remove instantly.
 It works with **Iris shader packs** too: the world itself gets brighter, not just the screen.
@@ -104,7 +104,7 @@ It works with **Iris shader packs** too: the world itself gets brighter, not jus
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_jump.png" alt=""> Jump
+### <img class="hm-icon" src="../../assets/icons/jump.png" alt=""> Jump
 **Power:** Jump Boost level (default **IV**)
 
 Comes from the move **Splash**, so any Pokémon that knows it can give it. Applies continuous
@@ -112,7 +112,7 @@ Comes from the move **Splash**, so any Pokémon that knows it can give it. Appli
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_lava_plume.png" alt=""> Lava Plume
+### <img class="hm-icon" src="../../assets/icons/lava_plume.png" alt=""> Lava Plume
 **Power:** tenths of the movement multiplier (default 17)
 
 Dive's twin for lava. It lets you **live and work down there**: you **do not burn**, you move
@@ -137,13 +137,13 @@ Combat, so Lava Plume now covers that on its own.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_lucky_chant.png" alt=""> Lucky Chant
+### <img class="hm-icon" src="../../assets/icons/lucky_chant.png" alt=""> Lucky Chant
 
 Fortune leans your way while it lasts: what you break and what you fish give up a little more.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_magnet_rise.png" alt=""> Magnet Rise
+### <img class="hm-icon" src="../../assets/icons/magnet_rise.png" alt=""> Magnet Rise
 **Power:** percent of creative flight speed you get (default **25**)
 
 **Flight.** Switch it on and **double-tap jump** to lift off, as in creative mode. You stay up for as
@@ -163,7 +163,7 @@ It is a **building** tool, not a way to travel: for that, ride one of your flyin
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_rock_climb.png" alt=""> Rock Climb
+### <img class="hm-icon" src="../../assets/icons/rock_climb.png" alt=""> Rock Climb
 
 Every vertical surface behaves like a ladder, and it is steered by the **movement keys**: **W**
 climbs, **S** descends, and holding nothing holds your place on the wall.
@@ -179,7 +179,7 @@ climbs it with you.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_shadow_sneak.png" alt=""> Shadow Sneak
+### <img class="hm-icon" src="../../assets/icons/shadow_sneak.png" alt=""> Shadow Sneak
 **Power:** percent of your speed you keep (default **55**)
 
 Total stealth on foot. No footstep sounds, no name over your head, and **nothing underfoot notices
@@ -197,7 +197,7 @@ It only works **on land**: in water or lava you swim at your normal speed, sprin
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_snowscape.png" alt=""> Snowscape
+### <img class="hm-icon" src="../../assets/icons/snowscape.png" alt=""> Snowscape
 **Power:** trail radius 3
 
 Winter follows you on foot: snow settles around you as you walk, and **still water freezes over** as
@@ -218,7 +218,7 @@ It is a plain aura, not a weather, so it runs alongside whichever weather is on.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_sweet_scent.png" alt=""> Sweet Scent
+### <img class="hm-icon" src="../../assets/icons/sweet_scent.png" alt=""> Sweet Scent
 **Cooldown:** 60s between arrivals
 
 Works like a **Poké Snack you carry around**. While it is on, the Pokémon giving off the scent
@@ -240,7 +240,7 @@ below 5 seconds whatever the config says.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> Sandstorm
+### <img class="hm-icon" src="../../assets/icons/sandstorm.png" alt=""> Sandstorm
 **Power:** how many times faster loose ground breaks (**4**)
 
 Weather aura. **A sandstorm you can see** blows around you, in any biome and any dimension, and
@@ -257,7 +257,7 @@ every player nearby sees it too. The vanilla sky stays clear. Sand is your groun
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_mist.png" alt=""> Mist
+### <img class="hm-icon" src="../../assets/icons/mist.png" alt=""> Mist
 **Power:** blocks away a hunter loses you (**8**)
 
 Weather aura, with a clear sky. A grey mist rolls in around you, the same everywhere, sky included,
@@ -270,7 +270,7 @@ the move Mist. A config file that still says `fog` is read as Mist.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_rain_dance.png" alt=""> Rain Dance
+### <img class="hm-icon" src="../../assets/icons/rain_dance.png" alt=""> Rain Dance
 
 Weather aura. **It rains**, the game's own rain, for as long as Rain Dance is on and its Pokémon is out.
 Switch it off or recall the Pokémon and Minecraft takes the weather back.
@@ -283,7 +283,7 @@ Riptide work, fills cauldrons, and counts for Cobblemon's rain spawns and rain e
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_thunder.png" alt=""> Thunder
+### <img class="hm-icon" src="../../assets/icons/thunder.png" alt=""> Thunder
 
 Weather aura. **It brews a thunderstorm**, for as long as Thunder is on and its Pokémon is out. It
 rains wherever you are, exactly like [Rain Dance](#rain-dance), with thunder on top.
@@ -295,14 +295,14 @@ lightning does.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_sunny_day.png" alt=""> Sunny Day
+### <img class="hm-icon" src="../../assets/icons/sunny_day.png" alt=""> Sunny Day
 
 Weather aura. **The sky stays clear**, with no rain and no storms, for as long as Sunny Day is on and
 its Pokémon is out. Switch it off or recall the Pokémon and Minecraft takes the weather back.
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_blizzard.png" alt=""> Blizzard
+### <img class="hm-icon" src="../../assets/icons/blizzard.png" alt=""> Blizzard
 **Power:** radius of the snowfall around you (**24**)
 
 Weather aura. **Snow falls and settles all around you**, whatever the biome, for as long as Blizzard is
