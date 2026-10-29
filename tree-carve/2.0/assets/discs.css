@@ -7,3 +7,11 @@ img.hm-disc {
   image-rendering: crisp-edges;
   vertical-align: middle;
 }
+
+/* Cobblemon HMs desde 4.0: el icono de cada HM en la rueda de Field moves (textures/gui/wheel),
+   no el disco. Son de 128px y lisos, asi que se escalan con suavizado normal. */
+img.hm-icon {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
