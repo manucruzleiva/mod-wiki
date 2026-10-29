@@ -1,0 +1,1317 @@
+/* ============================================================================
+   Modding Wiki — visual system
+   ----------------------------------------------------------------------------
+   One palette, defined once here and consumed by both schemes, instead of two
+   unrelated Material swatches. Everything else in this file is built on these
+   variables, so re-tinting the whole site is a three-line change.
+
+   The hue is a deep field-green (the routes and the outdoors these mods are
+   about) with an amber accent that reads as a signpost — high contrast against
+   the green in both light and dark.
+   ========================================================================== */
+
+:root {
+  --brand-green-900: #0a3c2c;
+  --brand-green-700: #0e6a4b;
+  --brand-green-500: #17a06f;
+  --brand-green-300: #5ed3a3;
+  --brand-amber-500: #e08c1a;
+  --brand-amber-400: #f3a83c;
+
+  --wiki-radius: 14px;
+  --wiki-radius-sm: 9px;
+  /* Shadows carry the elevation: no borders-plus-shadow doubling up. */
+  --wiki-shadow: 0 1px 2px rgba(10, 40, 30, 0.05), 0 6px 20px -8px rgba(10, 40, 30, 0.18);
+  --wiki-shadow-lift: 0 2px 4px rgba(10, 40, 30, 0.07), 0 14px 34px -10px rgba(10, 40, 30, 0.28);
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--brand-green-700);
+  --md-primary-fg-color--light: var(--brand-green-500);
+  --md-primary-fg-color--dark: var(--brand-green-900);
+  --md-accent-fg-color: #b4700f;
+  --md-typeset-a-color: var(--brand-green-700);
+
+  --wiki-surface: #ffffff;
+  --wiki-surface-sunken: #f4f7f5;
+  --wiki-border: rgba(10, 60, 44, 0.12);
+  --wiki-hero-from: #0c5240;
+  --wiki-hero-to: #12805c;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0d5540;
+  --md-primary-fg-color--light: var(--brand-green-500);
+  --md-primary-fg-color--dark: #072a1f;
+  --md-accent-fg-color: var(--brand-amber-400);
+  --md-typeset-a-color: var(--brand-green-300);
+
+  /* Material's stock slate is a touch blue; nudged toward the green so the
+     chrome and the content agree. */
+  --md-default-bg-color: #10171a;
+  --wiki-surface: #161f22;
+  --wiki-surface-sunken: #121a1d;
+  --wiki-border: rgba(255, 255, 255, 0.09);
+  --wiki-hero-from: #0a3a2c;
+  --wiki-hero-to: #0f5c44;
+}
+
+/* ── One colour per mod ────────────────────────────────────────────────────
+   `data-mod` is set on <body> from the URL by overrides/main.html, so every
+   section re-tints the whole chrome — header, tabs, links, hero — and you can
+   tell which mod you are reading from the corner of your eye. The variables
+   are the same ones the base palette above defines, so nothing else in this
+   file needs to know these rules exist.
+
+   Each mod gets a primary of its own and an accent picked to stay legible
+   against it, in both schemes. */
+
+/* Routes — field green: roads, worldgen, the outdoors. */
+body[data-mod="routes"] {
+  --md-primary-fg-color: #0e6a4b;
+  --md-primary-fg-color--light: #17a06f;
+  --md-primary-fg-color--dark: #0a3c2c;
+  --md-accent-fg-color: #b4700f;
+  --md-typeset-a-color: #0e6a4b;
+  --wiki-hero-from: #0c5240;
+  --wiki-hero-to: #12805c;
+}
+
+/* Picnic — terracotta: the blanket, the food, the warm afternoon. */
+body[data-mod="picnic"] {
+  --md-primary-fg-color: #b1452c;
+  --md-primary-fg-color--light: #d76a4d;
+  --md-primary-fg-color--dark: #7a2c1a;
+  --md-accent-fg-color: #12776b;
+  --md-typeset-a-color: #a93f27;
+  --wiki-hero-from: #96351f;
+  --wiki-hero-to: #cc6141;
+}
+
+/* Cobblemon HMs — Ditto's violet-pink. */
+body[data-mod="cobblemon-hms"] {
+  --md-primary-fg-color: #7c3f97;
+  --md-primary-fg-color--light: #a568bd;
+  --md-primary-fg-color--dark: #52276a;
+  --md-accent-fg-color: #b4700f;
+  --md-typeset-a-color: #7c3f97;
+  --wiki-hero-from: #5c2c75;
+  --wiki-hero-to: #8f4bad;
+}
+
+/* Nuzlocke & Soul Link — deep indigo, with a rose accent for the stakes. */
+body[data-mod="nuzlocke"] {
+  --md-primary-fg-color: #33459b;
+  --md-primary-fg-color--light: #6172c9;
+  --md-primary-fg-color--dark: #212c68;
+  --md-accent-fg-color: #c2405f;
+  --md-typeset-a-color: #33459b;
+  --wiki-hero-from: #26307a;
+  --wiki-hero-to: #4452b0;
+}
+
+/* Raid Icons — tera teal: the crystal on the map. */
+body[data-mod="raid-icons"] {
+  --md-primary-fg-color: #0e6f78;
+  --md-primary-fg-color--light: #2a9ea8;
+  --md-primary-fg-color--dark: #08454b;
+  --md-accent-fg-color: #b4700f;
+  --md-typeset-a-color: #0d6870;
+  --wiki-hero-from: #0a555c;
+  --wiki-hero-to: #138793;
+}
+
+/* Champions Training — trophy amber. */
+body[data-mod="champions"] {
+  --md-primary-fg-color: #8f5600;
+  --md-primary-fg-color--light: #c07a12;
+  --md-primary-fg-color--dark: #5c3700;
+  --md-accent-fg-color: #2f6fb0;
+  --md-typeset-a-color: #855000;
+  --wiki-hero-from: #6e4200;
+  --wiki-hero-to: #a86c0c;
+}
+
+/* Tree Carve — bark brown. */
+body[data-mod="tree-carve"] {
+  --md-primary-fg-color: #66462a;
+  --md-primary-fg-color--light: #92693f;
+  --md-primary-fg-color--dark: #3f2b19;
+  --md-accent-fg-color: #3d8a3a;
+  --md-typeset-a-color: #66462a;
+  --wiki-hero-from: #4d3420;
+  --wiki-hero-to: #7d5835;
+}
+
+/* Mid-Battle EXP — the experience bar's blue. */
+body[data-mod="mid-battle-exp"] {
+  --md-primary-fg-color: #1b65ab;
+  --md-primary-fg-color--light: #4a8fd1;
+  --md-primary-fg-color--dark: #103f6c;
+  --md-accent-fg-color: #b4700f;
+  --md-typeset-a-color: #1a5f9f;
+  --wiki-hero-from: #144d84;
+  --wiki-hero-to: #2479c4;
+}
+
+/* PokeTowns — Pokémon Center red-pink. */
+body[data-mod="poketowns"] {
+  --md-primary-fg-color: #b0174f;
+  --md-primary-fg-color--light: #d64579;
+  --md-primary-fg-color--dark: #700e32;
+  --md-accent-fg-color: #12776b;
+  --md-typeset-a-color: #a8164b;
+  --wiki-hero-from: #8c123f;
+  --wiki-hero-to: #c92a63;
+}
+
+/* Action Combat — battle orange. */
+body[data-mod="action-combat"] {
+  --md-primary-fg-color: #b4410f;
+  --md-primary-fg-color--light: #e0662f;
+  --md-primary-fg-color--dark: #742a09;
+  --md-accent-fg-color: #1b65ab;
+  --md-typeset-a-color: #a63c0e;
+  --wiki-hero-from: #8f340c;
+  --wiki-hero-to: #d25520;
+}
+
+/* In dark mode the same hues need lifting: the primaries above are tuned for a
+   white page and go muddy on a dark one, and links have to clear the contrast
+   floor against #10171a. */
+body[data-md-color-scheme="slate"][data-mod="routes"] {
+  --md-primary-fg-color: #0d5540;
+  --md-typeset-a-color: #5ed3a3;
+  --md-accent-fg-color: #f3a83c;
+  --wiki-hero-from: #0a3a2c;
+  --wiki-hero-to: #0f5c44;
+}
+
+body[data-md-color-scheme="slate"][data-mod="picnic"] {
+  --md-primary-fg-color: #8e3721;
+  --md-typeset-a-color: #f0977a;
+  --md-accent-fg-color: #4cc0b0;
+  --wiki-hero-from: #6d2616;
+  --wiki-hero-to: #a44329;
+}
+
+body[data-md-color-scheme="slate"][data-mod="cobblemon-hms"] {
+  --md-primary-fg-color: #5f2f76;
+  --md-typeset-a-color: #d3a2e6;
+  --md-accent-fg-color: #f3a83c;
+  --wiki-hero-from: #47205c;
+  --wiki-hero-to: #7a3f96;
+}
+
+body[data-md-color-scheme="slate"][data-mod="nuzlocke"] {
+  --md-primary-fg-color: #28337a;
+  --md-typeset-a-color: #9aa5f0;
+  --md-accent-fg-color: #ef7191;
+  --wiki-hero-from: #1c2560;
+  --wiki-hero-to: #37429c;
+}
+
+body[data-md-color-scheme="slate"][data-mod="raid-icons"] {
+  --md-primary-fg-color: #0b5960;
+  --md-typeset-a-color: #6fd3dc;
+  --md-accent-fg-color: #f3a83c;
+  --wiki-hero-from: #08444a;
+  --wiki-hero-to: #0f6d76;
+}
+
+body[data-md-color-scheme="slate"][data-mod="champions"] {
+  --md-primary-fg-color: #6e4300;
+  --md-typeset-a-color: #f2bd62;
+  --md-accent-fg-color: #8ab8ea;
+  --wiki-hero-from: #573400;
+  --wiki-hero-to: #8a5806;
+}
+
+body[data-md-color-scheme="slate"][data-mod="tree-carve"] {
+  --md-primary-fg-color: #4f3620;
+  --md-typeset-a-color: #d9b48a;
+  --md-accent-fg-color: #8fd18b;
+  --wiki-hero-from: #3d2a19;
+  --wiki-hero-to: #66482c;
+}
+
+body[data-md-color-scheme="slate"][data-mod="mid-battle-exp"] {
+  --md-primary-fg-color: #15528c;
+  --md-typeset-a-color: #8cc2f5;
+  --md-accent-fg-color: #f3a83c;
+  --wiki-hero-from: #103f6c;
+  --wiki-hero-to: #1d63a3;
+}
+
+body[data-md-color-scheme="slate"][data-mod="poketowns"] {
+  --md-primary-fg-color: #8c123f;
+  --md-typeset-a-color: #f38fb3;
+  --md-accent-fg-color: #4cc0b0;
+  --wiki-hero-from: #6e0e31;
+  --wiki-hero-to: #a81c50;
+}
+
+body[data-md-color-scheme="slate"][data-mod="action-combat"] {
+  --md-primary-fg-color: #8f340c;
+  --md-typeset-a-color: #f5a37c;
+  --md-accent-fg-color: #8cc2f5;
+  --wiki-hero-from: #6e2809;
+  --wiki-hero-to: #a8441a;
+}
+
+/* Inter's default numerals are proportional; tabular ones keep version tables
+   from wobbling column to column. */
+body {
+  font-feature-settings: "kern", "liga", "tnum";
+}
+
+.md-typeset h1,
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+}
+
+/* ── Hero ──────────────────────────────────────────────────────────────────
+   Landing-page banner. Full-bleed colour, so the first thing on the site is
+   not a wall of grey text. */
+
+.hero {
+  position: relative;
+  margin: 0 0 2.6rem;
+  padding: 2.6rem 2rem 2.4rem;
+  border-radius: var(--wiki-radius);
+  background: linear-gradient(135deg, var(--wiki-hero-from) 0%, var(--wiki-hero-to) 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* A faint topographic wash — routes, roughly — kept low-contrast so text stays
+   readable and no image request is needed. */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.14) 0, transparent 42%),
+    radial-gradient(circle at 12% 88%, rgba(255, 255, 255, 0.09) 0, transparent 38%);
+  pointer-events: none;
+}
+
+.md-typeset .hero h1 {
+  margin: 0 0 0.5rem;
+  color: #fff;
+  font-size: 2.1rem;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  position: relative;
+  max-width: 38rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+/* Mod-page variant: the logo carries the identity, so it sits inside the hero
+   instead of floating next to the first paragraph. */
+.hero--mod {
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+}
+
+/* Markdown wraps a lone image in a <p>, so the paragraph — not the image — is
+   what the flex row lays out. */
+.hero--mod > p:first-of-type {
+  position: relative;
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.hero--mod .hero-logo {
+  display: block;
+  width: 132px;
+  height: 132px;
+  padding: 0.6rem;
+  border-radius: var(--wiki-radius-sm);
+  background: rgba(255, 255, 255, 0.13);
+  object-fit: contain;
+}
+
+/* Same wrapping happens to the badge row and the buttons. */
+.md-typeset .hero-copy p + p {
+  margin-top: 0.9rem;
+}
+
+.md-typeset .hero-actions > p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+/* A ¶ permalink hanging off a hero headline is noise. */
+.hero .headerlink {
+  display: none;
+}
+
+.hero--mod .hero-copy {
+  position: relative;
+  min-width: 0;
+}
+
+/* Badges sit on the gradient here, so they invert. */
+.hero .badge {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+}
+
+.hero-actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.md-typeset .hero-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 1.05rem;
+  /* .md-button brings its own primary-coloured border, which on the gradient
+     reads as an outline around the pill. */
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 120ms ease, background-color 120ms ease, border-color 120ms ease;
+}
+
+.md-typeset .hero-actions a:first-child {
+  background: #fff;
+  color: var(--wiki-hero-from);
+}
+
+.md-typeset .hero-actions a + a {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+
+.md-typeset .hero-actions a:hover {
+  transform: translateY(-1px);
+}
+
+.md-typeset .hero-actions a + a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+/* ── Mod cards ─────────────────────────────────────────────────────────────
+   Material renders `.grid.cards` from a list; these rules give the cards a
+   real surface, an aligned logo tile and a hover state. */
+
+.md-typeset .grid.cards > ul > li {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--wiki-border);
+  border-radius: var(--wiki-radius);
+  background: var(--wiki-surface);
+  box-shadow: var(--wiki-shadow);
+  padding: 1.3rem 1.3rem 1.1rem;
+  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-3px);
+  border-color: var(--md-primary-fg-color--light);
+  box-shadow: var(--wiki-shadow-lift);
+}
+
+.md-typeset .grid.cards > ul > li > hr {
+  margin: 0.7rem 0;
+  border-color: var(--wiki-border);
+}
+
+/* The four logos do not share a source size (Routes is 512x512, the others
+   128x128) and their art styles differ, so they are normalised to one box here
+   rather than by re-exporting the art. */
+.mod-logo {
+  display: block;
+  width: 108px;
+  height: 108px;
+  margin: 0 auto 0.9rem;
+  object-fit: contain;
+  border-radius: var(--wiki-radius-sm);
+  background: var(--wiki-surface-sunken);
+  padding: 0.5rem;
+}
+
+.mod-logo--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  line-height: 1;
+  border: 1px dashed var(--wiki-border);
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .grid.cards .mod-logo + h3 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.md-typeset .grid.cards h3 a {
+  text-decoration: none;
+}
+
+/* Push the badge row to the bottom edge so cards of different text lengths
+   still line their metadata up. */
+.md-typeset .grid.cards > ul > li > p:last-child {
+  margin-top: auto;
+  padding-top: 0.6rem;
+}
+
+/* ── Mod list (landing) ────────────────────────────────────────────────────
+   One compact row per mod: logo, name, one line of what it does, and the
+   chips that decide whether it fits your setup. On a phone the whole list
+   fits in about a screen, where the old cards showed one and a half mods.
+   The long description lives on each mod's own page. The row's colour stripe
+   is the mod's section colour, so the landing and the section agree. */
+
+.mod-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 0.9rem;
+}
+
+.mod-filter button {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--wiki-border);
+  border-radius: 999px;
+  background: var(--wiki-surface);
+  color: var(--md-default-fg-color--light);
+  font: inherit;
+  font-size: 0.66rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mod-filter button[aria-pressed="true"] {
+  border-color: transparent;
+  background: var(--md-primary-fg-color);
+  color: #fff;
+}
+
+.md-typeset .mod-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  gap: 0.45rem;
+}
+
+.md-typeset .mod-row {
+  --mod-c: var(--md-primary-fg-color);
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--wiki-border);
+  border-left: 4px solid var(--mod-c);
+  border-radius: var(--wiki-radius-sm);
+  background: var(--wiki-surface);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.md-typeset .mod-row:hover {
+  border-color: var(--mod-c);
+  box-shadow: var(--wiki-shadow);
+}
+
+.md-typeset .mod-row[hidden] {
+  display: none;
+}
+
+.md-typeset .mod-row > p {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.md-typeset .mod-row__logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  border-radius: 8px;
+  background: var(--wiki-surface-sunken);
+  object-fit: contain;
+}
+
+.md-typeset .mod-row__body {
+  min-width: 0;
+}
+
+.md-typeset .mod-row__body > p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  margin: 0;
+}
+
+.md-typeset .mod-row__name {
+  color: var(--md-default-fg-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+/* The name is the row's only link; this stretches it over the whole row. */
+.md-typeset .mod-row__name::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.md-typeset .mod-row__name:focus-visible {
+  outline: none;
+}
+
+.md-typeset .mod-row:focus-within {
+  outline: 2px solid var(--mod-c);
+  outline-offset: 2px;
+}
+
+.md-typeset .mod-row__what {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
+.md-typeset .mod-row__chips .badge {
+  margin-top: 0.15rem;
+  padding: 0.08rem 0.45rem;
+  font-size: 0.58rem;
+}
+
+.mod-row[data-mod-color="routes"] { --mod-c: #0e6a4b; }
+.mod-row[data-mod-color="picnic"] { --mod-c: #b1452c; }
+.mod-row[data-mod-color="cobblemon-hms"] { --mod-c: #7c3f97; }
+.mod-row[data-mod-color="nuzlocke"] { --mod-c: #33459b; }
+.mod-row[data-mod-color="raid-icons"] { --mod-c: #0e6f78; }
+.mod-row[data-mod-color="champions"] { --mod-c: #8f5600; }
+.mod-row[data-mod-color="tree-carve"] { --mod-c: #66462a; }
+.mod-row[data-mod-color="mid-battle-exp"] { --mod-c: #1b65ab; }
+.mod-row[data-mod-color="poketowns"] { --mod-c: #b0174f; }
+.mod-row[data-mod-color="action-combat"] { --mod-c: #b4410f; }
+
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="routes"] { --mod-c: #17a06f; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="picnic"] { --mod-c: #d76a4d; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="cobblemon-hms"] { --mod-c: #a568bd; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="nuzlocke"] { --mod-c: #6172c9; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="raid-icons"] { --mod-c: #2a9ea8; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="champions"] { --mod-c: #c07a12; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="tree-carve"] { --mod-c: #92693f; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="mid-battle-exp"] { --mod-c: #4a8fd1; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="poketowns"] { --mod-c: #d64579; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="action-combat"] { --mod-c: #e0662f; }
+
+/* ── Flow ──────────────────────────────────────────────────────────────────
+   A short sequence of steps, drawn as text instead of a Mermaid diagram: most
+   of the old diagrams were one action, two or three checks and a result, and
+   rendered at about 7px on a phone. Written as an ordered list inside
+   <div class="flow" markdown>, each item opening with a tag:
+
+     1. <span class="flow__tag">Do</span> Click with your activator
+     2. <span class="flow__tag flow__tag--check">Check</span> You learned it
+     3. <span class="flow__tag flow__tag--result">Result</span> It fires
+
+   A row of cards on a wide screen, a column on a phone. It is real text: it
+   searches, translates and copies, and costs nothing to load. Mermaid stays
+   only for diagrams that really branch. */
+
+.md-typeset .flow > ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.md-typeset .flow > ol > li {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 8rem;
+  margin: 0;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--wiki-border);
+  border-top: 3px solid var(--md-primary-fg-color);
+  border-radius: var(--wiki-radius-sm);
+  background: var(--wiki-surface);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+/* The arrow between two steps, in the gap. */
+.md-typeset .flow > ol > li + li::before {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  left: -1.15rem;
+  transform: translateY(-50%);
+  color: var(--md-default-fg-color--lighter);
+  font-size: 0.8rem;
+}
+
+.md-typeset .flow__tag {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--md-primary-fg-color);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.md-typeset .flow__tag--check {
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .flow__tag--or {
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .flow > ol > li:has(.flow__tag--check) {
+  border-top-color: var(--md-default-fg-color--lighter);
+}
+
+.md-typeset .flow > ol > li:has(.flow__tag--result) {
+  border-top-color: var(--md-accent-fg-color);
+  background: var(--wiki-surface-sunken);
+}
+
+.md-typeset .flow__tag--result {
+  color: var(--md-accent-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .flow__tag {
+  color: var(--md-typeset-a-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .flow__tag--check,
+[data-md-color-scheme="slate"] .md-typeset .flow__tag--or {
+  color: var(--md-default-fg-color--light);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .flow__tag--result {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset .flow__note {
+  margin-top: -0.3em;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .flow > ol {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .md-typeset .flow > ol > li {
+    flex: none;
+  }
+
+  .md-typeset .flow > ol > li + li::before {
+    content: "↓";
+    top: -0.9rem;
+    left: 1rem;
+    transform: none;
+    line-height: 0.9rem;
+  }
+}
+
+/* ── Diagrams ──────────────────────────────────────────────────────────────
+   The few Mermaid diagrams that really branch are pre-rendered to SVG
+   (tools/render-diagrams.mjs) with var(--md-mermaid-*) colours baked in, and
+   inlined by hooks/prerender_mermaid.py. These set those variables from the
+   section's own colour, so a Nuzlocke diagram is indigo and a Routes one
+   green, in both schemes. Vertical and capped in width, so on a phone the
+   text stays at reading size instead of shrinking with a wide diagram. */
+
+.md-typeset .mermaid-static {
+  --md-mermaid-node-bg-color: color-mix(in srgb, var(--md-primary-fg-color) 8%, var(--wiki-surface));
+  --md-mermaid-node-fg-color: var(--md-primary-fg-color);
+  --md-mermaid-edge-color: var(--md-default-fg-color--light);
+  --md-mermaid-label-fg-color: var(--md-default-fg-color);
+  --md-mermaid-label-bg-color: var(--md-default-bg-color);
+  max-width: 32rem;
+  margin: 1.4em auto;
+}
+
+/* Labels were measured at render time at 15px with no page styles; the
+   typeset's paragraph size, margins and tabular numerals would make the text
+   wider than its box and clip it. */
+.md-typeset .mermaid-static foreignObject * {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: normal;
+  font-feature-settings: normal;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .mermaid-static {
+  --md-mermaid-node-bg-color: color-mix(in srgb, var(--md-typeset-a-color) 10%, var(--wiki-surface));
+  --md-mermaid-node-fg-color: var(--md-typeset-a-color);
+}
+
+/* ── Badges ────────────────────────────────────────────────────────────────
+   Small pills for versions and loaders: "MC 1.21.1", "Fabric", "NeoForge". */
+
+.badge {
+  display: inline-block;
+  padding: 0.16rem 0.55rem;
+  margin: 0.12rem 0.2rem 0.12rem 0;
+  border-radius: 999px;
+  border: 1px solid var(--wiki-border);
+  background: var(--wiki-surface-sunken);
+  color: var(--md-default-fg-color--light);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.badge--primary {
+  border-color: transparent;
+  background: var(--md-primary-fg-color);
+  color: #fff;
+}
+
+.badge--accent {
+  border-color: transparent;
+  background: var(--md-accent-fg-color);
+  color: #1b1200;
+}
+
+.badge--soon {
+  border-style: dashed;
+}
+
+/* ── Content polish ────────────────────────────────────────────────────────*/
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--wiki-border);
+  border-radius: var(--wiki-radius-sm);
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--wiki-surface-sunken);
+  font-weight: 700;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--wiki-radius-sm);
+  border-left-width: 3px;
+  box-shadow: none;
+}
+
+.md-typeset pre > code {
+  border-radius: var(--wiki-radius-sm);
+}
+
+.md-typeset kbd {
+  border-radius: 5px;
+}
+
+/* ── Section menu ──────────────────────────────────────────────────────────
+   The sections live behind a hamburger instead of a second header row (see
+   overrides/partials/tabs.html). It only exists on desktop: below 76.25em
+   Material's own drawer already lists them, and stays untouched. */
+
+.wiki-sections {
+  display: none;
+}
+
+@media screen and (min-width: 76.25em) {
+  /* Laid over the header row, on the same grid as its contents. The overlay
+     itself lets clicks through; only the button and the panel catch them. */
+  .wiki-sections {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 61rem;
+    margin: 0 auto;
+    padding: 0 0.2rem;
+    pointer-events: none;
+  }
+
+  .wiki-sections__toggle,
+  .wiki-sections__panel {
+    pointer-events: auto;
+  }
+
+  /* Room for the button, ahead of the logo. */
+  .md-header__inner {
+    padding-left: 2.6rem;
+  }
+
+  .wiki-sections__toggle {
+    display: inline-block;
+    list-style: none;
+  }
+
+  .wiki-sections__toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .wiki-sections__panel {
+    position: absolute;
+    top: 2.4rem;
+    left: 0.2rem;
+    min-width: 13rem;
+    padding: 0.3rem 0;
+    border: 1px solid var(--wiki-border);
+    border-radius: var(--wiki-radius-sm);
+    background: var(--wiki-surface);
+    box-shadow: var(--wiki-shadow-lift);
+    color: var(--md-default-fg-color);
+  }
+
+  .wiki-sections__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .wiki-sections .md-tabs__item {
+    display: block;
+    height: auto;
+    padding: 0;
+  }
+
+  .wiki-sections .md-tabs__link {
+    margin: 0;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.7rem;
+    opacity: 1;
+    transition: background-color 0.15s;
+  }
+
+  .wiki-sections .md-tabs__link:hover,
+  .wiki-sections .md-tabs__link:focus-visible {
+    background: var(--wiki-surface-sunken);
+  }
+
+  .wiki-sections .md-tabs__item--active .md-tabs__link {
+    color: var(--md-accent-fg-color);
+    font-weight: 700;
+  }
+
+  /* `navigation.tabs.sticky` lifts the header to two rows, and Material pins
+     the sidebars and anchor targets below both. There is one row now. */
+  .md-header--lifted ~ .md-container .md-sidebar {
+    top: 2.4rem;
+  }
+
+  .md-header--lifted ~ .md-container .md-typeset :target {
+    --md-scroll-margin: 3.6rem;
+  }
+}
+
+/* ── Ad / sponsor slots ────────────────────────────────────────────────────
+   See overrides/main.html for the rules these follow. Styled as a quiet card
+   rather than a dashed box, so an empty slot reads as intentional. */
+
+.cr-ad-placeholder {
+  border: 1px solid var(--wiki-border) !important;
+  border-radius: var(--wiki-radius-sm) !important;
+  background: var(--wiki-surface-sunken) !important;
+}
+
+.cr-ad-placeholder:hover {
+  border-color: var(--md-accent-fg-color) !important;
+}
+
+/* ── Narrow screens ───────────────────────────────────────────────────────*/
+
+@media screen and (max-width: 44.9375em) {
+  .hero {
+    padding: 2rem 1.3rem 1.8rem;
+  }
+
+  .md-typeset .hero h1 {
+    font-size: 1.65rem;
+  }
+
+  .hero-actions a {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  .mod-logo {
+    width: 88px;
+    height: 88px;
+  }
+
+  /* A mod's hero: logo and title share the first row, and the text runs the
+     full width under them. Side by side, the 132px logo left the text a strip
+     of five words a line and pushed the hero past the bottom of the screen. */
+  .hero--mod {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    align-items: center;
+    column-gap: 0.8rem;
+    row-gap: 0;
+    padding: 1.2rem 1.1rem 1.3rem;
+  }
+
+  .hero--mod .hero-copy {
+    display: contents;
+  }
+
+  .hero--mod > p:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .hero--mod .hero-logo {
+    width: 56px;
+    height: 56px;
+    padding: 0.3rem;
+  }
+
+  .md-typeset .hero--mod h1 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    font-size: 1.35rem;
+  }
+
+  .hero--mod .hero-copy > *:not(h1) {
+    grid-column: 1 / -1;
+  }
+
+  .md-typeset .hero--mod .hero-copy > p {
+    margin-top: 0.8rem;
+    font-size: 0.74rem;
+    line-height: 1.55;
+  }
+
+  .hero--mod .hero-actions {
+    margin-top: 1rem;
+  }
+
+  .mod-logo--placeholder {
+    font-size: 2.3rem;
+  }
+}
+
+/* ── Crafting grids ───────────────────────────────────────────────────────
+   THE house style for every recipe on this wiki. Any page that documents how
+   an item is made draws it as a Minecraft crafting bench — the 3x3 of sunken
+   slots, the arrow, the outlined result with its stack count — followed by an
+   ingredient table that names each icon. A recipe written only as prose or as
+   a markdown table is a regression; readers scan the grid, they don't parse a
+   sentence.
+
+   ALWAYS draw the full 3x3, whatever the recipe uses. A grid cropped to the rows
+   that hold something stops looking like a crafting bench: a shapeless upgrade
+   reads as if it had to sit in one particular half of the table, and two recipes
+   side by side look like two different sizes of bench. The empty slots are part
+   of the picture.
+
+   The rules that keep the grids one system:
+     - Icons come from `docs/assets/items/`, ONE shared library for every mod,
+       referenced as `../../assets/items/<item>.png` from a `docs/<mod>/<page>.md`.
+       Never a per-mod copy: diamond.png and the apricorns were duplicated in
+       three of them.
+     - Every ingredient needs a real icon. If a block's inventory icon is a 3D
+       model render with no flat texture behind it, crop a representative
+       swatch from its block atlas rather than leaving the slot empty.
+     - Two ingredients that share a texture (planks and their slab) must not
+       render as identical squares — oak_slab.png is the planks texture at half
+       height for exactly that reason.
+     - Keep the ingredient table under the grid. It carries the exact names and
+       amounts, and it's what a screen reader gets.
+
+   Palette is the game's, not the site's, on purpose: a crafting bench that
+   followed the wiki's green would stop reading as a crafting bench. It stays
+   identical in light and dark for the same reason.
+   ------------------------------------------------------------------------- */
+
+.cr-craft {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: #c6c6c6;
+  border: 3px solid;
+  border-color: #ffffff #555555 #555555 #ffffff;
+  border-radius: 4px;
+  padding: 14px;
+  margin: 8px 0;
+  max-width: 100%;
+}
+
+.cr-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 44px);
+  grid-template-rows: repeat(3, 44px);
+  gap: 4px;
+}
+
+.cr-slot {
+  width: 44px;
+  height: 44px;
+  background: #8b8b8b;
+  border: 2px solid;
+  border-color: #373737 #ffffff #ffffff #373737;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cr-slot img,
+.cr-result img,
+.cr-inline {
+  image-rendering: pixelated;
+}
+
+.cr-slot img {
+  width: 32px;
+  height: 32px;
+}
+
+.cr-arrow {
+  font-size: 30px;
+  color: #555555;
+  font-weight: bold;
+}
+
+.cr-result {
+  width: 58px;
+  height: 58px;
+  background: #8b8b8b;
+  border: 2px solid;
+  border-color: #373737 #ffffff #ffffff #373737;
+  outline: 3px solid #a0a0a0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cr-result img {
+  width: 40px;
+  height: 40px;
+}
+
+.cr-count {
+  position: absolute;
+  right: 2px;
+  bottom: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #3f3f3f;
+}
+
+.cr-inline {
+  width: 20px;
+  height: 20px;
+  vertical-align: text-bottom;
+}
+
+/* A bench is 3 slots + arrow + result ~= 230px; below that it scrolls inside
+   its own box rather than pushing the page sideways. */
+.cr-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* ── Cycling recipe slots ─────────────────────────────────────────────────────
+Several recipes take ANY member of a family — any of the 7 apricorns, any of the
+16 wool colours, any of the 11 woods — and the result matches whichever you used.
+A grid frozen on one colour hides that, and readers were left guessing whether
+the red basket in the picture was the only one they could make.
+
+A cycling slot flips through the whole family in place, and its result slot
+cycles in lockstep, so what you see going in and what comes out always agree.
+That is the mix-and-match rule shown instead of explained.
+
+Each family is ONE horizontal strip of 32px frames, stepped with `steps()`. That
+matters: the obvious alternative — stacking one <img> per frame and fading them
+with staggered delays — needs a keyframe whose percentages depend on the frame
+count, and `calc()` is not allowed in a @keyframes selector. Driving the strip
+instead keeps a single keyframe working for families of any size, and costs one
+DOM node and one request per family rather than one per frame.
+
+--n is the frame count, set inline next to the strip's URL.
+──────────────────────────────────────────────────────────────────────────────*/
+
+.cr-cycle {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: calc(var(--n) * 32px) 32px;
+  image-rendering: pixelated;
+  /* La cantidad de fotogramas viaja como clase, no como var(): steps() exige un
+     <integer> y meter una custom property adentro no es fiable en todos los motores. */
+  animation-name: cr-cycle-step;
+  animation-duration: calc(var(--n) * var(--cr-step, 1.1s));
+  animation-iteration-count: infinite;
+}
+
+@keyframes cr-cycle-step {
+  to { background-position: calc(var(--n) * -32px) 0; }
+}
+
+.cr-cycle--7  { --n: 7;  animation-timing-function: steps(7); }
+.cr-cycle--11 { --n: 11; animation-timing-function: steps(11); }
+.cr-cycle--16 { --n: 16; animation-timing-function: steps(16); }
+
+/* In a 44px slot the 32px strip needs centring by hand, since background-position
+   is doing the animating and can't also carry the offset. */
+/* The window has to be EXACTLY one frame wide, or the strip shows a sliver of the
+   next colour beside the current one. Material sets box-sizing:border-box, so a
+   44px slot with 2px borders leaves 40px of content: 4px of padding brings that
+   to the 32px a frame measures. background-clip keeps the strip off the border. */
+.cr-slot.cr-cycle {
+  padding: 4px;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+
+/* The result slot is bigger, so its frames are drawn bigger to match .cr-result img. */
+/* Same arithmetic one size up: 58px wide, 2px borders, 54px of content, 7px of
+   padding leaves the 40px .cr-result img uses. */
+.cr-result.cr-cycle {
+  background-size: calc(var(--n) * 40px) 40px;
+  padding: 7px;
+  background-origin: content-box;
+  background-clip: content-box;
+  animation-name: cr-cycle-step-lg;
+}
+
+@keyframes cr-cycle-step-lg {
+  to { background-position: calc(var(--n) * -40px) 0; }
+}
+
+/* A wiki must not force motion on someone whose system asked for less of it:
+   the slot holds on its first frame instead. */
+@media (prefers-reduced-motion: reduce) {
+  .cr-cycle {
+    animation: none;
+  }
+}
+
+/* "Documented against <mod> <version>": a quiet line above the page title,
+   rendered by overrides/main.html from extra.mod_versions. Its margin stays
+   positive: a section index opens on the hero, not on an h1, and a negative
+   one slid the hero over the line. */
+.md-typeset .wiki-mod-version {
+  margin: 0 0 0.4em;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Added by overrides/main.html when Modrinth has a newer release than the one documented. */
+.md-typeset .wiki-stale {
+  color: #c43e00;
+  font-weight: 600;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .wiki-stale {
+  color: #ffab70;
+}
+
+/* Raid Icons: a den's map icon at the size the world map draws it, and the
+   gallery that lays the tera icons out as a wrapping grid with the name below. */
+.md-typeset img.den-icon {
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+
+.md-typeset .den-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr));
+  gap: 0.6rem;
+}
+
+.md-typeset .den-icon-grid figure {
+  margin: 0;
+}
+
+.md-typeset .den-icon-grid figcaption {
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
+}
+
+/* ── Spec card and compatibility table (hooks/mod_specs.py) ───────────────
+   Both are generated from extra.mod_specs. The compatibility table has to fit
+   a phone without its own sideways scroll, so it runs tighter than a normal
+   table and lets the mod name wrap under its version. */
+
+.md-typeset .mod-compat .md-typeset__table {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.md-typeset .mod-compat table:not([class]) {
+  display: table;
+  width: 100%;
+  font-size: 0.72rem;
+}
+
+.md-typeset .mod-compat table:not([class]) th,
+.md-typeset .mod-compat table:not([class]) td {
+  min-width: 0;
+  padding: 0.55em 0.6em;
+}
+
+.md-typeset .mod-compat small {
+  display: block;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .mod-spec thead {
+  display: none;
+}
+
+.md-typeset .mod-spec table:not([class]) th:first-child,
+.md-typeset .mod-spec table:not([class]) td:first-child {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .mod-compat table:not([class]) {
+    font-size: 0.66rem;
+  }
+
+  .md-typeset .mod-compat table:not([class]) th,
+  .md-typeset .mod-compat table:not([class]) td {
+    padding: 0.5em 0.4em;
+  }
+}
