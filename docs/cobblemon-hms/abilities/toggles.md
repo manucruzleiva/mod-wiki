@@ -11,14 +11,14 @@ You can run as many auras as you like, from one Pokémon or several. They cost n
 them back: switch them on again from its wheel. Walking away from it only pauses them.
 
 !!! info "Weather auras"
-    **Rain Dance, Sunny Day, Blizzard, Sandstorm, Fog and Snowscape** are weather. Only **one** runs at a time:
+    **Rain Dance, Sunny Day, Blizzard, Sandstorm, Mist and Snowscape** are weather. Only **one** runs at a time:
     switching one on, on any of your Pokémon, switches the others off, so the last one you switched
     on is the one in effect. Between players close together, too, the weather switched on last wins.
     Like any aura, a weather only works while its Pokémon is out and near you, and **putting the
     Pokémon back in its ball switches it off**.
 
     Every weather takes over **Minecraft's own sky** while it is on: Rain Dance makes it rain, and
-    all the others keep it clear, so no rain falls through your sandstorm, fog or blizzard while
+    all the others keep it clear, so no rain falls through your sandstorm, mist or blizzard while
     their own effects run. Switch it off, or recall the Pokémon, and the game decides the weather
     again.
 
@@ -60,7 +60,7 @@ species is one of these:
 | <img class="hm-disc" src="../../../assets/items/hm_sunny_day.png" alt=""> | Sunny Day *(weather)* | Torkoal, Sunkern, Volcarona |
 | <img class="hm-disc" src="../../../assets/items/hm_sweet_scent.png" alt=""> | Sweet Scent | Gloom, Bellossom, Vileplume, Aromatisse |
 | <img class="hm-disc" src="../../../assets/items/hm_sandstorm.png" alt=""> | Sandstorm *(weather)* | Hippopotas, Hippowdon, Tyranitar, Gigalith, Sandaconda |
-| <img class="hm-disc" src="../../../assets/items/hm_fog.png" alt=""> | Fog *(weather)* | Gastly, Haunter, Koffing, Weezing, Misdreavus — or any Pokémon with Haze, Mist or Smokescreen |
+| <img class="hm-disc" src="../../../assets/items/hm_mist.png" alt=""> | Mist *(weather)* | Lapras, Lotad, Lombre, Ludicolo, Suicune — or any Pokémon with Mist |
 
 ---
 
@@ -232,12 +232,14 @@ Weather aura, with a clear sky. Sand is your ground while it blows:
 
 ---
 
-### <img class="hm-disc" src="../../../assets/items/hm_fog.png" alt=""> Fog
+### <img class="hm-disc" src="../../../assets/items/hm_mist.png" alt=""> Mist
 **Power:** blocks away a hunter loses you (**8**)
 
-Weather aura, with a clear sky. A fog rolls in around you and you can only see about 20 blocks. Anything hunting you
+Weather aura, with a clear sky. A mist rolls in around you and you can only see about 20 blocks. Anything hunting you
 **loses track of you** once you are more than 8 blocks away, and goes back to wandering. Up close it
-still sees you, so Fog is for slipping away, not for standing in the open.
+still sees you, so Mist is for slipping away, not for standing in the open.
+
+In 4.0.0 this aura was called Fog and also came from Haze and Smokescreen. A config file that still says `fog` is read as Mist.
 
 ---
 

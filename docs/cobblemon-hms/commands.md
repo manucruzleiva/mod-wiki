@@ -102,4 +102,4 @@ Summons a Trainer Ditto on demand, or undoes a catch so it will visit that playe
 | `shadow_sneak` | Shadow Sneak |
 | `sweet_scent` | Sweet Scent |
 | `sandstorm` | Sandstorm |
-| `fog` | Fog |
+| `mist` | Mist |
