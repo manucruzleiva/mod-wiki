@@ -42,8 +42,11 @@ The same report, for another player.
 Summons a Trainer Ditto on demand, or undoes a catch so it will visit that player again.
 
 ```
-/hms config <ability> cooldown <0–24000>
-/hms config <ability> power <0–512>
+/hms config                                  every HM and the move behind it
+/hms config show                             every world-wide setting at once
+/hms config <ability>                        that HM's values, next to the defaults
+/hms config <ability> cooldown <ticks>       partner HMs (0–72000) and Sweet Scent (100–72000)
+/hms config <ability> power <value>          only HMs that read it, in that HM's range
 /hms config <ability> minlevel <0–100>
 /hms config <ability> enabled <true|false>
 /hms config <ability> reset
@@ -52,13 +55,30 @@ Summons a Trainer Ditto on demand, or undoes a catch so it will visit that playe
 
 ```
 /hms config activator button <left|right|either>
+/hms config requiremove <true|false>
+/hms config hud <true|false>
+```
+
+```
+/hms config upkeep enabled <true|false>
+/hms config upkeep use <0–700>               fullness per use, in hundredths
+/hms config upkeep minute <0–700>            fullness per minute kept on, in hundredths
+/hms config upkeep friendship <0–255>        friendship lost per missing fullness point
+/hms config upkeep minfriendship <0–255>     below this a Pokémon refuses HMs (0 = never)
+```
+
+```
 /hms config trader enabled <true|false>
-/hms config trader every <ticks>
-/hms config trader stay <ticks>
+/hms config trader every <1200–1728000>
+/hms config trader stay <200–72000>
 /hms config trader ivs <0–6>
 /hms config trader levels <min> <max>
 /hms config trader coins <min> <max>
+/hms config trader reload                    re-read trader_offers.json
 ```
+
+Every value and its range is in [Configuration](configuration.md). The same settings are in the
+config screen on Fabric and NeoForge.
 
 !!! tip "After updating to 4.0"
     There is nothing to reset. Every save is migrated the first time each player joins — see
