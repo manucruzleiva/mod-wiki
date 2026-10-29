@@ -961,21 +961,36 @@ The same report, for another player.</p>
 /hms trader forget [player]
 </code></pre></div>
 Summons a Trainer Ditto on demand, or undoes a catch so it will visit that player again.</p>
-<div class="highlight"><pre><span></span><code>/hms config &lt;ability&gt; cooldown &lt;0–24000&gt;
-/hms config &lt;ability&gt; power &lt;0–512&gt;
+<div class="highlight"><pre><span></span><code>/hms config                                  every HM and the move behind it
+/hms config show                             every world-wide setting at once
+/hms config &lt;ability&gt;                        that HM's values, next to the defaults
+/hms config &lt;ability&gt; cooldown &lt;ticks&gt;       partner HMs (0–72000) and Sweet Scent (100–72000)
+/hms config &lt;ability&gt; power &lt;value&gt;          only HMs that read it, in that HM's range
 /hms config &lt;ability&gt; minlevel &lt;0–100&gt;
 /hms config &lt;ability&gt; enabled &lt;true|false&gt;
 /hms config &lt;ability&gt; reset
 /hms config reset_all
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>/hms config activator button &lt;left|right|either&gt;
-/hms config trader enabled &lt;true|false&gt;
-/hms config trader every &lt;ticks&gt;
-/hms config trader stay &lt;ticks&gt;
+/hms config requiremove &lt;true|false&gt;
+/hms config hud &lt;true|false&gt;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>/hms config upkeep enabled &lt;true|false&gt;
+/hms config upkeep use &lt;0–700&gt;               fullness per use, in hundredths
+/hms config upkeep minute &lt;0–700&gt;            fullness per minute kept on, in hundredths
+/hms config upkeep friendship &lt;0–255&gt;        friendship lost per missing fullness point
+/hms config upkeep minfriendship &lt;0–255&gt;     below this a Pokémon refuses HMs (0 = never)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>/hms config trader enabled &lt;true|false&gt;
+/hms config trader every &lt;1200–1728000&gt;
+/hms config trader stay &lt;200–72000&gt;
 /hms config trader ivs &lt;0–6&gt;
 /hms config trader levels &lt;min&gt; &lt;max&gt;
 /hms config trader coins &lt;min&gt; &lt;max&gt;
+/hms config trader reload                    re-read trader_offers.json
 </code></pre></div>
+<p>Every value and its range is in <a href="../configuration/">Configuration</a>. The same settings are in the
+config screen on Fabric and NeoForge.</p>
 <div class="admonition tip">
 <p class="admonition-title">After updating to 4.0</p>
 <p>There is nothing to reset. Every save is migrated the first time each player joins — see
