@@ -153,7 +153,7 @@ what the config takes.
 | Shadow Sneak | percent of your speed you keep — **55** |
 | Sweet Scent | — · cooldown **60s** between arrivals (minimum 5s) |
 | Sandstorm | how many times faster loose ground breaks — **4** |
-| Fog | blocks away a hunter loses you — **8** |
+| Mist | blocks away a hunter loses you — **8** |
 | Rain Dance | — |
 | Sunny Day | — |
 | Blizzard | radius of the snowfall around you — **24** |
