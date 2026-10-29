@@ -46,14 +46,14 @@ back in its ball does not switch them off.
 
 **Already riding?** Sneak + right-click opens your mount's Field moves without getting off.
 
-| Disc | Toggle | Pokémon (any of) | While it is on |
+| Icon | Toggle | Pokémon (any of) | While it is on |
 |---|---|---|---|
-| <img class="hm-disc" src="../../assets/items/hm_surf.png" alt=""> | Surf | Lapras, Gyarados, Milotic | It cuts through water much faster. |
-| <img class="hm-disc" src="../../assets/items/hm_tailwind.png" alt=""> | Tailwind | Pidgeot, Noivern, Staraptor | It moves noticeably faster through the air. |
-| <img class="hm-disc" src="../../assets/items/hm_swift.png" alt=""> | Swift | Ninjask, Accelgor, Electrode | It gets up to speed twice as quickly. |
-| <img class="hm-disc" src="../../assets/items/hm_u_turn.png" alt=""> | U-turn | Yanma, Ninjask, Venipede | It turns far more sharply, on land, in water and in the air, up to the best handling a mount can have. Gliders, helicopters and burst swimmers have no handling stat, so it does nothing for them. |
-| <img class="hm-disc" src="../../assets/items/hm_endure.png" alt=""> | Endure | Mudbray, Mudsdale, Tauros | Its **Stamina** doubles, up to the best a mount can have (100), so it runs, swims or flies longer before it tires. |
-| <img class="hm-disc" src="../../assets/items/hm_agility.png" alt=""> | Agility | Arcanine, Zebstrika, Cyclizar | It runs faster on land. |
+| <img class="hm-icon" src="../assets/icons/surf.png" alt=""> | Surf | Lapras, Gyarados, Milotic | It cuts through water much faster. |
+| <img class="hm-icon" src="../assets/icons/tailwind.png" alt=""> | Tailwind | Pidgeot, Noivern, Staraptor | It moves noticeably faster through the air. |
+| <img class="hm-icon" src="../assets/icons/swift.png" alt=""> | Swift | Ninjask, Accelgor, Electrode | It gets up to speed twice as quickly. |
+| <img class="hm-icon" src="../assets/icons/u_turn.png" alt=""> | U-turn | Yanma, Ninjask, Venipede | It turns far more sharply, on land, in water and in the air, up to the best handling a mount can have. Gliders, helicopters and burst swimmers have no handling stat, so it does nothing for them. |
+| <img class="hm-icon" src="../assets/icons/endure.png" alt=""> | Endure | Mudbray, Mudsdale, Tauros | Its **Stamina** doubles, up to the best a mount can have (100), so it runs, swims or flies longer before it tires. |
+| <img class="hm-icon" src="../assets/icons/agility.png" alt=""> | Agility | Arcanine, Zebstrika, Cyclizar | It runs faster on land. |
 
 The species listed are the ones that can always do it when the server lets species count; any
 Pokémon that has learned the move can do it.
