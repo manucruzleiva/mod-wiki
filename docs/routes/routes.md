@@ -43,7 +43,8 @@ flowchart TD
 - **Rest stops** — every few hundred blocks, a small camp just off the road: a campfire with log
   seats, a lantern post and a sign. Now and then one keeps a **supply chest** from the last traveller —
   rarely, so finding one still means something. With [Cobblemon Picnic](../picnic/index.md) installed,
-  about a third of the stops are one of its picnic tables instead.
+  now and then a stop is one of its picnic tables instead — about 3 in 100, set by **Picnic stops**
+  in [Configuration](configuration.md).
 - **Landmarks along the way** — a road passing a pyramid, a tower or a ruin bends a little to go by
   it, keeps off its footprint, and puts up a signpost with its name. No road is planned *to* a
   landmark — see [Which structures get roads](which-structures.md).

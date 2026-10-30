@@ -73,6 +73,7 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | Road lamp posts | Random | Random / On / Off — Random decides per route |
 | Tunnel lighting | Random | Random keeps some tunnels as dark caves |
 | Underwater lighting | Random | a sea lantern in the pillar under each water-crossing marker — Random decides per route |
+| Picnic stops | 3 | with [Cobblemon Picnic](../picnic/index.md) installed, the percent of rest stops that are a picnic table instead of a camp. 0 = never, 100 = every stop. Kept per world |
 
 ### World Spawn
 
