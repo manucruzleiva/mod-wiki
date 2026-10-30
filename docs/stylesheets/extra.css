@@ -1046,12 +1046,11 @@ body {
        referenced as `../../assets/items/<item>.png` from a `docs/<mod>/<page>.md`.
        Never a per-mod copy: diamond.png and the apricorns were duplicated in
        three of them.
-     - Every ingredient needs a real icon. If a block's inventory icon is a 3D
-       model render with no flat texture behind it, crop a representative
-       swatch from its block atlas rather than leaving the slot empty.
-     - Two ingredients that share a texture (planks and their slab) must not
-       render as identical squares — oak_slab.png is the planks texture at half
-       height for exactly that reason.
+     - Every ingredient needs a real icon, drawn the way the game's inventory
+       draws it. A full block is a 3D cube, never its flat texture: a square of
+       planks next to the 3D chest reads as a broken icon. Put the texture in
+       tools/block_textures/ and run tools/render_block_icons.py, which also
+       renders the slab (half-height) and the cycling wool/planks strips.
      - Keep the ingredient table under the grid. It carries the exact names and
        amounts, and it's what a screen reader gets.
 
