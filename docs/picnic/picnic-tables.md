@@ -56,7 +56,7 @@ example.
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
       </div>
       <div class="cr-arrow">➜</div>
-      <div class="cr-result cr-cycle cr-cycle--16" style="background-image:url(../../assets/items/strips/table.png)" role="img" aria-label="Table in the wool colour you used"></div>
+      <div class="cr-result cr-cycle cr-cycle--176" style="background-image:url(../../assets/items/strips/table.png)" role="img" aria-label="Table in the wool colour and wood you used"></div>
     </div>
     </div>
 
@@ -72,14 +72,14 @@ example.
     jungle, acacia, dark oak, mangrove, cherry, bamboo, crimson and warped.
 
     <div class="cr-scroll">
-    <div class="cr-craft" title="3× Oak Slab + 2× Oak Planks → 2× Oak Dining Bench">
+    <div class="cr-craft" title="3× Slab + 2× Planks of the same wood → 2× Dining Bench in that wood">
       <div class="cr-grid">
-        <div class="cr-slot"><img src="../../assets/items/oak_slab.png" alt="Oak Slab"></div>
-        <div class="cr-slot"><img src="../../assets/items/oak_slab.png" alt="Oak Slab"></div>
-        <div class="cr-slot"><img src="../../assets/items/oak_slab.png" alt="Oak Slab"></div>
-        <div class="cr-slot"><img src="../../assets/items/oak_planks.png" alt="Oak Planks"></div>
+        <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/slab.png)" role="img" aria-label="Slab — any of the 11 woods"></div>
+        <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/slab.png)" role="img" aria-label="Slab — any of the 11 woods"></div>
+        <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/slab.png)" role="img" aria-label="Slab — any of the 11 woods"></div>
+        <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/planks.png)" role="img" aria-label="Planks of the same wood"></div>
         <div class="cr-slot"></div>
-        <div class="cr-slot"><img src="../../assets/items/oak_planks.png" alt="Oak Planks"></div>
+        <div class="cr-slot cr-cycle cr-cycle--11" style="background-image:url(../../assets/items/strips/planks.png)" role="img" aria-label="Planks of the same wood"></div>
         <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
       </div>
       <div class="cr-arrow">➜</div>

@@ -1050,7 +1050,10 @@ body {
        draws it. A full block is a 3D cube, never its flat texture: a square of
        planks next to the 3D chest reads as a broken icon. Put the texture in
        tools/block_textures/ and run tools/render_block_icons.py, which also
-       renders the slab (half-height) and the cycling wool/planks strips.
+       renders the cycling wool/planks/slab strips and the 176 Picnic tables.
+     - A slot that takes any member of a family cycles, and so does every
+       other slot and the result that depend on it: the dining bench's slabs,
+       planks and bench all step through the same 11 woods together.
      - Keep the ingredient table under the grid. It carries the exact names and
        amounts, and it's what a screen reader gets.
 
@@ -1187,6 +1190,9 @@ DOM node and one request per family rather than one per frame.
 .cr-cycle--7  { --n: 7;  animation-timing-function: steps(7); }
 .cr-cycle--11 { --n: 11; animation-timing-function: steps(11); }
 .cr-cycle--16 { --n: 16; animation-timing-function: steps(16); }
+/* The table: 16 wools x 11 woods. Both ingredient slots step every frame and 16 and 11 are coprime,
+   so this strip (frame i = wool i % 16 on wood i % 11) always shows the pair they hold. */
+.cr-cycle--176 { --n: 176; animation-timing-function: steps(176); }
 
 /* In a 44px slot the 32px strip needs centring by hand, since background-position
    is doing the animating and can't also carry the offset. */
