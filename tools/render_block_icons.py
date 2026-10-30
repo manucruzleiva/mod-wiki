@@ -20,7 +20,8 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "tools" / "block_textures"
 OUT = ROOT / "docs" / "assets" / "items"
 
-SIZE = 32  # the chest and furniture renders are 32x32; a texel lands on ~one pixel
+SIZE = 32  # the chest and furniture renders are 32x32
+CUBE = 24  # ...and the chest fills 24px of that; a cube edge to edge looks crammed next to it
 SHADE = (1.0, 0.80, 0.62)  # top, left, right — vanilla's inventory lighting
 
 
@@ -28,23 +29,23 @@ def _face(texture, affine, polygon, shade):
     # Edge pixels sample a hair outside 0..16; a 1px clamped border keeps them from coming out transparent.
     padded = Image.fromarray(np.pad(np.asarray(texture), ((1, 1), (1, 1), (0, 0)), mode="edge"))
     a, b, c, d, e, f = affine
-    warped = padded.transform((SIZE, SIZE), Image.AFFINE, (a, b, c + 1, d, e, f + 1), Image.NEAREST)
+    warped = padded.transform((CUBE, CUBE), Image.AFFINE, (a, b, c + 1, d, e, f + 1), Image.NEAREST)
     if shade < 1.0:
         r, g, b, a = warped.split()
         lut = [int(i * shade) for i in range(256)]
         warped = Image.merge("RGBA", (r.point(lut), g.point(lut), b.point(lut), a))
-    mask = Image.new("L", (SIZE, SIZE), 0)
+    mask = Image.new("L", (CUBE, CUBE), 0)
     ImageDraw.Draw(mask).polygon(polygon, fill=255)
-    return warped, Image.composite(warped.getchannel("A"), Image.new("L", (SIZE, SIZE), 0), mask)
+    return warped, Image.composite(warped.getchannel("A"), Image.new("L", (CUBE, CUBE), 0), mask)
 
 
 def block(texture, height=1.0):
     """A 16x16 texture as a block `height` blocks tall (0.5 = slab), in a SIZE x SIZE icon."""
-    S = float(SIZE)
+    S = float(CUBE)
     drop = (1 - height) * S / 2  # a slab's top sits lower; its sides show the texture's bottom half
     side = texture.copy()
     side.paste((0, 0, 0, 0), (0, 0, 16, round(16 * (1 - height))))
-    out = Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0))
+    out = Image.new("RGBA", (CUBE, CUBE), (0, 0, 0, 0))
     for tex, affine, polygon, shade in (
         # texture, affine (dest -> source), the polygon it is clipped to, brightness
         (side, (32 / S, 0.0, 0.0, -16 / S, 32 / S, -8.0),
@@ -56,7 +57,9 @@ def block(texture, height=1.0):
     ):
         warped, mask = _face(tex, affine, polygon, shade)
         out.paste(warped, (0, 0), mask)
-    return out
+    icon = Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0))
+    icon.paste(out, ((SIZE - CUBE) // 2, (SIZE - CUBE) // 2))
+    return icon
 
 
 def load(name):
