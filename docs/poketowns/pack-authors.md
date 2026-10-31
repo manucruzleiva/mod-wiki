@@ -10,9 +10,11 @@ PokeTowns' settlements are data: structures, template pools, tags and a shop, al
 | `cobblemon_poketowns:village` | structure | the Village |
 | `cobblemon_poketowns:town` | structure | the Town without a gym |
 | `cobblemon_poketowns:town_gym` | structure | the gym Town |
-| `cobblemon_poketowns:settlements` | structure set | all three, at weights 60, 21 and 9 |
-| `#minecraft:village` | structure tag | PokeTowns adds its three structures, so anything that looks for villages finds them |
-| `#cobblemon_poketowns:has_gym` | structure tag | every settlement with a gym; today `town_gym` |
+| `cobblemon_poketowns:city` | structure | the City |
+| `cobblemon_poketowns:settlements` | structure set | all four, at weights 60, 21, 9 and 10 |
+| `#minecraft:village` | structure tag | PokeTowns adds its four structures, so anything that looks for villages finds them |
+| `#cobblemon_poketowns:has_gym` | structure tag | every settlement with a gym: `town_gym` and `city` |
+| `#routes:settlement/village`, `/town`, `/city` | structure tags | which archetype each structure is, for Routes: `village`; `town` and `town_gym`; `city` |
 | `#cobblemon_poketowns:has_structure/settlement` | biome tag | where settlements may start. It pulls in vanilla's five `has_structure/village_*` tags; add a biome here to let settlements spawn in it |
 
 ## Placement
@@ -22,12 +24,31 @@ The `settlements` set uses the placement type `cobblemon_poketowns:world_spread`
 spacing and separation come from the world, as chosen on the PokeTowns tab, and not from the JSON.
 A datapack that overrides the set keeps the per-world values as long as it keeps this placement type.
 
+It also takes a `clearance` field, in chunks (5 in PokeTowns' set): a settlement does not start within
+that many chunks of a chunk where another surface structure, from any random-spread set, would start
+in a biome it accepts. `0` turns the check off.
+
+## Level sites
+
+The four structures use the type `cobblemon_poketowns:level_site`: a vanilla `jigsaw` structure with
+two more fields. Before it plans, it samples the surface within `site_radius` blocks of the start
+(32 for the Village, 48 for the others) and gives the start up when the ground rises or falls more
+than `max_site_rise` blocks (6). Streets, crossings and street ends are `rigid`, and every structure
+uses `terrain_adaptation: beard_box`, so the street network stays level with the plaza.
+
+Every street end has an open `routes:city_exit` jigsaw on its outer edge, facing out, with the pool
+`minecraft:empty`: nothing docks to it, and Routes reads it as the place where a road enters.
+
 ## Gyms
 
 - Every gym piece's template id starts with `cobblemon_poketowns:gym/`. A mod can tell it is inside a
   gym by that prefix.
-- Gym Towns pick from the pool `cobblemon_poketowns:town/gyms`. When none of its gyms can be placed,
+- Gym Towns and Cities pick from the pool `cobblemon_poketowns:town/gyms`. When none of its gyms can be placed,
   the pool falls back to `cobblemon_poketowns:town/gym_fallback`, the battle pad.
+- Every gym piece holds eight named data markers, each with the way its NPC faces, for gym mods to
+  read: `pokegyms:manager`, `pokegyms:leader`, `pokegyms:disciple_1` to `pokegyms:disciple_3`,
+  `pokegyms:challenger`, `pokegyms:leader_pokemon` and `pokegyms:challenger_pokemon`. The challenger
+  and the two Pokémon marks face the leader along the arena.
 
 ## Docking another pack's building
 

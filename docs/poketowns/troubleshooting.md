@@ -15,10 +15,8 @@ Settlements only appear in chunks generated after PokeTowns is installed. In an 
 show up only in land you have not explored yet. Find one with `/locate structure #minecraft:village`.
 See [Getting Started](getting-started.md).
 
-## The Poké Mart has no clerk
-
-Not yet: in this build the Mart's building stands in every Town, but no clerk stands behind its
-counter. See [Pokémon Center & Poké Mart](center-and-mart.md).
+Settlements also only start on level ground and away from other surface structures, so rolling or
+crowded land has fewer of them. See [Settlements](settlements.md#where-they-appear).
 
 ## My settlement spacing did nothing
 

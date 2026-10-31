@@ -1,6 +1,7 @@
 # Pokémon Center & Poké Mart
 
-Every settlement has a Pokémon Center in its plaza. Every Town also has a Poké Mart across the square.
+Every settlement has a Pokémon Center in its plaza. Every Town and City also has a Poké Mart across
+the square, with a stadium behind it.
 
 ## The Pokémon Center
 
@@ -8,9 +9,10 @@ Every settlement has a Pokémon Center in its plaza. Every Town also has a Poké
 | --- | --- |
 | Healing machines | heal your team for **free**, as Cobblemon's healing machine always does |
 | PC | Cobblemon's PC, to reach your boxes |
-| Waystone | a Waystones waystone. The first time someone activates it, it gets a generated name; with [Routes](../routes/index.md) installed, it takes the settlement's name |
+| Waystone | a Waystones village waystone, its own in every Center. The first time someone activates it, it gets a generated name; with [Routes](../routes/index.md) installed, it takes the settlement's name |
 | Nurse Joy | stands behind the counter between the healing machines. She can't be hurt, never despawns and has nothing to trade: she is there for the look |
 | Champions Trainer | with [Champions Training](../champions/champions-trainer.md) installed, a trainer stands beside the counter. Talk to it to change your Pokémon's stat points, nature, ability and moves |
+| Berry garden | thirteen beds under the apricorn tree out back, each with a grown Cobblemon berry tree you can pick. It grows back like any planted tree |
 | Loot | the Center's chests, barrels and pots hold Poké Balls, apricorns, food and medicine |
 
 The Center sells nothing.
@@ -20,9 +22,9 @@ The Center sells nothing.
 The Poké Mart sells everyday supplies for **CobbleDollars**. Prices are in CobbleDollars; Poké Ball
 prices match CobbleDollars' own default shop.
 
-!!! warning "No clerk yet"
-    In this build the Mart's building stands in every Town, but no clerk stands behind its counter,
-    so its shop cannot be opened from the Mart yet.
+A **Poké Mart Clerk** stands behind the counter. Right-click the clerk to open the Mart's shop;
+sneak and right-click to sell emeralds at CobbleDollars' usual rate. The clerk is CobbleDollars' own
+merchant: it never moves, takes no damage and stays through restarts.
 
 === "Poké Balls"
 
@@ -58,3 +60,9 @@ Stronger medicine and held items are left to specialised shops.
 
 A datapack can replace the whole shop by overriding its id, `cobblemon_poketowns:poke_mart` (see
 [For Pack Authors](pack-authors.md)).
+
+## The stadium
+
+Every Town and City has a stadium on the grass west of the Poké Mart, level with the plaza: an
+open-air arena for battles between players. You walk in through the middle aisle between its
+stands. It is decoration only, with nothing to run it.

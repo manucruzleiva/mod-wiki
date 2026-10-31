@@ -110,7 +110,7 @@ extra:
     champions:      { name: Cobblemon Champions Training,   version: 2.0.0, modrinth: PlTQXswh }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr }
     mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.0.0, modrinth: ShgrcSQY }
-    poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.11, modrinth: MjGKcXBb }
+    poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.17, modrinth: MjGKcXBb }
     action-combat:  { name: Cobblemon Action Combat,        version: 0.1.41 }
   # La ficha tecnica de cada mod: lo que dice su jar publicado (fabric.mod.json y neoforge.mods.toml
   # del tag del ultimo release), no lo que se recuerda. De aca salen, por hooks/mod_specs.py, las
