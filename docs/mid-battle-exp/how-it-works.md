@@ -23,7 +23,7 @@ When a Pokémon faints, the other side is paid **right then**:
   `experienceShareMultiplier`. It can be on the bench.
 - Anyone else gets nothing.
 
-From the next release, operators can change that share, give it to the whole team (a global Exp.
+Operators can change that share, give it to the whole team (a global Exp.
 Share) and multiply all battle EXP, and a player can pause one Pokémon's EXP from its Summary: see
 [Commands & Config](commands.md).
 
@@ -53,7 +53,7 @@ A knockout that happens after the battle is already over pays nothing at all.
   fainted Pokémon never earns.
 - **Against another player**, nothing is paid unless Cobblemon's `allowExperienceFromPvP` allows it.
 - **Catching** a Pokémon pays no EXP, as in Cobblemon.
-- **A Pokémon whose EXP is paused** (next release, [from its Summary](commands.md#pausing-a-pokemons-exp))
+- **A Pokémon whose EXP is paused** ([from its Summary](commands.md#pausing-a-pokemons-exp))
   gets no EXP, but still gets its EVs.
 
 What a knockout paid is **yours to keep**, even if you go on to lose the battle.
@@ -119,7 +119,7 @@ own slot, and the moveset never loses a slot.
 
 ## Drag and drop on the Summary
 
-*From the next release.* Out of battle, the Summary's **Moves** page takes drag and drop too. It
+Out of battle, the Summary's **Moves** page takes drag and drop too. It
 needs the mod on your client only.
 
 - **Reorder your moves by dragging one onto another.** Pick a move up and drop it on another to swap
