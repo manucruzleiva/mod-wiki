@@ -75,7 +75,12 @@ out. On a server that lets species count, these can always give it:
 **Power:** magnet radius 6
 
 Loose items on the ground drift toward you while it is on, so a scattered drop or a mined vein
-gathers itself. Items are nudged rather than yanked, so they keep their normal pickup delay.
+gathers itself. Items are nudged rather than yanked, so they keep their normal pickup delay, and
+their speed is capped so they never shoot past you. The radius never goes past the 24 blocks of the
+aura itself.
+
+It leaves alone the items **you threw**, so you can still drop or hand something over; items
+**another player is closer to**; and items that **would not fit** in your inventory.
 
 ---
 
@@ -100,6 +105,9 @@ the speed you always did — if you want to be *fast* in the water, ride a Poké
 Lets you **see clearly in the dark**, even in caves and at night. Toggle off to remove instantly.
 It works with **Iris shader packs** too: the world itself gets brighter, not just the screen.
 
+The **Warden's Darkness** still gets through: while you have it, Flash drops to the brightest the
+game's own slider goes, and comes back the moment the effect fades.
+
 ![Flash: lighting up the dark around you](../assets/store/gif-flash.gif)
 
 ---
@@ -109,6 +117,9 @@ It works with **Iris shader packs** too: the world itself gets brighter, not jus
 
 Comes from the move **Splash**, so any Pokémon that knows it can give it. Applies continuous
 **Jump Boost**. The `power` value equals the buff level, so `power = 4` gives Jump Boost IV.
+
+You land safely, as with the potion: each level adds a block you can fall without getting hurt. If
+the aura ends mid-jump, that safe fall lasts until you are back on the ground.
 
 ---
 
@@ -166,11 +177,14 @@ It is a **building** tool, not a way to travel: for that, ride one of your flyin
 ### <img class="hm-icon" src="../../assets/icons/rock_climb.png" alt=""> Rock Climb
 
 Every vertical surface behaves like a ladder, and it is steered by the **movement keys**: **W**
-climbs, **S** descends, and holding nothing holds your place on the wall.
+climbs, **S** descends, and holding nothing holds your place on the wall. You only climb when you
+are actually touching the wall, and you hold on to it while you go down. A long climb down takes no
+fall damage.
 
 Your horizontal movement is left alone, so you can travel along a face and step off it whenever you
 like — a wall is something to climb, not something to be stuck to. On the ground it only takes over
-when you are actually asking to go up, so walking and jumping near a wall work normally.
+when you are actually asking to go up, and only at a real wall, so walking a path, stepping onto a
+slab or stair and jumping near a wall work normally.
 
 **It works on your mount too.** Riding a Pokémon, run into a wall holding **W** and your Pokémon
 climbs it with you.
@@ -186,7 +200,8 @@ Total stealth on foot. No footstep sounds, no name over your head, and **nothing
 you** — not pressure plates, not tripwires, not a sculk sensor.
 
 You move slower than a walk for it, though faster than a crouch, so it is something you can actually
-travel in rather than a stationary hiding trick. **You cannot sprint on land** while it runs, and
+travel in rather than a stationary hiding trick. **You cannot sprint on foot** while it runs (riding
+a Pokémon, you can), and
 climbing a ladder or vine makes no sound either.
 
 It only works **on land**: in water or lava you swim at your normal speed, sprint-swimming included.
@@ -194,6 +209,7 @@ It only works **on land**: in water or lava you swim at your normal speed, sprin
 !!! note "If you are already on a scoreboard team"
     The hidden nametag is done with a vanilla team, so a player who already belongs to one keeps
     their team and simply does not get that part of the effect. Everything else still applies.
+    Log out with it on and you are taken off that team, so you never come back without your name.
 
 ---
 

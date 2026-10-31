@@ -269,11 +269,11 @@ Every cooldown takes 0–72000.
 | U-turn | tenths of the mount's turn (handling) multiplier, never past the stat's maximum of 100 — **18** | 10–50 |
 | Endure | tenths of the mount's Stamina stat, never past 100 — **20** | 10–50 |
 | Tailwind | tenths of the mount's flight-speed multiplier — **15** | 10–50 |
-| Swift | tenths of the mount's acceleration multiplier — **20** | 10–50 |
+| Swift | tenths of how much quicker the mount gets up to speed (20 = half the time) — **20** | 10–50 |
 
 !!! note "Old config files"
     A config written before 4.0 is brought up to date on load, and only where the meaning of a value
     changed: Teleport's longer cooldown, Tail Whip and Celebrate without one, Decorate's hour,
     Leafage's 7×7 burst, and Helping Hand's power, which reads backwards as Endure and goes to the
-    new default. A number you set on purpose stays. `fog` is read as Mist and `helping_hand` as
+    new default (an old 10 too, which would read as 1.0× and do nothing). A number you set on purpose stays. `fog` is read as Mist and `helping_hand` as
     Endure. Retired HMs (Fly, Glide, Headbutt, Thief and the combat HMs) drop out of the file.

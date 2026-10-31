@@ -15,8 +15,11 @@ meet one: it is no longer crafted. Right-click with the Case in hand to open it.
 | **Shift-click** a row | Takes the whole stack out |
 | Type in the **search box** | Filters the list by move name |
 
+Only **plain TMs** go in. A TM renamed in an anvil, or one whose move Cobblemon no longer knows,
+stays in your inventory, because the bag could not give it back as it was.
+
 The Case's tooltip shows how many TMs are inside. A TM taken out that does not fit in your
-inventory stays in the bag, so nothing is ever dropped.
+inventory stays in the bag, so nothing is ever dropped, in creative mode too.
 
 The contents are stored on the Case itself, so it keeps them when you put it in a chest or hand it
 to a friend.
