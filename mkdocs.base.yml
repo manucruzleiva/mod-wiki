@@ -103,7 +103,7 @@ extra:
   # Una entrada por linea, como estan: el script las lee con una regex.
   mod_versions:
     routes:         { name: Routes,                         version: 1.2.119, modrinth: PfmV1XPQ }
-    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.38, modrinth: wHlszYZN }
+    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.62, modrinth: wHlszYZN }
     picnic:         { name: Cobblemon Picnic,               version: 4.0.0, modrinth: sfptxo0H }
     cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.0.0, modrinth: JNfSyMuQ }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0, modrinth: S01tPZTk }
@@ -160,7 +160,7 @@ extra:
       cobblemon: "1.7–1.8"
       cobblemon_note: "built for 1.8; it runs on 1.7.3, but [route Pokémon](nuzlocke.md#route-pokemon) need 1.8"
       requires: [routes]
-      requires_note: 1.2.119 or newer
+      requires_note: 1.2.158 or newer
       fabric: [fabric-api, architectury, cloth-config]
       neoforge: [architectury, cloth-config]
       optional:

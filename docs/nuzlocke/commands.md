@@ -10,18 +10,18 @@ live under [`/routes`](../routes/commands.md) — the two never mix.
 | Command | Who | One-liner |
 | --- | :---: | --- |
 | `/nuzlocke status [player]` | 👤 / 🛡️ | Zone records + party deaths (`[player]` is op-only). |
-| `/nuzlocke log` · key **I** | 👤 | The run's log — the Soul Link log while you are in a link. |
+| `/nuzlocke log` · key **I** | 👤 | Opens your party's summary on the **Log** tab — the link's log while you are in a Soul Link. |
 | `/nuzlocke map` | 👤 | Dump your capture zones as map waypoints. |
 | `/nuzlocke reset [player]` | 🛡️ | Clear a player's zone records, lift their game-over and ask for a new Gym Leader Challenge type. They keep their team. |
 | `/nuzlocke revive [player] [zone <zone>]` | 🛡️ | Revive a party's dead Pokémon — all of them, or only the one caught in that zone (by the name the log shows). The mercy switch: it also lifts a game-over, and under [Soul Link](soul-link.md) it revives each one's soulmates with it. |
 | `/nuzlocke enable` · `disable` | 🛡️ | Master switch for this world, saved per world. |
 | `/nuzlocke config list` | 👤 | Every setting for this world with its current value, by section. |
 | `/nuzlocke config get <setting>` | 👤 | Read one setting back. |
-| `/nuzlocke config set <setting> <value>` | 🛡️ | Change one, live. Offers the names and refuses a value out of range. |
+| `/nuzlocke config set <setting> <value>` | 🛡️ | Change one, live. Offers the names and refuses a value out of range, or a choice it does not know: it answers in red, lists the choices that exist, and leaves the setting as it was. |
 | `/nuzlocke config reset <setting>` | 🛡️ | Put one back to its default. |
 | `/nuzlocke config reload` | 🛡️ | Re-read `config/cobblemon_nuzlocke.json`, no restart needed. A world with its own settings keeps them. |
 | `/nuzlocke config unoverride` | 🛡️ | Drop this world's own settings, so it follows the config files again. |
-| `/nuzlocke set <option> <value>` | 🛡️ | The older spelling of `config set`, kept working. |
+| `/nuzlocke set <option> <value>` | 🛡️ | The older spelling of `config set`, kept working, with the same checks. |
 | `/nuzlocke debug exp` | 🛡️ | Log what the level cap decides for each EXP gain. |
 | `/nuzlocke soullink …` | 👤 | The co-op suite — see [Soul Link](soul-link.md). |
 | `/pokemonrestart` | 👤 | Wipe your own run and start over. Its own command, not a `/nuzlocke` one — it belongs to the player whose run it is. Type it twice to confirm. It also takes you out of any Soul Link, forgets a trainer battle you walked away from, and offers the Gym Leader Challenge again when you pick your new starter. |
@@ -31,11 +31,11 @@ live under [`/routes`](../routes/commands.md) — the two never mix.
 | Command | What it does |
 | --- | --- |
 | `link <player2> [player3] [player4]` | Offers a contract. Nothing binds until **everyone** accepts. |
-| `accept` · `decline` | Answer an offer. The prompt also appears as a screen you cannot dismiss. |
+| `accept` · `decline` | Answer an offer. The prompt also appears as a dialogue box you cannot dismiss, with a countdown. |
 | `unlink` | Dissolves **your** binds. |
 | `status` | Lists your binds in chat, with ✝ marking the dead. |
-| `summary` | The linked-teams screen: every member's full party, soulmates marked ⇄. |
-| `parties` | The same members, one party per player, offline members included. |
+| `summary` | Opens your party's summary on the [Soul Link tab](soul-link.md#the-soul-link-tab). |
+| `parties` | The linked-teams screen: every member's full party, offline members included, soulmates marked ⇄. |
 
 Offering a link does not need the command — right-click a player and pick **Soul Link** from
 Cobblemon's interaction wheel.

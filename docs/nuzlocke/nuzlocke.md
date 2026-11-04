@@ -24,7 +24,7 @@ flowchart TD
 | --- | --- |
 | 🎯 **One catch per zone** | Only the first wild you meet in a zone is catchable. A spent zone bounces Poké Balls, in battle and out. Fleeing or knocking the encounter out spends it just the same. |
 | 💀 **Permadeath** | A fainted Pokémon is dead: no healing of any kind, no battling, no trading. The PC or release, nothing else. |
-| ✍️ **Mandatory nicknames** | A blocking screen on every Pokémon you obtain, showing its sprite, gender, ability and moves — so you name it knowing what it is. Leaving the game with the screen open brings it back on your next login, and you keep the Pokémon. Your starter is the exception: leave before naming it and the pick is undone, so you choose again from the same three. |
+| ✍️ **Mandatory nicknames** | A blocking screen on every Pokémon you obtain, laid out like its summary: the Pokémon animated in a portrait, its species, level, gender, types and ability, and its four moves as cards in their type's colour, with their PP — so you name it knowing what it is. The name is **final**: renaming it from the Summary or the PC is refused. Leaving the game with the screen open brings it back on your next login, and you keep the Pokémon. Your starter is the exception: leave before naming it and the pick is undone, so you choose again from the same three. |
 | ✨ **Shiny clause** | A wild shiny is always catchable and never spends the zone. |
 | 🔁 **Duplicates clause** | A Pokémon whose line you already own cannot be caught, and does not spend the zone — that encounter waits for something new. What you own includes your starter, gifts, trades and everything you have evolved. |
 | 🥚 **Egg clause** | A hatchling is tied to where it **hatches**, like a wild catch: it takes that zone's encounter, so an egg will not hatch in a zone you have already spent — it waits until you carry it somewhere new. This holds even with the first-encounter lock off, and a shiny hatchling spends the zone like any other. Eggs can also be banned outright, or exempted. |
@@ -41,7 +41,7 @@ creation, under **Capture zones are**:
 
 | Mode | A zone is |
 |---|---|
-| **Geography** | The world Routes draws: every **numbered Area**, every **named route** and every **town** is its own zone. A route's zone reaches one chunk past the road, so a Pokémon caught just off it counts for the route; where that strip touches two routes, the lower route number takes it. Everything not enclosed in an Area is one shared **Wild** zone, one per dimension — it is in your log from the first minute, and early on it is most of where you can catch, so growing the road network is what earns you new zones beside it. |
+| **Geography** | The world Routes draws: every **numbered Area**, every **named route** and every **town** is its own zone. A route's zone reaches one chunk past the road, so a Pokémon caught just off it counts for the route; where that strip touches two routes, the lower route number takes it. In the overworld, everything not enclosed in an Area is one shared **Wild** zone — it is in your log from the first minute, and early on it is most of where you can catch, so growing the road network is what earns you new zones beside it. In any other dimension (the Nether, the End, CobbleSafari's Safari) **every biome is its own zone**, so each type area of the Safari grants its own first encounter. |
 | **Biome** | The biome you are standing in. This is the classic tabletop rule, and the one that works from the first minute — it does not wait for a road network to exist. |
 | **Both** | The **pair**. A route that crosses taiga and then swamp is two zones and gives you two encounters, listed as *Route 3 — Taiga* and *Route 3 — Swamp*. |
 
@@ -66,14 +66,36 @@ the zones the generator drew.
 
 ### The log
 
-Press **I** (rebindable) for the run's record: every zone you have discovered, what you caught
-there, and whether it is still alive. Four chips across the top — **Alive**, **Dead**, **Waiting**,
-**Empty** — each say how many lines they stand for and turn that group off, so a long run can be read
-down to just the part you are after. Most of a long log is **Empty**: zones you have found and not yet
-had an encounter in. A second row filters by **kind** of zone — towns, routes, areas, sites, the Wild
-and your starter — and the two work together, so "the towns I have not caught in yet" is two clicks. Clicking a Pokémon's sprite opens its summary; one that is dead, released or in the PC says so instead. Your **starter** is in it, and so is anyone's
-[Gym Leader Challenge](#gym-leader-challenge) type. In a [Soul Link](soul-link.md) it becomes the
-link's log.
+The run's record is a **Log** tab in Cobblemon's Pokémon summary, on the tab strip next to Info,
+Moves, Stats and Marks. Press **I** (rebindable) or run `/nuzlocke log` and your party's summary opens
+on it.
+
+- **Every zone you have discovered is a slot**, coloured by what happened there: grey while the
+  Pokémon you caught there is alive, Cobblemon's fainted red with the Pokémon drawn see-through once
+  it has died, and a dark empty slot for a zone with no encounter yet. The zone you are standing in
+  has the PC's pointer beside it.
+- **The filters are a column of chips** on the left. One group is by state — **Alive**, **Dead**,
+  **Waiting**, **Empty** — and the other by **kind** of zone: towns, routes, areas, sites, the Wild
+  and your starter. Each chip shows how many rows it would show with the other filters as they are,
+  and the two groups work together, so "the towns I have not caught in yet" is two clicks. Most of a
+  long log is **Empty**: zones you have found and not yet had an encounter in.
+- **From a Pokémon to its row in one click.** Switching to the Log tab from a Pokémon's summary
+  lands on that Pokémon's row, scrolled into view and marked with the pointer; if a chip was hiding
+  it, that chip is turned back on.
+- **And back.** Clicking a party Pokémon in the log takes you to its Info page; one that is dead,
+  released or in the PC says so instead.
+
+Your **starter** is in it, and so is anyone's [Gym Leader Challenge](#gym-leader-challenge) type. In a
+[Soul Link](soul-link.md) every member's encounter in a zone is a slot of its own, and a second
+**Soul Link** tab sits after the log.
+
+### In the PC
+
+A dead Pokémon's PC slot has the same fainted-red frame behind its see-through sprite, in a box, in
+the party column and while you carry it, so the PC reads the same way the log does. Cobblemon's
+wallpaper picker also offers a **cemetery** — a moonlit graveyard with Poké Ball headstones — to
+dress the box where your fallen rest, with the same alternate and glow versions as Cobblemon's own
+wallpapers.
 
 ## 🎓 Gym Leader Challenge
 
@@ -85,7 +107,7 @@ and is optional for each player.
 
 1. **You are asked when you go to pick your starter**, not the moment you spawn. Each player answers
    for themselves.
-2. **Every type on the server is a tile**, in that type's colour. Clicking one only marks it; the run
+2. **Every type on the server is a tile**, in that type's colour, on a screen drawn in Cobblemon's own style. Clicking one only marks it; the run
    is decided by the **Lock in** button, so a misclick cannot choose for you.
 3. **Play without the challenge** declines it in one click: no type lock, normal starters, any team.
    You are not asked again this run.
@@ -102,7 +124,7 @@ everyone — see [Gym Leader Challenge settings](commands.md#gym-leader-challeng
 | 🎁 **Starters** | Three random base-stage Pokémon of your type, whatever the starter mode says. The starter level, shiny and Legendary / Paradox / Ultra Beast filters still apply. If your type has fewer than three eligible species, you get the pack's normal starters. |
 | ⚔️ **Battles** | Every living Pokémon in your party must carry your type, or the battle does not start. The message names your type and every Pokémon you need to box first. Dead Pokémon in the party do not count. |
 | 💎 **Mega and Tera** | With **Mega / Tera OK** on (the default), a Pokémon also counts when its Tera type is yours, or when a Mega form of its species carries your type — a Gyarados belongs on a Dark run, because Mega Gyarados is Water/Dark. |
-| 🎯 **Catches** | An off-type catch goes straight to the PC, and **it still spends the zone**. The challenge decides what you may *use*, not how many tries you get, so you cannot keep throwing balls in one place until your type turns up. |
+| 🎯 **Catches** | An off-type catch goes straight to the PC, and **it still counts as that zone's encounter** — the message says so. The challenge decides what you may *use*, not how many tries you get, so you cannot keep throwing balls in one place until your type turns up. |
 | 📖 **The log** | Your type is shown at the top of [the log](#the-log). In a [Soul Link](soul-link.md) it also shows the type of every partner who is online. |
 
 !!! info "Gifts, trades and eggs"
