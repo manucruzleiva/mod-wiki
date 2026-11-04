@@ -37,9 +37,19 @@ anything else you did not catch in the world share that same zone.
 Right-click a player and pick **Soul Link** from Cobblemon's interaction wheel, next to Trade and
 Duel — or type `/nuzlocke soullink link <player>`.
 
-Being offered a link is **a screen you have to answer**: Accept or Decline, no escape key, and it
-comes back if you die or log out while it is open. Agreeing to a Soul Link means agreeing that
-somebody else's mistakes can end your run, so it is not a line of chat that scrolls away.
+Being offered a link is **a screen you have to answer**: a dialogue box at the bottom of the screen
+with the face of the player who sent it, Accept or Decline, no escape key, and it comes back if you
+die or log out while it is open. Agreeing to a Soul Link means agreeing that somebody else's mistakes
+can end your run, so it is not a line of chat that scrolls away.
+
+- **It counts down.** A bar under the box drains with "Expires in m:ss" and turns red in the last 15
+  seconds. When the offer is gone — it expired, someone declined, or the sender left — the box closes
+  itself.
+- **The sender sees every answer as it comes in.** A card at the top right lists each invited player
+  with their face and whether they are pending, have accepted or have declined, over the same draining
+  bar. It never stops you playing, players who have already accepted see it too, and it moves down out
+  of the way of your potion effect icons. When the offer ends it shows **Linked** in green, or who
+  declined, or that it expired, in red, for three seconds.
 
 Signing binds **what you already own**, matched up by zone on the spot. Anything caught somewhere
 your partner has not been simply waits.
@@ -63,19 +73,25 @@ because somebody else signed.
   contract. Your Pokémon leave every bind they were in and the others keep theirs; a bind left with
   only one member dissolves, so its Pokémon is free rather than pending.
 
-## The Soul Link log
+## The Soul Link tab
 
-While you are in a link, the **I** key opens the link's log instead of your own. It is the same
-screen with the truth added:
+While you are in a link, Cobblemon's Pokémon summary gets a **Soul Link** tab right after the
+[Log](nuzlocke.md#the-log) tab, and `/nuzlocke soullink summary` opens your party's summary on it.
+Outside a link the tab is not there.
 
-| It shows | Why it matters |
-| --- | --- |
-| Every member's zones, labelled with whose they are | one member spending a zone changes what the others can still do |
-| Your partner's Pokémon in full | species, nickname, and whether it is alive, dead or gone |
-| Which binds are **waiting** | those are the Pokémon that cannot battle yet |
-| Who is on a [Gym Leader Challenge](nuzlocke.md#gym-leader-challenge), and on what type | what your partner is even allowed to use |
+- **Every soul is a row of slots joined by a chain.** Each player has a column, yours first and
+  framed in white, so your side of every soul is always in the same place.
+- **A living soul** has grey slots and the chain between them holds. **A lost one** turns
+  Cobblemon's fainted red, its Pokémon go see-through, and the chain is broken.
+- **A soul still waiting on a partner** shows who owes the catch and where: a dashed, empty slot with
+  their name and the zone, behind a faded chain. Those are the Pokémon that cannot battle yet.
+- **Hover a Pokémon** to read its full name, level, HP and owner. Partners who are offline still
+  appear, showing the last state the run recorded.
 
-Partners who are offline still appear, showing the last state the run recorded.
+The [Log](nuzlocke.md#the-log) tab becomes the link's log too: every member's encounter in a zone is a
+slot of its own, so a broken soul shows a red slot in its line, and it shows who is on a
+[Gym Leader Challenge](nuzlocke.md#gym-leader-challenge), and on what type, for every partner who is
+online.
 
 ## Settings
 

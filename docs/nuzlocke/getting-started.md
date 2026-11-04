@@ -5,7 +5,7 @@ in full.
 
 ## Install
 
-1. Install **[Routes](../routes/index.md)** 1.2.119 or newer, and Cobblemon. The full list for your
+1. Install **[Routes](../routes/index.md)** 1.2.158 or newer, and Cobblemon. The full list for your
    loader is in the table at the bottom of the [home page](index.md#get-it).
 2. Drop the jar for **your** loader into `mods/`, never both loaders at once.
 3. On a server, install it **on the server and on every player's game**.
@@ -33,13 +33,14 @@ While the ruleset is on, the world is set to **Hard** every time it starts.
    play without it in one click.
 2. **Pick your starter** from three. By default that is a Grass, a Fire and a Water from three
    different generations; under the challenge, three of your type.
-3. **Name it.** Every Pokémon you obtain gets a naming screen; for the starter, leaving before you
-   name it undoes the pick, and you choose again from the same three.
+3. **Name it.** Every Pokémon you obtain gets a naming screen, and the name is final: it cannot be
+   changed later. For the starter, leaving before you name it undoes the pick, and you choose again
+   from the same three.
 4. **Go find your first encounter.** Only the first wild Pokémon you meet in a zone is catchable.
    Crossing into a new zone puts its name on screen with its state: ○ free, ● in progress,
    ✔ caught, ✘ lost.
-5. Press **I** for the run's log: every zone you have found, what you caught there, and whether it
-   is still alive.
+5. Press **I** for the run's log, a **Log** tab in your Pokémon summary: every zone you have found,
+   what you caught there, and whether it is still alive.
 
 ## Playing with friends
 

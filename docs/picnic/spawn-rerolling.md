@@ -3,19 +3,26 @@
 The headline feature. **Left-click the center (table) cells** and the table will:
 
 1. **Despawn nearby wild Pokémon** within the tier's [radius](picnic-tables.md#tiers) — but **never
-   owned/tethered Pokémon** (yours and other players' stay safe). *From the next release*, a wild
-   Pokémon that someone is battling, or that a Poké Ball is already flying at, is left alone too.
+   owned/tethered Pokémon** (yours and other players' stay safe). A wild Pokémon that someone is
+   battling, or that a Poké Ball is already flying at, is left alone too.
 2. **Force a fresh "maximized" natural respawn** around the table, using Cobblemon's own spawner at a
    boosted density so you get a full batch immediately.
 
 This lets you **re-roll the local spawns on demand** — ideal for shiny hunting or fishing for a
 specific species without wandering the world.
 
+![A spawn re-roll](assets/store/gif-spawn-reroll.gif)
+
 ## How many spawn?
 
 Open the table's GUI and use the **slider** to choose how many Pokémon a re-roll spawns, up to the
-tier's **spawn cap** (Basic 5 → everything above 12). The re-roll runs several spawner passes and
-stops early once it has placed enough.
+tier's **spawn cap** (Basic 5, Advanced 8, Expert 12). The re-roll counts the Pokémon that really
+landed and keeps drawing spots until it reaches that number or runs out of tries, and the
+"Spawned N fresh" message counts the same Pokémon the re-roll log lists.
+
+The basket in the table can change the batch: an [Alpha Basket](picnic-tables.md#the-special-baskets)
+spawns only half (rounded up), each with a 10% chance to be an alpha, and the screen shows the smaller
+number in gold. A [Combat Basket](interactions-and-items.md#combat-basket) adds an RCT trainer.
 
 ## Where they appear
 
@@ -30,13 +37,23 @@ a bare peak still gets its Pokémon.
 Nothing spawns **on the table**, and nothing spawns within **2 blocks of you** (change it with
 `/picnic config reroll clearance`), so a whole group never lands on the food or on your head.
 
-Underground and underwater the search keeps your own altitude instead, so caves and Diving tables
-behave the way you'd expect.
+Underground and underwater the search keeps your own altitude instead, so caves and tables with a
+Water basket behave the way you'd expect.
 
 A single unlucky spot doesn't end the attempt — the table keeps picking new ones until it fills your
 order or runs out of tries. If a place genuinely has nowhere to put a Pokémon, it says so plainly
 rather than reporting a silent zero. The bread is still spent: the area was cleared either way, and
 that can't be undone.
+
+## Next to a habitat
+
+Cobblemon 1.8 **habitat blocks** add their own pool to spawns within about 16 blocks of them. When a
+habitat's reach overlaps the table's radius, the re-roll looks for spawns inside it, so the habitat's
+pool (in its current phase) is what comes back: handy for hunting a Pokémon that is rare everywhere
+else. Habitats that run their own spawner (the "activated" kind) are left out, since they block every
+other spawner around them.
+
+![A re-roll next to a habitat](assets/store/gif-habitat-reroll.gif)
 
 ## Built platforms
 
@@ -79,9 +96,9 @@ Each re-roll costs **bread**, depending on tier:
 |------|:-----------------:|
 | Basic | 7 |
 | Advanced | 5 |
-| Expert · Diving · Hot · Strange | 3 |
+| Expert | 3 |
 
-Fuel gets cheaper as tiers improve, and everything above Advanced costs the same. Bread can come from the table's
+Fuel gets cheaper as tiers improve. Bread can come from the table's
 **fuel slot** or from a nearby placed
 **[Picnic Basket](interactions-and-items.md#picnic-baskets)** — the table will pull from baskets
 automatically. Out of bread? The table tells you and the re-roll is cancelled. Each per-tier cost is
@@ -94,13 +111,17 @@ enforced **both per-table and per-player** — whichever is still counting down 
 you can't dodge it by hopping between tables. A blocked attempt shows a short **actionbar countdown**
 and costs no bread. Change it with `/picnic config reroll cooldown <seconds>` (0 disables the wait).
 
-## Party TM teaching
+## Party move teaching
 
 Every re-roll has a small chance (**5%** by default) that one of **your party Pokémon teaches another
-party member** one of its moves — a little picnic bonding. A Pokémon only ever learns a move it is
-**actually able to learn** (its normal learnset / TM compatibility), so it never gains an illegal move;
-if all four slots are full, one move is swapped out. Tune it with `/picnic config tmteach chance <0..1>`,
-or switch it off with `/picnic config tmteach enabled false`.
+party member** one of its moves — a little picnic bonding. The teacher can pass on any move it has
+learned, in its battle four or benched. The student only takes a **TM, tutor or egg move** that is in
+its own learnset and that it hasn't learned yet, so it never gains an illegal move; if all four slots
+are full, one move is swapped out.
+
+Tune it with `/picnic config tmteach chance <0..1>`, pick which kinds can be taught with
+`/picnic config tmteach tm|tutor|egg <true|false>` (all three on by default), or switch it off with
+`/picnic config tmteach enabled false`.
 
 ## Snack bias
 

@@ -35,8 +35,8 @@ Every feature has an `enabled` switch, so a server can keep the picnic and drop 
 /picnic config wash reset                         # every washing setting back to its default
 ```
 
-Tiers are `basic`, `advanced`, `expert`, `diving`, `hot` and `strange`. Rungs are `basic`, `advanced`
-and `expert`; the Diving, Hot and Strange tables count as `expert`.
+Tiers and rungs are both `basic`, `advanced` and `expert`. A Diving, Hot or Strange table still
+standing from before 5.0.0 uses the `expert` values.
 
 ### Features and their settings
 
@@ -55,10 +55,17 @@ and `expert`; the Diving, Hot and Strange tables count as `expert`.
 | | `protectlegendary <rung>` | true/false | Keeps **legendary** wild Pokémon. *Default off.* |
 | | `protectmythical <rung>` | true/false | Keeps **mythical** wild Pokémon. *Default off.* |
 | | `protectultrabeast <rung>` | true/false | Keeps **Ultra Beast** wild Pokémon. *Default off.* |
+| | `protectalpha <rung>` | true/false | Keeps **alpha** wild Pokémon. *Default off.* |
 | `platforms` | `enabled` | true/false | A re-roll may spawn on [any floor you built](spawn-rerolling.md#built-platforms) (planks, quartz, concrete…), not only natural ground. *Default off.* |
 | `snackbias` | `enabled` | true/false | A re-roll borrows the spawn influences of a nearby seasoned poke-snack. *Default off.* |
-| `tmteach` | `enabled` | true/false | [Party TM teaching](spawn-rerolling.md#party-tm-teaching) on a re-roll. *Default on.* |
+| `tmteach` | `enabled` | true/false | [Party move teaching](spawn-rerolling.md#party-move-teaching) on a re-roll. *Default on.* |
 | | `chance` | 0..1 | Chance per re-roll. *Default 0.05.* |
+| | `tm` | true/false | TM moves may be taught. *Default on.* |
+| | `tutor` | true/false | Tutor moves may be taught. *Default on.* |
+| | `egg` | true/false | Egg moves may be taught. *Default on.* |
+| `alphaboost` | `enabled` | true/false | The [Alpha Basket](picnic-tables.md#the-special-baskets). Off: a table with one re-rolls normally. *Default on.* |
+| | `chance` | 0..1 | Chance each Pokémon of an Alpha Basket re-roll is an alpha. *Default 0.10.* |
+| | `batch` | 1–100 | Percent of the batch an Alpha Basket re-roll still spawns. *Default 50.* |
 | `shinyaura` | `enabled` | true/false | The [Shiny Aura](shiny-aura.md). *Default on.* |
 | | `multiplier` | 1–100 | How many times better your shiny odds get at a **full table**. *Default 2 (double).* |
 | `deploy` | `enabled` | true/false | Sitting down sends out your party. *Default on.* |
@@ -75,14 +82,14 @@ and `expert`; the Diving, Hot and Strange tables count as `expert`.
 | | `breakchance` | 0..1 | Chance a slime ball splatters. A [Fetchball](interactions-and-items.md#fetchball) ignores this. |
 | | `cooldown` | seconds | Wait between games, **per Pokémon**. *Default 3.* |
 | | `requirestable` | true/false | Need a nearby table to play. Off also shows the option on the wheel everywhere. |
-| `battleseeker` | `enabled` | true/false | The [Battle Seeker](interactions-and-items.md#battle-seeker). Off locks its slot and summons nobody; chests stop holding one after the next `/reload`. *Default on.* |
-| | `matchlevel` | true/false | Scale summoned trainers to your party's level. |
-| | `levelgap` | int | Level offset for summoned trainers. |
-| `hazards` | `enabled` | true/false | What a table carries between dimensions — [burning, scorching, flooding and drifting](picnic-tables.md#where-each-table-can-go). Off, every table is plain furniture. *Default on.* |
+| `battleseeker` | `enabled` | true/false | The [Combat Basket](interactions-and-items.md#combat-basket) (it kept the name of the Battle Seeker it replaced). Off: a table with one summons no trainer. *Default on.* |
+| | `matchlevel` | true/false | Scale summoned trainers to your party's level. *Default on.* |
+| | `levelgap` | int | Level offset for summoned trainers. *Default 8.* |
+| `hazards` | `enabled` | true/false | What a table and its basket carry between dimensions — [burning, scorching, flooding and drifting](picnic-tables.md#where-each-table-can-go). Off, every table is plain furniture. *Default on.* |
 | `table` | `light` | 0–15 | Light level emitted by the table. Re-place a table to relight it. |
-| | `actiondistance` | number | How close a table has to be for the table-gated actions. |
+| | `actiondistance` | 0–512 | How close a table has to be for the table-gated actions. *Default 25.* |
 
-The four `protect…` settings are **opt-in** and granular: turn on only the rarities you want the
+The five `protect…` settings are **opt-in** and granular: turn on only the rarities you want the
 re-roll to spare, on only the rungs you want. `peaceful` is **on by default**: sit at a table and
 hostile mobs within `radius` blocks lose their target and run away, like a creeper fleeing a cat.
 
@@ -91,7 +98,7 @@ hostile mobs within `radius` blocks lose their target and run away, like a creep
 Available to **everyone**. Shows a summary of picnic activity:
 
 - Total re-rolls, Pokémon spawned / despawned
-- **Shinies** found (with ratio), **legendaries / mythicals**
+- **Shinies** found (with ratio), **legendaries / mythicals**, **alphas**
 - Snacks consumed, distinct species
 - **Most common** and **rarest** species
 
@@ -125,7 +132,18 @@ so a filter can look back further than the last `stats reset`.
 
 With **[Cloth Config](https://modrinth.com/mod/cloth-config)** installed, the same values are editable
 in a GUI — on Fabric via **[Mod Menu](https://modrinth.com/mod/modmenu) → Cobblemon Picnic → Settings**,
-on NeoForge via the **Config** button in the mods list.
+on NeoForge via the **Config** button in the mods list. Its pages:
+
+| Page | What's on it |
+|---|---|
+| **General** | Re-roll switch and cooldown, light level, party deploy and its distances, flier lift and leash, spawn clearance, re-roll log, action distance |
+| **Tiers** | Spawn cap, fuel cost and **re-roll radius** for Basic, Advanced and Expert |
+| **Shiny Aura** | The aura switch and the full-table multiplier, with the ladder it works out to |
+| **Interactions** | Washing, playing fetch, and party move teaching (chance, and TM / tutor / egg moves) |
+| **Baskets** | The Combat Basket (switch, level match, level gap), the Alpha Basket (switch, chance, batch) and the dimension hazards |
+| **Protection & seating** | What a re-roll keeps (shiny, legendary, mythical, Ultra Beast, alpha) per rung, snack bias, built platforms, and mobs fleeing a seated table |
+
+![The Baskets page of the settings screen](assets/store/config-screen-baskets.jpg)
 
 ⚠️ On a **server** that screen only edits **your own** game's file, and says so at the top. Use
 `/picnic config` to change the settings everyone plays under.
@@ -149,18 +167,15 @@ until it is fixed: settings changed in the meantime last until the server stops.
 | Basic | 5 | 7 | 32 | 2 |
 | Advanced | 8 | 5 | 48 | 3 |
 | Expert | 12 | 3 | 64 | 4 |
-| Diving | 12 | 3 | 64 | 4 |
-| Hot | 12 | 3 | 64 | 4 |
-| Strange | 12 | 3 | 64 | 4 |
 
 Seat counts are **fixed per tier** and not configurable. Elsewhere: re-roll cooldown **5 s**
 (per-table *and* per-player), party TM cross-teach **5%**, full-table shiny multiplier **×2**, wash
-and play cooldowns **3 s** each (per Pokémon), party deploy **4–7 blocks**.
+and play cooldowns **3 s** each (per Pokémon), party deploy **4–7 blocks**, Alpha Basket **10%**
+alphas at **50%** of the batch.
 
 ### Picnic without the spawn manipulation
 
 `/picnic config reroll enabled false` switches the re-roll off entirely — right-clicking a table then
 spawns and
-despawns nothing, and costs no bread. Seats, the [Shiny Aura](shiny-aura.md), baskets, the
-[Battle Seeker](interactions-and-items.md#battle-seeker) and the
+despawns nothing, and costs no bread. Seats, the [Shiny Aura](shiny-aura.md), bread baskets and the
 [care interactions](interactions-and-items.md) all keep working.

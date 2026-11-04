@@ -12,8 +12,8 @@ Earn experience the way the main series pays it: **at every knockout**, not in o
 battle ends. A level gained mid-battle counts in that same battle — new stats, more HP — and a move
 it unlocks is yours to take before the next turn.
 
-There is nothing to configure and no command to learn. Install it and fight. (From the next release,
-operators can [tune the server's EXP](commands.md) if they want to.)
+There is nothing to configure and no command to learn. Install it and fight. (Operators can
+[tune the server's EXP](commands.md) if they want to.)
 
 <!-- mod-badges -->
 
@@ -37,12 +37,11 @@ operators can [tune the server's EXP](commands.md) if they want to.)
 - :material-cursor-move: **[A move screen, mid-battle](how-it-works.md#the-move-screen)** — when a
   Pokémon that knows four moves unlocks a new one, drag it into the moveset or send it to the move
   pool.
-- :material-drag: **[Drag and drop on the Summary](how-it-works.md#drag-and-drop-on-the-summary)**
-  *(next release)* — reorder moves by dragging one onto another, and change one by dragging it out
+- :material-drag: **[Drag and drop on the Summary](how-it-works.md#drag-and-drop-on-the-summary)** — reorder moves by dragging one onto another, and change one by dragging it out
   of the move pool.
 - :material-text-box-outline: **[Everything in the battle log](how-it-works.md#battle-log)** — EXP,
   levels, stats and moves, said to the Pokémon's owner and nobody else.
-- :material-tune-variant: **[Commands & Config](commands.md)** *(next release)* — an EXP
+- :material-tune-variant: **[Commands & Config](commands.md)** — an EXP
   multiplier, a stronger or global Exp. Share, and an *EXP: On / Off* button on the Summary to pause
   one Pokémon's EXP.
 

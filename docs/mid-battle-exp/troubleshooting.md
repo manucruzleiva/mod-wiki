@@ -11,8 +11,8 @@ does in Cobblemon. Install it **on the server and on every player's game**.
 
 ## I cannot find `/midbattleexp` or the Summary button
 
-They arrive in the version after 2.0.0. In 2.0.0 the mod has no command, no config file and no Summary
-button. See [Commands & Config](commands.md).
+They arrived in 2.1.0. Update the mod on the server and on every player's game: 2.0.0 has no command,
+no config file and no Summary button. See [Commands & Config](commands.md).
 
 ## A battle pays more or less EXP than I expected
 

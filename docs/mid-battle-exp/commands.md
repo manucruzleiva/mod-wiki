@@ -1,10 +1,5 @@
 # Commands & Config
 
-!!! note "Next release"
-
-    Everything on this page arrives in the version after 2.0.0. In 2.0.0 the mod has no command, no
-    config file and no Summary button.
-
 Out of the box the mod changes **when** EXP is paid, never how much. Two things can change that: the
 server's settings, which operators set with `/midbattleexp`, and a button on each Pokémon's Summary.
 

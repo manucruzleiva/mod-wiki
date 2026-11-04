@@ -83,6 +83,9 @@ you log off and when the server restarts, and charging another block does not ta
 as many as you like. Aim Charge at a charged block again to discharge it. Breaking the block ends
 its charge too.
 
+It changes the world, so it needs the right to build: it does nothing in adventure mode, inside
+spawn protection or on land a claim mod protects from you.
+
 The block is never replaced — it stays exactly what it is and simply *answers* as a power source —
 so you can charge a chest, a furnace, a statue or a wall without losing anything. While it is live
 it glows with **redstone dust** on its faces, so a charged block is one you can find again.
@@ -112,6 +115,9 @@ used to do), in two passes of decreasing politeness:
    the field.
 
 It never strips grass down to dirt: as a fallback, that would go off every time you missed a tree.
+
+**Dynamic Trees** works too: aim at one of its trunks and Cut chops it the way an axe would, so the
+tree falls and drops its logs as Dynamic Trees decides.
 
 ---
 
@@ -152,6 +158,9 @@ mode, and skips spawn protection and claimed land. The radius (`power`) is cappe
 Instantly breaks the block you aim at. If it's an **ore**, vein-mines all connected ore of that
 type; otherwise breaks the single pickaxe-minable block (Netherite Pickaxe drops). Dirt, sand and
 the rest of what a shovel takes are [Dig](#dig)'s.
+
+Like Cut and Dig, it needs the right to break: it does nothing in adventure mode, inside spawn
+protection or on land a claim mod (Open Parties and Claims, FTB Chunks…) protects from you.
 
 ![Rock Smash: a whole ore vein in one punch](../assets/store/gif-rock-smash.gif)
 
@@ -195,7 +204,22 @@ from a bucket.
 
 Pushes the aimed block one block in whichever of the six directions you're looking — up and down
 included. Containers travel with their contents, and a **double chest moves as one unit**: both
-halves go together, or the push fails if either has nowhere to go. Won't move fluids.
+halves go together, or the push fails if either has nowhere to go. Won't move fluids, but a
+**waterlogged** block can be pushed and leaves its water behind. Fences, walls and panes re-join
+their new neighbours.
+
+Some blocks stay where they are:
+
+- **Unbreakable** ones: bedrock, barriers, end portal frames, command blocks.
+- **Two-block** ones: doors, beds, tall flowers, an extended piston, Cobblemon's PC and pasture.
+- **Spawners**, trial spawners and vaults, and anything else in the block tag
+  `#cobblemon_hms:strength_immovable`, which a pack can add to.
+- Blocks their mod marks as never to be moved, like Cobblemon's healing machine, restoration tank,
+  fossil analyzer and campfire pot.
+
+A push also fails when the block would go past the top or bottom of the world, into a player or a
+Pokémon, or leave a torch, flower or rail without its support. Moving a block is breaking it and
+placing it, so adventure mode, spawn protection and claims stop it on either end.
 
 ![Strength: pushing a double chest, contents intact](../assets/store/gif-strength.gif)
 
@@ -243,14 +267,21 @@ you go half-size for a while.
 ### <img class="hm-icon" src="../../assets/icons/outrage.png" alt=""> Outrage
 **Cooldown:** 5 min
 
-Aim at an **XL** Pokémon to turn it into an **Alpha**. Anything smaller, it refuses.
+Aim at an **XL** Pokémon of **yours** to turn it into an **Alpha**. Anything smaller, it refuses.
+It never works on a wild Pokémon or someone else's, nor on one that is battling, fainted or busy
+(evolving, for instance).
 
 ---
 
 ### <img class="hm-icon" src="../../assets/icons/calm_mind.png" alt=""> Calm Mind
 **Cooldown:** 2 min
 
-Aim at an **Alpha** to settle it back into the ordinary Pokémon it was. The way back out of Outrage.
+Aim at an **Alpha** of yours to settle it back into the ordinary Pokémon it was, at the size it had
+underneath. The way back out of Outrage, with the same rules: your own Pokémon only, and not while
+it is battling, fainted or busy.
+
+An Alpha that is **not XL** underneath could never be made one again, so Calm Mind asks first: use
+it on the same Pokémon a second time within 5 seconds to settle it for good.
 
 ---
 

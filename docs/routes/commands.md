@@ -9,19 +9,13 @@ which changes how the map looks to you.
 
 | Command | Who | One-liner |
 | --- | :---: | --- |
-| `/routes status` | 👤 | Network summary: towns, nodes, completed routes, queued edges. |
-| `/routes list [cities\|routes]` | 👤 | Every known town / completed route, with coordinates. |
-| `/routes nearest` | 👤 | Closest town and route, with distance and heading. |
+| `/routes status` | 👤 | How many towns, routes and areas have been discovered. |
+| `/routes list [cities\|routes]` | 👤 | Every discovered town / route, with coordinates. |
+| `/routes nearest` | 👤 | Closest discovered town and route, with distance and heading. |
 | `/routes zone` | 👤 | What the chunk you stand in is painted as. |
-| `/routes scan [radius]` | 🛡️ | Scan loaded chunks for city structures (1–100 chunks). |
-| `/routes connect` | 🛡️ | Queue a road between the two nearest cities. |
-| `/routes structures` | 🛡️ | Write every structure to a file, grouped into settlements, landmarks and the rest. |
-| `/routes addcity [name]` | 🛡️ | Register where you stand as a named city. |
-| `/routes rename <name>` | 🛡️ | Rename the nearest town. |
-| `/routes tp <town>` | 🛡️ | Teleport to a named town. |
-| `/routes weave [loops]` | 🛡️ | Force ring roads now (1–16). |
-| `/routes repaint` | 🛡️ | Re-broadcast the map paint to everyone online. |
-| `/routes reset` | 🛡️ | Wipe the roads and re-queue every connection. |
+| `/routes rename <name>` | 🛡️ | Rename the town you are standing in. |
+| `/routes tp <town>` | 🛡️ | Teleport to a town somebody has visited. |
+| `/routes remove` | 🛡️ | Remove the town or road you are standing on. |
 | `/routes zone override <kind> [force]` | 🛡️ | Declare this chunk a different kind, and keep it that way. |
 | `/routes zone clear [force]` | 🛡️ | Hand this chunk back to the generated map. |
 | `/routes zone info` | 🛡️ | What the world generated here vs. what the override says. |
@@ -30,71 +24,44 @@ which changes how the map looks to you.
 | `/routes zone delete\|rename <name> …` | 🛡️ | Remove it, or rename it. |
 | `/routes zone list` | 🛡️ | Every authored zone: kind, chunks, author. |
 | **Laburo** (item) | 🛡️ | The same zone authoring, by clicking two corners. No recipe — creative only. |
-| `/routes settlement …` | 🛡️ | Your own towns and connections in the gen2 graph. |
+| `/routes settlement …` | 🛡️ | Your own towns and connections in the road network. |
+| `/routes road preview\|commit\|cancel` | 🛡️ | Build a declared road into land that is already generated. |
+| `/routes road tool` | 🛡️ | Hands you the **Road Planner**: click one town, then the other. |
 | `/routes config …` | 👤/🛡️ | Read and change this world's settings from in game. |
-| `/routes debug …` | 🛡️ | Thirteen read-only reports, for pasting into a bug report. |
+| `/routes debug …` | 🛡️ | Sixteen reports, for pasting into a bug report. Three of them change the world. |
 | `/routesmap …` | 👤 | How the chunk paint looks on your own map. Never reaches the server. |
 
 ---
 
 ## 🛤️ `/routes` — the road network
 
+`status`, `list` and `nearest` answer from what players have **discovered** — the towns somebody has walked into, the
+routes somebody has walked, the areas somebody has entered — never from the whole world the seed has
+planned. Until someone has, they answer *Nothing discovered yet — walk into a town or onto a road
+first*. The whole planned network is what `debug towns`, further down, is for.
+
 ### `status` — 👤
-Prints the network at a glance: how many **towns** are known (and how many have real names), how
-many **route nodes** were discovered, how many **routes are completed**, and how many **candidate
-edges** wait in the build queue — then the first 16 routes with their endpoints.
+The world at a glance: how many **towns**, **routes** and **areas** have been discovered.
 
 ### `list [cities|routes]` — 👤
-The full inventory. `cities` lists every known town — its name (or *(unnamed town)*) and its `x, z`
-coordinates; `routes` lists every completed route with its two endpoints. With no argument you get
-both. Long lists are capped at 24 lines with an *"… and N more"* trailer.
+The full inventory. `cities` lists every discovered town with its `x, z` coordinates; `routes` lists
+every discovered route — *Route 7: Something* — with its two towns. With no argument you get both.
+Long lists are capped at 24 lines with an *"… and N more"* trailer.
 
 ### `nearest` — 👤
-Where's civilization? Reports the **closest town** and the **closest route** to where you stand,
-each with the distance in blocks and a compass heading (N, NE, E, …). Great when you're lost in
-open wilderness.
-
-### `scan [radiusChunks]` — 🛡️
-Scans the **already-loaded** chunks around you (default 8, up to **100** chunks radius) and
-registers any city structures it finds as route nodes. Use after exploring somewhere new when you
-don't want to wait for the automatic discovery.
-
-### `connect` — 🛡️
-Locates the nearest connectable cities from your position (seed-based — no chunk loading) and
-queues a road between them. The road then builds incrementally.
-
-### `structures` — 🛡️
-Writes every structure of this world to `routes_structures.txt` in three groups — **settlements**
-(roads are planned to them), **landmarks** and **neither** — each with its tags, and says how many of
-each there are. The first stop when a structure type isn't being connected; see
-[Which structures get roads](which-structures.md) for how each one is decided.
-
-### `addcity [name]` — 🛡️
-Registers **where you are standing** as a city node (default name `Gym`) and queues its road
-connections. The escape hatch for places without a structure tag — player builds, modded
-structures, anything.
+Where's civilization? Reports the **closest discovered town** and the **closest discovered route** to
+where you stand, each with the distance in blocks and a compass heading (N, NE, E, …). Great when
+you're lost in open wilderness.
 
 ### `rename <name>` — 🛡️
-Renames the **nearest town within 160 blocks**. The new name shows in arrival banners and route
-endpoints; existing map waypoints refresh on rejoin.
+Renames the town you are **standing in**, generated or declared. The new name reaches the arrival
+banner, `/routes list`, the map marker and the signs: the ones already standing are rewritten as their
+chunks load. Two towns can't share a name.
 
 ### `tp <town>` — 🛡️
-Teleports you to a **named** town (tab-completion suggests every real name), landing on a safe, dry
-column — the same spot-finder that places a new world's spawn. Wrong name? It points you at
+Teleports you to a town **somebody has visited** — tab-completion suggests each one — landing on a
+safe, dry column: the same spot-finder that places a new world's spawn. Wrong name? It points you at
 `/routes list cities`.
-
-### `weave [loops]` — 🛡️
-Runs the **ring-road pass right now**: up to `loops` (default 4, max 16) direct connections are
-queued between towns that are close on the map but far apart by road. Every loop that completes
-**encloses a new named AREA** — this is the fastest way to fill your map with them.
-
-### `repaint` — 🛡️
-Re-broadcasts the chunk-paint geometry to every online player, forcing the Xaero overlays to
-refresh without relogging.
-
-### `reset` — 🛡️
-⚠️ Wipes the **road records** and re-queues every connection from the known cities. Already-paved
-blocks stay in the world; the network rebuilds its bookkeeping from scratch.
 
 ---
 
@@ -107,9 +74,21 @@ painted as — a **CITY** (with its name), a **ROUTE** (name and endpoints), an 
 network encloses it). Always agrees with the map colours and the zone pop-ups.
 
 ### `zone override <kind> [force]` — 🛡️
-Declares the chunk you are standing in to be a **different kind**, and keeps it that way. The kinds
-are the ones the map paints: `city`, `route`, `area`, `wilderness`. The map, the pop-ups and
-`/routes zone` all follow the override from then on.
+Declares the chunk you are standing in to be a **different kind**, and keeps it that way. The map,
+the pop-ups and `/routes zone` all follow the override from then on.
+
+| Kind | The chunk is |
+| --- | --- |
+| `city` | part of a town |
+| `road` | part of a route on open ground |
+| `cave` | part of a route where it runs through a tunnel |
+| `bridge` | part of a route where it crosses on a bridge — over a river or a dry gap |
+| `aquatic` | part of a route across open water, too wide to bridge |
+| `subaquatic` | part of a route along a seabed. Roads no longer generate this way; the kind stays so older chunks that carry it can still be authored |
+| `none` | nothing at all — the way to take a town or a road **off** a chunk |
+
+There is no `area` kind: an area is the space the mod finds between the painted chunks, so it follows
+from the roads around it.
 
 Overrides are a **second layer** over the generated map, not an edit of it: the underlying paint is
 untouched, so a chunk you clear falls back to whatever the world generated. Tab-completion offers the
@@ -230,9 +209,8 @@ large and it is simply open country.
 
 ## 🏘️ `settlement` — your own towns and connections
 
-A separate subtree from `addcity` and `connect`, and the distinction matters: those two feed the
-classic route network, while these feed **gen2's settlement graph** — the one that draws roads during
-worldgen. The two are not the same network.
+These feed the **settlement graph** — the network that draws roads as the world generates — exactly as
+if the world had put those towns and roads there itself.
 
 Declared settlements and connections, and everything removed or withdrawn, are remembered with the
 world and survive a restart. Every removal here only affects **chunks generated from now on**: ground
@@ -261,9 +239,13 @@ Puts back the nearest generated town you removed, exactly as it was: its name an
 Every settlement and connection you have declared in this world, with coordinates.
 
 ### `settlement connect <x> <z>` — 🛡️
-Declares a road between the settlement nearest to you and the one nearest to `x, z`. A declared
-connection is the one edge nothing is allowed to re-route: it exists because you said those two places
-are joined.
+Declares a road between the town nearest to you and the one nearest to `x, z`. Either end can be a
+settlement you declared or a town the world generated: each end is the declared settlement near it or,
+where there is none, the nearest generated town. A declared connection is the one edge nothing is
+allowed to re-route: it exists because you said those two places are joined.
+
+Like everything here it reaches chunks generated **from now on**. For land you have already explored
+between the two towns, follow it with [`road preview` and `road commit`](#road-a-road-through-land-already-explored).
 
 ### `settlement disconnect <x> <z>` — 🛡️
 Takes the road between the town you stand at and the one nearest `x, z` out of the network. A road you
@@ -273,6 +255,38 @@ declared is deleted. A road the world generated is withdrawn, and both towns kee
 Puts a withdrawn road back. With no position, it restores the road withdrawn most recently, which is
 the only way to bring back a branch that starts at a fork. With a position, it restores the road between
 the town you stand at and the one nearest `x, z`.
+
+---
+
+## 🛣️ `road` — a road through land already explored
+
+A declared connection only reaches chunks generated after it, which does nothing for the ground
+between two towns you have already walked. These commands draw it there too.
+
+### `road preview` — 🛡️
+Plans the connection you declared last and shows its line as a trail of particles over the ground near
+you, with its length, its two ends and how many chunks it crosses. Ground an add-on has claimed (a gym,
+a building) is counted and left untouched.
+
+### `road commit` — 🛡️
+Draws the previewed road into the world, chunks already generated included. One commit draws into at
+most **600 chunks**; a longer road does nothing at all, rather than half of it. Signposts and rest stops
+come with chunks generated from then on.
+
+### `road cancel` — 🛡️
+Drops the preview. The declared connection stays.
+
+### `road tool` — 🛡️ — the Road Planner
+Hands you the **Road Planner**, the same thing by hand:
+
+| Do this | And it |
+| --- | --- |
+| **Right-click the ground** at one town | sets the first end |
+| **Right-click the ground** at the other | declares the road and previews it, ready for `/routes road commit` |
+| **Sneak + right-click** | clears the first end |
+
+Either town can be a generated one or one you declared. Clicking two towns that are already joined
+previews the road between them.
 
 ---
 
@@ -297,7 +311,10 @@ One option and its current value.
 ### `config set <option> <value>` — 🛡️
 Changes it. The value is typed: a number option only accepts a number **within its own limits**, a
 toggle only accepts true/false, and an option with a fixed set of choices tab-completes them. A list
-option is typed as `a, b, c`.
+option is typed as `a, b, c`, and a material mix as `minecraft:cobblestone=70,minecraft:gravel=30`.
+
+A setting that shapes the road network is [fixed for each world](configuration.md#routes-tab): setting
+one saves it for the worlds you create next, says so, and leaves this world's network as it is.
 
 ### `config reset <option>` — 🛡️
 Back to the mod's own default for that option.
@@ -336,28 +353,41 @@ the waypoints take it on your next join. A new grouping re-files each waypoint a
 ## 🔬 `debug` — measure it instead of guessing
 
 Operator tooling, and it prints raw English rather than translated text: it exists to be pasted into a
-bug report. Every one of these is **read-only** — none of them changes the world.
+bug report.
+
+!!! danger "Three of them change the world"
+    `debug paint`, `debug areas` and `debug spawn` are **not** reports. They write to the world you run
+    them in, and nothing undoes them. Run them on a copy, never on a world you care about. The rest
+    only read.
 
 Most take a radius in chunks and default to something sensible, so `/routes debug gaps` on its own is
 usually what you want.
 
 | Command | Radius | What it reports |
 | --- | :---: | --- |
-| `debug structures` | — | every structure of this world, written to `routes_structures.txt` in three groups — settlements, landmarks, neither — with its tags. The first stop when a structure type is not being connected |
 | `debug towns [r]` | 8–512, def. 128 | every settlement the seed puts in range, as the road network sees them |
 | `debug settlements [r]` | 8–256, def. 64 | the settlement graph with a **census**: how many roads each rule contributed, and how many were folded into shared trunks. The answer to "why does this world have so many roads" |
 | `debug graph [r]` | 8–512, def. 128 | the graph's nodes and how they cluster |
 | `debug edges [r]` | 8–512, def. 128 | every planned road in range, with its endpoints |
-| `debug paint [r]` | 1–32, def. 8 | what the map layer thinks each chunk around you is |
-| `debug areas [r]` | 1–48, def. 16 | the enclosed areas in range and what bounds them |
+| `debug paint [r]` | 1–32, def. 8 | ⚠️ **draws** the planned roads into the chunks around you that are already generated, and paints them on the map, then says how many chunks it touched |
+| `debug areas [r]` | 1–48, def. 16 | ⚠️ **places a sponge** on top of every enclosed-area chunk in range, so you can see where the areas are |
 | `debug verify [r]` | 8–512, def. 128 | walks the roads in range and reports anything that does not add up |
-| `debug gaps [r]` | 8–512, def. 128 | every place a road, a tunnel or a bridge hands over to the next, and the size of the step there. **Where a "the road has a hole in it" report starts** |
+| `debug gaps [r]` | 8–512, def. 128 | every place a road, a tunnel or a bridge hands over to the next, and the size of the step there; a step of two blocks or more says whether it has a ladder, and if not why (too tall, at a bridge or tunnel, on a chunk border…). **Where a "the road has a hole in it" report starts** |
 | `debug bridge [r]` | 8–512, def. 128 | walks each bridge span and reports cells with no deck, with coordinates |
-| `debug spawn` | — | what the spawn finder decided for this world, and why |
+| `debug bore [r]` | 8–512, def. 128 | what stands in the way inside each tunnel in range: every block id that would stop a walker, with how many and where the first one is. **Where a "the tunnel is blocked" report starts** |
+| `debug forks [r]` | 8–512, def. 128 | the ground around each fork in range, flattest last, and how many of its signposts are standing |
+| `debug step` | — | for the column you stand on and its four neighbours: the height the road was planned at, the real ground, the height the road is actually built at, and whether it got a slab, a full block or a stair, and why. Tells a badly planned step from one the builder had to cut short |
+| `debug spawn` | — | ⚠️ **moves the world spawn**: runs the spawn finder again, puts the spawn in the town it picks, and says why |
+| `debug workers` | — | where the background road work has spent its time: tasks, waits, and work done that nothing used |
 | `debug bench [columns]` | 16–10000, def. 400 | times the road drawer over that many columns |
 | `debug chunks [count] [away]` | 4–4096, def. 64 | times whole chunk generation, optionally `away` blocks from you so it measures cold ground |
 
 !!! tip "What to paste into a report"
-    For a road that looks wrong: `debug gaps` and, if a bridge is involved, `debug bridge`. For a
-    town that should be connected and is not: `debug structures` and `debug settlements`. For
-    anything slow: `debug chunks`.
+    For a road that looks wrong: `debug gaps` and, if a bridge or a tunnel is involved, `debug bridge`
+    or `debug bore`. For a town that should be connected and is not: `debug towns` and
+    `debug settlements`. For anything slow: `debug chunks` and `debug workers`.
+
+!!! note "Commands of the classic generator"
+    `scan`, `connect`, `addcity`, `delcity`, `weave`, `repaint`, `reset` and `debug structures` belonged
+    to the road generator Routes retired in 2.0. They still answer, with one line that names the command
+    to use instead, if there is one.

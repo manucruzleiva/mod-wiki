@@ -5,16 +5,18 @@ mod detects what's installed and stays inert otherwise.
 
 | Map mod | What Routes adds |
 |---|---|
-| 🪨 Waystones | Each waystone becomes a named city node on the network |
-| 🧭 Xaero's Minimap | Waypoints and toasts, dotted golden trails, chunk paint |
+| 🪨 Waystones · Fabric Waystones | A waystone takes the name of the town it stands in |
+| 🧭 Xaero's Minimap | Waypoints and toasts, chunk paint |
 | 🗾 Xaero's World Map (key **M**) | Chunk paint |
+| 🗺️ JourneyMap | Waypoints in their own groups, chunk paint |
+| 🏘️ Cobblemon PokeTowns | A town's marker sits on its Pokémon Center's waystone |
 
 ## Waystones
 
-Activating a waystone registers it as a **named city** on the route network — your fast-travel
-points become real places that roads connect to.
+Activating a waystone names it after the Routes town it stands in and counts as a visit to that
+town — your fast-travel points carry the same names as the places the roads connect.
 
-**Wraith Waystones** (Fabric only — that mod has no NeoForge version) is supported too. A waystone
+**Fabric Waystones** (Wraith Waystones; Fabric only — that mod has no NeoForge version) is supported too. A waystone
 takes the name of the Routes town it stands in the moment you discover it, and shares that town's
 map marker, so the waystone, the town and the pin are one place under one name.
 
@@ -31,14 +33,33 @@ map marker, so the waystone, the town and the pin are one place under one name.
   wilderness stays unpainted until the network grows around it. Enclosed areas earn a name
   (**A1, A2, …** with a nature flavour, e.g. "A3-Frostpine") shown by their entry pop-up.
 
+Chunks are painted once **your** map has discovered them, so a new world's map is not tinted far
+from anywhere you have been.
+
 ## Xaero's World Map
 
 The chunk paint also renders on the **full-screen World Map (key M)** — visible independently of
 the minimap's Cave Mode and of your Y level, on the surface and in caves alike.
 
+## JourneyMap
+
+JourneyMap gets the same chunk paint and the same waypoints as Xaero's maps, in the same colours.
+JourneyMap's unit for hiding a set of markers is a **waypoint group**, so each category gets a group
+named like the Xaero set — *Settlements*, *Routes* and *Areas* — or one *Routes Mod (all)* group under
+the single-switch grouping.
+The markers are re-sent every time you join, so nothing of Routes stays in your JourneyMap data if you
+remove the mod. They always go on the Overworld map, even if you join in the Nether.
+
+## Cobblemon PokeTowns
+
+With [PokeTowns](../poketowns/index.md), a town's map marker sits on its **Pokémon Center's
+waystone** as soon as you discover the town, without waiting for you to activate the waystone. Towns
+you discovered before move there the next time you join. Roads also enter PokeTowns towns by the
+street ends it marks — see [Dynamic Routes](routes.md).
+
 ## Changing how it looks — `/routesmap`
 
-How the paint looks is a choice about **your own** map, so it is a command every player can use: no
+How the paint looks (on Xaero's maps and JourneyMap alike) is a choice about **your own** map, so it is a command every player can use: no
 operator rights, and it works on any server — even one without Routes — because it never leaves your
 game. It turns the paint on and off, sets how strong each of the three tints is (**0 hides that
 category**), picks each one's colour — which the matching waypoints follow — and chooses whether the
@@ -53,5 +74,6 @@ Options → Controls → Key Binds. It ships unbound, so it never fights Xaero's
 [the Commands page](commands.md#routesmap-how-your-map-looks).
 
 !!! note
-    Get the map mods from [the Xaero's Minimap page](https://modrinth.com/mod/xaeros-minimap) and
-    [the Waystones page](https://modrinth.com/mod/waystones) — then everything above just works.
+    Get the map mods from [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap),
+    [JourneyMap](https://modrinth.com/mod/journeymap) and [Waystones](https://modrinth.com/mod/waystones)
+    — then everything above just works.

@@ -19,7 +19,11 @@ never rebuilds what is already there. Each option says so in [Configuration](con
 
 Route rules are chosen when the world is created and stored with it, and the road network is laid
 out as the world generates. A **new world** gives you the intended experience; see
-[Getting Started](getting-started.md).
+[Getting Started](getting-started.md). To join two towns in land you have already explored, use
+[`/routes road`](commands.md#road-a-road-through-land-already-explored).
+
+A world made with the classic generator of Routes 1.x (before 2.0) is **frozen**: it loads and plays
+as before, keeps its roads, map paint, zone banners and Nuzlocke zones, and never grows a new road.
 
 ## A town I expected is not connected
 
@@ -29,7 +33,8 @@ section says what to send.
 
 ## What to paste into a report
 
-For a road that looks wrong: `/routes debug gaps` and, if a bridge is involved, `/routes debug bridge`.
-For a town that should be connected and is not: `/routes debug structures` and
-`/routes debug settlements`. For anything slow: `/routes debug chunks`. See
+For a road that looks wrong: `/routes debug gaps` and, if a bridge or a tunnel is involved,
+`/routes debug bridge` or `/routes debug bore`. For a town that should be connected and is not:
+`/routes debug towns` and `/routes debug settlements`. For anything slow: `/routes debug chunks` and
+`/routes debug workers`. See
 [Commands](commands.md).

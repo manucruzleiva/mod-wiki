@@ -30,10 +30,13 @@ really built.
 - 🗺️ **[Dynamic routes](routes.md)** between towns and structures, fully part of worldgen — roads are
   graded to the land, bridge the water, bore through what they cannot climb, share a trunk where they
   run together, and get names like *Route 3: Steep Forest Pass*.
-- 🧭 **[Map integration](map-integration.md)** (optional): Waystones town nodes plus Xaero's
-  waypoints, route trails and chunk painting.
+- 🧭 **[Map integration](map-integration.md)** (optional): waypoints and chunk paint on Xaero's maps
+  and JourneyMap, waystones named after their towns, and PokeTowns markers on the Pokémon Center.
+- 🛣️ **[Roads by hand](commands.md#road-a-road-through-land-already-explored)**: join two towns with
+  the Road Planner and build the road even through land you have already explored.
 - 🧩 **[World-creation tab](configuration.md)**: a dedicated **ROUTES** tab on the create-world
-  screen — every rule set up-front, saved per world.
+  screen — every rule set up-front, saved per world, down to the mix of road materials, the bridge
+  decks and the handrails.
 - 🎮 Playing a Pokémon world? **[Cobblemon Nuzlocke & Soul Link](../nuzlocke/index.md)** is a separate
   add-on that builds on this one: it locks encounters to the routes, areas and towns generated here,
   and adds the road trainers and the gyms beside towns.

@@ -29,8 +29,8 @@ Everything that happens, and why, is on [How it works](how-it-works.md).
 
 ## The settings that matter
 
-In 2.0.0 the mod has none of its own. The ones that shape it are **Cobblemon's**, in Cobblemon's
-config, and they work exactly as they always have:
+The ones that shape it most are **Cobblemon's**, in Cobblemon's config, and they work exactly as they
+always have:
 
 | Cobblemon setting | What it changes here |
 |---|---|
@@ -40,6 +40,6 @@ config, and they work exactly as they always have:
 | `allowExperienceFromPvP` | whether a battle against another player pays at all |
 | `awardExperienceToFaintedPokemon` | whether a Pokémon that has fainted still earns (Cobblemon 1.8 only) |
 
-From the next release the server has its own EXP multiplier, Exp. Share portion and global Exp.
+On top of these the server has its own EXP multiplier, Exp. Share portion and global Exp.
 Share on top of these, set with `/midbattleexp`, and each Pokémon's Summary has a button that pauses
 its EXP: see [Commands & Config](commands.md).
