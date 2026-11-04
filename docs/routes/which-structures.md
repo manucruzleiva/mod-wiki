@@ -6,7 +6,7 @@ Every structure in your world is one of three things to the road network:
 |---|---|---|
 | **Settlement** | a town — a village, a city | roads are planned **to** it |
 | **Landmark** | somewhere worth seeing — a pyramid, a ruin, a tower | no road is planned **to** it; a road passing near it bends a little to go **by** it, keeps off its footprint, and signs it |
-| **Ignored** | underground, at sea, or not in the Overworld | nothing at all |
+| **Ignored** | underground, at sea, or not in the Overworld | not visited and not signed; a road still goes around one that stands on the surface, as it does around a landmark |
 
 Which is which is **yours to decide**, and there are three ways to say it, from the one almost
 everybody wants to the one for pack authors.
@@ -24,6 +24,19 @@ A structure from a resource or data pack that you want roads to pass by, rather 
 **Landmark** in the checklist below. Each of the three behaviours has its own option under
 [Towns & Settlements](configuration.md). They apply to worlds created with them and to ground that has
 not generated yet.
+
+---
+
+## The list Routes ships
+
+Routes comes with its own answer for the structures of the packs it is tested on — which are towns,
+which are landmarks and which to ignore — so a pack like the Cobblemon Official Modpack gets roads to
+its gym entrances with no config at all. It is three structure tags in the jar, `routes:settlements`,
+`routes:landmarks` and `routes:ignored`, so a data pack can extend or replace any of them.
+
+It sits **below** everything you choose: a row you change in the checklist, and every entry of the
+lists below, beats it. A structure it does not name is decided by the automatic rule. Turn it off with
+**Use Routes' structure list** in [Towns & Settlements](configuration.md#towns-settlements).
 
 ---
 
@@ -95,7 +108,9 @@ Routes first asks "is this a settlement?", and stops at the first rule that answ
 3. **Your settlement exclusions** — anything you wrote with a `-`, or moved off Settlement.
 4. **The village rule** — anything in the `#minecraft:village` tag.
 5. **Your settlement inclusions** — the ids and tags you added.
-6. **The name rule** — an id that calls itself a village, a town or a city.
+6. **[The list Routes ships](#the-list-routes-ships)** — a settlement it names is one, and a landmark
+   or an ignored structure it names is not, whatever its id says.
+7. **The name rule** — an id that calls itself a village, a town or a city.
 
 Anything that is not a settlement then gets the second question — landmark or ignored:
 
@@ -108,8 +123,8 @@ Anything that is not a settlement then gets the second question — landmark or 
 The reason exclusions sit above the village rule is so moving **Villages** off Settlement actually
 works: without that, the village rule would answer first and the change would do nothing.
 
-`/routes structures` writes every structure of your world to `routes_structures.txt`, grouped into
-the three roles, so you can see exactly what these rules decided.
+To see what these rules decided for your world, open the checklist on the create-world screen, or run
+`/routes debug towns` and `/routes debug settlements` in game.
 
 ---
 
@@ -117,7 +132,17 @@ the three roles, so you can see exactly what these rules decided.
 
 A road is planned to a settlement's **street layout**, not to a point — the connector walks the road
 tip to the nearest real street piece and hands over there. A structure with no streets still gets a
-road, it just meets it at the edge.
+road, it just meets it at the edge. A road joins at the **open end of a street**, at the street's own
+height, never at a leftover connector behind a building.
+
+- **Choose where roads come in.** Mark a street end with an open jigsaw named `routes:city_exit` and a
+  road into the town ends on one of those exits — the one facing it most squarely — so it continues
+  your street. Exits no road uses stay ordinary dead-end streets.
+- **Say what kind of place it is.** Tag the structure `routes:settlement/village`,
+  `routes:settlement/town` or `routes:settlement/city` and its name gets that word: *Pallet* becomes
+  *Pallet Town*. A name that already ends in one (*Black City*) is left as it is.
+
+[Cobblemon PokeTowns](../poketowns/index.md) does both.
 
 Structures that only exist in the Nether or the End are never connected: roads are an Overworld
 thing.

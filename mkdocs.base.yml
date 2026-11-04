@@ -102,7 +102,7 @@ extra:
   # (tools/check_mod_versions.py): el numero se sube en el mismo cambio que reescribe las paginas.
   # Una entrada por linea, como estan: el script las lee con una regex.
   mod_versions:
-    routes:         { name: Routes,                         version: 1.2.119, modrinth: PfmV1XPQ }
+    routes:         { name: Routes,                         version: 2.0.85,  modrinth: PfmV1XPQ }
     nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.62, modrinth: wHlszYZN }
     picnic:         { name: Cobblemon Picnic,               version: 5.0.0, modrinth: sfptxo0H }
     cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.1.0, modrinth: JNfSyMuQ }
@@ -141,6 +141,9 @@ extra:
     xaero-minimap:  { name: Xaero's Minimap,             modrinth: xaeros-minimap }
     xaero-worldmap: { name: Xaero's World Map,           modrinth: xaeros-world-map }
     waystones:      { name: Waystones,                   modrinth: waystones }
+    fabric-waystones: { name: Fabric Waystones,          modrinth: fabric-waystones }
+    journeymap:     { name: JourneyMap,                  modrinth: journeymap }
+    picnic:         { name: Cobblemon Picnic,            page: picnic/index.md }
     playerxp:       { name: "Cobblemon: PlayerXP",       modrinth: cobblemon-playerxp }
     cobbledollars:  { name: CobbleDollars,               modrinth: cobbledollars }
     rct:            { name: Radical Cobblemon Trainers,  modrinth: radical-cobblemon-trainers }
@@ -148,12 +151,19 @@ extra:
     pokebelt:       { name: PokeBelt,                    modrinth: pokebelt-cobblemon }
   mod_specs:
     routes:
-      minecraft: "1.21.1"
+      minecraft: "1.21.1–1.21.11 · 26.1–26.3"
       fabric: [fabric-api, architectury, cloth-config]
       neoforge: [architectury, cloth-config]
       optional:
-        - [waystones, each waystone becomes a named town on the road network]
-        - [xaero-minimap, "waypoints, trails and chunk paint on the map"]
+        - [waystones, each waystone takes the name of the town it stands in]
+        - [fabric-waystones, "the same, on Fabric"]
+        - [xaero-minimap, "waypoints and chunk paint on the map"]
+        - [xaero-worldmap, chunk paint on the full-screen map]
+        - [journeymap, "waypoints and chunk paint, as on Xaero's"]
+        - [poketowns, "roads enter its towns by their streets, and the marker sits on the Pokémon Center"]
+        - [picnic, about 3 rest stops in 100 are a picnic table]
+      notes:
+        Java: 21 for Minecraft 1.21.x, 25 for 26.x
       curseforge: 1584243
     nuzlocke:
       minecraft: "1.21.1"

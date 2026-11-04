@@ -2,7 +2,7 @@
 
 Everything is decided **when you create the world** — a dedicated **ROUTES** tab sits next to
 **GAME / WORLD / MORE** on the create-world screen. Outside world creation there's a global config
-screen for defaults.
+screen for defaults, opened from the mod list (Mod Menu on Fabric, the **Config** button on NeoForge).
 
 !!! tip "Looking for the NUZLOCKE tab?"
     The Nuzlocke ruleset, its starter options and the Soul Link toggles belong to
@@ -26,8 +26,7 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 
 | Option | Default | Notes |
 | --- | --- | --- |
-| Generate routes | on | master switch |
-| Native route generation | on | roads are drawn as chunks generate — no walking needed. Off falls back to the classic generator that builds as you explore |
+| Generate routes | on | master switch. Off: no roads planned, and the spawn stays where the game puts it |
 | Connect all structures | off | also connect surface structures that are not towns — never one whose id names a ruin, an ancient thing or a mineshaft |
 | Routes per city | 4 | a **ceiling**, not a count: each town rolls its own up to this, inside the band its size puts it in — a village low, a city high — so the network has hamlets and crossroads |
 | Longest road | 1600 | the farthest two towns can be and still get a direct road |
@@ -38,6 +37,7 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | Option | Default | Notes |
 | --- | --- | --- |
 | Towns & landmarks | automatic | every structure your world has, each set to Settlement, Landmark or Ignored — see [Which structures get roads](which-structures.md) |
+| Use Routes' structure list | on | the hand-reviewed list of towns, landmarks and structures to ignore that ships with Routes (gym entrances included). Your own choices above always beat it — see [Which structures get roads](which-structures.md#the-list-routes-ships) |
 | Settlement allowlist (advanced) | empty | exact structure ids that count as towns. Empty = the automatic rule |
 | Never spawn here | RS ocean village | towns that may never be the world's **first** town. They stay ordinary towns otherwise |
 | Confirm towns exist | on | check the jigsaw really assembles before the network treats a candidate as a town — no towns on the map with an empty field under them |
@@ -69,10 +69,15 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 
 | Option | Default | Notes |
 | --- | --- | --- |
-| Road surface | Random (per route) | each route picks its own material, or fix one for every road |
+| Road surface | Random (by biome) | Random paves each stretch from the palette of the biome it crosses, so a road changes material where the land changes. Pick one material, or press **+ Add material** to mix several: each row has a *Share* slider (70 and 30 pave about 70% and 30%), laid in rounded patches. *Random (by biome)* can be one entry of the mix |
+| Road wear | 0% | 0–30: that share of a road's flat blocks is laid as a worn version of its material — cracked or mossy stone bricks, gravel in cobblestone, grass through a dirt path. Stairs never wear |
+| Bridge deck | Random | Random builds each bridge from the timber of its biome. Pick one plank or a mix: each bridge takes one of them for its whole span, and its stairs follow the same wood |
+| Handrail | Random | Random gives each route one of twelve fences and walls. Pick one or a mix: each route takes one for its whole length |
 | Road lamp posts | Random | Random / On / Off — Random decides per route |
 | Tunnel lighting | Random | Random keeps some tunnels as dark caves |
 | Underwater lighting | Random | a sea lantern in the pillar under each water-crossing marker — Random decides per route |
+| Descriptive route names | on | *Route 3: Steep Pass* on signposts, waypoints and zone banners; off keeps the plain *Route 3*. Roads already numbered keep their name |
+| Descriptive area names | on | *A3-Frostpine* on an area's waypoint and banner; off keeps the plain *Area 3* |
 | Picnic stops | 3 | with [Cobblemon Picnic](../picnic/index.md) installed, the percent of rest stops that are a picnic table instead of a camp. 0 = never, 100 = every stop. Kept per world |
 
 ### World Spawn
@@ -87,7 +92,7 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | Option | Default | Notes |
 | --- | --- | --- |
 | Zone notifications | Toast | how entering a route or an area is announced: Off / Toast / Announcement / Chat |
-| Xaero chunk paint | on | tint chunks on [Xaero's maps](map-integration.md) by category. Needs Xaero's Minimap; inert otherwise |
+| Map chunk paint | on | tint chunks on [Xaero's maps and JourneyMap](map-integration.md) by category; inert without either |
 
 Who stands on the roads and what gets built beside the towns is the Nuzlocke add-on's: **road
 trainers**, the **gyms next to towns** and the **league** are configured on its
@@ -98,10 +103,17 @@ The map **tint intensity** and **colours** (City / Route / Area) are not world-c
 set them in play with [`/routesmap`](map-integration.md#changing-how-it-looks-routesmap), with the map
 in front of you.
 
-!!! info "Saved per world"
+!!! info "Saved per world, and some fixed for good"
     Choices made in these tabs are stored **per world** and only applied to a brand-new world —
-    loading an existing world never gets its rules clobbered. Picking **Hardcore** at world
-    creation auto-enables the full [Nuzlocke rule set](../nuzlocke/commands.md).
+    loading an existing world never gets its rules clobbered. Confirming them says *World rules set: …*.
+
+    The settings that **shape the road network** stay at the value the world was created with: connect
+    all structures, routes per city, longest road, ring roads, the towns & landmarks list and Routes'
+    structure list, the allowlist, confirm towns, bigger towns and the town and city sizes, the four
+    landmark settings, road width, curviness, straight bridges, steepest climb and picnic stops.
+    Changing one mid-world would give the land generated afterwards a second network whose roads stop
+    short of the old ones. `/routes config set` on one of them saves the value for the worlds you create
+    next and says so; `/routes config list` marks them.
 
 ## Global defaults
 
@@ -111,5 +123,5 @@ play with [`/routesmap`](map-integration.md#changing-how-it-looks-routesmap).
 
 ## Commands
 
-The root is `/routes`; `/cobblemonroutes …` is accepted as an alias. The full manual — every
+The root is `/routes` (the old `/cobblemonroutes` alias is gone). The full manual — every
 command, argument, permission and behaviour — lives on [the Commands page](commands.md).
