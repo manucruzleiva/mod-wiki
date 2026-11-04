@@ -6,27 +6,26 @@ to the tier's seat cap. Leftover side cells stay empty.
 
 ## Tiers
 
-| Tier | Spawn cap | Radius | Seats | Fuel / re-roll | Notes |
-|------|:---------:|:------:|:-----:|:--------------:|-------|
-| **Basic** | 5 | 32 | 2 | 7 bread | Entry tier |
-| **Advanced** | 8 | 48 | 3 | 5 bread | Cheaper fuel, bigger |
-| **Expert** | 12 | 64 | 4 | 3 bread | Unlocks the **[Battle Seeker](interactions-and-items.md#battle-seeker)** slot |
-| **Diving** | 12 | 64 | 4 | 3 bread | At home **underwater** — on dry land it floods what is around it |
-| **Hot** | 12 | 64 | 4 | 3 bread | At home in the **Nether** — anywhere else it scorches what is around it |
-| **Strange** | 12 | 64 | 4 | 3 bread | At home in **the End** — anywhere else it will not stay put |
+| Tier | Spawn cap | Radius | Seats | Fuel / re-roll | Basket slot |
+|------|:---------:|:------:|:-----:|:--------------:|-------------|
+| **Basic** | 5 | 32 | 2 | 7 bread | Locked: keeps the basket it was crafted with |
+| **Advanced** | 8 | 48 | 3 | 5 bread | Locked: keeps the basket it was crafted with |
+| **Expert** | 12 | 64 | 4 | 3 bread | **Swappable**: takes every [special basket](#baskets) |
 
 - **Spawn cap** — the maximum Pokémon a single re-roll can spawn (and the GUI slider's max).
 - **Radius** — how far around the table wild Pokémon are despawned and re-rolled.
 - **Seats** — how many benches the footprint provides (seat counts are **fixed per tier**, not
   configurable).
 - **Fuel** — bread consumed per re-roll, cheaper as tiers improve (7 for Basic, 5 for Advanced, 3 for
-  everything above). Bread comes from the table's fuel slot or from a nearby
+  Expert). Bread comes from the table's fuel slot or from a nearby
   **[Picnic Basket](interactions-and-items.md#picnic-baskets)**. The per-tier cost is configurable
   (`/picnic config reroll fuelcost <tier>`).
 
-**Basic → Advanced → Expert** is the ladder. **Diving**, **Hot** and **Strange** are three steps
-sideways off the top of it: identical in what they do, different only in where they can go. See
-[Where each table can go](#where-each-table-can-go).
+**Basic → Advanced → Expert** is the whole ladder. What used to be the Diving, Hot and Strange tables
+are now **baskets** you put in an Expert table: see [Baskets](#baskets).
+
+![Basic, Advanced and Expert side by side](assets/store/gif-tiers.gif)
+
 
 ## Crafting
 
@@ -156,8 +155,8 @@ example.
 The result is drawn as **exactly the items you built it from**: the cloth and the wood of the table
 you used, and **a separate bench per seat** — two benches of different woods come out as two
 different seats. All of it with the mod's **own models and textures**, so no other furniture mod is
-required. The basket stands beside the table in the colour you crafted it with; the pot and campfire
-are consumed but don't change how the table looks.
+required. The basket you crafted it with starts in the table's [basket slot](#baskets) and stands
+beside the table in its colour; the pot and campfire are consumed but don't change how the table looks.
 
 Hold **Shift** over a picnic table in your inventory to read back everything it is made of.
 
@@ -213,71 +212,6 @@ hand over is the bench that seat is made of**. A table can end up with four seat
     | <img class="cr-inline" src="../../assets/items/dining_bench_oak.png" alt=""> Dining Bench — any wood | 1 |
     | **→ <img class="cr-inline" src="../../assets/items/expert_picnic_table.png" alt=""> Expert Picnic Table** | **1** |
 
-=== "Diving"
-
-    <div class="cr-scroll">
-    <div class="cr-craft" title="Shapeless: Expert Picnic Table + Heart of the Sea → Diving Picnic Table">
-      <div class="cr-grid">
-        <div class="cr-slot"><img src="../../assets/items/expert_picnic_table.png" alt="Expert Picnic Table"></div>
-        <div class="cr-slot"><img src="../../assets/items/heart_of_the_sea.png" alt="Heart of the Sea"></div>
-        <div class="cr-slot"></div>
-        <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
-        <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
-      </div>
-      <div class="cr-arrow">➜</div>
-      <div class="cr-result"><img src="../../assets/items/diving_picnic_table.png" alt="Diving Picnic Table"></div>
-    </div>
-    </div>
-
-    | Ingredient | Amount |
-    | --- | :---: |
-    | <img class="cr-inline" src="../../assets/items/expert_picnic_table.png" alt=""> Expert Picnic Table | 1 |
-    | <img class="cr-inline" src="../../assets/items/heart_of_the_sea.png" alt=""> Heart of the Sea | 1 |
-    | **→ <img class="cr-inline" src="../../assets/items/diving_picnic_table.png" alt=""> Diving Picnic Table** | **1** |
-
-=== "Hot"
-
-    <div class="cr-scroll">
-    <div class="cr-craft" title="Shapeless: Expert Picnic Table + Netherite Ingot → Hot Picnic Table">
-      <div class="cr-grid">
-        <div class="cr-slot"><img src="../../assets/items/expert_picnic_table.png" alt="Expert Picnic Table"></div>
-        <div class="cr-slot"><img src="../../assets/items/netherite_ingot.png" alt="Netherite Ingot"></div>
-        <div class="cr-slot"></div>
-        <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
-        <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
-      </div>
-      <div class="cr-arrow">➜</div>
-      <div class="cr-result"><img src="../../assets/items/hot_picnic_table.png" alt="Hot Picnic Table"></div>
-    </div>
-    </div>
-
-    | Ingredient | Amount |
-    | --- | :---: |
-    | <img class="cr-inline" src="../../assets/items/expert_picnic_table.png" alt=""> Expert Picnic Table | 1 |
-    | <img class="cr-inline" src="../../assets/items/netherite_ingot.png" alt=""> Netherite Ingot | 1 |
-    | **→ <img class="cr-inline" src="../../assets/items/hot_picnic_table.png" alt=""> Hot Picnic Table** | **1** |
-
-=== "Strange"
-
-    <div class="cr-scroll">
-    <div class="cr-craft" title="Shapeless: Expert Picnic Table + Eye of Ender → Strange Picnic Table">
-      <div class="cr-grid">
-        <div class="cr-slot"><img src="../../assets/items/expert_picnic_table.png" alt="Expert Picnic Table"></div>
-        <div class="cr-slot"><img src="../../assets/items/ender_eye.png" alt="Eye of Ender"></div>
-        <div class="cr-slot"></div>
-        <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
-        <div class="cr-slot"></div><div class="cr-slot"></div><div class="cr-slot"></div>
-      </div>
-      <div class="cr-arrow">➜</div>
-      <div class="cr-result"><img src="../../assets/items/strange_picnic_table.png" alt="Strange Picnic Table"></div>
-    </div>
-    </div>
-
-    | Ingredient | Amount |
-    | --- | :---: |
-    | <img class="cr-inline" src="../../assets/items/expert_picnic_table.png" alt=""> Expert Picnic Table | 1 |
-    | <img class="cr-inline" src="../../assets/items/ender_eye.png" alt=""> Eye of Ender | 1 |
-    | **→ <img class="cr-inline" src="../../assets/items/strange_picnic_table.png" alt=""> Strange Picnic Table** | **1** |
 
 ## Dyeing
 
@@ -288,7 +222,7 @@ A table that is already placed can be **recoloured without picking it up**. Hold
   **two tables side by side**, and only the one you clicked changes — the two can wear different
   colours.
 - **The table's basket** repaints the basket, in any of the **7 basket colours**: white, black,
-  blue, green, pink, red and yellow. Any other dye does nothing to it.
+  blue, green, pink, red and yellow. A special basket keeps its emblem. Any other dye does nothing to it.
 
 **The wood never takes a dye.** The benches and the frame keep the woods the table was crafted
 with, and clicking them with a dye does nothing.
@@ -298,50 +232,107 @@ Sneaking is what makes it a dye: without it, the click does what it always does.
 
 A loose [Picnic Basket](interactions-and-items.md#picnic-baskets) can be dyed the same way.
 
+## Baskets
+
+Every table has a **basket slot** next to the bread in its screen, and a new table starts with the
+basket it was crafted with. What sits in that slot decides what the table does.
+
+![Swapping the basket on an Expert table](assets/store/gif-basket-swap.gif)
+
+- **On an Expert table the basket swaps.** Click a basket onto the slot and the old one comes back to
+  you. A basket never comes out on its own, only swapped for another one.
+- **On Basic and Advanced tables the basket is locked** — a padlock on the slot. It stays the plain
+  basket the table was crafted with, so the special baskets are an Expert table's business.
+
+![The locked basket slot of a Basic table](assets/store/menu-locked-basket.jpg)
+
+### The special baskets
+
+Each one is **any Picnic Basket plus one ingredient**, shapeless. It keeps the basket's **apricorn
+colour** and gets an emblem on the front; the basket drawn on the table is the one in the slot,
+colour and emblem, and it gives off a few particles of its kind.
+
+| Basket | Recipe | In an Expert table |
+|---|---|---|
+| **Water Basket** 💧 | basket + heart of the sea | The table is [at home underwater](#where-each-table-can-go) |
+| **Fire Basket** 🔥 | basket + fire charge | The table is [at home in the Nether](#where-each-table-can-go) |
+| **Strange Basket** 👁️ | basket + eye of ender | The table is [at home in the End](#where-each-table-can-go) |
+| **Alpha Basket** | basket + ghast tear | Every Pokémon a re-roll spawns has a **10%** chance to be an **alpha**, but only **half** the batch spawns (rounded up) |
+| **Combat Basket** ⚔️ | basket + iron sword | Every re-roll also summons an **RCT trainer** to battle — see [Combat Basket](interactions-and-items.md#combat-basket) |
+
+![Water, Fire, Strange, Alpha and Combat baskets](assets/store/gif-special-baskets.gif)
+
+**Alpha Basket.** The table screen shows the smaller batch in gold, and alphas turn up in the re-roll
+log and in `/picnic stats`. An operator changes the chance and the batch with
+[`/picnic config alphaboost`](commands.md#features-and-their-settings).
+
+![An Alpha Basket re-roll](assets/store/gif-alpha-basket.gif)
+
+Placed on its own, a special basket keeps its emblem and drops back as the same basket. It still
+stores bread like any [Picnic Basket](interactions-and-items.md#picnic-baskets).
+
 ## Where each table can go
 
 **Any table can be placed in any dimension.** Where a table goes is your business — what the place
 does to it once it is standing there is the dimension's.
 
-Each themed table belongs somewhere, and **carries that somewhere with it**. At home it is simply a
-table. Anywhere else it inflicts on its surroundings exactly what an ordinary table suffers where
-that home is native: the Hot table scorches, the Strange one will not sit still, the Diving one
+A **Water, Fire or Strange basket** makes an Expert table belong somewhere, and **carry that somewhere
+with it**. At home it is simply a table. Anywhere else it inflicts on its surroundings exactly what an
+ordinary table suffers where that home is native: fire scorches, strange will not sit still, water
 floods.
 
 | Table | Overworld | Nether | The End |
 |---|:---:|:---:|:---:|
-| **Basic / Advanced / Expert** | ✅ | ⚠️ catches fire | ⚠️ drifts away |
-| **Diving** | 🌊 floods around it | 🔥 **burns at once** | 🌊 floods · ⚠️ drifts away |
-| **Hot** | 🔥 scorches around it | ✅ **at home** | 🔥 scorches · ⚠️ drifts away |
-| **Strange** | ⚠️ drifts away | ⚠️ drifts · catches fire | ✅ **at home** |
+| **Any table without a dimension basket** | ✅ | ⚠️ catches fire | ⚠️ drifts away |
+| **Expert + Water Basket** | 🌊 floods on each re-roll (on dry land) | 🔥 **burns at once** | 🌊 floods · ⚠️ drifts away |
+| **Expert + Fire Basket** | 🔥 scorches on each re-roll | ✅ **at home** | 🔥 scorches · ⚠️ drifts away |
+| **Expert + Strange Basket** | ⚠️ drifts away | ⚠️ drifts · catches fire | ✅ **at home** |
 
-🔥 **An ordinary table burns in the Nether.** Leave any table but the **Hot** one down there and it
+🔥 **An ordinary table burns in the Nether.** Leave any table without a Fire basket down there and it
 has a **30% chance every second** of a flame taking hold on it. Nothing is destroyed outright — it
-burns from there under the normal fire rules, so you can still put it out. The **Diving** table is
-the exception in the other direction: a tableful of water in that heat goes up **the moment it
-arrives**. To picnic in the Nether properly, bring the Hot table: nothing sets it alight, anywhere.
+burns from there under the normal fire rules, so you can still put it out. A **Water basket** is the
+exception in the other direction: a tableful of water in that heat goes up **the moment it arrives**.
+To picnic in the Nether properly, bring a Fire basket: nothing sets that table alight, anywhere.
 
-🌡️ **The Hot table takes the Nether with it.** Standing anywhere else, once a second it sets a flame
-on the ground within **3 blocks** and burns everything in that radius — **including whoever is
-sitting at it**. It can also be sunk into lava. It is a table for the Nether, and taking it home is
-supposed to be a bad idea.
+![A picnic in the Nether](assets/store/gif-nether-picnic.gif)
 
-🌊 **The Diving table takes the water with it.** Placed on dry land it fills the ring of blocks
-around itself with water and lets it run downhill from there; put it back underwater and it just
-sits there, because there is nothing left to spill.
+🌡️ **The Fire basket takes the Nether with it.** Anywhere else, **each re-roll** scorches the ground
+around the table: its heat reaches **6 blocks** out, lights many blocks at once and sets every
+creature in reach on fire for **8 seconds** — **including whoever is sitting at it**. It is a basket
+for the Nether, and taking it home is supposed to be a bad idea.
 
-🌌 **The End will not hold a picnic still, and the Strange table will not sit still anywhere else.**
-Sit down at any table but the **Strange** one out there,
-or try to re-roll at it, and the whole table is **somewhere else within 24 blocks** before the click
-lands — leaving you standing where it used to be. Nothing is lost: the bread in the slot, the cloth
-colour and the woods it was crafted with, and your Pokémon-per-re-roll setting all travel with it. A
-table with nowhere to go — walled in, or ringed by void — stays put and works normally. To picnic in
-the End properly, bring the Strange table: it never drifts.
+![A Fire basket re-roll away from the Nether](assets/store/gif-fire-basket.gif)
+
+🌊 **The Water basket takes the water with it.** Out of the water, **each re-roll** flushes the ring of
+blocks around the table with **flowing water** (never the table itself). Nothing feeds it, so it
+drains on its own and leaves the floor clean. Underwater it just sits there, because there is nothing
+left to spill. **Expert tables can be placed in water**, so you can set one on the sea floor and put
+the Water basket in afterwards; Basic and Advanced tables still refuse water.
+
+![A Water basket re-roll underwater](assets/store/gif-underwater-reroll.gif)
+
+🌌 **The End will not hold a picnic still, and the Strange basket will not sit still anywhere else.**
+Sit down at any table without a Strange basket out there, or try to re-roll at it, and the whole
+table is **somewhere else within 24 blocks** before the click lands — leaving you standing where it
+used to be. Nothing is lost: the bread and the basket, the cloth colour and the woods it was crafted
+with, and your Pokémon-per-re-roll setting all travel with it. A table with nowhere to go — walled
+in, or ringed by void — stays put and works normally. To picnic in the End properly, bring a Strange
+basket: that table never drifts.
+
+![A Strange basket table drifting away from the End](assets/store/gif-strange-drift.gif)
 
 A server that wants none of this switches it all off with `/picnic config hazards enabled false`. Every
 table is then plain furniture, wherever it stands.
 
+### Diving, Hot and Strange tables from before 5.0.0
 
+Those three tables can no longer be crafted and are gone from the creative tab. One already placed in
+a world turns into an **Expert table with the matching Water, Fire or Strange basket** in its slot the
+first time it loads, keeping its bread and its look. If it already held a basket of another kind,
+that basket stays and the dimension basket drops beside the table.
+
+Water, Fire and Strange baskets from before 5.0.0 (one colour each) turn into the coloured basket
+with that emblem by themselves.
 
 ## Placement & orientation
 
@@ -353,3 +344,7 @@ needs its own footprint, since overlapping structures interfere with each other'
 **To pick it back up, break a bench.** Table cells take no mining damage — that's what keeps a re-roll
 from destroying the table you're clicking. Breaking any bench takes the whole structure and returns
 the table item.
+
+**The basket stays inside it.** The table item that drops carries its basket, kind included, and
+everything the table was built from, so placing it again brings both back. The bread in the slot
+spills, and so does a leftover Battle Seeker. Tables from the creative tab come with a red basket.

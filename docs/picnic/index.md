@@ -31,12 +31,14 @@ battles.
 
 - :material-dice-multiple: **[Spawn re-rolling](spawn-rerolling.md)** — clear the wild Pokémon around
   you and roll a fresh batch, on demand.
-- :material-table-chair: **[Six table tiers](picnic-tables.md)** — three you upgrade through, and
-  three tied to a place: underwater, the Nether, the End.
+- :material-table-chair: **[Three table tiers](picnic-tables.md)** — Basic, Advanced and Expert,
+  each bigger and cheaper to re-roll than the last.
+- :material-basket: **[Special baskets](picnic-tables.md#baskets)** — put one in an Expert table to
+  picnic underwater, in the Nether or the End, hunt alphas, or summon trainers.
 - :material-star-four-points: **[Shiny aura](shiny-aura.md)** — sit together and everyone's shiny
   odds go up. A full table doubles them.
 - :material-paw: **[Items & care](interactions-and-items.md)** — wash and play with your Pokémon,
-  store bread in baskets, summon trainers to battle.
+  and store bread in baskets.
 - :material-lifebuoy: **[Troubleshooting](troubleshooting.md)** — a re-roll that spawned nothing,
   fliers that vanish, and what the game's messages mean.
 - :material-console: **[Commands & config](commands.md)** — tune every number in game, and read the

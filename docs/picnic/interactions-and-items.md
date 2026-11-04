@@ -163,6 +163,8 @@ The apricorn and the basket cycle together: **whichever colour you put in is the
 - **Dye** a placed basket with **sneak + right-click**, holding a dye in one of the seven basket
   colours. The bread inside stays where it is. A table's own basket takes a dye too — see
   [Dyeing](picnic-tables.md#dyeing).
+- **Craft it into a special basket** — Water, Fire, Strange, Alpha or Combat — that changes what an
+  Expert table does. See [Baskets](picnic-tables.md#baskets).
 
 ## `poke_snack` bias
 
@@ -174,25 +176,28 @@ table when you re-roll:
 
 This lets you steer a re-roll toward the kinds of Pokémon a given snack attracts.
 
-## Battle Seeker
+## Combat Basket
 
-Put a **Battle Seeker** in a **Expert** table's fuel slot and every re-roll also **summons an RCT
-trainer** to battle. It is **never consumed** — it stays in the slot, so you can keep challenging
-trainers for as long as you like. Only the Expert tier exposes that slot; every other tier uses it
-for bread.
+Put a **Combat Basket** (any Picnic Basket + iron sword) in an **Expert** table's
+[basket slot](picnic-tables.md#baskets) and every re-roll also **summons an RCT trainer** to battle. The
+basket is **never consumed**, so you can keep challenging trainers for as long as it stays in the slot.
 
-It has **no recipe**. It's rare loot from world chests, so keep looting structures.
+![A Combat Basket re-roll summoning a trainer](assets/store/gif-combat-basket.gif)
 
-The trainer's level is matched to your party:
+The trainer's level is matched to your party. The settings still live under `battleseeker`, the name
+of the item the Combat Basket replaced:
 
 | Setting | Meaning |
 |---------|---------|
-| `/picnic config battleseeker matchlevel <true\|false>` | Scale the trainer to your party's level. |
-| `/picnic config battleseeker levelgap <int>` | Level offset on top of the match, to make them tougher or softer. |
-| `/picnic config battleseeker enabled <true\|false>` | Off locks the seeker slot and summons nobody; chests stop holding one after the next `/reload`. |
+| `/picnic config battleseeker matchlevel <true\|false>` | Scale the trainer to your party's level. *Default on.* |
+| `/picnic config battleseeker levelgap <int>` | Level offset on top of the match, to make them tougher or softer. *Default 8.* |
+| `/picnic config battleseeker enabled <true\|false>` | Off: a table with a Combat Basket summons nobody. *Default on.* |
 
-⚠️ The summon needs **Radical Cobblemon Trainers (RCT)** installed. Without it the Battle Seeker
+⚠️ The summon needs **Radical Cobblemon Trainers (RCT)** installed. Without it the Combat Basket
 simply does nothing and the rest of the table works normally.
+
+**The Battle Seeker is gone.** It no longer turns up in chests and no longer does anything. One left
+in a table from before 5.0.0 shows in its old slot until you take it out.
 
 ## Colours, woods and fire
 
