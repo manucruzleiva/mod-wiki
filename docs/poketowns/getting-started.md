@@ -12,7 +12,7 @@ PokeTowns targets **Minecraft 1.21.1** on **Fabric** and **NeoForge**.
 | Fabric Language Kotlin **or** Kotlin for Forge | any / 5.10+ | the one for your loader |
 | Architectury API | any | both loaders |
 | [Cobblemon](https://modrinth.com/mod/cobblemon) | **1.8.0 or newer** | Cobblemon 1.7.x is not supported |
-| [CobbleDollars](https://modrinth.com/mod/cobbledollars) | any | the Poké Mart sells through it |
+| [CobbleDollars](https://modrinth.com/mod/cobbledollars) | any | the Poké Mart clerk sells through it |
 | [Waystones](https://modrinth.com/mod/waystones) | any | every Pokémon Center holds a waystone. Waystones brings **Balm** as its own requirement |
 
 Optional: **[Routes](../routes/index.md)** connects PokeTowns settlements to its road network.
