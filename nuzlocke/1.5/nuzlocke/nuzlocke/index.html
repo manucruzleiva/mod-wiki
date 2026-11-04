@@ -556,6 +556,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#in-the-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In the PC
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -916,6 +927,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#in-the-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        In the PC
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1084,7 +1106,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="wHlszYZN" data-version="1.5.38">Documented against Cobblemon Nuzlocke & Soul Link 1.5.38</p>
+    <p class="wiki-mod-version" data-modrinth="wHlszYZN" data-version="1.5.62">Documented against Cobblemon Nuzlocke & Soul Link 1.5.62</p>
   
                   
 
@@ -1132,7 +1154,7 @@ ruleset is on, the world is set to <strong>Hard</strong> every time it starts.</
 </tr>
 <tr>
 <td>✍️ <strong>Mandatory nicknames</strong></td>
-<td>A blocking screen on every Pokémon you obtain, showing its sprite, gender, ability and moves — so you name it knowing what it is. Leaving the game with the screen open brings it back on your next login, and you keep the Pokémon. Your starter is the exception: leave before naming it and the pick is undone, so you choose again from the same three.</td>
+<td>A blocking screen on every Pokémon you obtain, laid out like its summary: the Pokémon animated in a portrait, its species, level, gender, types and ability, and its four moves as cards in their type's colour, with their PP — so you name it knowing what it is. The name is <strong>final</strong>: renaming it from the Summary or the PC is refused. Leaving the game with the screen open brings it back on your next login, and you keep the Pokémon. Your starter is the exception: leave before naming it and the pick is undone, so you choose again from the same three.</td>
 </tr>
 <tr>
 <td>✨ <strong>Shiny clause</strong></td>
@@ -1181,7 +1203,7 @@ creation, under <strong>Capture zones are</strong>:</p>
 <tbody>
 <tr>
 <td><strong>Geography</strong></td>
-<td>The world Routes draws: every <strong>numbered Area</strong>, every <strong>named route</strong> and every <strong>town</strong> is its own zone. A route's zone reaches one chunk past the road, so a Pokémon caught just off it counts for the route; where that strip touches two routes, the lower route number takes it. Everything not enclosed in an Area is one shared <strong>Wild</strong> zone, one per dimension — it is in your log from the first minute, and early on it is most of where you can catch, so growing the road network is what earns you new zones beside it.</td>
+<td>The world Routes draws: every <strong>numbered Area</strong>, every <strong>named route</strong> and every <strong>town</strong> is its own zone. A route's zone reaches one chunk past the road, so a Pokémon caught just off it counts for the route; where that strip touches two routes, the lower route number takes it. In the overworld, everything not enclosed in an Area is one shared <strong>Wild</strong> zone — it is in your log from the first minute, and early on it is most of where you can catch, so growing the road network is what earns you new zones beside it. In any other dimension (the Nether, the End, CobbleSafari's Safari) <strong>every biome is its own zone</strong>, so each type area of the Safari grants its own first encounter.</td>
 </tr>
 <tr>
 <td><strong>Biome</strong></td>
@@ -1208,14 +1230,34 @@ they gave it, the one-catch rule covers that whole zone, and the log lists it un
 Resizing or renaming a zone keeps the catch already made in it. Deleting one hands its ground back to
 the zones the generator drew.</p>
 <h3 id="the-log">The log<a class="headerlink" href="#the-log" title="Permanent link">&para;</a></h3>
-<p>Press <strong>I</strong> (rebindable) for the run's record: every zone you have discovered, what you caught
-there, and whether it is still alive. Four chips across the top — <strong>Alive</strong>, <strong>Dead</strong>, <strong>Waiting</strong>,
-<strong>Empty</strong> — each say how many lines they stand for and turn that group off, so a long run can be read
-down to just the part you are after. Most of a long log is <strong>Empty</strong>: zones you have found and not yet
-had an encounter in. A second row filters by <strong>kind</strong> of zone — towns, routes, areas, sites, the Wild
-and your starter — and the two work together, so "the towns I have not caught in yet" is two clicks. Clicking a Pokémon's sprite opens its summary; one that is dead, released or in the PC says so instead. Your <strong>starter</strong> is in it, and so is anyone's
-<a href="#gym-leader-challenge">Gym Leader Challenge</a> type. In a <a href="../soul-link/">Soul Link</a> it becomes the
-link's log.</p>
+<p>The run's record is a <strong>Log</strong> tab in Cobblemon's Pokémon summary, on the tab strip next to Info,
+Moves, Stats and Marks. Press <strong>I</strong> (rebindable) or run <code>/nuzlocke log</code> and your party's summary opens
+on it.</p>
+<ul>
+<li><strong>Every zone you have discovered is a slot</strong>, coloured by what happened there: grey while the
+  Pokémon you caught there is alive, Cobblemon's fainted red with the Pokémon drawn see-through once
+  it has died, and a dark empty slot for a zone with no encounter yet. The zone you are standing in
+  has the PC's pointer beside it.</li>
+<li><strong>The filters are a column of chips</strong> on the left. One group is by state — <strong>Alive</strong>, <strong>Dead</strong>,
+  <strong>Waiting</strong>, <strong>Empty</strong> — and the other by <strong>kind</strong> of zone: towns, routes, areas, sites, the Wild
+  and your starter. Each chip shows how many rows it would show with the other filters as they are,
+  and the two groups work together, so "the towns I have not caught in yet" is two clicks. Most of a
+  long log is <strong>Empty</strong>: zones you have found and not yet had an encounter in.</li>
+<li><strong>From a Pokémon to its row in one click.</strong> Switching to the Log tab from a Pokémon's summary
+  lands on that Pokémon's row, scrolled into view and marked with the pointer; if a chip was hiding
+  it, that chip is turned back on.</li>
+<li><strong>And back.</strong> Clicking a party Pokémon in the log takes you to its Info page; one that is dead,
+  released or in the PC says so instead.</li>
+</ul>
+<p>Your <strong>starter</strong> is in it, and so is anyone's <a href="#gym-leader-challenge">Gym Leader Challenge</a> type. In a
+<a href="../soul-link/">Soul Link</a> every member's encounter in a zone is a slot of its own, and a second
+<strong>Soul Link</strong> tab sits after the log.</p>
+<h3 id="in-the-pc">In the PC<a class="headerlink" href="#in-the-pc" title="Permanent link">&para;</a></h3>
+<p>A dead Pokémon's PC slot has the same fainted-red frame behind its see-through sprite, in a box, in
+the party column and while you carry it, so the PC reads the same way the log does. Cobblemon's
+wallpaper picker also offers a <strong>cemetery</strong> — a moonlit graveyard with Poké Ball headstones — to
+dress the box where your fallen rest, with the same alternate and glow versions as Cobblemon's own
+wallpapers.</p>
 <h2 id="gym-leader-challenge">🎓 Gym Leader Challenge<a class="headerlink" href="#gym-leader-challenge" title="Permanent link">&para;</a></h2>
 <p>A monotype run: <strong>one elemental type for the whole run</strong>. Your starters are drawn from it, and you may
 only enter a battle while every Pokémon on your team carries it. It sits on top of the Nuzlocke rules
@@ -1224,7 +1266,7 @@ and is optional for each player.</p>
 <ol>
 <li><strong>You are asked when you go to pick your starter</strong>, not the moment you spawn. Each player answers
    for themselves.</li>
-<li><strong>Every type on the server is a tile</strong>, in that type's colour. Clicking one only marks it; the run
+<li><strong>Every type on the server is a tile</strong>, in that type's colour, on a screen drawn in Cobblemon's own style. Clicking one only marks it; the run
    is decided by the <strong>Lock in</strong> button, so a misclick cannot choose for you.</li>
 <li><strong>Play without the challenge</strong> declines it in one click: no type lock, normal starters, any team.
    You are not asked again this run.</li>
@@ -1256,7 +1298,7 @@ everyone — see <a href="../commands/#gym-leader-challenge">Gym Leader Challeng
 </tr>
 <tr>
 <td>🎯 <strong>Catches</strong></td>
-<td>An off-type catch goes straight to the PC, and <strong>it still spends the zone</strong>. The challenge decides what you may <em>use</em>, not how many tries you get, so you cannot keep throwing balls in one place until your type turns up.</td>
+<td>An off-type catch goes straight to the PC, and <strong>it still counts as that zone's encounter</strong> — the message says so. The challenge decides what you may <em>use</em>, not how many tries you get, so you cannot keep throwing balls in one place until your type turns up.</td>
 </tr>
 <tr>
 <td>📖 <strong>The log</strong></td>

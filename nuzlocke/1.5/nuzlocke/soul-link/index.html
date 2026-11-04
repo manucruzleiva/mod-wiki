@@ -623,10 +623,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-soul-link-log" class="md-nav__link">
+  <a href="#the-soul-link-tab" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The Soul Link log
+        The Soul Link tab
       
     </span>
   </a>
@@ -860,10 +860,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-soul-link-log" class="md-nav__link">
+  <a href="#the-soul-link-tab" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The Soul Link log
+        The Soul Link tab
       
     </span>
   </a>
@@ -894,7 +894,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="wHlszYZN" data-version="1.5.38">Documented against Cobblemon Nuzlocke & Soul Link 1.5.38</p>
+    <p class="wiki-mod-version" data-modrinth="wHlszYZN" data-version="1.5.62">Documented against Cobblemon Nuzlocke & Soul Link 1.5.62</p>
   
                   
 
@@ -931,9 +931,20 @@ anything else you did not catch in the world share that same zone.</p>
 <h2 id="signing">Signing<a class="headerlink" href="#signing" title="Permanent link">&para;</a></h2>
 <p>Right-click a player and pick <strong>Soul Link</strong> from Cobblemon's interaction wheel, next to Trade and
 Duel — or type <code>/nuzlocke soullink link &lt;player&gt;</code>.</p>
-<p>Being offered a link is <strong>a screen you have to answer</strong>: Accept or Decline, no escape key, and it
-comes back if you die or log out while it is open. Agreeing to a Soul Link means agreeing that
-somebody else's mistakes can end your run, so it is not a line of chat that scrolls away.</p>
+<p>Being offered a link is <strong>a screen you have to answer</strong>: a dialogue box at the bottom of the screen
+with the face of the player who sent it, Accept or Decline, no escape key, and it comes back if you
+die or log out while it is open. Agreeing to a Soul Link means agreeing that somebody else's mistakes
+can end your run, so it is not a line of chat that scrolls away.</p>
+<ul>
+<li><strong>It counts down.</strong> A bar under the box drains with "Expires in m:ss" and turns red in the last 15
+  seconds. When the offer is gone — it expired, someone declined, or the sender left — the box closes
+  itself.</li>
+<li><strong>The sender sees every answer as it comes in.</strong> A card at the top right lists each invited player
+  with their face and whether they are pending, have accepted or have declined, over the same draining
+  bar. It never stops you playing, players who have already accepted see it too, and it moves down out
+  of the way of your potion effect icons. When the offer ends it shows <strong>Linked</strong> in green, or who
+  declined, or that it expired, in red, for three seconds.</li>
+</ul>
 <p>Signing binds <strong>what you already own</strong>, matched up by zone on the spot. Anything caught somewhere
 your partner has not been simply waits.</p>
 <h3 id="bringing-in-a-third-and-a-fourth">Bringing in a third and a fourth<a class="headerlink" href="#bringing-in-a-third-and-a-fourth" title="Permanent link">&para;</a></h3>
@@ -953,36 +964,24 @@ because somebody else signed.</p>
   contract. Your Pokémon leave every bind they were in and the others keep theirs; a bind left with
   only one member dissolves, so its Pokémon is free rather than pending.</li>
 </ul>
-<h2 id="the-soul-link-log">The Soul Link log<a class="headerlink" href="#the-soul-link-log" title="Permanent link">&para;</a></h2>
-<p>While you are in a link, the <strong>I</strong> key opens the link's log instead of your own. It is the same
-screen with the truth added:</p>
-<table>
-<thead>
-<tr>
-<th>It shows</th>
-<th>Why it matters</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Every member's zones, labelled with whose they are</td>
-<td>one member spending a zone changes what the others can still do</td>
-</tr>
-<tr>
-<td>Your partner's Pokémon in full</td>
-<td>species, nickname, and whether it is alive, dead or gone</td>
-</tr>
-<tr>
-<td>Which binds are <strong>waiting</strong></td>
-<td>those are the Pokémon that cannot battle yet</td>
-</tr>
-<tr>
-<td>Who is on a <a href="../nuzlocke/#gym-leader-challenge">Gym Leader Challenge</a>, and on what type</td>
-<td>what your partner is even allowed to use</td>
-</tr>
-</tbody>
-</table>
-<p>Partners who are offline still appear, showing the last state the run recorded.</p>
+<h2 id="the-soul-link-tab">The Soul Link tab<a class="headerlink" href="#the-soul-link-tab" title="Permanent link">&para;</a></h2>
+<p>While you are in a link, Cobblemon's Pokémon summary gets a <strong>Soul Link</strong> tab right after the
+<a href="../nuzlocke/#the-log">Log</a> tab, and <code>/nuzlocke soullink summary</code> opens your party's summary on it.
+Outside a link the tab is not there.</p>
+<ul>
+<li><strong>Every soul is a row of slots joined by a chain.</strong> Each player has a column, yours first and
+  framed in white, so your side of every soul is always in the same place.</li>
+<li><strong>A living soul</strong> has grey slots and the chain between them holds. <strong>A lost one</strong> turns
+  Cobblemon's fainted red, its Pokémon go see-through, and the chain is broken.</li>
+<li><strong>A soul still waiting on a partner</strong> shows who owes the catch and where: a dashed, empty slot with
+  their name and the zone, behind a faded chain. Those are the Pokémon that cannot battle yet.</li>
+<li><strong>Hover a Pokémon</strong> to read its full name, level, HP and owner. Partners who are offline still
+  appear, showing the last state the run recorded.</li>
+</ul>
+<p>The <a href="../nuzlocke/#the-log">Log</a> tab becomes the link's log too: every member's encounter in a zone is a
+slot of its own, so a broken soul shows a red slot in its line, and it shows who is on a
+<a href="../nuzlocke/#gym-leader-challenge">Gym Leader Challenge</a>, and on what type, for every partner who is
+online.</p>
 <h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
