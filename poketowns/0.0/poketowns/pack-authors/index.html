@@ -616,6 +616,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#level-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level sites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gyms" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -808,6 +819,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#level-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Level sites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gyms" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -864,7 +886,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="MjGKcXBb" data-version="0.0.11">Documented against Cobblemon PokeTowns 0.0.11</p>
+    <p class="wiki-mod-version" data-modrinth="MjGKcXBb" data-version="0.0.17">Documented against Cobblemon PokeTowns 0.0.17</p>
   
                   
 
@@ -899,19 +921,29 @@
 <td>the gym Town</td>
 </tr>
 <tr>
+<td><code>cobblemon_poketowns:city</code></td>
+<td>structure</td>
+<td>the City</td>
+</tr>
+<tr>
 <td><code>cobblemon_poketowns:settlements</code></td>
 <td>structure set</td>
-<td>all three, at weights 60, 21 and 9</td>
+<td>all four, at weights 60, 21, 9 and 10</td>
 </tr>
 <tr>
 <td><code>#minecraft:village</code></td>
 <td>structure tag</td>
-<td>PokeTowns adds its three structures, so anything that looks for villages finds them</td>
+<td>PokeTowns adds its four structures, so anything that looks for villages finds them</td>
 </tr>
 <tr>
 <td><code>#cobblemon_poketowns:has_gym</code></td>
 <td>structure tag</td>
-<td>every settlement with a gym; today <code>town_gym</code></td>
+<td>every settlement with a gym: <code>town_gym</code> and <code>city</code></td>
+</tr>
+<tr>
+<td><code>#routes:settlement/village</code>, <code>/town</code>, <code>/city</code></td>
+<td>structure tags</td>
+<td>which archetype each structure is, for Routes: <code>village</code>; <code>town</code> and <code>town_gym</code>; <code>city</code></td>
 </tr>
 <tr>
 <td><code>#cobblemon_poketowns:has_structure/settlement</code></td>
@@ -925,12 +957,27 @@
 <code>random_spread</code> in every way (<code>/locate</code>, explorer maps and Routes treat it as one), except that its
 spacing and separation come from the world, as chosen on the PokeTowns tab, and not from the JSON.
 A datapack that overrides the set keeps the per-world values as long as it keeps this placement type.</p>
+<p>It also takes a <code>clearance</code> field, in chunks (5 in PokeTowns' set): a settlement does not start within
+that many chunks of a chunk where another surface structure, from any random-spread set, would start
+in a biome it accepts. <code>0</code> turns the check off.</p>
+<h2 id="level-sites">Level sites<a class="headerlink" href="#level-sites" title="Permanent link">&para;</a></h2>
+<p>The four structures use the type <code>cobblemon_poketowns:level_site</code>: a vanilla <code>jigsaw</code> structure with
+two more fields. Before it plans, it samples the surface within <code>site_radius</code> blocks of the start
+(32 for the Village, 48 for the others) and gives the start up when the ground rises or falls more
+than <code>max_site_rise</code> blocks (6). Streets, crossings and street ends are <code>rigid</code>, and every structure
+uses <code>terrain_adaptation: beard_box</code>, so the street network stays level with the plaza.</p>
+<p>Every street end has an open <code>routes:city_exit</code> jigsaw on its outer edge, facing out, with the pool
+<code>minecraft:empty</code>: nothing docks to it, and Routes reads it as the place where a road enters.</p>
 <h2 id="gyms">Gyms<a class="headerlink" href="#gyms" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Every gym piece's template id starts with <code>cobblemon_poketowns:gym/</code>. A mod can tell it is inside a
   gym by that prefix.</li>
-<li>Gym Towns pick from the pool <code>cobblemon_poketowns:town/gyms</code>. When none of its gyms can be placed,
+<li>Gym Towns and Cities pick from the pool <code>cobblemon_poketowns:town/gyms</code>. When none of its gyms can be placed,
   the pool falls back to <code>cobblemon_poketowns:town/gym_fallback</code>, the battle pad.</li>
+<li>Every gym piece holds eight named data markers, each with the way its NPC faces, for gym mods to
+  read: <code>pokegyms:manager</code>, <code>pokegyms:leader</code>, <code>pokegyms:disciple_1</code> to <code>pokegyms:disciple_3</code>,
+  <code>pokegyms:challenger</code>, <code>pokegyms:leader_pokemon</code> and <code>pokegyms:challenger_pokemon</code>. The challenger
+  and the two Pokémon marks face the leader along the arena.</li>
 </ul>
 <h2 id="docking-another-packs-building">Docking another pack's building<a class="headerlink" href="#docking-another-packs-building" title="Permanent link">&para;</a></h2>
 <p><code>cobblemon_poketowns:docked</code> is a template pool element that places a building from <strong>another</strong>

@@ -820,15 +820,15 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="MjGKcXBb" data-version="0.0.11">Documented against Cobblemon PokeTowns 0.0.11</p>
+    <p class="wiki-mod-version" data-modrinth="MjGKcXBb" data-version="0.0.17">Documented against Cobblemon PokeTowns 0.0.17</p>
   
                   
 
 
 
 <h1 id="settlements">Settlements<a class="headerlink" href="#settlements" title="Permanent link">&para;</a></h1>
-<p>PokeTowns adds three kinds of settlement. Each one grows from a plaza with a Pokémon Center, and the
-bigger ones add a Poké Mart and a gym.</p>
+<p>PokeTowns adds four kinds of settlement. Each one grows from a plaza with a Pokémon Center, and the
+bigger ones add a Poké Mart, a stadium and a gym.</p>
 <table>
 <thead>
 <tr>
@@ -841,14 +841,14 @@ bigger ones add a Poké Mart and a gym.</p>
 <tbody>
 <tr>
 <td><strong>Village</strong></td>
-<td>about 2 in 3</td>
+<td>about 6 in 10</td>
 <td>Pokémon Center</td>
 <td>streets reach up to 80 blocks from the plaza</td>
 </tr>
 <tr>
 <td><strong>Town</strong></td>
-<td>about 1 in 4</td>
-<td>Pokémon Center and Poké Mart, facing each other</td>
+<td>about 2 in 10</td>
+<td>Pokémon Center and Poké Mart, facing each other, with fountains or statues</td>
 <td>two to three times the streets and houses of a Village, up to 96 blocks out</td>
 </tr>
 <tr>
@@ -857,24 +857,46 @@ bigger ones add a Poké Mart and a gym.</p>
 <td>a Town's plaza, plus a <a href="../gyms/">gym</a> behind the Center</td>
 <td>like a Town</td>
 </tr>
+<tr>
+<td><strong>City</strong></td>
+<td>about 1 in 10</td>
+<td>a gym Town's plaza: Center, Mart, gym, stadium and decorations, every time</td>
+<td>like a Town, but every lot holds a building</td>
+</tr>
 </tbody>
 </table>
 <h2 id="where-they-appear">Where they appear<a class="headerlink" href="#where-they-appear" title="Permanent link">&para;</a></h2>
 <p>Settlements appear in the biomes vanilla villages use: plains and meadows, desert, savanna, snowy
 plains and taiga. They are placed on a world-wide grid, about as often as vanilla villages by
 default; the <a href="../configuration/">Configuration</a> page shows how to change that.</p>
-<p>The ground under each piece is smoothed as the settlement generates, so buildings sit on the land
-rather than float over it.</p>
+<p><strong>Only on level ground.</strong> Before a settlement grows, it looks at the ground around its plaza and
+gives the spot up if the land rises or falls more than six blocks, so no settlement is stacked up a
+hillside.</p>
+<p><strong>Clear of other structures.</strong> A settlement does not start within five chunks of a spot where
+another surface structure would start, so it never cuts through one.</p>
+<p>The ground under each piece is filled in and cut back as the settlement generates, so buildings and
+streets sit on the land rather than float over it or dig into it.</p>
 <h2 id="what-is-inside">What is inside<a class="headerlink" href="#what-is-inside" title="Permanent link">&para;</a></h2>
 <p><strong>Streets.</strong> A crossing at the plaza sends two or three cobbled streets out, and they keep
-branching. Lamp posts stand along a Village's streets. A Town's streets leave the plaza both north and south.</p>
+branching. Streets stay level with the plaza instead of following the slope, and the ground under
+them is levelled. Lamp posts stand along a Village's streets. A Town's streets are <strong>five blocks
+wide</strong> and leave the plaza both north and south.</p>
 <p><strong>Houses and farms.</strong> Each street has a house on one side and a farm on the other. The houses have
-kitchens, bedrooms, attics and workshops, with loot to find in their chests. The farms are vanilla's.</p>
+kitchens, bedrooms, attics and workshops, with loot to find in their chests. The farms are vanilla's.
+A City grows no farms: every lot along its streets holds a building.</p>
+<p><strong>Berry nurseries.</strong> Most Towns have one or two among their farms: a covered planter by the street
+with eight grown Cobblemon berry trees, drawn from Cobblemon's berries and mints, rare ones included.
+Right-click a tree to pick its berries; it grows back like any planted tree.</p>
 <p><strong>Villagers.</strong> Vanilla villagers live in the houses, and you trade with them as in any village.</p>
-<p><strong>The plaza.</strong> The <a href="../center-and-mart/">Pokémon Center</a> is always there; in a Town the
-<a href="../center-and-mart/#the-poke-mart">Poké Mart</a> faces it across the square.</p>
+<p><strong>The plaza.</strong> The <a href="../center-and-mart/">Pokémon Center</a> is always there; in a Town or City the
+<a href="../center-and-mart/#the-poke-mart">Poké Mart</a> faces it across the square, with a
+<a href="../center-and-mart/#the-stadium">stadium</a> behind the Mart.</p>
+<p><strong>Fountains and statues.</strong> Every Town's square holds two decorations, one in each half of the
+square between the Mart and the Center, clear of the path between their doors. Each is a fountain
+(a stone basin whose water stays in it), a roofed well or a Poké Ball statue on a pedestal. Now and
+then another stands beside a Town street.</p>
 <h2 id="finding-them">Finding them<a class="headerlink" href="#finding-them" title="Permanent link">&para;</a></h2>
-<p>All three count as villages, so anything that looks for villages finds them, Routes included.</p>
+<p>All four count as villages, so anything that looks for villages finds them, Routes included.</p>
 <table>
 <thead>
 <tr>
@@ -900,17 +922,20 @@ kitchens, bedrooms, attics and workshops, with loot to find in their chests. The
 <td>the nearest gym Town</td>
 </tr>
 <tr>
+<td><code>/locate structure cobblemon_poketowns:city</code></td>
+<td>the nearest City</td>
+</tr>
+<tr>
 <td><code>/locate structure #cobblemon_poketowns:has_gym</code></td>
-<td>the nearest settlement with a gym</td>
+<td>the nearest settlement with a gym, gym Town or City</td>
 </tr>
 </tbody>
 </table>
 <h2 id="known-limitations">Known limitations<a class="headerlink" href="#known-limitations" title="Permanent link">&para;</a></h2>
 <ul>
-<li>On steep ground, streets follow the slope while buildings stay level, so a settlement on a
-  hillside can end up with buildings at very different heights.</li>
-<li>The houses, streets, Pokémon Center and Poké Mart are stand-ins from Cobblemon Additions (see
-  <a href="../credits/">Community Credits</a>) until PokeTowns' own buildings replace them.</li>
+<li>The houses, streets, Pokémon Center, Poké Mart, stadium, wells and berry planters are stand-ins
+  from Cobblemon Additions (see <a href="../credits/">Community Credits</a>) until PokeTowns' own buildings
+  replace them.</li>
 </ul>
 
 
