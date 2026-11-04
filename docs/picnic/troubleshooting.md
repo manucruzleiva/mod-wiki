@@ -44,11 +44,22 @@ Each re-roll costs bread (7 / 5 / 3 by tier). It comes from the table's fuel slo
 The Mod Menu / Cloth Config screen edits **your own** config file. On someone else's server the
 server's settings win, and the screen says so. Ask an operator to use `/picnic config`.
 
-## A Diving, Hot or Strange table wrecks things
+## A table with a Water, Fire or Strange basket wrecks things
 
-They're built for one place: underwater, the Nether, the End. Anywhere else they flood, scorch or
-won't stay put. See [where each table can go](picnic-tables.md#where-each-table-can-go). An operator can
-turn that off with `/picnic config hazards enabled false`.
+Those baskets are built for one place: underwater, the Nether, the End. Anywhere else each re-roll
+floods or scorches around the table, and the Strange one won't stay put. See
+[where each table can go](picnic-tables.md#where-each-table-can-go). Swap the basket on an Expert table,
+or an operator can turn it all off with `/picnic config hazards enabled false`.
+
+## My Diving, Hot or Strange table became an Expert table
+
+That's 5.0.0: those tables are now [baskets](picnic-tables.md#baskets). An old one turns into an Expert
+table with the matching basket in its slot the first time it loads, and works exactly as before.
+
+## I can't put a special basket in my table
+
+Basic and Advanced tables keep the basket they were crafted with (the slot shows a padlock). Water,
+Fire, Strange, Alpha and Combat baskets go in an **Expert** table.
 
 ## Reporting a bug
 
@@ -61,5 +72,3 @@ and it already says what happened.
 - **Re-rolls never guarantee a shiny.** The table only asks Cobblemon to spawn again; the odds are
   Cobblemon's, improved only by the [Shiny Aura](shiny-aura.md).
 - **Seat counts are fixed per tier** and can't be configured.
-- *Until the next release*, a re-roll also clears a wild Pokémon another player is battling or
-  catching inside its radius.
