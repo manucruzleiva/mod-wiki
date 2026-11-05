@@ -233,7 +233,9 @@ Removes the settlement nearest to you. One you declared is deleted. One the worl
 of the network, along with every road it carried.
 
 ### `settlement restore` — 🛡️
-Puts back the nearest generated town you removed, exactly as it was: its name and its roads.
+Puts back the nearest generated town you removed, exactly as it was: its name and its roads. A
+settlement you declared cannot be restored, because `settlement remove` deletes it: declare it again with
+`settlement add`.
 
 ### `settlement list` — 🛡️
 Every settlement and connection you have declared in this world, with coordinates.
