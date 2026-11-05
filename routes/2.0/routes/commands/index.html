@@ -2031,7 +2031,9 @@ to it as if the world had generated a town there.</p>
 <p>Removes the settlement nearest to you. One you declared is deleted. One the world generated is taken out
 of the network, along with every road it carried.</p>
 <h3 id="settlement-restore"><code>settlement restore</code> — 🛡️<a class="headerlink" href="#settlement-restore" title="Permanent link">&para;</a></h3>
-<p>Puts back the nearest generated town you removed, exactly as it was: its name and its roads.</p>
+<p>Puts back the nearest generated town you removed, exactly as it was: its name and its roads. A
+settlement you declared cannot be restored, because <code>settlement remove</code> deletes it: declare it again with
+<code>settlement add</code>.</p>
 <h3 id="settlement-list"><code>settlement list</code> — 🛡️<a class="headerlink" href="#settlement-list" title="Permanent link">&para;</a></h3>
 <p>Every settlement and connection you have declared in this world, with coordinates.</p>
 <h3 id="settlement-connect-x-z"><code>settlement connect &lt;x&gt; &lt;z&gt;</code> — 🛡️<a class="headerlink" href="#settlement-connect-x-z" title="Permanent link">&para;</a></h3>
