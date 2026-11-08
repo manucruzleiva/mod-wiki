@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -675,6 +675,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Surface &amp; Lighting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#road-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Road materials
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -877,6 +894,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Surface &amp; Lighting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#road-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Road materials
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1206,6 +1240,138 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 </tr>
 </tbody>
 </table>
+<h4 id="road-materials">Road materials<a class="headerlink" href="#road-materials" title="Permanent link">&para;</a></h4>
+<p>The <strong>Road surface</strong> picker offers these materials. Each one paves every road in that block; <em>Random (by
+biome)</em> is the default.</p>
+<table>
+<thead>
+<tr>
+<th>Choice</th>
+<th>Block</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Random (by biome)</td>
+<td><code>random</code> — the biome palette below</td>
+</tr>
+<tr>
+<td>Dirt Path</td>
+<td><code>minecraft:dirt_path</code></td>
+</tr>
+<tr>
+<td>Cobblestone</td>
+<td><code>minecraft:cobblestone</code></td>
+</tr>
+<tr>
+<td>Mossy Cobblestone</td>
+<td><code>minecraft:mossy_cobblestone</code></td>
+</tr>
+<tr>
+<td>Gravel</td>
+<td><code>minecraft:gravel</code></td>
+</tr>
+<tr>
+<td>Stone Bricks</td>
+<td><code>minecraft:stone_bricks</code></td>
+</tr>
+<tr>
+<td>Mossy Stone Bricks</td>
+<td><code>minecraft:mossy_stone_bricks</code></td>
+</tr>
+<tr>
+<td>Cracked Stone Bricks</td>
+<td><code>minecraft:cracked_stone_bricks</code></td>
+</tr>
+<tr>
+<td>Andesite</td>
+<td><code>minecraft:andesite</code></td>
+</tr>
+<tr>
+<td>Polished Andesite</td>
+<td><code>minecraft:polished_andesite</code></td>
+</tr>
+<tr>
+<td>Sandstone</td>
+<td><code>minecraft:sandstone</code></td>
+</tr>
+<tr>
+<td>Cut Sandstone</td>
+<td><code>minecraft:cut_sandstone</code></td>
+</tr>
+<tr>
+<td>Cut Red Sandstone</td>
+<td><code>minecraft:cut_red_sandstone</code></td>
+</tr>
+<tr>
+<td>Packed Mud</td>
+<td><code>minecraft:packed_mud</code></td>
+</tr>
+<tr>
+<td>Mud Bricks</td>
+<td><code>minecraft:mud_bricks</code></td>
+</tr>
+<tr>
+<td>Coarse Dirt</td>
+<td><code>minecraft:coarse_dirt</code></td>
+</tr>
+</tbody>
+</table>
+<p>A mix holds up to six of them. In the config file or with <a href="../commands/#config-read-and-change-this-worlds-settings"><code>/routes config set path_block_material</code></a>, the setting also takes any other
+block id, modded ones included, as <code>minecraft:cobblestone=70,minecraft:gravel=30</code>. An id the game does not
+know is dropped from the mix, and if nothing is left the road falls back to Random.</p>
+<p><strong>What Random lays.</strong> Each stretch takes its block from the biome it crosses, in patches a few blocks across.
+The biome's name is checked first, then its temperature:</p>
+<table>
+<thead>
+<tr>
+<th>Biome</th>
+<th>Random draws from</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Badlands</td>
+<td>cobblestone, cut red sandstone, gravel, stone bricks</td>
+</tr>
+<tr>
+<td>Swamp, mangrove swamp</td>
+<td>packed mud, mud bricks, mossy cobblestone, coarse dirt</td>
+</tr>
+<tr>
+<td>Jungle</td>
+<td>mossy cobblestone, mossy stone bricks, dirt path, gravel</td>
+</tr>
+<tr>
+<td>Desert, beach, very hot biomes</td>
+<td>cobblestone, cut sandstone, gravel, stone bricks</td>
+</tr>
+<tr>
+<td>Frozen</td>
+<td>stone bricks, cobblestone, cracked stone bricks, gravel</td>
+</tr>
+<tr>
+<td>Cold</td>
+<td>cobblestone, stone bricks, andesite, gravel</td>
+</tr>
+<tr>
+<td>Temperate</td>
+<td>dirt path, cobblestone, mossy cobblestone, stone bricks, gravel</td>
+</tr>
+<tr>
+<td>Warm</td>
+<td>dirt path, packed mud, sandstone, gravel</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bridge deck</strong> offers oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, bamboo, crimson and
+warped planks; the config file takes any planks block. Random uses the biome's timber: cherry in a cherry
+grove, mangrove in a mangrove swamp, bamboo in a bamboo jungle, dark oak in a dark forest or badlands, birch
+in a birch forest, jungle in a jungle, acacia in a savanna, spruce in taiga, mountains and the cold, oak
+everywhere else.</p>
+<p><strong>Handrail</strong> offers oak, spruce, birch, jungle, acacia, dark oak, mangrove and cherry fences, and cobblestone,
+mossy cobblestone, stone brick, mossy stone brick, andesite and diorite walls; the config file takes any fence
+or wall. Random rolls one of twelve per route: every fence but mangrove and cherry, and the six walls.</p>
 <h3 id="world-spawn">World Spawn<a class="headerlink" href="#world-spawn" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1382,7 +1548,7 @@ command, argument, permission and behaviour — lives on <a href="../commands/">
     
     
   
-      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     <script>
     (function () {
