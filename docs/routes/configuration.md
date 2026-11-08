@@ -80,6 +80,58 @@ connects, how a road is shaped, what it is made of, where you start, and what yo
 | Descriptive area names | on | *A3-Frostpine* on an area's waypoint and banner; off keeps the plain *Area 3* |
 | Picnic stops | 3 | with [Cobblemon Picnic](../picnic/index.md) installed, the percent of rest stops that are a picnic table instead of a camp. 0 = never, 100 = every stop. Kept per world |
 
+#### Road materials
+
+The **Road surface** picker offers these materials. Each one paves every road in that block; *Random (by
+biome)* is the default.
+
+| Choice | Block |
+| --- | --- |
+| Random (by biome) | `random` — the biome palette below |
+| Dirt Path | `minecraft:dirt_path` |
+| Cobblestone | `minecraft:cobblestone` |
+| Mossy Cobblestone | `minecraft:mossy_cobblestone` |
+| Gravel | `minecraft:gravel` |
+| Stone Bricks | `minecraft:stone_bricks` |
+| Mossy Stone Bricks | `minecraft:mossy_stone_bricks` |
+| Cracked Stone Bricks | `minecraft:cracked_stone_bricks` |
+| Andesite | `minecraft:andesite` |
+| Polished Andesite | `minecraft:polished_andesite` |
+| Sandstone | `minecraft:sandstone` |
+| Cut Sandstone | `minecraft:cut_sandstone` |
+| Cut Red Sandstone | `minecraft:cut_red_sandstone` |
+| Packed Mud | `minecraft:packed_mud` |
+| Mud Bricks | `minecraft:mud_bricks` |
+| Coarse Dirt | `minecraft:coarse_dirt` |
+
+A mix holds up to six of them. In the config file or with [`/routes config set path_block_material`](commands.md#config-read-and-change-this-worlds-settings), the setting also takes any other
+block id, modded ones included, as `minecraft:cobblestone=70,minecraft:gravel=30`. An id the game does not
+know is dropped from the mix, and if nothing is left the road falls back to Random.
+
+**What Random lays.** Each stretch takes its block from the biome it crosses, in patches a few blocks across.
+The biome's name is checked first, then its temperature:
+
+| Biome | Random draws from |
+| --- | --- |
+| Badlands | cobblestone, cut red sandstone, gravel, stone bricks |
+| Swamp, mangrove swamp | packed mud, mud bricks, mossy cobblestone, coarse dirt |
+| Jungle | mossy cobblestone, mossy stone bricks, dirt path, gravel |
+| Desert, beach, very hot biomes | cobblestone, cut sandstone, gravel, stone bricks |
+| Frozen | stone bricks, cobblestone, cracked stone bricks, gravel |
+| Cold | cobblestone, stone bricks, andesite, gravel |
+| Temperate | dirt path, cobblestone, mossy cobblestone, stone bricks, gravel |
+| Warm | dirt path, packed mud, sandstone, gravel |
+
+**Bridge deck** offers oak, spruce, birch, jungle, acacia, dark oak, mangrove, cherry, bamboo, crimson and
+warped planks; the config file takes any planks block. Random uses the biome's timber: cherry in a cherry
+grove, mangrove in a mangrove swamp, bamboo in a bamboo jungle, dark oak in a dark forest or badlands, birch
+in a birch forest, jungle in a jungle, acacia in a savanna, spruce in taiga, mountains and the cold, oak
+everywhere else.
+
+**Handrail** offers oak, spruce, birch, jungle, acacia, dark oak, mangrove and cherry fences, and cobblestone,
+mossy cobblestone, stone brick, mossy stone brick, andesite and diorite walls; the config file takes any fence
+or wall. Random rolls one of twelve per route: every fence but mangrove and cherry, and the six walls.
+
 ### World Spawn
 
 | Option | Default | Notes |
