@@ -268,6 +268,11 @@ log and in `/picnic stats`. An operator changes the chance and the batch with
 
 ![An Alpha Basket re-roll](assets/store/gif-alpha-basket.gif)
 
+**Alpha and Combat baskets are for Overworld picnics.** They carry no home of their own, so their
+table is a plain Expert table: it [burns in the Nether and drifts in the End](#where-each-table-can-go).
+A table holds one basket, so alpha hunting and RCT trainers only work in the Overworld. The baskets'
+tooltip says so too.
+
 Placed on its own, a special basket keeps its emblem and drops back as the same basket. It still
 stores bread like any [Picnic Basket](interactions-and-items.md#picnic-baskets).
 
