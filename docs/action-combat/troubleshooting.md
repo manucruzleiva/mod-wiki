@@ -33,3 +33,9 @@ damage](moves.md#block-damage)).
 
 The server log says why at start: RCT's version changed what Action Combat calls. Also check
 `/cac format npc`.
+
+## A `[CAC]` error about an EXP or EV calculator is in the log
+
+Another mod's EXP or EV calculator failed at a knock-out. Action Combat logs it once and carries on:
+the knock-out, the fight's end and the other payouts still happen, but that calculator paid nothing.
+With Mid-Battle EXP, update it to 2.2.1 or later.

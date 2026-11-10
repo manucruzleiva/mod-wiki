@@ -25,7 +25,7 @@ nearby, if you bring them the one they are asking for. The rarer the prize, the 
 
 !!! warning "Not released yet"
     PokeTrades has no public download yet. These pages describe the current development build,
-    **0.0.23**. Anything not described here is not in the mod yet.
+    **0.0.24**. Anything not described here is not in the mod yet.
 
 ## Highlights
 
