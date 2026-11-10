@@ -24,8 +24,14 @@ map marker, so the waystone, the town and the pin are one place under one name.
 - **Auto waypoints** — the first time you reach a **named town**, a **route** or an enclosed
   **area**, it drops a pin with a toast; every named waystone you activate does the same. Unnamed
   places are ignored, and a marker never doubles up — Xaero forgets runtime waypoints when you
-  relog, so they are re-sent on join and de-duplicated on arrival. Whether they land in one set or
-  three is the **waypoint grouping** choice, set with [`/routesmap`](#changing-how-it-looks-routesmap).
+  relog, so they are re-sent on join and de-duplicated on arrival. An **Underground town**'s marker
+  sits at the town's own depth, not on the ground above it.
+- **Landmark waypoints** — the landmark a road passes (the one its roadside sign names) gets a pin the
+  first time you walk that stretch of road, in its own *Landmarks* set. Turn it off with **Landmark
+  waypoints** in [Configuration](configuration.md#landmarks).
+- **Where the waypoints go** — one set for the whole mod, one per category, a set you name (use one
+  of your own sets to mix them in with your waypoints), or **off**: no waypoints and no *Waypoint
+  discovered* toast. Chosen with [`/routesmap`](#changing-how-it-looks-routesmap).
 - **Chunk paint** 🎨 — the `xaero_chunk_paint` option (default on) tints chunks on the map by
   **category**, with a subtle low-opacity wash: **magenta** over cities/villages, **orange** over
   routes, and **teal** over an area once it is **fully enclosed** by your cities and routes — open
@@ -44,8 +50,8 @@ the minimap's Cave Mode and of your Y level, on the surface and in caves alike.
 
 JourneyMap gets the same chunk paint and the same waypoints as Xaero's maps, in the same colours.
 JourneyMap's unit for hiding a set of markers is a **waypoint group**, so each category gets a group
-named like the Xaero set — *Settlements*, *Routes* and *Areas* — or one *Routes Mod (all)* group under
-the single-switch grouping.
+named like the Xaero set — *Settlements*, *Routes*, *Areas* and *Landmarks* — or one *Routes Mod (all)*
+group under the single-switch grouping, or the group you name.
 The markers are re-sent every time you join, so nothing of Routes stays in your JourneyMap data if you
 remove the mod. They always go on the Overworld map, even if you join in the Nether.
 
@@ -54,8 +60,8 @@ remove the mod. They always go on the Overworld map, even if you join in the Net
 How the paint looks (on Xaero's maps and JourneyMap alike) is a choice about **your own** map, so it is a command every player can use: no
 operator rights, and it works on any server — even one without Routes — because it never leaves your
 game. It turns the paint on and off, sets how strong each of the three tints is (**0 hides that
-category**), picks each one's colour — which the matching waypoints follow — and chooses whether the
-waypoints land in one set or one per category.
+category**), picks each one's colour — which the matching waypoints follow — and chooses where the
+waypoints land: one set, one per category, a set you name, or nowhere.
 
 Type `/routesmap` on its own and a small screen opens over the world with all of it: drag a slider
 and the minimap behind it re-tints as you go. Each setting is also a subcommand, for anyone who would
