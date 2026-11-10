@@ -19,66 +19,48 @@ screen for defaults, opened from the mod list (Mod Menu on Fabric, the **Config*
 
 ## ROUTES tab
 
-The tab is split into six sections, in the order you meet them: what the network is, what it
-connects, how a road is shaped, what it is made of, where you start, and what you are shown.
+Two rows of **presets** open the tab, then the options sit in six sections, in the order you meet
+them: where roads go, how they look, how they get past hills and water, what they do near landmarks,
+where you start, and an **Advanced** section at the end. Advanced starts closed; once you open or
+close it, it stays that way for the rest of the session. The Mod Menu config screen shows the same
+sections.
 
-### Route Generation
+### Presets
+
+| Row | Choices | What it sets |
+| --- | --- | --- |
+| Road network | Sparse · **Balanced** · Dense | Roads per town, longest road and ring roads. Sparse: 2 roads per town, none longer than 1000 blocks, no ring roads. Balanced: 4, up to 1600, with ring roads. Dense: 5, up to 2400, with ring roads |
+| Road style | Trails · **Roads** · Highways | Road width, winding, lamp posts, tunnel size and wear. Trails: 3 wide, winding, worn, no lamp posts, small tunnels. Roads: 5 wide, lamp posts on some roads. Highways: 7 wide, nearly straight, lamp posts on every road, big tunnels |
+
+Balanced and Roads are the defaults. Change one of those options by hand and its row shows **Custom**.
+
+### Where roads go
 
 | Option | Default | Notes |
 | --- | --- | --- |
-| Generate routes | on | master switch. Off: no roads planned, and the spawn stays where the game puts it |
-| Connect all structures | off | also connect surface structures that are not towns — never one whose id names a ruin, an ancient thing or a mineshaft |
-| Routes per city | 4 | a **ceiling**, not a count: each town rolls its own up to this, inside the band its size puts it in — a village low, a city high — so the network has hamlets and crossroads |
-| Longest road | 1600 | the farthest two towns can be and still get a direct road |
-| Ring roads | on | keep closing loops between nearby towns — loops are what enclose named **areas** |
+| Build roads between towns | on | master switch. Off: no roads planned, and the spawn stays where the game puts it |
+| Roads per town | 4 | 1–5, a **ceiling**, not a count: each town rolls its own up to this, inside the band its size puts it in (a village low, a city high), so the network has hamlets and crossroads |
+| Longest road (blocks) | 1600 | the farthest two towns can be and still get a direct road |
+| Ring roads | on | keep closing loops between towns that are close on the map but far apart by road. Loops are what enclose named **areas** |
+| Bigger towns get more roads | on | settlements come as village, town or city by their real footprint, and a bigger one carries more roads. Needs **Check towns before building roads** |
+| Towns & landmarks | automatic | every structure your world has, each set to **Town**, **Landmark**, **Ignored** or **Underground town**, with a **Reset to Routes' list** button on top. See [Which structures get roads](which-structures.md) |
 
-### Towns & Settlements
-
-| Option | Default | Notes |
-| --- | --- | --- |
-| Towns & landmarks | automatic | every structure your world has, each set to Settlement, Landmark or Ignored — see [Which structures get roads](which-structures.md) |
-| Use Routes' structure list | on | the hand-reviewed list of towns, landmarks and structures to ignore that ships with Routes (gym entrances included). Your own choices above always beat it — see [Which structures get roads](which-structures.md#the-list-routes-ships) |
-| Settlement allowlist (advanced) | empty | exact structure ids that count as towns. Empty = the automatic rule |
-| Never spawn here | RS ocean village | towns that may never be the world's **first** town. They stay ordinary towns otherwise |
-| Confirm towns exist | on | check the jigsaw really assembles before the network treats a candidate as a town — no towns on the map with an empty field under them |
-| Bigger towns, more roads | on | settlements come as village, town or city by their real footprint, and a bigger one carries more roads. Needs **Confirm towns exist** |
-| Town size | 64 | blocks across from which a settlement is a town rather than a village |
-| City size | 128 | blocks across from which it is a city. `/routes debug settlements` shows how your world's towns fall into the three |
-| Roads go around landmarks | on | a road steers around a landmark's real footprint instead of cutting through it; where one fills the only way through, the road is still built |
-| Landmark pull | 3 | 0–10: how strongly a road bends to pass beside the one landmark it visits — a few blocks, never a detour. 0 = off |
-| Landmark reach | 96 | how far off a road's straight line, in blocks, a landmark can be and still pull it |
-| Landmark signs | on | a signpost beside the road names the landmark it passes |
-
-### Road Shape
+### How roads look
 
 | Option | Default | Notes |
 | --- | --- | --- |
-| Road width | 5 | odd numbers; the brush is symmetric around the centreline |
-| Water crossing width | 10 | its own number, not a multiple of the road — open water reads much wider than it is |
-| Road curviness | 5 | 0 = ruler-straight, 10 = maximum seeded wander |
-| Straight bridges | on | a bridge over water runs straight from bank to bank however much the roads wander; off, the crossing weaves with the road. A bridge over a dry gap weaves either way |
-| Steepest climb | 8 | tenths of a block per block, before a road cuts or bores instead of hugging the ground |
-| Dig tunnels | on | off, a planned tunnel is built as a steep surface road over the top |
-| Tunnel width | 9 | a tunnel's own width, twice the road's — only the bore, the ramp down to it stays road-width. Odd numbers, like the road |
-| Tunnel height | 8 | floor to ceiling. Taller tunnels leave a thinner roof in low hills |
-| Build bridges | on | off, a river becomes an open water lane and a dry gap is followed on the ground |
-| Shape terrain around roads | on | the ground is road-shaped **before** anything is planted on it, instead of demolished afterwards. Decided once, when the world is created |
-| Warm road chunks ahead | on | generate a road's chunks a little before you reach them, so the cost lands while you walk |
-
-### Surface & Lighting
-
-| Option | Default | Notes |
-| --- | --- | --- |
-| Road surface | Random (by biome) | Random paves each stretch from the palette of the biome it crosses, so a road changes material where the land changes. Pick one material, or press **+ Add material** to mix several: each row has a *Share* slider (70 and 30 pave about 70% and 30%), laid in rounded patches. *Random (by biome)* can be one entry of the mix |
-| Road wear | 0% | 0–30: that share of a road's flat blocks is laid as a worn version of its material — cracked or mossy stone bricks, gravel in cobblestone, grass through a dirt path. Stairs never wear |
-| Bridge deck | Random | Random builds each bridge from the timber of its biome. Pick one plank or a mix: each bridge takes one of them for its whole span, and its stairs follow the same wood |
-| Handrail | Random | Random gives each route one of twelve fences and walls. Pick one or a mix: each route takes one for its whole length |
-| Road lamp posts | Random | Random / On / Off — Random decides per route |
-| Tunnel lighting | Random | Random keeps some tunnels as dark caves |
-| Underwater lighting | Random | a sea lantern in the pillar under each water-crossing marker — Random decides per route |
-| Descriptive route names | on | *Route 3: Steep Pass* on signposts, waypoints and zone banners; off keeps the plain *Route 3*. Roads already numbered keep their name |
-| Descriptive area names | on | *A3-Frostpine* on an area's waypoint and banner; off keeps the plain *Area 3* |
-| Picnic stops | 3 | with [Cobblemon Picnic](../picnic/index.md) installed, the percent of rest stops that are a picnic table instead of a camp. 0 = never, 100 = every stop. Kept per world |
+| Road surface | Random (by biome) | Random paves each stretch from the palette of the biome it crosses, so a road changes material where the land changes. Pick one material, or press **+ Add material** to mix several: each row has a *Share* slider (70 and 30 pave about 70% and 30%), laid in rounded patches. *Random (by biome)* can be one entry of the mix. See [Road materials](#road-materials) |
+| Road wear | 0% | 0–30: that share of a road's flat blocks is laid as a worn version of its material: cracked or mossy stone bricks, gravel in cobblestone, grass through a dirt path. Stairs never wear |
+| Road width | 5 | 3–9, odd numbers; the brush is symmetric around the centreline |
+| How much roads wind | 5 | 0 = ruler-straight, 10 = follows every fold of the land |
+| Bridge deck | Random (by biome) | Random builds each bridge from the timber of its biome. Pick one plank or a mix: each bridge takes one of them for its whole span, and its stairs follow the same wood |
+| Handrail | Random (per route) | Random gives each route one of twelve fences and walls. Pick one or a mix: each route takes one for its whole length |
+| Lamp posts | Random | Random / On / Off. Random decides per route |
+| Tunnel lanterns | Random | Random keeps some tunnels as dark caves |
+| Lights along water crossings | Random | a sea lantern in the pillar under each water-crossing marker. Random decides per route |
+| Road names | on | *Route 3: Steep Pass* on signposts, waypoints and zone banners; off keeps the plain *Route 3*. Roads already numbered keep their name |
+| Picnic stops | 3 | with [Cobblemon Picnic](../picnic/index.md) installed, the percent of rest stops that are a picnic table instead of a camp. 0 = never, 100 = every stop |
+| Route Pokémon | on | with Cobblemon 1.8 installed, wild Pokémon appear along the roads (see [Dynamic Routes](routes.md)). Off adds no new spots; the ones already there stay |
 
 #### Road materials
 
@@ -132,37 +114,77 @@ everywhere else.
 mossy cobblestone, stone brick, mossy stone brick, andesite and diorite walls; the config file takes any fence
 or wall. Random rolls one of twelve per route: every fence but mangrove and cherry, and the six walls.
 
-### World Spawn
+### Hills, rivers and tunnels
 
 | Option | Default | Notes |
 | --- | --- | --- |
-| Spawn in city | on | move a new world's spawn into the nearest town; off leaves the vanilla wilderness spawn |
-| Pregenerate around spawn | 512 | chunks built in the background the first time you enter, so the roads and towns around spawn are already built when you walk out — the default reaches the spawn town and its first road, about 200 blocks. 0 = off |
+| Steepest climb | 8 | 1–10, tenths of a block per block. Higher lets roads climb steeper hills; lower makes them cut through or tunnel instead |
+| Dig tunnels | on | off, a planned tunnel is built as a steep surface road over the top |
+| Tunnel width | 9 | a tunnel's own width, twice the road's. Only the bore widens; the ramp down to it stays road-width. Odd numbers, like the road |
+| Tunnel height | 8 | floor to ceiling. Taller tunnels leave a thinner roof in low hills |
+| Build bridges | on | off, a river becomes an open water lane and a dry gap is followed on the ground |
+| Bridges run straight across | on | a bridge over water runs straight from bank to bank however much the road winds; off, the crossing weaves with the road. A bridge over a dry gap weaves either way |
+| Water crossing width | 10 | the marked lane across a lake or sea. Its own number, not a multiple of the road: open water reads much wider than it is |
 
-### Map & Notifications
+### Landmarks
 
 | Option | Default | Notes |
 | --- | --- | --- |
-| Zone notifications | Toast | how entering a route or an area is announced: Off / Toast / Announcement / Chat |
-| Map chunk paint | on | tint chunks on [Xaero's maps and JourneyMap](map-integration.md) by category; inert without either |
+| Roads go around landmarks | on | a road steers around a landmark's (or an ignored structure's) real footprint instead of cutting through it; where one fills the only way through, the road is still built |
+| Roads pass by one landmark | 3 | 0–10: how strongly a road bends to pass beside the one landmark it visits, a few blocks and never a detour. 0 = off |
+| How far a road detours (blocks) | 96 | how far off a road's straight line a landmark can be and still pull it |
+| Sign the landmark a road passes | on | a signpost beside the road names the landmark it passes |
+| Landmark waypoints | on | the first time you walk past the landmark a road signs, it gets a waypoint on your map, in its own *Landmarks* set. See [Map Integration](map-integration.md) |
 
-Who stands on the roads and what gets built beside the towns is the Nuzlocke add-on's: **road
-trainers**, the **gyms next to towns** and the **league** are configured on its
-[NUZLOCKE tab](../nuzlocke/commands.md). Routes on its own builds the towns and the roads
-between them.
+### Your first steps
 
-The map **tint intensity** and **colours** (City / Route / Area) are not world-creation choices —
-set them in play with [`/routesmap`](map-integration.md#changing-how-it-looks-routesmap), with the map
-in front of you.
+| Option | Default | Notes |
+| --- | --- | --- |
+| Start in a town | on | move a new world's spawn into the nearest town; off leaves the vanilla wilderness spawn |
+| Prepare the land around spawn | 512 | chunks built in the background the first time you enter, so the roads and towns around spawn are already built when you walk out. The default reaches the spawn town and its first road, about 200 blocks. 0 = off |
+
+### Advanced
+
+Ten options a first world rarely needs. The section starts closed.
+
+| Option | Default | Notes |
+| --- | --- | --- |
+| Every surface structure gets roads | off | also connect surface structures that are not towns, never one whose id names a ruin, an ancient thing or a mineshaft |
+| Routes' structure list | on | the hand-reviewed list of towns, landmarks and structures to ignore that ships with Routes (gym entrances included). Your own choices in **Towns & landmarks** always beat it. See [Which structures get roads](which-structures.md#the-list-routes-ships) |
+| Town ids only | empty | exact structure ids that count as towns. Empty = the automatic rule |
+| Never start in | RS ocean village | towns that may never be the world's **first** town. They stay ordinary towns otherwise |
+| Check towns before building roads | on | check the town really generates before the network sends a road to it, so no road ends at an empty field |
+| Town size (blocks) | 64 | blocks across from which a settlement is a town rather than a village |
+| City size (blocks) | 128 | blocks across from which it is a city. `/routes debug settlements` shows how your world's towns fall into the three |
+| Shape the land with the road | on | the ground is road-shaped **before** anything is planted on it, instead of cut and filled afterwards. Decided once, when the world is created |
+| Build road chunks early | on | generate a road's chunks a little before you reach them, so the cost lands while you walk |
+| Area names | on | *A3-Frostpine* on an area's waypoint and banner; off keeps the plain *Area 3* |
+
+### Map & Notifications (not on the tab)
+
+**Zone notifications** (Off / **Toast** / Announcement / Chat: how entering a route or an area is
+announced) and **Map chunk paint** (on: tint chunks on [Xaero's maps and JourneyMap](map-integration.md)
+by category) are your own preferences, not world rules, so they are not on the create-world tab. Set
+them in Routes' config screen (Mod Menu on Fabric, the **Config** button on NeoForge), under **Map &
+Notifications**; the chunk paint, the tint
+intensity, the colours and the waypoints are also changed in play with
+[`/routesmap`](map-integration.md#changing-how-it-looks-routesmap), with the map in front of you.
+
+Routes builds the towns and the roads between them, and with
+[Radical Cobblemon Trainers](https://modrinth.com/mod/radical-cobblemon-trainers) installed it also
+places the **route trainers** beside the roads (see [Dynamic Routes](routes.md)). The **gyms next to
+towns**, the **league** and the Nuzlocke rules belong to
+[Cobblemon Nuzlocke & Soul Link](../nuzlocke/commands.md), on its NUZLOCKE tab.
 
 !!! info "Saved per world, and some fixed for good"
-    Choices made in these tabs are stored **per world** and only applied to a brand-new world —
+    Choices made in these tabs are stored **per world** and only applied to a brand-new world:
     loading an existing world never gets its rules clobbered. Confirming them says *World rules set: …*.
 
-    The settings that **shape the road network** stay at the value the world was created with: connect
-    all structures, routes per city, longest road, ring roads, the towns & landmarks list and Routes'
-    structure list, the allowlist, confirm towns, bigger towns and the town and city sizes, the four
-    landmark settings, road width, curviness, straight bridges, steepest climb and picnic stops.
+    The settings that **shape the road network** stay at the value the world was created with: roads
+    per town, longest road, ring roads, bigger towns get more roads, the towns & landmarks list, road
+    width, how much roads wind, picnic stops, steepest climb, bridges run straight across, the three
+    landmark-path settings (go around, pass by, how far), and in Advanced every surface structure gets
+    roads, Routes' structure list, town ids only, check towns and the town and city sizes.
     Changing one mid-world would give the land generated afterwards a second network whose roads stop
     short of the old ones. `/routes config set` on one of them saves the value for the worlds you create
     next and says so; `/routes config list` marks them.

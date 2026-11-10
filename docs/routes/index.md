@@ -35,11 +35,12 @@ really built.
 - 🛣️ **[Roads by hand](commands.md#road-a-road-through-land-already-explored)**: join two towns with
   the Road Planner and build the road even through land you have already explored.
 - 🧩 **[World-creation tab](configuration.md)**: a dedicated **ROUTES** tab on the create-world
-  screen — every rule set up-front, saved per world, down to the mix of road materials, the bridge
-  decks and the handrails.
-- 🎮 Playing a Pokémon world? **[Cobblemon Nuzlocke & Soul Link](../nuzlocke/index.md)** is a separate
-  add-on that builds on this one: it locks encounters to the routes, areas and towns generated here,
-  and adds the road trainers and the gyms beside towns.
+  screen, with one-click presets for the road network and the road style — every rule set up-front,
+  saved per world, down to the mix of road materials, the bridge decks and the handrails.
+- 🎮 Playing a Pokémon world? With Cobblemon 1.8, **route Pokémon** live along the roads, and with
+  Radical Cobblemon Trainers, **route trainers** stand beside them. **[Cobblemon Nuzlocke & Soul
+  Link](../nuzlocke/index.md)** is a separate add-on that builds on this one: it locks encounters to
+  the routes, areas and towns generated here, and adds the gyms beside towns.
 
 ## Get it
 
