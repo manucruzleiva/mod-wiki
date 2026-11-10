@@ -167,7 +167,7 @@ See [Commands & Config](commands.md).
 
 !!! note "Gyms and the Elite Four"
     Since 1.5.58 this mod no longer builds gyms beside towns or an Elite Four on a road: that is the
-    job of PokeGyms and PokeTowns. Gyms already built in an older world stay standing. Wherever a Gym
+    job of PokeGyms. Gyms already built in an older world stay standing. Wherever a Gym
     Leader stands, **leaders wait to be challenged** — you walk in and ask. Lt. Surge is the exception.
 
 ## 🌿 Route Pokémon

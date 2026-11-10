@@ -112,7 +112,8 @@ extra:
     champions:      { name: Cobblemon Champions Training,   version: 2.0.0, modrinth: PlTQXswh, repo: cobblemon-champions-training }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr, repo: tree-carve }
     mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.1.0, modrinth: ShgrcSQY, repo: cobblemon-mid-battle-exp }
-    poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.17, modrinth: MjGKcXBb, repo: cobblemon-poketowns }
+    # PokeTowns esta discontinuado: queda solo su pagina de aviso, y sin modrinth ni repo no se vigila.
+    poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.17 }
     action-combat:  { name: Cobblemon Action Combat,        version: 0.1.41, repo: cobblemon-action-combat }
     pokegyms:       { name: Cobblemon PokeGyms,             version: 0.0.15, repo: cobblemon-pokegyms }
   # La ficha tecnica de cada mod: lo que dice su jar publicado (fabric.mod.json y neoforge.mods.toml
@@ -139,7 +140,6 @@ extra:
     cloth-config:   { name: Cloth Config,                modrinth: cloth-config }
     modmenu:        { name: Mod Menu,                    modrinth: modmenu }
     routes:         { name: Routes,                      page: routes/index.md }
-    poketowns:      { name: Cobblemon PokeTowns,         page: poketowns/index.md }
     raiddens:       { name: Cobblemon Raid Dens,         modrinth: cobblemonraiddens }
     xaero-minimap:  { name: Xaero's Minimap,             modrinth: xaeros-minimap }
     xaero-worldmap: { name: Xaero's World Map,           modrinth: xaeros-world-map }
@@ -164,7 +164,6 @@ extra:
         - [xaero-minimap, "waypoints and chunk paint on the map"]
         - [xaero-worldmap, chunk paint on the full-screen map]
         - [journeymap, "waypoints and chunk paint, as on Xaero's"]
-        - [poketowns, "roads enter its towns by their streets, and the marker sits on the Pokémon Center"]
         - [picnic, about 3 rest stops in 100 are a picnic table]
       notes:
         Java: 21 for Minecraft 1.21.x, 25 for 26.x
@@ -219,7 +218,6 @@ extra:
         - [playerxp, experience for the battles you win]
         - [cobbledollars, a second currency]
         - [cloth-config, "the settings screen (with Mod Menu on Fabric)"]
-        - [poketowns, puts a Champions Trainer in every Pokémon Center]
       curseforge: 1676756
     tree-carve:
       minecraft: "1.21.1 · 26.1–26.3"
@@ -237,14 +235,7 @@ extra:
       notes:
         Works with: any mod that changes how much EXP or how many EVs a battle gives — its numbers are the ones paid
     poketowns:
-      unreleased: true
-      minecraft: "1.21.1"
-      cobblemon: "1.8+"
-      requires: [cobbledollars, waystones]
-      fabric: [fabric-api, flk, architectury]
-      neoforge: [kff, architectury]
-      optional:
-        - [routes, connects every settlement to the road network]
+      discontinued: true   # fuera de la tabla de compatibilidad de la portada
     action-combat:
       unreleased: true
       minecraft: "1.21.1"

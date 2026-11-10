@@ -66,14 +66,14 @@ flowchart TD
 - **Villages, towns and cities** — a settlement's real size decides how many roads leave it, so the
   network has quiet hamlets and busy hubs. A fork out of a big town stands past its last houses, never
   among them. A structure tagged `routes:settlement/village`, `routes:settlement/town` or
-  `routes:settlement/city` (as [PokeTowns](../poketowns/index.md) does) gets that word after its name,
+  `routes:settlement/city` gets that word after its name,
   so Pallet becomes *Pallet Town*.
 - **Roads meet the town's own streets** — a road joins a town at the open end of a street, at street
   level, never behind a house or climbing into the air. A pack can mark its street ends with an open
-  jigsaw named `routes:city_exit` (PokeTowns does), and the road then continues the street that faces
+  jigsaw named `routes:city_exit`, and the road then continues the street that faces
   it most squarely.
 - **Spawn in a city** — new worlds start next to the nearest city, on real ground, never in the
-  water — coastal towns and PokeTowns towns included.
+  water — coastal towns included.
 - **A loading screen that shows the real wait** — while a new world opens, two towns and the road
   between them are the progress bar. Each step (surveying the towns around your spawn, generating the
   spawn chunks, building your spawn town) gets its share of the road by how long it really takes. The
