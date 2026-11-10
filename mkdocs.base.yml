@@ -115,6 +115,7 @@ extra:
     # PokeTowns esta discontinuado: queda solo su pagina de aviso, y sin modrinth ni repo no se vigila.
     poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.17 }
     action-combat:  { name: Cobblemon Action Combat,        version: 0.1.41, repo: cobblemon-action-combat }
+    poketrades:     { name: Cobblemon PokeTrades,           version: 0.0.23, repo: cobblemon-poketrades }
     pokegyms:       { name: Cobblemon PokeGyms,             version: 0.0.15, repo: cobblemon-pokegyms }
   # La ficha tecnica de cada mod: lo que dice su jar publicado (fabric.mod.json y neoforge.mods.toml
   # del tag del ultimo release), no lo que se recuerda. De aca salen, por hooks/mod_specs.py, las
@@ -246,6 +247,16 @@ extra:
         - [mega-showdown, "Mega Evolution, Tera, Dynamax and Z-Moves in a real-time fight"]
         - [pokebelt, throwing Poké Balls mid-fight]
         - [rct, "its trainers fight in real time, and a win still counts"]
+    poketrades:
+      unreleased: true
+      minecraft: "1.21.1"
+      cobblemon: "1.8+"
+      cobblemon_note: 1.7.x is not supported
+      fabric: [flk, architectury]
+      neoforge: [kff, architectury]
+      optional:
+        - [cobbledollars, "traders sell and buy Pokémon for CobbleDollars"]
+        - [rct, "trainers you beat trade with you, and what you give joins their team"]
     pokegyms:
       unreleased: true
       minecraft: "1.21.1"

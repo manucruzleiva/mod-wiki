@@ -1,0 +1,24 @@
+INHERIT: mkdocs.base.yml
+site_name: Cobblemon PokeTrades
+site_url: https://manucruzleiva.github.io/mod-wiki/poketrades/
+
+extra:
+  wiki_site: poketrades
+
+# Todo lo que no es de este mod queda afuera, salvo lo compartido. Los links a paginas de otro sitio
+# los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*
+  !/poketrades/
+  !/assets/
+  !/stylesheets/
+
+nav:
+  - Cobblemon PokeTrades:
+      - poketrades/index.md
+      - Getting Started: poketrades/getting-started.md
+      - Traders: poketrades/traders.md
+      - Commands & Configuration: poketrades/commands.md
+      - For Mod Authors: poketrades/api.md
+      - Troubleshooting: poketrades/troubleshooting.md
+      - Community Credits: poketrades/credits.md
