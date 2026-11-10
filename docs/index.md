@@ -120,6 +120,15 @@ here.
 </div>
 </div>
 
+<div class="mod-row" data-mod-color="poketrades" data-tags="<!-- mod-tags:poketrades -->" markdown>
+![](poketrades/assets/logo.png){ .mod-row__logo }
+<div class="mod-row__body" markdown>
+[Cobblemon PokeTrades](poketrades/index.md){ .mod-row__name }
+<span class="mod-row__what">NPC traders who swap Pokémon, the in-game trade you remember.</span>
+<span class="mod-row__chips"><!-- mod-chips:poketrades --></span>
+</div>
+</div>
+
 </div>
 
 ## Compatibility
