@@ -18,7 +18,8 @@ specific species without wandering the world.
 Open the table's GUI and use the **slider** to choose how many Pokémon a re-roll spawns, up to the
 tier's **spawn cap** (Basic 5, Advanced 8, Expert 12). The re-roll counts the Pokémon that really
 landed and keeps drawing spots until it reaches that number or runs out of tries, and the
-"Spawned N fresh" message counts the same Pokémon the re-roll log lists.
+"Spawned N fresh" message counts the same Pokémon the re-roll log lists. It never goes over the
+number: a group spawn that lands more than are still missing has the extras removed.
 
 The basket in the table can change the batch: an [Alpha Basket](picnic-tables.md#the-special-baskets)
 spawns only half (rounded up), each with a 10% chance to be an alpha, and the screen shows the smaller
