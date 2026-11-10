@@ -29,7 +29,7 @@
         {% set landing = site == "landing" %}
         {% for entry in wiki.menu %}
           {% if entry == "mods" %}
-            {% for key, mod in config.extra.mod_versions.items() %}
+            {% for key, mod in config.extra.mod_versions.items() if not (config.extra.mod_specs[key] or {}).discontinued %}
               <li class="md-tabs__item{% if key == site %} md-tabs__item--active{% endif %}">
                 <a href="{{ ((key ~ '/') | url) if key == site else wiki.url ~ key ~ '/' }}" class="md-tabs__link">{{ mod.name }}</a>
               </li>

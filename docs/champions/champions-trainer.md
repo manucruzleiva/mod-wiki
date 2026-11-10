@@ -9,29 +9,19 @@ Prices are the same as before. [Training Costs](training-costs.md) lists them.
 
 ## When a trainer is required
 
-It depends on [PokeTowns](../poketowns/index.md):
-
-| | Where changes are bought |
-|---|---|
-| **PokeTowns installed** | At a Champions Trainer. One stands in every Pokémon Center. |
-| **No PokeTowns** | From the summary, anywhere, as before 2.0.0. A trainer still works if an operator places one. |
-
-An operator can override this either way with a command, which is saved to the config file:
+By default it isn't: changes are bought from the summary, anywhere, as before 2.0.0, and a trainer
+an operator places sells them too. An operator can turn the requirement on with a command, which is
+saved to the config file:
 
 ```
 /champions config trainer required on      always at a trainer
 /champions config trainer required off     always from the summary
-/champions config trainer required auto    back to the default above
+/champions config trainer required auto    only with PokeTowns, which was discontinued, so off
 ```
 
 ## Where to find one
 
-With PokeTowns, every [Pokémon Center](../poketowns/center-and-mart.md) has a Champions Trainer
-standing beside the counter, three blocks along from Nurse Joy. It appears the first time the
-Center loads, so Centers in a world generated before this update get one too.
-
-If an operator removes a Center's trainer, it does not come back. To stop placing them at all, use
-`/champions config trainer inCenters false`. Trainers already placed stay.
+Wherever an operator has placed one: the mod does not put trainers in the world by itself.
 
 ## Placing a trainer
 

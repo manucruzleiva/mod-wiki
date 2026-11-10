@@ -23,8 +23,7 @@ Routes runs on **Minecraft 1.21.1 to 1.21.11 and 26.1 to 26.3**, on **Fabric** a
 | Cloth Config | bundles AutoConfig |
 
 Optional but integrated: **Waystones**, **Fabric Waystones**, **Xaero's Minimap / World Map**,
-**JourneyMap**, **[Cobblemon PokeTowns](../poketowns/index.md)** and
-**[Cobblemon Picnic](../picnic/index.md)** — see [Map Integration](map-integration.md).
+**JourneyMap** and **[Cobblemon Picnic](../picnic/index.md)** — see [Map Integration](map-integration.md).
 
 The mod does **not** bundle these — install them alongside it.
 

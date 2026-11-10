@@ -31,7 +31,7 @@ really built.
   graded to the land, bridge the water, bore through what they cannot climb, share a trunk where they
   run together, and get names like *Route 3: Steep Forest Pass*.
 - 🧭 **[Map integration](map-integration.md)** (optional): waypoints and chunk paint on Xaero's maps
-  and JourneyMap, waystones named after their towns, and PokeTowns markers on the Pokémon Center.
+  and JourneyMap, and waystones named after their towns.
 - 🛣️ **[Roads by hand](commands.md#road-a-road-through-land-already-explored)**: join two towns with
   the Road Planner and build the road even through land you have already explored.
 - 🧩 **[World-creation tab](configuration.md)**: a dedicated **ROUTES** tab on the create-world

@@ -14,13 +14,4 @@ exclude_docs: |
   !/stylesheets/
 
 nav:
-  - Cobblemon PokeTowns:
-      - poketowns/index.md
-      - Getting Started: poketowns/getting-started.md
-      - Settlements: poketowns/settlements.md
-      - Pokémon Center & Poké Mart: poketowns/center-and-mart.md
-      - Gyms: poketowns/gyms.md
-      - For Pack Authors: poketowns/pack-authors.md
-      - Configuration: poketowns/configuration.md
-      - Troubleshooting: poketowns/troubleshooting.md
-      - Community Credits: poketowns/credits.md
+  - Cobblemon PokeTowns: poketowns/index.md
