@@ -22,8 +22,10 @@ out as the world generates. A **new world** gives you the intended experience; s
 [Getting Started](getting-started.md). To join two towns in land you have already explored, use
 [`/routes road`](commands.md#road-a-road-through-land-already-explored).
 
-A world made with the classic generator of Routes 1.x (before 2.0) is **frozen**: it loads and plays
-as before, keeps its roads, map paint, zone banners and Nuzlocke zones, and never grows a new road.
+A world made with the classic generator (Routes 0.77.0 or 1.0.0, or one where the old `use_gen2`
+setting was turned off by hand) is no longer supported: the roads already built stay in the world, but
+it loses its old map paint, zone banners and town and route names, and new chunks get today's roads
+like any other world.
 
 ## A town I expected is not connected
 

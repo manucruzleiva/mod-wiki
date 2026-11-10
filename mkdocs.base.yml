@@ -104,7 +104,7 @@ extra:
   # mismo cambio que reescribe las paginas.
   # Una entrada por linea, como estan: el script las lee con una regex.
   mod_versions:
-    routes:         { name: Routes,                         version: 2.0.85,  modrinth: PfmV1XPQ, repo: routes }
+    routes:         { name: Routes,                         version: 2.0.131, modrinth: PfmV1XPQ, repo: routes }
     nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.62, modrinth: wHlszYZN, repo: cobblemon-nuzlocke }
     picnic:         { name: Cobblemon Picnic,               version: 5.0.0, modrinth: sfptxo0H, repo: cobblemon-picnic }
     cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.1.0, modrinth: JNfSyMuQ, repo: cobblemon-hms }
@@ -156,7 +156,7 @@ extra:
     ccs:            { name: Cobblemon Cities & Structures, modrinth: cobblemon-cities-structures }
   mod_specs:
     routes:
-      minecraft: "1.21.1–1.21.11 · 26.1–26.3"
+      minecraft: "1.21.1–1.21.11 · 26.3"
       fabric: [fabric-api, architectury, cloth-config]
       neoforge: [architectury, cloth-config]
       optional:
@@ -166,8 +166,11 @@ extra:
         - [xaero-worldmap, chunk paint on the full-screen map]
         - [journeymap, "waypoints and chunk paint, as on Xaero's"]
         - [picnic, about 3 rest stops in 100 are a picnic table]
+        - [rct, "route trainers beside the roads"]
+        - [ccs, "its cities are towns of the road network"]
       notes:
         Java: 21 for Minecraft 1.21.x, 25 for 26.x
+        Cobblemon: "1.8 for route Pokémon along the roads; Routes runs without Cobblemon"
       curseforge: 1584243
     nuzlocke:
       minecraft: "1.21.1"

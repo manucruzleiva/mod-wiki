@@ -346,6 +346,8 @@ rejoining.
 | `/routesmap opacity city\|route\|area <0-100>` | how strong that category's tint is; **0 hides it** |
 | `/routesmap colour city\|route\|area <colour>` | that category's colour: `magenta`, `orange`, `teal`, `red`, `green`, `blue`, `yellow` or `white` |
 | `/routesmap waypoints per_category\|all_in_one` | one waypoint set per category, so each can be hidden on its own — or one set for the whole mod, so a single switch hides them all |
+| `/routesmap waypoints custom [name]` | every waypoint goes into the set (or JourneyMap group) with that name; use the name of one of your own sets to mix them in. Without a name it keeps the last one, `Routes` at first |
+| `/routesmap waypoints off` | Routes adds no waypoints to Xaero's maps or JourneyMap, and shows no *Waypoint discovered* toast |
 
 A colour drives the tint and the matching waypoints together, so the map and its markers always agree;
 the waypoints take it on your next join. A new grouping re-files each waypoint as you rediscover it.
@@ -374,9 +376,9 @@ usually what you want.
 | `debug paint [r]` | 1–32, def. 8 | ⚠️ **draws** the planned roads into the chunks around you that are already generated, and paints them on the map, then says how many chunks it touched |
 | `debug areas [r]` | 1–48, def. 16 | ⚠️ **places a sponge** on top of every enclosed-area chunk in range, so you can see where the areas are |
 | `debug verify [r]` | 8–512, def. 128 | walks the roads in range and reports anything that does not add up |
-| `debug gaps [r]` | 8–512, def. 128 | every place a road, a tunnel or a bridge hands over to the next, and the size of the step there; a step of two blocks or more says whether it has a ladder, and if not why (too tall, at a bridge or tunnel, on a chunk border…). **Where a "the road has a hole in it" report starts** |
+| `debug gaps [r]` | 8–512, def. 128 | measured on the road as it was really laid (climb ladders skipped, a slab counted as half a block): every place a road, a tunnel or a bridge hands over to the next, and the size of the step there; a step of two blocks or more says whether it has a ladder, and if not why (too tall, at a bridge or tunnel, on a chunk border…). **Where a "the road has a hole in it" report starts** |
 | `debug bridge [r]` | 8–512, def. 128 | walks each bridge span and reports cells with no deck, with coordinates |
-| `debug bore [r]` | 8–512, def. 128 | what stands in the way inside each tunnel in range: every block id that would stop a walker, with how many and where the first one is. **Where a "the tunnel is blocked" report starts** |
+| `debug bore [r]` | 8–512, def. 128 | what stands in the way inside each tunnel in range: every block id that would stop a walker, with how many and where the first one is. The first few blocks at each end belong to the entrance ramp and are counted apart as *hand-over* columns; whether the step from the ramp into the tunnel is walkable is what `debug verify` measures. **Where a "the tunnel is blocked" report starts** |
 | `debug forks [r]` | 8–512, def. 128 | the ground around each fork in range, flattest last, and how many of its signposts are standing |
 | `debug step` | — | for the column you stand on and its four neighbours: the height the road was planned at, the real ground, the height the road is actually built at, and whether it got a slab, a full block or a stair, and why. Tells a badly planned step from one the builder had to cut short |
 | `debug spawn` | — | ⚠️ **moves the world spawn**: runs the spawn finder again, puts the spawn in the town it picks, and says why |
@@ -391,5 +393,5 @@ usually what you want.
 
 !!! note "Commands of the classic generator"
     `scan`, `connect`, `addcity`, `delcity`, `weave`, `repaint`, `reset` and `debug structures` belonged
-    to the road generator Routes retired in 2.0. They still answer, with one line that names the command
-    to use instead, if there is one.
+    to the road generator Routes retired in 2.0, and are gone. Use `/routes settlement add`,
+    `settlement remove` and `settlement connect` instead.
