@@ -1064,7 +1064,28 @@ Typing a group name and pressing <strong>Tab</strong> suggests its settings.</p>
 <td><code>rate</code></td>
 <td>1 or more</td>
 <td><code>10</code></td>
-<td>Experience per CobbleDollar, rounded up.</td>
+<td>Experience per unit of money, rounded up.</td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td><code>money</code></td>
+<td><code>COBBLEDOLLARS</code> / <code>IMPACTOR</code> / <code>ITEM</code></td>
+<td><code>COBBLEDOLLARS</code></td>
+<td>What "money" in <code>order</code> charges. <code>COBBLEDOLLARS</code> in <code>order</code>'s values means this money.</td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td><code>impactorCurrency</code></td>
+<td>an Impactor currency key</td>
+<td><code>impactor:dollars</code></td>
+<td>The Impactor currency charged when <code>money</code> is <code>IMPACTOR</code>.</td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td><code>item</code></td>
+<td>an item id or <code>#namespace:tag</code></td>
+<td><code>cobblemon:relic_coin</code></td>
+<td>The item taken, one per unit, when <code>money</code> is <code>ITEM</code>. In the file this is <code>costItem</code>.</td>
 </tr>
 <tr>
 <td><code>trainer</code></td>
@@ -1117,6 +1138,9 @@ host.</p>
 <span class="w">  </span><span class="nt">"xpPerEggMove"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"costOrder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XP_ONLY"</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"xpPerCobbleDollar"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"money"</span><span class="p">:</span><span class="w"> </span><span class="s2">"COBBLEDOLLARS"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"impactorCurrency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"impactor:dollars"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"costItem"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cobblemon:relic_coin"</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"trainerRequired"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AUTO"</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">"trainerInCenters"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="p">}</span>

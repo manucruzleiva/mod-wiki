@@ -893,10 +893,30 @@ players breed for, and breeding should stay the cheaper road.</p>
 <p>Prices are quoted in <strong>experience points</strong>, not levels: <code>Costs 640 experience</code>. A level is worth more
 experience the higher you are, so the same purchase takes more of a low-level bar than a high one.</p>
 <h2 id="currency">Currency<a class="headerlink" href="#currency" title="Permanent link">&para;</a></h2>
-<p>By default everything is paid in experience. A server with
-<a href="https://modrinth.com/mod/cobbledollars">CobbleDollars</a>
-(<a href="https://www.curseforge.com/minecraft/mc-mods/cobbledollars">CurseForge</a>) can bill in its money
-instead.</p>
+<p>By default everything is paid in experience. A server can bill in <strong>money</strong> instead, and the
+<strong>Money</strong> setting picks which one:</p>
+<table>
+<thead>
+<tr>
+<th>Money</th>
+<th>What is charged</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CobbleDollars</strong> (default)</td>
+<td>The <a href="https://modrinth.com/mod/cobbledollars">CobbleDollars</a> (<a href="https://www.curseforge.com/minecraft/mc-mods/cobbledollars">CurseForge</a>) balance</td>
+</tr>
+<tr>
+<td><strong>Impactor currency</strong></td>
+<td>An <a href="https://modrinth.com/mod/impactor">Impactor</a> currency, <code>impactor:dollars</code> unless the server names another, the same money shops like SkiesShop or Move Tutors bill in</td>
+</tr>
+<tr>
+<td><strong>An item</strong></td>
+<td>Items from your inventory, one per unit: <code>cobblemon:relic_coin</code> by default, or any item of a tag such as a pack tag of EV feathers and vitamins</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
@@ -910,27 +930,29 @@ instead.</p>
 <td>Always experience</td>
 </tr>
 <tr>
-<td><strong>Experience, then CobbleDollars</strong></td>
-<td>Experience if you have enough, otherwise CobbleDollars</td>
+<td><strong>Experience, then money</strong></td>
+<td>Experience if you have enough, otherwise money</td>
 </tr>
 <tr>
-<td><strong>CobbleDollars, then experience</strong></td>
-<td>CobbleDollars if you have enough, otherwise experience</td>
+<td><strong>Money, then experience</strong></td>
+<td>Money if you have enough, otherwise experience</td>
 </tr>
 <tr>
-<td><strong>CobbleDollars only</strong></td>
-<td>Always CobbleDollars</td>
+<td><strong>Money only</strong></td>
+<td>Always money</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li><strong>A price is never split</strong> between the two: one currency pays the whole of it.</li>
 <li><strong>Prices stay written in experience</strong> and are converted at the server's rate, 10 experience per
-  CobbleDollar by default, rounded up. A 500-experience move costs 50 CobbleDollars.</li>
-<li><strong>Without CobbleDollars installed</strong>, everything is paid in experience, whatever the setting says.</li>
+  unit of money by default, rounded up. A 500-experience move costs 50 CobbleDollars, 50 Impactor
+  dollars or 50 items.</li>
+<li><strong>When the money cannot be charged</strong> (CobbleDollars or Impactor not installed, or the item does not
+  exist), everything is paid in experience, whatever the setting says.</li>
 </ul>
-<p>Whenever CobbleDollars can pay, the page cannot see your balance, so the buttons stay live and the
-server is the one that decides whether you can afford it.</p>
+<p>Whenever money can pay, the page cannot see your balance, so the buttons stay live and the server is
+the one that decides whether you can afford it.</p>
 <h2 id="where-the-experience-comes-from">Where the experience comes from<a class="headerlink" href="#where-the-experience-comes-from" title="Permanent link">&para;</a></h2>
 <p>Vanilla Minecraft only pays experience for defeating mobs, and a Cobblemon world has little of that.
 <a href="https://modrinth.com/mod/cobblemon-playerxp">Cobblemon: PlayerXP</a>
