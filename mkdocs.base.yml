@@ -109,7 +109,7 @@ extra:
     picnic:         { name: Cobblemon Picnic,               version: 5.0.0, modrinth: sfptxo0H, repo: cobblemon-picnic }
     cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.1.0, modrinth: JNfSyMuQ, repo: cobblemon-hms }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0, modrinth: S01tPZTk, repo: cobblemon-raid-icons }
-    champions:      { name: Cobblemon Champions Training,   version: 2.0.0, modrinth: PlTQXswh, repo: cobblemon-champions-training }
+    champions:      { name: Cobblemon Champions Training,   version: 2.1.0, modrinth: PlTQXswh, repo: cobblemon-champions-training }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr, repo: tree-carve }
     mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.1.0, modrinth: ShgrcSQY, repo: cobblemon-mid-battle-exp }
     # PokeTowns esta discontinuado: queda solo su pagina de aviso, y sin modrinth ni repo no se vigila.
@@ -154,6 +154,7 @@ extra:
     mega-showdown:  { name: "Cobblemon: Mega Showdown",  modrinth: cobblemon-mega-showdown }
     pokebelt:       { name: PokeBelt,                    modrinth: pokebelt-cobblemon }
     ccs:            { name: Cobblemon Cities & Structures, modrinth: cobblemon-cities-structures }
+    impactor:       { name: Impactor,                    modrinth: impactor }
   mod_specs:
     routes:
       minecraft: "1.21.1–1.21.11 · 26.1–26.3"
@@ -218,6 +219,8 @@ extra:
       optional:
         - [playerxp, experience for the battles you win]
         - [cobbledollars, a second currency]
+        - [impactor, "pay training in an Impactor currency (from 2.1.0)"]
+        - [ccs, "a Champions Trainer in every Pokémon Center (from 2.1.0)"]
         - [cloth-config, "the settings screen (with Mod Menu on Fabric)"]
       curseforge: 1676756
     tree-carve:
