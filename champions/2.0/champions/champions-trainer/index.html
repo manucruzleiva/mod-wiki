@@ -276,10 +276,6 @@
               </li>
             
               <li class="md-tabs__item">
-                <a href="https://manucruzleiva.github.io/mod-wiki/poketowns/" class="md-tabs__link">Cobblemon PokeTowns</a>
-              </li>
-            
-              <li class="md-tabs__item">
                 <a href="https://manucruzleiva.github.io/mod-wiki/action-combat/" class="md-tabs__link">Cobblemon Action Combat</a>
               </li>
             
@@ -929,36 +925,15 @@ the moves of a Pokémon in training. Where a trainer is required, the summary sc
 of it anywhere you open it. It just doesn't sell anything on its own.</p>
 <p>Prices are the same as before. <a href="../training-costs/">Training Costs</a> lists them.</p>
 <h2 id="when-a-trainer-is-required">When a trainer is required<a class="headerlink" href="#when-a-trainer-is-required" title="Permanent link">&para;</a></h2>
-<p>It depends on <a href="https://manucruzleiva.github.io/mod-wiki/poketowns/latest/poketowns/">PokeTowns</a>:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Where changes are bought</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>PokeTowns installed</strong></td>
-<td>At a Champions Trainer. One stands in every Pokémon Center.</td>
-</tr>
-<tr>
-<td><strong>No PokeTowns</strong></td>
-<td>From the summary, anywhere, as before 2.0.0. A trainer still works if an operator places one.</td>
-</tr>
-</tbody>
-</table>
-<p>An operator can override this either way with a command, which is saved to the config file:</p>
+<p>By default it isn't: changes are bought from the summary, anywhere, as before 2.0.0, and a trainer
+an operator places sells them too. An operator can turn the requirement on with a command, which is
+saved to the config file:</p>
 <div class="highlight"><pre><span></span><code>/champions config trainer required on      always at a trainer
 /champions config trainer required off     always from the summary
-/champions config trainer required auto    back to the default above
+/champions config trainer required auto    only with PokeTowns, which was discontinued, so off
 </code></pre></div>
 <h2 id="where-to-find-one">Where to find one<a class="headerlink" href="#where-to-find-one" title="Permanent link">&para;</a></h2>
-<p>With PokeTowns, every <a href="https://manucruzleiva.github.io/mod-wiki/poketowns/latest/poketowns/center-and-mart/">Pokémon Center</a> has a Champions Trainer
-standing beside the counter, three blocks along from Nurse Joy. It appears the first time the
-Center loads, so Centers in a world generated before this update get one too.</p>
-<p>If an operator removes a Center's trainer, it does not come back. To stop placing them at all, use
-<code>/champions config trainer inCenters false</code>. Trainers already placed stay.</p>
+<p>Wherever an operator has placed one: the mod does not put trainers in the world by itself.</p>
 <h2 id="placing-a-trainer">Placing a trainer<a class="headerlink" href="#placing-a-trainer" title="Permanent link">&para;</a></h2>
 <p>The trainer is a regular Cobblemon NPC, so an operator can place one anywhere with Cobblemon's own
 command:</p>

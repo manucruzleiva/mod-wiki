@@ -276,10 +276,6 @@
               </li>
             
               <li class="md-tabs__item">
-                <a href="https://manucruzleiva.github.io/mod-wiki/poketowns/" class="md-tabs__link">Cobblemon PokeTowns</a>
-              </li>
-            
-              <li class="md-tabs__item">
                 <a href="https://manucruzleiva.github.io/mod-wiki/action-combat/" class="md-tabs__link">Cobblemon Action Combat</a>
               </li>
             
@@ -905,8 +901,7 @@
 <strong>config screen</strong>, from <strong><code>/champions config</code></strong> in game, or in the settings file.</p>
 <h2 id="placing-a-champions-trainer">Placing a Champions Trainer<a class="headerlink" href="#placing-a-champions-trainer" title="Permanent link">&para;</a></h2>
 <p><code>/spawnnpc cobblemon_champions_training:champions_trainer</code>, for an operator. This is Cobblemon's own
-command. With PokeTowns, every Pokémon Center already has one. See
-<a href="../champions-trainer/">Champions Trainer</a>.</p>
+command. See <a href="../champions-trainer/">Champions Trainer</a>.</p>
 <h2 id="champions-sp-slot"><code>/champions sp [slot]</code><a class="headerlink" href="#champions-sp-slot" title="Permanent link">&para;</a></h2>
 <p>A read-out of one party Pokémon, for anyone. <code>slot</code> is 1 to 6, counted the way your party screen
 counts, and defaults to 1.</p>
@@ -1067,15 +1062,15 @@ Typing a group name and pressing <strong>Tab</strong> suggests its settings.</p>
 <td><code>trainer</code></td>
 <td><code>required</code></td>
 <td><code>AUTO</code> / <code>ON</code> / <code>OFF</code></td>
-<td><code>AUTO</code></td>
-<td>Whether changes are bought only at a <a href="../champions-trainer/">Champions Trainer</a>. <code>AUTO</code>: only with PokeTowns installed.</td>
+<td><code>OFF</code></td>
+<td>Whether changes are bought only at a <a href="../champions-trainer/">Champions Trainer</a>. <code>AUTO</code> meant only with PokeTowns, which was discontinued, so it acts as <code>OFF</code>. A config written before 2.0.0 may still say <code>AUTO</code>.</td>
 </tr>
 <tr>
 <td><code>trainer</code></td>
 <td><code>inCenters</code></td>
 <td><code>true</code> / <code>false</code></td>
 <td><code>true</code></td>
-<td>A trainer is placed in every PokeTowns Pokémon Center. Does nothing without PokeTowns.</td>
+<td>Placed a trainer in every PokeTowns Pokémon Center. PokeTowns was discontinued, so it does nothing.</td>
 </tr>
 </tbody>
 </table>
