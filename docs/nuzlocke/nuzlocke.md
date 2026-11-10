@@ -34,6 +34,23 @@ flowchart TD
 | 📈 **Level cap** | Follows your trainer card. Catches above it go straight to the PC, and no wild Pokémon above it turns a hit into a battle. |
 | 🎒 **No bag in battle** | The battle bag is closed. A second mode blocks **only healing**, leaving X items legal — Poké Balls are never blocked. |
 
+### ⚔️ In Action Combat fights
+
+With [Cobblemon Action Combat](../action-combat/index.md) installed, its real-time fights play by the
+same rules as a turn-based battle. Without it nothing changes.
+
+| | |
+| --- | --- |
+| **The encounter** | A wild fight counts as the zone's first encounter, and a capture in it is recorded. Running from it loses the encounter. |
+| **Intruders** | A wild Pokémon that joins the fight mid-way is never the zone's encounter: you can fight it and knock it out, but under the first-encounter rule it cannot be caught. A shiny still can. |
+| **Losing** | Losing the fight whites you out. A road-trainer fight you finish is no longer owed. |
+| **Soul Link** | Shared deaths land once the fight is over. |
+| **No running** | With **No forfeit** on, holding the flee key does nothing but remind you there is no surrender. Switching to another Pokémon still works. Needs Action Combat 0.1.42 or newer. |
+
+!!! warning "Not yet"
+    Defeated Catch opens no catch window in an Action Combat fight: knocking out the zone's encounter
+    there loses the zone.
+
 ### Zones
 
 A zone is a place, and the place decides the rule. What counts as one place is your choice at world
@@ -140,24 +157,20 @@ everyone — see [Gym Leader Challenge settings](commands.md#gym-leader-challeng
 
 See [Commands & Config](commands.md).
 
-## What it builds into the world
+## Trainers and the Escape Rope
 
 <div class="grid cards" markdown>
 
 -   ### ⚔️ Trainers on the roads
 
-    They challenge you on sight and duel each other between fights — but only when it is fair: you
+    [Routes](../routes/index.md) places them; this mod sets the rules they follow. They challenge
+    you on sight and duel each other between fights — but only when it is fair: you
     are not already battling, they are off cooldown, the levels are close, and **you are in front of
     them**. Nothing challenges you from behind. Crouching holds them off, so you can walk up and
     use the trainer's own menu, and so does riding over a drop with no ground to land on.
 
     A trainer in a battle cannot be killed, so the fight always resolves. A trainer who has ended
     a run carries a ☠ tally of them in its name — and so does every other trainer of that name.
-
--   ### 🌿 Pokémon on the roads
-
-    Every road carries its own encounters: hidden sources set into the paving, each offering one
-    family at its own level. See [Route Pokémon](#route-pokemon).
 
 -   ### 🧗 The Escape Rope
 
@@ -170,22 +183,10 @@ See [Commands & Config](commands.md).
     job of PokeGyms. Gyms already built in an older world stay standing. Wherever a Gym
     Leader stands, **leaders wait to be challenged** — you walk in and ask. Lt. Surge is the exception.
 
-## 🌿 Route Pokémon
-
-Every generated road carries encounter sources, disguised Cobblemon habitat blocks set into the
-paving. Each one offers **one family of its own**: the evolution stage that fits its level, and, when
-that stage is about to evolve, about one of the next stage for every three, five levels higher.
-
-- **Most sources offer something native to where they stand**: the biome on land, the sea or river
-  under a water crossing. A source on a bridge deck leans toward Flying types instead.
-- **Each source keeps its own number of Pokémon out**, picked once from a range.
-- **Now and then a source spawns an alpha**, which counts as the zone's encounter like any other.
-- **Now and then a source spawns an aggressive Pokémon**, which comes after you on sight; its first
-  hit starts a battle.
-- **A route too short for the spacing still gets one source**, halfway along.
-
-Needs Cobblemon 1.8. Spacing, levels and odds are all settings — see
-[Route Pokémon settings](commands.md#route-pokemon).
+!!! note "Road trainers and road Pokémon come from Routes"
+    Since 1.5.65 this mod no longer places trainers or wild Pokémon sources on the roads:
+    [Routes](../routes/index.md) does, so no road gets two sets. The trainer rules above still apply to
+    every trainer on the road. Worlds already played keep what is standing there.
 
 ## 🧗 Escape Rope
 

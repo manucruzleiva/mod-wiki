@@ -44,9 +44,9 @@ die as one.
     One elemental type for the whole run — your starters are drawn from it, and your team may only
     carry it. Offered to each player when they pick a starter.
 
--   ### 🗺️ [Trainers and Pokémon on the roads](nuzlocke.md#what-it-builds-into-the-world)
+-   ### 🗺️ [Rules for the road trainers](nuzlocke.md#trainers-and-the-escape-rope)
 
-    Trainers along the roads, and wild Pokémon of each road's own.
+    Routes places the trainers along its roads; this mod decides when they may challenge you.
 
 </div>
 

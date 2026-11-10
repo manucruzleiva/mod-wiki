@@ -133,8 +133,8 @@ here.
 
 ## Compatibility
 
-Every mod runs on **Minecraft 1.21.1**, on **Fabric** and **NeoForge**; Tree Carve also has jars for
-26.1 to 26.3. *Both* means the server and every player's game. Each mod's home page ends with the
+Every mod runs on **Minecraft 1.21.1**, on **Fabric** and **NeoForge**; Routes and Tree Carve also
+have jars for newer versions. *Both* means the server and every player's game. Each mod's home page ends with the
 full list for your loader.
 
 <!-- mod-compat -->
