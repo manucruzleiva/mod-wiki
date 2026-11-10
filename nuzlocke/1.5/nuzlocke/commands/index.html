@@ -649,17 +649,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#route-pokemon" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Route Pokémon
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -847,17 +836,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#route-pokemon" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Route Pokémon
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -876,7 +854,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="wHlszYZN" data-version="1.5.62">Documented against Cobblemon Nuzlocke & Soul Link 1.5.62</p>
+    <p class="wiki-mod-version" data-modrinth="wHlszYZN" data-version="1.5.66">Documented against Cobblemon Nuzlocke & Soul Link 1.5.66</p>
   
                   
 
@@ -1238,17 +1216,12 @@ has its rules overwritten. Picking <strong>Hardcore</strong> at world creation t
 <tr>
 <td>Route trainers</td>
 <td style="text-align: center;">on</td>
-<td>needs a trainer mod; inert without one</td>
+<td>this mod's rules for the trainers Routes places; off = they behave as the trainer mod alone makes them. Needs a trainer mod</td>
 </tr>
 <tr>
 <td>Trainer entity ID</td>
 <td style="text-align: center;"><code>rctmod:trainer</code></td>
-<td>which NPC to place</td>
-</tr>
-<tr>
-<td>Trainer density</td>
-<td style="text-align: center;">Medium</td>
-<td>Low / Medium / High / Brutal — scales with route length</td>
+<td>which NPC the rules apply to</td>
 </tr>
 <tr>
 <td>Trainer sight range</td>
@@ -1291,11 +1264,6 @@ has its rules overwritten. Picking <strong>Hardcore</strong> at world creation t
 <td>share that stay put instead of wandering, 0–100</td>
 </tr>
 <tr>
-<td>Water crossing trainers</td>
-<td style="text-align: center;">—</td>
-<td>name fragments used to pick who stands on a water crossing</td>
-</tr>
-<tr>
 <td>Fair-fight guard</td>
 <td style="text-align: center;">on</td>
 <td>a trainer too far above your strongest Pokémon never picks the fight</td>
@@ -1307,90 +1275,8 @@ has its rules overwritten. Picking <strong>Hardcore</strong> at world creation t
 </tr>
 </tbody>
 </table>
-<h3 id="route-pokemon">Route Pokémon<a class="headerlink" href="#route-pokemon" title="Permanent link">&para;</a></h3>
-<p>The encounter sources set into every road — what they offer is on the
-<a href="../nuzlocke/#route-pokemon">ruleset page</a>. Needs Cobblemon 1.8.</p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th style="text-align: center;">Default</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Route encounters</td>
-<td style="text-align: center;">On</td>
-<td>Off leaves roads with the ordinary spawns</td>
-</tr>
-<tr>
-<td>Distance between sources</td>
-<td style="text-align: center;">128</td>
-<td>blocks of road from one source to the next, 32–512</td>
-</tr>
-<tr>
-<td>Source looks like</td>
-<td style="text-align: center;"><em>(empty)</em></td>
-<td>empty: each source looks like the block it was set into; a block id (e.g. <code>minecraft:diamond_block</code>) makes every source that block</td>
-</tr>
-<tr>
-<td>Fewest Pokémon out per source</td>
-<td style="text-align: center;">2</td>
-<td>the bottom of the range each source picks its number from, 1–64</td>
-</tr>
-<tr>
-<td>Most Pokémon out per source</td>
-<td style="text-align: center;">10</td>
-<td>the top of that range: how many of its own a source can have out at once</td>
-</tr>
-<tr>
-<td>Source spawn chance per tick</td>
-<td style="text-align: center;">100%</td>
-<td>100 refills a source at once, 1 is about one Pokémon every five seconds</td>
-</tr>
-<tr>
-<td>Wild spawns held back around a source</td>
-<td style="text-align: center;">16</td>
-<td>blocks around a source where only its own Pokémon appear, 0–64; 0 = ordinary spawns there too</td>
-</tr>
-<tr>
-<td>Typical source level</td>
-<td style="text-align: center;">32</td>
-<td>each source has its own five-level band, drawn from a bell curve centred here</td>
-</tr>
-<tr>
-<td>Source level spread</td>
-<td style="text-align: center;">14</td>
-<td>how widely sources spread: most sit between 25 and 40, level 1–5 is rare and 75+ rarer still</td>
-</tr>
-<tr>
-<td>Aggressive chance at a source</td>
-<td style="text-align: center;">10%</td>
-<td>chance that a Pokémon a source spawns is aggressive; 0 = never</td>
-</tr>
-<tr>
-<td>Sources native to their biome</td>
-<td style="text-align: center;">60%</td>
-<td>share of sources that offer a Pokémon native to where they stand (Flying types on a bridge); 0 = any species</td>
-</tr>
-<tr>
-<td>Alpha chance at a source</td>
-<td style="text-align: center;">2%</td>
-<td>chance that a Pokémon a source spawns is an alpha; 0 = never</td>
-</tr>
-<tr>
-<td>Allow Legendaries · Ultra Beasts · Paradox Pokémon</td>
-<td style="text-align: center;">off</td>
-<td></td>
-</tr>
-<tr>
-<td>Allow starters</td>
-<td style="text-align: center;">off</td>
-<td>every family in the starter picker stays off the roads</td>
-</tr>
-</tbody>
-</table>
+<p>Trainer density, water-crossing trainers and the Route Pokémon settings moved to Routes in 1.5.65,
+along with the trainers and Pokémon themselves.</p>
 <p><a href="../soul-link/#settings">Soul Link</a> has its own settings.</p>
 
 
