@@ -106,7 +106,7 @@ extra:
   mod_versions:
     routes:         { name: Routes,                         version: 2.0.131, modrinth: PfmV1XPQ, repo: routes }
     nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.66, modrinth: wHlszYZN, repo: cobblemon-nuzlocke }
-    picnic:         { name: Cobblemon Picnic,               version: 5.0.0, modrinth: sfptxo0H, repo: cobblemon-picnic }
+    picnic:         { name: Cobblemon Picnic,               version: 5.1.0, modrinth: sfptxo0H, repo: cobblemon-picnic }
     cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.4.2, modrinth: JNfSyMuQ, repo: cobblemon-hms }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0, modrinth: S01tPZTk, repo: cobblemon-raid-icons }
     champions:      { name: Cobblemon Champions Training,   version: 2.1.0, modrinth: PlTQXswh, repo: cobblemon-champions-training }
@@ -140,6 +140,7 @@ extra:
     architectury:   { name: Architectury API,            modrinth: architectury-api }
     cloth-config:   { name: Cloth Config,                modrinth: cloth-config }
     modmenu:        { name: Mod Menu,                    modrinth: modmenu }
+    rei:            { name: Roughly Enough Items,        modrinth: rei }
     routes:         { name: Routes,                      page: routes/index.md }
     raiddens:       { name: Cobblemon Raid Dens,         modrinth: cobblemonraiddens }
     xaero-minimap:  { name: Xaero's Minimap,             modrinth: xaeros-minimap }
@@ -194,6 +195,7 @@ extra:
       neoforge: [architectury, kff]
       optional:
         - [cloth-config, "the settings screen (with Mod Menu on Fabric)"]
+        - [rei, "each item's colours fold into one expandable recipe entry"]
       curseforge: 1581251
     cobblemon-hms:
       minecraft: "1.21.1"
