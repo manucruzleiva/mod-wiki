@@ -11,16 +11,60 @@
 
 ## Activation
 
-A partner HM fires from your **empty hand**: there is nothing to hold and nothing to select. The one
-choice left is the button:
+A partner HM always fires from your **empty hand**: there is nothing to hold and nothing to select.
+Two settings decide the rest: the button, and whether a click with something in hand counts too.
 
 | Setting | Options | Notes |
 |---|---|---|
 | **Activator button** | Left-click · Right-click · **either** *(default)* | Left never opens chests or doors; right is answered by interactable blocks first |
+| **Activation mode** | **Open fist** *(default)* · Trainer's Glove · Take over left-click · Take over right-click | What fires besides the empty hand (below) |
 
 ```
 /hms config activator button left|right|either
+/hms config activator mode open_fist|trainers_glove|take_over_left|take_over_right
 ```
+
+| Activation mode | A click with something in hand fires the HM… |
+|---|---|
+| **Open fist** | never: only an empty hand, as before 4.3 |
+| **Trainer's Glove** | on the activator button, while you carry a [Trainer's Glove](#trainers-glove) switched on, anywhere in your inventory |
+| **Take over left-click** | on left-click, whatever the activator button says |
+| **Take over right-click** | on right-click, whatever the activator button says |
+
+In every mode, **sneak** to skip the HM and mine, place or open things as usual. With nothing picked
+on the wheel, clicks are vanilla. Chests, doors and block placing still answer a right-click first.
+
+### Trainer's Glove
+
+A shaped recipe: five leather around a Poké Ball.
+
+<div class="cr-scroll">
+<div class="cr-craft" title="Shaped: 5× Leather + 1× Poké Ball → 1× Trainer's Glove">
+  <div class="cr-grid">
+    <div class="cr-slot"><img src="../../assets/items/leather.png" alt="Leather"></div>
+    <div class="cr-slot"><img src="../../assets/items/leather.png" alt="Leather"></div>
+    <div class="cr-slot"></div>
+    <div class="cr-slot"><img src="../../assets/items/leather.png" alt="Leather"></div>
+    <div class="cr-slot"><img src="../../assets/items/poke_ball.png" alt="Poké Ball"></div>
+    <div class="cr-slot"><img src="../../assets/items/leather.png" alt="Leather"></div>
+    <div class="cr-slot"></div>
+    <div class="cr-slot"><img src="../../assets/items/leather.png" alt="Leather"></div>
+    <div class="cr-slot"></div>
+  </div>
+  <div class="cr-arrow">➜</div>
+  <div class="cr-result"><img src="../../assets/items/trainers_glove.png" alt="Trainer's Glove"><span class="cr-count">1</span></div>
+</div>
+</div>
+
+| Ingredient | Amount |
+| --- | :---: |
+| <img class="cr-inline" src="../../assets/items/leather.png" alt=""> Leather | 5 |
+| <img class="cr-inline" src="../../assets/items/poke_ball.png" alt=""> Poké Ball | 1 |
+| **→ <img class="cr-inline" src="../../assets/items/trainers_glove.png" alt=""> Trainer's Glove** | **1** |
+
+**Right-click it** to switch it on or off; it glints while on. It only does something with the
+activation mode set to *Trainer's Glove*, and it works from any slot of your inventory, so it never
+has to be in your hand. Its own right-click never fires an HM.
 
 Two more switches sit next to it:
 
@@ -88,6 +132,7 @@ file, not yours.
 | **Guaranteed perfect IVs** | 0 | Rolled like any wild Ditto · 1 gives it one best stat · 6 is flawless |
 | **Level** | 15–45 | The band its level is rolled from, inclusive |
 | **TM price** | 4–32 relic coins | The coin band of the cheapest TMs, used only when `trader_offers.json` is first written |
+| **Pay with CobbleDollars** | off | With [CobbleDollars](https://modrinth.com/mod/cobbledollars) installed, the stall charges your balance instead of items ([below](#paying-with-cobbledollars)) |
 
 ```
 /hms config trader enabled <true|false>
@@ -96,6 +141,7 @@ file, not yours.
 /hms config trader ivs <0-6>
 /hms config trader levels <min> <max>
 /hms config trader coins <min> <max>
+/hms config trader cobbledollars <true|false>
 /hms config trader reload
 ```
 
@@ -128,6 +174,24 @@ move comes, the dearer and rarer its TM:
 A weight is relative, not a percentage: a coin TM is ten times as likely to be drawn as a TM-only
 one. Each entry takes one or two `{item, count}` costs (the two slots of a trade screen) by item id,
 so a pack can price in any item it likes. A TM missing from the file is never offered.
+
+### Paying with CobbleDollars
+
+With **Pay with CobbleDollars** on and the CobbleDollars mod installed, the stall opens as a chest of
+TMs instead of a trade screen: each TM shows its price, and a click buys it from your balance.
+Without the mod the switch does nothing and the stall keeps charging items.
+
+Prices come from the same `trader_offers.json`. An entry's own `cobbledollars` price wins; otherwise
+its item price is converted at the top-level `cobbledollar_rates`:
+
+| Item | CobbleDollars |
+|---|---|
+| 1 relic coin | 250 |
+| 1 relic coin pouch | 10,000 |
+| 1 relic coin sack | 30,000 |
+
+A TM priced in an item with no rate, and with no `cobbledollars` of its own, is not offered for
+CobbleDollars.
 
 It stops visiting a player for good once they catch it, and it keeps its distance from anyone who
 has caught one **or beaten one in battle**, so bring a friend who has done neither.
