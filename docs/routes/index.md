@@ -39,7 +39,7 @@ really built.
   decks and the handrails.
 - 🎮 Playing a Pokémon world? **[Cobblemon Nuzlocke & Soul Link](../nuzlocke/index.md)** is a separate
   add-on that builds on this one: it locks encounters to the routes, areas and towns generated here,
-  and adds the road trainers and the gyms beside towns.
+  and sets the rules the road trainers follow.
 
 ## Get it
 

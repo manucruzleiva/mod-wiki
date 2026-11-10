@@ -5,7 +5,7 @@ in full.
 
 ## Install
 
-1. Install **[Routes](../routes/index.md)** 1.2.158 or newer, and Cobblemon. The full list for your
+1. Install **[Routes](../routes/index.md)** 2.0.0 or newer, and Cobblemon. The full list for your
    loader is in the table at the bottom of the [home page](index.md#get-it).
 2. Drop the jar for **your** loader into `mods/`, never both loaders at once.
 3. On a server, install it **on the server and on every player's game**.

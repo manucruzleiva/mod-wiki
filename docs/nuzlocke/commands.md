@@ -110,9 +110,8 @@ How the challenge plays is on the [ruleset page](nuzlocke.md#gym-leader-challeng
 
 | Option | Default | Notes |
 | --- | :---: | --- |
-| Route trainers | on | needs a trainer mod; inert without one |
-| Trainer entity ID | `rctmod:trainer` | which NPC to place |
-| Trainer density | Medium | Low / Medium / High / Brutal — scales with route length |
+| Route trainers | on | this mod's rules for the trainers Routes places; off = they behave as the trainer mod alone makes them. Needs a trainer mod |
+| Trainer entity ID | `rctmod:trainer` | which NPC the rules apply to |
 | Trainer sight range | 15 | 0–64 blocks |
 | Trainer field of view | 180° | the cone you must stand in to be challenged, 30–360; 360 = they see behind them |
 | One challenge gate | on | every challenge goes through this mod's guards; off = the trainer mod also challenges on its own, ignoring them |
@@ -121,30 +120,10 @@ How the challenge plays is on the [ruleset page](nuzlocke.md#gym-leader-challeng
 | Trainer skirmishes | on | trainers duel each other nearby |
 | Trainers challenge on sight | on | off = they stay on the roads and never start a fight; you still battle them by right-clicking |
 | Trainers holding post | 70% | share that stay put instead of wandering, 0–100 |
-| Water crossing trainers | — | name fragments used to pick who stands on a water crossing |
 | Fair-fight guard | on | a trainer too far above your strongest Pokémon never picks the fight |
 | Max level gap | 5 | how many levels above your strongest Pokémon a trainer may be and still challenge you, 0–50 |
 
-### Route Pokémon
-
-The encounter sources set into every road — what they offer is on the
-[ruleset page](nuzlocke.md#route-pokemon). Needs Cobblemon 1.8.
-
-| Option | Default | Notes |
-| --- | :---: | --- |
-| Route encounters | On | Off leaves roads with the ordinary spawns |
-| Distance between sources | 128 | blocks of road from one source to the next, 32–512 |
-| Source looks like | *(empty)* | empty: each source looks like the block it was set into; a block id (e.g. `minecraft:diamond_block`) makes every source that block |
-| Fewest Pokémon out per source | 2 | the bottom of the range each source picks its number from, 1–64 |
-| Most Pokémon out per source | 10 | the top of that range: how many of its own a source can have out at once |
-| Source spawn chance per tick | 100% | 100 refills a source at once, 1 is about one Pokémon every five seconds |
-| Wild spawns held back around a source | 16 | blocks around a source where only its own Pokémon appear, 0–64; 0 = ordinary spawns there too |
-| Typical source level | 32 | each source has its own five-level band, drawn from a bell curve centred here |
-| Source level spread | 14 | how widely sources spread: most sit between 25 and 40, level 1–5 is rare and 75+ rarer still |
-| Aggressive chance at a source | 10% | chance that a Pokémon a source spawns is aggressive; 0 = never |
-| Sources native to their biome | 60% | share of sources that offer a Pokémon native to where they stand (Flying types on a bridge); 0 = any species |
-| Alpha chance at a source | 2% | chance that a Pokémon a source spawns is an alpha; 0 = never |
-| Allow Legendaries · Ultra Beasts · Paradox Pokémon | off | |
-| Allow starters | off | every family in the starter picker stays off the roads |
+Trainer density, water-crossing trainers and the Route Pokémon settings moved to Routes in 1.5.65,
+along with the trainers and Pokémon themselves.
 
 [Soul Link](soul-link.md#settings) has its own settings.
