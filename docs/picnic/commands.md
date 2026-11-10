@@ -86,6 +86,7 @@ standing from before 5.0.0 uses the `expert` values.
 | | `matchlevel` | true/false | Scale summoned trainers to your party's level. *Default on.* |
 | | `levelgap` | int | Level offset for summoned trainers. *Default 8.* |
 | `hazards` | `enabled` | true/false | What a table and its basket carry between dimensions — [burning, scorching, flooding and drifting](picnic-tables.md#where-each-table-can-go). Off, every table is plain furniture. *Default on.* |
+| `reigrouping` | `enabled` | true/false | With REI installed, folds each table wood, the coloured baskets and the benches into one expandable REI entry. Client-side: it groups your own game's REI list, applied on REI's next reload (F3+T). *Default on.* |
 | `table` | `light` | 0–15 | Light level emitted by the table. Re-place a table to relight it. |
 | | `actiondistance` | 0–512 | How close a table has to be for the table-gated actions. *Default 25.* |
 
@@ -140,7 +141,7 @@ on NeoForge via the **Config** button in the mods list. Its pages:
 | **Tiers** | Spawn cap, fuel cost and **re-roll radius** for Basic, Advanced and Expert |
 | **Shiny Aura** | The aura switch and the full-table multiplier, with the ladder it works out to |
 | **Interactions** | Washing, playing fetch, and party move teaching (chance, and TM / tutor / egg moves) |
-| **Baskets** | The Combat Basket (switch, level match, level gap), the Alpha Basket (switch, chance, batch) and the dimension hazards |
+| **Baskets** | The Combat Basket (switch, level match, level gap), the Alpha Basket (switch, chance, batch), the dimension hazards and REI colour grouping |
 | **Protection & seating** | What a re-roll keeps (shiny, legendary, mythical, Ultra Beast, alpha) per rung, snack bias, built platforms, and mobs fleeing a seated table |
 
 ![The Baskets page of the settings screen](assets/store/config-screen-baskets.jpg)
