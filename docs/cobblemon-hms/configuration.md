@@ -78,6 +78,10 @@ A shaped recipe: five leather around a Poké Ball.
 activation mode set to *Trainer's Glove*, and it works from any slot of your inventory, so it never
 has to be in your hand. Its own right-click never fires an HM.
 
+The glove **takes the colour of your active HM's type**: blue with Surf, orange with Ember, yellow
+with Magnet Rise, and so on. With no HM picked on the wheel it is green. The Poké Ball and the cuff
+always stay the same.
+
 ---
 
 ## Pokémon upkeep
