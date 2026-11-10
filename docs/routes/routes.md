@@ -31,7 +31,8 @@ flowchart TD
 - **Descriptive route names** — every road gets a code plus an auto-generated name from the terrain
   it crosses (*Route 5: Coastal Road*, *Route 8: Marsh Crossing*), always the same for your seed.
 - **Clean tree clearing** — a road crossing a tree removes the whole trunk and canopy; no floating
-  leaves, no item spam.
+  leaves, no item spam. Trees and huge mushrooms don't grow within a few blocks of the road's edge,
+  so no crown hangs over the road where you walk.
 - **Water crossings** — always on the surface. A river gets a plank bridge with its pillars dropped to
   the riverbed, in one wood from end to end; a longer stretch stays an open lane of water to swim or
   sail, marked on both edges by natural rock markers, most of them lit, and the road meets it at the
