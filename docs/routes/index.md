@@ -40,7 +40,7 @@ really built.
 - 🎮 Playing a Pokémon world? With Cobblemon 1.8, **route Pokémon** live along the roads, and with
   Radical Cobblemon Trainers, **route trainers** stand beside them. **[Cobblemon Nuzlocke & Soul
   Link](../nuzlocke/index.md)** is a separate add-on that builds on this one: it locks encounters to
-  the routes, areas and towns generated here, and adds the gyms beside towns.
+  the routes, areas and towns generated here, and sets the rules the road trainers follow.
 
 ## Get it
 

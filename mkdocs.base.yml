@@ -105,7 +105,7 @@ extra:
   # Una entrada por linea, como estan: el script las lee con una regex.
   mod_versions:
     routes:         { name: Routes,                         version: 2.0.131, modrinth: PfmV1XPQ, repo: routes }
-    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.62, modrinth: wHlszYZN, repo: cobblemon-nuzlocke }
+    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.66, modrinth: wHlszYZN, repo: cobblemon-nuzlocke }
     picnic:         { name: Cobblemon Picnic,               version: 5.0.0, modrinth: sfptxo0H, repo: cobblemon-picnic }
     cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.4.2, modrinth: JNfSyMuQ, repo: cobblemon-hms }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0, modrinth: S01tPZTk, repo: cobblemon-raid-icons }
@@ -154,6 +154,7 @@ extra:
     mega-showdown:  { name: "Cobblemon: Mega Showdown",  modrinth: cobblemon-mega-showdown }
     pokebelt:       { name: PokeBelt,                    modrinth: pokebelt-cobblemon }
     ccs:            { name: Cobblemon Cities & Structures, modrinth: cobblemon-cities-structures }
+    action-combat:  { name: Cobblemon Action Combat,     page: action-combat/index.md }
     pokegyms:       { name: Cobblemon PokeGyms,          page: pokegyms/index.md }
     impactor:       { name: Impactor,                    modrinth: impactor }
   mod_specs:
@@ -177,13 +178,14 @@ extra:
     nuzlocke:
       minecraft: "1.21.1"
       cobblemon: "1.7–1.8"
-      cobblemon_note: "built for 1.8; it runs on 1.7.3, but [route Pokémon](nuzlocke.md#route-pokemon) need 1.8"
+      cobblemon_note: built for 1.8; it runs on 1.7.3
       requires: [routes]
-      requires_note: 1.2.158 or newer
+      requires_note: 2.0.0 or newer
       fabric: [fabric-api, architectury, cloth-config]
       neoforge: [architectury, cloth-config]
       optional:
-        - [rct, "trainers on the roads and level caps; without it those stand down"]
+        - [rct, "trainer rules and level caps; without it those stand down"]
+        - [action-combat, "its real-time fights follow the ruleset; 0.1.42 or newer for the no-flee rule"]
       curseforge: 1630816
     picnic:
       minecraft: "1.21.1"

@@ -5,7 +5,7 @@ Common surprises, what causes them, and what to do. If yours is not here, post i
 
 ## The game will not start and names Routes
 
-This is an add-on for [Routes](../routes/index.md), and it needs Routes **1.2.158 or newer**. Older
+This is an add-on for [Routes](../routes/index.md), and it needs Routes **2.0.0 or newer** (not a 2.0 beta). Older
 Routes cannot host it, so the loader stops and names it. Update Routes. The rest of what to install is
 in the table at the bottom of the [home page](index.md#get-it).
 
