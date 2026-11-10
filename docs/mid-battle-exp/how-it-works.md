@@ -24,8 +24,8 @@ When a Pokémon faints, the other side is paid **right then**:
 - Anyone else gets nothing.
 
 Operators can change that share, give it to the whole team (a global Exp.
-Share) and multiply all battle EXP, and a player can pause one Pokémon's EXP from its Summary: see
-[Commands & Config](commands.md).
+Share), make a held Exp. Share count for more, and multiply all battle EXP, and a player can pause
+one Pokémon's EXP from its Summary: see [Commands & Config](commands.md).
 
 The amount is **Cobblemon's own calculation**, so everything that changes it still does: a **Lucky
 Egg**, a Pokémon from **another trainer**, one **ready to evolve**, **high friendship**, and
@@ -37,6 +37,10 @@ items and any mod that changes EV gains apply. The mod never names EVs; you see 
 going up.
 
 It works in every battle: wild Pokémon, trainers and other players.
+
+**In a gym battle** (against a [PokeGyms](../pokegyms/index.md) leader or disciple, with PokeGyms
+0.0.17 or later installed), every point of battle EXP is multiplied by **1.5**, knockouts and the end
+of the battle alike, on top of the server's multiplier. Without PokeGyms nothing changes.
 
 ### The end of the battle never pays twice
 
@@ -52,11 +56,65 @@ A knockout that happens after the battle is already over pays nothing at all.
   `awardExperienceToFaintedPokemon` is on. That setting exists only in Cobblemon 1.8; on 1.7, a
   fainted Pokémon never earns.
 - **Against another player**, nothing is paid unless Cobblemon's `allowExperienceFromPvP` allows it.
-- **Catching** a Pokémon pays no EXP, as in Cobblemon.
 - **A Pokémon whose EXP is paused** ([from its Summary](commands.md#pausing-a-pokemons-exp))
   gets no EXP, but still gets its EVs.
 
 What a knockout paid is **yours to keep**, even if you go on to lose the battle.
+
+## More ways to earn
+
+Each of these has its own switch in [Commands & Config](commands.md). All are on by default except
+edible candies.
+
+### The Trainer earns too
+
+At each knockout, and each capture in a battle, **the player** gets a tenth of the EXP their
+Pokémon gained as regular Minecraft experience, and the battle log says how much. With
+[Cobblemon: PlayerXP](https://modrinth.com/mod/cobblemon-playerxp) installed this is left to that mod,
+so nobody is paid twice.
+
+### Catching pays EXP
+
+Catching a Pokémon pays **half of what knocking it out would**.
+
+- **In a battle**, the Pokémon that fought it get that amount, and Exp. Share holders (or the whole
+  team, with the global Exp. Share) their portion, with the same `+N` line in the battle log.
+- **Outside a battle**, the party's first Pokémon that is not fainted gets it.
+- Lucky Egg, the server's multiplier and the EXP pause apply. A capture pays **no EVs**, and the
+  caught Pokémon itself gets nothing.
+- The player also gets their Trainer share of it as XP.
+
+With Cobblemon Capture XP installed, this mod pays nothing for captures.
+
+### Victory bonus against NPC trainers
+
+Like the prize money in the main games: when you **win** a battle against an NPC trainer, every
+Pokémon still standing gets **a quarter of the EXP it earned in that battle**, and you get **1 XP
+point per level** of the trainer's strongest Pokémon. The battle log says
+`Victory bonus: +120 EXP to your team, +25 XP to you`. Wild battles and PvP pay no bonus, and neither
+does losing or fleeing. With Cobblemon: PlayerXP installed, the player's part is left to that mod.
+
+### New Pokédex entries
+
+The first time a species is **seen** pays the player 10 XP points, the first time it is **caught**
+50 (both at once if it is caught without being seen first), ×5 for a legendary or mythical. The chat
+says `New Pokédex entry: Eevee +50 XP`. A new form, gender or shiny of a species already registered
+pays nothing, and entries from before the mod was installed are never paid.
+
+### Pasture EXP
+
+Pokémon in a **Pasture Block** slowly gain EXP, like the Day Care: **10 EXP a minute**, at most **300
+an hour**, and never past the level of the owner's strongest party Pokémon. Only while the owner is
+online; a paused Pokémon gets nothing. The server's battle multiplier does not apply here.
+
+### Edible candies
+
+Off by default. With `/midbattleexp ediblecandy true`, **Shift + right-click in the air** with an EXP
+Candy or a Rare Candy eats it like bread (the eating animation and sounds while the button is held;
+letting go early keeps the candy) and gives the player XP: the candy's Pokémon EXP × 0.1 (an EXP
+Candy S gives 80 XP points), and 30 XP points for a Rare Candy. In Creative the candy is not used up.
+A plain right-click still opens Cobblemon's party picker, and giving a candy to a Pokémon works as
+before.
 
 ## A new level counts in the same battle
 
@@ -150,6 +208,9 @@ opponent and anyone watching see the new level and HP on the battle bar, and not
 | When | The line |
 |---|---|
 | A knockout pays EXP | `Pikachu gained 245 Exp. Points!` |
+| The same, in a gym battle | `Pikachu gained 36 Exp. Points! (gym ×1.5)` |
+| The player gets their share | `Steve gained 24 experience!` |
+| A won battle against an NPC trainer | `Victory bonus: +120 EXP to your team, +25 XP to you` |
 | It levels up | `Pikachu grew to Lv. 23!` |
 | Its stats change | `Pikachu's stats rose: HP +3, Atk +2, Spe +3` — only the stats that rose |
 | It learns a move into a free slot | `Pikachu learned Thunderbolt!` |

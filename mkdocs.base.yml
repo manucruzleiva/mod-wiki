@@ -111,7 +111,7 @@ extra:
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0, modrinth: S01tPZTk, repo: cobblemon-raid-icons }
     champions:      { name: Cobblemon Champions Training,   version: 2.0.0, modrinth: PlTQXswh, repo: cobblemon-champions-training }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr, repo: tree-carve }
-    mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.1.0, modrinth: ShgrcSQY, repo: cobblemon-mid-battle-exp }
+    mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.3.0, modrinth: ShgrcSQY, repo: cobblemon-mid-battle-exp }
     # PokeTowns esta discontinuado: queda solo su pagina de aviso, y sin modrinth ni repo no se vigila.
     poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.17 }
     action-combat:  { name: Cobblemon Action Combat,        version: 0.1.41, repo: cobblemon-action-combat }
@@ -154,6 +154,7 @@ extra:
     mega-showdown:  { name: "Cobblemon: Mega Showdown",  modrinth: cobblemon-mega-showdown }
     pokebelt:       { name: PokeBelt,                    modrinth: pokebelt-cobblemon }
     ccs:            { name: Cobblemon Cities & Structures, modrinth: cobblemon-cities-structures }
+    pokegyms:       { name: Cobblemon PokeGyms,          page: pokegyms/index.md }
   mod_specs:
     routes:
       minecraft: "1.21.1–1.21.11 · 26.1–26.3"
@@ -233,6 +234,8 @@ extra:
       cobblemon_note: the same jar runs on both
       fabric: [architectury, flk]
       neoforge: [architectury, kff]
+      optional:
+        - [pokegyms, "gym battles pay ×1.5 EXP (0.0.17 or later)"]
       notes:
         Works with: any mod that changes how much EXP or how many EVs a battle gives — its numbers are the ones paid
     poketowns:
