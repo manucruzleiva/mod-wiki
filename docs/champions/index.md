@@ -37,7 +37,7 @@ soaks up EVs from whatever it happens to knock out: you decide what it becomes, 
 - :material-content-save: **[Saved sets](sets.md)**: keep four builds per Pokémon and load a whole
   one in two clicks.
 - :material-cash: **[Training costs](training-costs.md)**: everything is paid with your own
-  experience, or with CobbleDollars on servers that want it.
+  experience, or with CobbleDollars, an Impactor currency or an item on servers that want it.
 - :material-tune: **[Commands & Config](commands.md)**: every system can be switched off and every
   price tuned, in game.
 

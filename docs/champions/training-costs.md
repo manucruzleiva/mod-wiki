@@ -34,25 +34,31 @@ experience the higher you are, so the same purchase takes more of a low-level ba
 
 ## Currency
 
-By default everything is paid in experience. A server with
-[CobbleDollars](https://modrinth.com/mod/cobbledollars)
-([CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobbledollars)) can bill in its money
-instead.
+By default everything is paid in experience. A server can bill in **money** instead, and the
+**Money** setting picks which one:
+
+| Money | What is charged |
+|---|---|
+| **CobbleDollars** (default) | The [CobbleDollars](https://modrinth.com/mod/cobbledollars) ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/cobbledollars)) balance |
+| **Impactor currency** | An [Impactor](https://modrinth.com/mod/impactor) currency, `impactor:dollars` unless the server names another, the same money shops like SkiesShop or Move Tutors bill in |
+| **An item** | Items from your inventory, one per unit: `cobblemon:relic_coin` by default, or any item of a tag such as a pack tag of EV feathers and vitamins |
 
 | "Paid in" | What happens |
 |---|---|
 | **Experience only** (default) | Always experience |
-| **Experience, then CobbleDollars** | Experience if you have enough, otherwise CobbleDollars |
-| **CobbleDollars, then experience** | CobbleDollars if you have enough, otherwise experience |
-| **CobbleDollars only** | Always CobbleDollars |
+| **Experience, then money** | Experience if you have enough, otherwise money |
+| **Money, then experience** | Money if you have enough, otherwise experience |
+| **Money only** | Always money |
 
 - **A price is never split** between the two: one currency pays the whole of it.
 - **Prices stay written in experience** and are converted at the server's rate, 10 experience per
-  CobbleDollar by default, rounded up. A 500-experience move costs 50 CobbleDollars.
-- **Without CobbleDollars installed**, everything is paid in experience, whatever the setting says.
+  unit of money by default, rounded up. A 500-experience move costs 50 CobbleDollars, 50 Impactor
+  dollars or 50 items.
+- **When the money cannot be charged** (CobbleDollars or Impactor not installed, or the item does not
+  exist), everything is paid in experience, whatever the setting says.
 
-Whenever CobbleDollars can pay, the page cannot see your balance, so the buttons stay live and the
-server is the one that decides whether you can afford it.
+Whenever money can pay, the page cannot see your balance, so the buttons stay live and the server is
+the one that decides whether you can afford it.
 
 ## Where the experience comes from
 

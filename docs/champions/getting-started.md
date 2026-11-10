@@ -14,7 +14,7 @@ Drop **one** jar, the one for your loader, never both.
     | Minecraft | 1.21.1 |
     | Required | [Cobblemon](https://modrinth.com/mod/cobblemon) 1.8 and what it needs ([Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin), Architectury API) |
     | Recommended | [Cobblemon: PlayerXP](https://modrinth.com/mod/cobblemon-playerxp) |
-    | Optional | [CobbleDollars](https://modrinth.com/mod/cobbledollars) · [Cloth Config](https://modrinth.com/mod/cloth-config) + [Mod Menu](https://modrinth.com/mod/modmenu) for the settings screen |
+    | Optional | [CobbleDollars](https://modrinth.com/mod/cobbledollars) · [Impactor](https://modrinth.com/mod/impactor) · [Cloth Config](https://modrinth.com/mod/cloth-config) + [Mod Menu](https://modrinth.com/mod/modmenu) for the settings screen |
 
 === "NeoForge"
 
@@ -23,7 +23,7 @@ Drop **one** jar, the one for your loader, never both.
     | Minecraft | 1.21.1 |
     | Required | [Cobblemon](https://modrinth.com/mod/cobblemon) 1.8 and what it needs ([Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge), Architectury API) |
     | Recommended | [Cobblemon: PlayerXP](https://modrinth.com/mod/cobblemon-playerxp) |
-    | Optional | [CobbleDollars](https://modrinth.com/mod/cobbledollars) · [Cloth Config](https://modrinth.com/mod/cloth-config) for the settings screen |
+    | Optional | [CobbleDollars](https://modrinth.com/mod/cobbledollars) · [Impactor](https://modrinth.com/mod/impactor) · [Cloth Config](https://modrinth.com/mod/cloth-config) for the settings screen |
 
 !!! tip "Why PlayerXP"
 
