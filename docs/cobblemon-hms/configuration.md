@@ -34,6 +34,18 @@ Two settings decide the rest: the button, and whether a click with something in 
 In every mode, **sneak** to skip the HM and mine, place or open things as usual. With nothing picked
 on the wheel, clicks are vanilla. Chests, doors and block placing still answer a right-click first.
 
+Two more switches sit next to the activation settings:
+
+| Setting | Default | What it does |
+|---|---|---|
+| **Pokémon must have learned the move** | on | A Pokémon offers an HM only if it has learned the move, equipped or not. Off: the move in its learnset, or its species, is enough |
+| **Show active HMs on the HUD** | on | The list of HMs in effect in the top-left corner. A client setting: each player's own file decides |
+
+```
+/hms config requiremove <true|false>
+/hms config hud <true|false>
+```
+
 ### Trainer's Glove
 
 A shaped recipe: five leather around a Poké Ball.
@@ -65,18 +77,6 @@ A shaped recipe: five leather around a Poké Ball.
 **Right-click it** to switch it on or off; it glints while on. It only does something with the
 activation mode set to *Trainer's Glove*, and it works from any slot of your inventory, so it never
 has to be in your hand. Its own right-click never fires an HM.
-
-Two more switches sit next to it:
-
-| Setting | Default | What it does |
-|---|---|---|
-| **Pokémon must have learned the move** | on | A Pokémon offers an HM only if it has learned the move, equipped or not. Off: the move in its learnset, or its species, is enough |
-| **Show active HMs on the HUD** | on | The list of HMs in effect in the top-left corner. A client setting: each player's own file decides |
-
-```
-/hms config requiremove <true|false>
-/hms config hud <true|false>
-```
 
 ---
 
