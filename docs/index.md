@@ -111,6 +111,15 @@ here.
 </div>
 </div>
 
+<div class="mod-row" data-mod-color="pokegyms" data-tags="<!-- mod-tags:pokegyms -->" markdown>
+![](pokegyms/assets/logo.png){ .mod-row__logo }
+<div class="mod-row__body" markdown>
+[Cobblemon PokeGyms](pokegyms/index.md){ .mod-row__name }
+<span class="mod-row__what">Gyms in Cobblemon Cities & Structures' Kanto cities, built for multiplayer servers.</span>
+<span class="mod-row__chips"><!-- mod-chips:pokegyms --></span>
+</div>
+</div>
+
 </div>
 
 ## Compatibility
