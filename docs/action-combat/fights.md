@@ -38,6 +38,8 @@ Catching the last wild Pokémon wins the fight. Without PokeBelt, B tells you a 
   With none left, you lose.
 - **Tap R** to recall and pick another. **Hold R for 2 seconds** to run from a wild fight; against a
   trainer or a player it asks you to hold again, and the second hold forfeits as a loss.
+  Another mod can forbid running or forfeiting (Cobblemon Nuzlocke does): the fight goes on and the
+  chat says why. Switching is never blocked.
 - **EXP and EVs are paid at each knock-out**, by Cobblemon's own rules, to every Pokémon you drove in
   the fight. Level-up moves and evolutions wait for the fight to end.
 - **A dropped connection** gets 15 seconds of grace: come back and your Pokémon goes out again where

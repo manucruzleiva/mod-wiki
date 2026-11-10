@@ -263,7 +263,9 @@ colour and emblem, and it gives off a few particles of its kind.
 ![Water, Fire, Strange, Alpha and Combat baskets](assets/store/gif-special-baskets.gif)
 
 **Alpha Basket.** The table screen shows the smaller batch in gold, and alphas turn up in the re-roll
-log and in `/picnic stats`. An operator changes the chance and the batch with
+log and in `/picnic stats`. Each one is a **full alpha**, the same as one from a Hopo Berry
+seasoning: it gets its alpha moveset, matches its level to nearby players like a natural alpha and
+shows as alpha right away. The Alpha Basket only fits an **Expert** table. An operator changes the chance and the batch with
 [`/picnic config alphaboost`](commands.md#features-and-their-settings).
 
 ![An Alpha Basket re-roll](assets/store/gif-alpha-basket.gif)

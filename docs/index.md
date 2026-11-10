@@ -102,15 +102,6 @@ here.
 </div>
 </div>
 
-<div class="mod-row" data-mod-color="poketowns" data-tags="<!-- mod-tags:poketowns -->" markdown>
-![](poketowns/assets/logo.png){ .mod-row__logo }
-<div class="mod-row__body" markdown>
-[Cobblemon PokeTowns](poketowns/index.md){ .mod-row__name }
-<span class="mod-row__what">Pokémon Centers, Marts and gyms in your villages.</span>
-<span class="mod-row__chips"><!-- mod-chips:poketowns --></span>
-</div>
-</div>
-
 <div class="mod-row" data-mod-color="action-combat" data-tags="<!-- mod-tags:action-combat -->" markdown>
 ![](action-combat/assets/logo.png){ .mod-row__logo }
 <div class="mod-row__body" markdown>
@@ -120,12 +111,30 @@ here.
 </div>
 </div>
 
+<div class="mod-row" data-mod-color="poketrades" data-tags="<!-- mod-tags:poketrades -->" markdown>
+![](poketrades/assets/logo.png){ .mod-row__logo }
+<div class="mod-row__body" markdown>
+[Cobblemon PokeTrades](poketrades/index.md){ .mod-row__name }
+<span class="mod-row__what">NPC traders who swap Pokémon, the in-game trade you remember.</span>
+<span class="mod-row__chips"><!-- mod-chips:poketrades --></span>
+</div>
+</div>
+
+<div class="mod-row" data-mod-color="pokegyms" data-tags="<!-- mod-tags:pokegyms -->" markdown>
+![](pokegyms/assets/logo.png){ .mod-row__logo }
+<div class="mod-row__body" markdown>
+[Cobblemon PokeGyms](pokegyms/index.md){ .mod-row__name }
+<span class="mod-row__what">Gyms in Cobblemon Cities & Structures' Kanto cities, built for multiplayer servers.</span>
+<span class="mod-row__chips"><!-- mod-chips:pokegyms --></span>
+</div>
+</div>
+
 </div>
 
 ## Compatibility
 
-Every mod runs on **Minecraft 1.21.1**, on **Fabric** and **NeoForge**; Tree Carve also has jars for
-26.1 to 26.3. *Both* means the server and every player's game. Each mod's home page ends with the
+Every mod runs on **Minecraft 1.21.1**, on **Fabric** and **NeoForge**; Routes and Tree Carve also
+have jars for newer versions. *Both* means the server and every player's game. Each mod's home page ends with the
 full list for your loader.
 
 <!-- mod-compat -->

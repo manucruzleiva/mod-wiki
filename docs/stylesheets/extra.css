@@ -176,6 +176,28 @@ body[data-mod="action-combat"] {
   --wiki-hero-to: #d25520;
 }
 
+/* PokeGyms — badge-case slate. */
+body[data-mod="pokegyms"] {
+  --md-primary-fg-color: #3d5566;
+  --md-primary-fg-color--light: #5f7a8c;
+  --md-primary-fg-color--dark: #26363f;
+  --md-accent-fg-color: #b4700f;
+  --md-typeset-a-color: #345f7d;
+  --wiki-hero-from: #2f4350;
+  --wiki-hero-to: #4f6e82;
+}
+
+/* PokeTrades — trade violet. */
+body[data-mod="poketrades"] {
+  --md-primary-fg-color: #5b3fa8;
+  --md-primary-fg-color--light: #8065c9;
+  --md-primary-fg-color--dark: #3b2873;
+  --md-accent-fg-color: #c77d0a;
+  --md-typeset-a-color: #553a9e;
+  --wiki-hero-from: #47318a;
+  --wiki-hero-to: #7350c4;
+}
+
 /* In dark mode the same hues need lifting: the primaries above are tuned for a
    white page and go muddy on a dark one, and links have to clear the contrast
    floor against #10171a. */
@@ -257,6 +279,22 @@ body[data-md-color-scheme="slate"][data-mod="action-combat"] {
   --md-accent-fg-color: #8cc2f5;
   --wiki-hero-from: #6e2809;
   --wiki-hero-to: #a8441a;
+}
+
+body[data-md-color-scheme="slate"][data-mod="pokegyms"] {
+  --md-primary-fg-color: #2f4350;
+  --md-typeset-a-color: #9cc3dd;
+  --md-accent-fg-color: #f3a83c;
+  --wiki-hero-from: #24343e;
+  --wiki-hero-to: #3d5566;
+}
+
+body[data-md-color-scheme="slate"][data-mod="poketrades"] {
+  --md-primary-fg-color: #47318a;
+  --md-typeset-a-color: #bba8f0;
+  --md-accent-fg-color: #f2b552;
+  --wiki-hero-from: #352466;
+  --wiki-hero-to: #5a3fa0;
 }
 
 /* Inter's default numerals are proportional; tabular ones keep version tables
@@ -616,6 +654,8 @@ body {
 .mod-row[data-mod-color="mid-battle-exp"] { --mod-c: #1b65ab; }
 .mod-row[data-mod-color="poketowns"] { --mod-c: #b0174f; }
 .mod-row[data-mod-color="action-combat"] { --mod-c: #b4410f; }
+.mod-row[data-mod-color="poketrades"] { --mod-c: #5b3fa8; }
+.mod-row[data-mod-color="pokegyms"] { --mod-c: #3d5566; }
 
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="routes"] { --mod-c: #17a06f; }
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="picnic"] { --mod-c: #d76a4d; }
@@ -627,6 +667,8 @@ body {
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="mid-battle-exp"] { --mod-c: #4a8fd1; }
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="poketowns"] { --mod-c: #d64579; }
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="action-combat"] { --mod-c: #e0662f; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="poketrades"] { --mod-c: #9a80e0; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="pokegyms"] { --mod-c: #7d9bb0; }
 
 /* ── Flow ──────────────────────────────────────────────────────────────────
    A short sequence of steps, drawn as text instead of a Mermaid diagram: most

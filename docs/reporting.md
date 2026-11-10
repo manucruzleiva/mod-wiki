@@ -150,14 +150,14 @@ link.
         check the settings on [Getting Started](mid-battle-exp/getting-started.md#the-settings-that-matter)
         first: a Lucky Egg, Exp. Share or a modpack multiplier changes it here too.
 
-=== "PokeTowns"
+=== "PokeGyms"
 
-    - **Which settlement**: Village, Town or gym Town, and its coordinates (`/locate` gives them).
-    - Whether the world was **generated with this version** of PokeTowns, since settlements are
-      built as chunks generate.
-    - Whether **PokeTowns: Replace Vanilla Villages** is on, and the spacing chosen on the PokeTowns
-      tab.
-    - For gym problems: whether the **COBBLEVERSE** datapack is installed, and its version.
+    - **Which gym**: its city and coordinates. `/pokegyms gyms` lists every gym the server knows in
+      your dimension.
+    - Whether the world was **generated before PokeGyms or Cities & Structures was installed**.
+    - Your **Cities & Structures** and **Radical Cobblemon Trainers** versions.
+    - For a Gym Manager problem: what the screen showed, and the server log lines that mention
+      PokeGyms.
 
 ## What happens next
 

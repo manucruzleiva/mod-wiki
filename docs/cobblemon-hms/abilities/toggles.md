@@ -149,8 +149,12 @@ Combat, so Lava Plume now covers that on its own.
 ---
 
 ### <img class="hm-icon" src="../../assets/icons/lucky_chant.png" alt=""> Lucky Chant
+**Power:** Luck level, and extra Fortune levels on what you break (default **1**)
 
-Fortune leans your way while it lasts: what you break and what you fish give up a little more.
+Fortune leans your way while it lasts. Every block you break drops as if your tool had that many
+more levels of Fortune, on top of its own, so ores and crops give more; a Silk Touch tool is left
+alone, and breaking with a bare hand gets nothing extra. You also get Luck, which brings better
+catches when fishing and better loot from chests you open for the first time.
 
 ---
 

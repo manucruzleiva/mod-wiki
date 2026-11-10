@@ -91,6 +91,10 @@ star tier and the tera type, written in that type's own colour. Then the
 [den clock](#the-den-clock), coloured by how long is left, and, in grey, a line on the den's life
 cycle.
 
+Beside the name the tooltip draws the boss itself, the way Cobblemon draws a Pokémon on its own
+screens, in the form the raid fights: a Gigantamax boss shows its Gigantamax form. A den whose boss
+is not known yet shows the tooltip without it.
+
 A [feature den](#feature-dens) names its feature in the second line instead, in the feature's colour,
 and keeps its clock like any other den:
 

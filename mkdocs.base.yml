@@ -91,27 +91,32 @@ extra:
   # licencia, que es la que el lector puede necesitar.
   generator: false
   # La version de cada mod que documenta su seccion. La clave es la carpeta bajo docs/; una pagina
-  # cuya carpeta no esta aca (Home, Report a bug, License) no muestra ninguna. El numero es el del
-  # ultimo GitHub Release del mod — el unico jar que un jugador puede tener — y se pone al dia en el
-  # mismo commit en que se publica ese mod. Uno por seccion, nunca por pagina: una seccion describe
-  # una sola version. Lo dibuja overrides/main.html arriba del titulo. El `name` es tambien la
-  # entrada del mod en el menu de secciones de los sitios separados (overrides/partials/tabs.html).
-  # `modrinth` es el id del proyecto en Modrinth, que no cambia si cambia el slug: con el,
-  # modrinth-watch.yml abre un issue cuando Modrinth tiene un release que la seccion no describe, y la
-  # linea "Documented against" avisa al lector. Un mod sin id no se vigila. Subir `version` sin tocar docs/<mod>/ falla en checks.yml
-  # (tools/check_mod_versions.py): el numero se sube en el mismo cambio que reescribe las paginas.
+  # cuya carpeta no esta aca (Home, Report a bug, License) no muestra ninguna. La wiki sigue la rama
+  # por defecto de cada mod (main o master), no solo lo publicado: el numero es el `mod_version` de esa
+  # rama y se pone al dia en el mismo commit que reescribe las paginas. Uno por seccion, nunca por
+  # pagina: una seccion describe una sola version. Lo dibuja overrides/main.html arriba del titulo. El
+  # `name` es tambien la entrada del mod en el menu de secciones de los sitios separados
+  # (overrides/partials/tabs.html). `modrinth` es el id del proyecto en Modrinth, que no cambia si
+  # cambia el slug: con el, la linea "Documented against" avisa al lector si Modrinth tiene un release
+  # mas nuevo. `repo` es el repo del mod: modrinth-watch.yml abre un issue cuando el mod_version de su
+  # rama por defecto no es el que dice `version` (#142); sin repo no se vigila. Subir `version` sin
+  # tocar docs/<mod>/ falla en checks.yml (tools/check_mod_versions.py): el numero se sube en el
+  # mismo cambio que reescribe las paginas.
   # Una entrada por linea, como estan: el script las lee con una regex.
   mod_versions:
-    routes:         { name: Routes,                         version: 2.0.85,  modrinth: PfmV1XPQ }
-    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.62, modrinth: wHlszYZN }
-    picnic:         { name: Cobblemon Picnic,               version: 5.0.0, modrinth: sfptxo0H }
-    cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.1.0, modrinth: JNfSyMuQ }
-    raid-icons:     { name: Cobblemon Raid Icons,           version: 3.0.0, modrinth: S01tPZTk }
-    champions:      { name: Cobblemon Champions Training,   version: 2.0.0, modrinth: PlTQXswh }
-    tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr }
-    mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.1.0, modrinth: ShgrcSQY }
-    poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.17, modrinth: MjGKcXBb }
-    action-combat:  { name: Cobblemon Action Combat,        version: 0.1.41 }
+    routes:         { name: Routes,                         version: 2.0.131, modrinth: PfmV1XPQ, repo: routes }
+    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.66, modrinth: wHlszYZN, repo: cobblemon-nuzlocke }
+    picnic:         { name: Cobblemon Picnic,               version: 5.1.0, modrinth: sfptxo0H, repo: cobblemon-picnic }
+    cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.4.2, modrinth: JNfSyMuQ, repo: cobblemon-hms }
+    raid-icons:     { name: Cobblemon Raid Icons,           version: 3.1.0, modrinth: S01tPZTk, repo: cobblemon-raid-icons }
+    champions:      { name: Cobblemon Champions Training,   version: 2.1.0, modrinth: PlTQXswh, repo: cobblemon-champions-training }
+    tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr, repo: tree-carve }
+    mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.3.0, modrinth: ShgrcSQY, repo: cobblemon-mid-battle-exp }
+    # PokeTowns esta discontinuado: queda solo su pagina de aviso, y sin modrinth ni repo no se vigila.
+    poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.17 }
+    action-combat:  { name: Cobblemon Action Combat,        version: 0.1.43, repo: cobblemon-action-combat }
+    poketrades:     { name: Cobblemon PokeTrades,           version: 0.0.24, repo: cobblemon-poketrades }
+    pokegyms:       { name: Cobblemon PokeGyms,             version: 0.0.17, repo: cobblemon-pokegyms }
   # La ficha tecnica de cada mod: lo que dice su jar publicado (fabric.mod.json y neoforge.mods.toml
   # del tag del ultimo release), no lo que se recuerda. De aca salen, por hooks/mod_specs.py, las
   # insignias del hero de cada index, la tabla "Get it" de cada index, y en la portada los chips de
@@ -135,8 +140,8 @@ extra:
     architectury:   { name: Architectury API,            modrinth: architectury-api }
     cloth-config:   { name: Cloth Config,                modrinth: cloth-config }
     modmenu:        { name: Mod Menu,                    modrinth: modmenu }
+    rei:            { name: Roughly Enough Items,        modrinth: rei }
     routes:         { name: Routes,                      page: routes/index.md }
-    poketowns:      { name: Cobblemon PokeTowns,         page: poketowns/index.md }
     raiddens:       { name: Cobblemon Raid Dens,         modrinth: cobblemonraiddens }
     xaero-minimap:  { name: Xaero's Minimap,             modrinth: xaeros-minimap }
     xaero-worldmap: { name: Xaero's World Map,           modrinth: xaeros-world-map }
@@ -149,9 +154,13 @@ extra:
     rct:            { name: Radical Cobblemon Trainers,  modrinth: radical-cobblemon-trainers }
     mega-showdown:  { name: "Cobblemon: Mega Showdown",  modrinth: cobblemon-mega-showdown }
     pokebelt:       { name: PokeBelt,                    modrinth: pokebelt-cobblemon }
+    ccs:            { name: Cobblemon Cities & Structures, modrinth: cobblemon-cities-structures }
+    action-combat:  { name: Cobblemon Action Combat,     page: action-combat/index.md }
+    pokegyms:       { name: Cobblemon PokeGyms,          page: pokegyms/index.md }
+    impactor:       { name: Impactor,                    modrinth: impactor }
   mod_specs:
     routes:
-      minecraft: "1.21.1–1.21.11 · 26.1–26.3"
+      minecraft: "1.21.1–1.21.11 · 26.3"
       fabric: [fabric-api, architectury, cloth-config]
       neoforge: [architectury, cloth-config]
       optional:
@@ -160,21 +169,24 @@ extra:
         - [xaero-minimap, "waypoints and chunk paint on the map"]
         - [xaero-worldmap, chunk paint on the full-screen map]
         - [journeymap, "waypoints and chunk paint, as on Xaero's"]
-        - [poketowns, "roads enter its towns by their streets, and the marker sits on the Pokémon Center"]
         - [picnic, about 3 rest stops in 100 are a picnic table]
+        - [rct, "route trainers beside the roads"]
+        - [ccs, "its cities are towns of the road network"]
       notes:
         Java: 21 for Minecraft 1.21.x, 25 for 26.x
+        Cobblemon: "1.8 for route Pokémon along the roads; Routes runs without Cobblemon"
       curseforge: 1584243
     nuzlocke:
       minecraft: "1.21.1"
       cobblemon: "1.7–1.8"
-      cobblemon_note: "built for 1.8; it runs on 1.7.3, but [route Pokémon](nuzlocke.md#route-pokemon) need 1.8"
+      cobblemon_note: built for 1.8; it runs on 1.7.3
       requires: [routes]
-      requires_note: 1.2.158 or newer
+      requires_note: 2.0.0 or newer
       fabric: [fabric-api, architectury, cloth-config]
       neoforge: [architectury, cloth-config]
       optional:
-        - [rct, "trainers on the roads and level caps; without it those stand down"]
+        - [rct, "trainer rules and level caps; without it those stand down"]
+        - [action-combat, "its real-time fights follow the ruleset; 0.1.42 or newer for the no-flee rule"]
       curseforge: 1630816
     picnic:
       minecraft: "1.21.1"
@@ -183,6 +195,7 @@ extra:
       neoforge: [architectury, kff]
       optional:
         - [cloth-config, "the settings screen (with Mod Menu on Fabric)"]
+        - [rei, "each item's colours fold into one expandable recipe entry"]
       curseforge: 1581251
     cobblemon-hms:
       minecraft: "1.21.1"
@@ -193,6 +206,7 @@ extra:
       optional:
         - [modmenu, "the settings screen, on Fabric"]
         - [cloth-config, "the settings screen, on NeoForge"]
+        - [cobbledollars, "the Trainer Ditto can charge CobbleDollars"]
       curseforge: 1587850
     raid-icons:
       minecraft: "1.21.1"
@@ -214,8 +228,9 @@ extra:
       optional:
         - [playerxp, experience for the battles you win]
         - [cobbledollars, a second currency]
+        - [impactor, "pay training in an Impactor currency (from 2.1.0)"]
+        - [ccs, "a Champions Trainer in every Pokémon Center (from 2.1.0)"]
         - [cloth-config, "the settings screen (with Mod Menu on Fabric)"]
-        - [poketowns, puts a Champions Trainer in every Pokémon Center]
       curseforge: 1676756
     tree-carve:
       minecraft: "1.21.1 · 26.1–26.3"
@@ -230,17 +245,12 @@ extra:
       cobblemon_note: the same jar runs on both
       fabric: [architectury, flk]
       neoforge: [architectury, kff]
+      optional:
+        - [pokegyms, "gym battles pay ×1.5 EXP (0.0.17 or later)"]
       notes:
         Works with: any mod that changes how much EXP or how many EVs a battle gives — its numbers are the ones paid
     poketowns:
-      unreleased: true
-      minecraft: "1.21.1"
-      cobblemon: "1.8+"
-      requires: [cobbledollars, waystones]
-      fabric: [fabric-api, flk, architectury]
-      neoforge: [kff, architectury]
-      optional:
-        - [routes, connects every settlement to the road network]
+      discontinued: true   # fuera de la tabla de compatibilidad de la portada
     action-combat:
       unreleased: true
       minecraft: "1.21.1"
@@ -251,6 +261,25 @@ extra:
         - [mega-showdown, "Mega Evolution, Tera, Dynamax and Z-Moves in a real-time fight"]
         - [pokebelt, throwing Poké Balls mid-fight]
         - [rct, "its trainers fight in real time, and a win still counts"]
+    poketrades:
+      unreleased: true
+      minecraft: "1.21.1"
+      cobblemon: "1.8+"
+      cobblemon_note: 1.7.x is not supported
+      fabric: [flk, architectury]
+      neoforge: [kff, architectury]
+      optional:
+        - [cobbledollars, "traders sell and buy Pokémon for CobbleDollars"]
+        - [rct, "trainers you beat trade with you, and what you give joins their team"]
+    pokegyms:
+      unreleased: true
+      minecraft: "1.21.1"
+      cobblemon: "1.8+"
+      cobblemon_note: 1.7.x is not supported
+      requires: [cobbledollars, rct, ccs]
+      requires_note: "— Radical Cobblemon Trainers with its RCT API. Without Cities & Structures PokeGyms starts but finds no gyms"
+      fabric: [flk, architectury]
+      neoforge: [kff, architectury]
   # Como se encuentran los sitios separados entre si. Cada config de mod o de landing declara
   # `wiki_site` (la carpeta del mod, o `landing`). Lo leen hooks/cross_site_links.py, que reescribe
   # los links que salen del sitio, overrides/partials/tabs.html, que arma el menu de secciones, y

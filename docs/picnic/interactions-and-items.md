@@ -172,7 +172,8 @@ If a **seasoned `poke_snack`** (a Cobblemon snack item with spawn influence) is 
 table when you re-roll:
 
 - The re-roll **respects the snack's spawn influence**, biasing what appears.
-- **One bite** is consumed from the closest snack each time.
+- **One bite** is consumed from the closest snack each time. That bite counts like any natural one,
+  so the snack runs down normally and does not refill afterwards.
 
 This lets you steer a re-roll toward the kinds of Pokémon a given snack attracts.
 
