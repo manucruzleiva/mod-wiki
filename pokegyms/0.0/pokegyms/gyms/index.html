@@ -559,6 +559,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gym-battles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gym battles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gym battles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-mod-authors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For mod authors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -763,6 +791,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gym-battles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gym battles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gym battles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-mod-authors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For mod authors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -776,7 +832,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.15</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.17</p>
   
                   
 
@@ -819,6 +875,44 @@ gym is found and the spot is loaded.</p>
 again before anything happens.</p>
 <p>More tabs join the screen as features arrive. The <strong>Licence</strong> tab is already built; see
 <a href="../licences/">Licences</a>.</p>
+<h2 id="gym-battles">Gym battles<a class="headerlink" href="#gym-battles" title="Permanent link">&para;</a></h2>
+<p>A battle against an NPC trainer who stands <strong>inside a gym</strong>, such as a Cities &amp; Structures gym leader,
+is a <strong>gym battle</strong> from its start until it ends. PokeGyms does not change the battle itself; it only
+marks it, so other mods can tell it apart. <strong>Mid-Battle EXP</strong> uses this to give more EXP in gyms.</p>
+<p>Each gym battle knows its gym and who the challenger faces: the gym's <strong>leader</strong>, a <strong>disciple</strong>, or the
+City gym's <strong>canonical leader</strong>. Operators can list the gym battles running now with
+<a href="../commands/#pokegyms-battles"><code>/pokegyms battles</code></a>.</p>
+<h3 id="for-mod-authors">For mod authors<a class="headerlink" href="#for-mod-authors" title="Permanent link">&para;</a></h3>
+<p>Ask through <code>com.shier.pokegyms.api.GymBattleApi</code>. Every method is a JVM static, so a mod that does not
+depend on PokeGyms can call it by reflection:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>isGymBattle(battleId: UUID)</code></td>
+<td>Whether the Cobblemon battle is a gym battle.</td>
+</tr>
+<tr>
+<td><code>opponent(battleId: UUID)</code></td>
+<td><code>leader</code>, <code>disciple</code> or <code>canonical_leader</code>; <code>null</code> when it is not a gym battle.</td>
+</tr>
+<tr>
+<td><code>marker(battleId: UUID)</code></td>
+<td>The whole marker (dimension, gym origin, opponent), for a mod compiled against PokeGyms; <code>null</code> when it is not a gym battle.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="kd">val</span><span class="w"> </span><span class="nv">gym</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runCatching</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">"com.shier.pokegyms.api.GymBattleApi"</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">getMethod</span><span class="p">(</span><span class="s">"isGymBattle"</span><span class="p">,</span><span class="w"> </span><span class="n">UUID</span><span class="o">::</span><span class="n">class</span><span class="p">.</span><span class="na">java</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">invoke</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">battle</span><span class="p">.</span><span class="na">battleId</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">Boolean</span>
+<span class="p">}.</span><span class="na">getOrDefault</span><span class="p">(</span><span class="kc">false</span><span class="p">)</span><span class="w"> </span><span class="c1">// PokeGyms not installed</span>
+</code></pre></div>
 
 
 
