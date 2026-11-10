@@ -7,8 +7,8 @@ of the offer with a mark for whether your Pokémon meets it.
 ## Who trades
 
 Three kinds of entity can be a trader. Each one trades as a **trader definition**, which says its
-name, its nicknames and where its offers come from. The definitions come from datapacks, or are built
-in game by an operator ([Commands](commands.md#building-a-trader-in-game)).
+name, its nicknames and where its offers come from. The definitions come from datapacks ([Datapack Format](datapacks.md)), or
+are built in game by an operator ([Commands](commands.md#building-a-trader-in-game)).
 
 ### Cobblemon NPCs
 
@@ -93,7 +93,8 @@ The Pokémon a trader asks for is a list of conditions, and your Pokémon must m
 | shiny | is shiny |
 | ball | was caught in that ball |
 
-Other mods can add conditions of their own ([For Mod Authors](api.md#ask-conditions)).
+How each is written: [Conditions](datapacks.md#conditions). Other mods can add conditions of their own
+([For Mod Authors](api.md#ask-conditions)).
 
 ## Tiers
 

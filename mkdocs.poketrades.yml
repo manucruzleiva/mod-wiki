@@ -18,6 +18,7 @@ nav:
       - poketrades/index.md
       - Getting Started: poketrades/getting-started.md
       - Traders: poketrades/traders.md
+      - Datapack Format: poketrades/datapacks.md
       - Commands & Configuration: poketrades/commands.md
       - For Mod Authors: poketrades/api.md
       - Troubleshooting: poketrades/troubleshooting.md
