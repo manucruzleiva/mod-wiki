@@ -17,11 +17,11 @@ Two settings decide the rest: the button, and whether a click with something in 
 | Setting | Options | Notes |
 |---|---|---|
 | **Activator button** | Left-click · Right-click · **either** *(default)* | Left never opens chests or doors; right is answered by interactable blocks first |
-| **Activation mode** | **Open fist** *(default)* · Trainer's Glove · Take over left-click · Take over right-click | What fires besides the empty hand (below) |
+| **Activation mode** | **Open fist** *(default)* · Trainer's Glove · Take over left-click · Take over right-click · Keybind | What fires besides the empty hand (below) |
 
 ```
 /hms config activator button left|right|either
-/hms config activator mode open_fist|trainers_glove|take_over_left|take_over_right
+/hms config activator mode open_fist|trainers_glove|take_over_left|take_over_right|keybind
 ```
 
 | Activation mode | A click with something in hand fires the HM… |
@@ -30,6 +30,7 @@ Two settings decide the rest: the button, and whether a click with something in 
 | **Trainer's Glove** | on the activator button, while you carry a [Trainer's Glove](#trainers-glove) switched on, anywhere in your inventory |
 | **Take over left-click** | on left-click, whatever the activator button says |
 | **Take over right-click** | on right-click, whatever the activator button says |
+| **Keybind** | never by click: the **Activate HM** key fires instead, with anything in hand, aimed anywhere (Controls → Cobblemon HMs, `H` by default) |
 
 In every mode, **sneak** to skip the HM and mine, place or open things as usual. With nothing picked
 on the wheel, clicks are vanilla. Chests, doors and block placing still answer a right-click first.
