@@ -57,6 +57,7 @@ Summons a Trainer Ditto on demand, or undoes a catch so it will visit that playe
 
 ```
 /hms config activator button <left|right|either>
+/hms config activator mode <open_fist|trainers_glove|take_over_left|take_over_right|keybind>
 /hms config requiremove <true|false>
 /hms config hud <true|false>
 ```
@@ -77,6 +78,7 @@ Summons a Trainer Ditto on demand, or undoes a catch so it will visit that playe
 /hms config trader ivs <0–6>
 /hms config trader levels <min> <max>
 /hms config trader coins <min> <max>
+/hms config trader cobbledollars <true|false>  charge CobbleDollars (needs the mod)
 /hms config trader reload                    re-read trader_offers.json
 ```
 

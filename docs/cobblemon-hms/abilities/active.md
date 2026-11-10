@@ -233,6 +233,9 @@ and finds exactly what a brush would have found. **Rooted dirt** counts too: it 
 vanilla, but it is the same gesture on the same kind of thing, so it gives up its hanging roots.
 With no cooldown you can sweep a whole row of suspicious sand one click at a time.
 
+**Lootr** works too: on Lootr's suspicious sand and gravel, Tail Whip sweeps the way Lootr's brush
+does, so each player gets their own find and the block stays for everyone else.
+
 ---
 
 ### <img class="hm-icon" src="../../assets/icons/teleport.png" alt=""> Teleport

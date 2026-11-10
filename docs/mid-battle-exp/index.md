@@ -13,7 +13,7 @@ battle ends. A level gained mid-battle counts in that same battle — new stats,
 it unlocks is yours to take before the next turn.
 
 There is nothing to configure and no command to learn. Install it and fight. (Operators can
-[tune the server's EXP](commands.md) if they want to.)
+[tune the server's EXP](commands.md), and turn each extra off, if they want to.)
 
 <!-- mod-badges -->
 
@@ -41,8 +41,11 @@ There is nothing to configure and no command to learn. Install it and fight. (Op
   of the move pool.
 - :material-text-box-outline: **[Everything in the battle log](how-it-works.md#battle-log)** — EXP,
   levels, stats and moves, said to the Pokémon's owner and nobody else.
+- :material-star-plus: **[More ways to earn](how-it-works.md#more-ways-to-earn)** — the player
+  earns XP alongside the team, and EXP comes from captures, wins against NPC trainers, new Pokédex
+  entries, the Pasture Block and gym battles. Each one has its own switch.
 - :material-tune-variant: **[Commands & Config](commands.md)** — an EXP
-  multiplier, a stronger or global Exp. Share, and an *EXP: On / Off* button on the Summary to pause
+  multiplier, a stronger or global Exp. Share, an on/off switch for every extra, and an *EXP: On / Off* button on the Summary to pause
   one Pokémon's EXP.
 
 </div>
