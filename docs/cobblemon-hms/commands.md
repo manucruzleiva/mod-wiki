@@ -57,7 +57,7 @@ Summons a Trainer Ditto on demand, or undoes a catch so it will visit that playe
 
 ```
 /hms config activator button <left|right|either>
-/hms config activator mode <open_fist|trainers_glove|take_over_left|take_over_right>
+/hms config activator mode <open_fist|trainers_glove|take_over_left|take_over_right|keybind>
 /hms config requiremove <true|false>
 /hms config hud <true|false>
 ```
