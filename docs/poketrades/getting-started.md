@@ -47,4 +47,4 @@ Four traders ship with the mod. An operator places any of them with `/poketrades
 | Trader Bram | `bram` | items and money only, and always buys a shiny Magikarp for a Master Ball; keeps what you give for the next player |
 
 The village trader is a fifth one, `villager`. A modpack replaces or empties any of them with its own
-datapack.
+datapack ([Datapack Format](datapacks.md)).
