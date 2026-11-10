@@ -16,12 +16,17 @@ saved to the config file:
 ```
 /champions config trainer required on      always at a trainer
 /champions config trainer required off     always from the summary
-/champions config trainer required auto    only with PokeTowns, which was discontinued, so off
+/champions config trainer required auto    only with Cobblemon Cities & Structures installed
 ```
 
 ## Where to find one
 
-Wherever an operator has placed one: the mod does not put trainers in the world by itself.
+With [Cobblemon Cities & Structures](https://modrinth.com/mod/cobblemon-cities-structures) installed
+(from version **2.1.0**), every Pokémon Center in its cities has a trainer at the front corner of
+Nurse Joy's counter. It appears the first time the Center loads, in new worlds and in worlds made
+before the update. A trainer an operator removes does not come back.
+
+Anywhere else, wherever an operator has placed one.
 
 ## Placing a trainer
 

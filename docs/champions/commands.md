@@ -69,8 +69,8 @@ Typing a group name and pressing **Tab** suggests its settings.
 | `currency` | `money` | `COBBLEDOLLARS` / `IMPACTOR` / `ITEM` | `COBBLEDOLLARS` | What "money" in `order` charges. `COBBLEDOLLARS` in `order`'s values means this money. |
 | `currency` | `impactorCurrency` | an Impactor currency key | `impactor:dollars` | The Impactor currency charged when `money` is `IMPACTOR`. |
 | `currency` | `item` | an item id or `#namespace:tag` | `cobblemon:relic_coin` | The item taken, one per unit, when `money` is `ITEM`. In the file this is `costItem`. |
-| `trainer` | `required` | `AUTO` / `ON` / `OFF` | `OFF` | Whether changes are bought only at a [Champions Trainer](champions-trainer.md). `AUTO` meant only with PokeTowns, which was discontinued, so it acts as `OFF`. A config written before 2.0.0 may still say `AUTO`. |
-| `trainer` | `inCenters` | `true` / `false` | `true` | Placed a trainer in every PokeTowns Pokémon Center. PokeTowns was discontinued, so it does nothing. |
+| `trainer` | `required` | `AUTO` / `ON` / `OFF` | `OFF` | Whether changes are bought only at a [Champions Trainer](champions-trainer.md). `AUTO` means only where Cobblemon Cities & Structures is installed (before 2.1.0, PokeTowns). A config written before 2.0.0 may still say `AUTO`. |
+| `trainer` | `inCenters` | `true` / `false` | `true` | Places a trainer in every Cobblemon Cities & Structures Pokémon Center the first time it loads (from 2.1.0). Does nothing without Cities & Structures. |
 
 For example, to charge for moves and make egg moves steeper:
 

@@ -23,7 +23,10 @@ Fight anything — a wild Pokémon, a trainer or another player. The moment an o
 - the EXP bar of every Pokémon that fought it fills up, and an Exp. Share holder on the bench gets its
   share;
 - a Pokémon that levels up shows its new level and HP on its battle bar;
-- the battle log tells you what each of your Pokémon gained.
+- the battle log tells you what each of your Pokémon gained, and what you gained as the Trainer.
+
+Catching, beating an NPC trainer, a new Pokédex entry and the Pasture Block pay too: see
+[More ways to earn](how-it-works.md#more-ways-to-earn).
 
 Everything that happens, and why, is on [How it works](how-it-works.md).
 
@@ -40,6 +43,6 @@ always have:
 | `allowExperienceFromPvP` | whether a battle against another player pays at all |
 | `awardExperienceToFaintedPokemon` | whether a Pokémon that has fainted still earns (Cobblemon 1.8 only) |
 
-On top of these the server has its own EXP multiplier, Exp. Share portion and global Exp.
-Share on top of these, set with `/midbattleexp`, and each Pokémon's Summary has a button that pauses
+On top of these the server has its own EXP multiplier, Exp. Share portion, global Exp. Share and a
+switch for each extra source of EXP, set with `/midbattleexp`, and each Pokémon's Summary has a button that pauses
 its EXP: see [Commands & Config](commands.md).
