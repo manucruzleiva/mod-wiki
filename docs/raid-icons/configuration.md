@@ -96,8 +96,6 @@ At `100` an icon is 36×36 pixels on the minimap and 48×48 on the world map.
 
 ## The clock colours
 
-> Arrives in the release after 3.0.0.
-
 The [den clock](map-icons.md#the-den-clock) in the tooltip is green while there is time to spare,
 turns yellow, then red, as the reset gets close.
 
