@@ -758,7 +758,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="PfmV1XPQ" data-version="2.0.85">Documented against Routes 2.0.85</p>
+    <p class="wiki-mod-version" data-modrinth="PfmV1XPQ" data-version="2.0.131">Documented against Routes 2.0.131</p>
   
                   
 
@@ -793,11 +793,16 @@ and every road is signposted and named.</p>
   sail, marked on both edges by natural rock markers, most of them lit, and the road meets it at the
   shore's own height. The seabed is never touched, and a frozen lake keeps its ice. Water the planner
   could not see coming (a river carved later by Streams Reflowing, an aquifer pool) is crossed on a
-  timber bridge at the banks' height, not left as a swim gap.</li>
-<li><strong>Climbs you can walk</strong> — where a road rises one or two blocks it steps up in half blocks (slab, full
-  block, slab), in the road's own material, so most climbs need no stairs and no jumping. Three or more
-  rises in a row keep their stairs. The ramps into a tunnel and onto a bridge follow the same graded
-  profile, and a wall that is still two blocks or more gets a ladder.</li>
+  timber bridge at the banks' height, not left as a swim gap. With Streams Reflowing installed, roads
+  keep off its river banks and cross its rivers squarely.</li>
+<li><strong>Bridges on real supports</strong> — the posts under a bridge's edges are full logs of the bridge's own
+  wood, with a log beam across under the deck at every post row.</li>
+<li><strong>Climbs you can walk</strong> — a road that climbs steps up in half blocks (slab, full block, slab), in the
+  road's own material: it starts a climb a few blocks early and finishes it a few blocks late, so up to
+  four rises in a row are walked in slabs. Only a longer climb keeps a stair, where the slabs run out.
+  Every one-block step gets a stair or a slab, on the ramps up to a bridge, into a tunnel and out of a
+  town too; a bridge deck that rises one block takes a slab. A wall that is still two blocks or more
+  gets a ladder, whichever way you walk in.</li>
 <li><strong>Roads made of what you choose</strong> — the surface can be one material or a mix laid in rounded
   patches, with an optional share of worn blocks (cracked or mossy bricks, gravel in cobblestone, grass
   through a dirt path). Bridge decks and handrails are chosen the same way, one material per bridge and
@@ -809,7 +814,8 @@ and every road is signposted and named.</p>
 <li><strong>Junctions built for the spot</strong> — where two roads cross, the crossing is either a ringed
   <strong>roundabout</strong> around a lit pillar or an open <strong>signed crossing</strong> with fingerposts naming all four
   destinations. Roads that meet at different heights are an <strong>overpass</strong>: the upper one simply bridges
-  over. A fork that lands inside a hill opens into a <strong>chamber</strong> where its tunnels meet.</li>
+  over. A fork that lands inside a hill opens into a <strong>chamber</strong> where its tunnels meet, with its
+  signposts on the chamber floor beside the roads.</li>
 <li><strong>Rest stops</strong> — every few hundred blocks, a small camp just off the road: a campfire with log
   seats, a lantern post and a sign. Now and then one keeps a <strong>supply chest</strong> from the last traveller —
   rarely, so finding one still means something. With <a href="https://manucruzleiva.github.io/mod-wiki/picnic/latest/picnic/">Cobblemon Picnic</a> installed,
@@ -822,7 +828,23 @@ and every road is signposted and named.</p>
   network has quiet hamlets and busy hubs. A fork out of a big town stands past its last houses, never
   among them. A structure tagged <code>routes:settlement/village</code>, <code>routes:settlement/town</code> or
   <code>routes:settlement/city</code> gets that word after its name,
-  so Pallet becomes <em>Pallet Town</em>.</li>
+  so Pallet becomes <em>Pallet Town</em>. The cities of <strong>Cobblemon Cities &amp; Structures</strong> (Pewter, Cerulean,
+  Vermilion, Celadon, Fuchsia, Saffron, Cinnabar and Viridian, plus Lavender and Pallet when placed by
+  hand) are towns of the network too.</li>
+<li><strong>Underground towns</strong> — any structure can be set as an <em>Underground town</em> in
+  <a href="../which-structures/">Which structures get roads</a>. Its road ends at the surface, and right beside the
+  end a stone-brick <strong>spiral stairway</strong> goes down to the town: slab half-steps, a landing every 8 blocks
+  down, a short tunnel at the bottom, and a <em>↓ town</em> board at the top naming the town below. Two
+  underground towns are never joined directly; each is reached from a town on the surface. Nothing is
+  set this way by default.</li>
+<li><strong>Route Pokémon</strong> — with Cobblemon 1.8 installed, roads carry habitat blocks hidden in the paving,
+  each spawning its own Pokémon family at its own level band, leaning toward the biome's natives (Water
+  types by water crossings, Flying types on bridges). No legendaries, Ultra Beasts, Paradox Pokémon or
+  starters. Turn them off with <strong>Route Pokémon</strong> in <a href="../configuration/#how-roads-look">Configuration</a>.</li>
+<li><strong>Route trainers</strong> — with <a href="https://modrinth.com/mod/radical-cobblemon-trainers">Radical Cobblemon Trainers</a>
+  installed, a trainer stands beside the road every 160 blocks as you explore it, with a team near your
+  party's level, and swimmers at water spots. No gym leaders, Elite Four or Champions. Without RCT
+  nothing changes.</li>
 <li><strong>Roads meet the town's own streets</strong> — a road joins a town at the open end of a street, at street
   level, never behind a house or climbing into the air. A pack can mark its street ends with an open
   jigsaw named <code>routes:city_exit</code>, and the road then continues the street that faces
@@ -837,8 +859,9 @@ and every road is signposted and named.</p>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tune it per world</p>
-<p>Roads per city, road width, materials, lighting and more are all set from the <strong>ROUTES</strong>
-tab at world creation — see <a href="../configuration/">World Creation &amp; Config</a>.</p>
+<p>How many roads, how they look, materials, lighting and more are all set from the <strong>ROUTES</strong>
+tab at world creation, with one-click <strong>Road network</strong> and <strong>Road style</strong> presets on top — see
+<a href="../configuration/">World Creation &amp; Config</a>.</p>
 </div>
 
 

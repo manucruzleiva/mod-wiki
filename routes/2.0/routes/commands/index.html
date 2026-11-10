@@ -1698,7 +1698,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="PfmV1XPQ" data-version="2.0.85">Documented against Routes 2.0.85</p>
+    <p class="wiki-mod-version" data-modrinth="PfmV1XPQ" data-version="2.0.131">Documented against Routes 2.0.131</p>
   
                   
 
@@ -2161,6 +2161,14 @@ rejoining.</p>
 <td><code>/routesmap waypoints per_category\|all_in_one</code></td>
 <td>one waypoint set per category, so each can be hidden on its own — or one set for the whole mod, so a single switch hides them all</td>
 </tr>
+<tr>
+<td><code>/routesmap waypoints custom [name]</code></td>
+<td>every waypoint goes into the set (or JourneyMap group) with that name; use the name of one of your own sets to mix them in. Without a name it keeps the last one, <code>Routes</code> at first</td>
+</tr>
+<tr>
+<td><code>/routesmap waypoints off</code></td>
+<td>Routes adds no waypoints to Xaero's maps or JourneyMap, and shows no <em>Waypoint discovered</em> toast</td>
+</tr>
 </tbody>
 </table>
 <p>A colour drives the tint and the matching waypoints together, so the map and its markers always agree;
@@ -2224,7 +2232,7 @@ usually what you want.</p>
 <tr>
 <td><code>debug gaps [r]</code></td>
 <td style="text-align: center;">8–512, def. 128</td>
-<td>every place a road, a tunnel or a bridge hands over to the next, and the size of the step there; a step of two blocks or more says whether it has a ladder, and if not why (too tall, at a bridge or tunnel, on a chunk border…). <strong>Where a "the road has a hole in it" report starts</strong></td>
+<td>measured on the road as it was really laid (climb ladders skipped, a slab counted as half a block): every place a road, a tunnel or a bridge hands over to the next, and the size of the step there; a step of two blocks or more says whether it has a ladder, and if not why (too tall, at a bridge or tunnel, on a chunk border…). <strong>Where a "the road has a hole in it" report starts</strong></td>
 </tr>
 <tr>
 <td><code>debug bridge [r]</code></td>
@@ -2234,7 +2242,7 @@ usually what you want.</p>
 <tr>
 <td><code>debug bore [r]</code></td>
 <td style="text-align: center;">8–512, def. 128</td>
-<td>what stands in the way inside each tunnel in range: every block id that would stop a walker, with how many and where the first one is. <strong>Where a "the tunnel is blocked" report starts</strong></td>
+<td>what stands in the way inside each tunnel in range: every block id that would stop a walker, with how many and where the first one is. The first few blocks at each end belong to the entrance ramp and are counted apart as <em>hand-over</em> columns; whether the step from the ramp into the tunnel is walkable is what <code>debug verify</code> measures. <strong>Where a "the tunnel is blocked" report starts</strong></td>
 </tr>
 <tr>
 <td><code>debug forks [r]</code></td>
@@ -2277,8 +2285,8 @@ or <code>debug bore</code>. For a town that should be connected and is not: <cod
 <div class="admonition note">
 <p class="admonition-title">Commands of the classic generator</p>
 <p><code>scan</code>, <code>connect</code>, <code>addcity</code>, <code>delcity</code>, <code>weave</code>, <code>repaint</code>, <code>reset</code> and <code>debug structures</code> belonged
-to the road generator Routes retired in 2.0. They still answer, with one line that names the command
-to use instead, if there is one.</p>
+to the road generator Routes retired in 2.0, and are gone. Use <code>/routes settlement add</code>,
+<code>settlement remove</code> and <code>settlement connect</code> instead.</p>
 </div>
 
 

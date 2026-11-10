@@ -846,7 +846,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="PfmV1XPQ" data-version="2.0.85">Documented against Routes 2.0.85</p>
+    <p class="wiki-mod-version" data-modrinth="PfmV1XPQ" data-version="2.0.131">Documented against Routes 2.0.131</p>
   
                   
 
@@ -868,8 +868,10 @@ never rebuilds what is already there. Each option says so in <a href="../configu
 out as the world generates. A <strong>new world</strong> gives you the intended experience; see
 <a href="../getting-started/">Getting Started</a>. To join two towns in land you have already explored, use
 <a href="../commands/#road-a-road-through-land-already-explored"><code>/routes road</code></a>.</p>
-<p>A world made with the classic generator of Routes 1.x (before 2.0) is <strong>frozen</strong>: it loads and plays
-as before, keeps its roads, map paint, zone banners and Nuzlocke zones, and never grows a new road.</p>
+<p>A world made with the classic generator (Routes 0.77.0 or 1.0.0, or one where the old <code>use_gen2</code>
+setting was turned off by hand) is no longer supported: the roads already built stay in the world, but
+it loses its old map paint, zone banners and town and route names, and new chunks get today's roads
+like any other world.</p>
 <h2 id="a-town-i-expected-is-not-connected">A town I expected is not connected<a class="headerlink" href="#a-town-i-expected-is-not-connected" title="Permanent link">&para;</a></h2>
 <p>Routes only connects the structures it finds in your world, and it decides that per kind of
 structure. See <a href="../which-structures/">Which Structures Get Roads</a>. If one still looks wrong, the next
