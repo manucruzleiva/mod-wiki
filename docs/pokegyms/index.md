@@ -26,9 +26,9 @@ inside its door: the one place where everything about that gym happens.
 
 !!! warning "Not released yet"
     PokeGyms has no public download yet. These pages describe the current development build,
-    **0.0.15**. What it does today is find the gyms and run their Gym Manager. Battling a gym,
-    taking it over, disciples, the gym vault and level scaling are not in the mod yet, and nothing
-    here describes them.
+    **0.0.17**. What it does today is find the gyms, run their Gym Manager and tell other mods
+    which battles are gym battles. Gym battle rules, taking a gym over, disciples, the gym vault and
+    level scaling are not in the mod yet, and nothing here describes them.
 
 ## Highlights
 
@@ -41,6 +41,8 @@ inside its door: the one place where everything about that gym happens.
   Cities & Structures' own leader.
 - 🎫 **[Licences](licences.md)**: the rules for owning a gym are in place, one licence per player on
   the whole server.
+- ⚔️ **[Gym battles, recognised](gyms.md#gym-battles)**: a battle against a trainer inside a gym
+  counts as a gym battle, so other mods can reward it, such as Mid-Battle EXP's extra EXP in gyms.
 - ⚙️ **[Tuned in game](commands.md)** with `/pokegyms config`, no restart needed.
 
 ## Get it

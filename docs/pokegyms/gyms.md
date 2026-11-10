@@ -46,3 +46,32 @@ again before anything happens.
 
 More tabs join the screen as features arrive. The **Licence** tab is already built; see
 [Licences](licences.md).
+
+## Gym battles
+
+A battle against an NPC trainer who stands **inside a gym**, such as a Cities & Structures gym leader,
+is a **gym battle** from its start until it ends. PokeGyms does not change the battle itself; it only
+marks it, so other mods can tell it apart. **Mid-Battle EXP** uses this to give more EXP in gyms.
+
+Each gym battle knows its gym and who the challenger faces: the gym's **leader**, a **disciple**, or the
+City gym's **canonical leader**. Operators can list the gym battles running now with
+[`/pokegyms battles`](commands.md#pokegyms-battles).
+
+### For mod authors
+
+Ask through `com.shier.pokegyms.api.GymBattleApi`. Every method is a JVM static, so a mod that does not
+depend on PokeGyms can call it by reflection:
+
+| Method | Returns |
+| --- | --- |
+| `isGymBattle(battleId: UUID)` | Whether the Cobblemon battle is a gym battle. |
+| `opponent(battleId: UUID)` | `leader`, `disciple` or `canonical_leader`; `null` when it is not a gym battle. |
+| `marker(battleId: UUID)` | The whole marker (dimension, gym origin, opponent), for a mod compiled against PokeGyms; `null` when it is not a gym battle. |
+
+```kotlin
+val gym = runCatching {
+    Class.forName("com.shier.pokegyms.api.GymBattleApi")
+        .getMethod("isGymBattle", UUID::class.java)
+        .invoke(null, battle.battleId) as Boolean
+}.getOrDefault(false) // PokeGyms not installed
+```

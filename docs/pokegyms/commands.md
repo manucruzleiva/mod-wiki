@@ -10,6 +10,12 @@ many of its five marks PokeGyms read (`5/5 markers` is a healthy gym).
 
 Click the coordinates to get a `/tp` to that gym's Gym Manager in your chat box.
 
+## /pokegyms battles
+
+Lists the [gym battles](gyms.md#gym-battles) running now, one line each: the battle's id, who the
+challenger faces (`leader`, `disciple` or `canonical_leader`), and the gym's coordinates and dimension,
+as `/pokegyms gyms` lists them. With none running, it says `No gym battles running.`
+
 ## /pokegyms config
 
 Shows and changes every setting on a live server. A change takes effect at once, without a restart,
