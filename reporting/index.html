@@ -275,6 +275,10 @@
                 <a href="https://manucruzleiva.github.io/mod-wiki/action-combat/" class="md-tabs__link">Cobblemon Action Combat</a>
               </li>
             
+              <li class="md-tabs__item">
+                <a href="https://manucruzleiva.github.io/mod-wiki/pokegyms/" class="md-tabs__link">Cobblemon PokeGyms</a>
+              </li>
+            
           
         
           
@@ -673,7 +677,7 @@ Picnic 1.26.0, Fabric. Happens every time; crash report attached.</p>
 <p>Attach the file to your post. If it is too big, paste it on <a href="https://mclo.gs">mclo.gs</a> and share the
 link.</p>
 <h2 id="extra-detail-per-mod">Extra detail, per mod<a class="headerlink" href="#extra-detail-per-mod" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:8"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Routes</label><label for="__tabbed_1_2">Nuzlocke &amp; Soul Link</label><label for="__tabbed_1_3">Picnic</label><label for="__tabbed_1_4">Cobblemon HMs</label><label for="__tabbed_1_5">Raid Icons</label><label for="__tabbed_1_6">Champions Training</label><label for="__tabbed_1_7">Tree Carve</label><label for="__tabbed_1_8">Mid-Battle EXP</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:9"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><input id="__tabbed_1_9" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Routes</label><label for="__tabbed_1_2">Nuzlocke &amp; Soul Link</label><label for="__tabbed_1_3">Picnic</label><label for="__tabbed_1_4">Cobblemon HMs</label><label for="__tabbed_1_5">Raid Icons</label><label for="__tabbed_1_6">Champions Training</label><label for="__tabbed_1_7">Tree Carve</label><label for="__tabbed_1_8">Mid-Battle EXP</label><label for="__tabbed_1_9">PokeGyms</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ul>
@@ -784,6 +788,16 @@ numbers on <a href="https://manucruzleiva.github.io/mod-wiki/champions/latest/ch
 check the settings on <a href="https://manucruzleiva.github.io/mod-wiki/mid-battle-exp/latest/mid-battle-exp/getting-started/#the-settings-that-matter">Getting Started</a>
 first: a Lucky Egg, Exp. Share or a modpack multiplier changes it here too.</p>
 </div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Which gym</strong>: its city and coordinates. <code>/pokegyms gyms</code> lists every gym the server knows in
+  your dimension.</li>
+<li>Whether the world was <strong>generated before PokeGyms or Cities &amp; Structures was installed</strong>.</li>
+<li>Your <strong>Cities &amp; Structures</strong> and <strong>Radical Cobblemon Trainers</strong> versions.</li>
+<li>For a Gym Manager problem: what the screen showed, and the server log lines that mention
+  PokeGyms.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -905,7 +919,7 @@ without a change</strong>, because those are not the same thing and you deserve 
       
     <script>
     (function () {
-      var MODS = ["routes", "nuzlocke", "picnic", "cobblemon-hms", "raid-icons", "champions", "tree-carve", "mid-battle-exp", "poketowns", "action-combat"];
+      var MODS = ["routes", "nuzlocke", "picnic", "cobblemon-hms", "raid-icons", "champions", "tree-carve", "mid-battle-exp", "poketowns", "action-combat", "pokegyms"];
       function paint() {
         var path = window.location.pathname;
         var found = '';
