@@ -129,5 +129,31 @@ If a **seasoned `poke_snack`** is nearby when you re-roll, the spawn **respects 
 influence** (so you can bias toward what the snack attracts) and **consumes one bite** of the closest
 snack. See **[Interactions & Items → Snacks](interactions-and-items.md#poke_snack-bias)**.
 
+### Do the table's boosts stack with shiny and alpha seasonings?
+
+**Yes, but they add up rather than multiply.** Cobblemon rolls a seasoning as its own extra chance,
+separate from the normal shiny or alpha roll, so the table's boost and the seasoning are two
+independent chances on the same Pokémon.
+
+- **Shiny:** the [Shiny Aura](shiny-aura.md) improves the normal shiny roll. A shiny seasoning
+  (Starf Berry, Golden Apple, Enchanted Golden Apple) then gives a second roll that always uses the
+  server's base shiny rate, so the aura does not make the seasoning itself stronger. The Shiny Charm
+  does not boost the seasoning either.
+- **Alpha:** the Hopo Berry seasoning gives each spawn a 2% alpha chance. The Alpha Basket then rolls
+  its own chance (10% by default) on every spawn that is not already an alpha.
+
+At the default shiny rate of 1/8192, with the aura at ×2:
+
+| Setup | Shiny odds per Pokémon |
+|---|---|
+| Aura ×2 only | about 1/4096 |
+| Starf Berry only | about 1/1640 |
+| Aura ×2 + Starf Berry | about 1/1170 |
+| Aura ×2 + Golden Apple | about 1/2050 |
+| Aura ×2 + Enchanted Golden Apple | about 1/680 |
+
+For alphas, the Alpha Basket plus a Hopo Berry snack gives about 11.8% per Pokémon, against 10% for
+the basket alone.
+
 **Owned Pokémon are always safe.** The despawn step skips anything with an owner, so you can leave
 your party out — or a pasture nearby — and re-roll freely.

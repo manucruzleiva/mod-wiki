@@ -1,0 +1,24 @@
+INHERIT: mkdocs.base.yml
+site_name: Cobblemon PokeGyms
+site_url: https://manucruzleiva.github.io/mod-wiki/pokegyms/
+
+extra:
+  wiki_site: pokegyms
+
+# Todo lo que no es de este mod queda afuera, salvo lo compartido. Los links a paginas de otro sitio
+# los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*
+  !/pokegyms/
+  !/assets/
+  !/stylesheets/
+
+nav:
+  - Cobblemon PokeGyms:
+      - pokegyms/index.md
+      - Getting Started: pokegyms/getting-started.md
+      - Gyms & the Gym Manager: pokegyms/gyms.md
+      - Licences: pokegyms/licences.md
+      - Commands & Configuration: pokegyms/commands.md
+      - Troubleshooting: pokegyms/troubleshooting.md
+      - Community Credits: pokegyms/credits.md
