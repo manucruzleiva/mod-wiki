@@ -1,9 +1,13 @@
 name: Modrinth watch
 
-# Once a day: does every section still describe the newest release on Modrinth? For each mod that
-# does not, one open issue titled "Wiki desfasada: <mod>", kept up to date with the numbers; when the
-# pages catch up (or the release is pulled), the issue is closed. Mods without a `modrinth` slug in
-# mkdocs.base.yml are not watched. See tools/check_mod_versions.py.
+# Once a day: does every section still describe its mod's default branch (main/master)? The wiki
+# follows main, not Modrinth (#142). For each mod that does not, one open issue titled
+# "Wiki desfasada: <mod>", kept up to date with the numbers; when the pages catch up, the issue is
+# closed. Mods without a `repo` in mkdocs.base.yml are not watched. See tools/check_mod_versions.py.
+#
+# The mod repos are private, so github.token cannot read them: the MOD_REPOS_TOKEN secret is a
+# fine-grained token with Contents: read on them. A mod that cannot be read fails the run (red), but
+# the issues of the others are still updated.
 
 on:
   schedule:
@@ -23,26 +27,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Compare with Modrinth
-        run: python3 -I tools/check_mod_versions.py modrinth > status.tsv
+      - name: Compare with each mod's main
+        env:
+          GH_TOKEN: ${{ secrets.MOD_REPOS_TOKEN }}
+        run: python3 -I tools/check_mod_versions.py main > status.tsv
       - name: One issue per stale mod
+        if: ${{ !cancelled() }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh label create wiki-desfasada --color D93F0B \
-            --description "Una seccion describe otra version que la publicada" 2>/dev/null || true
+            --description "Una seccion describe otra version que la de main del mod" 2>/dev/null || true
           open=$(gh issue list --label wiki-desfasada --state open --limit 100 --json number,title)
-          while IFS=$'\t' read -r state mod name documented latest slug; do
+          while IFS=$'\t' read -r state mod name documented latest repo; do
             title="Wiki desfasada: $name"
             n=$(jq -r --arg t "$title" '.[] | select(.title == $t) | .number' <<<"$open" | head -1)
             if [ "$state" = current ]; then
               # The pages caught up: an issue still open for this mod is done.
               [ -n "$n" ] && gh issue close "$n" --reason completed \
-                --comment "La sección ya describe el release más nuevo de Modrinth."
+                --comment "La sección ya describe la versión de la rama por defecto del mod."
               continue
             fi
             body=$(printf '%s\n' \
-              "La sección [\`docs/$mod/\`](../tree/main/docs/$mod) describe **$documented**, y el release más nuevo en [Modrinth](https://modrinth.com/mod/$slug) es **$latest**." \
+              "La sección [\`docs/$mod/\`](../tree/main/docs/$mod) describe **$documented**, y la rama por defecto de \`$repo\` ya está en **$latest** (\`mod_version\` de \`gradle.properties\`)." \
               "" \
               "Para cerrarlo: reescribir las páginas para $latest y subir \`extra.mod_versions.$mod.version\` en \`mkdocs.base.yml\` **en el mismo cambio**. Este issue se cierra solo cuando coinciden." \
               "" \

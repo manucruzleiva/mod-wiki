@@ -31,7 +31,8 @@ not generated yet.
 
 Routes comes with its own answer for the structures of the packs it is tested on — which are towns,
 which are landmarks and which to ignore — so a pack like the Cobblemon Official Modpack gets roads to
-its gym entrances with no config at all. It is three structure tags in the jar, `routes:settlements`,
+its gym entrances with no config at all, and the Kanto cities of
+[Cobblemon Cities & Structures](https://modrinth.com/mod/cobblemon-cities-structures) are towns. It is three structure tags in the jar, `routes:settlements`,
 `routes:landmarks` and `routes:ignored`, so a data pack can extend or replace any of them.
 
 It sits **below** everything you choose: a row you change in the checklist, and every entry of the
@@ -141,8 +142,6 @@ height, never at a leftover connector behind a building.
 - **Say what kind of place it is.** Tag the structure `routes:settlement/village`,
   `routes:settlement/town` or `routes:settlement/city` and its name gets that word: *Pallet* becomes
   *Pallet Town*. A name that already ends in one (*Black City*) is left as it is.
-
-[Cobblemon PokeTowns](../poketowns/index.md) does both.
 
 Structures that only exist in the Nether or the End are never connected: roads are an Overworld
 thing.

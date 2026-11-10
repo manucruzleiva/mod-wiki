@@ -102,15 +102,6 @@ here.
 </div>
 </div>
 
-<div class="mod-row" data-mod-color="poketowns" data-tags="<!-- mod-tags:poketowns -->" markdown>
-![](poketowns/assets/logo.png){ .mod-row__logo }
-<div class="mod-row__body" markdown>
-[Cobblemon PokeTowns](poketowns/index.md){ .mod-row__name }
-<span class="mod-row__what">Pokémon Centers, Marts and gyms in your villages.</span>
-<span class="mod-row__chips"><!-- mod-chips:poketowns --></span>
-</div>
-</div>
-
 <div class="mod-row" data-mod-color="action-combat" data-tags="<!-- mod-tags:action-combat -->" markdown>
 ![](action-combat/assets/logo.png){ .mod-row__logo }
 <div class="mod-row__body" markdown>

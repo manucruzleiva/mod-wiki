@@ -111,6 +111,8 @@ def _compat(config, page) -> str:
     lines = ["| Mod | Cobblemon | Side | Also needs |", "|---|---|---|---|"]
     for mod, version in config["extra"]["mod_versions"].items():
         spec, _ = _spec(mod, config)
+        if spec.get("discontinued"):
+            continue
         short = version["name"].removeprefix("Cobblemon ")
         name = f"[{short}]({_rel(mod + '/index.md', page)}) <small>{version['version']}</small>"
         cobblemon = spec.get("cobblemon") or "—"

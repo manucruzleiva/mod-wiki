@@ -54,10 +54,10 @@ A server can loosen or tighten this rule, or turn the stat points off entirely; 
 ## Where everything is
 
 Everything is on the Pokémon's summary. There is no new screen and no new item. Since version
-2.0.0, with PokeTowns installed, the summary only **sells** at a
-[Champions Trainer](champions-trainer.md), who stands in every Pokémon Center: talk to one and its
-summary opens with every control live. Opened anywhere else, it shows the same pages read-only.
-Without PokeTowns, the summary sells anywhere unless the server asks for a trainer.
+2.0.0, a server can ask for changes to be bought only at a
+[Champions Trainer](champions-trainer.md): talk to one and its summary opens with every control
+live, and opened anywhere else it shows the same pages read-only. Unless the server asks, the
+summary sells anywhere.
 
 | Summary page | What changes | Details |
 |---|---|---|

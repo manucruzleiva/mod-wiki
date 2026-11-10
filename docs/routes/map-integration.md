@@ -9,7 +9,6 @@ mod detects what's installed and stays inert otherwise.
 | 🧭 Xaero's Minimap | Waypoints and toasts, chunk paint |
 | 🗾 Xaero's World Map (key **M**) | Chunk paint |
 | 🗺️ JourneyMap | Waypoints in their own groups, chunk paint |
-| 🏘️ Cobblemon PokeTowns | A town's marker sits on its Pokémon Center's waystone |
 
 ## Waystones
 
@@ -49,13 +48,6 @@ named like the Xaero set — *Settlements*, *Routes* and *Areas* — or one *Rou
 the single-switch grouping.
 The markers are re-sent every time you join, so nothing of Routes stays in your JourneyMap data if you
 remove the mod. They always go on the Overworld map, even if you join in the Nether.
-
-## Cobblemon PokeTowns
-
-With [PokeTowns](../poketowns/index.md), a town's map marker sits on its **Pokémon Center's
-waystone** as soon as you discover the town, without waiting for you to activate the waystone. Towns
-you discovered before move there the next time you join. Roads also enter PokeTowns towns by the
-street ends it marks — see [Dynamic Routes](routes.md).
 
 ## Changing how it looks — `/routesmap`
 
