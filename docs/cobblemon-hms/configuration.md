@@ -88,6 +88,7 @@ file, not yours.
 | **Guaranteed perfect IVs** | 0 | Rolled like any wild Ditto · 1 gives it one best stat · 6 is flawless |
 | **Level** | 15–45 | The band its level is rolled from, inclusive |
 | **TM price** | 4–32 relic coins | The coin band of the cheapest TMs, used only when `trader_offers.json` is first written |
+| **Pay with CobbleDollars** | off | Charge CobbleDollars from the player's balance instead of items. Needs the [CobbleDollars](https://modrinth.com/mod/cobbledollars) mod (since 4.4.0) |
 
 ```
 /hms config trader enabled <true|false>
@@ -96,6 +97,7 @@ file, not yours.
 /hms config trader ivs <0-6>
 /hms config trader levels <min> <max>
 /hms config trader coins <min> <max>
+/hms config trader cobbledollars <true|false>
 /hms config trader reload
 ```
 
@@ -128,6 +130,25 @@ move comes, the dearer and rarer its TM:
 A weight is relative, not a percentage: a coin TM is ten times as likely to be drawn as a TM-only
 one. Each entry takes one or two `{item, count}` costs (the two slots of a trade screen) by item id,
 so a pack can price in any item it likes. A TM missing from the file is never offered.
+
+### Paying with CobbleDollars
+
+With **Pay with CobbleDollars** on and the CobbleDollars mod installed, the trader opens a **chest
+of TMs** instead of the trade screen. Each TM shows its price; click it to buy, and the money comes
+off your CobbleDollars balance. A sold TM leaves an empty slot.
+
+The price comes from the same `trader_offers.json`. An entry can set its own `"cobbledollars": 5000`;
+otherwise its item price is converted at the top-level `cobbledollar_rates`:
+
+| Item | CobbleDollars each |
+|---|---|
+| `cobblemon:relic_coin` | 250 |
+| `cobblemon:relic_coin_pouch` | 10,000 |
+| `cobblemon:relic_coin_sack` | 30,000 |
+
+So the shipped TMs cost 1,000 to 8,000 for coin TMs, 10,000 or 20,000 for pouches, 30,000 for a
+sack and 50,000 for TM-only moves. A TM priced in an item with no rate is not offered for
+CobbleDollars. A file written before 4.4.0 has no `cobbledollar_rates` and uses these.
 
 It stops visiting a player for good once they catch it, and it keeps its distance from anyone who
 has caught one **or beaten one in battle**, so bring a friend who has done neither.
