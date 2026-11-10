@@ -159,6 +159,15 @@ link.
       tab.
     - For gym problems: whether the **COBBLEVERSE** datapack is installed, and its version.
 
+=== "PokeGyms"
+
+    - **Which gym**: its city and coordinates. `/pokegyms gyms` lists every gym the server knows in
+      your dimension.
+    - Whether the world was **generated before PokeGyms or Cities & Structures was installed**.
+    - Your **Cities & Structures** and **Radical Cobblemon Trainers** versions.
+    - For a Gym Manager problem: what the screen showed, and the server log lines that mention
+      PokeGyms.
+
 ## What happens next
 
 Your post becomes an issue labelled from its tag, and the bot replies in the thread so you know it
