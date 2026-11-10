@@ -14,7 +14,7 @@
         <link rel="prev" href="../getting-started/">
       
       
-        <link rel="next" href="../commands/">
+        <link rel="next" href="../datapacks/">
       
       
         
@@ -360,6 +360,8 @@
       
         
       
+        
+      
     
     
     
@@ -668,6 +670,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datapacks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datapack Format
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -998,8 +1028,8 @@ opens: its offers on the right, your party on the left, and, under the two portr
 of the offer with a mark for whether your Pokémon meets it.</p>
 <h2 id="who-trades">Who trades<a class="headerlink" href="#who-trades" title="Permanent link">&para;</a></h2>
 <p>Three kinds of entity can be a trader. Each one trades as a <strong>trader definition</strong>, which says its
-name, its nicknames and where its offers come from. The definitions come from datapacks, or are built
-in game by an operator (<a href="../commands/#building-a-trader-in-game">Commands</a>).</p>
+name, its nicknames and where its offers come from. The definitions come from datapacks (<a href="../datapacks/">Datapack Format</a>), or
+are built in game by an operator (<a href="../commands/#building-a-trader-in-game">Commands</a>).</p>
 <h3 id="cobblemon-npcs">Cobblemon NPCs<a class="headerlink" href="#cobblemon-npcs" title="Permanent link">&para;</a></h3>
 <p>Any Cobblemon NPC trades when its interaction names a trader. That works on an NPC class, a preset or
 a single NPC, however it got into the world: placed with Cobblemon's NPC tools, spawned by a
@@ -1130,7 +1160,8 @@ another player. An operator changes that tier, or switches it off, with
 </tr>
 </tbody>
 </table>
-<p>Other mods can add conditions of their own (<a href="../api/#ask-conditions">For Mod Authors</a>).</p>
+<p>How each is written: <a href="../datapacks/#conditions">Conditions</a>. Other mods can add conditions of their own
+(<a href="../api/#ask-conditions">For Mod Authors</a>).</p>
 <h2 id="tiers">Tiers<a class="headerlink" href="#tiers" title="Permanent link">&para;</a></h2>
 <p>Every offer has a tier from 1 to 5. In a Pokémon-for-Pokémon offer the tier follows how rare the
 Pokémon the trader gives is, and says how much the ask carries:</p>
