@@ -65,7 +65,10 @@ Typing a group name and pressing **Tab** suggests its settings.
 | `moves` | `xpPerMoveChange` | 0 or more | `500` | Experience per move, when moves are charged. |
 | `moves` | `xpPerEggMove` | 0 or more | `1500` | Experience per egg move, when moves are charged. |
 | `currency` | `order` | `XP_ONLY` / `XP_THEN_COBBLEDOLLARS` / `COBBLEDOLLARS_THEN_XP` / `COBBLEDOLLARS_ONLY` | `XP_ONLY` | What training is paid in. |
-| `currency` | `rate` | 1 or more | `10` | Experience per CobbleDollar, rounded up. |
+| `currency` | `rate` | 1 or more | `10` | Experience per unit of money, rounded up. |
+| `currency` | `money` | `COBBLEDOLLARS` / `IMPACTOR` / `ITEM` | `COBBLEDOLLARS` | What "money" in `order` charges. `COBBLEDOLLARS` in `order`'s values means this money. |
+| `currency` | `impactorCurrency` | an Impactor currency key | `impactor:dollars` | The Impactor currency charged when `money` is `IMPACTOR`. |
+| `currency` | `item` | an item id or `#namespace:tag` | `cobblemon:relic_coin` | The item taken, one per unit, when `money` is `ITEM`. In the file this is `costItem`. |
 | `trainer` | `required` | `AUTO` / `ON` / `OFF` | `OFF` | Whether changes are bought only at a [Champions Trainer](champions-trainer.md). `AUTO` meant only with PokeTowns, which was discontinued, so it acts as `OFF`. A config written before 2.0.0 may still say `AUTO`. |
 | `trainer` | `inCenters` | `true` / `false` | `true` | Placed a trainer in every PokeTowns Pokémon Center. PokeTowns was discontinued, so it does nothing. |
 
@@ -113,6 +116,9 @@ mods list. Each setting has a tooltip.
   "xpPerEggMove": 1500,
   "costOrder": "XP_ONLY",
   "xpPerCobbleDollar": 10,
+  "money": "COBBLEDOLLARS",
+  "impactorCurrency": "impactor:dollars",
+  "costItem": "cobblemon:relic_coin",
   "trainerRequired": "AUTO",
   "trainerInCenters": true
 }
