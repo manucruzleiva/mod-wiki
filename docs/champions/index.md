@@ -28,8 +28,8 @@ soaks up EVs from whatever it happens to knock out: you decide what it becomes, 
 
 <div class="grid cards" markdown>
 
-- :material-account-tie: **[Champions Trainer](champions-trainer.md)**: the NPC in every PokeTowns
-  Pokémon Center where changes are bought. The summary shows your build anywhere.
+- :material-account-tie: **[Champions Trainer](champions-trainer.md)**: the NPC a server can require
+  changes to be bought from. The summary shows your build anywhere.
 - :material-chart-box: **[Stat points](stat-points.md)**: up to 32 in a stat and 66 in total, each
   worth +1 to the stat at any level. They are spent on the summary's stats page.
 - :material-leaf: **[Nature, ability and moves](nature-ability-moves.md)**: change the nature and the

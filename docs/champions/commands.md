@@ -6,8 +6,7 @@ Every system this mod replaces can be switched off, and every price can be chang
 ## Placing a Champions Trainer
 
 `/spawnnpc cobblemon_champions_training:champions_trainer`, for an operator. This is Cobblemon's own
-command. With PokeTowns, every Pokémon Center already has one. See
-[Champions Trainer](champions-trainer.md).
+command. See [Champions Trainer](champions-trainer.md).
 
 ## `/champions sp [slot]`
 
@@ -67,8 +66,8 @@ Typing a group name and pressing **Tab** suggests its settings.
 | `moves` | `xpPerEggMove` | 0 or more | `1500` | Experience per egg move, when moves are charged. |
 | `currency` | `order` | `XP_ONLY` / `XP_THEN_COBBLEDOLLARS` / `COBBLEDOLLARS_THEN_XP` / `COBBLEDOLLARS_ONLY` | `XP_ONLY` | What training is paid in. |
 | `currency` | `rate` | 1 or more | `10` | Experience per CobbleDollar, rounded up. |
-| `trainer` | `required` | `AUTO` / `ON` / `OFF` | `AUTO` | Whether changes are bought only at a [Champions Trainer](champions-trainer.md). `AUTO`: only with PokeTowns installed. |
-| `trainer` | `inCenters` | `true` / `false` | `true` | A trainer is placed in every PokeTowns Pokémon Center. Does nothing without PokeTowns. |
+| `trainer` | `required` | `AUTO` / `ON` / `OFF` | `OFF` | Whether changes are bought only at a [Champions Trainer](champions-trainer.md). `AUTO` meant only with PokeTowns, which was discontinued, so it acts as `OFF`. A config written before 2.0.0 may still say `AUTO`. |
+| `trainer` | `inCenters` | `true` / `false` | `true` | Placed a trainer in every PokeTowns Pokémon Center. PokeTowns was discontinued, so it does nothing. |
 
 For example, to charge for moves and make egg moves steeper:
 
