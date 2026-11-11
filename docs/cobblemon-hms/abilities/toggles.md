@@ -82,6 +82,15 @@ aura itself.
 It leaves alone the items **you threw**, so you can still drop or hand something over; items
 **another player is closer to**; and items that **would not fit** in your inventory.
 
+It leaves some items where they are:
+
+- **What you throw yourself**, so you can still drop rubbish or hand something to a friend.
+- **Items another player is closer to**, so it never steals a neighbour's drops, and two players
+  with Absorb don't fight over one stack.
+- **Items that won't fit in your inventory.** When your inventory is full, nothing is pulled.
+
+The radius is the HM's power (`/hms config absorb power <n>`), up to 24 blocks.
+
 ---
 
 ### <img class="hm-icon" src="../../assets/icons/dive.png" alt=""> Dive
