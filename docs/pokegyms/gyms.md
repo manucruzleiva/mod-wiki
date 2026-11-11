@@ -143,6 +143,9 @@ every other Radical Cobblemon Trainers (RCT) trainer, including the ones wanderi
   Charmander, and a Charmander faced at level 40 is a Charizard. It goes up and down alike, and only level
   evolutions are crossed, so a Vaporeon stays a Vaporeon. A Pokémon holding an Everstone keeps its species
   both ways. Where an evolution branches, the first one that applies is taken.
+- **Empty move slots are filled for the new level.** The moves a Pokémon was registered with stay in their
+  slots, even one its new stage cannot learn. Each empty slot gets the newest level-up move its stage knows at
+  the new level that it does not already have. A Pokémon registered with four moves fights with exactly those four.
 - **Only the battle changes.** The Team tab, a holder's registered team and RCT's trainer data keep
   their levels; the scaled Pokémon are copies made for that battle alone, so a trainer's team is the same
   when you meet it again at another level.
