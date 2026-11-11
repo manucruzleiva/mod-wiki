@@ -16,6 +16,8 @@ A **licence** is what lets a player run a gym as its leader. The rules below are
   same one licence per player. Beating them is remembered even with licences switched off. While the
   gym is held its leader is gone; when the licence ends the leader is back and the gym is locked again
   for everyone, the former holder included.
+- **A held gym can be taken over** with its leader's medal and a fee, which moves the licence to the taker; see
+  [Taking over a gym](gyms.md#taking-over-a-gym). The taker's own previous licence is given up first.
 - **It ends after 30 days without logging in** by default, or when its holder renounces it. Either
   way a town gym goes vacant, anyone can buy it again, and the former holder may buy another (a City
   gym goes back to its leader, as above). The
@@ -24,11 +26,14 @@ A **licence** is what lets a player run a gym as its leader. The rules below are
 
 ## The Licence tab
 
-At a vacant town gym, or a City gym whose leader you beat, the Gym Manager screen adds a **Licence** tab:
+At a vacant town gym, a City gym whose leader you beat, or a gym a player holds, the Gym Manager screen adds a **Licence** tab:
 
 - **For a visitor**: the price, how many CobbleDollars you have, and a **Buy** button. If you
   already hold a licence, the tab says which gym it is; if you are short, it says how much more you
   need. The server checks the price and your balance again when you click.
+- **At a gym a player holds** (a visitor, or a disciple of that gym): the **takeover fee**, how many CobbleDollars you
+  have and a **Take over** button. Hold the leader's medal in your main hand when you click; see
+  [Taking over a gym](gyms.md#taking-over-a-gym).
 - **For the holder**: the gym's [vault](vault.md) and its **Penalty** (click the row to raise it, shift-click to lower
   it), when the licence expires (**Expiry**), the penalty's **Range** (only while penalties are on), a **Withdraw**
   button in the bottom-left box and a **Renounce** button in the bottom-right one, which asks for a second click to
