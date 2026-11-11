@@ -798,7 +798,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.32</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.33</p>
   
                   
 
@@ -871,6 +871,10 @@ and is written to the config file so it survives one.</p>
 <td>Switches the <a href="../gyms/#medals">medal</a> for beating a player leader on or off; <code>medals</code> has no numbers, and takes <code>reset</code> too.</td>
 </tr>
 <tr>
+<td><code>/pokegyms config badges enabled &lt;true\|false&gt;</code></td>
+<td>Switches the <a href="../gyms/#mainline-badges">mainline badge</a> for beating a City leader on or off; <code>badges</code> has no numbers, and takes <code>reset</code> too.</td>
+</tr>
+<tr>
 <td><code>/pokegyms config licences reset</code></td>
 <td>Puts the feature back to its defaults, switched on.</td>
 </tr>
@@ -907,6 +911,9 @@ and is written to the config file so it survives one.</p>
 <span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">"medals"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"badges"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
@@ -1004,6 +1011,12 @@ and is written to the config file so it survives one.</p>
 <td><code>true</code></td>
 <td></td>
 <td>Off: beating a player leader gives no medal. Medals already given stay.</td>
+</tr>
+<tr>
+<td><code>badges.enabled</code></td>
+<td><code>true</code></td>
+<td></td>
+<td>Off: beating a City leader gives no badge. Badges already given stay.</td>
 </tr>
 </tbody>
 </table>

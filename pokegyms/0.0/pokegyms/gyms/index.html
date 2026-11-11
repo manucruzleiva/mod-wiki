@@ -604,6 +604,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mainline-badges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mainline badges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#level-scaling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -941,6 +952,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mainline-badges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mainline badges
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#level-scaling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1020,7 +1042,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.32</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.33</p>
   
                   
 
@@ -1057,6 +1079,7 @@ defeat list, and RCT gives no loot or dialogue for it.</p>
 <li><strong>Losing costs the penalty.</strong> Losing, forfeiting or running away takes exactly that sum from you. The
   money goes to no one. Winning costs nothing, and <a href="#unlocking-a-city-gym">unlocks the gym's licence</a> for you.</li>
 <li><strong>One challenger at a time</strong> per leader. A second challenger is told the leader is busy.</li>
+<li><strong>A win can also give a badge.</strong> See <a href="#mainline-badges">Mainline badges</a>.</li>
 <li><strong>Operators can close the fight</strong> or change the penalty with
   <a href="../commands/#configuration"><code>/pokegyms config canonical</code></a>. Closed, leaders take no challenges; battles
   already running finish, and a loss still costs the penalty.</li>
@@ -1162,6 +1185,24 @@ dropped and the gym is kept.</p>
   licence starts without a badge.</li>
 <li><strong>Operators can switch it off</strong> with <a href="../commands/#configuration"><code>/pokegyms config medals enabled false</code></a>:
   no win gives a medal, and medals already given stay.</li>
+</ul>
+<h2 id="mainline-badges">Mainline badges<a class="headerlink" href="#mainline-badges" title="Permanent link">&para;</a></h2>
+<p>With <a href="https://modrinth.com/mod/pkgbadges">PKGBadges</a> installed, beating a <strong>City leader</strong> gives you the badge
+that leader gives in the main games: Brock the Boulder Badge, Misty the Cascade Badge, and so on. PKGBadges is
+optional.</p>
+<ul>
+<li><strong>The 16 Kanto and Johto leaders have one.</strong> Radical Cobblemon Trainers' leaders from the main games
+  (Brock to Giovanni, Falkner to Clair) give their badge; the other City leaders give none.</li>
+<li><strong>Once per challenger.</strong> Winning again gives nothing more, and it stays so after the gym's licence ends and
+  the City leader is back.</li>
+<li><strong>A full inventory is no loss.</strong> The badge drops at your feet.</li>
+<li><strong>Only a win against a City leader gives one.</strong> A loss, a forfeit, a stopped battle, and a win against a
+  player leader give none (those give a <a href="#medals">medal</a>).</li>
+<li><strong>Datapacks can change the map.</strong> <code>data/cobblemon_pokegyms/badges.json</code> maps a leader to an item id. A key is
+  an RCT trainer id, or a leader's name, which covers all that leader's variants; a leader with no entry gives
+  nothing (the server logs it once). Without PKGBadges no badge is given, and the start-up log says so.</li>
+<li><strong>Operators can switch it off</strong> with <a href="../commands/#configuration"><code>/pokegyms config badges enabled false</code></a>:
+  no win gives a badge, and badges already given stay.</li>
 </ul>
 <h2 id="level-scaling">Level scaling<a class="headerlink" href="#level-scaling" title="Permanent link">&para;</a></h2>
 <p>A gym leader's team fights at <strong>your level</strong>, whatever levels it was registered at. So does the team of
