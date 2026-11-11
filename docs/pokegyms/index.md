@@ -26,7 +26,7 @@ inside its door: the one place where everything about that gym happens.
 
 !!! warning "Not released yet"
     PokeGyms has no public download yet. These pages describe the current development build,
-    **0.0.21**. What it does today is find the gyms, give each City gym an RCT leader you can fight,
+    **0.0.22**. What it does today is find the gyms, give each City gym an RCT leader you can fight,
     run their Gym Manager and tell other mods which battles are gym battles. Gym battle rules, taking a gym over, disciples, the gym vault and
     level scaling are not in the mod yet, and nothing here describes them.
 

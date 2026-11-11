@@ -28,6 +28,7 @@ and is written to the config file so it survives one.
 | `/pokegyms config licences enabled <true\|false>` | Switches the whole feature on or off. |
 | `/pokegyms config licences <setting> <value>` | Sets a number, within the setting's range. |
 | `/pokegyms config canonical penalty <value>` | The same for the City-leader battle; `canonical` takes `enabled` and `reset` like `licences`. |
+| `/pokegyms config leader enabled <true\|false>` | Opens or closes [team registration](gyms.md#registering-your-team); `leader` has no numbers, and takes `reset` too. |
 | `/pokegyms config licences reset` | Puts the feature back to its defaults, switched on. |
 
 ## Configuration
@@ -44,6 +45,9 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
   "canonical": {
     "enabled": true,
     "penalty": 1000
+  },
+  "leader": {
+    "enabled": true
   }
 }
 ```
@@ -55,6 +59,7 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
 | `licences.expiry_days` | `30` | 0 to 36,500 | Days a holder can stay offline before their licence ends. `0` keeps a licence for good. |
 | `canonical.enabled` | `true` | | Off: City gym leaders take no challenges. Battles already running finish, and a loss still costs the penalty. |
 | `canonical.penalty` | `1000` | 0 or more | What losing to a City leader costs, in CobbleDollars, and the least a challenger must carry to start. It is destroyed, never paid to anyone. |
+| `leader.enabled` | `true` | | Off: no holder can register or replace their gym's team. Teams already registered stay, with their leader. |
 
 A setting missing from the file takes its default, and one out of range is pulled into it; the file is
 then written back whole, so you always find every setting in it. A file that is not valid JSON is left
