@@ -180,6 +180,13 @@ protection or on land a claim mod (Open Parties and Claims, FTB Chunks…) prote
 
 ![Rock Smash: a whole ore vein in one punch](../assets/store/gif-rock-smash.gif)
 
+- A vein that runs from stone into deepslate comes out whole: iron ore and deepslate iron ore count
+  as the same ore.
+- Every block breaks as if you had mined it yourself, so claims, spawn protection and adventure
+  mode all hold, and containers keep what's inside them (a shulker box drops with its contents).
+- Unbreakable blocks such as bedrock never break. If nothing could be broken, the HM says so and
+  does nothing.
+
 ---
 
 ### <img class="hm-icon" src="../../assets/icons/dig.png" alt=""> Dig
