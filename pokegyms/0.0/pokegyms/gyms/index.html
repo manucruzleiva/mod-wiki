@@ -521,10 +521,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#city-gyms" class="md-nav__link">
+  <a href="#city-gyms-and-their-leaders" class="md-nav__link">
     <span class="md-ellipsis">
       
-        City gyms
+        City gyms and their leaders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fighting-a-city-leader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fighting a City leader
       
     </span>
   </a>
@@ -753,10 +764,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#city-gyms" class="md-nav__link">
+  <a href="#city-gyms-and-their-leaders" class="md-nav__link">
     <span class="md-ellipsis">
       
-        City gyms
+        City gyms and their leaders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fighting-a-city-leader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fighting a City leader
       
     </span>
   </a>
@@ -832,7 +854,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.17</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.20</p>
   
                   
 
@@ -848,9 +870,31 @@ find has one. That is Cities &amp; Structures' choice; PokeGyms records the gyms
 <p>A gym is found <strong>the first time its city loads</strong>, new or generated long before PokeGyms was
 installed, and it is remembered for that world from then on, across restarts. Each dimension keeps
 its own list.</p>
-<h2 id="city-gyms">City gyms<a class="headerlink" href="#city-gyms" title="Permanent link">&para;</a></h2>
-<p>Every gym starts as a <strong>City gym</strong>, held by Cities &amp; Structures' own leader, who stays where that mod
-puts them. PokeGyms does not move or replace them.</p>
+<h2 id="city-gyms-and-their-leaders">City gyms and their leaders<a class="headerlink" href="#city-gyms-and-their-leaders" title="Permanent link">&para;</a></h2>
+<p>Every gym starts as a <strong>City gym</strong>, led by one of <strong>Radical Cobblemon Trainers'</strong> own gym leaders (the
+<code>leader_*</code> trainers, 24 different names in RCT 0.19.2).</p>
+<ul>
+<li><strong>One leader per City, kept for good.</strong> PokeGyms picks the leader the first time the gym is found and
+  remembers it. No leader's name repeats across the world's gyms until every one has been used.</li>
+<li><strong>The leader stands still and cannot be hurt</strong>, at the gym's leader spot. The Gym Manager names them.</li>
+<li><strong>Cities &amp; Structures' own leader is removed.</strong> PokeGyms puts RCT's leader in their place, so the gym
+  never has two. Worlds made before this version change over by themselves the next time each gym loads.</li>
+<li>A gym that is no longer a City gym loses its RCT leader.</li>
+</ul>
+<h2 id="fighting-a-city-leader">Fighting a City leader<a class="headerlink" href="#fighting-a-city-leader" title="Permanent link">&para;</a></h2>
+<p>Right-click the leader to challenge them. PokeGyms starts the battle with the leader's RCT team, but it
+<strong>does not count in RCT's progression</strong>: winning does not raise your level cap or add the leader to your
+defeat list, and RCT gives no loot or dialogue for it.</p>
+<ul>
+<li><strong>You need CobbleDollars to start.</strong> You must carry at least the <strong>penalty</strong>, <code>canonical.penalty</code>
+  (1,000 by default). If you are short, you are told how much you need.</li>
+<li><strong>Losing costs the penalty.</strong> Losing, forfeiting or running away takes exactly that sum from you. The
+  money goes to no one. Winning costs nothing.</li>
+<li><strong>One challenger at a time</strong> per leader. A second challenger is told the leader is busy.</li>
+<li><strong>Operators can close the fight</strong> or change the penalty with
+  <a href="../commands/#configuration"><code>/pokegyms config canonical</code></a>. Closed, leaders take no challenges; battles
+  already running finish, and a loss still costs the penalty.</li>
+</ul>
 <h2 id="the-gym-manager">The Gym Manager<a class="headerlink" href="#the-gym-manager" title="Permanent link">&para;</a></h2>
 <p>Every gym has a <strong>Gym Manager</strong>: a lectern just inside the gym's door. It is put there as soon as the
 gym is found and the spot is loaded.</p>
