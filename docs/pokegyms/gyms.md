@@ -58,6 +58,34 @@ above may buy it (see [Licences](licences.md)).
 - **Your win is remembered** even if licences are switched off, so it still counts when they are
   switched back on.
 
+## Registering your team
+
+A gym's **holder** (the player who holds its licence, in a town gym or in a City gym won from its
+leader) can register their party as the gym's team. The gym then has a leader of its own.
+
+- **Open the Team tab** of the Gym Manager, pick **singles** or **doubles**, and press **Register**.
+  Singles takes 1 Pokémon from your party, doubles takes 2. Only the holder sees the tab, and the
+  server checks it again when you press the button.
+- **The gym keeps a frozen copy.** The Pokémon are copied, healed, and the copy does not follow yours:
+  you keep your own Pokémon and can train, trade or lose them. Registering again replaces the copy.
+- **Everyone sees the team.** The gym team panel on the Gym Manager's side lists the registered
+  Pokémon by name and level.
+- **A leader NPC stands for it.** **Gym Leader <player>** stands at the gym's leader spot, wearing the
+  holder's skin (default or slim, read from their Minecraft profile) and carrying the copy as its
+  party. It cannot be hurt, moved or pushed, and does not despawn. If it is killed, it comes back the next
+  time its chunk loads.
+- **It leaves when the licence ends.** Renouncing or expiring removes the team and the NPC. In a City
+  gym, the RCT leader returns at the same time (see [Unlocking a City gym](#unlocking-a-city-gym)).
+  An NPC whose chunk was unloaded when the licence ended is removed the next time that chunk loads.
+- **Operators can close registration** with
+  [`/pokegyms config leader`](commands.md#configuration). Off, nobody can register or replace a team;
+  teams already registered stay, with their leader.
+
+Worlds saved before this version load every gym with no team. A saved team that cannot be read is
+dropped and the gym is kept.
+
+Fighting this leader is not in the mod yet.
+
 ## The Gym Manager
 
 Every gym has a **Gym Manager**: a lectern just inside the gym's door. It is put there as soon as the
@@ -79,7 +107,9 @@ Right-clicking a Gym Manager opens its screen, built on Cobblemon's summary scre
 - **The Info tab**, which everyone sees, gives the gym's **kind** (City gym), its **status**
   (Canonical) and its **location** (X, Z), with a short line about who runs it. At a City gym whose leader you beat, the line says you may buy
   its licence.
-- **The gym team** panel on the side has six slots. They stand empty in this build.
+- **The Team tab**, which only the holder sees, [registers the gym's team](#registering-your-team).
+- **The gym team** panel on the side has six slots. They show the registered team by name and level,
+  and stand empty while the gym has none.
 
 The screen shows the gym as the server saw it when you opened it, and every button asks the server
 again before anything happens.
