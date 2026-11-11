@@ -26,7 +26,7 @@ inside its door: the one place where everything about that gym happens.
 
 !!! warning "Not released yet"
     PokeGyms has no public download yet. These pages describe the current development build,
-    **0.0.32**. What it does today is find the gyms, give each City gym an RCT leader you can fight, let you challenge the leader of a player-held gym
+    **0.0.33**. What it does today is find the gyms, give each City gym an RCT leader you can fight, let you challenge the leader of a player-held gym
     (a loser pays its penalty into the gym's vault, a winner gets a signed medal, a Badge It badge if the gym has one, and a challenger waits before a rematch), scale every RCT trainer's team, leaders included, to your level (stage and moves too), run their Gym Manager and tell other mods which battles are gym battles. Gym battle rules,
     taking a gym over and disciples are not in the mod yet, and nothing here describes them.
 
@@ -49,6 +49,8 @@ inside its door: the one place where everything about that gym happens.
   into the gym's vault, and the holder withdraws it.
 - 🏅 **[Signed medals](gyms.md#medals)**: beat a player leader and you get a Gym Medal that names the gym,
   the leader and the date, or a signed Badge It badge when the leader registered one.
+- 🎖️ **[Mainline badges](gyms.md#mainline-badges)**: with PKGBadges installed, beating a City leader gives the
+  badge that leader gives in the main games.
 - 📈 **[Level scaling](gyms.md#level-scaling)**: a leader's team, and every RCT trainer's, fights at the level of your best
   Pokémon, up or down, evolution stage included, so a battle is fair at any stage.
 - ⚔️ **[Gym battles, recognised](gyms.md#gym-battles)**: a battle against a trainer inside a gym

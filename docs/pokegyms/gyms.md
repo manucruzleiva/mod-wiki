@@ -37,6 +37,7 @@ defeat list, and RCT gives no loot or dialogue for it.
 - **Losing costs the penalty.** Losing, forfeiting or running away takes exactly that sum from you. The
   money goes to no one. Winning costs nothing, and [unlocks the gym's licence](#unlocking-a-city-gym) for you.
 - **One challenger at a time** per leader. A second challenger is told the leader is busy.
+- **A win can also give a badge.** See [Mainline badges](#mainline-badges).
 - **Operators can close the fight** or change the penalty with
   [`/pokegyms config canonical`](commands.md#configuration). Closed, leaders take no challenges; battles
   already running finish, and a loss still costs the penalty.
@@ -148,6 +149,25 @@ Beating a player leader gives you a **Gym Medal**.
   licence starts without a badge.
 - **Operators can switch it off** with [`/pokegyms config medals enabled false`](commands.md#configuration):
   no win gives a medal, and medals already given stay.
+
+## Mainline badges
+
+With [PKGBadges](https://modrinth.com/mod/pkgbadges) installed, beating a **City leader** gives you the badge
+that leader gives in the main games: Brock the Boulder Badge, Misty the Cascade Badge, and so on. PKGBadges is
+optional.
+
+- **The 16 Kanto and Johto leaders have one.** Radical Cobblemon Trainers' leaders from the main games
+  (Brock to Giovanni, Falkner to Clair) give their badge; the other City leaders give none.
+- **Once per challenger.** Winning again gives nothing more, and it stays so after the gym's licence ends and
+  the City leader is back.
+- **A full inventory is no loss.** The badge drops at your feet.
+- **Only a win against a City leader gives one.** A loss, a forfeit, a stopped battle, and a win against a
+  player leader give none (those give a [medal](#medals)).
+- **Datapacks can change the map.** `data/cobblemon_pokegyms/badges.json` maps a leader to an item id. A key is
+  an RCT trainer id, or a leader's name, which covers all that leader's variants; a leader with no entry gives
+  nothing (the server logs it once). Without PKGBadges no badge is given, and the start-up log says so.
+- **Operators can switch it off** with [`/pokegyms config badges enabled false`](commands.md#configuration):
+  no win gives a badge, and badges already given stay.
 
 ## Level scaling
 

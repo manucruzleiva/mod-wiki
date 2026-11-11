@@ -17,7 +17,8 @@ made for multiplayer servers, and it goes on the server **and** on every player'
 | [Cobblemon Cities & Structures](https://modrinth.com/mod/cobblemon-cities-structures) | the cities whose gyms PokeGyms runs |
 
 Optional: [Badge It](https://modrinth.com/mod/badgeit), so a gym's medal can be one of its badges
-([Medals](gyms.md#medals)).
+([Medals](gyms.md#medals)), and [PKGBadges](https://modrinth.com/mod/pkgbadges), so beating a City leader
+gives that leader's mainline badge ([Mainline badges](gyms.md#mainline-badges)).
 
 PokeGyms starts without Cities & Structures, but then it finds **no gyms** and does nothing. With an
 older version of any of the others, the game refuses to start and names the mod and the version it

@@ -34,6 +34,7 @@ and is written to the config file so it survives one.
 | `/pokegyms config scaling enabled <true\|false>` | Switches [level scaling](gyms.md#level-scaling), of gym leaders and RCT trainers, on or off; `scaling` has no numbers, and takes `reset` too. |
 | `/pokegyms config evolution enabled <true\|false>` | Switches the [evolution stage](gyms.md#level-scaling) of scaled teams on or off; needs `scaling` on, `evolution` has no numbers, and takes `reset` too. |
 | `/pokegyms config medals enabled <true\|false>` | Switches the [medal](gyms.md#medals) for beating a player leader on or off; `medals` has no numbers, and takes `reset` too. |
+| `/pokegyms config badges enabled <true\|false>` | Switches the [mainline badge](gyms.md#mainline-badges) for beating a City leader on or off; `badges` has no numbers, and takes `reset` too. |
 | `/pokegyms config licences reset` | Puts the feature back to its defaults, switched on. |
 
 ## Configuration
@@ -71,6 +72,9 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
   },
   "medals": {
     "enabled": true
+  },
+  "badges": {
+    "enabled": true
   }
 }
 ```
@@ -91,6 +95,7 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
 | `scaling.enabled` | `true` | | Off: gym leaders' and RCT trainers' teams battle at the levels they were registered at, not at the challenger's. Battles already running keep theirs. |
 | `evolution.enabled` | `true` | | Off: a scaled team keeps its registered species instead of taking the evolution stage of its new level. Needs `scaling` on. |
 | `medals.enabled` | `true` | | Off: beating a player leader gives no medal. Medals already given stay. |
+| `badges.enabled` | `true` | | Off: beating a City leader gives no badge. Badges already given stay. |
 
 A setting missing from the file takes its default, and one out of range is pulled into it; the file is
 then written back whole, so you always find every setting in it. A file that is not valid JSON is left
