@@ -535,6 +535,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="City gyms and their leaders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#city-disciples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        City disciples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -911,6 +928,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="City gyms and their leaders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#city-disciples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        City disciples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1098,7 +1132,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.36</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.37</p>
   
                   
 
@@ -1125,8 +1159,26 @@ its own list.</p>
   never has two. Worlds made before this version change over by themselves the next time each gym loads.</li>
 <li>A gym that is no longer a City gym loses its RCT leader.</li>
 </ul>
+<h3 id="city-disciples">City disciples<a class="headerlink" href="#city-disciples" title="Permanent link">&para;</a></h3>
+<p>While a City gym is still its own leader's, up to <strong>three Radical Cobblemon Trainers</strong> stand at its disciple spots,
+like the disciples of a <a href="#disciples">player gym</a>.</p>
+<ul>
+<li><strong>They share the leader's type</strong>: the type found most often among the primary and secondary types of the leader's
+  team. A tie goes to the type of the leader's last Pokémon.</li>
+<li><strong>They are ordinary RCT trainers</strong>: never a gym leader, Elite Four member, champion, rival or villain boss.
+  The City chooses them once, so a gym always has the same ones. A type with fewer than three such trainers gives
+  the ones there are.</li>
+<li><strong>Fought weakest to strongest</strong>, by the highest level in each one's team.</li>
+<li><strong>Beat them all before the leader.</strong> The leader takes a challenge only once you have beaten every one. Each fight
+  needs the <a href="#fighting-a-city-leader">penalty</a> in hand. Winning costs nothing; <strong>losing to one takes the penalty</strong>
+  (destroyed, as against the leader) and sends you back to the first. A finished leader challenge starts the next
+  one from the first again, and your progress survives logouts and restarts.</li>
+<li><strong>They step aside while a player holds the gym</strong>, which has its own disciples, and stand again when the City leader returns.</li>
+<li><strong>Operators can switch it off</strong> with <a href="../commands/#configuration"><code>/pokegyms config city_disciples enabled false</code></a>:
+  no City disciples stand and the City leader is challenged directly.</li>
+</ul>
 <h2 id="fighting-a-city-leader">Fighting a City leader<a class="headerlink" href="#fighting-a-city-leader" title="Permanent link">&para;</a></h2>
-<p>Right-click the leader to challenge them. PokeGyms starts the battle with the leader's RCT team, but it
+<p>Right-click the leader to challenge them, once you have beaten the leader's <a href="#city-disciples">disciples</a>. PokeGyms starts the battle with the leader's RCT team, but it
 <strong>does not count in RCT's progression</strong>: winning does not raise your level cap or add the leader to your
 defeat list, and RCT gives no loot or dialogue for it.</p>
 <ul>
@@ -1305,7 +1357,7 @@ gym is found and the spot is loaded.</p>
 <li><strong>The header</strong> names the gym by its city, such as <strong>Pewter City Gym</strong>, with a <strong>CITY</strong> tag, and
   who runs it: the <strong>City leader</strong>.</li>
 <li><strong>The Info tab</strong>, which everyone sees, gives the gym's <strong>kind</strong> (City gym), its <strong>status</strong>
-  (Canonical) and its <strong>location</strong> (X, Z), with a short line about who runs it. At a City gym whose leader you beat, the line says you may buy
+  (Canonical) and its <strong>location</strong> (X, Z), and in a City gym the <strong>type</strong> of its leader, with a short line about who runs it. At a City gym whose leader you beat, the line says you may buy
   its licence.</li>
 <li><strong>The Team tab</strong>, which only the holder sees, <a href="#registering-your-team">registers the gym's team</a>.</li>
 <li><strong>The Vault tab</strong>, which only the holder sees, sets the gym's penalty and withdraws its
