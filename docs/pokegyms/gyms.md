@@ -105,10 +105,27 @@ Right-click the **Gym Leader** NPC of a player-held gym to fight the team its ho
 - **In a City gym held by a player,** the fight counts as against the player leader, not the City
   leader: it does not touch the City leader's unlock or penalty, and
   [`/pokegyms battles`](commands.md#pokegyms-battles) lists it as `leader`.
+- **A rematch has to wait.** See [Rematch cooldown](#rematch-cooldown).
 - **The penalty has its own switch.** [`/pokegyms config vault`](commands.md#configuration) turns it
   off: nobody pays or needs one to challenge.
 - **It does not depend on the `leader` switch.** [`/pokegyms config leader`](commands.md#configuration)
   only stops new registrations; challenges keep working.
+
+## Rematch cooldown
+
+After you finish a challenge of a player leader, the same leader will not take you on again right away.
+
+- **It starts when the challenge ends, won or lost.** Forfeiting or running away counts as a loss. A
+  battle the server stops, with no winner, starts no wait.
+- **It is yours alone, and per gym.** Another challenger can fight the same leader at once, and you can
+  still fight other gyms' leaders.
+- **Trying early is refused,** and the message tells you the time left, such as "will take your
+  challenge again in 45 min". The time is rounded up to whole minutes.
+- **It lasts 60 minutes by default,** and survives a server restart. A gym whose licence ends and is
+  bought again starts with nobody waiting.
+- **City leaders have no cooldown.** It applies only to player leaders, not to the City (RCT) leaders.
+- **Operators can change it** with [`/pokegyms config rematch`](commands.md#configuration): `cooldown_minutes`
+  sets the wait (`0` means no wait), and `enabled` switches the whole cooldown off.
 
 ## The Gym Manager
 
