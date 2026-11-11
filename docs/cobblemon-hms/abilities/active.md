@@ -64,10 +64,16 @@ variant, gear and its nametag — for everyone who can see you. Copy a trainer f
 
 - Aim at a **creature** in clear view → you look exactly like it for 15 minutes.
 - **Fire it again while you are wearing one** → the costume comes off and the HM is ready
-  immediately, so changing disguise is two presses.
+  immediately, so changing disguise is two presses. This works with any Pokémon lending
+  Camouflage, not only the one that put the costume on.
 - A block, a wall between you and it, or empty air → nothing happens. You can only copy something
   you can actually see.
-- Other **players** can't be copied.
+- Only **living creatures** can be copied: not other **players**, armour stands, boats, minecarts
+  or item frames, and not something already wearing a costume of its own.
+- Your hitbox becomes the creature's, so a large disguise can get stuck where a small one fits.
+- The costume comes off on its own when it runs out, when you die, log out or switch to spectator,
+  or when an operator switches Camouflage off. Putting your Pokémon back in its ball does not take
+  it off.
 
 The disguise is a costume, not a creature: nothing extra exists in the world, so there is nothing
 to hit, nothing in your way, and nothing that can be killed off you.
@@ -81,7 +87,12 @@ Turns the block you aim at into a redstone power source — enough to throw a do
 lamp from across a room. **The charge is permanent.** It is saved with the world, so it stays when
 you log off and when the server restarts, and charging another block does not take it back: charge
 as many as you like. Aim Charge at a charged block again to discharge it. Breaking the block ends
-its charge too.
+its charge on the spot, and so does anything else that replaces it: an explosion, a piston, flowing
+water. A block placed in the same spot afterwards starts uncharged. A charge belongs to its own
+dimension, so it never powers the same coordinates in the Nether or the End.
+
+Charging needs the right to build where you aim, the same as placing a redstone block: it does not
+work in adventure or spectator mode, inside spawn protection, or in a claim that keeps you out.
 
 It changes the world, so it needs the right to build: it does nothing in adventure mode, inside
 spawn protection or on land a claim mod protects from you.
@@ -235,6 +246,10 @@ With no cooldown you can sweep a whole row of suspicious sand one click at a tim
 
 **Lootr** works too: on Lootr's suspicious sand and gravel, Tail Whip sweeps the way Lootr's brush
 does, so each player gets their own find and the block stays for everyone else.
+
+- It reaches as far as your hand does, and the find pops out of the face you swept, as from a brush.
+- It only works where a brush would: not in adventure mode or spectator, and not inside spawn
+  protection (unless you are an operator) or a claim you may not build in.
 
 ---
 

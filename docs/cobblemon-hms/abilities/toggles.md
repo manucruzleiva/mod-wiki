@@ -320,6 +320,10 @@ lightning does.
 Weather aura. **The sky stays clear**, with no rain and no storms, for as long as Sunny Day is on and
 its Pokémon is out. Switch it off or recall the Pokémon and Minecraft takes the weather back.
 
+It holds the **overworld** sky, so it works while you are in the overworld; the Nether and the End
+have no weather to clear. There is only one sky, so if another player far away switches on Rain
+Dance after you, their rain wins until one of you switches off.
+
 ---
 
 ### <img class="hm-icon" src="../../assets/icons/blizzard.png" alt=""> Blizzard
