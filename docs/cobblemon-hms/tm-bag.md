@@ -12,7 +12,7 @@ meet one: it is no longer crafted. Right-click with the Case in hand to open it.
 |---|---|
 | **Put TMs away** | Every TM in your inventory goes into the bag |
 | **Click** a row | Takes one TM of that move out |
-| **Shift-click** a row | Takes the whole stack out |
+| **Shift-click** a row | Takes up to a full stack (64) out |
 | Type in the **search box** | Filters the list by move name |
 
 Only **plain TMs** go in. A TM renamed in an anvil, or one whose move Cobblemon no longer knows,
