@@ -140,6 +140,12 @@ Beating a player leader gives you a **Gym Medal**.
 - **You get one per win.** Winning the same gym again, after the [rematch cooldown](#rematch-cooldown),
   gives another.
 - **A full inventory is no loss.** The medal drops at your feet.
+- **With Badge It, the medal can be a badge.** [Badge It](https://modrinth.com/mod/badgeit) is optional. When it
+  is installed, the holder's Team tab has a third row, **Medal**: hold one of its badges in your main hand and
+  click it to register that badge as the gym's medal (you keep the badge). Winners then get a copy of that
+  badge signed the same way, with the gym, the leader and the date in its lore. A badge crafted by hand carries
+  no signature. Without Badge It, or before a badge is registered, winners get the generic medal. A gym's new
+  licence starts without a badge.
 - **Operators can switch it off** with [`/pokegyms config medals enabled false`](commands.md#configuration):
   no win gives a medal, and medals already given stay.
 

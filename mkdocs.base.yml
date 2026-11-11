@@ -116,7 +116,7 @@ extra:
     poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.17 }
     action-combat:  { name: Cobblemon Action Combat,        version: 0.1.43, repo: cobblemon-action-combat }
     poketrades:     { name: Cobblemon PokeTrades,           version: 0.0.24, repo: cobblemon-poketrades }
-    pokegyms:       { name: Cobblemon PokeGyms,             version: 0.0.31, repo: cobblemon-pokegyms }
+    pokegyms:       { name: Cobblemon PokeGyms,             version: 0.0.32, repo: cobblemon-pokegyms }
     defeated-catch-chance: { name: Cobblemon Defeated Catch Chance, version: 0.0.1, repo: cobblemon-defeated-catch-chance }
   # La ficha tecnica de cada mod: lo que dice su jar publicado (fabric.mod.json y neoforge.mods.toml
   # del tag del ultimo release), no lo que se recuerda. De aca salen, por hooks/mod_specs.py, las
@@ -159,6 +159,7 @@ extra:
     action-combat:  { name: Cobblemon Action Combat,     page: action-combat/index.md }
     pokegyms:       { name: Cobblemon PokeGyms,          page: pokegyms/index.md }
     impactor:       { name: Impactor,                    modrinth: impactor }
+    badgeit:        { name: Badge It,                    modrinth: badgeit }
   mod_specs:
     routes:
       minecraft: "1.21.1–1.21.11 · 26.3"
@@ -281,6 +282,8 @@ extra:
       requires_note: "— Radical Cobblemon Trainers with its RCT API. Without Cities & Structures PokeGyms starts but finds no gyms"
       fabric: [flk, architectury]
       neoforge: [kff, architectury]
+      optional:
+        - [badgeit, "the leader registers one of its badges as the gym's medal"]
     defeated-catch-chance:
       unreleased: true
       minecraft: "1.21.1"

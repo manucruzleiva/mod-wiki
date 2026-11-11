@@ -16,6 +16,9 @@ made for multiplayer servers, and it goes on the server **and** on every player'
 | [Radical Cobblemon Trainers](https://modrinth.com/mod/radical-cobblemon-trainers) 0.19.2-beta+ | with its **RCT API** 0.16.2-beta+ |
 | [Cobblemon Cities & Structures](https://modrinth.com/mod/cobblemon-cities-structures) | the cities whose gyms PokeGyms runs |
 
+Optional: [Badge It](https://modrinth.com/mod/badgeit), so a gym's medal can be one of its badges
+([Medals](gyms.md#medals)).
+
 PokeGyms starts without Cities & Structures, but then it finds **no gyms** and does nothing. With an
 older version of any of the others, the game refuses to start and names the mod and the version it
 needs.
