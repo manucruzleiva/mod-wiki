@@ -30,6 +30,7 @@ and is written to the config file so it survives one.
 | `/pokegyms config canonical penalty <value>` | The same for the City-leader battle; `canonical` takes `enabled` and `reset` like `licences`. |
 | `/pokegyms config leader enabled <true\|false>` | Opens or closes [team registration](gyms.md#registering-your-team); `leader` has no numbers, and takes `reset` too. |
 | `/pokegyms config vault <setting> <value>` | Sets `penalty_min` or `penalty_max` of the [gym vault](vault.md); `vault` takes `enabled` and `reset` too. |
+| `/pokegyms config winner_share <setting> <value>` | Sets `percent` of the [winner's share](vault.md#winners-share) of the vault; `winner_share` takes `enabled` and `reset` too. |
 | `/pokegyms config rematch <setting> <value>` | Sets `cooldown_minutes` of the [rematch cooldown](gyms.md#rematch-cooldown); `rematch` takes `enabled` and `reset` too. |
 | `/pokegyms config scaling enabled <true\|false>` | Switches [level scaling](gyms.md#level-scaling), of gym leaders and RCT trainers, on or off; `scaling` has no numbers, and takes `reset` too. |
 | `/pokegyms config evolution enabled <true\|false>` | Switches the [evolution stage](gyms.md#level-scaling) of scaled teams on or off; needs `scaling` on, `evolution` has no numbers, and takes `reset` too. |
@@ -75,6 +76,10 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
   },
   "badges": {
     "enabled": true
+  },
+  "winner_share": {
+    "enabled": true,
+    "percent": 10
   }
 }
 ```
@@ -96,6 +101,8 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
 | `evolution.enabled` | `true` | | Off: a scaled team keeps its registered species instead of taking the evolution stage of its new level. Needs `scaling` on. |
 | `medals.enabled` | `true` | | Off: beating a player leader gives no medal. Medals already given stay. |
 | `badges.enabled` | `true` | | Off: beating a City leader gives no badge. Badges already given stay. |
+| `winner_share.enabled` | `true` | | Off: beating a player leader takes nothing from the vault. |
+| `winner_share.percent` | `10` | 0 to 100 | The share of the gym's vault the winner takes, rounded down. `0` takes nothing. |
 
 A setting missing from the file takes its default, and one out of range is pulled into it; the file is
 then written back whole, so you always find every setting in it. A file that is not valid JSON is left
