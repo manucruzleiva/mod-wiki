@@ -1,0 +1,23 @@
+INHERIT: mkdocs.base.yml
+site_name: Cobblemon Defeated Catch Chance
+site_url: https://manucruzleiva.github.io/mod-wiki/defeated-catch-chance/
+
+extra:
+  wiki_site: defeated-catch-chance
+
+# Todo lo que no es de este mod queda afuera, salvo lo compartido. Los links a paginas de otro sitio
+# los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*
+  !/defeated-catch-chance/
+  !/assets/
+  !/stylesheets/
+
+nav:
+  - Cobblemon Defeated Catch Chance:
+      - defeated-catch-chance/index.md
+      - Getting Started: defeated-catch-chance/getting-started.md
+      - How it works: defeated-catch-chance/how-it-works.md
+      - Commands & Config: defeated-catch-chance/commands.md
+      - Troubleshooting: defeated-catch-chance/troubleshooting.md
+      - Community Credits: defeated-catch-chance/credits.md
