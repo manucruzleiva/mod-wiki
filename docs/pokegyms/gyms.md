@@ -263,13 +263,15 @@ Right-clicking a Gym Manager opens its screen, built on Cobblemon's summary scre
 - **The Licence tab** is where a visitor or a disciple of a held gym can [take it over](#taking-over-a-gym).
 - **The Disciples tab** is seen by the holder, by a player the holder invited and by the gym's disciples:
   see [Disciples](#disciples).
+- **The Roster tab** is seen by a visitor and by a player the holder invited, not by the holder or the gym's disciples:
+  see [Challenging a gym](#challenging-a-gym).
 - **The gym team** panel on the side has six slots. They show the registered team by name and level,
   and stand empty while the gym has none.
 
 The screen shows the gym as the server saw it when you opened it, and every button asks the server
 again before anything happens.
 
-The holder's screen has four tabs: Info, Licence, Team and Disciples. A disciple sees Info, Licence and Disciples. The **Licence** tab also holds the gym's
+The holder's screen has four tabs: Info, Licence, Team and Disciples. A disciple sees Info, Licence and Disciples. A visitor sees Info, Licence (when there is a licence to buy or a gym to take over) and Roster. The **Licence** tab also holds the gym's
 [vault](vault.md): its penalty, Withdraw and Renounce. See [Licences](licences.md#the-licence-tab).
 
 ## Disciples
@@ -316,6 +318,21 @@ in the gym's current format.
 - **Changes start everyone over.** A disciple joining, registering again or leaving, or a new licence,
   resets every challenger's progress.
 - **Who cannot challenge.** The holder and the gym's own disciples. Each trainer battles one challenger at a time.
+
+## Challenging a gym
+
+A visitor's Gym Manager has a **Roster** tab, titled **Order**, that lists the gym's trainers in the order you
+face them: its disciples one after another, the leader last.
+
+- **Beaten trainers are struck out**, the one you face next is **gold** and the rest wait.
+- **Press Challenge** and the next trainer takes you on at their place, the same as right-clicking them. The screen closes for the battle.
+- **Only the next trainer can be called out.** A disciple you beat cannot be fought again until you start over, after a
+  loss or a finished challenge against the leader. If you try anyway, or the gym takes no challenge from you now, you are told in chat.
+- **A trainer who is not at their place yet** asks you to try again in a moment.
+- **City gyms work the same way**, with their [RCT disciples](#city-disciples) first and the City leader last.
+- **A player the holder invited** sees the tab too, while they decide on the invitation.
+- **Operators can switch it off** with [`/pokegyms config roster enabled false`](commands.md#configuration):
+  challengers get no Roster tab; right-clicking a trainer still challenges it, in the same order.
 
 ## Gym battles
 
