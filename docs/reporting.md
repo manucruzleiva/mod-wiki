@@ -22,7 +22,6 @@ the bot asks you for. It is the one thing worth getting right.
 | 🚨 **Crash** | the game closes, freezes or fails to start | jumps the queue; asks for the crash report |
 | 🐛 **Bug** | something works, but wrong | asks for versions, loader and steps |
 | 💡 **Idea** | you want something that does not exist yet | files it as a feature request — no logs needed |
-| 💬 **Feedback** | an impression, a balance opinion, a "this felt off" | recorded; nothing else needed from you |
 
 ## What makes a great report
 
