@@ -554,6 +554,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#registering-your-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering your team
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-gym-manager" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -808,6 +819,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#registering-your-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registering your team
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-gym-manager" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -876,7 +898,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.21</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.22</p>
   
                   
 
@@ -933,6 +955,31 @@ above may buy it (see <a href="../licences/">Licences</a>).</p>
 <li><strong>Your win is remembered</strong> even if licences are switched off, so it still counts when they are
   switched back on.</li>
 </ul>
+<h2 id="registering-your-team">Registering your team<a class="headerlink" href="#registering-your-team" title="Permanent link">&para;</a></h2>
+<p>A gym's <strong>holder</strong> (the player who holds its licence, in a town gym or in a City gym won from its
+leader) can register their party as the gym's team. The gym then has a leader of its own.</p>
+<ul>
+<li><strong>Open the Team tab</strong> of the Gym Manager, pick <strong>singles</strong> or <strong>doubles</strong>, and press <strong>Register</strong>.
+  Singles takes 1 Pokémon from your party, doubles takes 2. Only the holder sees the tab, and the
+  server checks it again when you press the button.</li>
+<li><strong>The gym keeps a frozen copy.</strong> The Pokémon are copied, healed, and the copy does not follow yours:
+  you keep your own Pokémon and can train, trade or lose them. Registering again replaces the copy.</li>
+<li><strong>Everyone sees the team.</strong> The gym team panel on the Gym Manager's side lists the registered
+  Pokémon by name and level.</li>
+<li><strong>A leader NPC stands for it.</strong> <strong>Gym Leader <player></strong> stands at the gym's leader spot, wearing the
+  holder's skin (default or slim, read from their Minecraft profile) and carrying the copy as its
+  party. It cannot be hurt, moved or pushed, and does not despawn. If it is killed, it comes back the next
+  time its chunk loads.</li>
+<li><strong>It leaves when the licence ends.</strong> Renouncing or expiring removes the team and the NPC. In a City
+  gym, the RCT leader returns at the same time (see <a href="#unlocking-a-city-gym">Unlocking a City gym</a>).
+  An NPC whose chunk was unloaded when the licence ended is removed the next time that chunk loads.</li>
+<li><strong>Operators can close registration</strong> with
+  <a href="../commands/#configuration"><code>/pokegyms config leader</code></a>. Off, nobody can register or replace a team;
+  teams already registered stay, with their leader.</li>
+</ul>
+<p>Worlds saved before this version load every gym with no team. A saved team that cannot be read is
+dropped and the gym is kept.</p>
+<p>Fighting this leader is not in the mod yet.</p>
 <h2 id="the-gym-manager">The Gym Manager<a class="headerlink" href="#the-gym-manager" title="Permanent link">&para;</a></h2>
 <p>Every gym has a <strong>Gym Manager</strong>: a lectern just inside the gym's door. It is put there as soon as the
 gym is found and the spot is loaded.</p>
@@ -952,7 +999,9 @@ gym is found and the spot is loaded.</p>
 <li><strong>The Info tab</strong>, which everyone sees, gives the gym's <strong>kind</strong> (City gym), its <strong>status</strong>
   (Canonical) and its <strong>location</strong> (X, Z), with a short line about who runs it. At a City gym whose leader you beat, the line says you may buy
   its licence.</li>
-<li><strong>The gym team</strong> panel on the side has six slots. They stand empty in this build.</li>
+<li><strong>The Team tab</strong>, which only the holder sees, <a href="#registering-your-team">registers the gym's team</a>.</li>
+<li><strong>The gym team</strong> panel on the side has six slots. They show the registered team by name and level,
+  and stand empty while the gym has none.</li>
 </ul>
 <p>The screen shows the gym as the server saw it when you opened it, and every button asks the server
 again before anything happens.</p>
