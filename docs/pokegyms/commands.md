@@ -37,6 +37,7 @@ and is written to the config file so it survives one.
 | `/pokegyms config medals enabled <true\|false>` | Switches the [medal](gyms.md#medals) for beating a player leader on or off; `medals` has no numbers, and takes `reset` too. |
 | `/pokegyms config badges enabled <true\|false>` | Switches the [mainline badge](gyms.md#mainline-badges) for beating a City leader on or off; `badges` has no numbers, and takes `reset` too. |
 | `/pokegyms config disciples enabled <true\|false>` | Switches [disciples](gyms.md#disciples) on or off; `disciples` has no numbers, and takes `reset` too. |
+| `/pokegyms config city_disciples enabled <true\|false>` | Switches the [City disciples](gyms.md#city-disciples) on or off; `city_disciples` has no numbers, and takes `reset` too. |
 | `/pokegyms config licences reset` | Puts the feature back to its defaults, switched on. |
 
 ## Configuration
@@ -84,6 +85,9 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
   },
   "disciples": {
     "enabled": true
+  },
+  "city_disciples": {
+    "enabled": true
   }
 }
 ```
@@ -108,6 +112,7 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
 | `winner_share.enabled` | `true` | | Off: beating a player leader takes nothing from the vault. |
 | `winner_share.percent` | `10` | 0 to 100 | The share of the gym's vault the winner takes, rounded down. `0` takes nothing. |
 | `disciples.enabled` | `true` | | Off: a holder cannot invite, and an invited player cannot accept or register. Disciples already there stay, and the holder can still remove them. |
+| `city_disciples.enabled` | `true` | | Off: City gyms put no RCT disciples out and their leader is challenged directly. The ones already chosen stay saved and stand again when it is back on. |
 
 A setting missing from the file takes its default, and one out of range is pulled into it; the file is
 then written back whole, so you always find every setting in it. A file that is not valid JSON is left
