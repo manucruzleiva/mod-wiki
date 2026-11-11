@@ -1398,8 +1398,14 @@ out. On a server that lets species count, these can always give it:</p>
 gathers itself. Items are nudged rather than yanked, so they keep their normal pickup delay, and
 their speed is capped so they never shoot past you. The radius never goes past the 24 blocks of the
 aura itself.</p>
-<p>It leaves alone the items <strong>you threw</strong>, so you can still drop or hand something over; items
-<strong>another player is closer to</strong>; and items that <strong>would not fit</strong> in your inventory.</p>
+<p>It leaves some items where they are:</p>
+<ul>
+<li><strong>What you throw yourself</strong>, so you can still drop rubbish or hand something to a friend.</li>
+<li><strong>Items another player is closer to</strong>, so it never steals a neighbour's drops, and two players
+  with Absorb don't fight over one stack.</li>
+<li><strong>Items that won't fit in your inventory.</strong> When your inventory is full, nothing is pulled.</li>
+</ul>
+<p>The radius is the HM's power (<code>/hms config absorb power &lt;n&gt;</code>), up to 24 blocks.</p>
 <hr />
 <h3 id="dive"><img class="hm-icon" src="../../assets/icons/dive.png" alt=""> Dive<a class="headerlink" href="#dive" title="Permanent link">&para;</a></h3>
 <p>Lets you <strong>live and work underwater</strong>. Water stops getting in your way:</p>
@@ -1575,6 +1581,9 @@ lightning does.</p>
 <h3 id="sunny-day"><img class="hm-icon" src="../../assets/icons/sunny_day.png" alt=""> Sunny Day<a class="headerlink" href="#sunny-day" title="Permanent link">&para;</a></h3>
 <p>Weather aura. <strong>The sky stays clear</strong>, with no rain and no storms, for as long as Sunny Day is on and
 its Pokémon is out. Switch it off or recall the Pokémon and Minecraft takes the weather back.</p>
+<p>It holds the <strong>overworld</strong> sky, so it works while you are in the overworld; the Nether and the End
+have no weather to clear. There is only one sky, so if another player far away switches on Rain
+Dance after you, their rain wins until one of you switches off.</p>
 <hr />
 <h3 id="blizzard"><img class="hm-icon" src="../../assets/icons/blizzard.png" alt=""> Blizzard<a class="headerlink" href="#blizzard" title="Permanent link">&para;</a></h3>
 <p><strong>Power:</strong> radius of the snowfall around you (<strong>24</strong>)</p>

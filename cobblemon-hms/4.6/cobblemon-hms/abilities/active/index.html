@@ -1337,10 +1337,16 @@ variant, gear and its nametag — for everyone who can see you. Copy a trainer f
 <ul>
 <li>Aim at a <strong>creature</strong> in clear view → you look exactly like it for 15 minutes.</li>
 <li><strong>Fire it again while you are wearing one</strong> → the costume comes off and the HM is ready
-  immediately, so changing disguise is two presses.</li>
+  immediately, so changing disguise is two presses. This works with any Pokémon lending
+  Camouflage, not only the one that put the costume on.</li>
 <li>A block, a wall between you and it, or empty air → nothing happens. You can only copy something
   you can actually see.</li>
-<li>Other <strong>players</strong> can't be copied.</li>
+<li>Only <strong>living creatures</strong> can be copied: not other <strong>players</strong>, armour stands, boats, minecarts
+  or item frames, and not something already wearing a costume of its own.</li>
+<li>Your hitbox becomes the creature's, so a large disguise can get stuck where a small one fits.</li>
+<li>The costume comes off on its own when it runs out, when you die, log out or switch to spectator,
+  or when an operator switches Camouflage off. Putting your Pokémon back in its ball does not take
+  it off.</li>
 </ul>
 <p>The disguise is a costume, not a creature: nothing extra exists in the world, so there is nothing
 to hit, nothing in your way, and nothing that can be killed off you.</p>
@@ -1351,7 +1357,11 @@ to hit, nothing in your way, and nothing that can be killed off you.</p>
 lamp from across a room. <strong>The charge is permanent.</strong> It is saved with the world, so it stays when
 you log off and when the server restarts, and charging another block does not take it back: charge
 as many as you like. Aim Charge at a charged block again to discharge it. Breaking the block ends
-its charge too.</p>
+its charge on the spot, and so does anything else that replaces it: an explosion, a piston, flowing
+water. A block placed in the same spot afterwards starts uncharged. A charge belongs to its own
+dimension, so it never powers the same coordinates in the Nether or the End.</p>
+<p>Charging needs the right to build where you aim, the same as placing a redstone block: it does not
+work in adventure or spectator mode, inside spawn protection, or in a claim that keeps you out.</p>
 <p>It changes the world, so it needs the right to build: it does nothing in adventure mode, inside
 spawn protection or on land a claim mod protects from you.</p>
 <p>The block is never replaced — it stays exactly what it is and simply <em>answers</em> as a power source —
@@ -1366,15 +1376,19 @@ not a hundred break sounds. A log somebody placed, like a cabin wall, comes out 
 <strong>leaf</strong> or a <strong>vine</strong> and just that tangle goes.</p>
 <p><img alt="Cut: one punch fells a whole tree" src="../../assets/store/gif-cut.gif" /></p>
 <p>It also <strong>cuts plants</strong>: grass, ferns, crops, ground cover. Those come away as if you had used
-shears, so the drops are the careful ones — the grass itself rather than a couple of seeds — and
-that holds for plants added by a datapack too, because it is the game's own loot tables answering.</p>
+shears, so the drops are the careful ones (the grass itself rather than a couple of seeds), and
+that holds for plants added by a datapack too, because it is the game's own loot tables answering.
+Tall plants and doors come away whole, whichever half you aim at.</p>
+<p>It <strong>shears</strong> whatever is ready in front of you, as shears would: sheep, a wild or your own
+Wooloo, a Mooshroom (which, as with shears, turns it into a cow). Other players' Pokémon are left
+alone.</p>
 <p><strong>With nothing to cut in front of you, it clears the ground around you</strong> (this is what X-Scissor
 used to do), in two passes of decreasing politeness:</p>
 <ol>
-<li><strong>Weeds first</strong> — grass, ferns, dead bushes. If there are any, that is all it touches.</li>
-<li><strong>Then what somebody planted</strong> — flowers and crops, and <em>only</em> once there is not a single weed
+<li><strong>Weeds first</strong>: grass, ferns, dead bushes. If there are any, that is all it touches.</li>
+<li><strong>Then what somebody planted</strong>: flowers and crops, and <em>only</em> once there is not a single weed
    left in range (radius 5). Casting by accident in your own wheat field costs you the weeds, not
-   the field.</li>
+   the field. Cherry and azalea leaves are not flowers here: the crown of the tree above you stays.</li>
 </ol>
 <p>It never strips grass down to dirt: as a fallback, that would go off every time you missed a tree.</p>
 <p><strong>Dynamic Trees</strong> works too: aim at one of its trunks and Cut chops it the way an axe would, so the
@@ -1410,6 +1424,14 @@ the rest of what a shovel takes are <a href="#dig">Dig</a>'s.</p>
 <p>Like Cut and Dig, it needs the right to break: it does nothing in adventure mode, inside spawn
 protection or on land a claim mod (Open Parties and Claims, FTB Chunks…) protects from you.</p>
 <p><img alt="Rock Smash: a whole ore vein in one punch" src="../../assets/store/gif-rock-smash.gif" /></p>
+<ul>
+<li>A vein that runs from stone into deepslate comes out whole: iron ore and deepslate iron ore count
+  as the same ore.</li>
+<li>Every block breaks as if you had mined it yourself, so claims, spawn protection and adventure
+  mode all hold, and containers keep what's inside them (a shulker box drops with its contents).</li>
+<li>Unbreakable blocks such as bedrock never break. If nothing could be broken, the HM says so and
+  does nothing.</li>
+</ul>
 <hr />
 <h3 id="dig"><img class="hm-icon" src="../../assets/icons/dig.png" alt=""> Dig<a class="headerlink" href="#dig" title="Permanent link">&para;</a></h3>
 <p><strong>Cooldown:</strong> none</p>
@@ -1424,15 +1446,20 @@ dug read as neither.</p>
 <p>Stockpile is a mouthful you keep. It took over <strong>Water Gun</strong> and <strong>Eruption</strong>.</p>
 <ul>
 <li><strong>Aim at water or lava</strong> (source or flowing) and you <strong>drink it</strong>. The pool is drained, and that
-  fluid is now what you carry. Water is free; <strong>lava is spicy</strong> and burns going down.</li>
+  fluid is now what you carry. Water is free; <strong>lava is spicy</strong> and burns going down.
+  A waterlogged block gives up its water and keeps its shape; kelp and seagrass break, drops and all.</li>
 <li><strong>Aim anywhere else</strong> and you <strong>spit it back out</strong> on the face you are aiming at — the same square
-  a bucket would fill. You can spit <strong>as often as you like</strong>: what you carry only changes when you
-  drink the other fluid.</li>
+  a bucket would fill. Water spat at a slab, stairs or a fence <strong>waterlogs</strong> it, as a bucket does.
+  Grass, flowers or snow in the way are washed off and drop. You can spit <strong>as often as you like</strong>:
+  what you carry only changes when you drink the other fluid.</li>
 <li>Spitting water at a <strong>sponge</strong> soaks it.</li>
+<li>What you carry is yours, not the Pokémon's: it stays through a recall, a change of partner and
+  a restart.</li>
 </ul>
-<p>It passes the same permission check a bucket does, so claims, spawn protection and the world border
-all hold. Lava is never placed at your own feet, and water boils away in the Nether, as it would
-from a bucket.</p>
+<p>Drinking counts as breaking the block and spitting as placing one, so nothing happens in
+<strong>adventure</strong> or <strong>spectator</strong> mode, under <strong>spawn protection</strong>, past the <strong>world border</strong> or inside a
+<strong>claim</strong> you can't build in. Lava is never placed
+where you stand, and water boils away in the Nether, as it would from a bucket.</p>
 <p><img alt="Stockpile: drinking a pool and spitting it back out" src="../../assets/store/gif-stockpile.gif" /></p>
 <hr />
 <h3 id="strength"><img class="hm-icon" src="../../assets/icons/strength.png" alt=""> Strength<a class="headerlink" href="#strength" title="Permanent link">&para;</a></h3>
@@ -1464,6 +1491,11 @@ vanilla, but it is the same gesture on the same kind of thing, so it gives up it
 With no cooldown you can sweep a whole row of suspicious sand one click at a time.</p>
 <p><strong>Lootr</strong> works too: on Lootr's suspicious sand and gravel, Tail Whip sweeps the way Lootr's brush
 does, so each player gets their own find and the block stays for everyone else.</p>
+<ul>
+<li>It reaches as far as your hand does, and the find pops out of the face you swept, as from a brush.</li>
+<li>It only works where a brush would: not in adventure mode or spectator, and not inside spawn
+  protection (unless you are an operator) or a claim you may not build in.</li>
+</ul>
 <hr />
 <h3 id="teleport"><img class="hm-icon" src="../../assets/icons/teleport.png" alt=""> Teleport<a class="headerlink" href="#teleport" title="Permanent link">&para;</a></h3>
 <p><strong>Cooldown:</strong> 30s · <strong>Power:</strong> max 30 blocks</p>
@@ -1496,6 +1528,11 @@ underneath. The way back out of Outrage, with the same rules: your own Pokémon 
 it is battling, fainted or busy.</p>
 <p>An Alpha that is <strong>not XL</strong> underneath could never be made one again, so Calm Mind asks first: use
 it on the same Pokémon a second time within 5 seconds to settle it for good.</p>
+<ul>
+<li>Only works on an <strong>Alpha</strong>. Anything else, it refuses and says why.</li>
+<li>The Pokémon keeps the size it had under the Alpha, so an XL that went through Outrage comes back
+  XL and can be made an Alpha again.</li>
+</ul>
 <hr />
 <h3 id="celebrate"><img class="hm-icon" src="../../assets/icons/celebrate.png" alt=""> Celebrate<a class="headerlink" href="#celebrate" title="Permanent link">&para;</a></h3>
 <p><strong>Cooldown:</strong> none · <strong>Power:</strong> how many rockets (<strong>8</strong>)</p>
