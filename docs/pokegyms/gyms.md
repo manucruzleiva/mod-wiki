@@ -127,6 +127,22 @@ After you finish a challenge of a player leader, the same leader will not take y
 - **Operators can change it** with [`/pokegyms config rematch`](commands.md#configuration): `cooldown_minutes`
   sets the wait (`0` means no wait), and `enabled` switches the whole cooldown off.
 
+## Medals
+
+Beating a player leader gives you a **Gym Medal**.
+
+- **One medal, for every gym.** It is a single generic item, with no art of its own per gym. It does not
+  show in the creative tab; a medal only comes from a win.
+- **It is signed.** Hover it to read the gym ("Pewter City Gym" for a City gym, otherwise "Gym at" its
+  coordinates), "Leader:" with the name of the player you beat, and "Won on" with the date of the win.
+- **Only a win gives one.** A loss, a forfeit, or a battle the server stops gives none, and so does a win
+  against a City (RCT) leader: medals are for player leaders. The leader gets none either.
+- **You get one per win.** Winning the same gym again, after the [rematch cooldown](#rematch-cooldown),
+  gives another.
+- **A full inventory is no loss.** The medal drops at your feet.
+- **Operators can switch it off** with [`/pokegyms config medals enabled false`](commands.md#configuration):
+  no win gives a medal, and medals already given stay.
+
 ## Level scaling
 
 A gym leader's team fights at **your level**, whatever levels it was registered at. So does the team of

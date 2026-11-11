@@ -33,6 +33,7 @@ and is written to the config file so it survives one.
 | `/pokegyms config rematch <setting> <value>` | Sets `cooldown_minutes` of the [rematch cooldown](gyms.md#rematch-cooldown); `rematch` takes `enabled` and `reset` too. |
 | `/pokegyms config scaling enabled <true\|false>` | Switches [level scaling](gyms.md#level-scaling), of gym leaders and RCT trainers, on or off; `scaling` has no numbers, and takes `reset` too. |
 | `/pokegyms config evolution enabled <true\|false>` | Switches the [evolution stage](gyms.md#level-scaling) of scaled teams on or off; needs `scaling` on, `evolution` has no numbers, and takes `reset` too. |
+| `/pokegyms config medals enabled <true\|false>` | Switches the [medal](gyms.md#medals) for beating a player leader on or off; `medals` has no numbers, and takes `reset` too. |
 | `/pokegyms config licences reset` | Puts the feature back to its defaults, switched on. |
 
 ## Configuration
@@ -67,6 +68,9 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
   },
   "evolution": {
     "enabled": true
+  },
+  "medals": {
+    "enabled": true
   }
 }
 ```
@@ -86,6 +90,7 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
 | `rematch.cooldown_minutes` | `60` | 0 to 525,600 | Minutes a challenger waits after a finished challenge, won or lost, before challenging that gym's leader again. `0` means no wait. |
 | `scaling.enabled` | `true` | | Off: gym leaders' and RCT trainers' teams battle at the levels they were registered at, not at the challenger's. Battles already running keep theirs. |
 | `evolution.enabled` | `true` | | Off: a scaled team keeps its registered species instead of taking the evolution stage of its new level. Needs `scaling` on. |
+| `medals.enabled` | `true` | | Off: beating a player leader gives no medal. Medals already given stay. |
 
 A setting missing from the file takes its default, and one out of range is pulled into it; the file is
 then written back whole, so you always find every setting in it. A file that is not valid JSON is left
