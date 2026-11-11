@@ -239,8 +239,6 @@ Right-clicking a Gym Manager opens its screen, built on Cobblemon's summary scre
   (Canonical) and its **location** (X, Z), and in a City gym the **type** of its leader, with a short line about who runs it. At a City gym whose leader you beat, the line says you may buy
   its licence.
 - **The Team tab**, which only the holder sees, [registers the gym's team](#registering-your-team).
-- **The Vault tab**, which only the holder sees, sets the gym's penalty and withdraws its
-  [vault](vault.md).
 - **The Disciples tab** is seen by the holder, by a player the holder invited and by the gym's disciples:
   see [Disciples](#disciples).
 - **The gym team** panel on the side has six slots. They show the registered team by name and level,
@@ -249,8 +247,8 @@ Right-clicking a Gym Manager opens its screen, built on Cobblemon's summary scre
 The screen shows the gym as the server saw it when you opened it, and every button asks the server
 again before anything happens.
 
-More tabs join the screen as features arrive. The **Licence** tab is already built; see
-[Licences](licences.md).
+The holder's screen has four tabs: Info, Licence, Team and Disciples. The **Licence** tab also holds the gym's
+[vault](vault.md): its penalty, Withdraw and Renounce. See [Licences](licences.md#the-licence-tab).
 
 ## Disciples
 

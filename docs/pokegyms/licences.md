@@ -29,8 +29,10 @@ At a vacant town gym, or a City gym whose leader you beat, the Gym Manager scree
 - **For a visitor**: the price, how many CobbleDollars you have, and a **Buy** button. If you
   already hold a licence, the tab says which gym it is; if you are short, it says how much more you
   need. The server checks the price and your balance again when you click.
-- **For the holder**: when the licence expires, and a **Renounce** button, which asks for a second
-  click to confirm.
+- **For the holder**: the gym's [vault](vault.md) and its **Penalty** (click the row to raise it, shift-click to lower
+  it), when the licence expires (**Expiry**), the penalty's **Range** (only while penalties are on), a **Withdraw**
+  button in the bottom-left box and a **Renounce** button in the bottom-right one, which asks for a second click to
+  confirm and pays the vault out.
 
 ## After a crash
 

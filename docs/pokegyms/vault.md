@@ -3,13 +3,14 @@
 A player-held gym has a **vault**: the CobbleDollars that challengers lost to its leader. The holder
 sets the **penalty** a challenger risks, and takes the vault's money when they like.
 
-Everything here is on the **Vault** tab of the [Gym Manager](gyms.md#the-gym-manager), which only the
-gym's holder sees. City gyms led by an RCT leader have no vault; their
+Everything here is on the **Licence** tab of the [Gym Manager](gyms.md#the-gym-manager), which only the
+gym's holder sees (see [Licences](licences.md#the-licence-tab)). City gyms led by an RCT leader have no vault; their
 [penalty](gyms.md#fighting-a-city-leader) is destroyed.
 
 ## Setting the penalty
 
-The tab shows the **Penalty** and what the **Vault** holds.
+The holder's Licence tab shows the **Penalty**, what the **Vault** holds, when the licence expires (**Expiry**) and
+the penalty's **Range** (only while penalties are on).
 
 - **Click the Penalty row to raise it** by a tenth of the server's range. **Shift-click lowers it.**
   Past either end it wraps round to the other.
@@ -46,17 +47,18 @@ Beating a **player leader** pays you a share of the gym's vault: `winner_share.p
 
 ## Withdrawing
 
-**Withdraw** appears when the vault holds money and moves all of it to your CobbleDollars. If
+**Withdraw** sits in the bottom-left box of the Licence tab. It appears when the vault holds money and moves all of it
+to your CobbleDollars. If
 CobbleDollars refuses the payment, the vault keeps its money and you can try again.
 
 ## When the licence ends
 
-Renouncing, expiring or a takeover pays the **whole vault to the holder** before the gym goes vacant.
+Renouncing (the **Renounce** button, bottom-right, whose confirm text says you get the vault), expiring or a takeover pays the **whole vault to the holder** before the gym goes vacant.
 A holder who is offline gets it on their **next login**, and is told then. The money is not lost if
 CobbleDollars refuses it: it is kept for the next login.
 
 ## Switching it off
 
 With `vault.enabled` off, no player leader charges a penalty and a challenger needs none to start. The
-tab says penalties are off; vaults keep what they hold, can still be withdrawn, and are still paid out
+Licence tab says penalties are off; vaults keep what they hold, can still be withdrawn, and are still paid out
 when a licence ends. The [winner's share](#winners-share) has its own switch and is not turned off by it.
