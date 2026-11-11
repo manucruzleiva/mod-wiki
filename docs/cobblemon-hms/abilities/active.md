@@ -306,6 +306,13 @@ it is battling, fainted or busy.
 An Alpha that is **not XL** underneath could never be made one again, so Calm Mind asks first: use
 it on the same Pokémon a second time within 5 seconds to settle it for good.
 
+- Only works on an **Alpha**. Anything else, it refuses and says why.
+- The Pokémon keeps the size it had under the Alpha, so an XL that went through Outrage comes back
+  XL and can be made an Alpha again.
+- If the Pokémon would come back **smaller than XL** (a wild-caught Alpha, for example), Outrage
+  could never undo it. The first use only warns you; use Calm Mind on the same Pokémon again within
+  **5 seconds** to settle it for good.
+
 ---
 
 ### <img class="hm-icon" src="../../assets/icons/celebrate.png" alt=""> Celebrate
