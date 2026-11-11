@@ -64,10 +64,16 @@ variant, gear and its nametag — for everyone who can see you. Copy a trainer f
 
 - Aim at a **creature** in clear view → you look exactly like it for 15 minutes.
 - **Fire it again while you are wearing one** → the costume comes off and the HM is ready
-  immediately, so changing disguise is two presses.
+  immediately, so changing disguise is two presses. This works with any Pokémon lending
+  Camouflage, not only the one that put the costume on.
 - A block, a wall between you and it, or empty air → nothing happens. You can only copy something
   you can actually see.
-- Other **players** can't be copied.
+- Only **living creatures** can be copied: not other **players**, armour stands, boats, minecarts
+  or item frames, and not something already wearing a costume of its own.
+- Your hitbox becomes the creature's, so a large disguise can get stuck where a small one fits.
+- The costume comes off on its own when it runs out, when you die, log out or switch to spectator,
+  or when an operator switches Camouflage off. Putting your Pokémon back in its ball does not take
+  it off.
 
 The disguise is a costume, not a creature: nothing extra exists in the world, so there is nothing
 to hit, nothing in your way, and nothing that can be killed off you.
@@ -81,7 +87,12 @@ Turns the block you aim at into a redstone power source — enough to throw a do
 lamp from across a room. **The charge is permanent.** It is saved with the world, so it stays when
 you log off and when the server restarts, and charging another block does not take it back: charge
 as many as you like. Aim Charge at a charged block again to discharge it. Breaking the block ends
-its charge too.
+its charge on the spot, and so does anything else that replaces it: an explosion, a piston, flowing
+water. A block placed in the same spot afterwards starts uncharged. A charge belongs to its own
+dimension, so it never powers the same coordinates in the Nether or the End.
+
+Charging needs the right to build where you aim, the same as placing a redstone block: it does not
+work in adventure or spectator mode, inside spawn protection, or in a claim that keeps you out.
 
 It changes the world, so it needs the right to build: it does nothing in adventure mode, inside
 spawn protection or on land a claim mod protects from you.
@@ -103,16 +114,21 @@ not a hundred break sounds. A log somebody placed, like a cabin wall, comes out 
 ![Cut: one punch fells a whole tree](../assets/store/gif-cut.gif)
 
 It also **cuts plants**: grass, ferns, crops, ground cover. Those come away as if you had used
-shears, so the drops are the careful ones — the grass itself rather than a couple of seeds — and
+shears, so the drops are the careful ones (the grass itself rather than a couple of seeds), and
 that holds for plants added by a datapack too, because it is the game's own loot tables answering.
+Tall plants and doors come away whole, whichever half you aim at.
+
+It **shears** whatever is ready in front of you, as shears would: sheep, a wild or your own
+Wooloo, a Mooshroom (which, as with shears, turns it into a cow). Other players' Pokémon are left
+alone.
 
 **With nothing to cut in front of you, it clears the ground around you** (this is what X-Scissor
 used to do), in two passes of decreasing politeness:
 
-1. **Weeds first** — grass, ferns, dead bushes. If there are any, that is all it touches.
-2. **Then what somebody planted** — flowers and crops, and *only* once there is not a single weed
+1. **Weeds first**: grass, ferns, dead bushes. If there are any, that is all it touches.
+2. **Then what somebody planted**: flowers and crops, and *only* once there is not a single weed
    left in range (radius 5). Casting by accident in your own wheat field costs you the weeds, not
-   the field.
+   the field. Cherry and azalea leaves are not flowers here: the crown of the tree above you stays.
 
 It never strips grass down to dirt: as a fallback, that would go off every time you missed a tree.
 
@@ -164,6 +180,13 @@ protection or on land a claim mod (Open Parties and Claims, FTB Chunks…) prote
 
 ![Rock Smash: a whole ore vein in one punch](../assets/store/gif-rock-smash.gif)
 
+- A vein that runs from stone into deepslate comes out whole: iron ore and deepslate iron ore count
+  as the same ore.
+- Every block breaks as if you had mined it yourself, so claims, spawn protection and adventure
+  mode all hold, and containers keep what's inside them (a shulker box drops with its contents).
+- Unbreakable blocks such as bedrock never break. If nothing could be broken, the HM says so and
+  does nothing.
+
 ---
 
 ### <img class="hm-icon" src="../../assets/icons/dig.png" alt=""> Dig
@@ -186,14 +209,19 @@ Stockpile is a mouthful you keep. It took over **Water Gun** and **Eruption**.
 
 - **Aim at water or lava** (source or flowing) and you **drink it**. The pool is drained, and that
   fluid is now what you carry. Water is free; **lava is spicy** and burns going down.
+  A waterlogged block gives up its water and keeps its shape; kelp and seagrass break, drops and all.
 - **Aim anywhere else** and you **spit it back out** on the face you are aiming at — the same square
-  a bucket would fill. You can spit **as often as you like**: what you carry only changes when you
-  drink the other fluid.
+  a bucket would fill. Water spat at a slab, stairs or a fence **waterlogs** it, as a bucket does.
+  Grass, flowers or snow in the way are washed off and drop. You can spit **as often as you like**:
+  what you carry only changes when you drink the other fluid.
 - Spitting water at a **sponge** soaks it.
+- What you carry is yours, not the Pokémon's: it stays through a recall, a change of partner and
+  a restart.
 
-It passes the same permission check a bucket does, so claims, spawn protection and the world border
-all hold. Lava is never placed at your own feet, and water boils away in the Nether, as it would
-from a bucket.
+Drinking counts as breaking the block and spitting as placing one, so nothing happens in
+**adventure** or **spectator** mode, under **spawn protection**, past the **world border** or inside a
+**claim** you can't build in. Lava is never placed
+where you stand, and water boils away in the Nether, as it would from a bucket.
 
 ![Stockpile: drinking a pool and spitting it back out](../assets/store/gif-stockpile.gif)
 
@@ -235,6 +263,10 @@ With no cooldown you can sweep a whole row of suspicious sand one click at a tim
 
 **Lootr** works too: on Lootr's suspicious sand and gravel, Tail Whip sweeps the way Lootr's brush
 does, so each player gets their own find and the block stays for everyone else.
+
+- It reaches as far as your hand does, and the find pops out of the face you swept, as from a brush.
+- It only works where a brush would: not in adventure mode or spectator, and not inside spawn
+  protection (unless you are an operator) or a claim you may not build in.
 
 ---
 
@@ -285,6 +317,10 @@ it is battling, fainted or busy.
 
 An Alpha that is **not XL** underneath could never be made one again, so Calm Mind asks first: use
 it on the same Pokémon a second time within 5 seconds to settle it for good.
+
+- Only works on an **Alpha**. Anything else, it refuses and says why.
+- The Pokémon keeps the size it had under the Alpha, so an XL that went through Outrage comes back
+  XL and can be made an Alpha again.
 
 ---
 

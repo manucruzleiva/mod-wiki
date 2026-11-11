@@ -79,8 +79,14 @@ gathers itself. Items are nudged rather than yanked, so they keep their normal p
 their speed is capped so they never shoot past you. The radius never goes past the 24 blocks of the
 aura itself.
 
-It leaves alone the items **you threw**, so you can still drop or hand something over; items
-**another player is closer to**; and items that **would not fit** in your inventory.
+It leaves some items where they are:
+
+- **What you throw yourself**, so you can still drop rubbish or hand something to a friend.
+- **Items another player is closer to**, so it never steals a neighbour's drops, and two players
+  with Absorb don't fight over one stack.
+- **Items that won't fit in your inventory.** When your inventory is full, nothing is pulled.
+
+The radius is the HM's power (`/hms config absorb power <n>`), up to 24 blocks.
 
 ---
 
@@ -319,6 +325,10 @@ lightning does.
 
 Weather aura. **The sky stays clear**, with no rain and no storms, for as long as Sunny Day is on and
 its Pokémon is out. Switch it off or recall the Pokémon and Minecraft takes the weather back.
+
+It holds the **overworld** sky, so it works while you are in the overworld; the Nether and the End
+have no weather to clear. There is only one sky, so if another player far away switches on Rain
+Dance after you, their rain wins until one of you switches off.
 
 ---
 
