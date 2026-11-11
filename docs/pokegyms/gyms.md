@@ -84,7 +84,25 @@ leader) can register their party as the gym's team. The gym then has a leader of
 Worlds saved before this version load every gym with no team. A saved team that cannot be read is
 dropped and the gym is kept.
 
-Fighting this leader is not in the mod yet.
+## Challenging a gym
+
+Right-click the **Gym Leader** NPC of a player-held gym to fight the team its holder registered.
+
+- **The holder picks the format.** It is singles or doubles, whatever the holder registered.
+- **Who cannot challenge.** The holder cannot challenge their own gym. A gym with no holder or no
+  registered team takes no challenge, and neither does a leader who is already battling someone else
+  (you are told it is busy).
+- **The result counts once.** Winning or losing tells you in chat. Forfeiting or running away counts as
+  a loss. A battle the server stops counts as nothing.
+- **The leader always fields a fresh copy of the team.** Used PP or berries from an earlier battle do
+  not carry over, and the gym's registered team is never changed.
+- **Nobody's Pokémon are hurt.** The battle uses a copy of your party, so your Pokémon keep their
+  health, and it gives **no XP or EVs** for the same reason.
+- **In a City gym held by a player,** the fight counts as against the player leader, not the City
+  leader: it does not touch the City leader's unlock or penalty, and
+  [`/pokegyms battles`](commands.md#pokegyms-battles) lists it as `leader`.
+- **It does not depend on the `leader` switch.** [`/pokegyms config leader`](commands.md#configuration)
+  only stops new registrations; challenges keep working.
 
 ## The Gym Manager
 
