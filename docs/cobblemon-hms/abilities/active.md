@@ -261,8 +261,8 @@ does, so each player gets their own find and the block stays for everyone else.
 ### <img class="hm-icon" src="../../assets/icons/teleport.png" alt=""> Teleport
 **Cooldown:** 30s · **Power:** max 30 blocks
 
-Blinks you to the block you're looking at (≤ 30 blocks), finding the nearest safe landing. Plays
-the Enderman teleport sound.
+Blinks you to the block you're looking at (≤ 30 blocks), with the Enderman teleport sound. The
+Pokémon lending it **comes with you** and lands at your side, so it keeps lending Teleport.
 
 It is the strongest way to travel the mod has, so it is priced like it: slow to come back.
 
