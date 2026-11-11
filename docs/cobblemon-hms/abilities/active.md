@@ -114,16 +114,21 @@ not a hundred break sounds. A log somebody placed, like a cabin wall, comes out 
 ![Cut: one punch fells a whole tree](../assets/store/gif-cut.gif)
 
 It also **cuts plants**: grass, ferns, crops, ground cover. Those come away as if you had used
-shears, so the drops are the careful ones — the grass itself rather than a couple of seeds — and
+shears, so the drops are the careful ones (the grass itself rather than a couple of seeds), and
 that holds for plants added by a datapack too, because it is the game's own loot tables answering.
+Tall plants and doors come away whole, whichever half you aim at.
+
+It **shears** whatever is ready in front of you, as shears would: sheep, a wild or your own
+Wooloo, a Mooshroom (which, as with shears, turns it into a cow). Other players' Pokémon are left
+alone.
 
 **With nothing to cut in front of you, it clears the ground around you** (this is what X-Scissor
 used to do), in two passes of decreasing politeness:
 
-1. **Weeds first** — grass, ferns, dead bushes. If there are any, that is all it touches.
-2. **Then what somebody planted** — flowers and crops, and *only* once there is not a single weed
+1. **Weeds first**: grass, ferns, dead bushes. If there are any, that is all it touches.
+2. **Then what somebody planted**: flowers and crops, and *only* once there is not a single weed
    left in range (radius 5). Casting by accident in your own wheat field costs you the weeds, not
-   the field.
+   the field. Cherry and azalea leaves are not flowers here: the crown of the tree above you stays.
 
 It never strips grass down to dirt: as a fallback, that would go off every time you missed a tree.
 
