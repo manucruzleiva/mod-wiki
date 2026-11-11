@@ -129,20 +129,23 @@ After you finish a challenge of a player leader, the same leader will not take y
 
 ## Level scaling
 
-A gym leader's team fights at **your level**, whatever levels it was registered at.
+A gym leader's team fights at **your level**, whatever levels it was registered at. So does the team of
+every other Radical Cobblemon Trainers (RCT) trainer, including the ones wandering the world.
 
 - **The level is your best Pokémon's.** It is the highest level in your whole party, fainted Pokémon
   included, so a Pokémon you cannot send out still counts. The team scales up and down alike: a level 20
   team meets a level 50 challenger at 50, and a level 80 team meets a level 30 one at 30.
 - **Every Pokémon of the team is set to it, at full HP.** It is capped at the server's maximum Pokémon level.
-- **It covers both kinds of leader.** The [player leaders](#challenging-a-gym) and the
-  [City leaders](#fighting-a-city-leader), who are Radical Cobblemon Trainers NPCs.
+- **It covers every RCT trainer, in a gym or out of it.** The [City leaders](#fighting-a-city-leader) and the
+  trainers you meet in the world are RCT trainers, and so every battle against one is scaled. The
+  [player leaders](#challenging-a-gym) are scaled too.
 - **Only the battle changes.** The Team tab, a holder's registered team and RCT's trainer data keep
-  their levels; the scaled Pokémon are copies made for that battle alone.
+  their levels; the scaled Pokémon are copies made for that battle alone, so a trainer's team is the same
+  when you meet it again at another level.
 - **A format with its own fixed level keeps it.** If the battle format sets a level for everyone, the
-  leader's team is not scaled.
+  opponent's team is not scaled.
 - **Operators can switch it off** with [`/pokegyms config scaling enabled false`](commands.md#configuration):
-  teams then fight at their registered levels. Battles already running keep the levels they started with.
+  teams then fight at their registered levels, RCT trainers' included. Battles already running keep the levels they started with.
 
 ## The Gym Manager
 
