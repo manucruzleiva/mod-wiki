@@ -95,7 +95,8 @@ Right-click the **Gym Leader** NPC of a player-held gym to fight the team its ho
   (you are told it is busy).
 - **You need the penalty in hand.** The holder sets a penalty for their gym, and you must carry at
   least that many CobbleDollars to challenge. A loss moves exactly the penalty into the gym's
-  [vault](vault.md); a win or a stopped battle costs nothing. If you are short, you are told how much
+  [vault](vault.md); a win or a stopped battle costs nothing, and a win takes a
+  [share of that vault](vault.md#winners-share). If you are short, you are told how much
   it costs and what you have.
 - **The result counts once.** Winning or losing tells you in chat. Forfeiting or running away counts as
   a loss. A battle the server stops counts as nothing.
