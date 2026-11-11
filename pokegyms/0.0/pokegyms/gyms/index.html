@@ -610,6 +610,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#taking-over-a-gym" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taking over a gym
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#medals" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1003,6 +1014,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#taking-over-a-gym" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taking over a gym
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#medals" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1132,7 +1154,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.38</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.39</p>
   
                   
 
@@ -1274,6 +1296,26 @@ dropped and the gym is kept.</p>
 <li><strong>Operators can change it</strong> with <a href="../commands/#configuration"><code>/pokegyms config rematch</code></a>: <code>cooldown_minutes</code>
   sets the wait (<code>0</code> means no wait), and <code>enabled</code> switches the whole cooldown off.</li>
 </ul>
+<h2 id="taking-over-a-gym">Taking over a gym<a class="headerlink" href="#taking-over-a-gym" title="Permanent link">&para;</a></h2>
+<p>Beat a player leader, keep the medal they gave you, and you can take their gym.</p>
+<ul>
+<li><strong>Where.</strong> Open the gym's Gym Manager and go to the <strong>Licence</strong> tab, which a visitor and a disciple of the gym both
+  see. It shows the <strong>Fee</strong>, what you have and a <strong>Take over</strong> button. A holder cannot take their own gym.</li>
+<li><strong>What you need.</strong> The medal, in your <strong>main hand</strong>, and the <strong>takeover fee</strong>, 10,000 CobbleDollars by default.
+  The fee is destroyed, never paid to anyone, and the medal is used up. A Badge It badge works too, if it is the signed copy you won.</li>
+<li><strong>Only the real medal.</strong> It must name this gym and its <strong>current</strong> leader. The server refuses an empty hand, a badge
+  crafted by hand (it has no PokeGyms signature), a medal of another gym, a medal of an earlier leader of this gym, your
+  own gym, a leader in the middle of a battle, too little money, and a server with takeovers switched off. You are told
+  why in chat.</li>
+<li><strong>It works on any gym a player holds</strong>, a town gym or a City gym.</li>
+<li><strong>No shield.</strong> The new leader gets the <strong>whole <a href="../vault/">vault</a></strong> and keeps the gym's <a href="#disciples">disciples</a> (if
+  they were one of them, they are no longer one). The old leader loses the licence, and the gym's team, penalty,
+  registered Badge It medal and rematch waits go with it: register your own team in the Team tab. The old leader is
+  told in chat if they are online.</li>
+<li><strong>Your own gym goes first.</strong> One licence per player: if you already held a gym, you give it up before the takeover
+  and it goes vacant (or, in a City gym, back to its leader), its vault paid to you.</li>
+<li><strong>Operators can switch it off</strong> or change the fee with <a href="../commands/#configuration"><code>/pokegyms config takeover</code></a>.</li>
+</ul>
 <h2 id="medals">Medals<a class="headerlink" href="#medals" title="Permanent link">&para;</a></h2>
 <p>Beating a player leader gives you a <strong>Gym Medal</strong>.</p>
 <ul>
@@ -1360,6 +1402,7 @@ gym is found and the spot is loaded.</p>
   (Canonical) and its <strong>location</strong> (X, Z), and in a City gym the <strong>type</strong> of its leader, with a short line about who runs it. At a City gym whose leader you beat, the line says you may buy
   its licence.</li>
 <li><strong>The Team tab</strong>, which only the holder sees, <a href="#registering-your-team">registers the gym's team</a>.</li>
+<li><strong>The Licence tab</strong> is where a visitor or a disciple of a held gym can <a href="#taking-over-a-gym">take it over</a>.</li>
 <li><strong>The Disciples tab</strong> is seen by the holder, by a player the holder invited and by the gym's disciples:
   see <a href="#disciples">Disciples</a>.</li>
 <li><strong>The gym team</strong> panel on the side has six slots. They show the registered team by name and level,
@@ -1367,7 +1410,7 @@ gym is found and the spot is loaded.</p>
 </ul>
 <p>The screen shows the gym as the server saw it when you opened it, and every button asks the server
 again before anything happens.</p>
-<p>The holder's screen has four tabs: Info, Licence, Team and Disciples. The <strong>Licence</strong> tab also holds the gym's
+<p>The holder's screen has four tabs: Info, Licence, Team and Disciples. A disciple sees Info, Licence and Disciples. The <strong>Licence</strong> tab also holds the gym's
 <a href="../vault/">vault</a>: its penalty, Withdraw and Renounce. See <a href="../licences/#the-licence-tab">Licences</a>.</p>
 <h2 id="disciples">Disciples<a class="headerlink" href="#disciples" title="Permanent link">&para;</a></h2>
 <p>A player leader can have up to <strong>three disciples</strong>: other players who train under them and stand in the gym
