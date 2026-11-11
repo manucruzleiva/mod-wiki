@@ -26,9 +26,28 @@ Every gym starts as a **City gym**, led by one of **Radical Cobblemon Trainers'*
   never has two. Worlds made before this version change over by themselves the next time each gym loads.
 - A gym that is no longer a City gym loses its RCT leader.
 
+### City disciples
+
+While a City gym is still its own leader's, up to **three Radical Cobblemon Trainers** stand at its disciple spots,
+like the disciples of a [player gym](#disciples).
+
+- **They share the leader's type**: the type found most often among the primary and secondary types of the leader's
+  team. A tie goes to the type of the leader's last Pokémon.
+- **They are ordinary RCT trainers**: never a gym leader, Elite Four member, champion, rival or villain boss.
+  The City chooses them once, so a gym always has the same ones. A type with fewer than three such trainers gives
+  the ones there are.
+- **Fought weakest to strongest**, by the highest level in each one's team.
+- **Beat them all before the leader.** The leader takes a challenge only once you have beaten every one. Each fight
+  needs the [penalty](#fighting-a-city-leader) in hand. Winning costs nothing; **losing to one takes the penalty**
+  (destroyed, as against the leader) and sends you back to the first. A finished leader challenge starts the next
+  one from the first again, and your progress survives logouts and restarts.
+- **They step aside while a player holds the gym**, which has its own disciples, and stand again when the City leader returns.
+- **Operators can switch it off** with [`/pokegyms config city_disciples enabled false`](commands.md#configuration):
+  no City disciples stand and the City leader is challenged directly.
+
 ## Fighting a City leader
 
-Right-click the leader to challenge them. PokeGyms starts the battle with the leader's RCT team, but it
+Right-click the leader to challenge them, once you have beaten the leader's [disciples](#city-disciples). PokeGyms starts the battle with the leader's RCT team, but it
 **does not count in RCT's progression**: winning does not raise your level cap or add the leader to your
 defeat list, and RCT gives no loot or dialogue for it.
 
@@ -217,7 +236,7 @@ Right-clicking a Gym Manager opens its screen, built on Cobblemon's summary scre
 - **The header** names the gym by its city, such as **Pewter City Gym**, with a **CITY** tag, and
   who runs it: the **City leader**.
 - **The Info tab**, which everyone sees, gives the gym's **kind** (City gym), its **status**
-  (Canonical) and its **location** (X, Z), with a short line about who runs it. At a City gym whose leader you beat, the line says you may buy
+  (Canonical) and its **location** (X, Z), and in a City gym the **type** of its leader, with a short line about who runs it. At a City gym whose leader you beat, the line says you may buy
   its licence.
 - **The Team tab**, which only the holder sees, [registers the gym's team](#registering-your-team).
 - **The Vault tab**, which only the holder sees, sets the gym's penalty and withdraws its
