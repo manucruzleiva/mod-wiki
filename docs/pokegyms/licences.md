@@ -4,7 +4,7 @@ A **licence** is what lets a player run a gym as its leader. The rules below are
 
 !!! note "No gym sells a licence yet"
     Only a **town gym** sells its licence, and in this build every gym is a
-    [City gym](gyms.md#city-gyms), held by its Cities & Structures leader. So no Gym Manager offers
+    [City gym](gyms.md#city-gyms-and-their-leaders), led by an RCT leader. So no Gym Manager offers
     a licence yet, and the Licence tab does not appear.
 
 ## The rules
