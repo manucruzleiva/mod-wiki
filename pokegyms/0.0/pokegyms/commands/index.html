@@ -798,7 +798,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.30</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.31</p>
   
                   
 
@@ -867,6 +867,10 @@ and is written to the config file so it survives one.</p>
 <td>Switches the <a href="../gyms/#level-scaling">evolution stage</a> of scaled teams on or off; needs <code>scaling</code> on, <code>evolution</code> has no numbers, and takes <code>reset</code> too.</td>
 </tr>
 <tr>
+<td><code>/pokegyms config medals enabled &lt;true\|false&gt;</code></td>
+<td>Switches the <a href="../gyms/#medals">medal</a> for beating a player leader on or off; <code>medals</code> has no numbers, and takes <code>reset</code> too.</td>
+</tr>
+<tr>
 <td><code>/pokegyms config licences reset</code></td>
 <td>Puts the feature back to its defaults, switched on.</td>
 </tr>
@@ -900,6 +904,9 @@ and is written to the config file so it survives one.</p>
 <span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">"evolution"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"medals"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
@@ -991,6 +998,12 @@ and is written to the config file so it survives one.</p>
 <td><code>true</code></td>
 <td></td>
 <td>Off: a scaled team keeps its registered species instead of taking the evolution stage of its new level. Needs <code>scaling</code> on.</td>
+</tr>
+<tr>
+<td><code>medals.enabled</code></td>
+<td><code>true</code></td>
+<td></td>
+<td>Off: beating a player leader gives no medal. Medals already given stay.</td>
 </tr>
 </tbody>
 </table>

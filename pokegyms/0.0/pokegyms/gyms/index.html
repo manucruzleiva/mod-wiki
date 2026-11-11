@@ -593,6 +593,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#medals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#level-scaling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -919,6 +930,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#medals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#level-scaling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -998,7 +1020,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.30</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.31</p>
   
                   
 
@@ -1119,6 +1141,21 @@ dropped and the gym is kept.</p>
 <li><strong>City leaders have no cooldown.</strong> It applies only to player leaders, not to the City (RCT) leaders.</li>
 <li><strong>Operators can change it</strong> with <a href="../commands/#configuration"><code>/pokegyms config rematch</code></a>: <code>cooldown_minutes</code>
   sets the wait (<code>0</code> means no wait), and <code>enabled</code> switches the whole cooldown off.</li>
+</ul>
+<h2 id="medals">Medals<a class="headerlink" href="#medals" title="Permanent link">&para;</a></h2>
+<p>Beating a player leader gives you a <strong>Gym Medal</strong>.</p>
+<ul>
+<li><strong>One medal, for every gym.</strong> It is a single generic item, with no art of its own per gym. It does not
+  show in the creative tab; a medal only comes from a win.</li>
+<li><strong>It is signed.</strong> Hover it to read the gym ("Pewter City Gym" for a City gym, otherwise "Gym at" its
+  coordinates), "Leader:" with the name of the player you beat, and "Won on" with the date of the win.</li>
+<li><strong>Only a win gives one.</strong> A loss, a forfeit, or a battle the server stops gives none, and so does a win
+  against a City (RCT) leader: medals are for player leaders. The leader gets none either.</li>
+<li><strong>You get one per win.</strong> Winning the same gym again, after the <a href="#rematch-cooldown">rematch cooldown</a>,
+  gives another.</li>
+<li><strong>A full inventory is no loss.</strong> The medal drops at your feet.</li>
+<li><strong>Operators can switch it off</strong> with <a href="../commands/#configuration"><code>/pokegyms config medals enabled false</code></a>:
+  no win gives a medal, and medals already given stay.</li>
 </ul>
 <h2 id="level-scaling">Level scaling<a class="headerlink" href="#level-scaling" title="Permanent link">&para;</a></h2>
 <p>A gym leader's team fights at <strong>your level</strong>, whatever levels it was registered at. So does the team of
