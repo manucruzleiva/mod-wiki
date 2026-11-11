@@ -998,7 +998,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.27</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.29</p>
   
                   
 
@@ -1131,13 +1131,18 @@ every other Radical Cobblemon Trainers (RCT) trainer, including the ones wanderi
 <li><strong>It covers every RCT trainer, in a gym or out of it.</strong> The <a href="#fighting-a-city-leader">City leaders</a> and the
   trainers you meet in the world are RCT trainers, and so every battle against one is scaled. The
   <a href="#challenging-a-gym">player leaders</a> are scaled too.</li>
+<li><strong>Each Pokémon takes the evolution stage of its new level.</strong> A registered Charizard faced at level 12 is a
+  Charmander, and a Charmander faced at level 40 is a Charizard. It goes up and down alike, and only level
+  evolutions are crossed, so a Vaporeon stays a Vaporeon. A Pokémon holding an Everstone keeps its species
+  both ways. Where an evolution branches, the first one that applies is taken.</li>
 <li><strong>Only the battle changes.</strong> The Team tab, a holder's registered team and RCT's trainer data keep
   their levels; the scaled Pokémon are copies made for that battle alone, so a trainer's team is the same
   when you meet it again at another level.</li>
 <li><strong>A format with its own fixed level keeps it.</strong> If the battle format sets a level for everyone, the
   opponent's team is not scaled.</li>
 <li><strong>Operators can switch it off</strong> with <a href="../commands/#configuration"><code>/pokegyms config scaling enabled false</code></a>:
-  teams then fight at their registered levels, RCT trainers' included. Battles already running keep the levels they started with.</li>
+  teams then fight at their registered levels, RCT trainers' included. Battles already running keep the levels they started with.
+  <a href="../commands/#configuration"><code>/pokegyms config evolution enabled false</code></a> keeps only the evolution stages out: levels still scale, species stay as registered.</li>
 </ul>
 <h2 id="the-gym-manager">The Gym Manager<a class="headerlink" href="#the-gym-manager" title="Permanent link">&para;</a></h2>
 <p>Every gym has a <strong>Gym Manager</strong>: a lectern just inside the gym's door. It is put there as soon as the
