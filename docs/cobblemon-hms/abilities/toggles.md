@@ -165,6 +165,14 @@ more levels of Fortune, on top of its own, so ores and crops give more; a Silk T
 alone, and breaking with a bare hand gets nothing extra. You also get Luck, which brings better
 catches when fishing and better loot from chests you open for the first time.
 
+- **What you break:** anything Fortune already improves (ores, crops, glowstone, melons…) drops as
+  if your tool had **one more level of Fortune**, so a Fortune III pickaxe mines like Fortune IV and
+  an empty hand like Fortune I. Blocks Fortune does not touch drop as usual, and Silk Touch still
+  gives the block itself.
+- **What you fish:** you get **+1 Luck**, the same as a Potion of Luck, which makes a fishing rod
+  pull up a little more treasure and a little less junk. It adds to a potion you drank rather than
+  replacing it.
+
 ---
 
 ### <img class="hm-icon" src="../../assets/icons/magnet_rise.png" alt=""> Magnet Rise
