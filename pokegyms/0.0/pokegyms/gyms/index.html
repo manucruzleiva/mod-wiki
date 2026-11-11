@@ -654,6 +654,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#disciples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disciples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gym-battles" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1002,6 +1013,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#disciples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disciples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gym-battles" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1042,7 +1064,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.34</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.35</p>
   
                   
 
@@ -1115,7 +1137,7 @@ leader) can register their party as the gym's team. The gym then has a leader of
   holder's skin (default or slim, read from their Minecraft profile) and carrying the copy as its
   party. It cannot be hurt, moved or pushed, and does not despawn. If it is killed, it comes back the next
   time its chunk loads.</li>
-<li><strong>It leaves when the licence ends.</strong> Renouncing or expiring removes the team and the NPC. In a City
+<li><strong>It leaves when the licence ends.</strong> Renouncing or expiring removes the team, the NPC and the gym's <a href="#disciples">disciples</a>. In a City
   gym, the RCT leader returns at the same time (see <a href="#unlocking-a-city-gym">Unlocking a City gym</a>).
   An NPC whose chunk was unloaded when the licence ended is removed the next time that chunk loads.</li>
 <li><strong>Operators can close registration</strong> with
@@ -1254,6 +1276,8 @@ gym is found and the spot is loaded.</p>
 <li><strong>The Team tab</strong>, which only the holder sees, <a href="#registering-your-team">registers the gym's team</a>.</li>
 <li><strong>The Vault tab</strong>, which only the holder sees, sets the gym's penalty and withdraws its
   <a href="../vault/">vault</a>.</li>
+<li><strong>The Disciples tab</strong> is seen by the holder, by a player the holder invited and by the gym's disciples:
+  see <a href="#disciples">Disciples</a>.</li>
 <li><strong>The gym team</strong> panel on the side has six slots. They show the registered team by name and level,
   and stand empty while the gym has none.</li>
 </ul>
@@ -1261,6 +1285,31 @@ gym is found and the spot is loaded.</p>
 again before anything happens.</p>
 <p>More tabs join the screen as features arrive. The <strong>Licence</strong> tab is already built; see
 <a href="../licences/">Licences</a>.</p>
+<h2 id="disciples">Disciples<a class="headerlink" href="#disciples" title="Permanent link">&para;</a></h2>
+<p>A player leader can have up to <strong>three disciples</strong>: other players who train under them and stand in the gym
+as trainers.</p>
+<ul>
+<li><strong>Invite from the Disciples tab.</strong> The holder opens the <strong>Disciples</strong> tab of the Gym Manager, clicks the
+  <strong>Invite</strong> row to pick one of the players online who is not yet anyone's disciple, and presses <strong>Invite</strong>.
+  The player is told in chat.</li>
+<li><strong>The invited player accepts</strong> at that gym's Gym Manager, with the <strong>Accept</strong> button of the same tab, and
+  takes the first free <code>disciple_N</code> place of the gym. A fourth invitation is refused: the gym has three
+  places.</li>
+<li><strong>A disciple registers a team</strong>, like the leader: press <strong>Register</strong> (or <strong>Update</strong>) and the gym keeps a
+  frozen copy of the party they carry, in the gym's <a href="#registering-your-team">format</a>, singles while the leader
+  has not registered a team. Singles needs 1 Pokémon in the party, doubles 2. Their own Pokémon stay with them.</li>
+<li><strong>A trainer NPC stands for it.</strong> <code>Gym Trainer &lt;player&gt;</code>, wearing the disciple's skin and carrying the
+  copy, stands at their place.</li>
+<li><strong>One gym at a time.</strong> A player is the disciple of a single gym on the server. It needs no
+  <a href="../licences/">licence</a>, so a disciple may hold one at another gym.</li>
+<li><strong>The leader removes a disciple</strong> with a shift-click on their row in the holder's Disciples tab; the NPC goes.
+  When the leader's licence ends, every disciple goes with it.</li>
+<li><strong>Colours in the holder's list:</strong> a disciple's name is white once they registered a team, gold until then,
+  and a free place reads grey.</li>
+<li><strong>Operators can switch it off</strong> with <a href="../commands/#configuration"><code>/pokegyms config disciples enabled false</code></a>:
+  nobody can be invited or register, and disciples already there stay until the leader removes them.</li>
+</ul>
+<p>Battling disciples is not in the mod yet.</p>
 <h2 id="gym-battles">Gym battles<a class="headerlink" href="#gym-battles" title="Permanent link">&para;</a></h2>
 <p>A battle against an NPC trainer who stands <strong>inside a gym</strong>, such as a Cities &amp; Structures gym leader,
 is a <strong>gym battle</strong> from its start until it ends. PokeGyms does not change the battle itself; it only
