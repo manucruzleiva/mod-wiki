@@ -14,10 +14,32 @@ A gym is found **the first time its city loads**, new or generated long before P
 installed, and it is remembered for that world from then on, across restarts. Each dimension keeps
 its own list.
 
-## City gyms
+## City gyms and their leaders
 
-Every gym starts as a **City gym**, held by Cities & Structures' own leader, who stays where that mod
-puts them. PokeGyms does not move or replace them.
+Every gym starts as a **City gym**, led by one of **Radical Cobblemon Trainers'** own gym leaders (the
+`leader_*` trainers, 24 different names in RCT 0.19.2).
+
+- **One leader per City, kept for good.** PokeGyms picks the leader the first time the gym is found and
+  remembers it. No leader's name repeats across the world's gyms until every one has been used.
+- **The leader stands still and cannot be hurt**, at the gym's leader spot. The Gym Manager names them.
+- **Cities & Structures' own leader is removed.** PokeGyms puts RCT's leader in their place, so the gym
+  never has two. Worlds made before this version change over by themselves the next time each gym loads.
+- A gym that is no longer a City gym loses its RCT leader.
+
+## Fighting a City leader
+
+Right-click the leader to challenge them. PokeGyms starts the battle with the leader's RCT team, but it
+**does not count in RCT's progression**: winning does not raise your level cap or add the leader to your
+defeat list, and RCT gives no loot or dialogue for it.
+
+- **You need CobbleDollars to start.** You must carry at least the **penalty**, `canonical.penalty`
+  (1,000 by default). If you are short, you are told how much you need.
+- **Losing costs the penalty.** Losing, forfeiting or running away takes exactly that sum from you. The
+  money goes to no one. Winning costs nothing.
+- **One challenger at a time** per leader. A second challenger is told the leader is busy.
+- **Operators can close the fight** or change the penalty with
+  [`/pokegyms config canonical`](commands.md#configuration). Closed, leaders take no challenges; battles
+  already running finish, and a loss still costs the penalty.
 
 ## The Gym Manager
 
