@@ -35,11 +35,28 @@ defeat list, and RCT gives no loot or dialogue for it.
 - **You need CobbleDollars to start.** You must carry at least the **penalty**, `canonical.penalty`
   (1,000 by default). If you are short, you are told how much you need.
 - **Losing costs the penalty.** Losing, forfeiting or running away takes exactly that sum from you. The
-  money goes to no one. Winning costs nothing.
+  money goes to no one. Winning costs nothing, and [unlocks the gym's licence](#unlocking-a-city-gym) for you.
 - **One challenger at a time** per leader. A second challenger is told the leader is busy.
 - **Operators can close the fight** or change the penalty with
   [`/pokegyms config canonical`](commands.md#configuration). Closed, leaders take no challenges; battles
   already running finish, and a loss still costs the penalty.
+
+## Unlocking a City gym
+
+A City gym's licence is not for sale to everyone: **only a player who beats its leader** in the fight
+above may buy it (see [Licences](licences.md)).
+
+- **A win unlocks it for the winner only.** You are told in chat, the **Info** tab says you may buy
+  the licence, and the **Licence** tab appears. Everyone else who opens the Gym Manager is told to beat
+  the leader first, and the server refuses their purchase.
+- **Nothing else counts.** Losing, running away, a battle that is stopped, or beating the leader
+  outside PokeGyms' own fight unlocks nothing.
+- **The leader steps aside while the gym is held.** When the winner buys the licence, the RCT leader
+  leaves the gym and takes no challenge.
+- **When the licence ends, the leader returns.** Renouncing or expiring puts the leader back and locks
+  the gym again for everyone, the former holder included: they must beat the leader anew.
+- **Your win is remembered** even if licences are switched off, so it still counts when they are
+  switched back on.
 
 ## The Gym Manager
 
@@ -60,7 +77,8 @@ Right-clicking a Gym Manager opens its screen, built on Cobblemon's summary scre
 - **The header** names the gym by its city, such as **Pewter City Gym**, with a **CITY** tag, and
   who runs it: the **City leader**.
 - **The Info tab**, which everyone sees, gives the gym's **kind** (City gym), its **status**
-  (Canonical) and its **location** (X, Z), with a short line about who runs it.
+  (Canonical) and its **location** (X, Z), with a short line about who runs it. At a City gym whose leader you beat, the line says you may buy
+  its licence.
 - **The gym team** panel on the side has six slots. They stand empty in this build.
 
 The screen shows the gym as the server saw it when you opened it, and every button asks the server

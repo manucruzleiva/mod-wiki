@@ -26,7 +26,7 @@ inside its door: the one place where everything about that gym happens.
 
 !!! warning "Not released yet"
     PokeGyms has no public download yet. These pages describe the current development build,
-    **0.0.20**. What it does today is find the gyms, give each City gym an RCT leader you can fight,
+    **0.0.21**. What it does today is find the gyms, give each City gym an RCT leader you can fight,
     run their Gym Manager and tell other mods which battles are gym battles. Gym battle rules, taking a gym over, disciples, the gym vault and
     level scaling are not in the mod yet, and nothing here describes them.
 
@@ -41,6 +41,8 @@ inside its door: the one place where everything about that gym happens.
   every gym starts as a City gym, led by one of RCT's own gym leaders.
 - 🥊 **[Fight the City leader](gyms.md#fighting-a-city-leader)**: a stake of CobbleDollars, and it
   stays out of RCT's progression.
+- 🔓 **[Beat the leader, unlock the gym](gyms.md#unlocking-a-city-gym)**: only a player who beats a
+  City leader may buy that gym's licence.
 - 🎫 **[Licences](licences.md)**: the rules for owning a gym are in place, one licence per player on
   the whole server.
 - ⚔️ **[Gym battles, recognised](gyms.md#gym-battles)**: a battle against a trainer inside a gym
