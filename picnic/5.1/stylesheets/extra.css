@@ -187,6 +187,17 @@ body[data-mod="pokegyms"] {
   --wiki-hero-to: #4f6e82;
 }
 
+/* Defeated Catch Chance — downed-red. */
+body[data-mod="defeated-catch-chance"] {
+  --md-primary-fg-color: #a8322d;
+  --md-primary-fg-color--light: #cf5b55;
+  --md-primary-fg-color--dark: #741d1a;
+  --md-accent-fg-color: #2f6f9c;
+  --md-typeset-a-color: #9c2c27;
+  --wiki-hero-from: #7d201c;
+  --wiki-hero-to: #c0463f;
+}
+
 /* PokeTrades — trade violet. */
 body[data-mod="poketrades"] {
   --md-primary-fg-color: #5b3fa8;
@@ -287,6 +298,14 @@ body[data-md-color-scheme="slate"][data-mod="pokegyms"] {
   --md-accent-fg-color: #f3a83c;
   --wiki-hero-from: #24343e;
   --wiki-hero-to: #3d5566;
+}
+
+body[data-md-color-scheme="slate"][data-mod="defeated-catch-chance"] {
+  --md-primary-fg-color: #7d201c;
+  --md-typeset-a-color: #f0a8a3;
+  --md-accent-fg-color: #7fb8e0;
+  --wiki-hero-from: #5c1815;
+  --wiki-hero-to: #96332e;
 }
 
 body[data-md-color-scheme="slate"][data-mod="poketrades"] {
@@ -656,6 +675,7 @@ body {
 .mod-row[data-mod-color="action-combat"] { --mod-c: #b4410f; }
 .mod-row[data-mod-color="poketrades"] { --mod-c: #5b3fa8; }
 .mod-row[data-mod-color="pokegyms"] { --mod-c: #3d5566; }
+.mod-row[data-mod-color="defeated-catch-chance"] { --mod-c: #a8322d; }
 
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="routes"] { --mod-c: #17a06f; }
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="picnic"] { --mod-c: #d76a4d; }
@@ -669,6 +689,7 @@ body {
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="action-combat"] { --mod-c: #e0662f; }
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="poketrades"] { --mod-c: #9a80e0; }
 [data-md-color-scheme="slate"] .mod-row[data-mod-color="pokegyms"] { --mod-c: #7d9bb0; }
+[data-md-color-scheme="slate"] .mod-row[data-mod-color="defeated-catch-chance"] { --mod-c: #e07a73; }
 
 /* ── Flow ──────────────────────────────────────────────────────────────────
    A short sequence of steps, drawn as text instead of a Mermaid diagram: most
