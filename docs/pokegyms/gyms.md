@@ -139,6 +139,10 @@ every other Radical Cobblemon Trainers (RCT) trainer, including the ones wanderi
 - **It covers every RCT trainer, in a gym or out of it.** The [City leaders](#fighting-a-city-leader) and the
   trainers you meet in the world are RCT trainers, and so every battle against one is scaled. The
   [player leaders](#challenging-a-gym) are scaled too.
+- **Each Pokémon takes the evolution stage of its new level.** A registered Charizard faced at level 12 is a
+  Charmander, and a Charmander faced at level 40 is a Charizard. It goes up and down alike, and only level
+  evolutions are crossed, so a Vaporeon stays a Vaporeon. A Pokémon holding an Everstone keeps its species
+  both ways. Where an evolution branches, the first one that applies is taken.
 - **Only the battle changes.** The Team tab, a holder's registered team and RCT's trainer data keep
   their levels; the scaled Pokémon are copies made for that battle alone, so a trainer's team is the same
   when you meet it again at another level.
@@ -146,6 +150,7 @@ every other Radical Cobblemon Trainers (RCT) trainer, including the ones wanderi
   opponent's team is not scaled.
 - **Operators can switch it off** with [`/pokegyms config scaling enabled false`](commands.md#configuration):
   teams then fight at their registered levels, RCT trainers' included. Battles already running keep the levels they started with.
+  [`/pokegyms config evolution enabled false`](commands.md#configuration) keeps only the evolution stages out: levels still scale, species stay as registered.
 
 ## The Gym Manager
 
