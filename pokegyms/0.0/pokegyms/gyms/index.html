@@ -360,6 +360,8 @@
       
         
       
+        
+      
     
     
     
@@ -675,6 +677,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../vault/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Gym Vault
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../commands/" class="md-nav__link">
         
   
@@ -920,7 +950,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.23</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.24</p>
   
                   
 
@@ -1008,6 +1038,10 @@ dropped and the gym is kept.</p>
 <li><strong>Who cannot challenge.</strong> The holder cannot challenge their own gym. A gym with no holder or no
   registered team takes no challenge, and neither does a leader who is already battling someone else
   (you are told it is busy).</li>
+<li><strong>You need the penalty in hand.</strong> The holder sets a penalty for their gym, and you must carry at
+  least that many CobbleDollars to challenge. A loss moves exactly the penalty into the gym's
+  <a href="../vault/">vault</a>; a win or a stopped battle costs nothing. If you are short, you are told how much
+  it costs and what you have.</li>
 <li><strong>The result counts once.</strong> Winning or losing tells you in chat. Forfeiting or running away counts as
   a loss. A battle the server stops counts as nothing.</li>
 <li><strong>The leader always fields a fresh copy of the team.</strong> Used PP or berries from an earlier battle do
@@ -1017,6 +1051,8 @@ dropped and the gym is kept.</p>
 <li><strong>In a City gym held by a player,</strong> the fight counts as against the player leader, not the City
   leader: it does not touch the City leader's unlock or penalty, and
   <a href="../commands/#pokegyms-battles"><code>/pokegyms battles</code></a> lists it as <code>leader</code>.</li>
+<li><strong>The penalty has its own switch.</strong> <a href="../commands/#configuration"><code>/pokegyms config vault</code></a> turns it
+  off: nobody pays or needs one to challenge.</li>
 <li><strong>It does not depend on the <code>leader</code> switch.</strong> <a href="../commands/#configuration"><code>/pokegyms config leader</code></a>
   only stops new registrations; challenges keep working.</li>
 </ul>
@@ -1040,6 +1076,8 @@ gym is found and the spot is loaded.</p>
   (Canonical) and its <strong>location</strong> (X, Z), with a short line about who runs it. At a City gym whose leader you beat, the line says you may buy
   its licence.</li>
 <li><strong>The Team tab</strong>, which only the holder sees, <a href="#registering-your-team">registers the gym's team</a>.</li>
+<li><strong>The Vault tab</strong>, which only the holder sees, sets the gym's penalty and withdraws its
+  <a href="../vault/">vault</a>.</li>
 <li><strong>The gym team</strong> panel on the side has six slots. They show the registered team by name and level,
   and stand empty while the gym has none.</li>
 </ul>

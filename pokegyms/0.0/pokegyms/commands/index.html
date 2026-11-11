@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://manucruzleiva.github.io/mod-wiki/pokegyms/latest/pokegyms/commands/">
       
       
-        <link rel="prev" href="../licences/">
+        <link rel="prev" href="../vault/">
       
       
         <link rel="next" href="../troubleshooting/">
@@ -360,6 +360,8 @@
       
         
       
+        
+      
     
     
     
@@ -486,6 +488,34 @@
     
   
     Licences
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vault/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Gym Vault
   
 
     
@@ -764,7 +794,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.23</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.24</p>
   
                   
 
@@ -817,6 +847,10 @@ and is written to the config file so it survives one.</p>
 <td>Opens or closes <a href="../gyms/#registering-your-team">team registration</a>; <code>leader</code> has no numbers, and takes <code>reset</code> too.</td>
 </tr>
 <tr>
+<td><code>/pokegyms config vault &lt;setting&gt; &lt;value&gt;</code></td>
+<td>Sets <code>penalty_min</code> or <code>penalty_max</code> of the <a href="../vault/">gym vault</a>; <code>vault</code> takes <code>enabled</code> and <code>reset</code> too.</td>
+</tr>
+<tr>
 <td><code>/pokegyms config licences reset</code></td>
 <td>Puts the feature back to its defaults, switched on.</td>
 </tr>
@@ -836,6 +870,11 @@ and is written to the config file so it survives one.</p>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="nt">"leader"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"vault"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"penalty_min"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"penalty_max"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -884,6 +923,24 @@ and is written to the config file so it survives one.</p>
 <td><code>true</code></td>
 <td></td>
 <td>Off: no holder can register or replace their gym's team. Teams already registered stay, with their leader.</td>
+</tr>
+<tr>
+<td><code>vault.enabled</code></td>
+<td><code>true</code></td>
+<td></td>
+<td>Off: no player leader charges a penalty and no challenger needs one. Vaults keep their money, can still be withdrawn, and are still paid out when a licence ends.</td>
+</tr>
+<tr>
+<td><code>vault.penalty_min</code></td>
+<td><code>100</code></td>
+<td>0 or more</td>
+<td>The least a holder may set as their gym's penalty, in CobbleDollars. A new holder starts on it.</td>
+</tr>
+<tr>
+<td><code>vault.penalty_max</code></td>
+<td><code>10000</code></td>
+<td>0 or more</td>
+<td>The most a holder may set as their gym's penalty. A range given the wrong way round counts from its smaller end.</td>
 </tr>
 </tbody>
 </table>
