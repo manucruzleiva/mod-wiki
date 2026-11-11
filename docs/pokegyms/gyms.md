@@ -247,7 +247,7 @@ as trainers.
 - **A disciple registers a team**, like the leader: press **Register** (or **Update**) and the gym keeps a
   frozen copy of the party they carry, in the gym's [format](#registering-your-team), singles while the leader
   has not registered a team. Singles needs 1 Pokémon in the party, doubles 2. Their own Pokémon stay with them.
-- **A trainer NPC stands for it.** **Gym Trainer <player>**, wearing the disciple's skin and carrying the
+- **A trainer NPC stands for it.** `Gym Trainer <player>`, wearing the disciple's skin and carrying the
   copy, stands at their place.
 - **One gym at a time.** A player is the disciple of a single gym on the server. It needs no
   [licence](licences.md), so a disciple may hold one at another gym.
