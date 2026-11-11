@@ -662,6 +662,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Disciples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenging-the-disciples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenging the disciples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1021,6 +1038,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Disciples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenging-the-disciples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenging the disciples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1064,7 +1098,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.35</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.36</p>
   
                   
 
@@ -1133,7 +1167,7 @@ leader) can register their party as the gym's team. The gym then has a leader of
   you keep your own Pokémon and can train, trade or lose them. Registering again replaces the copy.</li>
 <li><strong>Everyone sees the team.</strong> The gym team panel on the Gym Manager's side lists the registered
   Pokémon by name and level.</li>
-<li><strong>A leader NPC stands for it.</strong> <strong>Gym Leader <player></strong> stands at the gym's leader spot, wearing the
+<li><strong>A leader NPC stands for it.</strong> <code>Gym Leader &lt;player&gt;</code> stands at the gym's leader spot, wearing the
   holder's skin (default or slim, read from their Minecraft profile) and carrying the copy as its
   party. It cannot be hurt, moved or pushed, and does not despawn. If it is killed, it comes back the next
   time its chunk loads.</li>
@@ -1309,7 +1343,22 @@ as trainers.</p>
 <li><strong>Operators can switch it off</strong> with <a href="../commands/#configuration"><code>/pokegyms config disciples enabled false</code></a>:
   nobody can be invited or register, and disciples already there stay until the leader removes them.</li>
 </ul>
-<p>Battling disciples is not in the mod yet.</p>
+<h3 id="challenging-the-disciples">Challenging the disciples<a class="headerlink" href="#challenging-the-disciples" title="Permanent link">&para;</a></h3>
+<p>Right-clicking a disciple's trainer NPC challenges it, like the leader: a fresh copy of its team at your level,
+in the gym's current format.</p>
+<ul>
+<li><strong>Fight them in order.</strong> The disciples that have registered a team are fought in order, disciple 1, 2, 3,
+  and the leader takes your challenge only once you have beaten every one. A gym with no disciples is
+  challenged at the leader directly.</li>
+<li><strong>Progress is kept</strong> when you log out or the server restarts, until you lose.</li>
+<li><strong>A loss to any disciple</strong> costs you the gym's <a href="../vault/">penalty</a>, starts the rematch cooldown and sends you back to
+  disciple 1.</li>
+<li><strong>Beating a disciple pays nothing</strong>: no <a href="../vault/#winners-share">winner's share</a>, no medal and no cooldown.
+  A finished leader challenge, won or lost, starts the next one from disciple 1.</li>
+<li><strong>Changes start everyone over.</strong> A disciple joining, registering again or leaving, or a new licence,
+  resets every challenger's progress.</li>
+<li><strong>Who cannot challenge.</strong> The holder and the gym's own disciples. Each trainer battles one challenger at a time.</li>
+</ul>
 <h2 id="gym-battles">Gym battles<a class="headerlink" href="#gym-battles" title="Permanent link">&para;</a></h2>
 <p>A battle against an NPC trainer who stands <strong>inside a gym</strong>, such as a Cities &amp; Structures gym leader,
 is a <strong>gym battle</strong> from its start until it ends. PokeGyms does not change the battle itself; it only
