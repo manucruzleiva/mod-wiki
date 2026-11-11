@@ -273,8 +273,8 @@ does, so each player gets their own find and the block stays for everyone else.
 ### <img class="hm-icon" src="../../assets/icons/teleport.png" alt=""> Teleport
 **Cooldown:** 30s · **Power:** max 30 blocks
 
-Blinks you to the block you're looking at (≤ 30 blocks), with the Enderman teleport sound. The
-Pokémon lending it **comes with you** and lands at your side, so it keeps lending Teleport.
+Blinks you to the block you're looking at (≤ 30 blocks), finding the nearest safe landing. Plays
+the Enderman teleport sound.
 
 It is the strongest way to travel the mod has, so it is priced like it: slow to come back.
 
@@ -321,9 +321,6 @@ it on the same Pokémon a second time within 5 seconds to settle it for good.
 - Only works on an **Alpha**. Anything else, it refuses and says why.
 - The Pokémon keeps the size it had under the Alpha, so an XL that went through Outrage comes back
   XL and can be made an Alpha again.
-- If the Pokémon would come back **smaller than XL** (a wild-caught Alpha, for example), Outrage
-  could never undo it. The first use only warns you; use Calm Mind on the same Pokémon again within
-  **5 seconds** to settle it for good.
 
 ---
 

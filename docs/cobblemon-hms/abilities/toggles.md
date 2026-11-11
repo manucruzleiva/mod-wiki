@@ -79,9 +79,6 @@ gathers itself. Items are nudged rather than yanked, so they keep their normal p
 their speed is capped so they never shoot past you. The radius never goes past the 24 blocks of the
 aura itself.
 
-It leaves alone the items **you threw**, so you can still drop or hand something over; items
-**another player is closer to**; and items that **would not fit** in your inventory.
-
 It leaves some items where they are:
 
 - **What you throw yourself**, so you can still drop rubbish or hand something to a friend.
@@ -164,14 +161,6 @@ Fortune leans your way while it lasts. Every block you break drops as if your to
 more levels of Fortune, on top of its own, so ores and crops give more; a Silk Touch tool is left
 alone, and breaking with a bare hand gets nothing extra. You also get Luck, which brings better
 catches when fishing and better loot from chests you open for the first time.
-
-- **What you break:** anything Fortune already improves (ores, crops, glowstone, melons…) drops as
-  if your tool had **one more level of Fortune**, so a Fortune III pickaxe mines like Fortune IV and
-  an empty hand like Fortune I. Blocks Fortune does not touch drop as usual, and Silk Touch still
-  gives the block itself.
-- **What you fish:** you get **+1 Luck**, the same as a Potion of Luck, which makes a fishing rod
-  pull up a little more treasure and a little less junk. It adds to a potion you drank rather than
-  replacing it.
 
 ---
 
