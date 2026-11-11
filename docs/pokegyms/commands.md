@@ -40,6 +40,7 @@ and is written to the config file so it survives one.
 | `/pokegyms config city_disciples enabled <true\|false>` | Switches the [City disciples](gyms.md#city-disciples) on or off; `city_disciples` has no numbers, and takes `reset` too. |
 | `/pokegyms config takeover <setting> <value>` | Sets `fee` of a [gym takeover](gyms.md#taking-over-a-gym); `takeover` takes `enabled` and `reset` too. |
 | `/pokegyms config vault_split enabled <true\|false>` | Switches the [vault split](vault.md#splitting-the-vault) among leader and disciples on or off; `vault_split` has no numbers, and takes `reset` too. |
+| `/pokegyms config roster enabled <true\|false>` | Switches the [Roster tab](gyms.md#challenging-a-gym) for challengers on or off; `roster` has no numbers, and takes `reset` too. |
 | `/pokegyms config licences reset` | Puts the feature back to its defaults, switched on. |
 
 ## Configuration
@@ -97,6 +98,9 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
   },
   "vault_split": {
     "enabled": true
+  },
+  "roster": {
+    "enabled": true
   }
 }
 ```
@@ -125,6 +129,7 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
 | `takeover.enabled` | `true` | | Off: nobody can take a held gym over. Gyms already taken stay as they are. |
 | `takeover.fee` | `10000` | 0 or more | What taking a gym over costs, in CobbleDollars. It is destroyed, never paid to anyone. |
 | `vault_split.enabled` | `true` | | Off: the whole vault goes to the leader and no share can be set. The shares already set are kept for when it is back on. |
+| `roster.enabled` | `true` | | Off: challengers get no Roster tab. Clicking a trainer still challenges it, in the same order. |
 
 A setting missing from the file takes its default, and one out of range is pulled into it; the file is
 then written back whole, so you always find every setting in it. A file that is not valid JSON is left
