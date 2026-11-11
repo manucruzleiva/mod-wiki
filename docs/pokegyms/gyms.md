@@ -292,6 +292,9 @@ as trainers.
   [licence](licences.md), so a disciple may hold one at another gym.
 - **The leader removes a disciple** with a shift-click on their row in the holder's Disciples tab; the NPC goes.
   When the leader's licence ends, every disciple goes with it.
+- **The leader can share the vault with them.** Each disciple's row shows their share of the gym's
+  [vault](vault.md#splitting-the-vault) (`Name 25%`), a click on it gives them 5% more, and a **Leader** row shows what
+  the leader keeps. A withdrawal, or the end of the licence, pays everyone their share.
 - **Colours in the holder's list:** a disciple's name is white once they registered a team, gold until then,
   and a free place reads grey.
 - **Operators can switch it off** with [`/pokegyms config disciples enabled false`](commands.md#configuration):

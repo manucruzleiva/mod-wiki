@@ -39,6 +39,7 @@ and is written to the config file so it survives one.
 | `/pokegyms config disciples enabled <true\|false>` | Switches [disciples](gyms.md#disciples) on or off; `disciples` has no numbers, and takes `reset` too. |
 | `/pokegyms config city_disciples enabled <true\|false>` | Switches the [City disciples](gyms.md#city-disciples) on or off; `city_disciples` has no numbers, and takes `reset` too. |
 | `/pokegyms config takeover <setting> <value>` | Sets `fee` of a [gym takeover](gyms.md#taking-over-a-gym); `takeover` takes `enabled` and `reset` too. |
+| `/pokegyms config vault_split enabled <true\|false>` | Switches the [vault split](vault.md#splitting-the-vault) among leader and disciples on or off; `vault_split` has no numbers, and takes `reset` too. |
 | `/pokegyms config licences reset` | Puts the feature back to its defaults, switched on. |
 
 ## Configuration
@@ -93,6 +94,9 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
   "takeover": {
     "enabled": true,
     "fee": 10000
+  },
+  "vault_split": {
+    "enabled": true
   }
 }
 ```
@@ -120,6 +124,7 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
 | `city_disciples.enabled` | `true` | | Off: City gyms put no RCT disciples out and their leader is challenged directly. The ones already chosen stay saved and stand again when it is back on. |
 | `takeover.enabled` | `true` | | Off: nobody can take a held gym over. Gyms already taken stay as they are. |
 | `takeover.fee` | `10000` | 0 or more | What taking a gym over costs, in CobbleDollars. It is destroyed, never paid to anyone. |
+| `vault_split.enabled` | `true` | | Off: the whole vault goes to the leader and no share can be set. The shares already set are kept for when it is back on. |
 
 A setting missing from the file takes its default, and one out of range is pulled into it; the file is
 then written back whole, so you always find every setting in it. A file that is not valid JSON is left
