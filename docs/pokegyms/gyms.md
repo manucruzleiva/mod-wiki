@@ -132,6 +132,32 @@ Right-click the **Gym Leader** NPC of a player-held gym to fight the team its ho
 - **It does not depend on the `leader` switch.** [`/pokegyms config leader`](commands.md#configuration)
   only stops new registrations; challenges keep working.
 
+## Leader dialogue
+
+The leader NPC of a player-held gym talks at five moments of a challenge, in Cobblemon's own dialogue box with
+the NPC's name and face.
+
+| Moment | When | Default line |
+| --- | --- | --- |
+| Before the battle | The challenger right-clicks the leader. The box shows first and the battle starts when it is closed. | "So you have come to challenge this gym. Show me what you have got!" |
+| Last Pokémon left | The leader is down to its last Pokémon. It is a line in the battle log. | "My last Pokémon... I am not done yet!" |
+| You win | The leader wins. Shown about 2 seconds after the battle ends. | "Not this time. Train harder and come back." |
+| You lose | The leader loses. Shown about 2 seconds after the battle ends. | "Well fought. You have earned it." |
+| Challenger back too soon | A challenger tries again before their [rematch cooldown](#rematch-cooldown) is over. Also a line in chat. | "Back already? Rest your team and come back later." |
+
+"You win" and "You lose" are from the NPC's side: the first is what the leader says after beating the challenger.
+
+- **The holder writes the lines.** On the Team tab, the leader clicks **Dialogue** (bottom left) and types a line for
+  each moment. An empty line uses the default, shown greyed in the field. All five are saved together.
+- **Lines belong to the licence.** A new leader, or one who [takes the gym over](#taking-over-a-gym), starts on the
+  defaults, and when a licence ends the lines go with it.
+- **Limits.** A line is at most `dialogue.max_length` characters (120 by default, up to 256). A longer line, or one
+  with a formatting code (`§`) or a control character, is refused and nothing is saved.
+- **Disciples** say the same moments with the default lines.
+- **Only player gyms.** City leaders and RCT trainers keep their own dialogue.
+- **Operators can switch it off** with [`/pokegyms config dialogue enabled false`](commands.md#configuration): nobody
+  speaks and the battle starts at once. The saved lines are kept for when it is back on.
+
 ## Rematch cooldown
 
 After you finish a challenge of a player leader, the same leader will not take you on again right away.
@@ -259,7 +285,7 @@ Right-clicking a Gym Manager opens its screen, built on Cobblemon's summary scre
 - **The Info tab**, which everyone sees, gives the gym's **kind** (City gym), its **status**
   (Canonical) and its **location** (X, Z), and in a City gym the **type** of its leader, with a short line about who runs it. At a City gym whose leader you beat, the line says you may buy
   its licence.
-- **The Team tab**, which only the holder sees, [registers the gym's team](#registering-your-team).
+- **The Team tab**, which only the holder sees, [registers the gym's team](#registering-your-team) and has the **Dialogue** button for the [leader's lines](#leader-dialogue).
 - **The Licence tab** is where a visitor or a disciple of a held gym can [take it over](#taking-over-a-gym).
 - **The Disciples tab** is seen by the holder, by a player the holder invited and by the gym's disciples:
   see [Disciples](#disciples).
