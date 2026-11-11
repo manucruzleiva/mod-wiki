@@ -710,6 +710,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#challenging-a-gym_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenging a gym
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gym-battles" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1114,6 +1125,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#challenging-a-gym_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenging a gym
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gym-battles" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1154,7 +1176,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.40</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.41</p>
   
                   
 
@@ -1405,12 +1427,14 @@ gym is found and the spot is loaded.</p>
 <li><strong>The Licence tab</strong> is where a visitor or a disciple of a held gym can <a href="#taking-over-a-gym">take it over</a>.</li>
 <li><strong>The Disciples tab</strong> is seen by the holder, by a player the holder invited and by the gym's disciples:
   see <a href="#disciples">Disciples</a>.</li>
+<li><strong>The Roster tab</strong> is seen by a visitor and by a player the holder invited, not by the holder or the gym's disciples:
+  see <a href="#challenging-a-gym">Challenging a gym</a>.</li>
 <li><strong>The gym team</strong> panel on the side has six slots. They show the registered team by name and level,
   and stand empty while the gym has none.</li>
 </ul>
 <p>The screen shows the gym as the server saw it when you opened it, and every button asks the server
 again before anything happens.</p>
-<p>The holder's screen has four tabs: Info, Licence, Team and Disciples. A disciple sees Info, Licence and Disciples. The <strong>Licence</strong> tab also holds the gym's
+<p>The holder's screen has four tabs: Info, Licence, Team and Disciples. A disciple sees Info, Licence and Disciples. A visitor sees Info, Licence (when there is a licence to buy or a gym to take over) and Roster. The <strong>Licence</strong> tab also holds the gym's
 <a href="../vault/">vault</a>: its penalty, Withdraw and Renounce. See <a href="../licences/#the-licence-tab">Licences</a>.</p>
 <h2 id="disciples">Disciples<a class="headerlink" href="#disciples" title="Permanent link">&para;</a></h2>
 <p>A player leader can have up to <strong>three disciples</strong>: other players who train under them and stand in the gym
@@ -1454,6 +1478,20 @@ in the gym's current format.</p>
 <li><strong>Changes start everyone over.</strong> A disciple joining, registering again or leaving, or a new licence,
   resets every challenger's progress.</li>
 <li><strong>Who cannot challenge.</strong> The holder and the gym's own disciples. Each trainer battles one challenger at a time.</li>
+</ul>
+<h2 id="challenging-a-gym_1">Challenging a gym<a class="headerlink" href="#challenging-a-gym_1" title="Permanent link">&para;</a></h2>
+<p>A visitor's Gym Manager has a <strong>Roster</strong> tab, titled <strong>Order</strong>, that lists the gym's trainers in the order you
+face them: its disciples one after another, the leader last.</p>
+<ul>
+<li><strong>Beaten trainers are struck out</strong>, the one you face next is <strong>gold</strong> and the rest wait.</li>
+<li><strong>Press Challenge</strong> and the next trainer takes you on at their place, the same as right-clicking them. The screen closes for the battle.</li>
+<li><strong>Only the next trainer can be called out.</strong> A disciple you beat cannot be fought again until you start over, after a
+  loss or a finished challenge against the leader. If you try anyway, or the gym takes no challenge from you now, you are told in chat.</li>
+<li><strong>A trainer who is not at their place yet</strong> asks you to try again in a moment.</li>
+<li><strong>City gyms work the same way</strong>, with their <a href="#city-disciples">RCT disciples</a> first and the City leader last.</li>
+<li><strong>A player the holder invited</strong> sees the tab too, while they decide on the invitation.</li>
+<li><strong>Operators can switch it off</strong> with <a href="../commands/#configuration"><code>/pokegyms config roster enabled false</code></a>:
+  challengers get no Roster tab; right-clicking a trainer still challenges it, in the same order.</li>
 </ul>
 <h2 id="gym-battles">Gym battles<a class="headerlink" href="#gym-battles" title="Permanent link">&para;</a></h2>
 <p>A battle against an NPC trainer who stands <strong>inside a gym</strong>, such as a Cities &amp; Structures gym leader,
