@@ -842,7 +842,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.37</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.38</p>
   
                   
 
@@ -851,11 +851,12 @@
 <h1 id="the-gym-vault">The Gym Vault<a class="headerlink" href="#the-gym-vault" title="Permanent link">&para;</a></h1>
 <p>A player-held gym has a <strong>vault</strong>: the CobbleDollars that challengers lost to its leader. The holder
 sets the <strong>penalty</strong> a challenger risks, and takes the vault's money when they like.</p>
-<p>Everything here is on the <strong>Vault</strong> tab of the <a href="../gyms/#the-gym-manager">Gym Manager</a>, which only the
-gym's holder sees. City gyms led by an RCT leader have no vault; their
+<p>Everything here is on the <strong>Licence</strong> tab of the <a href="../gyms/#the-gym-manager">Gym Manager</a>, which only the
+gym's holder sees (see <a href="../licences/#the-licence-tab">Licences</a>). City gyms led by an RCT leader have no vault; their
 <a href="../gyms/#fighting-a-city-leader">penalty</a> is destroyed.</p>
 <h2 id="setting-the-penalty">Setting the penalty<a class="headerlink" href="#setting-the-penalty" title="Permanent link">&para;</a></h2>
-<p>The tab shows the <strong>Penalty</strong> and what the <strong>Vault</strong> holds.</p>
+<p>The holder's Licence tab shows the <strong>Penalty</strong>, what the <strong>Vault</strong> holds, when the licence expires (<strong>Expiry</strong>) and
+the penalty's <strong>Range</strong> (only while penalties are on).</p>
 <ul>
 <li><strong>Click the Penalty row to raise it</strong> by a tenth of the server's range. <strong>Shift-click lowers it.</strong>
   Past either end it wraps round to the other.</li>
@@ -890,15 +891,16 @@ gym's holder sees. City gyms led by an RCT leader have no vault; their
   from 0 to 100, or <code>enabled false</code>. 0 percent pays nothing too.</li>
 </ul>
 <h2 id="withdrawing">Withdrawing<a class="headerlink" href="#withdrawing" title="Permanent link">&para;</a></h2>
-<p><strong>Withdraw</strong> appears when the vault holds money and moves all of it to your CobbleDollars. If
+<p><strong>Withdraw</strong> sits in the bottom-left box of the Licence tab. It appears when the vault holds money and moves all of it
+to your CobbleDollars. If
 CobbleDollars refuses the payment, the vault keeps its money and you can try again.</p>
 <h2 id="when-the-licence-ends">When the licence ends<a class="headerlink" href="#when-the-licence-ends" title="Permanent link">&para;</a></h2>
-<p>Renouncing, expiring or a takeover pays the <strong>whole vault to the holder</strong> before the gym goes vacant.
+<p>Renouncing (the <strong>Renounce</strong> button, bottom-right, whose confirm text says you get the vault), expiring or a takeover pays the <strong>whole vault to the holder</strong> before the gym goes vacant.
 A holder who is offline gets it on their <strong>next login</strong>, and is told then. The money is not lost if
 CobbleDollars refuses it: it is kept for the next login.</p>
 <h2 id="switching-it-off">Switching it off<a class="headerlink" href="#switching-it-off" title="Permanent link">&para;</a></h2>
 <p>With <code>vault.enabled</code> off, no player leader charges a penalty and a challenger needs none to start. The
-tab says penalties are off; vaults keep what they hold, can still be withdrawn, and are still paid out
+Licence tab says penalties are off; vaults keep what they hold, can still be withdrawn, and are still paid out
 when a licence ends. The <a href="#winners-share">winner's share</a> has its own switch and is not turned off by it.</p>
 
 
