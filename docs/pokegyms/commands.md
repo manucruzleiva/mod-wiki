@@ -6,7 +6,7 @@ Every command is under `/pokegyms`, for **operators** only (permission level 2).
 
 Lists every gym the server has found in **your current dimension**, one line each: its coordinates,
 its status (`canonical`, `vacant`, or `held by` a player), the city structure it stands in, and how
-many of its five marks PokeGyms read (`5/5 markers` is a healthy gym).
+many of its eight marks PokeGyms read (`8/8 markers` is a gym with every mark; a gym recorded before 0.0.43 shows `5/8`, and works, it only has no [battle staging](gyms.md#where-the-battle-happens)).
 
 Click the coordinates to get a `/tp` to that gym's Gym Manager in your chat box.
 
@@ -42,6 +42,7 @@ and is written to the config file so it survives one.
 | `/pokegyms config vault_split enabled <true\|false>` | Switches the [vault split](vault.md#splitting-the-vault) among leader and disciples on or off; `vault_split` has no numbers, and takes `reset` too. |
 | `/pokegyms config roster enabled <true\|false>` | Switches the [Roster tab](gyms.md#challenging-a-gym) for challengers on or off; `roster` has no numbers, and takes `reset` too. |
 | `/pokegyms config dialogue <setting> <value>` | Sets `max_length` of a [leader's line](gyms.md#leader-dialogue); `dialogue` takes `enabled` and `reset` too. |
+| `/pokegyms config staging <setting> <value>` | Sets `doubles_gap` of [battle staging](gyms.md#where-the-battle-happens); `staging` takes `enabled` and `reset` too. |
 | `/pokegyms config licences reset` | Puts the feature back to its defaults, switched on. |
 
 ## Configuration
@@ -106,6 +107,10 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
   "dialogue": {
     "enabled": true,
     "max_length": 120
+  },
+  "staging": {
+    "enabled": true,
+    "doubles_gap": 3
   }
 }
 ```
@@ -137,6 +142,8 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
 | `roster.enabled` | `true` | | Off: challengers get no Roster tab. Clicking a trainer still challenges it, in the same order. |
 | `dialogue.enabled` | `true` | | Off: gym leaders and disciples say nothing and the battle starts at once. Saved lines are kept. |
 | `dialogue.max_length` | `120` | 1 to 256 | The longest a leader's line may be, in characters. A longer line is refused and nothing is saved. |
+| `staging.enabled` | `true` | | Off: leader battles are not staged: nobody is moved and Cobblemon places every Pokémon. |
+| `staging.doubles_gap` | `3` | 1 to 8 | Blocks between the two Pokémon of one side in a staged doubles battle. |
 
 A setting missing from the file takes its default, and one out of range is pulled into it; the file is
 then written back whole, so you always find every setting in it. A file that is not valid JSON is left

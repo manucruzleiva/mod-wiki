@@ -158,6 +158,17 @@ the NPC's name and face.
 - **Operators can switch it off** with [`/pokegyms config dialogue enabled false`](commands.md#configuration): nobody
   speaks and the battle starts at once. The saved lines are kept for when it is back on.
 
+## Where the battle happens
+
+A **leader** battle is staged at the gym, in singles and in doubles. It applies to the City leader and to the leader of a player-held gym, not to [disciple battles](#challenging-the-disciples), which are not moved.
+
+- **You are moved.** When the battle starts you are taken to the gym's **challenger spot**, facing the leader.
+- **Each side's Pokémon have a spot.** Yours come out at the challenger's Pokémon spot and the leader's at its own, and they come back there after a switch.
+- **Doubles spread out.** Two Pokémon of one side stand side by side, across the line toward the other side, `staging.doubles_gap` blocks apart (3 by default, 1 to 8).
+- **A gym without those spots battles as before.** Gyms the server recorded before 0.0.43 have none, so Cobblemon places everything as it always did. A gym with only some of the spots uses those it has.
+- **Other mods' battle blocks never take it over.** Only PokeGyms' own leader battles are placed, matched by the battle itself, so a battle block of another mod nearby (such as Cobblemon Battle Positions) leaves a gym battle alone, and every other battle is left alone too.
+- **Operators can switch it off** with [`/pokegyms config staging enabled false`](commands.md#configuration): nobody is moved and Cobblemon places everything.
+
 ## Rematch cooldown
 
 After you finish a challenge of a player leader, the same leader will not take you on again right away.
