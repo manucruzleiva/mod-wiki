@@ -33,8 +33,8 @@ can switch Surf, Agility and the rest mid-ride.
 Once a Pokémon is lending you an HM, **click with an empty hand** to fire it. By default anything
 else in your hand keeps its normal click, so tools, weapons and blocks behave exactly as they always
 did. A server can also let a click with something in hand fire it, with a
-[Trainer's Glove](configuration.md#trainers-glove) or by taking over one button; sneak to click
-normally then. See [Activation mode](configuration.md#activation).
+[Trainer's Glove](configuration.md#trainers-glove), by taking over one button, or with the Activate HM key
+(Keybind); sneak to click normally then. See [Activation mode](configuration.md#activation).
 
 One Pokémon lends one HM at a time. Walk away from it and the HM pauses until you are back. **Put it
 back in its ball and it stops lending**, and its auras switch off too, weather included: send
