@@ -26,9 +26,9 @@ inside its door: the one place where everything about that gym happens.
 
 !!! warning "Not released yet"
     PokeGyms has no public download yet. These pages describe the current development build,
-    **0.0.35**. What it does today is find the gyms, give each City gym an RCT leader you can fight, let you challenge the leader of a player-held gym
-    (a loser pays its penalty into the gym's vault, a winner gets a signed medal, a Badge It badge if the gym has one, and a challenger waits before a rematch), scale every RCT trainer's team, leaders included, to your level (stage and moves too), let a leader invite up to three disciples, run their Gym Manager and tell other mods which battles are gym battles. Gym battle rules,
-    taking a gym over and battling disciples are not in the mod yet, and nothing here describes them.
+    **0.0.36**. What it does today is find the gyms, give each City gym an RCT leader you can fight, let you challenge the leader of a player-held gym
+    (a loser pays its penalty into the gym's vault, a winner gets a signed medal, a Badge It badge if the gym has one, and a challenger waits before a rematch), scale every RCT trainer's team, leaders included, to your level (stage and moves too), let a leader invite up to three disciples who you fight in order before the leader, run their Gym Manager and tell other mods which battles are gym battles. Gym battle rules
+    and taking a gym over are not in the mod yet, and nothing here describes them.
 
 ## Highlights
 
@@ -50,7 +50,7 @@ inside its door: the one place where everything about that gym happens.
 - 🏆 **[Winner's share](vault.md#winners-share)**: beat a player leader and you take a share of its vault,
   10% by default.
 - 🧑‍🏫 **[Disciples](gyms.md#disciples)**: a player leader invites up to three players, who register a team and stand at the
-  gym as `Gym Trainer <player>`.
+  gym as `Gym Trainer <player>`; challengers beat them in order before the leader.
 - 🏅 **[Signed medals](gyms.md#medals)**: beat a player leader and you get a Gym Medal that names the gym,
   the leader and the date, or a signed Badge It badge when the leader registered one.
 - 🎖️ **[Mainline badges](gyms.md#mainline-badges)**: with PKGBadges installed, beating a City leader gives the

@@ -71,7 +71,7 @@ leader) can register their party as the gym's team. The gym then has a leader of
   you keep your own Pokémon and can train, trade or lose them. Registering again replaces the copy.
 - **Everyone sees the team.** The gym team panel on the Gym Manager's side lists the registered
   Pokémon by name and level.
-- **A leader NPC stands for it.** **Gym Leader <player>** stands at the gym's leader spot, wearing the
+- **A leader NPC stands for it.** `Gym Leader <player>` stands at the gym's leader spot, wearing the
   holder's skin (default or slim, read from their Minecraft profile) and carrying the copy as its
   party. It cannot be hurt, moved or pushed, and does not despawn. If it is killed, it comes back the next
   time its chunk loads.
@@ -258,7 +258,22 @@ as trainers.
 - **Operators can switch it off** with [`/pokegyms config disciples enabled false`](commands.md#configuration):
   nobody can be invited or register, and disciples already there stay until the leader removes them.
 
-Battling disciples is not in the mod yet.
+### Challenging the disciples
+
+Right-clicking a disciple's trainer NPC challenges it, like the leader: a fresh copy of its team at your level,
+in the gym's current format.
+
+- **Fight them in order.** The disciples that have registered a team are fought in order, disciple 1, 2, 3,
+  and the leader takes your challenge only once you have beaten every one. A gym with no disciples is
+  challenged at the leader directly.
+- **Progress is kept** when you log out or the server restarts, until you lose.
+- **A loss to any disciple** costs you the gym's [penalty](vault.md), starts the rematch cooldown and sends you back to
+  disciple 1.
+- **Beating a disciple pays nothing**: no [winner's share](vault.md#winners-share), no medal and no cooldown.
+  A finished leader challenge, won or lost, starts the next one from disciple 1.
+- **Changes start everyone over.** A disciple joining, registering again or leaving, or a new licence,
+  resets every challenger's progress.
+- **Who cannot challenge.** The holder and the gym's own disciples. Each trainer battles one challenger at a time.
 
 ## Gym battles
 
