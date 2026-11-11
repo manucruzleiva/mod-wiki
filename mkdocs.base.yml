@@ -117,6 +117,7 @@ extra:
     action-combat:  { name: Cobblemon Action Combat,        version: 0.1.43, repo: cobblemon-action-combat }
     poketrades:     { name: Cobblemon PokeTrades,           version: 0.0.24, repo: cobblemon-poketrades }
     pokegyms:       { name: Cobblemon PokeGyms,             version: 0.0.25, repo: cobblemon-pokegyms }
+    defeated-catch-chance: { name: Cobblemon Defeated Catch Chance, version: 0.0.1, repo: cobblemon-defeated-catch-chance }
   # La ficha tecnica de cada mod: lo que dice su jar publicado (fabric.mod.json y neoforge.mods.toml
   # del tag del ultimo release), no lo que se recuerda. De aca salen, por hooks/mod_specs.py, las
   # insignias del hero de cada index, la tabla "Get it" de cada index, y en la portada los chips de
@@ -278,6 +279,13 @@ extra:
       cobblemon_note: 1.7.x is not supported
       requires: [cobbledollars, rct, ccs]
       requires_note: "— Radical Cobblemon Trainers with its RCT API. Without Cities & Structures PokeGyms starts but finds no gyms"
+      fabric: [flk, architectury]
+      neoforge: [kff, architectury]
+    defeated-catch-chance:
+      unreleased: true
+      minecraft: "1.21.1"
+      cobblemon: "1.8+"
+      cobblemon_note: 1.7.x is not supported
       fabric: [flk, architectury]
       neoforge: [kff, architectury]
   # Como se encuentran los sitios separados entre si. Cada config de mod o de landing declara

@@ -129,6 +129,15 @@ here.
 </div>
 </div>
 
+<div class="mod-row" data-mod-color="defeated-catch-chance" data-tags="<!-- mod-tags:defeated-catch-chance -->" markdown>
+![](defeated-catch-chance/assets/logo.png){ .mod-row__logo }
+<div class="mod-row__body" markdown>
+[Cobblemon Defeated Catch Chance](defeated-catch-chance/index.md){ .mod-row__name }
+<span class="mod-row__what">Beat a wild Pokémon, then get one last chance to catch it.</span>
+<span class="mod-row__chips"><!-- mod-chips:defeated-catch-chance --></span>
+</div>
+</div>
+
 </div>
 
 ## Compatibility
