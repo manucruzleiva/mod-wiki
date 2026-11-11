@@ -127,6 +127,23 @@ After you finish a challenge of a player leader, the same leader will not take y
 - **Operators can change it** with [`/pokegyms config rematch`](commands.md#configuration): `cooldown_minutes`
   sets the wait (`0` means no wait), and `enabled` switches the whole cooldown off.
 
+## Level scaling
+
+A gym leader's team fights at **your level**, whatever levels it was registered at.
+
+- **The level is your best Pokémon's.** It is the highest level in your whole party, fainted Pokémon
+  included, so a Pokémon you cannot send out still counts. The team scales up and down alike: a level 20
+  team meets a level 50 challenger at 50, and a level 80 team meets a level 30 one at 30.
+- **Every Pokémon of the team is set to it, at full HP.** It is capped at the server's maximum Pokémon level.
+- **It covers both kinds of leader.** The [player leaders](#challenging-a-gym) and the
+  [City leaders](#fighting-a-city-leader), who are Radical Cobblemon Trainers NPCs.
+- **Only the battle changes.** The Team tab, a holder's registered team and RCT's trainer data keep
+  their levels; the scaled Pokémon are copies made for that battle alone.
+- **A format with its own fixed level keeps it.** If the battle format sets a level for everyone, the
+  leader's team is not scaled.
+- **Operators can switch it off** with [`/pokegyms config scaling enabled false`](commands.md#configuration):
+  teams then fight at their registered levels. Battles already running keep the levels they started with.
+
 ## The Gym Manager
 
 Every gym has a **Gym Manager**: a lectern just inside the gym's door. It is put there as soon as the

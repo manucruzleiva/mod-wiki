@@ -31,6 +31,7 @@ and is written to the config file so it survives one.
 | `/pokegyms config leader enabled <true\|false>` | Opens or closes [team registration](gyms.md#registering-your-team); `leader` has no numbers, and takes `reset` too. |
 | `/pokegyms config vault <setting> <value>` | Sets `penalty_min` or `penalty_max` of the [gym vault](vault.md); `vault` takes `enabled` and `reset` too. |
 | `/pokegyms config rematch <setting> <value>` | Sets `cooldown_minutes` of the [rematch cooldown](gyms.md#rematch-cooldown); `rematch` takes `enabled` and `reset` too. |
+| `/pokegyms config scaling enabled <true\|false>` | Switches [level scaling](gyms.md#level-scaling) on or off; `scaling` has no numbers, and takes `reset` too. |
 | `/pokegyms config licences reset` | Puts the feature back to its defaults, switched on. |
 
 ## Configuration
@@ -59,6 +60,9 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
   "rematch": {
     "enabled": true,
     "cooldown_minutes": 60
+  },
+  "scaling": {
+    "enabled": true
   }
 }
 ```
@@ -76,6 +80,7 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
 | `vault.penalty_max` | `10000` | 0 or more | The most a holder may set as their gym's penalty. A range given the wrong way round counts from its smaller end. |
 | `rematch.enabled` | `true` | | Off: a challenger may challenge a player leader again at once. Finished challenges are still recorded, so switching it back on counts them. |
 | `rematch.cooldown_minutes` | `60` | 0 to 525,600 | Minutes a challenger waits after a finished challenge, won or lost, before challenging that gym's leader again. `0` means no wait. |
+| `scaling.enabled` | `true` | | Off: gym leaders' teams battle at the levels they were registered at, not at the challenger's. Battles already running keep theirs. |
 
 A setting missing from the file takes its default, and one out of range is pulled into it; the file is
 then written back whole, so you always find every setting in it. A file that is not valid JSON is left
