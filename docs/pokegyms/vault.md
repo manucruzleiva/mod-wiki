@@ -45,16 +45,38 @@ Beating a **player leader** pays you a share of the gym's vault: `winner_share.p
 - **Operators can change it** with [`/pokegyms config winner_share`](commands.md#configuration): `percent`
   from 0 to 100, or `enabled false`. 0 percent pays nothing too.
 
+## Splitting the vault
+
+The holder can give each [disciple](gyms.md#disciples) a share of the vault. Open the **Disciples** tab:
+each disciple's row shows their name and share (`Name 25%`), and a last **Leader** row shows what you keep.
+
+- **Click a disciple to give them 5% more.** Once you have nothing left to give, the next click puts them back on 0%.
+  Shift-click still removes the disciple.
+- **The shares always add up to 100%.** The leader keeps whatever the disciples' shares leave, and the server refuses
+  a split over 100%. Only the holder can set shares.
+- **A new disciple starts on 0%.** A disciple you remove gives their share back to the leader. After a
+  [takeover](gyms.md#taking-over-a-gym) the new leader keeps the disciples' shares as they were.
+- **Changing a share does not restart the challengers' progress** through the gym's disciples.
+- **Operators can switch it off** with [`/pokegyms config vault_split enabled false`](commands.md#configuration): the
+  whole vault goes to the leader and no share can be set. The shares already set are kept for when it is back on.
+
 ## Withdrawing
 
-**Withdraw** sits in the bottom-left box of the Licence tab. It appears when the vault holds money and moves all of it
-to your CobbleDollars. If
-CobbleDollars refuses the payment, the vault keeps its money and you can try again.
+**Withdraw** sits in the bottom-left box of the Licence tab. It appears when the vault holds money and pays all of it
+out at once: each disciple gets their [share](#splitting-the-vault), rounded down, and you get the rest, rounding
+included. With no shares set, all of it goes to you. The vault goes back to 0, and you are told what you kept.
+
+- **A disciple who is online** is paid at once and told so.
+- **A disciple who is offline** is paid on their **next login**.
+- **If CobbleDollars refuses a payment,** that player gets it on their next login instead: no one's share is lost.
 
 ## When the licence ends
 
-Renouncing (the **Renounce** button, bottom-right, whose confirm text says you get the vault), expiring or a takeover pays the **whole vault to the holder** before the gym goes vacant.
-A holder who is offline gets it on their **next login**, and is told then. The money is not lost if
+Renouncing (the **Renounce** button, bottom-right, whose confirm text says you get the vault) or expiring pays the
+**whole vault out** before the gym goes vacant, split like a [withdrawal](#withdrawing): each disciple their share and
+the holder the rest. The same goes for a gym given up to make a [takeover](gyms.md#taking-over-a-gym). The gym taken
+over keeps its vault for the new leader.
+Anyone who is offline gets their money on their **next login**, and is told then. The money is not lost if
 CobbleDollars refuses it: it is kept for the next login.
 
 ## Switching it off

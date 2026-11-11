@@ -37,7 +37,7 @@ At a vacant town gym, a City gym whose leader you beat, or a gym a player holds,
 - **For the holder**: the gym's [vault](vault.md) and its **Penalty** (click the row to raise it, shift-click to lower
   it), when the licence expires (**Expiry**), the penalty's **Range** (only while penalties are on), a **Withdraw**
   button in the bottom-left box and a **Renounce** button in the bottom-right one, which asks for a second click to
-  confirm and pays the vault out.
+  confirm and pays the vault out, [split with the disciples](vault.md#splitting-the-vault) if you set shares.
 
 ## After a crash
 
