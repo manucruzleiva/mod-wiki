@@ -41,6 +41,7 @@ and is written to the config file so it survives one.
 | `/pokegyms config takeover <setting> <value>` | Sets `fee` of a [gym takeover](gyms.md#taking-over-a-gym); `takeover` takes `enabled` and `reset` too. |
 | `/pokegyms config vault_split enabled <true\|false>` | Switches the [vault split](vault.md#splitting-the-vault) among leader and disciples on or off; `vault_split` has no numbers, and takes `reset` too. |
 | `/pokegyms config roster enabled <true\|false>` | Switches the [Roster tab](gyms.md#challenging-a-gym) for challengers on or off; `roster` has no numbers, and takes `reset` too. |
+| `/pokegyms config dialogue <setting> <value>` | Sets `max_length` of a [leader's line](gyms.md#leader-dialogue); `dialogue` takes `enabled` and `reset` too. |
 | `/pokegyms config licences reset` | Puts the feature back to its defaults, switched on. |
 
 ## Configuration
@@ -101,6 +102,10 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
   },
   "roster": {
     "enabled": true
+  },
+  "dialogue": {
+    "enabled": true,
+    "max_length": 120
   }
 }
 ```
@@ -130,6 +135,8 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
 | `takeover.fee` | `10000` | 0 or more | What taking a gym over costs, in CobbleDollars. It is destroyed, never paid to anyone. |
 | `vault_split.enabled` | `true` | | Off: the whole vault goes to the leader and no share can be set. The shares already set are kept for when it is back on. |
 | `roster.enabled` | `true` | | Off: challengers get no Roster tab. Clicking a trainer still challenges it, in the same order. |
+| `dialogue.enabled` | `true` | | Off: gym leaders and disciples say nothing and the battle starts at once. Saved lines are kept. |
+| `dialogue.max_length` | `120` | 1 to 256 | The longest a leader's line may be, in characters. A longer line is refused and nothing is saved. |
 
 A setting missing from the file takes its default, and one out of range is pulled into it; the file is
 then written back whole, so you always find every setting in it. A file that is not valid JSON is left
