@@ -742,7 +742,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.20</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.21</p>
   
                   
 
@@ -751,24 +751,28 @@
 <h1 id="licences">Licences<a class="headerlink" href="#licences" title="Permanent link">&para;</a></h1>
 <p>A <strong>licence</strong> is what lets a player run a gym as its leader. The rules below are in the mod today.</p>
 <div class="admonition note">
-<p class="admonition-title">No gym sells a licence yet</p>
-<p>Only a <strong>town gym</strong> sells its licence, and in this build every gym is a
-<a href="../gyms/#city-gyms-and-their-leaders">City gym</a>, led by an RCT leader. So no Gym Manager offers
-a licence yet, and the Licence tab does not appear.</p>
+<p class="admonition-title">A City gym's licence has to be earned</p>
+<p>Every gym in this build is a <a href="../gyms/#city-gyms-and-their-leaders">City gym</a>, led by an RCT
+leader. Its licence is for sale only to a player who
+<a href="../gyms/#unlocking-a-city-gym">beat that leader</a>; to everyone else the Licence tab does not appear.</p>
 </div>
 <h2 id="the-rules">The rules<a class="headerlink" href="#the-rules" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>One licence per player on the whole server</strong>, whatever the dimension.</li>
 <li><strong>It costs 25,000 CobbleDollars</strong> by default, paid at the gym's Gym Manager. The server sets the
   price (<a href="../commands/#configuration">Configuration</a>).</li>
-<li><strong>A City gym never sells its licence.</strong></li>
+<li><strong>A City gym sells its licence only to a player who beat its leader</strong>, at the same price and with the
+  same one licence per player. Beating them is remembered even with licences switched off. While the
+  gym is held its leader is gone; when the licence ends the leader is back and the gym is locked again
+  for everyone, the former holder included.</li>
 <li><strong>It ends after 30 days without logging in</strong> by default, or when its holder renounces it. Either
-  way the gym goes vacant, anyone can buy it again, and the former holder may buy another. The
+  way a town gym goes vacant, anyone can buy it again, and the former holder may buy another (a City
+  gym goes back to its leader, as above). The
   server checks when it starts and once a day after. With the days set to 0, a licence never
   expires.</li>
 </ul>
 <h2 id="the-licence-tab">The Licence tab<a class="headerlink" href="#the-licence-tab" title="Permanent link">&para;</a></h2>
-<p>At a vacant town gym, the Gym Manager screen adds a <strong>Licence</strong> tab:</p>
+<p>At a vacant town gym, or a City gym whose leader you beat, the Gym Manager screen adds a <strong>Licence</strong> tab:</p>
 <ul>
 <li><strong>For a visitor</strong>: the price, how many CobbleDollars you have, and a <strong>Buy</strong> button. If you
   already hold a licence, the tab says which gym it is; if you are short, it says how much more you
@@ -781,7 +785,7 @@ a licence yet, and the Licence tab does not appear.</p>
 licence whose gym no longer names its player is dropped, a gym naming a holder the licence list
 forgot is added to it, and if one player ends up holding two gyms, the second goes vacant. Each fix
 is written to the server log. Licences of gyms in a dimension that is not loaded are left alone.</p>
-<p>Switching licences off (<a href="../commands/#configuration">Configuration</a>) stops every vacant gym from
+<p>Switching licences off (<a href="../commands/#configuration">Configuration</a>) stops every gym from
 selling its licence. Licences already held stay, and still expire or can be renounced.</p>
 
 
