@@ -565,6 +565,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#challenging-a-gym" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenging a gym
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-gym-manager" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -830,6 +841,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#challenging-a-gym" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenging a gym
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-gym-manager" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -898,7 +920,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.22</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.23</p>
   
                   
 
@@ -979,7 +1001,25 @@ leader) can register their party as the gym's team. The gym then has a leader of
 </ul>
 <p>Worlds saved before this version load every gym with no team. A saved team that cannot be read is
 dropped and the gym is kept.</p>
-<p>Fighting this leader is not in the mod yet.</p>
+<h2 id="challenging-a-gym">Challenging a gym<a class="headerlink" href="#challenging-a-gym" title="Permanent link">&para;</a></h2>
+<p>Right-click the <strong>Gym Leader</strong> NPC of a player-held gym to fight the team its holder registered.</p>
+<ul>
+<li><strong>The holder picks the format.</strong> It is singles or doubles, whatever the holder registered.</li>
+<li><strong>Who cannot challenge.</strong> The holder cannot challenge their own gym. A gym with no holder or no
+  registered team takes no challenge, and neither does a leader who is already battling someone else
+  (you are told it is busy).</li>
+<li><strong>The result counts once.</strong> Winning or losing tells you in chat. Forfeiting or running away counts as
+  a loss. A battle the server stops counts as nothing.</li>
+<li><strong>The leader always fields a fresh copy of the team.</strong> Used PP or berries from an earlier battle do
+  not carry over, and the gym's registered team is never changed.</li>
+<li><strong>Nobody's Pokémon are hurt.</strong> The battle uses a copy of your party, so your Pokémon keep their
+  health, and it gives <strong>no XP or EVs</strong> for the same reason.</li>
+<li><strong>In a City gym held by a player,</strong> the fight counts as against the player leader, not the City
+  leader: it does not touch the City leader's unlock or penalty, and
+  <a href="../commands/#pokegyms-battles"><code>/pokegyms battles</code></a> lists it as <code>leader</code>.</li>
+<li><strong>It does not depend on the <code>leader</code> switch.</strong> <a href="../commands/#configuration"><code>/pokegyms config leader</code></a>
+  only stops new registrations; challenges keep working.</li>
+</ul>
 <h2 id="the-gym-manager">The Gym Manager<a class="headerlink" href="#the-gym-manager" title="Permanent link">&para;</a></h2>
 <p>Every gym has a <strong>Gym Manager</strong>: a lectern just inside the gym's door. It is put there as soon as the
 gym is found and the spot is loaded.</p>
