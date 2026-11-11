@@ -594,6 +594,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#winners-share" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Winner's share
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#withdrawing" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -775,6 +786,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#winners-share" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Winner's share
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#withdrawing" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -820,7 +842,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.33</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.34</p>
   
                   
 
@@ -850,8 +872,22 @@ gym's holder sees. City gyms led by an RCT leader have no vault; their
   are told what it costs and what you have, and the fight does not start.</li>
 <li><strong>Losing pays it.</strong> A loss, a forfeit or running away moves exactly the penalty from you into the
   vault. You are told what you paid.</li>
-<li><strong>Winning costs nothing,</strong> and neither does a battle the server stops with no winner.</li>
+<li><strong>Winning costs nothing,</strong> and neither does a battle the server stops with no winner. A win over a
+  player leader also pays you a share of the vault: see <a href="#winners-share">Winner's share</a>.</li>
 <li>If the gym's licence ends during the battle, or you spent the money meanwhile, nothing moves.</li>
+</ul>
+<h2 id="winners-share">Winner's share<a class="headerlink" href="#winners-share" title="Permanent link">&para;</a></h2>
+<p>Beating a <strong>player leader</strong> pays you a share of the gym's vault: <code>winner_share.percent</code> of what it holds,
+<strong>10% by default</strong>, rounded down. A vault of 1,000 pays 100 and keeps 900. The chat tells you how much you took.</p>
+<ul>
+<li><strong>Only the leader pays.</strong> Nothing is taken from the vault if the leader is not the one you beat.</li>
+<li><strong>A vault too small to give a whole CobbleDollar pays nothing.</strong></li>
+<li><strong>It is paid at once,</strong> and if CobbleDollars refuses it, you get it on your <strong>next login</strong>. The money
+  leaves the vault either way, so it is never lost.</li>
+<li><strong>Nothing moves if the gym is no longer held,</strong> for instance when its licence ended during the battle
+  (the vault has already gone to the holder).</li>
+<li><strong>Operators can change it</strong> with <a href="../commands/#configuration"><code>/pokegyms config winner_share</code></a>: <code>percent</code>
+  from 0 to 100, or <code>enabled false</code>. 0 percent pays nothing too.</li>
 </ul>
 <h2 id="withdrawing">Withdrawing<a class="headerlink" href="#withdrawing" title="Permanent link">&para;</a></h2>
 <p><strong>Withdraw</strong> appears when the vault holds money and moves all of it to your CobbleDollars. If
@@ -863,7 +899,7 @@ CobbleDollars refuses it: it is kept for the next login.</p>
 <h2 id="switching-it-off">Switching it off<a class="headerlink" href="#switching-it-off" title="Permanent link">&para;</a></h2>
 <p>With <code>vault.enabled</code> off, no player leader charges a penalty and a challenger needs none to start. The
 tab says penalties are off; vaults keep what they hold, can still be withdrawn, and are still paid out
-when a licence ends.</p>
+when a licence ends. The <a href="#winners-share">winner's share</a> has its own switch and is not turned off by it.</p>
 
 
 
