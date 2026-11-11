@@ -29,6 +29,7 @@ and is written to the config file so it survives one.
 | `/pokegyms config licences <setting> <value>` | Sets a number, within the setting's range. |
 | `/pokegyms config canonical penalty <value>` | The same for the City-leader battle; `canonical` takes `enabled` and `reset` like `licences`. |
 | `/pokegyms config leader enabled <true\|false>` | Opens or closes [team registration](gyms.md#registering-your-team); `leader` has no numbers, and takes `reset` too. |
+| `/pokegyms config vault <setting> <value>` | Sets `penalty_min` or `penalty_max` of the [gym vault](vault.md); `vault` takes `enabled` and `reset` too. |
 | `/pokegyms config licences reset` | Puts the feature back to its defaults, switched on. |
 
 ## Configuration
@@ -48,6 +49,11 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
   },
   "leader": {
     "enabled": true
+  },
+  "vault": {
+    "enabled": true,
+    "penalty_min": 100,
+    "penalty_max": 10000
   }
 }
 ```
@@ -60,6 +66,9 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
 | `canonical.enabled` | `true` | | Off: City gym leaders take no challenges. Battles already running finish, and a loss still costs the penalty. |
 | `canonical.penalty` | `1000` | 0 or more | What losing to a City leader costs, in CobbleDollars, and the least a challenger must carry to start. It is destroyed, never paid to anyone. |
 | `leader.enabled` | `true` | | Off: no holder can register or replace their gym's team. Teams already registered stay, with their leader. |
+| `vault.enabled` | `true` | | Off: no player leader charges a penalty and no challenger needs one. Vaults keep their money, can still be withdrawn, and are still paid out when a licence ends. |
+| `vault.penalty_min` | `100` | 0 or more | The least a holder may set as their gym's penalty, in CobbleDollars. A new holder starts on it. |
+| `vault.penalty_max` | `10000` | 0 or more | The most a holder may set as their gym's penalty. A range given the wrong way round counts from its smaller end. |
 
 A setting missing from the file takes its default, and one out of range is pulled into it; the file is
 then written back whole, so you always find every setting in it. A file that is not valid JSON is left

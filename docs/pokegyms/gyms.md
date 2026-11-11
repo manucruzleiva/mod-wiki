@@ -92,6 +92,10 @@ Right-click the **Gym Leader** NPC of a player-held gym to fight the team its ho
 - **Who cannot challenge.** The holder cannot challenge their own gym. A gym with no holder or no
   registered team takes no challenge, and neither does a leader who is already battling someone else
   (you are told it is busy).
+- **You need the penalty in hand.** The holder sets a penalty for their gym, and you must carry at
+  least that many CobbleDollars to challenge. A loss moves exactly the penalty into the gym's
+  [vault](vault.md); a win or a stopped battle costs nothing. If you are short, you are told how much
+  it costs and what you have.
 - **The result counts once.** Winning or losing tells you in chat. Forfeiting or running away counts as
   a loss. A battle the server stops counts as nothing.
 - **The leader always fields a fresh copy of the team.** Used PP or berries from an earlier battle do
@@ -101,6 +105,8 @@ Right-click the **Gym Leader** NPC of a player-held gym to fight the team its ho
 - **In a City gym held by a player,** the fight counts as against the player leader, not the City
   leader: it does not touch the City leader's unlock or penalty, and
   [`/pokegyms battles`](commands.md#pokegyms-battles) lists it as `leader`.
+- **The penalty has its own switch.** [`/pokegyms config vault`](commands.md#configuration) turns it
+  off: nobody pays or needs one to challenge.
 - **It does not depend on the `leader` switch.** [`/pokegyms config leader`](commands.md#configuration)
   only stops new registrations; challenges keep working.
 
@@ -126,6 +132,8 @@ Right-clicking a Gym Manager opens its screen, built on Cobblemon's summary scre
   (Canonical) and its **location** (X, Z), with a short line about who runs it. At a City gym whose leader you beat, the line says you may buy
   its licence.
 - **The Team tab**, which only the holder sees, [registers the gym's team](#registering-your-team).
+- **The Vault tab**, which only the holder sees, sets the gym's penalty and withdraws its
+  [vault](vault.md).
 - **The gym team** panel on the side has six slots. They show the registered team by name and level,
   and stand empty while the gym has none.
 
