@@ -107,7 +107,7 @@ extra:
     routes:         { name: Routes,                         version: 2.0.131, modrinth: PfmV1XPQ, repo: routes }
     nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.66, modrinth: wHlszYZN, repo: cobblemon-nuzlocke }
     picnic:         { name: Cobblemon Picnic,               version: 5.1.0, modrinth: sfptxo0H, repo: cobblemon-picnic }
-    cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.4.2, modrinth: JNfSyMuQ, repo: cobblemon-hms }
+    cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.6.1, modrinth: JNfSyMuQ, repo: cobblemon-hms }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.1.0, modrinth: S01tPZTk, repo: cobblemon-raid-icons }
     champions:      { name: Cobblemon Champions Training,   version: 2.1.0, modrinth: PlTQXswh, repo: cobblemon-champions-training }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr, repo: tree-carve }
