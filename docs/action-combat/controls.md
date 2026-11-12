@@ -30,6 +30,29 @@ Your Pokémon's HP and Stamina sit in one panel, your target's HP in another, an
 show their key, cost and cooldown. Damage numbers rise from each hit. `/cachud layout` picks one of
 three layouts.
 
+### The controls list
+
+At the start of each fight a list shows every fight control with the key it is bound to **now**, so
+a rebind shows in it: lock on (and the key for the next target), the four move keys, the click that
+fires, dodge, Protect, the item wheel, the belt's ball, switching (hold to flee), the doubles swap and
+the gimmick. A control whose feature the server has turned off is left out.
+
+It sits half-way down the left edge in the `ticket` layout, half-way down the right edge in `pokemon`
+and at the top left in `bottom`, clear of the bars and the moves.
+
+By default it shows for the first 10 seconds of each fight. A switch does not start it again; a new
+fight does. Each player picks when it shows with `/cachud controls`:
+
+| Command | When the list shows |
+| --- | --- |
+| `/cachud controls first_seconds [n]` | the first `n` seconds of each fight (default 10) |
+| `/cachud controls always` | the whole fight |
+| `/cachud controls never` | not at all |
+| `/cachud controls` | says which one is in use |
+
+The choice is saved on your own client, so it stays after a restart. The server can turn the list
+off for everyone with `/cac config hud controls false`.
+
 ## The camera
 
 The camera sits behind your Pokémon in third person, further back the bigger it is, and F5 is locked
