@@ -864,7 +864,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon Action Combat 0.1.44</p>
+    <p class="wiki-mod-version">Documented against Cobblemon Action Combat 0.1.45</p>
   
                   
 
@@ -901,10 +901,14 @@ Catching the last wild Pokémon wins the fight. Without PokeBelt, B tells you a 
 <li><strong>Your Pokémon faints</strong>: it goes back to its ball and a wheel of your party opens. After 2 seconds
   click one, or press its number. Pick nothing for 30 seconds and the first healthy one goes out.
   With none left, you lose.</li>
-<li><strong>Tap R</strong> to recall and pick another. <strong>Hold R for 2 seconds</strong> to run from a wild fight; against a
+<li><strong>Tap R</strong> to recall and pick another. After a switch of your own, R waits <strong>15 seconds</strong> before it
+  recalls again; a tap too soon shows on the action bar how many seconds are left. The wait starts
+  when the Pokémon you picked goes out. A knock-out, or a recall that did not come from R, is free:
+  the next Pokémon comes out at once and the wait does not restart. <code>/cac config switch cooldown_seconds</code>
+  sets it (0 turns it off). <strong>Hold R for 2 seconds</strong> to run from a wild fight; against a
   trainer or a player it asks you to hold again, and the second hold forfeits as a loss.
   Another mod can forbid running or forfeiting (Cobblemon Nuzlocke does): the fight goes on and the
-  chat says why. Switching is never blocked.</li>
+  chat says why. Running and forfeiting can be blocked; switching only waits out its cooldown.</li>
 <li><strong>EXP and EVs are paid at each knock-out</strong>, by Cobblemon's own rules, to every Pokémon you drove in
   the fight. Level-up moves and evolutions wait for the fight to end.</li>
 <li><strong>A dropped connection</strong> gets 15 seconds of grace: come back and your Pokémon goes out again where
