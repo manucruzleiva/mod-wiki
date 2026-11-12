@@ -35,6 +35,8 @@ Every feature has `enabled` plus its own settings, saved to the config file as s
 | `damage scale` | 25 | how hard hits land, in percent of the games' damage |
 | `pvp time_limit_seconds` | 0 (off) | the PvP clock |
 | `hud controls` | on | the controls list on the HUD (each player still picks when it shows) |
+| `camera shoulder_offset` | 60 (0 = centred) | how far the camera moves to a shoulder with a lock on, in percent of the Pokémon's width |
+| `camera shoulder_side` | `auto` | `right`, `left` or `auto` (the target's side) |
 | `switch cooldown_seconds` | 15 (0 = off) | the wait between your own switches |
 | `npc switch_seconds` | 10 | the least time between an NPC's switches |
 | `gimmicks dynamax_seconds` | 20 | how long a Dynamax lasts |

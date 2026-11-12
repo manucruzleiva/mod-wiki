@@ -57,3 +57,20 @@ off for everyone with `/cac config hud controls false`.
 
 The camera sits behind your Pokémon in third person, further back the bigger it is, and F5 is locked
 for the fight. Your own camera mode comes back when it ends.
+
+### Over the shoulder
+
+While the lock holds a target, the camera moves to one shoulder of your Pokémon, so it sits to one side
+of the screen and the target stays in view. It eases there in about a quarter of a second and eases
+back to centre when the lock goes. Nothing new to press: it follows **Z**.
+
+By default the camera takes the side the target is on, and changes side only once the target is well
+past the Pokémon's facing (about 10°), so strafing round an opponent never hides it behind the body.
+A wall beside the Pokémon pulls the camera in so it does not clip into it.
+
+The server tunes it with `/cac config camera`:
+
+| Setting | Default | What it is |
+| --- | --- | --- |
+| `shoulder_offset` | 60 | how far the camera moves, in percent of the Pokémon's width (0 keeps it centred, up to 300) |
+| `shoulder_side` | `auto` | `right` or `left` hold that shoulder; `auto` takes the target's side |
