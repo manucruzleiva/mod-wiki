@@ -5,20 +5,26 @@ a datapack can change any of it. `/cac move <move>` shows one move's numbers.
 
 ## How a move goes off
 
+A move key only **readies** its move, whatever its kind; the **left click** fires it. Pressing
+another move key swaps the readied move, its own key again lets it go, and a click with nothing
+readied does nothing. There is one way to control moves, and no option to fire on the key.
+
 | Kind | Examples | What it does |
 | --- | --- | --- |
-| Close range | Tackle, Close Combat | its key readies it for 3 s; a left click on an opponent in reach lands it when its windup ends |
-| Projectile | Thunderbolt, Ember | flies from your Pokémon where you look; it can be outrun or sidestepped |
-| Zone | Thunder, Blizzard | falls on the spot you aim at a moment later, a ring marking where |
-| Area | Earthquake, Surf | hits everything around you |
-| Self and status | Swords Dance, Thunder Wave | cast for a moment first; a flinch or a heavy hit breaks the cast |
+| Close range | Tackle, Close Combat | a click on an opponent in reach lands it when its windup ends |
+| Projectile | Thunderbolt, Ember | a click sends it from your Pokémon where you look; it can be outrun or sidestepped |
+| Zone | Thunder, Blizzard | a click makes it fall on the spot you aim at a moment later, a ring marking where |
+| Area | Earthquake, Surf | a click hits everything around you |
+| Self and status | Swords Dance, Thunder Wave | a click casts it for a moment first; a flinch or a heavy hit breaks the cast |
 
-A readied close-range move is outlined on the HUD. Its Stamina and cooldown are paid on the click, a
-click with nothing in reach keeps it readied, and its key again lets it go.
+A readied move is outlined on the HUD for 3 s (`/cac config moves ready_ticks`; 0 keeps it readied
+until it is fired, swapped or let go). Its Stamina, cooldown and windup start on the click. A
+close-range move clicked with nothing in reach keeps it readied. A move still cooling down can be
+readied ahead of time and fires on the click once it is ready.
 
 Faster moves start sooner, so Quick Attack comes out well ahead of Tackle. A move that can miss in
 the games sometimes **fumbles** instead: the animation plays and nothing happens. Stamina cost and
-cooldown grow with a move's power, so a stronger move is a bigger hit per press, and a short
+cooldown grow with a move's power, so a stronger move is a bigger hit per click, and a short
 recovery follows every move.
 
 ## Damage
