@@ -762,7 +762,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="PfmV1XPQ" data-version="2.0.131">Documented against Routes 2.0.131</p>
+    <p class="wiki-mod-version" data-modrinth="PfmV1XPQ" data-version="2.0.145">Documented against Routes 2.0.145</p>
   
                   
 
@@ -791,7 +791,8 @@ and every road is signposted and named.</p>
   it crosses (<em>Route 5: Coastal Road</em>, <em>Route 8: Marsh Crossing</em>), always the same for your seed.</li>
 <li><strong>Clean tree clearing</strong> — a road crossing a tree removes the whole trunk and canopy; no floating
   leaves, no item spam. Trees and huge mushrooms don't grow within a few blocks of the road's edge,
-  so no crown hangs over the road where you walk.</li>
+  so no crown hangs over the road where you walk. Any leaves or branches a tree hangs into the 3 blocks
+  above a road, including the strip right at its edge, are trimmed away; the forest beside it is left.</li>
 <li><strong>Water crossings</strong> — always on the surface. A river gets a plank bridge with its pillars dropped to
   the riverbed, in one wood from end to end; a longer stretch stays an open lane of water to swim or
   sail, marked on both edges by natural rock markers, most of them lit, and the road meets it at the
@@ -806,7 +807,8 @@ and every road is signposted and named.</p>
   four rises in a row are walked in slabs. Only a longer climb keeps a stair, where the slabs run out.
   Every one-block step gets a stair or a slab, on the ramps up to a bridge, into a tunnel and out of a
   town too; a bridge deck that rises one block takes a slab. A wall that is still two blocks or more
-  gets a ladder, whichever way you walk in.</li>
+  gets a ladder, whichever way you walk in. Where a road reaches a bridge ramp half a block low, both
+  blocks are stairs, so there is no wall to jump.</li>
 <li><strong>Roads made of what you choose</strong> — the surface can be one material or a mix laid in rounded
   patches, with an optional share of worn blocks (cracked or mossy bricks, gravel in cobblestone, grass
   through a dirt path). Bridge decks and handrails are chosen the same way, one material per bridge and
@@ -819,7 +821,9 @@ and every road is signposted and named.</p>
   <strong>roundabout</strong> around a lit pillar or an open <strong>signed crossing</strong> with fingerposts naming all four
   destinations. Roads that meet at different heights are an <strong>overpass</strong>: the upper one simply bridges
   over. A fork that lands inside a hill opens into a <strong>chamber</strong> where its tunnels meet, with its
-  signposts on the chamber floor beside the roads.</li>
+  signposts on the chamber floor beside the roads. On a hillside the ground around a fork is levelled
+  for its signposts, and each road stays level across it and starts to climb at its edge. A road's
+  signpost is not put where another road runs.</li>
 <li><strong>Rest stops</strong> — every few hundred blocks, a small camp just off the road: a campfire with log
   seats, a lantern post and a sign. Now and then one keeps a <strong>supply chest</strong> from the last traveller —
   rarely, so finding one still means something. With <a href="https://manucruzleiva.github.io/mod-wiki/picnic/latest/picnic/">Cobblemon Picnic</a> installed,
@@ -830,7 +834,8 @@ and every road is signposted and named.</p>
   landmark — see <a href="../which-structures/">Which structures get roads</a>.</li>
 <li><strong>Villages, towns and cities</strong> — a settlement's real size decides how many roads leave it, so the
   network has quiet hamlets and busy hubs. A fork out of a big town stands past its last houses, never
-  among them. A structure tagged <code>routes:settlement/village</code>, <code>routes:settlement/town</code> or
+  among them. A road ends where a village really ends: a leftover scrap of road between two houses is
+  left as the village's own ground. A structure tagged <code>routes:settlement/village</code>, <code>routes:settlement/town</code> or
   <code>routes:settlement/city</code> gets that word after its name,
   so Pallet becomes <em>Pallet Town</em>. The cities of <strong>Cobblemon Cities &amp; Structures</strong> (Pewter, Cerulean,
   Vermilion, Celadon, Fuchsia, Saffron, Cinnabar and Viridian, plus Lavender and Pallet when placed by
@@ -859,7 +864,9 @@ and every road is signposted and named.</p>
   between them are the progress bar. Each step (surveying the towns around your spawn, generating the
   spawn chunks, building your spawn town) gets its share of the road by how long it really takes. The
   road's tip only moves while work actually finishes, the line under it counts tasks done, and it says
-  <em>no progress for N s</em> when nothing has finished for a while.</li>
+  <em>no progress for N s</em> when nothing has finished for a while. Until you are in the world the survey
+  uses every processor core but one, and goes back to four once you are playing; the towns and roads
+  of a seed are the same either way.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tune it per world</p>
