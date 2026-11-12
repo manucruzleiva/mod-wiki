@@ -828,7 +828,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.45</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.46</p>
   
                   
 
@@ -941,6 +941,10 @@ and is written to the config file so it survives one.</p>
 <td>Sets <code>badges</code>, <code>level_floor</code> or <code>penalty</code> of <a href="../champion/#settings">the Champion</a>; <code>champion</code> takes <code>enabled</code> and <code>reset</code> too.</td>
 </tr>
 <tr>
+<td><code>/pokegyms config rules &lt;setting&gt; &lt;0\|1&gt;</code></td>
+<td>Sets <code>allow_tera</code>, <code>allow_dynamax</code>, <code>allow_mega</code>, <code>allow_z</code> or <code>allow_held_items</code> of the <a href="../gyms/#battle-rules">battle rules</a>: <code>0</code> bans, <code>1</code> allows; <code>rules</code> takes <code>enabled</code> and <code>reset</code> too.</td>
+</tr>
+<tr>
 <td><code>/pokegyms config licences reset</code></td>
 <td>Puts the feature back to its defaults, switched on.</td>
 </tr>
@@ -1015,6 +1019,14 @@ and is written to the config file so it survives one.</p>
 <span class="w">    </span><span class="nt">"badges"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">"level_floor"</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">"penalty"</span><span class="p">:</span><span class="w"> </span><span class="mi">5000</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"allow_tera"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"allow_dynamax"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"allow_mega"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"allow_z"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"allow_held_items"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1213,6 +1225,42 @@ and is written to the config file so it survives one.</p>
 <td><code>5000</code></td>
 <td>0 or more</td>
 <td>What losing to the Champion costs, in CobbleDollars, and the least a challenger must carry to start. It is destroyed, never paid to anyone.</td>
+</tr>
+<tr>
+<td><code>rules.enabled</code></td>
+<td><code>true</code></td>
+<td></td>
+<td>Off: gym battles allow every gimmick and held item, whatever the <code>allow_*</code> settings and the leaders' own bans say. The bans stay saved and count again when it is back on.</td>
+</tr>
+<tr>
+<td><code>rules.allow_tera</code></td>
+<td><code>true</code></td>
+<td></td>
+<td><code>false</code> bans Terastallization on the gym's side of every <a href="../gyms/#battle-rules">gym battle</a>.</td>
+</tr>
+<tr>
+<td><code>rules.allow_dynamax</code></td>
+<td><code>true</code></td>
+<td></td>
+<td><code>false</code> bans Dynamax.</td>
+</tr>
+<tr>
+<td><code>rules.allow_mega</code></td>
+<td><code>true</code></td>
+<td></td>
+<td><code>false</code> bans Mega Evolution.</td>
+</tr>
+<tr>
+<td><code>rules.allow_z</code></td>
+<td><code>true</code></td>
+<td></td>
+<td><code>false</code> bans Z-Moves, and Ultra Burst with them.</td>
+</tr>
+<tr>
+<td><code>rules.allow_held_items</code></td>
+<td><code>true</code></td>
+<td></td>
+<td><code>false</code> takes every held item off the gym's battling Pokémon.</td>
 </tr>
 </tbody>
 </table>
