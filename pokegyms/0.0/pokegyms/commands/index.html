@@ -366,6 +366,8 @@
       
         
       
+        
+      
     
     
     
@@ -464,6 +466,34 @@
     
   
     Gyms & the Gym Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../champion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Champion
   
 
     
@@ -798,7 +828,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.44</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.45</p>
   
                   
 
@@ -907,6 +937,10 @@ and is written to the config file so it survives one.</p>
 <td>Sets <code>doubles_gap</code> of <a href="../gyms/#where-the-battle-happens">battle staging</a>; <code>staging</code> takes <code>enabled</code> and <code>reset</code> too.</td>
 </tr>
 <tr>
+<td><code>/pokegyms config champion &lt;setting&gt; &lt;value&gt;</code></td>
+<td>Sets <code>badges</code>, <code>level_floor</code> or <code>penalty</code> of <a href="../champion/#settings">the Champion</a>; <code>champion</code> takes <code>enabled</code> and <code>reset</code> too.</td>
+</tr>
+<tr>
 <td><code>/pokegyms config licences reset</code></td>
 <td>Puts the feature back to its defaults, switched on.</td>
 </tr>
@@ -975,6 +1009,12 @@ and is written to the config file so it survives one.</p>
 <span class="w">  </span><span class="nt">"staging"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">"doubles_gap"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"champion"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"badges"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"level_floor"</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"penalty"</span><span class="p">:</span><span class="w"> </span><span class="mi">5000</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1149,6 +1189,30 @@ and is written to the config file so it survives one.</p>
 <td><code>3</code></td>
 <td>1 to 8</td>
 <td>Blocks between the two Pokémon of one side in a staged doubles battle.</td>
+</tr>
+<tr>
+<td><code>champion.enabled</code></td>
+<td><code>true</code></td>
+<td></td>
+<td>Off: the <a href="../champion/">Champion</a> takes no challenges. Trophies already won stay, and a battle already running finishes, a loss still costing the penalty.</td>
+</tr>
+<tr>
+<td><code>champion.badges</code></td>
+<td><code>8</code></td>
+<td>1 to 64</td>
+<td>Medals and badges from different gyms a challenger must carry to challenge the Champion.</td>
+</tr>
+<tr>
+<td><code>champion.level_floor</code></td>
+<td><code>70</code></td>
+<td>1 to 1,000</td>
+<td>The lowest level the Champion's team fights at, however low the challenger's party. <code>1</code> lets it scale freely.</td>
+</tr>
+<tr>
+<td><code>champion.penalty</code></td>
+<td><code>5000</code></td>
+<td>0 or more</td>
+<td>What losing to the Champion costs, in CobbleDollars, and the least a challenger must carry to start. It is destroyed, never paid to anyone.</td>
 </tr>
 </tbody>
 </table>
