@@ -563,6 +563,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="The camera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#over-the-shoulder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Over the shoulder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -795,6 +812,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="The camera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#over-the-shoulder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Over the shoulder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -810,7 +844,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon Action Combat 0.1.46</p>
+    <p class="wiki-mod-version">Documented against Cobblemon Action Combat 0.1.47</p>
   
                   
 
@@ -925,6 +959,35 @@ off for everyone with <code>/cac config hud controls false</code>.</p>
 <h2 id="the-camera">The camera<a class="headerlink" href="#the-camera" title="Permanent link">&para;</a></h2>
 <p>The camera sits behind your Pokémon in third person, further back the bigger it is, and F5 is locked
 for the fight. Your own camera mode comes back when it ends.</p>
+<h3 id="over-the-shoulder">Over the shoulder<a class="headerlink" href="#over-the-shoulder" title="Permanent link">&para;</a></h3>
+<p>While the lock holds a target, the camera moves to one shoulder of your Pokémon, so it sits to one side
+of the screen and the target stays in view. It eases there in about a quarter of a second and eases
+back to centre when the lock goes. Nothing new to press: it follows <strong>Z</strong>.</p>
+<p>By default the camera takes the side the target is on, and changes side only once the target is well
+past the Pokémon's facing (about 10°), so strafing round an opponent never hides it behind the body.
+A wall beside the Pokémon pulls the camera in so it does not clip into it.</p>
+<p>The server tunes it with <code>/cac config camera</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>shoulder_offset</code></td>
+<td>60</td>
+<td>how far the camera moves, in percent of the Pokémon's width (0 keeps it centred, up to 300)</td>
+</tr>
+<tr>
+<td><code>shoulder_side</code></td>
+<td><code>auto</code></td>
+<td><code>right</code> or <code>left</code> hold that shoulder; <code>auto</code> takes the target's side</td>
+</tr>
+</tbody>
+</table>
 
 
 
