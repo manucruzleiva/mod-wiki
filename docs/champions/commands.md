@@ -55,6 +55,7 @@ Typing a group name and pressing **Tab** suggests its settings.
 | `statpoints` | `enabled` | `true` / `false` | `true` | The stat-point system. Off: effort values as in plain Cobblemon, points kept for later. |
 | `statpoints` | `requireMaxIvs` | `true` / `false` | `true` | Only a Pokémon with 31 in every IV can train. |
 | `statpoints` | `hyperTrainingUnlocks` | `true` / `false` | `true` | IVs raised with Bottle Caps count toward the 31s. |
+| `statpoints` | `notifyOnConvert` | `true` / `false` | `true` | Whether a chat message says so when a Pokémon starts training with stat points (from 2.2.0). Off: the Pokémon still switches, silently. Handy with `requireMaxIvs` off, where every Pokémon you catch switches. |
 | `statpoints` | `xpPerStatPoint` | 0 or more | `10` | Experience per stat point moved. |
 | `nature` | `source` | `MINTS` / `TRAINING` / `BOTH` | `BOTH` | Where a nature can be changed: mints, the Info page, or both. |
 | `nature` | `xpPerNatureChange` | 0 or more | `1000` | Experience per nature. |
@@ -105,6 +106,7 @@ mods list. Each setting has a tooltip.
   "statPointsEnabled": true,
   "requireMaxIvs": true,
   "hyperTrainingUnlocks": true,
+  "notifyOnConvert": true,
   "natureSource": "BOTH",
   "abilitySource": "BOTH",
   "moveSource": "BOTH",

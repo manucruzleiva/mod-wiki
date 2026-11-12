@@ -9,6 +9,11 @@ The mod only touches a Pokémon that is **31 in all six IVs**. Everything below 
 Cobblemon. Breed, catch or raise it there with Bottle Caps; see
 [Which Pokémon it touches](getting-started.md#which-pokemon-it-touches).
 
+## The controls are greyed out
+
+You are in a battle. Nothing can be changed until it ends (from version 2.1.1); spectating does not
+count. See [Where everything is](getting-started.md#where-everything-is).
+
 ## I keep running out of experience for training
 
 Training is paid with **your** experience, and vanilla only pays experience for defeating mobs.

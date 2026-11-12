@@ -43,7 +43,8 @@ The moment a Pokémon crosses that line, it switches over once and for good, and
 > longer do anything for it.
 
 Where a [Champions Trainer](champions-trainer.md) is required, it says *visit a Champions Trainer*
-instead.
+instead. A server can turn this message off (`statpoints notifyOnConvert`, from version **2.2.0**);
+the Pokémon still switches, silently.
 
 Whatever effort values it had become its first stat points, so a Pokémon you trained before is not
 set back. [Stat Points](stat-points.md#converting-from-effort-values) explains the exchange.
@@ -57,7 +58,8 @@ Everything is on the Pokémon's summary. There is no new screen and no new item.
 2.0.0, a server can ask for changes to be bought only at a
 [Champions Trainer](champions-trainer.md): talk to one and its summary opens with every control
 live, and opened anywhere else it shows the same pages read-only. Unless the server asks, the
-summary sells anywhere.
+summary sells anywhere. Nothing can be changed while you are in a battle (from version **2.1.1**):
+the controls grey out until it ends, and the server refuses the same changes.
 
 | Summary page | What changes | Details |
 |---|---|---|
