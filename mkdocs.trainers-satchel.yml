@@ -1,0 +1,27 @@
+INHERIT: mkdocs.base.yml
+site_name: Cobblemon Trainer's Satchel
+site_url: https://manucruzleiva.github.io/mod-wiki/trainers-satchel/
+
+extra:
+  wiki_site: trainers-satchel
+
+# Todo lo que no es de este mod queda afuera, salvo lo compartido. Los links a paginas de otro sitio
+# los reescribe hooks/cross_site_links.py.
+exclude_docs: |
+  /*
+  !/trainers-satchel/
+  !/assets/
+  !/stylesheets/
+
+nav:
+  - Cobblemon Trainer's Satchel:
+      - trainers-satchel/index.md
+      - Getting Started: trainers-satchel/getting-started.md
+      - Pockets & Rules: trainers-satchel/pockets.md
+      - Tiers: trainers-satchel/tiers.md
+      - In Battle & in the Field: trainers-satchel/in-the-field.md
+      - Keeping It on Death: trainers-satchel/death.md
+      - PC Item Storage: trainers-satchel/pc-storage.md
+      - Commands & Configuration: trainers-satchel/commands.md
+      - Troubleshooting: trainers-satchel/troubleshooting.md
+      - Community Credits: trainers-satchel/credits.md

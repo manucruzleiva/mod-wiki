@@ -118,6 +118,7 @@ extra:
     poketrades:     { name: Cobblemon PokeTrades,           version: 0.0.24, repo: cobblemon-poketrades }
     pokegyms:       { name: Cobblemon PokeGyms,             version: 0.0.47, repo: cobblemon-pokegyms }
     defeated-catch-chance: { name: Cobblemon Defeated Catch Chance, version: 0.0.1, repo: cobblemon-defeated-catch-chance }
+    trainers-satchel: { name: Cobblemon Trainer's Satchel, version: 0.0.14, repo: cobblemon-trainers-satchel }
   # La ficha tecnica de cada mod: lo que dice su jar publicado (fabric.mod.json y neoforge.mods.toml
   # del tag del ultimo release), no lo que se recuerda. De aca salen, por hooks/mod_specs.py, las
   # insignias del hero de cada index, la tabla "Get it" de cada index, y en la portada los chips de
@@ -161,6 +162,7 @@ extra:
     impactor:       { name: Impactor,                    modrinth: impactor }
     badgeit:        { name: Badge It,                    modrinth: badgeit }
     pkgbadges:      { name: PKGBadges,                   modrinth: pkgbadges }
+    accessories:    { name: Accessories,                 modrinth: accessories }
   mod_specs:
     routes:
       minecraft: "1.21.1–1.21.11 · 26.3"
@@ -294,6 +296,16 @@ extra:
       cobblemon_note: 1.7.x is not supported
       fabric: [flk, architectury]
       neoforge: [kff, architectury]
+    trainers-satchel:
+      unreleased: true
+      minecraft: "1.21.1"
+      cobblemon: "1.8+"
+      cobblemon_note: 1.7.x is not supported
+      fabric: [accessories, fabric-api, architectury, flk]
+      neoforge: [accessories, architectury, kff]
+      optional:
+        - [pokebelt, "when you throw the belt's last ball of a kind, the satchel refills it (Fabric only)"]
+        - [action-combat, "its real-time fights close the battle pockets and its throws refill from the satchel"]
   # Como se encuentran los sitios separados entre si. Cada config de mod o de landing declara
   # `wiki_site` (la carpeta del mod, o `landing`). Lo leen hooks/cross_site_links.py, que reescribe
   # los links que salen del sitio, overrides/partials/tabs.html, que arma el menu de secciones, y
