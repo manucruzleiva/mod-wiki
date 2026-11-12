@@ -43,6 +43,7 @@ and is written to the config file so it survives one.
 | `/pokegyms config roster enabled <true\|false>` | Switches the [Roster tab](gyms.md#challenging-a-gym) for challengers on or off; `roster` has no numbers, and takes `reset` too. |
 | `/pokegyms config dialogue <setting> <value>` | Sets `max_length` of a [leader's line](gyms.md#leader-dialogue); `dialogue` takes `enabled` and `reset` too. |
 | `/pokegyms config staging <setting> <value>` | Sets `doubles_gap` of [battle staging](gyms.md#where-the-battle-happens); `staging` takes `enabled` and `reset` too. |
+| `/pokegyms config champion <setting> <value>` | Sets `badges`, `level_floor` or `penalty` of [the Champion](champion.md#settings); `champion` takes `enabled` and `reset` too. |
 | `/pokegyms config licences reset` | Puts the feature back to its defaults, switched on. |
 
 ## Configuration
@@ -111,6 +112,12 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
   "staging": {
     "enabled": true,
     "doubles_gap": 3
+  },
+  "champion": {
+    "enabled": true,
+    "badges": 8,
+    "level_floor": 70,
+    "penalty": 5000
   }
 }
 ```
@@ -144,6 +151,10 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
 | `dialogue.max_length` | `120` | 1 to 256 | The longest a leader's line may be, in characters. A longer line is refused and nothing is saved. |
 | `staging.enabled` | `true` | | Off: leader battles are not staged: nobody is moved and Cobblemon places every Pokémon. |
 | `staging.doubles_gap` | `3` | 1 to 8 | Blocks between the two Pokémon of one side in a staged doubles battle. |
+| `champion.enabled` | `true` | | Off: the [Champion](champion.md) takes no challenges. Trophies already won stay, and a battle already running finishes, a loss still costing the penalty. |
+| `champion.badges` | `8` | 1 to 64 | Medals and badges from different gyms a challenger must carry to challenge the Champion. |
+| `champion.level_floor` | `70` | 1 to 1,000 | The lowest level the Champion's team fights at, however low the challenger's party. `1` lets it scale freely. |
+| `champion.penalty` | `5000` | 0 or more | What losing to the Champion costs, in CobbleDollars, and the least a challenger must carry to start. It is destroyed, never paid to anyone. |
 
 A setting missing from the file takes its default, and one out of range is pulled into it; the file is
 then written back whole, so you always find every setting in it. A file that is not valid JSON is left

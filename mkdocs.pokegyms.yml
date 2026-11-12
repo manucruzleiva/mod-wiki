@@ -18,6 +18,7 @@ nav:
       - pokegyms/index.md
       - Getting Started: pokegyms/getting-started.md
       - Gyms & the Gym Manager: pokegyms/gyms.md
+      - The Champion: pokegyms/champion.md
       - Licences: pokegyms/licences.md
       - The Gym Vault: pokegyms/vault.md
       - Commands & Configuration: pokegyms/commands.md
