@@ -77,6 +77,7 @@ the tab shows the points with the buttons greyed out.
 | Control | What it does |
 |---|---|
 | `SP  x / 66` | Points in use, out of the budget |
+| the stat's name and number | The short name (HP, Atk, Def, SpA, SpD, Spe) and, on the right of its cell, the stat the Pokémon would have (from version **2.3.0**) |
 | **−** / **+** | Take a point off a stat, or put one on |
 | **++** | Fill the stat as far as it can go, within 32 and what is left of the 66 |
 | the bar under each stat | How full that stat is, out of 32 |
@@ -91,6 +92,13 @@ on, because what you pay for is the change; moving a point from Attack to Speed 
   stays grey.
 - After you press Save, the button greys out until you change something, and a chime confirms the
   purchase.
+
+Each row shows the stat's **real value** (from version **2.3.0**), worked out the way the mod
+works out the stat itself: the points count before the nature, HP takes them as they are, and the
+nature still raises or lowers the number. It moves as soon as you press **−**, **+**, **++** or
+**Reset**, goes back to what the Pokémon has if you leave without pressing Save, and after Save it is
+exactly the stat the Pokémon has. Where stat points do not apply to the Pokémon (it has not
+switched over, or the server turned them off), the number is simply the Pokémon's current stat.
 
 The summary's stats reflect the new points straight away, and they are there the next time you open
 it. [Training Costs](training-costs.md) has the prices.
