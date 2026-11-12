@@ -63,7 +63,7 @@ the controls grey out until it ends, and the server refuses the same changes.
 
 | Summary page | What changes | Details |
 |---|---|---|
-| **Stats** | The IV and EV tabs are replaced by **SP** and **Sets** | [Stat Points](stat-points.md#the-sp-tab) · [Saved Sets](sets.md) |
+| **Stats** | The IV and EV tabs are replaced by **SP** and **Sets** (with perfect IVs not required, the IV tab stays) | [Stat Points](stat-points.md#the-sp-tab) · [Saved Sets](sets.md) |
 | **Info** | The Nature and Ability rows open a picker, marked with a **▼** | [Nature, Ability & Moves](nature-ability-moves.md) |
 | **Moves** | Cobblemon's move screen offers every move the Pokémon can legally learn | [Nature, Ability & Moves](nature-ability-moves.md#moves) |
 
