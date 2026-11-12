@@ -67,7 +67,10 @@ Once it has switched:
 
 ## The SP tab
 
-Open the Pokémon's summary, go to **Stats**, and pick **SP**, where the EV tab used to be. The
+Open the Pokémon's summary, go to **Stats**, and pick **SP**, where the EV tab used to be. The IV
+tab goes too, unless the server has turned **Require perfect IVs** off: then IVs still count, and
+the IV tab stays beside **SP** and **Sets** (from version **2.2.1**). The longer row of tabs keeps
+Cobblemon's look, just spaced closer, and each tab is clicked where it is drawn. The
 buttons only work in a summary opened by a [Champions Trainer](champions-trainer.md); anywhere else
 the tab shows the points with the buttons greyed out.
 
@@ -97,7 +100,7 @@ it. [Training Costs](training-costs.md) has the prices.
 | Setting | Effect on stat points |
 |---|---|
 | **Stat points** off | Every Pokémon uses and earns effort values as in plain Cobblemon, and the summary shows its own IV and EV tabs. Points already spent are kept, and come back as they were when this is turned on again. |
-| **Require perfect IVs** off | Every Pokémon can train, whatever its IVs. |
+| **Require perfect IVs** off | Every Pokémon can train, whatever its IVs. The summary keeps its IV tab, beside SP and Sets (from 2.2.1). |
 | **Bottle Caps unlock training** off | Only natural IVs count toward the 31s. |
 
 A Pokémon already over its budget can always save a spread that uses fewer points, never one that
