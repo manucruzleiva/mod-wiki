@@ -621,6 +621,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#with-cobblemon-action-combat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        With Cobblemon Action Combat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rematch-cooldown" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1058,6 +1069,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#with-cobblemon-action-combat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        With Cobblemon Action Combat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#rematch-cooldown" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1220,7 +1242,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.43</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeGyms 0.0.44</p>
   
                   
 
@@ -1408,6 +1430,16 @@ the NPC's name and face.</p>
 <li><strong>A gym without those spots battles as before.</strong> Gyms the server recorded before 0.0.43 have none, so Cobblemon places everything as it always did. A gym with only some of the spots uses those it has.</li>
 <li><strong>Other mods' battle blocks never take it over.</strong> Only PokeGyms' own leader battles are placed, matched by the battle itself, so a battle block of another mod nearby (such as Cobblemon Battle Positions) leaves a gym battle alone, and every other battle is left alone too.</li>
 <li><strong>Operators can switch it off</strong> with <a href="../commands/#configuration"><code>/pokegyms config staging enabled false</code></a>: nobody is moved and Cobblemon places everything.</li>
+<li><strong>Not in real-time fights.</strong> A fight <a href="#with-cobblemon-action-combat">Cobblemon Action Combat runs in real time</a> is not staged.</li>
+</ul>
+<h2 id="with-cobblemon-action-combat">With Cobblemon Action Combat<a class="headerlink" href="#with-cobblemon-action-combat" title="Permanent link">&para;</a></h2>
+<p><a href="https://manucruzleiva.github.io/mod-wiki/action-combat/latest/action-combat/">Cobblemon Action Combat</a> is optional, on Fabric and on NeoForge. Without it nothing here applies.</p>
+<ul>
+<li><strong>Real-time gym fights count.</strong> When its NPC fights are real time, beating a player leader, a disciple or a City leader gives what a turn-based win gives: the medal, the <a href="../vault/#winners-share">vault</a> share, the City badge and the <a href="#unlocking-a-city-gym">licence unlock</a>. A loss, a forfeit or running away costs the penalty.</li>
+<li><strong>The trainer takes the next challenger</strong> once the fight is over.</li>
+<li><strong>PokeGyms has no switch for it.</strong> Whether gym fights are real time follows Cobblemon Action Combat's own <code>/cac format</code>.</li>
+<li><strong>Two things are turn-based only.</strong> In real time there is no <a href="#where-the-battle-happens">battle staging</a> and no last-Pokémon line from the leader (see <a href="#leader-dialogue">Leader dialogue</a>); the challenge and after-battle lines still show.</li>
+<li><strong>Operators can check it</strong> in the log: <code>Cobblemon Action Combat found: real-time gym fights count like turn-based ones</code>.</li>
 </ul>
 <h2 id="rematch-cooldown">Rematch cooldown<a class="headerlink" href="#rematch-cooldown" title="Permanent link">&para;</a></h2>
 <p>After you finish a challenge of a player leader, the same leader will not take you on again right away.</p>
