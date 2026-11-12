@@ -16,7 +16,7 @@ in **Options → Controls → Cobblemon Action Combat**, except the ones that re
 | **H** | in doubles, swap control to your other Pokémon |
 | **G** (hold) | the consumable wheel: scroll to pick a potion, berry or X item, let go to throw it |
 | **B** | throw PokeBelt's selected Poké Ball at the locked target; the scroll wheel picks the ball |
-| **R** (Cobblemon's send-out key) | tap to switch Pokémon, hold 2 s to run away or forfeit |
+| **R** (Cobblemon's send-out key) | tap to switch Pokémon (15 s between your own switches), hold 2 s to run away or forfeit |
 
 ## Stamina
 
