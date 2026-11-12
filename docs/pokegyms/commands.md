@@ -44,6 +44,7 @@ and is written to the config file so it survives one.
 | `/pokegyms config dialogue <setting> <value>` | Sets `max_length` of a [leader's line](gyms.md#leader-dialogue); `dialogue` takes `enabled` and `reset` too. |
 | `/pokegyms config staging <setting> <value>` | Sets `doubles_gap` of [battle staging](gyms.md#where-the-battle-happens); `staging` takes `enabled` and `reset` too. |
 | `/pokegyms config champion <setting> <value>` | Sets `badges`, `level_floor` or `penalty` of [the Champion](champion.md#settings); `champion` takes `enabled` and `reset` too. |
+| `/pokegyms config rules <setting> <0\|1>` | Sets `allow_tera`, `allow_dynamax`, `allow_mega`, `allow_z` or `allow_held_items` of the [battle rules](gyms.md#battle-rules): `0` bans, `1` allows; `rules` takes `enabled` and `reset` too. |
 | `/pokegyms config licences reset` | Puts the feature back to its defaults, switched on. |
 
 ## Configuration
@@ -118,6 +119,14 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
     "badges": 8,
     "level_floor": 70,
     "penalty": 5000
+  },
+  "rules": {
+    "enabled": true,
+    "allow_tera": true,
+    "allow_dynamax": true,
+    "allow_mega": true,
+    "allow_z": true,
+    "allow_held_items": true
   }
 }
 ```
@@ -155,6 +164,12 @@ The settings live in `config/cobblemon_pokegyms.json` on the server:
 | `champion.badges` | `8` | 1 to 64 | Medals and badges from different gyms a challenger must carry to challenge the Champion. |
 | `champion.level_floor` | `70` | 1 to 1,000 | The lowest level the Champion's team fights at, however low the challenger's party. `1` lets it scale freely. |
 | `champion.penalty` | `5000` | 0 or more | What losing to the Champion costs, in CobbleDollars, and the least a challenger must carry to start. It is destroyed, never paid to anyone. |
+| `rules.enabled` | `true` | | Off: gym battles allow every gimmick and held item, whatever the `allow_*` settings and the leaders' own bans say. The bans stay saved and count again when it is back on. |
+| `rules.allow_tera` | `true` | | `false` bans Terastallization on the gym's side of every [gym battle](gyms.md#battle-rules). |
+| `rules.allow_dynamax` | `true` | | `false` bans Dynamax. |
+| `rules.allow_mega` | `true` | | `false` bans Mega Evolution. |
+| `rules.allow_z` | `true` | | `false` bans Z-Moves, and Ultra Burst with them. |
+| `rules.allow_held_items` | `true` | | `false` takes every held item off the gym's battling Pokémon. |
 
 A setting missing from the file takes its default, and one out of range is pulled into it; the file is
 then written back whole, so you always find every setting in it. A file that is not valid JSON is left

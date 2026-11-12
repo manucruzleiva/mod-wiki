@@ -286,6 +286,29 @@ every other Radical Cobblemon Trainers (RCT) trainer, including the ones wanderi
   teams then fight at their registered levels, RCT trainers' included. Battles already running keep the levels they started with.
   [`/pokegyms config evolution enabled false`](commands.md#configuration) keeps only the evolution stages out: levels still scale, species stay as registered.
 
+## Battle rules
+
+The server can ban **Terastallization**, **Dynamax**, **Mega Evolution**, **Z-Moves** and **held items** in gym
+battles, and a leader can ban more for their own gym. All five are allowed by default.
+
+- **Who is held to them.** Only the gym's side: a player leader, their disciples, a City leader, its disciples and the
+  [Champion](champion.md). The challenger battles as always, with every gimmick and item they have. A City gym and the
+  Champion follow the server's rules alone; they have no leader to add any.
+- **The server's rules.** The `rules` group of the [config](commands.md#configuration) has one switch per ban:
+  `allow_tera`, `allow_dynamax`, `allow_mega`, `allow_z` and `allow_held_items`. In the file they are `true` or `false`;
+  with `/pokegyms config rules <setting>` a `0` bans and a `1` allows. `rules.enabled false` turns every ban off,
+  the leaders' too, and they count again when it is back on. A battle keeps the rules it started under.
+- **The leader's rules.** In the Gym Manager's **Team** tab the **Rules** row shows how many bans the gym's battles
+  run under, the server's included, or **All allowed**. Click it for a screen with one button per rule, switching
+  it between *Allowed* and *Banned*; **Done** saves all five and **Cancel** goes back. A leader can only tighten: what
+  the server bans shows *Banned by the server*, greyed out, and cannot be switched. The row sits after Format and Team
+  (and after the Badge It medal row when Badge It is installed), and is not there while `rules` is off.
+  A new licence or a [takeover](#taking-over-a-gym) starts with none of its own.
+- **Items.** A banned held item is taken off the gym's Pokémon in the battle only. The registered team and RCT's
+  trainers keep theirs afterwards.
+- **Gimmicks.** A banned gimmick is never offered to the gym's side, whatever runs its turns, so the Pokémon keeps its
+  Tera type and its stone and still cannot use them. Banning Z-Moves bans Ultra Burst too.
+
 ## The Gym Manager
 
 Every gym has a **Gym Manager**: a lectern just inside the gym's door. It is put there as soon as the
@@ -307,7 +330,7 @@ Right-clicking a Gym Manager opens its screen, built on Cobblemon's summary scre
 - **The Info tab**, which everyone sees, gives the gym's **kind** (City gym), its **status**
   (Canonical) and its **location** (X, Z), and in a City gym the **type** of its leader, with a short line about who runs it. At a City gym whose leader you beat, the line says you may buy
   its licence.
-- **The Team tab**, which only the holder sees, [registers the gym's team](#registering-your-team) and has the **Dialogue** button for the [leader's lines](#leader-dialogue).
+- **The Team tab**, which only the holder sees, [registers the gym's team](#registering-your-team) and has the **Dialogue** button for the [leader's lines](#leader-dialogue) and a **Rules** row for the [battle rules](#battle-rules).
 - **The Licence tab** is where a visitor or a disciple of a held gym can [take it over](#taking-over-a-gym).
 - **The Disciples tab** is seen by the holder, by a player the holder invited and by the gym's disciples:
   see [Disciples](#disciples).
@@ -385,8 +408,8 @@ face them: its disciples one after another, the leader last.
 ## Gym battles
 
 A battle against an NPC trainer who stands **inside a gym**, such as a Cities & Structures gym leader,
-is a **gym battle** from its start until it ends. PokeGyms does not change the battle itself; it only
-marks it, so other mods can tell it apart. **Mid-Battle EXP** uses this to give more EXP in gyms.
+is a **gym battle** from its start until it ends. PokeGyms marks it, so other mods can tell it apart, and
+the gym's side fights under the [battle rules](#battle-rules). **Mid-Battle EXP** uses this to give more EXP in gyms.
 
 Each gym battle knows its gym and who the challenger faces: the gym's **leader**, a **disciple**, or the
 City gym's **canonical leader**. Operators can list the gym battles running now with
