@@ -18,6 +18,11 @@ meet one: it is no longer crafted. Right-click with the Case in hand to open it.
 Only **plain TMs** go in. A TM renamed in an anvil, or one whose move Cobblemon no longer knows,
 stays in your inventory, because the bag could not give it back as it was.
 
+Only **Cobblemon's own TMs** fit. Items from other mods that look like TMs are not counted at
+all, so with none of Cobblemon's in your inventory the result is "No Cobblemon TMs to put away".
+The result of **Put TMs away** shows inside the Case screen itself, with how many TMs went in and
+how many were left out.
+
 The Case's tooltip shows how many TMs are inside. A TM taken out that does not fit in your
 inventory stays in the bag, so nothing is ever dropped, in creative mode too.
 
