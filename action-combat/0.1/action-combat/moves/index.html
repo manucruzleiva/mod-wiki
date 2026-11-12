@@ -864,7 +864,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon Action Combat 0.1.43</p>
+    <p class="wiki-mod-version">Documented against Cobblemon Action Combat 0.1.44</p>
   
                   
 
@@ -874,6 +874,9 @@
 <p>Every one of the moves Cobblemon knows has a real-time definition derived from the games' data, and
 a datapack can change any of it. <code>/cac move &lt;move&gt;</code> shows one move's numbers.</p>
 <h2 id="how-a-move-goes-off">How a move goes off<a class="headerlink" href="#how-a-move-goes-off" title="Permanent link">&para;</a></h2>
+<p>A move key only <strong>readies</strong> its move, whatever its kind; the <strong>left click</strong> fires it. Pressing
+another move key swaps the readied move, its own key again lets it go, and a click with nothing
+readied does nothing. There is one way to control moves, and no option to fire on the key.</p>
 <table>
 <thead>
 <tr>
@@ -886,35 +889,37 @@ a datapack can change any of it. <code>/cac move &lt;move&gt;</code> shows one m
 <tr>
 <td>Close range</td>
 <td>Tackle, Close Combat</td>
-<td>its key readies it for 3 s; a left click on an opponent in reach lands it when its windup ends</td>
+<td>a click on an opponent in reach lands it when its windup ends</td>
 </tr>
 <tr>
 <td>Projectile</td>
 <td>Thunderbolt, Ember</td>
-<td>flies from your Pokémon where you look; it can be outrun or sidestepped</td>
+<td>a click sends it from your Pokémon where you look; it can be outrun or sidestepped</td>
 </tr>
 <tr>
 <td>Zone</td>
 <td>Thunder, Blizzard</td>
-<td>falls on the spot you aim at a moment later, a ring marking where</td>
+<td>a click makes it fall on the spot you aim at a moment later, a ring marking where</td>
 </tr>
 <tr>
 <td>Area</td>
 <td>Earthquake, Surf</td>
-<td>hits everything around you</td>
+<td>a click hits everything around you</td>
 </tr>
 <tr>
 <td>Self and status</td>
 <td>Swords Dance, Thunder Wave</td>
-<td>cast for a moment first; a flinch or a heavy hit breaks the cast</td>
+<td>a click casts it for a moment first; a flinch or a heavy hit breaks the cast</td>
 </tr>
 </tbody>
 </table>
-<p>A readied close-range move is outlined on the HUD. Its Stamina and cooldown are paid on the click, a
-click with nothing in reach keeps it readied, and its key again lets it go.</p>
+<p>A readied move is outlined on the HUD for 3 s (<code>/cac config moves ready_ticks</code>; 0 keeps it readied
+until it is fired, swapped or let go). Its Stamina, cooldown and windup start on the click. A
+close-range move clicked with nothing in reach keeps it readied. A move still cooling down can be
+readied ahead of time and fires on the click once it is ready.</p>
 <p>Faster moves start sooner, so Quick Attack comes out well ahead of Tackle. A move that can miss in
 the games sometimes <strong>fumbles</strong> instead: the animation plays and nothing happens. Stamina cost and
-cooldown grow with a move's power, so a stronger move is a bigger hit per press, and a short
+cooldown grow with a move's power, so a stronger move is a bigger hit per click, and a short
 recovery follows every move.</p>
 <h2 id="damage">Damage<a class="headerlink" href="#damage" title="Permanent link">&para;</a></h2>
 <p>Damage follows the main series formula: level, power, Attack against Defense, the 85–100 % roll,
