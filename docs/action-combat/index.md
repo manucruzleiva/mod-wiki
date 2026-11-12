@@ -11,7 +11,7 @@ title: "Cobblemon Action Combat"
 # Cobblemon Action Combat
 
 Cobblemon's battles, played in real time. When a fight starts you **become your Pokémon**: you run
-it at its own Speed, cast its four moves on the number keys, dodge, raise Protect and lock onto your
+it at its own Speed, ready its four moves on the number keys and fire them with a click, dodge, raise Protect and lock onto your
 opponent, while your Trainer stays behind and backs you up with Poké Balls and items.
 
 <!-- mod-badges -->
@@ -26,12 +26,12 @@ opponent, while your Trainer stays behind and backs you up with Poké Balls and 
 
 !!! warning "Not released yet"
     Action Combat has no public download yet. These pages describe the current development build,
-    **0.1.43**, which has every feature planned for 1.0.0 and is being play-tested. Anything not
+    **0.1.44**, which has every feature planned for 1.0.0 and is being play-tested. Anything not
     described here is not in the mod yet.
 
 ## Highlights
 
-- 🎮 **[You drive the Pokémon](controls.md)**: WASD, jump and fly at its own Speed, moves on 1-4,
+- 🎮 **[You drive the Pokémon](controls.md)**: WASD, jump and fly at its own Speed, moves on 1-4 fired with the left click,
   Shift to dodge, right click for Protect, Z to lock on.
 - ⚔️ **[Every kind of fight](fights.md)**: wild Pokémon (and the ones that wander in), Cobblemon's
   NPC trainers, [Radical Cobblemon Trainers](fights.md#rct-trainers), and other players, in singles
