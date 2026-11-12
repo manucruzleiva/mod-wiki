@@ -32,7 +32,8 @@ flowchart TD
   it crosses (*Route 5: Coastal Road*, *Route 8: Marsh Crossing*), always the same for your seed.
 - **Clean tree clearing** — a road crossing a tree removes the whole trunk and canopy; no floating
   leaves, no item spam. Trees and huge mushrooms don't grow within a few blocks of the road's edge,
-  so no crown hangs over the road where you walk.
+  so no crown hangs over the road where you walk. Any leaves or branches a tree hangs into the 3 blocks
+  above a road, including the strip right at its edge, are trimmed away; the forest beside it is left.
 - **Water crossings** — always on the surface. A river gets a plank bridge with its pillars dropped to
   the riverbed, in one wood from end to end; a longer stretch stays an open lane of water to swim or
   sail, marked on both edges by natural rock markers, most of them lit, and the road meets it at the
@@ -47,7 +48,8 @@ flowchart TD
   four rises in a row are walked in slabs. Only a longer climb keeps a stair, where the slabs run out.
   Every one-block step gets a stair or a slab, on the ramps up to a bridge, into a tunnel and out of a
   town too; a bridge deck that rises one block takes a slab. A wall that is still two blocks or more
-  gets a ladder, whichever way you walk in.
+  gets a ladder, whichever way you walk in. Where a road reaches a bridge ramp half a block low, both
+  blocks are stairs, so there is no wall to jump.
 - **Roads made of what you choose** — the surface can be one material or a mix laid in rounded
   patches, with an optional share of worn blocks (cracked or mossy bricks, gravel in cobblestone, grass
   through a dirt path). Bridge decks and handrails are chosen the same way, one material per bridge and
@@ -60,7 +62,9 @@ flowchart TD
   **roundabout** around a lit pillar or an open **signed crossing** with fingerposts naming all four
   destinations. Roads that meet at different heights are an **overpass**: the upper one simply bridges
   over. A fork that lands inside a hill opens into a **chamber** where its tunnels meet, with its
-  signposts on the chamber floor beside the roads.
+  signposts on the chamber floor beside the roads. On a hillside the ground around a fork is levelled
+  for its signposts, and each road stays level across it and starts to climb at its edge. A road's
+  signpost is not put where another road runs.
 - **Rest stops** — every few hundred blocks, a small camp just off the road: a campfire with log
   seats, a lantern post and a sign. Now and then one keeps a **supply chest** from the last traveller —
   rarely, so finding one still means something. With [Cobblemon Picnic](../picnic/index.md) installed,
@@ -71,7 +75,8 @@ flowchart TD
   landmark — see [Which structures get roads](which-structures.md).
 - **Villages, towns and cities** — a settlement's real size decides how many roads leave it, so the
   network has quiet hamlets and busy hubs. A fork out of a big town stands past its last houses, never
-  among them. A structure tagged `routes:settlement/village`, `routes:settlement/town` or
+  among them. A road ends where a village really ends: a leftover scrap of road between two houses is
+  left as the village's own ground. A structure tagged `routes:settlement/village`, `routes:settlement/town` or
   `routes:settlement/city` gets that word after its name,
   so Pallet becomes *Pallet Town*. The cities of **Cobblemon Cities & Structures** (Pewter, Cerulean,
   Vermilion, Celadon, Fuchsia, Saffron, Cinnabar and Viridian, plus Lavender and Pallet when placed by
@@ -100,7 +105,9 @@ flowchart TD
   between them are the progress bar. Each step (surveying the towns around your spawn, generating the
   spawn chunks, building your spawn town) gets its share of the road by how long it really takes. The
   road's tip only moves while work actually finishes, the line under it counts tasks done, and it says
-  *no progress for N s* when nothing has finished for a while.
+  *no progress for N s* when nothing has finished for a while. Until you are in the world the survey
+  uses every processor core but one, and goes back to four once you are playing; the towns and roads
+  of a seed are the same either way.
 
 !!! tip "Tune it per world"
     How many roads, how they look, materials, lighting and more are all set from the **ROUTES**
