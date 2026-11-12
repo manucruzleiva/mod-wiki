@@ -33,6 +33,7 @@ Every feature has `enabled` plus its own settings, saved to the config file as s
 | `leash radius` | 32 | blocks your Pokémon may go from your Trainer |
 | `damage scale` | 25 | how hard hits land, in percent of the games' damage |
 | `pvp time_limit_seconds` | 0 (off) | the PvP clock |
+| `switch cooldown_seconds` | 15 (0 = off) | the wait between your own switches |
 | `npc switch_seconds` | 10 | the least time between an NPC's switches |
 | `gimmicks dynamax_seconds` | 20 | how long a Dynamax lasts |
 | `block_damage soft_power` / `stone_power` | 60 / 100 | the power to break soft blocks and stone |
