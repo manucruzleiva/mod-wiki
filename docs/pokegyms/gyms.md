@@ -221,7 +221,7 @@ Beat a player leader, keep the medal they gave you, and you can take their gym.
 
 Beating a player leader gives you a **Gym Medal**.
 
-- **One medal, for every gym.** It is a single generic item, with no art of its own per gym. It does not
+- **One medal, for every gym.** It is a single generic item, a gold-rimmed Poké Ball on a red and white ribbon, with no art of its own per gym. It does not
   show in the creative tab; a medal only comes from a win.
 - **It is signed.** Hover it to read the gym ("Pewter City Gym" for a City gym, otherwise "Gym at" its
   coordinates), "Leader:" with the name of the player you beat, and "Won on" with the date of the win.
