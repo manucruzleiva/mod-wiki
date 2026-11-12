@@ -26,8 +26,8 @@ inside its door: the one place where everything about that gym happens.
 
 !!! warning "Not released yet"
     PokeGyms has no public download yet. These pages describe the current development build,
-    **0.0.43**. What it does today is find the gyms, give each City gym an RCT leader you can fight, after its RCT disciples of the leader's type, let you challenge the leader of a player-held gym
-    (a loser pays its penalty into the gym's vault, a winner gets a signed medal, a Badge It badge if the gym has one, and a challenger waits before a rematch), scale every RCT trainer's team, leaders included, to your level (stage and moves too), let a leader invite up to three disciples who you fight in order before the leader, let the leader share the vault with them, let a player take a held gym over with its leader's medal, let a challenger call out the gym's next trainer from the Gym Manager, let a leader write what the gym's NPC says during a challenge, stage each leader battle at the gym's own spots, run their Gym Manager and tell other mods which battles are gym battles. Gym battle rules
+    **0.0.44**. What it does today is find the gyms, give each City gym an RCT leader you can fight, after its RCT disciples of the leader's type, let you challenge the leader of a player-held gym
+    (a loser pays its penalty into the gym's vault, a winner gets a signed medal, a Badge It badge if the gym has one, and a challenger waits before a rematch), scale every RCT trainer's team, leaders included, to your level (stage and moves too), let a leader invite up to three disciples who you fight in order before the leader, let the leader share the vault with them, let a player take a held gym over with its leader's medal, let a challenger call out the gym's next trainer from the Gym Manager, let a leader write what the gym's NPC says during a challenge, stage each leader battle at the gym's own spots, count the gym fights Cobblemon Action Combat runs in real time, run their Gym Manager and tell other mods which battles are gym battles. Gym battle rules
     are not in the mod yet, and nothing here describes them.
 
 ## Highlights
@@ -65,6 +65,8 @@ inside its door: the one place where everything about that gym happens.
   Pokémon, up or down, evolution stage included, so a battle is fair at any stage.
 - ⚔️ **[Gym battles, recognised](gyms.md#gym-battles)**: a battle against a trainer inside a gym
   counts as a gym battle, so other mods can reward it, such as Mid-Battle EXP's extra EXP in gyms.
+- ⚡ **[Real-time fights count](gyms.md#with-cobblemon-action-combat)**: with Cobblemon Action Combat installed, a gym
+  fight it runs in real time gives the same medal, vault share, badge, unlock or penalty as a turn-based one.
 - ⚙️ **[Tuned in game](commands.md)** with `/pokegyms config`, no restart needed.
 
 ## Get it
