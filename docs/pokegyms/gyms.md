@@ -168,6 +168,17 @@ A **leader** battle is staged at the gym, in singles and in doubles. It applies 
 - **A gym without those spots battles as before.** Gyms the server recorded before 0.0.43 have none, so Cobblemon places everything as it always did. A gym with only some of the spots uses those it has.
 - **Other mods' battle blocks never take it over.** Only PokeGyms' own leader battles are placed, matched by the battle itself, so a battle block of another mod nearby (such as Cobblemon Battle Positions) leaves a gym battle alone, and every other battle is left alone too.
 - **Operators can switch it off** with [`/pokegyms config staging enabled false`](commands.md#configuration): nobody is moved and Cobblemon places everything.
+- **Not in real-time fights.** A fight [Cobblemon Action Combat runs in real time](#with-cobblemon-action-combat) is not staged.
+
+## With Cobblemon Action Combat
+
+[Cobblemon Action Combat](../action-combat/index.md) is optional, on Fabric and on NeoForge. Without it nothing here applies.
+
+- **Real-time gym fights count.** When its NPC fights are real time, beating a player leader, a disciple or a City leader gives what a turn-based win gives: the medal, the [vault](vault.md#winners-share) share, the City badge and the [licence unlock](#unlocking-a-city-gym). A loss, a forfeit or running away costs the penalty.
+- **The trainer takes the next challenger** once the fight is over.
+- **PokeGyms has no switch for it.** Whether gym fights are real time follows Cobblemon Action Combat's own `/cac format`.
+- **Two things are turn-based only.** In real time there is no [battle staging](#where-the-battle-happens) and no last-Pokémon line from the leader (see [Leader dialogue](#leader-dialogue)); the challenge and after-battle lines still show.
+- **Operators can check it** in the log: `Cobblemon Action Combat found: real-time gym fights count like turn-based ones`.
 
 ## Rematch cooldown
 
