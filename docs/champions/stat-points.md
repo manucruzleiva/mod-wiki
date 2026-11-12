@@ -15,6 +15,8 @@ from whatever the Pokémon knocked out.
 
 A point is added to the stat **before the nature** is applied, so a nature that raises a stat raises
 the points in it too. HP takes its points as they are.
+Moving HP points keeps the Pokémon's current HP at the same share of its maximum (from version
+**2.1.2**): a full Pokémon stays full, a half-health one stays at half, a fainted one stays fainted.
 
 Because a point is always +1, the same 32 points add the same amount to a Pokémon at level 5 as at
 level 100.
