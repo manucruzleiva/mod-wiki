@@ -192,7 +192,7 @@ After you finish a challenge of a player leader, the same leader will not take y
   challenge again in 45 min". The time is rounded up to whole minutes.
 - **It lasts 60 minutes by default,** and survives a server restart. A gym whose licence ends and is
   bought again starts with nobody waiting.
-- **City leaders have no cooldown.** It applies only to player leaders, not to the City (RCT) leaders.
+- **City leaders have no cooldown.** It applies only to player leaders, not to the City (RCT) leaders; the [Champion](champion.md#rematch-and-the-trophy) is the one RCT trainer that uses it.
 - **Operators can change it** with [`/pokegyms config rematch`](commands.md#configuration): `cooldown_minutes`
   sets the wait (`0` means no wait), and `enabled` switches the whole cooldown off.
 
