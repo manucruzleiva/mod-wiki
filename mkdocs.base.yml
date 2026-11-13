@@ -265,7 +265,7 @@ extra:
       optional:
         - [mega-showdown, "Mega Evolution, Tera, Dynamax and Z-Moves in a real-time fight"]
         - [pokebelt, throwing Poké Balls mid-fight]
-        - [rct, "its trainers fight in real time, and a win still counts"]
+        - [rct, "its trainers fight in real time, and a win still counts; with tbcs, its win commands run too (0.1.49 or newer)"]
     poketrades:
       unreleased: true
       minecraft: "1.21.1"
