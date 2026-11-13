@@ -39,5 +39,6 @@ Every feature has `enabled` plus its own settings, saved to the config file as s
 | `camera shoulder_side` | `auto` | `right`, `left` or `auto` (the target's side) |
 | `switch cooldown_seconds` | 15 (0 = off) | the wait between your own switches |
 | `npc switch_seconds` | 10 | the least time between an NPC's switches |
+| `npc rct_win_commands` | on | run a Radical Cobblemon Trainers trainer's `winCommands` when a real-time fight against it ends (needs tbcs) |
 | `gimmicks dynamax_seconds` | 20 | how long a Dynamax lasts |
 | `block_damage soft_power` / `stone_power` | 60 / 100 | the power to break soft blocks and stone |
