@@ -33,6 +33,7 @@ flowchart TD
 | 🏥 **Whiteout** | Losing a battle sends you back to your **respawn point**: the last Pokémon Center you used, or your bed, or the world spawn without one. Running out of usable Pokémon anywhere is a Game Over. |
 | 📈 **Level cap** | Follows your trainer card. Catches above it go straight to the PC, and no wild Pokémon above it turns a hit into a battle. |
 | 🎒 **No bag in battle** | The battle bag is closed. A second mode blocks **only healing**, leaving X items legal — Poké Balls are never blocked. |
+| 🧗 **No Escape Rope in battle** | The [Escape Rope](#escape-rope) refuses to work mid-battle. Switch it off and the rope pulls you out of a fight. |
 
 ### ⚔️ In Action Combat fights
 
@@ -47,6 +48,7 @@ same rules as a turn-based battle. Without it nothing changes.
 | **Soul Link** | Shared deaths land once the fight is over. |
 | **No running** | With **No forfeit** on, holding the flee key does nothing but remind you there is no surrender. Switching to another Pokémon still works. Needs Action Combat 0.1.42 or newer. |
 | **Rope, bag and challenges** | In a fight the [Escape Rope](#escape-rope) refuses, bag healing on your Pokémon is blocked, and road trainers and aggressive wilds do not start a second battle with you. Needs Action Combat 0.1.48 or newer. |
+| **Action Combat = battle** | The rope and bag rules above apply in Action Combat fights while **Action Combat = battle** is on (the default). Switch it off and those two rules only apply in normal Cobblemon battles, so the rope and bag healing work in an Action Combat fight. Road trainers, aggressive wilds and Soul Link are not affected: they still see the fight, so no second battle opens on top of it. |
 
 !!! warning "Not yet"
     Defeated Catch opens no catch window in an Action Combat fight: knocking out the zone's encounter
@@ -175,7 +177,7 @@ See [Commands & Config](commands.md).
 
 -   ### 🧗 The Escape Rope
 
-    A one-tap trip back to your respawn point — and it will not fire mid-battle or mid-fight in Action Combat.
+    A one-tap trip back to your respawn point — and, by default, it will not fire mid-battle or mid-fight in Action Combat.
 
 </div>
 
@@ -196,11 +198,16 @@ Use it and you are whisked back to your **respawn point**, the same place a whit
 | | |
 | --- | --- |
 | **Where it sends you** | the last Pokémon Center you used, or your bed or respawn anchor; the world spawn if you have none |
-| **Restrictions** | Overworld only, never mid-battle or in an Action Combat fight, 10-second cooldown |
+| **Restrictions** | Overworld only, 10-second cooldown, and not mid-battle (or mid-fight in Action Combat) while **No Escape Rope in battle** is on, which is the default |
 | **Cost** | one rope per use, free in creative |
 
 On a Nuzlocke run, refusing to fire mid-battle is the whole point: a fight you started is a fight you
-finish.
+finish. Two settings change that, both on by default and both set live with `/nuzlocke set`:
+
+| Setting | Default | What it does |
+| --- | :---: | --- |
+| `disable_escape_rope_in_battle` | on | off = the rope works mid-battle and pulls you out of the fight |
+| `cac_fights_count_as_battles` | on | off = an Action Combat fight does not count as a battle for the rope and the no-bag rule, so both work in it. Cobblemon battles are unaffected |
 
 ### 🪢 Crafting
 
