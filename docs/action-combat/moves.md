@@ -35,9 +35,17 @@ seconds per Pokémon. It comes off the Pokémon's real HP.
 
 ## Secondary effects and status
 
-- **Stat stages** up to ±6, cleared when the Pokémon is recalled; **drain**, **recoil**,
+- **Stat stages** up to ±6, cleared when the Pokémon is recalled (0.1.50 and later: **accuracy and
+  evasion** count too, see below); **drain**, **recoil**,
   **multi-hit** (2-5 at the games' odds), **healing**, **recharge** (Hyper Beam stuns for 2 s) and
   **two-turn moves** (out of reach while flying or digging).
+- **Accuracy and evasion** (0.1.50 and later): Smokescreen, Sand Attack, Flash, Double Team, Minimize
+  and Hone Claws change something. A Pokémon whose accuracy was lowered fumbles more often (the puff,
+  half the Stamina back), even with moves that never miss otherwise; a target whose evasion rose
+  dodges some of the hits that reach it; an accuracy raise cuts fumbles and cancels the target's
+  evasion. The odds are Showdown's (one stage down: about 1 in 4 fail). Moves that never miss in the
+  games (Swift, Aerial Ace...) are not touched, and the stages clear when the Pokémon leaves the
+  field. `/cac config moves accuracy_stages off` turns it off (on by default).
 - **Burn, poison and paralysis** as Cobblemon's own status: burn and poison chip HP every 3 s, burn
   halves physical damage and drains Stamina, paralysis halves the pace and fails 25 % of moves.
 - **Sleep and freeze** hold the Pokémon still for about 5 and 6 seconds, and each press of a move key
