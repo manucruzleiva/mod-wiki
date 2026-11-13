@@ -69,6 +69,8 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | Healing sources | ALL | ALL / MACHINES_ONLY / ITEMS_ONLY / NONE |
 | No bag in battle | on | closes the battle bag |
 | Battle bag blocks | Everything | Everything, or **Healing only** — X items stay legal either way |
+| No Escape Rope in battle (`disable_escape_rope_in_battle`) | on | off = the Escape Rope works mid-battle |
+| Action Combat = battle (`cac_fights_count_as_battles`) | on | off = the rope and bag rules only apply in Cobblemon battles; Action Combat fights are free of them. Road trainers, aggressive wilds and Soul Link still see the fight |
 | Over cap to PC | on | over-cap catches are boxed (the cap itself comes from RCT) |
 | File the dead to the PC | on | a Pokémon that dies is moved out of your party. Your last one always stays |
 | Capture zones are | Geography | what counts as one place — the world Routes draws, the **biome** underfoot, or **both** as a pair |
