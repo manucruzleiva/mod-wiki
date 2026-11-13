@@ -956,7 +956,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="sfptxo0H" data-version="5.1.0">Documented against Cobblemon Picnic 5.1.0</p>
+    <p class="wiki-mod-version" data-modrinth="sfptxo0H" data-version="5.1.3">Documented against Cobblemon Picnic 5.1.3</p>
   
                   
 
@@ -1213,6 +1213,12 @@ standing from before 5.0.0 uses the <code>expert</code> values.</p>
 <td>Need a nearby table to wash. Off also shows the option on the wheel everywhere.</td>
 </tr>
 <tr>
+<td></td>
+<td><code>blockinbattle</code></td>
+<td>true/false</td>
+<td>Washing is <a href="../interactions-and-items/#not-during-a-battle">refused during a battle</a> (a Cobblemon battle or an Action Combat fight). <em>Default on.</em></td>
+</tr>
+<tr>
 <td><code>play</code></td>
 <td><code>enabled</code></td>
 <td>true/false</td>
@@ -1243,10 +1249,22 @@ standing from before 5.0.0 uses the <code>expert</code> values.</p>
 <td>Need a nearby table to play. Off also shows the option on the wheel everywhere.</td>
 </tr>
 <tr>
+<td></td>
+<td><code>blockinbattle</code></td>
+<td>true/false</td>
+<td>Playing and the Fetchball are <a href="../interactions-and-items/#not-during-a-battle">refused during a battle</a>. <em>Default on.</em></td>
+</tr>
+<tr>
 <td><code>battleseeker</code></td>
 <td><code>enabled</code></td>
 <td>true/false</td>
 <td>The <a href="../interactions-and-items/#combat-basket">Combat Basket</a> (it kept the name of the Battle Seeker it replaced). Off: a table with one summons no trainer. <em>Default on.</em></td>
+</tr>
+<tr>
+<td></td>
+<td><code>blockinbattle</code></td>
+<td>true/false</td>
+<td>The Combat Basket re-roll is <a href="../interactions-and-items/#combat-basket">refused while you are already in a battle</a>. <em>Default on.</em></td>
 </tr>
 <tr>
 <td></td>
@@ -1341,11 +1359,11 @@ on NeoForge via the <strong>Config</strong> button in the mods list. Its pages:<
 </tr>
 <tr>
 <td><strong>Interactions</strong></td>
-<td>Washing, playing fetch, and party move teaching (chance, and TM / tutor / egg moves)</td>
+<td>Washing, playing fetch (each with its "blocked in battle" switch), and party move teaching (chance, and TM / tutor / egg moves)</td>
 </tr>
 <tr>
 <td><strong>Baskets</strong></td>
-<td>The Combat Basket (switch, level match, level gap), the Alpha Basket (switch, chance, batch), the dimension hazards and REI colour grouping</td>
+<td>The Combat Basket (switch, blocked in battle, level match, level gap), the Alpha Basket (switch, chance, batch), the dimension hazards and REI colour grouping</td>
 </tr>
 <tr>
 <td><strong>Protection &amp; seating</strong></td>

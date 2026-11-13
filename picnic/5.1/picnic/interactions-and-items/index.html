@@ -629,6 +629,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#not-during-a-battle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Not during a battle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#one-pokemon-at-a-time" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -894,6 +905,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#not-during-a-battle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Not during a battle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#one-pokemon-at-a-time" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1022,7 +1044,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="sfptxo0H" data-version="5.1.0">Documented against Cobblemon Picnic 5.1.0</p>
+    <p class="wiki-mod-version" data-modrinth="sfptxo0H" data-version="5.1.3">Documented against Cobblemon Picnic 5.1.3</p>
   
                   
 
@@ -1060,6 +1082,15 @@ anywhere. On a server, the wheel follows the server's settings, not your own gam
 <p>Either one can be switched off outright with <code>/picnic config wash enabled false</code> or
 <code>/picnic config play enabled false</code>. The option leaves the wheel, and the Poke-sponge or the Fetchball
 does nothing either.</p>
+<h3 id="not-during-a-battle">Not during a battle<a class="headerlink" href="#not-during-a-battle" title="Permanent link">&para;</a></h3>
+<p>Washing, playing and throwing a Fetchball are <strong>refused while a battle is on</strong>: when that Pokémon is
+in a Cobblemon battle, or when <strong>you</strong> are in one or in a <strong>Cobblemon Action Combat</strong> fight. You are
+told "Your Pokémon can't do that during a battle." A Fetchball stays in your hand, no Pokémon picks
+one up while its owner fights, and a fetch already underway stops where it is (the ball stays on the
+ground). Action Combat (0.1.48 or later) is optional: without it only Cobblemon battles count.</p>
+<p>Operators can lift the block: <code>/picnic config wash blockinbattle false</code> and
+<code>/picnic config play blockinbattle false</code> (Play covers the Fetchball too). <em>Default on.</em> Off, that
+action works during a battle as it did before 5.1.1.</p>
 <h3 id="one-pokemon-at-a-time">One Pokémon at a time<a class="headerlink" href="#one-pokemon-at-a-time" title="Permanent link">&para;</a></h3>
 <p>Each option has a <strong>3-second cooldown, counted per Pokémon</strong> (<code>cooldown</code>, under
 <code>/picnic config wash</code> and <code>/picnic config play</code>). Look
@@ -1270,8 +1301,16 @@ of the item the Combat Basket replaced:</p>
 <td><code>/picnic config battleseeker enabled &lt;true\|false&gt;</code></td>
 <td>Off: a table with a Combat Basket summons nobody. <em>Default on.</em></td>
 </tr>
+<tr>
+<td><code>/picnic config battleseeker blockinbattle &lt;true\|false&gt;</code></td>
+<td>On: the re-roll is refused while you are already in a battle. <em>Default on.</em></td>
+</tr>
 </tbody>
 </table>
+<p><strong>No second fight on top of the first.</strong> While you are in a Cobblemon battle or a Cobblemon Action
+Combat fight (0.1.48 or later, optional), a Combat Basket table refuses the whole re-roll with "No
+trainer will come while you are already in a battle." and spends nothing. Switch it off with
+<code>battleseeker blockinbattle false</code>.</p>
 <p>⚠️ The summon needs <strong>Radical Cobblemon Trainers (RCT)</strong> installed. Without it the Combat Basket
 simply does nothing and the rest of the table works normally.</p>
 <p><strong>The Battle Seeker is gone.</strong> It no longer turns up in chests and no longer does anything. One left
