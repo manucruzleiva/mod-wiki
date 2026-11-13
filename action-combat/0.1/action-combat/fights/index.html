@@ -890,7 +890,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon Action Combat 0.1.48</p>
+    <p class="wiki-mod-version">Documented against Cobblemon Action Combat 0.1.49</p>
   
                   
 
@@ -952,10 +952,15 @@ RCT:</p>
 <li><strong>a win</strong> adds the trainer to your progress, moves the series on, raises your level cap and drops
   its loot;</li>
 <li><strong>a loss</strong> counts nothing and starts the trainer's cooldown;</li>
-<li><strong>a fight with no winner</strong> (you ran, walked away, the server stopped) frees the trainer again.</li>
+<li><strong>a fight with no winner</strong> (you ran, walked away, the server stopped) frees the trainer again;</li>
+<li><strong>the trainer's datapack <code>winCommands</code></strong> run when the fight ends (0.1.49 and later): the winning
+  side's list, the player's on a win and the trainer's on a loss, after the rewards above. Nothing
+  runs for a fight with no winner. RCT hands these commands to Cobblemon Trainer Battle Commands
+  (tbcs), so tbcs must be installed for them to work at all, in a normal battle too; without it
+  nothing runs. <code>/cac config npc rct_win_commands off</code> turns it off (on by default).</li>
 </ul>
-<p>The trainer's datapack win commands are not run in a real-time fight. If a future RCT version
-changes what Action Combat calls, the server log says so once and RCT battles go back to turn-based.</p>
+<p>If a future RCT or tbcs version changes what Action Combat calls, the server log says so once: RCT
+battles go back to turn-based, or just the win commands stop running.</p>
 <h2 id="player-against-player">Player against player<a class="headerlink" href="#player-against-player" title="Permanent link">&para;</a></h2>
 <p>Both players drive their Pokémon. With <code>/cac config pvp time_limit_seconds</code> above 0 the fight ends
 at the limit: the side with more Pokémon standing wins, then the one with more HP left, and a full
