@@ -73,6 +73,8 @@ above may buy it (see [Licences](licences.md)).
   outside PokeGyms' own fight unlocks nothing.
 - **The leader steps aside while the gym is held.** When the winner buys the licence, the RCT leader
   leaves the gym and takes no challenge.
+- **Not while the leader is battling.** Buying a City gym is refused with a message while a challenger is battling its
+  City leader; try again when the battle ends.
 - **When the licence ends, the leader returns.** Renouncing or expiring puts the leader back and locks
   the gym again for everyone, the former holder included: they must beat the leader anew.
 - **Your win is remembered** even if licences are switched off, so it still counts when they are
@@ -87,7 +89,9 @@ leader) can register their party as the gym's team. The gym then has a leader of
   Singles takes 1 Pokémon from your party, doubles takes 2. Only the holder sees the tab, and the
   server checks it again when you press the button.
 - **The gym keeps a frozen copy.** The Pokémon are copied, healed, and the copy does not follow yours:
-  you keep your own Pokémon and can train, trade or lose them. Registering again replaces the copy.
+  you keep your own Pokémon and can train, trade or lose them. Registering again replaces the copy, so it is
+  refused with a message while a challenger is battling the leader (in a Cobblemon battle or a Cobblemon Action Combat
+  fight); register again when the battle ends.
 - **Everyone sees the team.** The gym team panel on the Gym Manager's side lists the registered
   Pokémon by name and level.
 - **A leader NPC stands for it.** `Gym Leader <player>` stands at the gym's leader spot, wearing the
@@ -96,7 +100,8 @@ leader) can register their party as the gym's team. The gym then has a leader of
   time its chunk loads.
 - **It leaves when the licence ends.** Renouncing or expiring removes the team, the NPC and the gym's [disciples](#disciples). In a City
   gym, the RCT leader returns at the same time (see [Unlocking a City gym](#unlocking-a-city-gym)).
-  An NPC whose chunk was unloaded when the licence ended is removed the next time that chunk loads.
+  An NPC whose chunk was unloaded when the licence ended is removed the next time that chunk loads. An NPC a challenger is
+  fighting when the licence ends (it expired, or was taken over) stays standing until the battle is over.
 - **Operators can close registration** with
   [`/pokegyms config leader`](commands.md#configuration). Off, nobody can register or replace a team;
   teams already registered stay, with their leader.
@@ -364,7 +369,8 @@ as trainers.
 - **One gym at a time.** A player is the disciple of a single gym on the server. It needs no
   [licence](licences.md), so a disciple may hold one at another gym.
 - **The leader removes a disciple** with a shift-click on their row in the holder's Disciples tab; the NPC goes.
-  When the leader's licence ends, every disciple goes with it.
+  When the leader's licence ends, every disciple goes with it. While a challenger is battling a disciple, the leader cannot
+  remove them and the disciple cannot register their team again; both are refused with a message until the battle ends.
 - **The leader can share the vault with them.** Each disciple's row shows their share of the gym's
   [vault](vault.md#splitting-the-vault) (`Name 25%`), a click on it gives them 5% more, and a **Leader** row shows what
   the leader keeps. A withdrawal, or the end of the licence, pays everyone their share.
