@@ -1096,7 +1096,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="wHlszYZN" data-version="1.5.68">Documented against Cobblemon Nuzlocke & Soul Link 1.5.68</p>
+    <p class="wiki-mod-version" data-modrinth="wHlszYZN" data-version="1.5.69">Documented against Cobblemon Nuzlocke & Soul Link 1.5.69</p>
   
                   
 
@@ -1178,6 +1178,10 @@ ruleset is on, the world is set to <strong>Hard</strong> every time it starts.</
 <td>🎒 <strong>No bag in battle</strong></td>
 <td>The battle bag is closed. A second mode blocks <strong>only healing</strong>, leaving X items legal — Poké Balls are never blocked.</td>
 </tr>
+<tr>
+<td>🧗 <strong>No Escape Rope in battle</strong></td>
+<td>The <a href="#escape-rope">Escape Rope</a> refuses to work mid-battle. Switch it off and the rope pulls you out of a fight.</td>
+</tr>
 </tbody>
 </table>
 <h3 id="in-action-combat-fights">⚔️ In Action Combat fights<a class="headerlink" href="#in-action-combat-fights" title="Permanent link">&para;</a></h3>
@@ -1214,6 +1218,10 @@ same rules as a turn-based battle. Without it nothing changes.</p>
 <tr>
 <td><strong>Rope, bag and challenges</strong></td>
 <td>In a fight the <a href="#escape-rope">Escape Rope</a> refuses, bag healing on your Pokémon is blocked, and road trainers and aggressive wilds do not start a second battle with you. Needs Action Combat 0.1.48 or newer.</td>
+</tr>
+<tr>
+<td><strong>Action Combat = battle</strong></td>
+<td>The rope and bag rules above apply in Action Combat fights while <strong>Action Combat = battle</strong> is on (the default). Switch it off and those two rules only apply in normal Cobblemon battles, so the rope and bag healing work in an Action Combat fight. Road trainers, aggressive wilds and Soul Link are not affected: they still see the fight, so no second battle opens on top of it.</td>
 </tr>
 </tbody>
 </table>
@@ -1366,7 +1374,7 @@ a run carries a ☠ tally of them in its name — and so does every other traine
 </li>
 <li>
 <h3 id="the-escape-rope">🧗 The Escape Rope<a class="headerlink" href="#the-escape-rope" title="Permanent link">&para;</a></h3>
-<p>A one-tap trip back to your respawn point — and it will not fire mid-battle or mid-fight in Action Combat.</p>
+<p>A one-tap trip back to your respawn point — and, by default, it will not fire mid-battle or mid-fight in Action Combat.</p>
 </li>
 </ul>
 </div>
@@ -1398,7 +1406,7 @@ every trainer on the road. Worlds already played keep what is standing there.</p
 </tr>
 <tr>
 <td><strong>Restrictions</strong></td>
-<td>Overworld only, never mid-battle or in an Action Combat fight, 10-second cooldown</td>
+<td>Overworld only, 10-second cooldown, and not mid-battle (or mid-fight in Action Combat) while <strong>No Escape Rope in battle</strong> is on, which is the default</td>
 </tr>
 <tr>
 <td><strong>Cost</strong></td>
@@ -1407,7 +1415,28 @@ every trainer on the road. Worlds already played keep what is standing there.</p
 </tbody>
 </table>
 <p>On a Nuzlocke run, refusing to fire mid-battle is the whole point: a fight you started is a fight you
-finish.</p>
+finish. Two settings change that, both on by default and both set live with <code>/nuzlocke set</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th style="text-align: center;">Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>disable_escape_rope_in_battle</code></td>
+<td style="text-align: center;">on</td>
+<td>off = the rope works mid-battle and pulls you out of the fight</td>
+</tr>
+<tr>
+<td><code>cac_fights_count_as_battles</code></td>
+<td style="text-align: center;">on</td>
+<td>off = an Action Combat fight does not count as a battle for the rope and the no-bag rule, so both work in it. Cobblemon battles are unaffected</td>
+</tr>
+</tbody>
+</table>
 <h3 id="crafting">🪢 Crafting<a class="headerlink" href="#crafting" title="Permanent link">&para;</a></h3>
 <p>A <strong>shapeless</strong> recipe — the arrangement in the grid does not matter, the ingredients just have to be
 in the table together. One craft makes <strong>two</strong>.</p>
