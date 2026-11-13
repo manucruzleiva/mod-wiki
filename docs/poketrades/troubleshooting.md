@@ -30,7 +30,8 @@ The server switched `pc_selection` off: asks are met from the party only.
 
 ## The trade was refused
 
-The server checks everything again when you press **Trade**. It refuses when you are in a battle, the
+The server checks everything again when you press **Trade**. It refuses when you are in a battle (a Cobblemon battle or, with Action Combat 0.1.48 or newer, one of
+its real-time fights: trade once it is over), the
 Pokémon is tethered to a pasture, you walked more than 8 blocks from the trader, or another player
 just claimed that once-per-server offer. Nothing changes hands when a trade is refused.
 
