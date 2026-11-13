@@ -647,6 +647,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#soul-link-one-storage-for-the-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soul Link: one storage for the team
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#switching-it-off" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -795,6 +806,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#soul-link-one-storage-for-the-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soul Link: one storage for the team
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#switching-it-off" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -818,7 +840,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon Trainer's Satchel 0.0.14</p>
+    <p class="wiki-mod-version">Documented against Cobblemon Trainer's Satchel 0.0.16</p>
   
                   
 
@@ -871,6 +893,20 @@ exact number in the tooltip), with pages when a section holds more than 42 kinds
 </table>
 <p>It is saved with the world, so it survives a restart, and it closes when you walk away from the PC.
 The cells are a view of the storage, never real slots, so no more than a stack leaves at a time.</p>
+<h2 id="soul-link-one-storage-for-the-team">Soul Link: one storage for the team<a class="headerlink" href="#soul-link-one-storage-for-the-team" title="Permanent link">&para;</a></h2>
+<p>With <a href="https://manucruzleiva.github.io/mod-wiki/nuzlocke/latest/nuzlocke/">Cobblemon Nuzlocke</a> installed, players in one Soul Link share <strong>one</strong> item
+storage at every PC, titled <strong>Soul Link Storage</strong>.</p>
+<ul>
+<li><strong>Signing the link</strong> pours everyone's storage into the shared one, with the counts added. A player who
+  joins the link later brings theirs.</li>
+<li><strong>What one stores, the others see at once</strong>, even with the storage open at the same time.</li>
+<li><strong>A player who leaves the link</strong> (restarting their run) starts with an empty storage; the rest keep the
+  shared one.</li>
+<li><strong>When the link ends</strong>, the last member keeps the shared storage as their own.</li>
+</ul>
+<p>Without the Nuzlocke nothing changes: everyone has their own storage.</p>
+<p><code>/satchel config pc_storage soul_link_shared false</code> turns the sharing off: each player sees only their
+own storage, and the shared one waits untouched until it is switched back on.</p>
 <h2 id="switching-it-off">Switching it off<a class="headerlink" href="#switching-it-off" title="Permanent link">&para;</a></h2>
 <p><code>/satchel config pc_storage enabled false</code> removes the question: the PC opens straight to Cobblemon's
 PC. What is stored stays.</p>
