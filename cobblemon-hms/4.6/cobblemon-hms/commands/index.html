@@ -970,7 +970,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="JNfSyMuQ" data-version="4.6.3">Documented against Cobblemon HMs 4.6.3</p>
+    <p class="wiki-mod-version" data-modrinth="JNfSyMuQ" data-version="4.6.4">Documented against Cobblemon HMs 4.6.4</p>
   
                   
 
@@ -1025,6 +1025,7 @@ Summons a Trainer Ditto on demand, or wipes the slate for a player: it forgets t
 /hms config &lt;ability&gt; power &lt;value&gt;          only HMs that read it, in that HM's range
 /hms config &lt;ability&gt; minlevel &lt;0–100&gt;
 /hms config &lt;ability&gt; enabled &lt;true|false&gt;
+/hms config &lt;ability&gt; battleblock &lt;true|false&gt;   Refuse in battle (only the seven HMs that refuse)
 /hms config &lt;ability&gt; fullness &lt;0–700|default&gt;   that HM's upkeep, in hundredths of fullness
 /hms config &lt;ability&gt; friendship &lt;0–255|default&gt; friendship it costs per missing fullness point
 /hms config &lt;ability&gt; reset
@@ -1051,6 +1052,10 @@ Summons a Trainer Ditto on demand, or wipes the slate for a player: it forgets t
 /hms config trader cobbledollars &lt;true|false&gt;  charge CobbleDollars (needs the mod)
 /hms config trader reload                    re-read trader_offers.json
 </code></pre></div>
+<p><code>battleblock</code> only exists for <strong>Teleport, Growth, Minimize, Decorate, Camouflage, Outrage and
+Calm Mind</strong>, the HMs that <a href="../abilities/active/">refuse during a battle</a>. <code>true</code> (the default) keeps
+the refusal; <code>false</code> lets that HM work mid-battle as it does outside one. <code>/hms config &lt;ability&gt;</code>
+shows it next to the defaults.</p>
 <p>Every value and its range is in <a href="../configuration/">Configuration</a>. The same settings are in the
 config screen on Fabric and NeoForge.</p>
 <div class="admonition tip">

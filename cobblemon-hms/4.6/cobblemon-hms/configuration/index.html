@@ -1182,7 +1182,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="JNfSyMuQ" data-version="4.6.3">Documented against Cobblemon HMs 4.6.3</p>
+    <p class="wiki-mod-version" data-modrinth="JNfSyMuQ" data-version="4.6.4">Documented against Cobblemon HMs 4.6.4</p>
   
                   
 
@@ -1563,12 +1563,22 @@ has caught one <strong>or beaten one in battle</strong>, so bring a friend who h
 <td>What it means depends on the HM: a radius, a duration, a speed in tenths. The menu's tooltip and the command say which</td>
 </tr>
 <tr>
+<td><strong>Refuse in battle</strong></td>
+<td>Teleport, Growth, Minimize, Decorate, Camouflage, Outrage, Calm Mind</td>
+<td>On <em>(default)</em>: the HM refuses during a Cobblemon battle or a Cobblemon Action Combat fight. Off: it works mid-battle as it does outside one. The other HMs have no such setting</td>
+</tr>
+<tr>
 <td><strong>Fullness</strong> / <strong>Friendship</strong></td>
 <td>all</td>
 <td>That HM's own upkeep; see <a href="#upkeep-for-each-hm">Upkeep for each HM</a></td>
 </tr>
 </tbody>
 </table>
+<div class="highlight"><pre><span></span><code>/hms config &lt;ability&gt; battleblock &lt;true|false&gt;
+</code></pre></div>
+<p>In the config file it is <code>blockInBattle</code> inside that HM's block, as <code>1</code> (refuses, the default) or
+<code>0</code>. It is only written for the seven HMs that have it. In the config screen it is the
+<strong>Refuse in battle</strong> switch on that HM's page.</p>
 <p>Auras and mount toggles have no cooldown: they are simply on. Nothing costs the player hunger: the
 Pokémon pays in fullness. The cooldown belongs to the Pokémon that lent the move, so a second
 Pokémon with the same move is ready straight away.</p>
@@ -1602,11 +1612,12 @@ there.</p>
 /hms config &lt;ability&gt; power &lt;value&gt;
 /hms config &lt;ability&gt; minlevel &lt;0–100&gt;
 /hms config &lt;ability&gt; enabled &lt;true|false&gt;
+/hms config &lt;ability&gt; battleblock &lt;true|false&gt;
 /hms config &lt;ability&gt; reset
 /hms config reset_all
 </code></pre></div>
 <p><code>cooldown</code> and <code>power</code> only exist for an HM that reads them, and each takes the range in the
-tables below. The full list is in <a href="../commands/">Commands</a>.</p>
+tables below. <code>battleblock</code> only exists for the seven HMs that refuse in battle. The full list is in <a href="../commands/">Commands</a>.</p>
 <hr />
 <h2 id="config-file">Config file<a class="headerlink" href="#config-file" title="Permanent link">&para;</a></h2>
 <p>The file is saved at <code>config/cobblemon_hms.json</code> on both loaders.</p>
