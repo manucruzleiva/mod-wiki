@@ -125,6 +125,18 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 | Build bridges | on | off, a river becomes an open water lane and a dry gap is followed on the ground |
 | Bridges run straight across | on | a bridge over water runs straight from bank to bank however much the road winds; off, the crossing weaves with the road. A bridge over a dry gap weaves either way |
 | Water crossing width | 10 | the marked lane across a lake or sea. Its own number, not a multiple of the road: open water reads much wider than it is |
+| Steps at tunnel mouths | on | the ramp out of a tunnel starts with a stair off the tunnel floor, never a step of a block and a half |
+| Tunnels surface before a town | on | a road that would reach a town inside a tunnel comes up before the first building and enters on the surface, by the street, with its welcome sign. The ground under a town is never dug. Roads that already arrive on the surface keep their shape. **Fixed per world** |
+| Smooth diagonal road steps | on | a road climbing on the diagonal gets no step of a block and a half at its corners: that column is lifted half a block, unless it would leave a step of more than a block on its other side |
+| Smooth fork edges | on | a road leaves a fork's levelled ground without a wall at its edge, and no paving or slab is left hanging over air beside it |
+| Roads sharing ground agree on its height | on | where roads run together into a fork, over the same strip or side by side, that ground is laid at the lowest of their heights and a road beside another comes down to meet it by half a block per block, so there are no walls between them. Off, each road keeps its own height and the last one drawn wins |
+| No road scraps inside towns | on | a road starts after the last building or street of the town it leaves, however far apart two of them are. Off, only gaps of up to ten blocks are left to the town, so a longer one can keep a short piece of road ending in a wall |
+| Enter CCS towns by their streets | on | a road into a town of [Cobblemon Cities & Structures](https://modrinth.com/mod/cobblemon-cities-structures) joins the end of a street the town left open, the one facing the road, and not the side of a street or an empty house lot. Does nothing in vanilla villages, in other town packs, or without that mod |
+
+The six look-and-fit options in that list (everything from **Steps at tunnel mouths** down, except
+**Tunnels surface before a town**) only change **chunks generated from now on**: roads already in your world
+keep their blocks, and the planned routes do not move. **Tunnels surface before a town** reshapes the
+planned road, so it follows the rule below for settings that shape the network.
 
 ### Landmarks
 
@@ -140,7 +152,7 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 
 | Option | Default | Notes |
 | --- | --- | --- |
-| Start in a town | on | move a new world's spawn into the nearest town; off leaves the vanilla wilderness spawn |
+| Start in a town | on | move a new world's spawn into the nearest town; off leaves the vanilla wilderness spawn. Only a world being created does this: a world you already had keeps its spawn when Routes arrives (`/routes debug spawn` moves it by hand) |
 | Prepare the land around spawn | 512 | chunks built in the background the first time you enter, so the roads and towns around spawn are already built when you walk out. The default reaches the spawn town and its first road, about 200 blocks. 0 = off |
 
 ### Advanced
@@ -182,7 +194,8 @@ towns**, the **league** and the Nuzlocke rules belong to
 
     The settings that **shape the road network** stay at the value the world was created with: roads
     per town, longest road, ring roads, bigger towns get more roads, the towns & landmarks list, road
-    width, how much roads wind, picnic stops, steepest climb, bridges run straight across, the three
+    width, how much roads wind, picnic stops, steepest climb, bridges run straight across, tunnels
+    surface before a town, the three
     landmark-path settings (go around, pass by, how far), and in Advanced every surface structure gets
     roads, Routes' structure list, town ids only, check towns and the town and city sizes.
     Changing one mid-world would give the land generated afterwards a second network whose roads stop

@@ -49,7 +49,8 @@ flowchart TD
   Every one-block step gets a stair or a slab, on the ramps up to a bridge, into a tunnel and out of a
   town too; a bridge deck that rises one block takes a slab. A wall that is still two blocks or more
   gets a ladder, whichever way you walk in. Where a road reaches a bridge ramp half a block low, both
-  blocks are stairs, so there is no wall to jump.
+  blocks are stairs, so there is no wall to jump. The ramp out of a tunnel starts with a stair off the
+  tunnel floor, and a road climbing on the diagonal has no corner a block and a half high.
 - **Roads made of what you choose** — the surface can be one material or a mix laid in rounded
   patches, with an optional share of worn blocks (cracked or mossy bricks, gravel in cobblestone, grass
   through a dirt path). Bridge decks and handrails are chosen the same way, one material per bridge and
@@ -63,7 +64,9 @@ flowchart TD
   destinations. Roads that meet at different heights are an **overpass**: the upper one simply bridges
   over. A fork that lands inside a hill opens into a **chamber** where its tunnels meet, with its
   signposts on the chamber floor beside the roads. On a hillside the ground around a fork is levelled
-  for its signposts, and each road stays level across it and starts to climb at its edge. A road's
+  for its signposts, and each road stays level across it and starts to climb at its edge, with no wall
+  at the rim and no paving left over air beside it. Roads that run together into a fork share the same
+  ground at one height, the lowest of theirs, with no steps between one road and the next. A road's
   signpost is not put where another road runs.
 - **Rest stops** — every few hundred blocks, a small camp just off the road: a campfire with log
   seats, a lantern post and a sign. Now and then one keeps a **supply chest** from the last traveller —
@@ -75,12 +78,14 @@ flowchart TD
   landmark — see [Which structures get roads](which-structures.md).
 - **Villages, towns and cities** — a settlement's real size decides how many roads leave it, so the
   network has quiet hamlets and busy hubs. A fork out of a big town stands past its last houses, never
-  among them. A road ends where a village really ends: a leftover scrap of road between two houses is
-  left as the village's own ground. A structure tagged `routes:settlement/village`, `routes:settlement/town` or
+  among them. A road ends where a village really ends: a leftover scrap of road between two houses or
+  streets is left as the village's own ground, however far apart they are. A road that would reach a
+  town inside a tunnel comes up to the surface before the first building and enters by the street. A structure tagged `routes:settlement/village`, `routes:settlement/town` or
   `routes:settlement/city` gets that word after its name,
   so Pallet becomes *Pallet Town*. The cities of **Cobblemon Cities & Structures** (Pewter, Cerulean,
   Vermilion, Celadon, Fuchsia, Saffron, Cinnabar and Viridian, plus Lavender and Pallet when placed by
-  hand) are towns of the network too.
+  hand) are towns of the network too: a road joins the end of a street those towns left open, the one
+  facing it, and Routes still works without that mod.
 - **Underground towns** — any structure can be set as an *Underground town* in
   [Which structures get roads](which-structures.md). Its road ends at the surface, and right beside the
   end a stone-brick **spiral stairway** goes down to the town: slab half-steps, a landing every 8 blocks
