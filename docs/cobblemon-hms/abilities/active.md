@@ -22,6 +22,14 @@ their own.
 
 <p class="flow__note">If any check fails, nothing happens.</p>
 
+!!! note "Not during a battle"
+    **Teleport, Growth, Minimize, Decorate and Camouflage** refuse while you are in a battle and say
+    so: "✖ &lt;HM&gt; — you can't use it during a battle." That covers Cobblemon battles (wild or
+    trainer) and, with Cobblemon Action Combat 0.1.48 or later
+    installed, its real-time fights. Action Combat stays optional. Outrage and Calm Mind follow the
+    same rule. An already-active Growth, Minimize or Camouflage can still be switched off in combat.
+    Auras, weather and mount toggles are unchanged.
+
 ---
 
 ## Who can lend it
@@ -304,7 +312,7 @@ you go half-size for a while.
 
 Aim at an **XL** Pokémon of **yours** to turn it into an **Alpha**. Anything smaller, it refuses.
 It never works on a wild Pokémon or someone else's, nor on one that is battling, fainted or busy
-(evolving, for instance).
+(evolving, for instance), nor while you are in a Cobblemon Action Combat fight.
 
 ---
 
@@ -313,7 +321,7 @@ It never works on a wild Pokémon or someone else's, nor on one that is battling
 
 Aim at an **Alpha** of yours to settle it back into the ordinary Pokémon it was, at the size it had
 underneath. The way back out of Outrage, with the same rules: your own Pokémon only, and not while
-it is battling, fainted or busy.
+it is battling, fainted or busy, or while you are in a Cobblemon Action Combat fight.
 
 An Alpha that is **not XL** underneath could never be made one again, so Calm Mind asks first: use
 it on the same Pokémon a second time within 5 seconds to settle it for good.
