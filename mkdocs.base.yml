@@ -118,7 +118,7 @@ extra:
     poketrades:     { name: Cobblemon PokeTrades,           version: 0.0.26, repo: cobblemon-poketrades }
     pokegyms:       { name: Cobblemon PokeGyms,             version: 0.0.48, repo: cobblemon-pokegyms }
     defeated-catch-chance: { name: Cobblemon Defeated Catch Chance, version: 0.0.1, repo: cobblemon-defeated-catch-chance }
-    trainers-satchel: { name: Cobblemon Trainer's Satchel, version: 0.0.14, repo: cobblemon-trainers-satchel }
+    trainers-satchel: { name: Cobblemon Trainer's Satchel, version: 0.0.16, repo: cobblemon-trainers-satchel }
   # La ficha tecnica de cada mod: lo que dice su jar publicado (fabric.mod.json y neoforge.mods.toml
   # del tag del ultimo release), no lo que se recuerda. De aca salen, por hooks/mod_specs.py, las
   # insignias del hero de cada index, la tabla "Get it" de cada index, y en la portada los chips de
@@ -159,6 +159,7 @@ extra:
     ccs:            { name: Cobblemon Cities & Structures, modrinth: cobblemon-cities-structures }
     action-combat:  { name: Cobblemon Action Combat,     page: action-combat/index.md }
     pokegyms:       { name: Cobblemon PokeGyms,          page: pokegyms/index.md }
+    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, page: nuzlocke/index.md }
     impactor:       { name: Impactor,                    modrinth: impactor }
     badgeit:        { name: Badge It,                    modrinth: badgeit }
     pkgbadges:      { name: PKGBadges,                   modrinth: pkgbadges }
@@ -307,6 +308,7 @@ extra:
       optional:
         - [pokebelt, "when you throw the belt's last ball of a kind, the satchel refills it (Fabric only)"]
         - [action-combat, "its real-time fights close the battle pockets and its throws refill from the satchel"]
+        - [nuzlocke, "players in one Soul Link share one PC item storage"]
   # Como se encuentran los sitios separados entre si. Cada config de mod o de landing declara
   # `wiki_site` (la carpeta del mod, o `landing`). Lo leen hooks/cross_site_links.py, que reescribe
   # los links que salen del sitio, overrides/partials/tabs.html, que arma el menu de secciones, y

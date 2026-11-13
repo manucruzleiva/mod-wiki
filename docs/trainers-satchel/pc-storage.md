@@ -25,6 +25,23 @@ exact number in the tooltip), with pages when a section holds more than 42 kinds
 It is saved with the world, so it survives a restart, and it closes when you walk away from the PC.
 The cells are a view of the storage, never real slots, so no more than a stack leaves at a time.
 
+## Soul Link: one storage for the team
+
+With [Cobblemon Nuzlocke](../nuzlocke/index.md) installed, players in one Soul Link share **one** item
+storage at every PC, titled **Soul Link Storage**.
+
+- **Signing the link** pours everyone's storage into the shared one, with the counts added. A player who
+  joins the link later brings theirs.
+- **What one stores, the others see at once**, even with the storage open at the same time.
+- **A player who leaves the link** (restarting their run) starts with an empty storage; the rest keep the
+  shared one.
+- **When the link ends**, the last member keeps the shared storage as their own.
+
+Without the Nuzlocke nothing changes: everyone has their own storage.
+
+`/satchel config pc_storage soul_link_shared false` turns the sharing off: each player sees only their
+own storage, and the shared one waits untouched until it is switched back on.
+
 ## Switching it off
 
 `/satchel config pc_storage enabled false` removes the question: the PC opens straight to Cobblemon's

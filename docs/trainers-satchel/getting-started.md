@@ -18,7 +18,9 @@ The Trainer's Satchel targets **Minecraft 1.21.1** on **Fabric** and **NeoForge*
 Optional: [PokeBelt](https://modrinth.com/mod/pokebelt-cobblemon) (Fabric only), so the satchel can
 [refill the belt's balls](in-the-field.md#pokebelt-refill), and
 [Cobblemon Action Combat](../action-combat/index.md), whose real-time fights the
-[battle lock](in-the-field.md#in-a-battle) follows too.
+[battle lock](in-the-field.md#in-a-battle) follows too. With
+[Cobblemon Nuzlocke](../nuzlocke/index.md), players in one Soul Link
+[share their PC item storage](pc-storage.md#soul-link-one-storage-for-the-team).
 
 With an older version of a required mod the game refuses to start and names the mod and the version
 it needs.
