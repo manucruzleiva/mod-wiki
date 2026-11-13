@@ -64,10 +64,15 @@ RCT:
 - **a win** adds the trainer to your progress, moves the series on, raises your level cap and drops
   its loot;
 - **a loss** counts nothing and starts the trainer's cooldown;
-- **a fight with no winner** (you ran, walked away, the server stopped) frees the trainer again.
+- **a fight with no winner** (you ran, walked away, the server stopped) frees the trainer again;
+- **the trainer's datapack `winCommands`** run when the fight ends (0.1.49 and later): the winning
+  side's list, the player's on a win and the trainer's on a loss, after the rewards above. Nothing
+  runs for a fight with no winner. RCT hands these commands to Cobblemon Trainer Battle Commands
+  (tbcs), so tbcs must be installed for them to work at all, in a normal battle too; without it
+  nothing runs. `/cac config npc rct_win_commands off` turns it off (on by default).
 
-The trainer's datapack win commands are not run in a real-time fight. If a future RCT version
-changes what Action Combat calls, the server log says so once and RCT battles go back to turn-based.
+If a future RCT or tbcs version changes what Action Combat calls, the server log says so once: RCT
+battles go back to turn-based, or just the win commands stop running.
 
 ## Player against player
 
