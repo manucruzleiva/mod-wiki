@@ -72,6 +72,7 @@ Typing a group name and pressing **Tab** suggests its settings.
 | `currency` | `item` | an item id or `#namespace:tag` | `cobblemon:relic_coin` | The item taken, one per unit, when `money` is `ITEM`. In the file this is `costItem`. |
 | `trainer` | `required` | `AUTO` / `ON` / `OFF` | `OFF` | Whether changes are bought only at a [Champions Trainer](champions-trainer.md). `AUTO` means only where Cobblemon Cities & Structures is installed (before 2.1.0, PokeTowns). A config written before 2.0.0 may still say `AUTO`. |
 | `trainer` | `inCenters` | `true` / `false` | `true` | Places a trainer in every Cobblemon Cities & Structures Pokémon Center the first time it loads (from 2.1.0). Does nothing without Cities & Structures. |
+| `trainer` | `blockInBattle` | `true` / `false` | `true` | Whether every training purchase is refused while you are in a Cobblemon battle or a [Cobblemon Action Combat](../action-combat/index.md) fight (from 2.4.0). Off: you can train mid-battle. The battle already running keeps the team it started with, so the change counts from the next battle. On the config screen it is **No training in battle**. |
 
 For example, to charge for moves and make egg moves steeper:
 
@@ -122,7 +123,8 @@ mods list. Each setting has a tooltip.
   "impactorCurrency": "impactor:dollars",
   "costItem": "cobblemon:relic_coin",
   "trainerRequired": "AUTO",
-  "trainerInCenters": true
+  "trainerInCenters": true,
+  "blockInBattle": true
 }
 ```
 

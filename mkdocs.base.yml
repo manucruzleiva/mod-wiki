@@ -109,7 +109,7 @@ extra:
     picnic:         { name: Cobblemon Picnic,               version: 5.1.0, modrinth: sfptxo0H, repo: cobblemon-picnic }
     cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.6.3, modrinth: JNfSyMuQ, repo: cobblemon-hms }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.1.0, modrinth: S01tPZTk, repo: cobblemon-raid-icons }
-    champions:      { name: Cobblemon Champions Training,   version: 2.3.1, modrinth: PlTQXswh, repo: cobblemon-champions-training }
+    champions:      { name: Cobblemon Champions Training,   version: 2.4.0, modrinth: PlTQXswh, repo: cobblemon-champions-training }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr, repo: tree-carve }
     mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.3.0, modrinth: ShgrcSQY, repo: cobblemon-mid-battle-exp }
     # PokeTowns esta discontinuado: queda solo su pagina de aviso, y sin modrinth ni repo no se vigila.

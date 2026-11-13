@@ -68,6 +68,13 @@ everything, but you can't change it:
 A Pokémon that is not in training (below 31 in every IV) is untouched: its summary and its moves
 are plain Cobblemon everywhere.
 
+## In a battle
+
+Nothing is sold during a Cobblemon battle or a Cobblemon Action Combat fight, at a trainer or
+anywhere else. An operator can lift this with `/champions config trainer blockInBattle false` (from
+version **2.4.0**); the battle already running keeps the team it started with, so a change bought
+mid-battle shows from the next one. See [the settings](commands.md#the-settings).
+
 ## Distance
 
 The server checks every purchase, not just the screen. You have to be in the same world as the

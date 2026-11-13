@@ -61,7 +61,9 @@ live, and opened anywhere else it shows the same pages read-only. Unless the ser
 summary sells anywhere. Nothing can be changed while you are in a battle (from version **2.1.1**):
 the controls grey out until it ends, and the server refuses the same changes. A
 [Cobblemon Action Combat](../action-combat/index.md) fight counts as a battle too (from version
-**2.3.1**, with Action Combat 0.1.48 or later; Action Combat stays optional).
+**2.3.1**, with Action Combat 0.1.48 or later; Action Combat stays optional). An operator can turn
+this rule off with `trainer blockInBattle` (from version **2.4.0**, on by default); see
+[Commands & Config](commands.md#the-settings).
 
 | Summary page | What changes | Details |
 |---|---|---|
