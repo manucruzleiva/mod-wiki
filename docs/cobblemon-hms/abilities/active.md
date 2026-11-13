@@ -30,6 +30,11 @@ their own.
     same rule. An already-active Growth, Minimize or Camouflage can still be switched off in combat.
     Auras, weather and mount toggles are unchanged.
 
+    An operator can switch the refusal off for any of those seven HMs, one at a time, with
+    `/hms config <hm> battleblock false`, in the config screen ("Refuse in battle") or with
+    `blockInBattle` in the config file. It is on by default. See
+    [Configuration](../configuration.md#per-ability-values).
+
 ---
 
 ## Who can lend it

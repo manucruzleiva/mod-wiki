@@ -214,7 +214,16 @@ Each HM has only the values it actually reads:
 | **Required level** | all | Experience level needed before the HM works for you (every HM ships at 0) |
 | **Cooldown** | partner HMs, and Sweet Scent | Ticks between uses (20 ticks = 1 second; 0 = no cooldown), counted **per Pokémon**. For Sweet Scent it is the time between arrivals, at least 100 |
 | **Power** | the HMs in the tables below that list a range | What it means depends on the HM: a radius, a duration, a speed in tenths. The menu's tooltip and the command say which |
+| **Refuse in battle** | Teleport, Growth, Minimize, Decorate, Camouflage, Outrage, Calm Mind | On *(default)*: the HM refuses during a Cobblemon battle or a Cobblemon Action Combat fight. Off: it works mid-battle as it does outside one. The other HMs have no such setting |
 | **Fullness** / **Friendship** | all | That HM's own upkeep; see [Upkeep for each HM](#upkeep-for-each-hm) |
+
+```
+/hms config <ability> battleblock <true|false>
+```
+
+In the config file it is `blockInBattle` inside that HM's block, as `1` (refuses, the default) or
+`0`. It is only written for the seven HMs that have it. In the config screen it is the
+**Refuse in battle** switch on that HM's page.
 
 Auras and mount toggles have no cooldown: they are simply on. Nothing costs the player hunger: the
 Pokémon pays in fullness. The cooldown belongs to the Pokémon that lent the move, so a second
@@ -260,12 +269,13 @@ Operator-only (`permission level 2`):
 /hms config <ability> power <value>
 /hms config <ability> minlevel <0–100>
 /hms config <ability> enabled <true|false>
+/hms config <ability> battleblock <true|false>
 /hms config <ability> reset
 /hms config reset_all
 ```
 
 `cooldown` and `power` only exist for an HM that reads them, and each takes the range in the
-tables below. The full list is in [Commands](commands.md).
+tables below. `battleblock` only exists for the seven HMs that refuse in battle. The full list is in [Commands](commands.md).
 
 ---
 

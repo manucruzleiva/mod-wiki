@@ -50,6 +50,7 @@ Summons a Trainer Ditto on demand, or wipes the slate for a player: it forgets t
 /hms config <ability> power <value>          only HMs that read it, in that HM's range
 /hms config <ability> minlevel <0–100>
 /hms config <ability> enabled <true|false>
+/hms config <ability> battleblock <true|false>   Refuse in battle (only the seven HMs that refuse)
 /hms config <ability> fullness <0–700|default>   that HM's upkeep, in hundredths of fullness
 /hms config <ability> friendship <0–255|default> friendship it costs per missing fullness point
 /hms config <ability> reset
@@ -82,6 +83,11 @@ Summons a Trainer Ditto on demand, or wipes the slate for a player: it forgets t
 /hms config trader cobbledollars <true|false>  charge CobbleDollars (needs the mod)
 /hms config trader reload                    re-read trader_offers.json
 ```
+
+`battleblock` only exists for **Teleport, Growth, Minimize, Decorate, Camouflage, Outrage and
+Calm Mind**, the HMs that [refuse during a battle](abilities/active.md). `true` (the default) keeps
+the refusal; `false` lets that HM work mid-battle as it does outside one. `/hms config <ability>`
+shows it next to the defaults.
 
 Every value and its range is in [Configuration](configuration.md). The same settings are in the
 config screen on Fabric and NeoForge.
