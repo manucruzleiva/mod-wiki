@@ -12,7 +12,8 @@ Cobblemon. Breed, catch or raise it there with Bottle Caps; see
 ## The controls are greyed out
 
 You are in a battle. Nothing can be changed until it ends (from version 2.1.1); spectating does not
-count. See [Where everything is](getting-started.md#where-everything-is).
+count. A Cobblemon Action Combat fight counts too (from version 2.3.1, with Action Combat 0.1.48 or
+later). See [Where everything is](getting-started.md#where-everything-is).
 
 ## I keep running out of experience for training
 

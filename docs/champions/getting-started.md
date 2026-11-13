@@ -59,7 +59,9 @@ Everything is on the Pokémon's summary. There is no new screen and no new item.
 [Champions Trainer](champions-trainer.md): talk to one and its summary opens with every control
 live, and opened anywhere else it shows the same pages read-only. Unless the server asks, the
 summary sells anywhere. Nothing can be changed while you are in a battle (from version **2.1.1**):
-the controls grey out until it ends, and the server refuses the same changes.
+the controls grey out until it ends, and the server refuses the same changes. A
+[Cobblemon Action Combat](../action-combat/index.md) fight counts as a battle too (from version
+**2.3.1**, with Action Combat 0.1.48 or later; Action Combat stays optional).
 
 | Summary page | What changes | Details |
 |---|---|---|
