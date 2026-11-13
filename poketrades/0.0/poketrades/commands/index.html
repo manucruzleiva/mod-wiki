@@ -824,7 +824,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon PokeTrades 0.0.25</p>
+    <p class="wiki-mod-version">Documented against Cobblemon PokeTrades 0.0.26</p>
   
                   
 
@@ -1059,9 +1059,16 @@ you <code>delete</code> it.</p>
 <td><code>max_held</code> (6, 1–54)</td>
 <td>a trader that offers what it receives keeps nothing new; what it holds stays offered</td>
 </tr>
+<tr>
+<td><code>battle_guard</code></td>
+<td></td>
+<td>trades, purchases and sales go through during a Cobblemon battle or an Action Combat fight; a Pokémon on your own battle team is still refused as busy</td>
+</tr>
 </tbody>
 </table>
 <p><code>max_held</code> applies to a trader whose own definition sets no limit.</p>
+<p><code>battle_guard</code> is on by default, so nothing changes unless an operator runs
+<code>/poketrades config battle_guard enabled false</code> (<code>/poketrades config battle_guard reset</code> brings the block back).</p>
 
 
 
