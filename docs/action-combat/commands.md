@@ -40,5 +40,11 @@ Every feature has `enabled` plus its own settings, saved to the config file as s
 | `switch cooldown_seconds` | 15 (0 = off) | the wait between your own switches |
 | `npc switch_seconds` | 10 | the least time between an NPC's switches |
 | `npc rct_win_commands` | on | run a Radical Cobblemon Trainers trainer's `winCommands` when a real-time fight against it ends (needs tbcs) |
+| `moves accuracy_stages` | on | accuracy and evasion stages change fumbles and dodges |
+| `wild_ai protect_percent` | 30 (0 = off) | how often a wild Pokémon raises Protect against a strong move |
+| `wild_ai protect_min_power` | 80 | the least power that makes it raise Protect |
+| `wild_ai dodge_npc_casts` | on | wild and NPC Pokémon dodge each other's casts, not only a player's |
+| `wild_ai type_aware` | on | a wild Pokémon weighs its moves' power by type effectiveness |
+| `wild_ai status_weight` | 30 (0 = no Status moves) | how likely a wild Pokémon is to use a Status move that would do something |
 | `gimmicks dynamax_seconds` | 20 | how long a Dynamax lasts |
 | `block_damage soft_power` / `stone_power` | 60 / 100 | the power to break soft blocks and stone |

@@ -15,6 +15,22 @@ in to hit, ones with mostly ranged moves keep 6 to 10 blocks away and strafe, an
 fight with runs. It stands still through each windup while its attack animation plays: that is your
 opening to dodge. It also dodges some of your attacks.
 
+**How it picks a move** (0.1.53 and later): each damaging move's chance is its power times its type
+effectiveness on the target, so a super-effective move comes up twice as often as a neutral one of
+the same power, and a move the target is immune to is never picked while another fits. It also uses
+**Status moves that would do something right now** (a stat stage that can still move, a status or
+confusion the target can take, a heal it needs): such a move weighs 30, about one move in nine next
+to three attacks of power 80, and is paid and cooled down like any move. Swords Dance at +6, Thunder
+Wave on a Pokémon that already has a status, or Sand Attack with `moves accuracy_stages` off are
+never picked; weather, terrain and side moves are left out for now.
+`/cac config wild_ai type_aware off` and `status_weight 0` bring back the old pick (by power alone).
+
+**How it defends**: against a strong move (power 80 or more) a wild Pokémon raises **Protect**
+instead of dashing, 30 % of the time (0.1.51 and later). The bubble goes up as the windup ends, it
+holds still while Protect lasts, and it pays the same Stamina and waits the same cooldown yours does,
+so it never chains Protect nor raises it mid-dash. `/cac config wild_ai protect_percent` sets how
+often (0 turns it off and it dodges as before) and `protect_min_power` how strong a move must be.
+
 - **It can start the fight**: an aggressive wild Pokémon that attacks you sends your lead out.
   After a fight, wild hits wait 10 seconds before they can start the next one.
 - **Others join in**: a hostile wild Pokémon within 16 blocks joins on its own, and any free wild
@@ -55,6 +71,12 @@ Cobblemon's own NPC trainers send their party out in front of them one at a time
 each fighting like a wild Pokémon that never flees. The next comes out 1.5 seconds after one faints.
 They **switch** out of a bad type matchup, or under 25 % HP for a healthier Pokémon, at most once
 every 10 seconds. Beating the whole party wins.
+
+Pokémon on the other side now dodge each other's casts too (0.1.52 and later): a move started by a
+wild Pokémon or an NPC trainer's Pokémon warns the other side's wild or NPC Pokémon the same way
+yours warns them. They dash aside at their archetype's dodge chance or, against a strong move, raise
+Protect. A Pokémon never answers its own cast nor its own side's, and a cast aimed elsewhere warns
+no one. `/cac config wild_ai dodge_npc_casts off` turns it off (on by default).
 
 ## RCT trainers
 
