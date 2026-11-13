@@ -115,7 +115,7 @@ extra:
     # PokeTowns esta discontinuado: queda solo su pagina de aviso, y sin modrinth ni repo no se vigila.
     poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.17 }
     action-combat:  { name: Cobblemon Action Combat,        version: 0.1.48, repo: cobblemon-action-combat }
-    poketrades:     { name: Cobblemon PokeTrades,           version: 0.0.25, repo: cobblemon-poketrades }
+    poketrades:     { name: Cobblemon PokeTrades,           version: 0.0.26, repo: cobblemon-poketrades }
     pokegyms:       { name: Cobblemon PokeGyms,             version: 0.0.48, repo: cobblemon-pokegyms }
     defeated-catch-chance: { name: Cobblemon Defeated Catch Chance, version: 0.0.1, repo: cobblemon-defeated-catch-chance }
     trainers-satchel: { name: Cobblemon Trainer's Satchel, version: 0.0.14, repo: cobblemon-trainers-satchel }

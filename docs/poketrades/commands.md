@@ -82,5 +82,9 @@ Every feature can be switched off or tuned on a live server, and the change is s
 | `server_wide_tier` | `min_tier` (5, 1–5) | every offer is once per player, none once for the whole server |
 | `history` | `cap` (100, 1–1000 trades per player) | no trade is written to anyone's history |
 | `reoffer` | `max_held` (6, 1–54) | a trader that offers what it receives keeps nothing new; what it holds stays offered |
+| `battle_guard` | | trades, purchases and sales go through during a Cobblemon battle or an Action Combat fight; a Pokémon on your own battle team is still refused as busy |
 
 `max_held` applies to a trader whose own definition sets no limit.
+
+`battle_guard` is on by default, so nothing changes unless an operator runs
+`/poketrades config battle_guard enabled false` (`/poketrades config battle_guard reset` brings the block back).

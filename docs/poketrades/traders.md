@@ -144,7 +144,9 @@ A trader pays about a quarter of what it sells a Pokémon for.
 
 A trade happens **whole or not at all**. You cannot trade while in a battle (a Cobblemon battle, or a
 [Cobblemon Action Combat](../action-combat/index.md) fight with Action Combat 0.1.48 or newer), nor a
-Pokémon tethered to a pasture; a Pokémon you sent out goes back to its ball first. Leaving the game mid-trade, pressing
+Pokémon tethered to a pasture. An operator can switch the battle block off with
+[`battle_guard`](commands.md#configuration): trades then go through mid-battle, but a Pokémon on your
+own battle team is still refused as busy. A Pokémon you sent out goes back to its ball first. Leaving the game mid-trade, pressing
 twice, or two players confirming the same once-per-server offer at the same moment never moves a
 Pokémon that should not move. With a full party the Pokémon you receive goes to your PC, and with a
 full party and PC it takes the slot your Pokémon leaves.
