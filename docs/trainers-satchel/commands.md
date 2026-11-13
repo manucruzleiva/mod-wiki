@@ -36,6 +36,6 @@ never overwritten, and the settings in force stay.
 | `planting` | No [planting from the bag](in-the-field.md#planting-from-the-bag). | |
 | `belt_refill` | No [PokeBelt refill](in-the-field.md#pokebelt-refill). | |
 | `cosmetics` | No bag drawn on the back, cosmetic slot hidden; what is in it stays. | |
-| `pc_storage` | The PC opens straight to Cobblemon's PC; what is stored stays. | |
+| `pc_storage` | The PC opens straight to Cobblemon's PC; what is stored stays. | `soul_link_shared` `true`: with Cobblemon Nuzlocke, [one storage per Soul Link](pc-storage.md#soul-link-one-storage-for-the-team); `false` gives everyone their own again |
 
 All features are on by default.

@@ -24,9 +24,9 @@ Ultra Ball is always where you left it.
 
 !!! warning "Not released yet"
     The Trainer's Satchel has no public download yet. These pages describe the current development
-    build, **0.0.14**: seven pockets with tag-based sorting and server rules, three tiers, sorting and slot
+    build, **0.0.16**: seven pockets with tag-based sorting and server rules, three tiers, sorting and slot
     locks, keep-on-death, a battle lock with optional limits, evolution hints, planting from the bag, a
-    PokeBelt refill, the bag drawn on your back, and an unlimited item storage behind every Cobblemon PC.
+    PokeBelt refill, the bag drawn on your back, and an unlimited item storage behind every Cobblemon PC, shared by Soul Link partners.
 
 ## Highlights
 
@@ -48,7 +48,7 @@ Ultra Ball is always where you left it.
 - 🧍 **[On your back](tiers.md#on-your-back)**: each tier is a different 3D bag, dyeable, with a
   cosmetic slot on the Ultra Satchel.
 - 🖥️ **[Storage at every PC](pc-storage.md)**: an unlimited item storage, divided by pockets, behind every
-  Cobblemon PC.
+  Cobblemon PC, shared between Soul Link partners when Cobblemon Nuzlocke is installed.
 - ⚙️ **[Tuned in game](commands.md)** with `/satchel config`, no restart needed.
 
 ## Get it

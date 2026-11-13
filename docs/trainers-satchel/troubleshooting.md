@@ -29,6 +29,12 @@ battle.
 `pc_storage` is switched off on the server, so the PC opens straight to Cobblemon's PC
 ([PC Item Storage](pc-storage.md#switching-it-off)).
 
+## My Soul Link partner and I do not see the same PC storage
+
+Sharing needs Cobblemon Nuzlocke on the server and `pc_storage soul_link_shared` on (it is by default),
+and you must be in the same Soul Link. If you left the link your storage starts empty, and the shared
+one stays with the others ([PC Item Storage](pc-storage.md#soul-link-one-storage-for-the-team)).
+
 ## The belt is not refilled
 
 The refill needs PokeBelt (Fabric only), the satchel worn on your back and an Explorer Bag or better,
