@@ -20,6 +20,9 @@ Optional, each adding something when it is there:
   off every trader.
 - **[Radical Cobblemon Trainers](https://modrinth.com/mod/radical-cobblemon-trainers)**: a trainer you
   beat trades with you, and what you give it joins its team ([RCT trainers](traders.md#rct-trainers)).
+- **[Cobblemon Action Combat](../action-combat/index.md)** 0.1.48 or newer: trades, purchases and
+  sales are refused during its real-time fights, as they are during a Cobblemon battle. Without it
+  nothing changes.
 
 ## Steps
 
