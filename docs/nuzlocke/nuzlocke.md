@@ -46,6 +46,7 @@ same rules as a turn-based battle. Without it nothing changes.
 | **Losing** | Losing the fight whites you out. A road-trainer fight you finish is no longer owed. |
 | **Soul Link** | Shared deaths land once the fight is over. |
 | **No running** | With **No forfeit** on, holding the flee key does nothing but remind you there is no surrender. Switching to another Pokémon still works. Needs Action Combat 0.1.42 or newer. |
+| **Rope, bag and challenges** | In a fight the [Escape Rope](#escape-rope) refuses, bag healing on your Pokémon is blocked, and road trainers and aggressive wilds do not start a second battle with you. Needs Action Combat 0.1.48 or newer. |
 
 !!! warning "Not yet"
     Defeated Catch opens no catch window in an Action Combat fight: knocking out the zone's encounter
@@ -174,7 +175,7 @@ See [Commands & Config](commands.md).
 
 -   ### 🧗 The Escape Rope
 
-    A one-tap trip back to your respawn point — and it will not fire mid-battle.
+    A one-tap trip back to your respawn point — and it will not fire mid-battle or mid-fight in Action Combat.
 
 </div>
 
@@ -195,7 +196,7 @@ Use it and you are whisked back to your **respawn point**, the same place a whit
 | | |
 | --- | --- |
 | **Where it sends you** | the last Pokémon Center you used, or your bed or respawn anchor; the world spawn if you have none |
-| **Restrictions** | Overworld only, never mid-battle, 10-second cooldown |
+| **Restrictions** | Overworld only, never mid-battle or in an Action Combat fight, 10-second cooldown |
 | **Cost** | one rope per use, free in creative |
 
 On a Nuzlocke run, refusing to fire mid-battle is the whole point: a fight you started is a fight you
