@@ -114,7 +114,7 @@ extra:
     mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.3.0, modrinth: ShgrcSQY, repo: cobblemon-mid-battle-exp }
     # PokeTowns esta discontinuado: queda solo su pagina de aviso, y sin modrinth ni repo no se vigila.
     poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.17 }
-    action-combat:  { name: Cobblemon Action Combat,        version: 0.1.47, repo: cobblemon-action-combat }
+    action-combat:  { name: Cobblemon Action Combat,        version: 0.1.48, repo: cobblemon-action-combat }
     poketrades:     { name: Cobblemon PokeTrades,           version: 0.0.24, repo: cobblemon-poketrades }
     pokegyms:       { name: Cobblemon PokeGyms,             version: 0.0.48, repo: cobblemon-pokegyms }
     defeated-catch-chance: { name: Cobblemon Defeated Catch Chance, version: 0.0.1, repo: cobblemon-defeated-catch-chance }

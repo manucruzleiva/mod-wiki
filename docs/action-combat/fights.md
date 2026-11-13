@@ -81,3 +81,29 @@ Each Trainer drives one Pokémon and an ally AI runs the next healthy one beside
 control and camera between the two, and when the one you drive faints, control goes to the ally at
 once. The spread moves that hit the partner in the games (Earthquake, Surf, Explosion, Discharge...)
 hit your partner in the blast too.
+
+## For other mods
+
+A real-time fight cancels the Cobblemon battle it replaces, so Cobblemon's own battle events never
+fire for it, and `BattleRegistry` does not have the player in a battle. Action Combat gives other
+mods two ways to follow a fight:
+
+- **Events**, in `com.shier.actioncombat.api.CacEvents`: `FIGHT_STARTED`, `POKEMON_KNOCKED_OUT`,
+  `POKEMON_CAPTURED`, `FIGHT_WON`, `FIGHT_FLED`, `FIGHT_ENDED`, and `FIGHT_LEAVING`, which lets a mod
+  veto a flee or forfeit. `/cac debug events` prints them live in chat.
+- **A query** (0.1.48 and later): `com.shier.actioncombat.api.CacFights.isFighting(UUID)` answers
+  whether a player is in a fight right now. It is static, runs on the server thread, and is true from
+  `FIGHT_STARTED` to `FIGHT_ENDED`, for any kind or size of fight. There is no client-side version: a
+  mod that needs the answer on the client sends its own.
+
+The class name and signature are stable. A mod that does not depend on Action Combat can look the
+method up by reflection, once, and treat any failure (Action Combat missing, or older than 0.1.48) as
+"not fighting":
+
+```java
+Method m = Class.forName("com.shier.actioncombat.api.CacFights").getMethod("isFighting", UUID.class); // once; null on failure
+boolean fighting = m != null && (Boolean) m.invoke(null, player.getUUID());
+```
+
+Combine it with Cobblemon's own check for a complete answer: a player is in a battle when
+`BattleRegistry` has them **or** `isFighting` is true.
