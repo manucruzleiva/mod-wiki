@@ -77,12 +77,15 @@ standing from before 5.0.0 uses the `expert` values.
 | | `friendship` | int | Friendship gained from a wash. |
 | | `cooldown` | seconds | Wait between washes, **per Pokémon**. *Default 3.* |
 | | `requirestable` | true/false | Need a nearby table to wash. Off also shows the option on the wheel everywhere. |
+| | `blockinbattle` | true/false | Washing is [refused during a battle](interactions-and-items.md#not-during-a-battle) (a Cobblemon battle or an Action Combat fight). *Default on.* |
 | `play` | `enabled` | true/false | [Playing fetch](interactions-and-items.md), from the wheel or with a thrown Fetchball. *Default on.* |
 | | `friendship` | int | Friendship gained from a game. |
 | | `breakchance` | 0..1 | Chance a slime ball splatters. A [Fetchball](interactions-and-items.md#fetchball) ignores this. |
 | | `cooldown` | seconds | Wait between games, **per Pokémon**. *Default 3.* |
 | | `requirestable` | true/false | Need a nearby table to play. Off also shows the option on the wheel everywhere. |
+| | `blockinbattle` | true/false | Playing and the Fetchball are [refused during a battle](interactions-and-items.md#not-during-a-battle). *Default on.* |
 | `battleseeker` | `enabled` | true/false | The [Combat Basket](interactions-and-items.md#combat-basket) (it kept the name of the Battle Seeker it replaced). Off: a table with one summons no trainer. *Default on.* |
+| | `blockinbattle` | true/false | The Combat Basket re-roll is [refused while you are already in a battle](interactions-and-items.md#combat-basket). *Default on.* |
 | | `matchlevel` | true/false | Scale summoned trainers to your party's level. *Default on.* |
 | | `levelgap` | int | Level offset for summoned trainers. *Default 8.* |
 | `hazards` | `enabled` | true/false | What a table and its basket carry between dimensions — [burning, scorching, flooding and drifting](picnic-tables.md#where-each-table-can-go). Off, every table is plain furniture. *Default on.* |
@@ -140,8 +143,8 @@ on NeoForge via the **Config** button in the mods list. Its pages:
 | **General** | Re-roll switch and cooldown, light level, party deploy and its distances, flier lift and leash, spawn clearance, re-roll log, action distance |
 | **Tiers** | Spawn cap, fuel cost and **re-roll radius** for Basic, Advanced and Expert |
 | **Shiny Aura** | The aura switch and the full-table multiplier, with the ladder it works out to |
-| **Interactions** | Washing, playing fetch, and party move teaching (chance, and TM / tutor / egg moves) |
-| **Baskets** | The Combat Basket (switch, level match, level gap), the Alpha Basket (switch, chance, batch), the dimension hazards and REI colour grouping |
+| **Interactions** | Washing, playing fetch (each with its "blocked in battle" switch), and party move teaching (chance, and TM / tutor / egg moves) |
+| **Baskets** | The Combat Basket (switch, blocked in battle, level match, level gap), the Alpha Basket (switch, chance, batch), the dimension hazards and REI colour grouping |
 | **Protection & seating** | What a re-roll keeps (shiny, legendary, mythical, Ultra Beast, alpha) per rung, snack bias, built platforms, and mobs fleeing a seated table |
 
 ![The Baskets page of the settings screen](assets/store/config-screen-baskets.jpg)
