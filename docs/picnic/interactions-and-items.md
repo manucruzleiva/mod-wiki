@@ -37,6 +37,18 @@ Either one can be switched off outright with `/picnic config wash enabled false`
 `/picnic config play enabled false`. The option leaves the wheel, and the Poke-sponge or the Fetchball
 does nothing either.
 
+### Not during a battle
+
+Washing, playing and throwing a Fetchball are **refused while a battle is on**: when that Pokémon is
+in a Cobblemon battle, or when **you** are in one or in a **Cobblemon Action Combat** fight. You are
+told "Your Pokémon can't do that during a battle." A Fetchball stays in your hand, no Pokémon picks
+one up while its owner fights, and a fetch already underway stops where it is (the ball stays on the
+ground). Action Combat (0.1.48 or later) is optional: without it only Cobblemon battles count.
+
+Operators can lift the block: `/picnic config wash blockinbattle false` and
+`/picnic config play blockinbattle false` (Play covers the Fetchball too). *Default on.* Off, that
+action works during a battle as it did before 5.1.1.
+
 ### One Pokémon at a time
 
 Each option has a **3-second cooldown, counted per Pokémon** (`cooldown`, under
@@ -193,6 +205,12 @@ of the item the Combat Basket replaced:
 | `/picnic config battleseeker matchlevel <true\|false>` | Scale the trainer to your party's level. *Default on.* |
 | `/picnic config battleseeker levelgap <int>` | Level offset on top of the match, to make them tougher or softer. *Default 8.* |
 | `/picnic config battleseeker enabled <true\|false>` | Off: a table with a Combat Basket summons nobody. *Default on.* |
+| `/picnic config battleseeker blockinbattle <true\|false>` | On: the re-roll is refused while you are already in a battle. *Default on.* |
+
+**No second fight on top of the first.** While you are in a Cobblemon battle or a Cobblemon Action
+Combat fight (0.1.48 or later, optional), a Combat Basket table refuses the whole re-roll with "No
+trainer will come while you are already in a battle." and spends nothing. Switch it off with
+`battleseeker blockinbattle false`.
 
 ⚠️ The summon needs **Radical Cobblemon Trainers (RCT)** installed. Without it the Combat Basket
 simply does nothing and the rest of the table works normally.
