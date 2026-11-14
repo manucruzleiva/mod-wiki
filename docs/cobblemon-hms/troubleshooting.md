@@ -21,6 +21,13 @@ While a Pokémon is lending you an HM, a bare-handed click fires it instead of p
 lent move again in that Pokémon's wheel to hand it back, or recall the Pokémon. See
 [Partner HMs](abilities/active.md).
 
+## The Activate HM key does nothing
+
+It only fires when the server's activation mode is **Keybind**. Its default is **mouse button 4**
+(the side "back" button; it was `H` before 4.6.6, which Action Combat, Accessories and Essential
+also use). No side button, or another mod uses it? Rebind **Activate HM** in Controls → Cobblemon
+HMs. A key shown in red there is shared with another action, and on Fabric only one of them works.
+
 ## A Pokémon does not offer an HM
 
 By default it has to have **learned the move**: one of its four, or one it learned and swapped out.
