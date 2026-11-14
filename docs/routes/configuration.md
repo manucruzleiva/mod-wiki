@@ -152,6 +152,7 @@ planned road, so it follows the rule below for settings that shape the network.
 | Sign the landmark a road passes | on | a signpost beside the road names the landmark it passes |
 | Landmark waypoints | on | the first time you walk past the landmark a road signs, it gets a waypoint on your map, in its own *Landmarks* set. See [Map Integration](map-integration.md) |
 | Waystones take the town's name | on | with Waystones or Fabric Waystones installed, a waystone takes the name of its town the first time it is activated or discovered; a name you give it afterwards stays. Off: Routes never renames a waystone. See [Map Integration](map-integration.md#waystones) |
+| CCS towns keep their own names | on | a town of [Cobblemon Cities & Structures](https://modrinth.com/mod/cobblemon-cities-structures) is called what that mod calls it (*Pallet Town*, *Viridian City*) instead of a name from Routes' list. Towns that already have a name keep it. Does nothing without that mod (`route_ccs_names`) |
 
 ### Your first steps
 
