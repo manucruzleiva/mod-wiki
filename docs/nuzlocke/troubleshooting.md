@@ -36,7 +36,9 @@ Two causes:
 ## No trainers or level caps
 
 Those come from [Radical Cobblemon Trainers](https://modrinth.com/mod/radical-cobblemon-trainers).
-Without it, those features stand down and the rest of the ruleset keeps working.
+Without it, those features stand down and the rest of the ruleset keeps working. With
+[Cobblemon Cities & Structures](https://modrinth.com/mod/cobblemon-cities-structures) installed, its gym
+badges set a level cap too (`ccs_gym_badges`).
 
 ## I want to start over
 
