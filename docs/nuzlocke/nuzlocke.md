@@ -57,7 +57,8 @@ same rules as a turn-based battle. Without it nothing changes.
 ### Zones
 
 A zone is a place, and the place decides the rule. What counts as one place is your choice at world
-creation, under **Capture zones are**:
+creation, under **Capture zones are**. **Geography** and **Both** need [Routes](../routes/index.md):
+without it, or with **Zones follow Routes** (`routes_integration`) off, every mode uses the biome.
 
 | Mode | A zone is |
 |---|---|

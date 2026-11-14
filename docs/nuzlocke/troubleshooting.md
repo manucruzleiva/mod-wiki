@@ -5,9 +5,9 @@ Common surprises, what causes them, and what to do. If yours is not here, post i
 
 ## The game will not start and names Routes
 
-This is an add-on for [Routes](../routes/index.md), and it needs Routes **2.0.114 or newer**. Older
-Routes cannot host it, so the loader stops and names it. Update Routes. The rest of what to install is
-in the table at the bottom of the [home page](index.md#get-it).
+Routes is optional, but when it is installed it must be **2.0.114 or newer**. Older Routes cannot host
+this mod, so the loader stops and names it. Update Routes, or remove it to play with biome zones. The
+rest of what to install is in the table at the bottom of the [home page](index.md#get-it).
 
 ## There is no NUZLOCKE tab, or my world ignores my rules
 

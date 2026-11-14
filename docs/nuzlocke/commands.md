@@ -11,7 +11,7 @@ live under [`/routes`](../routes/commands.md) — the two never mix.
 | --- | :---: | --- |
 | `/nuzlocke status [player]` | 👤 / 🛡️ | Zone records + party deaths (`[player]` is op-only). |
 | `/nuzlocke log` · key **I** | 👤 | Opens your party's summary on the **Log** tab — the link's log while you are in a Soul Link. |
-| `/nuzlocke map` | 👤 | Dump your capture zones as map waypoints. |
+| `/nuzlocke map` | 👤 | Dump your capture zones as map waypoints (needs Routes). |
 | `/nuzlocke reset [player]` | 🛡️ | Clear a player's zone records, lift their game-over and ask for a new Gym Leader Challenge type. They keep their team. |
 | `/nuzlocke revive [player] [zone <zone>]` | 🛡️ | Revive a party's dead Pokémon — all of them, or only the one caught in that zone (by the name the log shows). The mercy switch: it also lifts a game-over, and under [Soul Link](soul-link.md) it revives each one's soulmates with it. |
 | `/nuzlocke enable` · `disable` | 🛡️ | Master switch for this world, saved per world. |
@@ -43,8 +43,8 @@ Cobblemon's interaction wheel.
 ## Configuration
 
 The ruleset is decided **when you create the world**, on a **NUZLOCKE** tab that sits next to
-**GAME / WORLD / MORE**. Installing this add-on is what adds that tab; Routes' own generation options
-live beside it on its [ROUTES tab](../routes/configuration.md).
+**GAME / WORLD / MORE**. Installing this mod is what adds that tab; with Routes installed, its own
+generation options live beside it on its [ROUTES tab](../routes/configuration.md).
 
 <div class="flow" markdown>
 
@@ -74,6 +74,7 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | Over cap to PC | on | over-cap catches are boxed (the cap itself comes from RCT) |
 | File the dead to the PC | on | a Pokémon that dies is moved out of your party. Your last one always stays |
 | Capture zones are | Geography | what counts as one place — the world Routes draws, the **biome** underfoot, or **both** as a pair |
+| Zones follow Routes (`routes_integration`) | on | with Routes installed, zones are its towns, routes and areas. Off, or without Routes: every mode uses biomes |
 | Require nicknames | on | the naming prompt after every acquisition |
 | No trading | on | trades are refused |
 | No forfeit | on | battles cannot be surrendered |
