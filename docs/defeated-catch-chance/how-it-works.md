@@ -14,6 +14,10 @@ A wild Pokémon that a **player beats in battle** does not vanish when the battl
 While the window is open the Pokémon does not move, make a sound or wake up. You can walk up to it and
 throw a ball.
 
+The Pokémon stays at **1 HP for the whole window**. Cobblemon can still write 0 HP to a beaten wild
+after the battle is won, so the mod puts it back to 1 HP the moment that happens and checks the
+Pokémon's HP (not only its body's) every second. The countdown is not touched by this.
+
 !!! note "Only a player's win counts"
     The window opens for wild Pokémon beaten in a battle that a player won. A Pokémon that was never
     in a battle with a player is left to Cobblemon as usual.

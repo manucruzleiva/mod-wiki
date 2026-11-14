@@ -29,7 +29,7 @@ There is nothing to learn. Install it and win a wild battle. (Operators can
 
 !!! warning "Not released yet"
     Defeated Catch Chance has no public download yet. These pages describe the current development
-    build, **0.0.1**. Anything not described here is not in the mod yet.
+    build, **0.0.6**. Anything not described here is not in the mod yet.
 
 ## Highlights
 

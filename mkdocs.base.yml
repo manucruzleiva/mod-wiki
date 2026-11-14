@@ -117,7 +117,7 @@ extra:
     action-combat:  { name: Cobblemon Action Combat,        version: 0.1.53, repo: cobblemon-action-combat }
     poketrades:     { name: Cobblemon PokeTrades,           version: 0.0.26, repo: cobblemon-poketrades }
     pokegyms:       { name: Cobblemon PokeGyms,             version: 0.0.49, repo: cobblemon-pokegyms }
-    defeated-catch-chance: { name: Cobblemon Defeated Catch Chance, version: 0.0.1, repo: cobblemon-defeated-catch-chance }
+    defeated-catch-chance: { name: Cobblemon Defeated Catch Chance, version: 0.0.6, repo: cobblemon-defeated-catch-chance }
     trainers-satchel: { name: Cobblemon Trainer's Satchel, version: 0.0.16, repo: cobblemon-trainers-satchel }
   # La ficha tecnica de cada mod: lo que dice su jar publicado (fabric.mod.json y neoforge.mods.toml
   # del tag del ultimo release), no lo que se recuerda. De aca salen, por hooks/mod_specs.py, las
