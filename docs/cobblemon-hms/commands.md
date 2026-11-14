@@ -60,6 +60,7 @@ Summons a Trainer Ditto on demand, or wipes the slate for a player: it forgets t
 ```
 /hms config activator button <left|right|either>
 /hms config activator mode <open_fist|trainers_glove|take_over_left|take_over_right|keybind>
+/hms config activator freefist <true|false>
 /hms config requiremove <true|false>
 /hms config hud <true|false>
 ```

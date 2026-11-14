@@ -11,7 +11,7 @@
 
 ## Activation
 
-A partner HM always fires from your **empty hand**: there is nothing to hold and nothing to select.
+A partner HM fires from your **empty hand**: there is nothing to hold and nothing to select (in Keybind mode, from the key instead).
 Two settings decide the rest: the button, and whether a click with something in hand counts too.
 
 | Setting | Options | Notes |
@@ -31,6 +31,16 @@ Two settings decide the rest: the button, and whether a click with something in 
 | **Take over left-click** | on left-click, whatever the activator button says |
 | **Take over right-click** | on right-click, whatever the activator button says |
 | **Keybind** | never by click: the **Activate HM** key fires instead, with anything in hand, aimed anywhere (Controls → Cobblemon HMs, `H` by default) |
+
+In **Keybind** mode the key is the only activator by default: the empty hand punches, mines and
+opens as usual. To let the empty fist fire the HM too (as before 4.6.5), switch off **Keybind frees
+the empty hand** in the config screen, or:
+
+```
+/hms config activator freefist <true|false>
+```
+
+(`keybindFreesFist` in `config/cobblemon_hms.json`, on by default.)
 
 In every mode, **sneak** to skip the HM and mine, place or open things as usual. With nothing picked
 on the wheel, clicks are vanilla. Chests, doors and block placing still answer a right-click first.
