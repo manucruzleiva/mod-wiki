@@ -30,7 +30,7 @@ Two settings decide the rest: the button, and whether a click with something in 
 | **Trainer's Glove** | on the activator button, while you carry a [Trainer's Glove](#trainers-glove) switched on, anywhere in your inventory |
 | **Take over left-click** | on left-click, whatever the activator button says |
 | **Take over right-click** | on right-click, whatever the activator button says |
-| **Keybind** | never by click: the **Activate HM** key fires instead, with anything in hand, aimed anywhere (Controls → Cobblemon HMs, `H` by default) |
+| **Keybind** | never by click: the **Activate HM** key fires instead, with anything in hand, aimed anywhere (Controls → Cobblemon HMs, mouse button 4, the side "back" button, by default; before 4.6.6 it was `H`) |
 
 In **Keybind** mode the key is the only activator by default: the empty hand punches, mines and
 opens as usual. To let the empty fist fire the HM too (as before 4.6.5), switch off **Keybind frees
