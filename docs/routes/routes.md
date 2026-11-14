@@ -50,7 +50,10 @@ flowchart TD
   town too; a bridge deck that rises one block takes a slab. A wall that is still two blocks or more
   gets a ladder, whichever way you walk in. Where a road reaches a bridge ramp half a block low, both
   blocks are stairs, so there is no wall to jump. The ramp out of a tunnel starts with a stair off the
-  tunnel floor, and a road climbing on the diagonal has no corner a block and a half high.
+  tunnel floor, and a road climbing on the diagonal has no corner a block and a half high: a slab smooths a
+  rise only where it leaves no such step beside it, on the diagonal or into the next chunk, and otherwise the rise
+  takes a stair. The ramp up to a bridge reaches the road below at one step, never a wall, and a wall of two
+  blocks or more where a road crosses into the next chunk gets its ladder too.
 - **Roads made of what you choose** — the surface can be one material or a mix laid in rounded
   patches, with an optional share of worn blocks (cracked or mossy bricks, gravel in cobblestone, grass
   through a dirt path). Bridge decks and handrails are chosen the same way, one material per bridge and
