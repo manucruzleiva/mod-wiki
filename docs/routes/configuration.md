@@ -132,8 +132,11 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 | Roads sharing ground agree on its height | on | where roads run together into a fork, over the same strip or side by side, that ground is laid at the lowest of their heights and a road beside another comes down to meet it by half a block per block, so there are no walls between them. Off, each road keeps its own height and the last one drawn wins |
 | No road scraps inside towns | on | a road starts after the last building or street of the town it leaves, however far apart two of them are. Off, only gaps of up to ten blocks are left to the town, so a longer one can keep a short piece of road ending in a wall |
 | Enter CCS towns by their streets | on | a road into a town of [Cobblemon Cities & Structures](https://modrinth.com/mod/cobblemon-cities-structures) joins the end of a street the town left open, the one facing the road, and not the side of a street or an empty house lot. Does nothing in vanilla villages, in other town packs, or without that mod |
+| Bridge ramps meet the road | on | the ramp up to a bridge always reaches the road below at one step, never a wall, even under a high deck: it steepens over its last cells to hand over to the road |
+| Ladders on walls at chunk borders | on | a wall of two blocks or more where a road crosses into the next chunk, as on a tunnel ramp, gets a ladder like any other wall. Off, such a wall is laddered only if the planned road already stepped there |
+| No slab that leaves a step and a half | on | a slab smooths a one-block rise only where it leaves no step of a block and a half beside it, on the diagonal or into the next chunk; there the rise takes a stair instead |
 
-The six look-and-fit options in that list (everything from **Steps at tunnel mouths** down, except
+The nine look-and-fit options in that list (everything from **Steps at tunnel mouths** down, except
 **Tunnels surface before a town**) only change **chunks generated from now on**: roads already in your world
 keep their blocks, and the planned routes do not move. **Tunnels surface before a town** reshapes the
 planned road, so it follows the rule below for settings that shape the network.
