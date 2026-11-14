@@ -5,21 +5,23 @@ in full.
 
 ## Install
 
-1. Install **[Routes](../routes/index.md)** 2.0.114 or newer, and Cobblemon. The full list for your
-   loader is in the table at the bottom of the [home page](index.md#get-it).
+1. Install Cobblemon. **[Routes](../routes/index.md)** is optional: with it (2.0.114 or newer), capture
+   zones are its routes, areas and towns; without it, they are biomes. The full list for your loader is
+   in the table at the bottom of the [home page](index.md#get-it).
 2. Drop the jar for **your** loader into `mods/`, never both loaders at once.
 3. On a server, install it **on the server and on every player's game**.
 
 ## Create the world
 
 The ruleset is decided **when you create the world**, on a **NUZLOCKE** tab next to
-**GAME / WORLD / MORE**. Installing this add-on is what adds that tab, and Routes' own options sit
-beside it on its ROUTES tab.
+**GAME / WORLD / MORE**. Installing this mod is what adds that tab; with Routes installed, Routes' own
+options sit beside it on its ROUTES tab.
 
 - **Hardcore** turns the full ruleset on.
 - **Capture zones are** decides what counts as one place: the world Routes draws, the **biome** you
   stand in, or both as a pair. **Biome** is the classic tabletop rule and works from the first minute;
-  **Geography** grows with the road network. See [Zones](nuzlocke.md#zones).
+  **Geography** grows with the road network. Without Routes every mode uses biomes.
+  See [Zones](nuzlocke.md#zones).
 - Every rule on the tab is a switch, and all of them can be changed later with
   `/nuzlocke config set`. See [Commands & Config](commands.md).
 

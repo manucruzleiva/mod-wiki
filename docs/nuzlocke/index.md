@@ -50,11 +50,11 @@ die as one.
 
 </div>
 
-## Zones come from Routes
+## Zones: biomes, or Routes' map
 
-The "one catch per zone" rule needs a definition of *zone*, and it takes it from
-[Routes](../routes/index.md): the routes, areas and towns Routes generates are the capture zones.
-That is why this is an add-on rather than a mod with its own map model, and why you need both.
+The "one catch per zone" rule needs a definition of *zone*. On its own, the mod uses the **biome** you
+stand in. With [Routes](../routes/index.md) installed (optional since 1.5.75), the routes, areas and
+towns Routes generates become the capture zones instead. See [Zones](nuzlocke.md#zones).
 
 !!! note "Not the *Cobblemon Nuzlocke* datapack"
     There is an unrelated [datapack by RRULE2001](https://modrinth.com/datapack/cobblemon-nuzlocke)
