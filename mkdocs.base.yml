@@ -105,7 +105,7 @@ extra:
   # Una entrada por linea, como estan: el script las lee con una regex.
   mod_versions:
     routes:         { name: Routes,                         version: 2.0.164, modrinth: PfmV1XPQ, repo: routes }
-    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.69, modrinth: wHlszYZN, repo: cobblemon-nuzlocke }
+    nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.75, modrinth: wHlszYZN, repo: cobblemon-nuzlocke }
     picnic:         { name: Cobblemon Picnic,               version: 5.1.3, modrinth: sfptxo0H, repo: cobblemon-picnic }
     cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.6.4, modrinth: JNfSyMuQ, repo: cobblemon-hms }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.1.0, modrinth: S01tPZTk, repo: cobblemon-raid-icons }
@@ -186,11 +186,10 @@ extra:
       minecraft: "1.21.1"
       cobblemon: "1.7–1.8"
       cobblemon_note: built for 1.8; it runs on 1.7.3
-      requires: [routes]
-      requires_note: 2.0.114 or newer
       fabric: [fabric-api, architectury, cloth-config]
       neoforge: [architectury, cloth-config]
       optional:
+        - [routes, "its routes, areas and towns become the capture zones, and /nuzlocke map works; 2.0.114 or newer. Without it, each biome is a zone (since 1.5.75)"]
         - [rct, "trainer rules and level caps; without it those stand down"]
         - [action-combat, "its real-time fights follow the ruleset; 0.1.42 or newer for the no-flee rule, 0.1.48 or newer for the rope and bag rules (1.5.69 can switch them off for its fights)"]
       curseforge: 1630816

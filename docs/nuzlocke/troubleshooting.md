@@ -40,5 +40,6 @@ Without it, those features stand down and the rest of the ruleset keeps working.
 
 ## I want to start over
 
-`/pokemonrestart` wipes your own run; type it twice to confirm. An operator can instead use
+`/pokemonrestart` wipes your own run; type it twice to confirm. It works the same whether or not you
+are in a Soul Link (before 1.5.70 it failed for players who had never signed one). An operator can instead use
 `/nuzlocke reset` or `/nuzlocke revive`. See [Commands & Config](commands.md#quick-reference).
