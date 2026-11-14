@@ -135,8 +135,9 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 | Bridge ramps meet the road | on | the ramp up to a bridge always reaches the road below at one step, never a wall, even under a high deck: it steepens over its last cells to hand over to the road |
 | Ladders on walls at chunk borders | on | a wall of two blocks or more where a road crosses into the next chunk, as on a tunnel ramp, gets a ladder like any other wall. Off, such a wall is laddered only if the planned road already stepped there |
 | No slab that leaves a step and a half | on | a slab smooths a one-block rise only where it leaves no step of a block and a half beside it, on the diagonal or into the next chunk; there the rise takes a stair instead |
+| No boulders on the road | on | boulders (mossy rocks in old growth taiga) are kept off the road and its edge, as trees already are, so a boulder from the next chunk can no longer land on a road already built or float over it, and the same world builds the same roads whichever chunk generates first |
 
-The nine look-and-fit options in that list (everything from **Steps at tunnel mouths** down, except
+The ten look-and-fit options in that list (everything from **Steps at tunnel mouths** down, except
 **Tunnels surface before a town**) only change **chunks generated from now on**: roads already in your world
 keep their blocks, and the planned routes do not move. **Tunnels surface before a town** reshapes the
 planned road, so it follows the rule below for settings that shape the network.

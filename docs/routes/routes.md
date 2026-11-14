@@ -34,6 +34,8 @@ flowchart TD
   leaves, no item spam. Trees and huge mushrooms don't grow within a few blocks of the road's edge,
   so no crown hangs over the road where you walk. Any leaves or branches a tree hangs into the 3 blocks
   above a road, including the strip right at its edge, are trimmed away; the forest beside it is left.
+  Boulders (the mossy rocks of old growth taiga) are kept off the road and its edge the same way, so the same
+  world builds the same roads whichever chunk generates first.
 - **Water crossings** — always on the surface. A river gets a plank bridge with its pillars dropped to
   the riverbed, in one wood from end to end; a longer stretch stays an open lane of water to swim or
   sail, marked on both edges by natural rock markers, most of them lit, and the road meets it at the
