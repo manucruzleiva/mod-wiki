@@ -1182,7 +1182,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="JNfSyMuQ" data-version="4.6.4">Documented against Cobblemon HMs 4.6.4</p>
+    <p class="wiki-mod-version" data-modrinth="JNfSyMuQ" data-version="4.6.5">Documented against Cobblemon HMs 4.6.5</p>
   
                   
 
@@ -1198,7 +1198,7 @@
 </ol>
 </div>
 <h2 id="activation">Activation<a class="headerlink" href="#activation" title="Permanent link">&para;</a></h2>
-<p>A partner HM always fires from your <strong>empty hand</strong>: there is nothing to hold and nothing to select.
+<p>A partner HM fires from your <strong>empty hand</strong>: there is nothing to hold and nothing to select (in Keybind mode, from the key instead).
 Two settings decide the rest: the button, and whether a click with something in hand counts too.</p>
 <table>
 <thead>
@@ -1254,6 +1254,12 @@ Two settings decide the rest: the button, and whether a click with something in 
 </tr>
 </tbody>
 </table>
+<p>In <strong>Keybind</strong> mode the key is the only activator by default: the empty hand punches, mines and
+opens as usual. To let the empty fist fire the HM too (as before 4.6.5), switch off <strong>Keybind frees
+the empty hand</strong> in the config screen, or:</p>
+<div class="highlight"><pre><span></span><code>/hms config activator freefist &lt;true|false&gt;
+</code></pre></div>
+<p>(<code>keybindFreesFist</code> in <code>config/cobblemon_hms.json</code>, on by default.)</p>
 <p>In every mode, <strong>sneak</strong> to skip the HM and mine, place or open things as usual. With nothing picked
 on the wheel, clicks are vanilla. Chests, doors and block placing still answer a right-click first.</p>
 <p>Two more switches sit next to the activation settings:</p>
