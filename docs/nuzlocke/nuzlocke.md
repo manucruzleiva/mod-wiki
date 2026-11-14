@@ -31,7 +31,7 @@ flowchart TD
 | 😴 **Defeated Catch** | A wild you beat lies on the ground for a while, asleep at 1 HP and catchable — a second chance at the encounter, KO experience included. While it lies there it can only be caught, never battled again. |
 | 😠 **Aggressive wilds** | About one species in five comes after you instead of meleeing you, and its first hit starts a battle. A wild above your level cap never does. |
 | 🏥 **Whiteout** | Losing a battle sends you back to your **respawn point**: the last Pokémon Center you used, or your bed, or the world spawn without one. Running out of usable Pokémon anywhere is a Game Over. |
-| 📈 **Level cap** | Follows your trainer card. Catches above it go straight to the PC, and no wild Pokémon above it turns a hit into a battle. |
+| 📈 **Level cap** | Follows your trainer card. With [Cobblemon Cities & Structures](https://modrinth.com/mod/cobblemon-cities-structures), each of its gym leaders you beat is a badge that raises it (15, 25, 35, 45, 55, 65, 75, 75, then 100), any order; the higher cap wins. Catches above it go straight to the PC, and no wild Pokémon above it turns a hit into a battle. |
 | 🎒 **No bag in battle** | The battle bag is closed. A second mode blocks **only healing**, leaving X items legal — Poké Balls are never blocked. |
 | 🧗 **No Escape Rope in battle** | The [Escape Rope](#escape-rope) refuses to work mid-battle. Switch it off and the rope pulls you out of a fight. |
 

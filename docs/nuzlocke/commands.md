@@ -71,7 +71,9 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | Battle bag blocks | Everything | Everything, or **Healing only** — X items stay legal either way |
 | No Escape Rope in battle (`disable_escape_rope_in_battle`) | on | off = the Escape Rope works mid-battle |
 | Action Combat = battle (`cac_fights_count_as_battles`) | on | off = the rope and bag rules only apply in Cobblemon battles; Action Combat fights are free of them. Road trainers, aggressive wilds and Soul Link still see the fight |
-| Over cap to PC | on | over-cap catches are boxed (the cap itself comes from RCT) |
+| Over cap to PC | on | over-cap catches are boxed (the cap itself comes from RCT and CCS badges) |
+| CCS badges raise the cap (`ccs_gym_badges`) | on | with Cobblemon Cities & Structures, each gym leader beaten counts as a badge for the level cap. Off: only RCT sets it |
+| CCS cap per badges (`ccs_badge_level_caps`) | 15,25,35,45,55,65,75,75,100 | level cap by badges held, starting with none |
 | File the dead to the PC | on | a Pokémon that dies is moved out of your party. Your last one always stays |
 | Capture zones are | Geography | what counts as one place — the world Routes draws, the **biome** underfoot, or **both** as a pair |
 | Zones follow Routes (`routes_integration`) | on | with Routes installed, zones are its towns, routes and areas. Off, or without Routes: every mode uses biomes |
