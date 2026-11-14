@@ -565,6 +565,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#for-mod-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For mod developers
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -685,6 +696,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#for-mod-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For mod developers
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -698,7 +720,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version">Documented against Cobblemon Defeated Catch Chance 0.0.6</p>
+    <p class="wiki-mod-version">Documented against Cobblemon Defeated Catch Chance 0.0.7</p>
   
                   
 
@@ -717,6 +739,9 @@ setting:</p>
 <span class="w">  </span><span class="nt">"flee"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">"flee_ticks"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"gate"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -754,6 +779,12 @@ setting:</p>
 <td>1 to 1,200</td>
 <td>How long the run before it vanishes lasts, in ticks (20 ticks = 1 second).</td>
 </tr>
+<tr>
+<td><code>gate.enabled</code></td>
+<td><code>true</code></td>
+<td></td>
+<td>Off: other mods can no longer refuse a window (see <a href="#for-mod-developers">For mod developers</a>), so every beaten wild gets one.</td>
+</tr>
 </tbody>
 </table>
 <p>A missing value takes its default, and one out of range is pulled to the nearest end of its range. The
@@ -776,14 +807,14 @@ the file.</p>
 <tbody>
 <tr>
 <td><code>/dcc config</code></td>
-<td>Lists both features, whether each is on, and each setting (with its default when it differs).</td>
+<td>Lists every feature, whether each is on, and each setting (with its default when it differs).</td>
 </tr>
 <tr>
-<td><code>/dcc config &lt;window\|flee&gt;</code></td>
+<td><code>/dcc config &lt;window\|flee\|gate&gt;</code></td>
 <td>Lists one feature.</td>
 </tr>
 <tr>
-<td><code>/dcc config &lt;window\|flee&gt; enabled &lt;true\|false&gt;</code></td>
+<td><code>/dcc config &lt;window\|flee\|gate&gt; enabled &lt;true\|false&gt;</code></td>
 <td>Switches a whole feature on or off.</td>
 </tr>
 <tr>
@@ -795,13 +826,45 @@ the file.</p>
 <td>Sets the run's length, in ticks.</td>
 </tr>
 <tr>
-<td><code>/dcc config &lt;window\|flee&gt; reset</code></td>
+<td><code>/dcc config &lt;window\|flee\|gate&gt; reset</code></td>
 <td>Puts the feature back to its defaults and switches it on.</td>
 </tr>
 </tbody>
 </table>
 <p>The command takes numbers only inside each setting's range. A value outside it is refused by the
 command itself.</p>
+<h2 id="for-mod-developers">For mod developers<a class="headerlink" href="#for-mod-developers" title="Permanent link">&para;</a></h2>
+<p>Since 0.0.7 another mod can refuse a window and hear how each one ended. Both events are Architectury
+events on <code>com.shier.defeatedcatch.window.DefeatedWindowEvents</code> and run on the server thread. Use them as a
+soft dependency (reflection, or <code>compileOnly</code> plus a class check) so your mod still starts without this one.</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>When</th>
+<th>What you get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GATE</code></td>
+<td>A battle won by players is over, before a beaten wild's window opens.</td>
+<td><code>allow(wild: Pokemon, entity: PokemonEntity, winners: List&lt;ServerPlayer&gt;): Boolean</code>. If any listener returns <code>false</code>, no window opens and nothing is announced. The body despawns as in plain Cobblemon, and the wild resolves <code>DENIED</code>. A listener that throws counts as allowing. Ignored while <code>gate.enabled</code> is off.</td>
+</tr>
+<tr>
+<td><code>RESOLVED</code></td>
+<td>Once for every wild a player beats.</td>
+<td><code>resolved(pokemon: UUID, outcome)</code>, where the outcome is <code>CAUGHT</code>, <code>EXPIRED</code>, <code>FLED</code> (a missed ball, a body removed some other way, or no window because <code>window</code> is off) or <code>DENIED</code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="n">DefeatedWindowEvents</span><span class="p">.</span><span class="na">GATE</span><span class="p">.</span><span class="na">register</span><span class="p">((</span><span class="n">wild</span><span class="p">,</span><span class="w"> </span><span class="n">entity</span><span class="p">,</span><span class="w"> </span><span class="n">winners</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">stillCatchable</span><span class="p">(</span><span class="n">wild</span><span class="p">,</span><span class="w"> </span><span class="n">winners</span><span class="p">));</span>
+<span class="n">DefeatedWindowEvents</span><span class="p">.</span><span class="na">RESOLVED</span><span class="p">.</span><span class="na">register</span><span class="p">((</span><span class="n">uuid</span><span class="p">,</span><span class="w"> </span><span class="n">outcome</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">outcome</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">DefeatedWindowEvents</span><span class="p">.</span><span class="na">Outcome</span><span class="p">.</span><span class="na">CAUGHT</span><span class="p">)</span><span class="w"> </span><span class="n">loseTheEncounter</span><span class="p">(</span><span class="n">uuid</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><code>DefeatedWindow.hasActiveWindow(UUID)</code> and <code>DefeatedWindow.isDefeated(Pokemon)</code> (both static) tell you
+whether a Pokémon is lying in its window right now.</p>
 
 
 
