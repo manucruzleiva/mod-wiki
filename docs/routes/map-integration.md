@@ -19,6 +19,10 @@ town — your fast-travel points carry the same names as the places the roads co
 takes the name of the Routes town it stands in the moment you discover it, and shares that town's
 map marker, so the waystone, the town and the pin are one place under one name.
 
+Routes names a waystone only **once**, the first time it sees it. If you rename the waystone afterwards,
+your name stays. To keep Routes from renaming waystones at all, turn off **Waystones take the town's
+name** (`/routes config set route_waystone_names false`).
+
 ## Xaero's Minimap
 
 - **Auto waypoints** — the first time you reach a **named town**, a **route** or an enclosed
