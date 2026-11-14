@@ -1032,7 +1032,7 @@
               
               <article class="md-content__inner md-typeset">
                 
-    <p class="wiki-mod-version" data-modrinth="PfmV1XPQ" data-version="2.0.157">Documented against Routes 2.0.157</p>
+    <p class="wiki-mod-version" data-modrinth="PfmV1XPQ" data-version="2.0.164">Documented against Routes 2.0.164</p>
   
                   
 
@@ -1410,9 +1410,24 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 <td>on</td>
 <td>a road into a town of <a href="https://modrinth.com/mod/cobblemon-cities-structures">Cobblemon Cities &amp; Structures</a> joins the end of a street the town left open, the one facing the road, and not the side of a street or an empty house lot. Does nothing in vanilla villages, in other town packs, or without that mod</td>
 </tr>
+<tr>
+<td>Bridge ramps meet the road</td>
+<td>on</td>
+<td>the ramp up to a bridge always reaches the road below at one step, never a wall, even under a high deck: it steepens over its last cells to hand over to the road</td>
+</tr>
+<tr>
+<td>Ladders on walls at chunk borders</td>
+<td>on</td>
+<td>a wall of two blocks or more where a road crosses into the next chunk, as on a tunnel ramp, gets a ladder like any other wall. Off, such a wall is laddered only if the planned road already stepped there</td>
+</tr>
+<tr>
+<td>No slab that leaves a step and a half</td>
+<td>on</td>
+<td>a slab smooths a one-block rise only where it leaves no step of a block and a half beside it, on the diagonal or into the next chunk; there the rise takes a stair instead</td>
+</tr>
 </tbody>
 </table>
-<p>The six look-and-fit options in that list (everything from <strong>Steps at tunnel mouths</strong> down, except
+<p>The nine look-and-fit options in that list (everything from <strong>Steps at tunnel mouths</strong> down, except
 <strong>Tunnels surface before a town</strong>) only change <strong>chunks generated from now on</strong>: roads already in your world
 keep their blocks, and the planned routes do not move. <strong>Tunnels surface before a town</strong> reshapes the
 planned road, so it follows the rule below for settings that shape the network.</p>
