@@ -895,7 +895,7 @@ live under <a href="https://manucruzleiva.github.io/mod-wiki/routes/latest/route
 <tr>
 <td><code>/nuzlocke map</code></td>
 <td style="text-align: center;">👤</td>
-<td>Dump your capture zones as map waypoints.</td>
+<td>Dump your capture zones as map waypoints (needs Routes).</td>
 </tr>
 <tr>
 <td><code>/nuzlocke reset [player]</code></td>
@@ -1003,8 +1003,8 @@ live under <a href="https://manucruzleiva.github.io/mod-wiki/routes/latest/route
 Cobblemon's interaction wheel.</p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <p>The ruleset is decided <strong>when you create the world</strong>, on a <strong>NUZLOCKE</strong> tab that sits next to
-<strong>GAME / WORLD / MORE</strong>. Installing this add-on is what adds that tab; Routes' own generation options
-live beside it on its <a href="https://manucruzleiva.github.io/mod-wiki/routes/latest/routes/configuration/">ROUTES tab</a>.</p>
+<strong>GAME / WORLD / MORE</strong>. Installing this mod is what adds that tab; with Routes installed, its own
+generation options live beside it on its <a href="https://manucruzleiva.github.io/mod-wiki/routes/latest/routes/configuration/">ROUTES tab</a>.</p>
 <div class="flow">
 <ol>
 <li><span class="flow__tag">Set</span> on the <strong>NUZLOCKE</strong> tab when you create the world</li>
@@ -1088,6 +1088,11 @@ has its rules overwritten. Picking <strong>Hardcore</strong> at world creation t
 <td>Capture zones are</td>
 <td style="text-align: center;">Geography</td>
 <td>what counts as one place — the world Routes draws, the <strong>biome</strong> underfoot, or <strong>both</strong> as a pair</td>
+</tr>
+<tr>
+<td>Zones follow Routes (<code>routes_integration</code>)</td>
+<td style="text-align: center;">on</td>
+<td>with Routes installed, zones are its towns, routes and areas. Off, or without Routes: every mode uses biomes</td>
 </tr>
 <tr>
 <td>Require nicknames</td>
