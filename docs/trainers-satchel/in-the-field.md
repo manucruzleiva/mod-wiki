@@ -44,8 +44,8 @@ With the satchel in your **offhand** and your main hand **empty**, right-click f
 it plants the first seed, sapling, berry or apricorn seed from the Agriculture pocket that grows
 there, one at a time. Right-click on air still opens the bag; bone meal and hoes stay in your hands.
 
-Wearing the bag on your back instead, press **G** (rebindable under Controls) while looking at the
-soil. **Sneak + G** picks which plant goes first.
+Wearing the bag on your back instead, press **,** (comma; rebindable under Controls) while looking at the
+soil. **Sneak + ,** picks which plant goes first.
 
 Nothing plants during a battle, when Agriculture is closed. `/satchel config planting enabled false`
 turns it off.
