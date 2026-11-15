@@ -91,7 +91,8 @@ flowchart TD
   Vermilion, Celadon, Fuchsia, Saffron, Cinnabar and Viridian, plus Lavender and Pallet when placed by
   hand) are towns of the network too: a road joins the end of a street those towns left open, the one
   facing it, and each keeps the name that mod gives it (*Pewter City*, *Pallet Town*; a second Pallet
-  Town in the same world is *Pallet Town 2*). Routes still works without that mod.
+  Town in the same world is *Pallet Town 2*, numbered by distance to the centre of the world, so the same
+  seed always gives the same town the same number). Routes still works without that mod.
 - **Underground towns** — any structure can be set as an *Underground town* in
   [Which structures get roads](which-structures.md). Its road ends at the surface, and right beside the
   end a stone-brick **spiral stairway** goes down to the town: slab half-steps, a landing every 8 blocks
