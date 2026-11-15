@@ -86,7 +86,7 @@ has its rules overwritten. Picking **Hardcore** at world creation turns the full
 | Allow Mega · Gigantamax · Z-Moves · Tera | on | switch off any battle gimmick for a stricter run |
 | Duplicates clause | evolution line | what counts as "already owned" |
 | Egg clause | Encounter | the hatchling takes the zone it hatches in — or ban eggs, or exempt them |
-| Defeated-catch window | 60 s | how long a beaten wild stays catchable — or off |
+| Defeated catch | on | with [Defeated Catch Chance](../defeated-catch-chance/index.md) installed, a beaten wild that is still a legal catch stays catchable (its length is set in that mod's `/dcc config`); off, beating the first encounter loses the zone. `/nuzlocke set defeated_catch_window off` |
 | Aggressive wilds | on | some species start a battle instead of meleeing you |
 | Shared EXP | on | whole team gains EXP |
 | EXP boost | x1 | x1 … x50, applies to the shared EXP too |

@@ -14,8 +14,10 @@ libraries. See [Getting Started](getting-started.md#requirements).
 - **Did a player win?** The window opens only for a wild Pokémon beaten in a battle a player won.
 - **Is it switched on?** Check `/dcc config window`: with `enabled` off, beaten Pokémon vanish as in plain
   Cobblemon.
-- **Is Cobblemon Nuzlocke installed?** While Nuzlocke has its own copy of this feature this mod stands
-  down, and the server log says so. The window you see is then Nuzlocke's, with Nuzlocke's rules.
+- **Is Cobblemon Nuzlocke installed?** In a Nuzlocke run a wild from a zone you already spent gets no
+  window, and Nuzlocke's **Defeated catch** setting can switch the window off. Nuzlocke 1.5.76 and older
+  carry their own copy: then this mod stands down, the server log says so, and the window you see is
+  Nuzlocke's.
 
 ## The window is shorter or longer than 60 seconds
 
