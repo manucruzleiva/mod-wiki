@@ -28,6 +28,11 @@ runs; you only touch it to [change the defaults](commands.md).
 
 ## With Cobblemon Nuzlocke
 
-[Cobblemon Nuzlocke](../nuzlocke/index.md) carries its own copy of this feature. While that copy is
-present, this mod stands down and logs that it did, so the two never run together and never
-double a body.
+Since 1.5.77, [Cobblemon Nuzlocke](../nuzlocke/index.md) uses this mod for its catch window, so install
+this mod to get the window in a Nuzlocke run. The Nuzlocke rules decide who gets one: a wild from a zone
+you already spent gets no window and simply vanishes, and catching the body counts as the zone's
+encounter, while letting the window run out (or the Pokémon get away) loses the zone. Nuzlocke's own
+**Defeated catch** setting switches the window off for a run; the window's length is still this mod's.
+
+Nuzlocke 1.5.76 and older carry their own copy of the feature. With one of those, this mod stands down
+and logs that it did, so the two never run together and never double a body.

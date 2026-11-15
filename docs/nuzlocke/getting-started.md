@@ -6,7 +6,10 @@ in full.
 ## Install
 
 1. Install Cobblemon. **[Routes](../routes/index.md)** is optional: with it (2.0.114 or newer), capture
-   zones are its routes, areas and towns; without it, they are biomes. The full list for your loader is
+   zones are its routes, areas and towns; without it, they are biomes.
+   **[Defeated Catch Chance](../defeated-catch-chance/index.md)** is optional too: with it (0.0.7 or newer)
+   a wild you beat stays catchable for a while; without it, beating a zone's first encounter loses the
+   zone. The full list for your loader is
    in the table at the bottom of the [home page](index.md#get-it).
 2. Drop the jar for **your** loader into `mods/`, never both loaders at once.
 3. On a server, install it **on the server and on every player's game**.
