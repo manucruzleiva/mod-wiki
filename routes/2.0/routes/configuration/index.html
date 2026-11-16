@@ -1416,6 +1416,11 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 <td>where a structure pack can build one of several towns on the same spot (the eleven of <a href="https://modrinth.com/mod/cobblemon-cities-structures">Cobblemon Cities &amp; Structures</a> share one), the town's size, outline and buildings are read from the one the game builds there, not from the first on the pack's list, which can be another town. Vanilla villages read the same either way, except on the border between two biomes. <strong>Fixed per world</strong> (<code>route_town_as_built</code>)</td>
 </tr>
 <tr>
+<td>Roads go around other towns</td>
+<td>on</td>
+<td>a road keeps off the buildings and streets of every town on its way that it does not end at, not only the town it enters, also when it cannot reach its own town's street end. Only when there is no way around does it cross one, by the shortest way out. Off, a town a road only passes just makes the ground near its centre cost more, and a road can clip the corners of a large town (<code>route_around_towns</code>)</td>
+</tr>
+<tr>
 <td>Bridge ramps meet the road</td>
 <td>on</td>
 <td>the ramp up to a bridge always reaches the road below at one step, never a wall, even under a high deck: it steepens over its last cells to hand over to the road</td>
@@ -1438,9 +1443,10 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 </tbody>
 </table>
 <p>The ten look-and-fit options in that list (everything from <strong>Steps at tunnel mouths</strong> down, except
-<strong>Tunnels surface before a town</strong> and <strong>Measure the town that is built</strong>) only change <strong>chunks generated from
-now on</strong>: roads already in your world keep their blocks, and the planned routes do not move. <strong>Tunnels surface
-before a town</strong> and <strong>Measure the town that is built</strong> reshape the planned roads, so they follow the rule
+<strong>Tunnels surface before a town</strong>, <strong>Measure the town that is built</strong> and <strong>Roads go around other towns</strong>) only
+change <strong>chunks generated from now on</strong>: roads already in your world keep their blocks, and the planned routes do
+not move. <strong>Tunnels surface before a town</strong>, <strong>Measure the town that is built</strong> and <strong>Roads go around other
+towns</strong> reshape the planned roads, so they follow the rule
 below for settings that shape the network.</p>
 <h3 id="landmarks">Landmarks<a class="headerlink" href="#landmarks" title="Permanent link">&para;</a></h3>
 <table>
