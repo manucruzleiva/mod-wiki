@@ -135,6 +135,7 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 | Measure the town that is built | on | where a structure pack can build one of several towns on the same spot (the eleven of [Cobblemon Cities & Structures](https://modrinth.com/mod/cobblemon-cities-structures) share one), the town's size, outline and buildings are read from the one the game builds there, not from the first on the pack's list, which can be another town. Vanilla villages read the same either way, except on the border between two biomes. **Fixed per world** (`route_town_as_built`) |
 | Roads go around other towns | on | a road keeps off the buildings and streets of every town on its way that it does not end at, not only the town it enters, also when it cannot reach its own town's street end. Only when there is no way around does it cross one, by the shortest way out. Off, a town a road only passes just makes the ground near its centre cost more, and a road can clip the corners of a large town (`route_around_towns`) |
 | Roads take the long way around a town | on | before a road is laid over a town on its way, the road planner looks once more for a way around it, however long or steep, with that town's buildings and streets and the 16 blocks around them closed to the road. Only when there is none does the road cross the town. Off, a road crosses a town wherever that costs it less than the way around, as it did up to Routes 2.0.184. Only matters with *Roads go around other towns* on. **Fixed per world** (`route_town_walls`) |
+| Roads end on their fork | on | every road of a fork ends on the fork itself, so the roads that part there meet at one point, also where the fork stands over water. Off, each road ends where its own planning grid puts it, up to seven blocks beside the fork, as it did up to Routes 2.0.187: on land the levelled ground of the fork hides that, but over water a bridge could stop beside the others with open water between. **Fixed per world** (`route_fork_ends`) |
 | Bridge ramps meet the road | on | the ramp up to a bridge always reaches the road below at one step, never a wall, even under a high deck: it steepens over its last cells to hand over to the road |
 | Ladders on walls at chunk borders | on | a wall of two blocks or more where a road crosses into the next chunk, as on a tunnel ramp, gets a ladder like any other wall. Off, such a wall is laddered only if the planned road already stepped there |
 | No slab that leaves a step and a half | on | a slab smooths a one-block rise only where it leaves no step of a block and a half beside it, on the diagonal or into the next chunk; there the rise takes a stair instead |
@@ -142,10 +143,11 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 | Roads build the same every time | on | a wild berry tree of Cobblemon standing on a road is cleared like any other plant (Cobblemon spreads the trees of a berry grove differently each time the same world is created, and the road used to stop at each one, so the same spot could be paved in one world and left as grass in the next); a water route that passes under a bridge, or under the platform where roads part (its railing, signposts and piles included), stays open water there, and so does one with a marker stone standing in it, instead of getting loose planks beside them; and each of its marker stones is placed once instead of piling up to four high. Off, those three depend on which chunk generates first (`route_same_every_run`) |
 
 The eleven look-and-fit options in that list (everything from **Steps at tunnel mouths** down, except
-**Tunnels surface before a town**, **Measure the town that is built**, **Roads go around other towns** and **Roads
-take the long way around a town**) only change **chunks generated from now on**: roads already in your world keep
+**Tunnels surface before a town**, **Measure the town that is built**, **Roads go around other towns**, **Roads
+take the long way around a town** and **Roads end on their fork**) only change **chunks generated from now on**: roads already in your world keep
 their blocks, and the planned routes do not move. **Tunnels surface before a town**, **Measure the town that is
-built**, **Roads go around other towns** and **Roads take the long way around a town** reshape the planned roads,
+built**, **Roads go around other towns**, **Roads take the long way around a town** and **Roads end on their fork**
+reshape the planned roads,
 so they follow the rule
 below for settings that shape the network.
 
