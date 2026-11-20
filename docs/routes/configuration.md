@@ -139,12 +139,14 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 | Ladders on walls at chunk borders | on | a wall of two blocks or more where a road crosses into the next chunk, as on a tunnel ramp, gets a ladder like any other wall. Off, such a wall is laddered only if the planned road already stepped there |
 | No slab that leaves a step and a half | on | a slab smooths a one-block rise only where it leaves no step of a block and a half beside it, on the diagonal or into the next chunk; there the rise takes a stair instead |
 | No boulders on the road | on | boulders (mossy rocks in old growth taiga) are kept off the road and its edge, as trees already are, so a boulder from the next chunk can no longer land on a road already built or float over it, and the same world builds the same roads whichever chunk generates first |
+| Roads build the same every time | on | a wild berry tree of Cobblemon standing on a road is cleared like any other plant (Cobblemon spreads the trees of a berry grove differently each time the same world is created, and the road used to stop at each one, so the same spot could be paved in one world and left as grass in the next); a water route that passes under a bridge, or under the platform where roads part (its railing, signposts and piles included), stays open water there, and so does one with a marker stone standing in it, instead of getting loose planks beside them; and each of its marker stones is placed once instead of piling up to four high. Off, those three depend on which chunk generates first (`route_same_every_run`) |
 
-The ten look-and-fit options in that list (everything from **Steps at tunnel mouths** down, except
-**Tunnels surface before a town**, **Measure the town that is built** and **Roads go around other towns**) only
-change **chunks generated from now on**: roads already in your world keep their blocks, and the planned routes do
-not move. **Tunnels surface before a town**, **Measure the town that is built** and **Roads go around other
-towns** reshape the planned roads, so they follow the rule
+The eleven look-and-fit options in that list (everything from **Steps at tunnel mouths** down, except
+**Tunnels surface before a town**, **Measure the town that is built**, **Roads go around other towns** and **Roads
+take the long way around a town**) only change **chunks generated from now on**: roads already in your world keep
+their blocks, and the planned routes do not move. **Tunnels surface before a town**, **Measure the town that is
+built**, **Roads go around other towns** and **Roads take the long way around a town** reshape the planned roads,
+so they follow the rule
 below for settings that shape the network.
 
 ### Landmarks
