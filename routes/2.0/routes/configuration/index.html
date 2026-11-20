@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -1507,6 +1507,11 @@ below for settings that shape the network.</p>
 <td>Welcome board on piers</td>
 <td>on</td>
 <td>a town reached by a pier (a town in the sea), or by a bridge that ends at the town, with no ground beside the end of the deck gets its welcome board on top of a post of the railing at the town end, facing out along the deck, so you read it as you walk in from the boat. A town whose board finds ground keeps it there. Off: such a town gets no board. Affects chunks not generated yet (<code>route_welcome_on_piers</code>)</td>
+</tr>
+<tr>
+<td>Blank signs get their text</td>
+<td>on</td>
+<td>a road sign, welcome board or landmark sign that was left blank (its text is written a moment after the sign is placed, and sometimes never was) gets its text when you come near it, in worlds you already had too. A sign that already reads something, your own words included, is left alone. Landmark signs placed by a version before this one stay as they are. Off: a blank sign stays blank (<code>route_sign_repair</code>)</td>
 </tr>
 </tbody>
 </table>
