@@ -1421,6 +1421,11 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 <td>a road keeps off the buildings and streets of every town on its way that it does not end at, not only the town it enters, also when it cannot reach its own town's street end. Only when there is no way around does it cross one, by the shortest way out. Off, a town a road only passes just makes the ground near its centre cost more, and a road can clip the corners of a large town (<code>route_around_towns</code>)</td>
 </tr>
 <tr>
+<td>Roads take the long way around a town</td>
+<td>on</td>
+<td>before a road is laid over a town on its way, the road planner looks once more for a way around it, however long or steep, with that town's buildings and streets and the 16 blocks around them closed to the road. Only when there is none does the road cross the town. Off, a road crosses a town wherever that costs it less than the way around, as it did up to Routes 2.0.184. Only matters with <em>Roads go around other towns</em> on. <strong>Fixed per world</strong> (<code>route_town_walls</code>)</td>
+</tr>
+<tr>
 <td>Bridge ramps meet the road</td>
 <td>on</td>
 <td>the ramp up to a bridge always reaches the road below at one step, never a wall, even under a high deck: it steepens over its last cells to hand over to the road</td>
