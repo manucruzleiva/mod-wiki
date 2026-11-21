@@ -136,6 +136,7 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 | Roads go around other towns | on | a road keeps off the buildings and streets of every town on its way that it does not end at, not only the town it enters, also when it cannot reach its own town's street end. Only when there is no way around does it cross one, by the shortest way out. Off, a town a road only passes just makes the ground near its centre cost more, and a road can clip the corners of a large town (`route_around_towns`) |
 | Roads take the long way around a town | on | before a road is laid over a town on its way, the road planner looks once more for a way around it, however long or steep, with that town's buildings and streets and the 16 blocks around them closed to the road. Only when there is none does the road cross the town. Off, a road crosses a town wherever that costs it less than the way around, as it did up to Routes 2.0.184. Only matters with *Roads go around other towns* on. **Fixed per world** (`route_town_walls`) |
 | Roads end on their fork | on | every road of a fork ends on the fork itself, so the roads that part there meet at one point, also where the fork stands over water. Off, each road ends where its own planning grid puts it, up to seven blocks beside the fork, as it did up to Routes 2.0.187: on land the levelled ground of the fork hides that, but over water a bridge could stop beside the others with open water between. **Fixed per world** (`route_fork_ends`) |
+| Roads join in front of the street end | on | a road that would head back beside its own town's road, from the fork where that road parts, starts instead in front of the street end the town's road leaves by, at a junction planted there with its fingerposts, so no two roads of a town run side by side. The fork moves to that junction when it stands near it or only one other road leaves it; otherwise it stays, linked to the junction by a road of its own. Where the ground from the street end to the junction is too steep for that short stretch, nothing changes. Off, the fork stays where it is measured from the middle of the town, as it did up to Routes 2.0.189, and a road can run back beside the town's road for a stretch. Only matters with *Roads enter towns by a street end* on. **Fixed per world** (`route_join_at_street_ends`) |
 | Bridge ramps meet the road | on | the ramp up to a bridge always reaches the road below at one step, never a wall, even under a high deck: it steepens over its last cells to hand over to the road |
 | Ladders on walls at chunk borders | on | a wall of two blocks or more where a road crosses into the next chunk, as on a tunnel ramp, gets a ladder like any other wall. Off, such a wall is laddered only if the planned road already stepped there |
 | No slab that leaves a step and a half | on | a slab smooths a one-block rise only where it leaves no step of a block and a half beside it, on the diagonal or into the next chunk; there the rise takes a stair instead |
@@ -144,10 +145,10 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 
 The eleven look-and-fit options in that list (everything from **Steps at tunnel mouths** down, except
 **Tunnels surface before a town**, **Measure the town that is built**, **Roads go around other towns**, **Roads
-take the long way around a town** and **Roads end on their fork**) only change **chunks generated from now on**: roads already in your world keep
+take the long way around a town**, **Roads end on their fork** and **Roads join in front of the street end**) only change **chunks generated from now on**: roads already in your world keep
 their blocks, and the planned routes do not move. **Tunnels surface before a town**, **Measure the town that is
-built**, **Roads go around other towns**, **Roads take the long way around a town** and **Roads end on their fork**
-reshape the planned roads,
+built**, **Roads go around other towns**, **Roads take the long way around a town**, **Roads end on their fork** and
+**Roads join in front of the street end** reshape the planned roads,
 so they follow the rule
 below for settings that shape the network.
 
