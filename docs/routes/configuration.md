@@ -180,7 +180,7 @@ below for settings that shape the network.
 
 ### Advanced
 
-Ten options a first world rarely needs. The section starts closed.
+Eleven options a first world rarely needs. The section starts closed.
 
 | Option | Default | Notes |
 | --- | --- | --- |
