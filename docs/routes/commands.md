@@ -35,10 +35,13 @@ which changes how the map looks to you.
 
 ## 🛤️ `/routes` — the road network
 
-`status`, `list` and `nearest` answer from what players have **discovered** — the towns somebody has walked into, the
-routes somebody has walked, the areas somebody has entered — never from the whole world the seed has
-planned. Until someone has, they answer *Nothing discovered yet — walk into a town or onto a road
-first*. The whole planned network is what `debug towns`, further down, is for.
+`status`, `list` and `nearest` answer from what is **discovered** — the towns somebody has stood in, the
+routes the world has already drawn (a route is numbered when its first chunk generates, not when
+someone walks it), the areas somebody has entered — never from the whole world the seed has
+planned. Until then they answer *Nothing discovered yet*. In a new world with roads on, the spawn
+town makes this non-empty within seconds; if it stays empty, see
+[Troubleshooting](troubleshooting.md#routes-status-says-nothing-discovered-or-my-map-shows-no-roads).
+The whole planned network is what `debug towns`, further down, is for.
 
 Roads only exist in the Overworld. From the Nether, the End or another dimension, `status` and `list` still
 show what was discovered in the Overworld, while `nearest`, `zone` and the zone commands that work where you
