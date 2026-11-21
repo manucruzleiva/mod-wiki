@@ -49,7 +49,11 @@ stand answer *Routes roads only exist in the Overworld*. The **Commands answer f
 (`route_commands_overworld`, on by default) turns this off.
 
 ### `status` — 👤
-The world at a glance: how many **towns**, **routes** and **areas** have been discovered.
+The world at a glance: how many **towns**, **routes** and **areas** have been discovered. Under it, a
+second line says whether roads are on for this world and whether you got a spawn town:
+`Roads: on for this world · Spawn town: placed` (or `off`, or `none found`). The same line follows
+every *Nothing discovered yet*, so an empty answer says why. The **Status says if roads are on**
+setting (`route_status_line`) hides it.
 
 ### `list [cities|routes]` — 👤
 The full inventory. `cities` lists every discovered town with its `x, z` coordinates; `routes` lists

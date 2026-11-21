@@ -39,7 +39,7 @@ Nothing in Routes "starts" or runs in the background: roads are built as chunks 
 route is counted the moment its first chunk is drawn. The only progress you see is the spawn
 pregeneration, `Loading chunks… x / 512` on the action bar the first time you join. In a new world
 with roads on, you spawn inside a town, so `/routes status` is not empty after a few seconds. If it
-stays empty, check in this order:
+stays empty, read the line under it, `Roads: … · Spawn town: …`, then check in this order:
 
 1. **Are roads on for this world?** `/routes config get enable_route_generation`. It is chosen in the
    ROUTES tab when the world is created and stored with it; see
