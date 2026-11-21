@@ -1656,6 +1656,11 @@ below for settings that shape the network.</p>
 <td>on</td>
 <td>Routes builds roads only in the Overworld, so <code>/routes status</code> and <code>/routes list</code> show the Overworld's towns, routes and areas from the Nether, the End or any other dimension, and <code>/routes nearest</code>, <code>/routes zone</code> and the zone commands that work where you stand say the roads exist only in the Overworld instead of <em>Nothing discovered yet</em>. Off: each command reads the dimension you are in, which outside the Overworld is always empty (<code>route_commands_overworld</code>)</td>
 </tr>
+<tr>
+<td>Status says if roads are on</td>
+<td>on</td>
+<td><code>/routes status</code>, and every <em>Nothing discovered yet</em>, add a line any player can read: <code>Roads: on for this world · Spawn town: placed</code>. Roads read <strong>off</strong> when this world was made with roads off; the spawn town reads <strong>none found</strong> when no town near the spawn was usable, and <strong>off</strong> when roads or <strong>Start in a town</strong> are off. Off: the line is left out (<code>route_status_line</code>)</td>
+</tr>
 </tbody>
 </table>
 <h3 id="map-notifications-not-on-the-tab">Map &amp; Notifications (not on the tab)<a class="headerlink" href="#map-notifications-not-on-the-tab" title="Permanent link">&para;</a></h3>
