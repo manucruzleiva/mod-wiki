@@ -40,6 +40,11 @@ routes somebody has walked, the areas somebody has entered — never from the wh
 planned. Until someone has, they answer *Nothing discovered yet — walk into a town or onto a road
 first*. The whole planned network is what `debug towns`, further down, is for.
 
+Roads only exist in the Overworld. From the Nether, the End or another dimension, `status` and `list` still
+show what was discovered in the Overworld, while `nearest`, `zone` and the zone commands that work where you
+stand answer *Routes roads only exist in the Overworld*. The **Commands answer from the Overworld** setting
+(`route_commands_overworld`, on by default) turns this off.
+
 ### `status` — 👤
 The world at a glance: how many **towns**, **routes** and **areas** have been discovered.
 

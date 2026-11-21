@@ -194,6 +194,7 @@ Ten options a first world rarely needs. The section starts closed.
 | Shape the land with the road | on | the ground is road-shaped **before** anything is planted on it, instead of cut and filled afterwards. Decided once, when the world is created |
 | Build road chunks early | on | generate a road's chunks a little before you reach them, so the cost lands while you walk |
 | Area names | on | *A3-Frostpine* on an area's waypoint and banner; off keeps the plain *Area 3* |
+| Commands answer from the Overworld | on | Routes builds roads only in the Overworld, so `/routes status` and `/routes list` show the Overworld's towns, routes and areas from the Nether, the End or any other dimension, and `/routes nearest`, `/routes zone` and the zone commands that work where you stand say the roads exist only in the Overworld instead of *Nothing discovered yet*. Off: each command reads the dimension you are in, which outside the Overworld is always empty (`route_commands_overworld`) |
 
 ### Map & Notifications (not on the tab)
 
