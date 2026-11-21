@@ -1456,6 +1456,11 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 <td>boulders (mossy rocks in old growth taiga) are kept off the road and its edge, as trees already are, so a boulder from the next chunk can no longer land on a road already built or float over it, and the same world builds the same roads whichever chunk generates first</td>
 </tr>
 <tr>
+<td>Commands clear overhanging trees</td>
+<td>on</td>
+<td><code>/routes road commit</code> and <code>/routes debug paint</code> take the leaves and branches hanging over a road they draw through trees that were already there, on the paving and the column beside it, the way a road in new chunks is cleared. Off: only the space right over the paving is cleared, and the crown of a tree beside the road can stay over its edge. On roads drawn from then on (<code>route_commit_crowns</code>)</td>
+</tr>
+<tr>
 <td>Roads build the same every time</td>
 <td>on</td>
 <td>a wild berry tree of Cobblemon standing on a road is cleared like any other plant (Cobblemon spreads the trees of a berry grove differently each time the same world is created, and the road used to stop at each one, so the same spot could be paved in one world and left as grass in the next); a water route that passes under a bridge, or under the platform where roads part (its railing, signposts and piles included), stays open water there, and so does one with a marker stone standing in it, instead of getting loose planks beside them; and each of its marker stones is placed once instead of piling up to four high. Off, those three depend on which chunk generates first (<code>route_same_every_run</code>)</td>
