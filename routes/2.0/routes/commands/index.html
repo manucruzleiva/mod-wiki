@@ -1839,6 +1839,10 @@ which changes how the map looks to you.</p>
 routes somebody has walked, the areas somebody has entered — never from the whole world the seed has
 planned. Until someone has, they answer <em>Nothing discovered yet — walk into a town or onto a road
 first</em>. The whole planned network is what <code>debug towns</code>, further down, is for.</p>
+<p>Roads only exist in the Overworld. From the Nether, the End or another dimension, <code>status</code> and <code>list</code> still
+show what was discovered in the Overworld, while <code>nearest</code>, <code>zone</code> and the zone commands that work where you
+stand answer <em>Routes roads only exist in the Overworld</em>. The <strong>Commands answer from the Overworld</strong> setting
+(<code>route_commands_overworld</code>, on by default) turns this off.</p>
 <h3 id="status"><code>status</code> — 👤<a class="headerlink" href="#status" title="Permanent link">&para;</a></h3>
 <p>The world at a glance: how many <strong>towns</strong>, <strong>routes</strong> and <strong>areas</strong> have been discovered.</p>
 <h3 id="list-citiesroutes"><code>list [cities|routes]</code> — 👤<a class="headerlink" href="#list-citiesroutes" title="Permanent link">&para;</a></h3>
