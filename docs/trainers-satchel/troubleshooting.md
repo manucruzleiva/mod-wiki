@@ -24,6 +24,13 @@ Materials are closed until it ends ([In Battle & in the Field](in-the-field.md#i
 An operator set `battle balls_per_battle` or `items_per_battle`. The count starts again with the next
 battle.
 
+## The plant key does nothing
+
+Since 0.0.20 the plant key defaults to **,** (comma); it was `G` before, the same key as Cobblemon
+Action Combat's bag, and on Fabric only one action per key works. A key you set yourself stays as it
+was: rebind **Plant from the satchel** under Controls if it clashes with another mod
+([Planting from the bag](in-the-field.md#planting-from-the-bag)).
+
 ## Right-clicking the PC does not ask anything
 
 `pc_storage` is switched off on the server, so the PC opens straight to Cobblemon's PC

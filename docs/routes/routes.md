@@ -110,7 +110,9 @@ flowchart TD
 - **Roads meet the town's own streets** — a road joins a town at the open end of a street, at street
   level, never behind a house or climbing into the air. A pack can mark its street ends with an open
   jigsaw named `routes:city_exit`, and the road then continues the street that faces
-  it most squarely.
+  it most squarely; a town that marks none, a vanilla village included, offers the dead ends of its
+  streets. A street end that opens on water takes a water route, which ends there in a plank
+  **pier** level with the street, so a town standing in the sea is reached from the boats.
 - **Spawn in a city** — new worlds start next to the nearest city, on real ground, never in the
   water — coastal towns included.
 - **A loading screen that shows the real wait** — while a new world opens, two towns and the road
