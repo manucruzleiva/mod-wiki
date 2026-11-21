@@ -56,6 +56,8 @@ By default everything is paid in experience. A server can bill in **money** inst
   dollars or 50 items.
 - **When the money cannot be charged** (CobbleDollars or Impactor not installed, or the item does not
   exist), everything is paid in experience, whatever the setting says.
+- **Impactor goes on the server only.** The server works out whether its money can be charged, so
+  players never need Impactor on their own game.
 
 Whenever money can pay, the page cannot see your balance, so the buttons stay live and the server is
 the one that decides whether you can afford it.

@@ -107,18 +107,18 @@ extra:
     routes:         { name: Routes,                         version: 2.0.196, modrinth: PfmV1XPQ, repo: routes }
     nuzlocke:       { name: Cobblemon Nuzlocke & Soul Link, version: 1.5.77, modrinth: wHlszYZN, repo: cobblemon-nuzlocke }
     picnic:         { name: Cobblemon Picnic,               version: 5.1.3, modrinth: sfptxo0H, repo: cobblemon-picnic }
-    cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.6.5, modrinth: JNfSyMuQ, repo: cobblemon-hms }
+    cobblemon-hms:  { name: Cobblemon HMs,                  version: 4.6.6, modrinth: JNfSyMuQ, repo: cobblemon-hms }
     raid-icons:     { name: Cobblemon Raid Icons,           version: 3.1.0, modrinth: S01tPZTk, repo: cobblemon-raid-icons }
-    champions:      { name: Cobblemon Champions Training,   version: 2.4.0, modrinth: PlTQXswh, repo: cobblemon-champions-training }
+    champions:      { name: Cobblemon Champions Training,   version: 2.4.1, modrinth: PlTQXswh, repo: cobblemon-champions-training }
     tree-carve:     { name: Tree Carve,                     version: 2.0.0, modrinth: qkkteeJr, repo: tree-carve }
     mid-battle-exp: { name: Cobblemon Mid-Battle EXP,       version: 2.3.0, modrinth: ShgrcSQY, repo: cobblemon-mid-battle-exp }
     # PokeTowns esta discontinuado: queda solo su pagina de aviso, y sin modrinth ni repo no se vigila.
     poketowns:      { name: Cobblemon PokeTowns,            version: 0.0.17 }
     action-combat:  { name: Cobblemon Action Combat,        version: 0.1.53, repo: cobblemon-action-combat }
     poketrades:     { name: Cobblemon PokeTrades,           version: 0.0.26, repo: cobblemon-poketrades }
-    pokegyms:       { name: Cobblemon PokeGyms,             version: 0.0.49, repo: cobblemon-pokegyms }
+    pokegyms:       { name: Cobblemon PokeGyms,             version: 0.0.50, repo: cobblemon-pokegyms }
     defeated-catch-chance: { name: Cobblemon Defeated Catch Chance, version: 0.0.7, repo: cobblemon-defeated-catch-chance }
-    trainers-satchel: { name: Cobblemon Trainer's Satchel, version: 0.0.19, repo: cobblemon-trainers-satchel }
+    trainers-satchel: { name: Cobblemon Trainer's Satchel, version: 0.0.20, repo: cobblemon-trainers-satchel }
   # La ficha tecnica de cada mod: lo que dice su jar publicado (fabric.mod.json y neoforge.mods.toml
   # del tag del ultimo release), no lo que se recuerda. De aca salen, por hooks/mod_specs.py, las
   # insignias del hero de cada index, la tabla "Get it" de cada index, y en la portada los chips de
