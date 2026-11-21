@@ -43,7 +43,10 @@ name** (`/routes config set route_waystone_names false`).
   (**A1, A2, …** with a nature flavour, e.g. "A3-Frostpine") shown by their entry pop-up.
 
 Chunks are painted once **your** map has discovered them, so a new world's map is not tinted far
-from anywhere you have been.
+from anywhere you have been. The paint is only on the **Overworld** map, and it is faint on purpose:
+each tint starts at **13 %** opacity, easy to miss on the minimap. `/routesmap opacity route 60`
+makes roads stand out. There is no line or pin for a road that has not generated yet, and no map
+of the planned network: waypoints appear when you first reach a town.
 
 ## Xaero's World Map
 
