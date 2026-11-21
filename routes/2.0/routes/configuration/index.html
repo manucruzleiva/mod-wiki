@@ -1431,6 +1431,11 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 <td>every road of a fork ends on the fork itself, so the roads that part there meet at one point, also where the fork stands over water. Off, each road ends where its own planning grid puts it, up to seven blocks beside the fork, as it did up to Routes 2.0.187: on land the levelled ground of the fork hides that, but over water a bridge could stop beside the others with open water between. <strong>Fixed per world</strong> (<code>route_fork_ends</code>)</td>
 </tr>
 <tr>
+<td>Roads join in front of the street end</td>
+<td>on</td>
+<td>a road that would head back beside its own town's road, from the fork where that road parts, starts instead in front of the street end the town's road leaves by, at a junction planted there with its fingerposts, so no two roads of a town run side by side. The fork moves to that junction when it stands near it or only one other road leaves it; otherwise it stays, linked to the junction by a road of its own. Where the ground from the street end to the junction is too steep for that short stretch, nothing changes. Off, the fork stays where it is measured from the middle of the town, as it did up to Routes 2.0.189, and a road can run back beside the town's road for a stretch. Only matters with <em>Roads enter towns by a street end</em> on. <strong>Fixed per world</strong> (<code>route_join_at_street_ends</code>)</td>
+</tr>
+<tr>
 <td>Bridge ramps meet the road</td>
 <td>on</td>
 <td>the ramp up to a bridge always reaches the road below at one step, never a wall, even under a high deck: it steepens over its last cells to hand over to the road</td>
@@ -1459,10 +1464,10 @@ or wall. Random rolls one of twelve per route: every fence but mangrove and cher
 </table>
 <p>The eleven look-and-fit options in that list (everything from <strong>Steps at tunnel mouths</strong> down, except
 <strong>Tunnels surface before a town</strong>, <strong>Measure the town that is built</strong>, <strong>Roads go around other towns</strong>, <strong>Roads
-take the long way around a town</strong> and <strong>Roads end on their fork</strong>) only change <strong>chunks generated from now on</strong>: roads already in your world keep
+take the long way around a town</strong>, <strong>Roads end on their fork</strong> and <strong>Roads join in front of the street end</strong>) only change <strong>chunks generated from now on</strong>: roads already in your world keep
 their blocks, and the planned routes do not move. <strong>Tunnels surface before a town</strong>, <strong>Measure the town that is
-built</strong>, <strong>Roads go around other towns</strong>, <strong>Roads take the long way around a town</strong> and <strong>Roads end on their fork</strong>
-reshape the planned roads,
+built</strong>, <strong>Roads go around other towns</strong>, <strong>Roads take the long way around a town</strong>, <strong>Roads end on their fork</strong> and
+<strong>Roads join in front of the street end</strong> reshape the planned roads,
 so they follow the rule
 below for settings that shape the network.</p>
 <h3 id="landmarks">Landmarks<a class="headerlink" href="#landmarks" title="Permanent link">&para;</a></h3>
