@@ -706,6 +706,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#routes-status-says-nothing-discovered-or-my-map-shows-no-roads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /routes status says nothing discovered, or my map shows no roads
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-to-paste-into-a-report" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -831,6 +842,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#routes-status-says-nothing-discovered-or-my-map-shows-no-roads" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /routes status says nothing discovered, or my map shows no roads
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-to-paste-into-a-report" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -884,6 +906,31 @@ like any other world.</p>
 <p>Routes only connects the structures it finds in your world, and it decides that per kind of
 structure. See <a href="../which-structures/">Which Structures Get Roads</a>. If one still looks wrong, the next
 section says what to send.</p>
+<h2 id="routes-status-says-nothing-discovered-or-my-map-shows-no-roads"><code>/routes status</code> says nothing discovered, or my map shows no roads<a class="headerlink" href="#routes-status-says-nothing-discovered-or-my-map-shows-no-roads" title="Permanent link">&para;</a></h2>
+<p>Nothing in Routes "starts" or runs in the background: roads are built as chunks generate, and a
+route is counted the moment its first chunk is drawn. The only progress you see is the spawn
+pregeneration, <code>Loading chunks… x / 512</code> on the action bar the first time you join. In a new world
+with roads on, you spawn inside a town, so <code>/routes status</code> is not empty after a few seconds. If it
+stays empty, check in this order:</p>
+<ol>
+<li><strong>Are roads on for this world?</strong> <code>/routes config get enable_route_generation</code>. It is chosen in the
+   ROUTES tab when the world is created and stored with it; see
+   <a href="../configuration/#routes-tab">Configuration</a>.</li>
+<li><strong>Are you in the Overworld?</strong> Routes builds roads only there.</li>
+<li><strong>Are there towns to connect?</strong> A world generator with no villages, every structure set to
+   Ignored, or an allowlist that matches nothing leaves nothing to join. See
+   <a href="../which-structures/">Which Structures Get Roads</a>. An operator can list the planned towns with
+   <code>/routes debug towns</code> (in singleplayer this needs cheats on).</li>
+<li><strong>Did you spawn in a town?</strong> If no town near spawn was usable, you start in the wilderness, and
+   the nearest road can be outside the area generated so far. Explore, or ask an operator for
+   <code>/routes debug towns</code>.</li>
+</ol>
+<p>On the map, the paint is faint and only covers chunks your map has already seen; see
+<a href="../map-integration/#xaeros-minimap">Map Integration</a>. If none of this explains it, these lines of
+<code>latest.log</code> settle it: <code>[Routes gen2] ARMED</code>, <code>spawn-in-city check: … route generation=</code>,
+<code>spawn-in-city: exit=</code>, <code>feature ALIVE</code>, <code>supercell […]: S settlements -&gt; N nodes, E edges</code> and
+<code>Xaero chunk-paint highlighter registered</code>. <code>Common init complete — route generation:</code> shows the
+global setting, not this world's.</p>
 <h2 id="what-to-paste-into-a-report">What to paste into a report<a class="headerlink" href="#what-to-paste-into-a-report" title="Permanent link">&para;</a></h2>
 <p>For a road that looks wrong: <code>/routes debug gaps</code> and, if a bridge or a tunnel is involved,
 <code>/routes debug bridge</code> or <code>/routes debug bore</code>. For a town that should be connected and is not:

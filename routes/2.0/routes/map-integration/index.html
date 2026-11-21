@@ -918,7 +918,10 @@ name</strong> (<code>/routes config set route_waystone_names false</code>).</p>
   (<strong>A1, A2, …</strong> with a nature flavour, e.g. "A3-Frostpine") shown by their entry pop-up.</li>
 </ul>
 <p>Chunks are painted once <strong>your</strong> map has discovered them, so a new world's map is not tinted far
-from anywhere you have been.</p>
+from anywhere you have been. The paint is only on the <strong>Overworld</strong> map, and it is faint on purpose:
+each tint starts at <strong>13 %</strong> opacity, easy to miss on the minimap. <code>/routesmap opacity route 60</code>
+makes roads stand out. There is no line or pin for a road that has not generated yet, and no map
+of the planned network: waypoints appear when you first reach a town.</p>
 <h2 id="xaeros-world-map">Xaero's World Map<a class="headerlink" href="#xaeros-world-map" title="Permanent link">&para;</a></h2>
 <p>The chunk paint also renders on the <strong>full-screen World Map (key M)</strong> — visible independently of
 the minimap's Cave Mode and of your Y level, on the surface and in caves alike.</p>

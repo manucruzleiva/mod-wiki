@@ -1835,10 +1835,13 @@ which changes how the map looks to you.</p>
 </table>
 <hr />
 <h2 id="routes-the-road-network">🛤️ <code>/routes</code> — the road network<a class="headerlink" href="#routes-the-road-network" title="Permanent link">&para;</a></h2>
-<p><code>status</code>, <code>list</code> and <code>nearest</code> answer from what players have <strong>discovered</strong> — the towns somebody has walked into, the
-routes somebody has walked, the areas somebody has entered — never from the whole world the seed has
-planned. Until someone has, they answer <em>Nothing discovered yet — walk into a town or onto a road
-first</em>. The whole planned network is what <code>debug towns</code>, further down, is for.</p>
+<p><code>status</code>, <code>list</code> and <code>nearest</code> answer from what is <strong>discovered</strong> — the towns somebody has stood in, the
+routes the world has already drawn (a route is numbered when its first chunk generates, not when
+someone walks it), the areas somebody has entered — never from the whole world the seed has
+planned. Until then they answer <em>Nothing discovered yet</em>. In a new world with roads on, the spawn
+town makes this non-empty within seconds; if it stays empty, see
+<a href="../troubleshooting/#routes-status-says-nothing-discovered-or-my-map-shows-no-roads">Troubleshooting</a>.
+The whole planned network is what <code>debug towns</code>, further down, is for.</p>
 <p>Roads only exist in the Overworld. From the Nether, the End or another dimension, <code>status</code> and <code>list</code> still
 show what was discovered in the Overworld, while <code>nearest</code>, <code>zone</code> and the zone commands that work where you
 stand answer <em>Routes roads only exist in the Overworld</em>. The <strong>Commands answer from the Overworld</strong> setting
