@@ -195,6 +195,7 @@ Eleven options a first world rarely needs. The section starts closed.
 | Build road chunks early | on | generate a road's chunks a little before you reach them, so the cost lands while you walk |
 | Area names | on | *A3-Frostpine* on an area's waypoint and banner; off keeps the plain *Area 3* |
 | Commands answer from the Overworld | on | Routes builds roads only in the Overworld, so `/routes status` and `/routes list` show the Overworld's towns, routes and areas from the Nether, the End or any other dimension, and `/routes nearest`, `/routes zone` and the zone commands that work where you stand say the roads exist only in the Overworld instead of *Nothing discovered yet*. Off: each command reads the dimension you are in, which outside the Overworld is always empty (`route_commands_overworld`) |
+| Status says if roads are on | on | `/routes status`, and every *Nothing discovered yet*, add a line any player can read: `Roads: on for this world · Spawn town: placed`. Roads read **off** when this world was made with roads off; the spawn town reads **none found** when no town near the spawn was usable, and **off** when roads or **Start in a town** are off. Off: the line is left out (`route_status_line`) |
 
 ### Map & Notifications (not on the tab)
 
