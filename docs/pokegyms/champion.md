@@ -1,7 +1,7 @@
 # The Champion
 
 Once you carry enough badges, the world has one more trainer to beat: its **Champion**, a Radical Cobblemon
-Trainers (RCT) trainer of RCT's own `champion` type. The Champion stands behind a **Champion's Lectern**.
+Trainers (RCT) champion, of RCT's own `champ` trainer type. The Champion stands behind a **Champion's Lectern**.
 Beat it and you get a trophy; lose and you pay for it.
 
 ## The Champion's Lectern
@@ -22,8 +22,11 @@ Shaped recipe (3 gold blocks, 1 diamond block, 1 lectern):
   lectern says so.
 - **Breaking this world's lectern sends the Champion away,** and there is none until a lectern is placed again.
   The lectern drops itself.
-- **The Champion is picked once.** It is one of RCT's `champion` trainers, the same one for the same world.
-  Without a `champion` trainer in RCT there is no Champion, and the lectern says it is not ready.
+- **The Champion is picked once.** It is one of RCT's `champ` trainers whose id starts with `champion_` (Cynthia,
+  Terry, Jax...), the same one for the same world; RCT's title-defense rematches, also `champ`, are left out. A data
+  pack whose `champ` trainers have other ids gets one of those. Without a `champ` trainer in RCT there is no
+  Champion, and the lectern says it is not ready. Before 0.0.51 PokeGyms looked for a `champion` type RCT does
+  not have, so no Champion ever stood.
 - **Click the lectern, or the Champion,** to challenge. Both do the same.
 
 ## Who may challenge
