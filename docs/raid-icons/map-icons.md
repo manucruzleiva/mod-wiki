@@ -158,7 +158,7 @@ the same place — so it stays on the map.
 
 ### The right-click menu
 
-Right-click a den on either map and Xaero's menu is titled by the same rule as the icon:
+Right-click a den on the world map and Xaero's menu is titled by the same rule as the icon:
 **`Fighting Raid Den`** for an ordinary den, **`Gigantamax Raid Den`** for a featured one.
 
 ## What gets an icon
