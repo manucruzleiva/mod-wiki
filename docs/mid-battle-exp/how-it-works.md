@@ -90,8 +90,8 @@ With Cobblemon Capture XP installed, this mod pays nothing for captures.
 
 Like the prize money in the main games: when you **win** a battle against an NPC trainer, every
 Pokémon still standing gets **a quarter of the EXP it earned in that battle**, and you get **1 XP
-point per level** of the trainer's strongest Pokémon. The battle log says
-`Victory bonus: +120 EXP to your team, +25 XP to you`. Wild battles and PvP pay no bonus, and neither
+point per level** of the trainer's strongest Pokémon. Once the battle closes, your chat says
+`Victory bonus: +120 EXP to your team, +25 XP to you` (since 2.3.2; before that the line was lost). Wild battles and PvP pay no bonus, and neither
 does losing or fleeing. With Cobblemon: PlayerXP installed, the player's part is left to that mod.
 
 ### New Pokédex entries
@@ -210,13 +210,15 @@ opponent and anyone watching see the new level and HP on the battle bar, and not
 | A knockout pays EXP | `Pikachu gained 245 Exp. Points!` |
 | The same, in a gym battle | `Pikachu gained 36 Exp. Points! (gym ×1.5)` |
 | The player gets their share | `Steve gained 24 experience!` |
-| A won battle against an NPC trainer | `Victory bonus: +120 EXP to your team, +25 XP to you` |
 | It levels up | `Pikachu grew to Lv. 23!` |
 | Its stats change | `Pikachu's stats rose: HP +3, Atk +2, Spe +3` — only the stats that rose |
 | It learns a move into a free slot | `Pikachu learned Thunderbolt!` |
 | The move screen opens | `Pikachu wants to learn Thunderbolt…` — once per new move |
 | A new move replaces an old one | `Pikachu forgot Tackle and learned Thunderbolt!` |
 | A new move goes to the move pool | `Pikachu did not learn Thunderbolt.` |
+
+The victory bonus line is the one exception: it goes to chat, because the battle has already closed
+when it is paid.
 
 A nickname is used wherever the Pokémon has one. A Pokémon at level 100 gains no EXP, so it gets no
 EXP or level line, only `stats rose` when its EVs move a stat.
