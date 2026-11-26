@@ -24,6 +24,9 @@ The contents live on the bag itself, so they survive closing it, dropping it and
    keeps it out of every pocket.
 2. Otherwise the **pocket tags** `cobblemon_trainers_satchel:pocket/<pocket id>`, which a datapack can
    edit. This is how items from other mods land in the right place without any setup.
+   When two pocket tags hold the same item, the first pocket in tab order takes it, unless a pocket
+   lists it in `cobblemon_trainers_satchel:pocket_priority/<pocket id>`. Bone is listed there for
+   **Materials & Drops**, because Cobblemon also tags it as a held item.
 
 A rule always wins over the tags. Remove the rule and the tags decide again.
 
