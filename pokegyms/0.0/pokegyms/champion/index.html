@@ -862,7 +862,7 @@
 
 <h1 id="the-champion">The Champion<a class="headerlink" href="#the-champion" title="Permanent link">&para;</a></h1>
 <p>Once you carry enough badges, the world has one more trainer to beat: its <strong>Champion</strong>, a Radical Cobblemon
-Trainers (RCT) trainer of RCT's own <code>champion</code> type. The Champion stands behind a <strong>Champion's Lectern</strong>.
+Trainers (RCT) champion, of RCT's own <code>champ</code> trainer type. The Champion stands behind a <strong>Champion's Lectern</strong>.
 Beat it and you get a trophy; lose and you pay for it.</p>
 <h2 id="the-champions-lectern">The Champion's Lectern<a class="headerlink" href="#the-champions-lectern" title="Permanent link">&para;</a></h2>
 <p>The lectern is a block you craft and place, and it is the only way to get a Champion. It is in the creative tab
@@ -900,8 +900,11 @@ too.</p>
   lectern says so.</li>
 <li><strong>Breaking this world's lectern sends the Champion away,</strong> and there is none until a lectern is placed again.
   The lectern drops itself.</li>
-<li><strong>The Champion is picked once.</strong> It is one of RCT's <code>champion</code> trainers, the same one for the same world.
-  Without a <code>champion</code> trainer in RCT there is no Champion, and the lectern says it is not ready.</li>
+<li><strong>The Champion is picked once.</strong> It is one of RCT's <code>champ</code> trainers whose id starts with <code>champion_</code> (Cynthia,
+  Terry, Jax...), the same one for the same world; RCT's title-defense rematches, also <code>champ</code>, are left out. A data
+  pack whose <code>champ</code> trainers have other ids gets one of those. Without a <code>champ</code> trainer in RCT there is no
+  Champion, and the lectern says it is not ready. Before 0.0.51 PokeGyms looked for a <code>champion</code> type RCT does
+  not have, so no Champion ever stood.</li>
 <li><strong>Click the lectern, or the Champion,</strong> to challenge. Both do the same.</li>
 </ul>
 <h2 id="who-may-challenge">Who may challenge<a class="headerlink" href="#who-may-challenge" title="Permanent link">&para;</a></h2>
