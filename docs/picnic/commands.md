@@ -90,7 +90,7 @@ standing from before 5.0.0 uses the `expert` values.
 | | `levelgap` | int | Level offset for summoned trainers. *Default 8.* |
 | `hazards` | `enabled` | true/false | What a table and its basket carry between dimensions — [burning, scorching, flooding and drifting](picnic-tables.md#where-each-table-can-go). Off, every table is plain furniture. *Default on.* |
 | `reigrouping` | `enabled` | true/false | With REI installed, folds each table wood, the coloured baskets and the benches into one expandable REI entry. Client-side: it groups your own game's REI list, applied on REI's next reload (F3+T). *Default on.* |
-| `table` | `light` | 0–15 | Light level emitted by the table. Re-place a table to relight it. |
+| `table` | `light` | 0–15 | Light level emitted by the table. Placed tables follow a change within a second, no restart needed. |
 | | `actiondistance` | 0–512 | How close a table has to be for the table-gated actions. *Default 25.* |
 
 The five `protect…` settings are **opt-in** and granular: turn on only the rarities you want the
