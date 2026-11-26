@@ -52,7 +52,8 @@ Cobblemon 1.8 **habitat blocks** add their own pool to spawns within about 16 bl
 habitat's reach overlaps the table's radius, the re-roll looks for spawns inside it, so the habitat's
 pool (in its current phase) is what comes back: handy for hunting a Pokémon that is rare everywhere
 else. Habitats that run their own spawner (the "activated" kind) are left out, since they block every
-other spawner around them.
+other spawner around them. A habitat buried deep underground, too far below the ground for its reach to
+get there, is left out too, and the re-roll spreads around the table as usual.
 
 ![A re-roll next to a habitat](assets/store/gif-habitat-reroll.gif)
 
