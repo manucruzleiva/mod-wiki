@@ -18,6 +18,9 @@ The table tells you which of two things went wrong:
 - **"…there was nowhere around here to spawn any."** There's no ground near your altitude inside the table's radius,
   for example a tiny platform over the void. Make the platform bigger, or widen the table's reach with
   `/picnic config reroll radius <tier> <blocks>`.
+- **"The area is still loading. Try again in a moment."** You just arrived (a teleport, a waystone, fast
+  flight) and the Pokémon around you haven't loaded yet. Nothing was spent and nothing was despawned. Wait a
+  second or two and click again (5.1.4+).
 
 Over an ocean or a river the message names the biome, because the biome decides which Pokémon can
 come at all. The bread is spent either way: the area was cleared, and that can't be undone.
