@@ -903,7 +903,10 @@ own kind of item. Put anything else in and it bounces back, with the slot flashi
 <li>An operator's <strong>rule</strong>, if the item has one. A rule sends the item to one pocket, or to <code>none</code>, which
    keeps it out of every pocket.</li>
 <li>Otherwise the <strong>pocket tags</strong> <code>cobblemon_trainers_satchel:pocket/&lt;pocket id&gt;</code>, which a datapack can
-   edit. This is how items from other mods land in the right place without any setup.</li>
+   edit. This is how items from other mods land in the right place without any setup.
+   When two pocket tags hold the same item, the first pocket in tab order takes it, unless a pocket
+   lists it in <code>cobblemon_trainers_satchel:pocket_priority/&lt;pocket id&gt;</code>. Bone is listed there for
+   <strong>Materials &amp; Drops</strong>, because Cobblemon also tags it as a held item.</li>
 </ol>
 <p>A rule always wins over the tags. Remove the rule and the tags decide again.</p>
 <h2 id="the-rules-screen">The Rules screen<a class="headerlink" href="#the-rules-screen" title="Permanent link">&para;</a></h2>
