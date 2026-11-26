@@ -1094,8 +1094,8 @@ so nobody is paid twice.</p>
 <h3 id="victory-bonus-against-npc-trainers">Victory bonus against NPC trainers<a class="headerlink" href="#victory-bonus-against-npc-trainers" title="Permanent link">&para;</a></h3>
 <p>Like the prize money in the main games: when you <strong>win</strong> a battle against an NPC trainer, every
 Pokémon still standing gets <strong>a quarter of the EXP it earned in that battle</strong>, and you get <strong>1 XP
-point per level</strong> of the trainer's strongest Pokémon. The battle log says
-<code>Victory bonus: +120 EXP to your team, +25 XP to you</code>. Wild battles and PvP pay no bonus, and neither
+point per level</strong> of the trainer's strongest Pokémon. Once the battle closes, your chat says
+<code>Victory bonus: +120 EXP to your team, +25 XP to you</code> (since 2.3.2; before that the line was lost). Wild battles and PvP pay no bonus, and neither
 does losing or fleeing. With Cobblemon: PlayerXP installed, the player's part is left to that mod.</p>
 <h3 id="new-pokedex-entries">New Pokédex entries<a class="headerlink" href="#new-pokedex-entries" title="Permanent link">&para;</a></h3>
 <p>The first time a species is <strong>seen</strong> pays the player 10 XP points, the first time it is <strong>caught</strong>
@@ -1224,10 +1224,6 @@ opponent and anyone watching see the new level and HP on the battle bar, and not
 <td><code>Steve gained 24 experience!</code></td>
 </tr>
 <tr>
-<td>A won battle against an NPC trainer</td>
-<td><code>Victory bonus: +120 EXP to your team, +25 XP to you</code></td>
-</tr>
-<tr>
 <td>It levels up</td>
 <td><code>Pikachu grew to Lv. 23!</code></td>
 </tr>
@@ -1253,6 +1249,8 @@ opponent and anyone watching see the new level and HP on the battle bar, and not
 </tr>
 </tbody>
 </table>
+<p>The victory bonus line is the one exception: it goes to chat, because the battle has already closed
+when it is paid.</p>
 <p>A nickname is used wherever the Pokémon has one. A Pokémon at level 100 gains no EXP, so it gets no
 EXP or level line, only <code>stats rose</code> when its EVs move a stat.</p>
 <h2 id="supported-versions">Supported versions<a class="headerlink" href="#supported-versions" title="Permanent link">&para;</a></h2>
