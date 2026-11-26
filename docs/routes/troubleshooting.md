@@ -25,7 +25,9 @@ out as the world generates. A **new world** gives you the intended experience; s
 A world made with the classic generator (Routes 0.77.0 or 1.0.0, or one where the old `use_gen2`
 setting was turned off by hand) is no longer supported: the roads already built stay in the world, but
 it loses its old map paint, zone banners and town and route names, and new chunks get today's roads
-like any other world.
+like any other world. Its old towns don't count when you stand in them, because they have no paint; towns in newly
+generated land do. Until one does, *Nothing discovered yet* says so in such a world (the **Hint for old
+worlds** setting, `route_legacy_hint`, on by default, turns that wording off).
 
 ## A town I expected is not connected
 
