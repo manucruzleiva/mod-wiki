@@ -96,6 +96,8 @@ standing from before 5.0.0 uses the `expert` values.
 The five `protect…` settings are **opt-in** and granular: turn on only the rarities you want the
 re-roll to spare, on only the rungs you want. `peaceful` is **on by default**: sit at a table and
 hostile mobs within `radius` blocks lose their target and run away, like a creeper fleeing a cat.
+At an Expert table no hostile can target a seated player from any distance, so one waiting just past
+`radius` cannot pick you again from there.
 
 ## `/picnic stats`
 
