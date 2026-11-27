@@ -66,7 +66,9 @@ naming the ground that does work.
 Turn on `/picnic config platforms enabled true` and a re-roll spawns on **any floor**. Which Pokémon
 come is unchanged: the biome under you, the time of day, the light and the height still decide. Only
 the "natural ground" rule is lifted, and only for the table's own re-roll; Cobblemon's normal spawning
-keeps its rules. On natural ground the switch changes nothing. It is **off by default**.
+keeps its rules. Rules that keep a Pokémon *off* a block still apply: farmland stays empty, and the
+few species that need a specific floor, like Varoom on concrete, still need it. On natural ground the
+switch changes nothing. It is **off by default**.
 
 ## Pokémon that fly, spawn flying
 
