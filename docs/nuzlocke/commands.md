@@ -13,7 +13,7 @@ live under [`/routes`](../routes/commands.md) — the two never mix.
 | `/nuzlocke log` · key **I** | 👤 | Opens your party's summary on the **Log** tab — the link's log while you are in a Soul Link. |
 | `/nuzlocke map` | 👤 | Dump your capture zones as map waypoints (needs Routes). |
 | `/nuzlocke reset [player]` | 🛡️ | Clear a player's zone records, lift their game-over and ask for a new Gym Leader Challenge type. They keep their team. |
-| `/nuzlocke revive [player] [zone <zone>]` | 🛡️ | Revive a party's dead Pokémon — all of them, or only the one caught in that zone (by the name the log shows). The mercy switch: it also lifts a game-over, and under [Soul Link](soul-link.md) it revives each one's soulmates with it. |
+| `/nuzlocke revive [player] [zone <zone>]` | 🛡️ | Revive a player's dead Pokémon, in the party and the PC — all of them, or only the one caught in that zone (by the name the log shows). The mercy switch: it also lifts a game-over, and under [Soul Link](soul-link.md) it revives each one's soulmates with it. |
 | `/nuzlocke enable` · `disable` | 🛡️ | Master switch for this world, saved per world. |
 | `/nuzlocke config list` | 👤 | Every setting for this world with its current value, by section. |
 | `/nuzlocke config get <setting>` | 👤 | Read one setting back. |
